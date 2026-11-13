@@ -161,8 +161,7 @@ IB.registerTopic({
 <li><strong>柔軟的管壁</strong>，薄而肌肉不多。附近的骨骼肌（如腿肌）收縮時會<strong>壓迫</strong>靜脈，把血液擠向前，而瓣膜確保血液只能向心臟方向移動。</li>
 <li>寬的管腔對血流的阻力小（見B3.2.2–3的表）。</li>
 </ul>
-<p>靜脈內壓力低，所以不需要厚壁。</p>`),
-      widget: "vessel-compare"
+<p>靜脈內壓力低，所以不需要厚壁。</p>`)
     },
     {
       ref: "B3.2.6",
@@ -482,7 +481,7 @@ IB.registerTopic({
 </table>
 <p><strong>血液流向（單向）：</strong>腔靜脈 (vena cava)（來自身體的靜脈）→ 右心房 → 右房室瓣 → 右心室 → 半月瓣 → 肺動脈 → 肺 → 肺靜脈 → 左心房 → 左房室瓣 → 左心室 → 半月瓣 → 主動脈 (aorta) → 身體 → 腔靜脈。</p>
 <p>使用下面的互動心臟圖來練習辨認各部分。</p>`),
-      widget: "heart-cycle"
+      widget: "heart-structure"
     },
     {
       ref: "B3.2.16",
