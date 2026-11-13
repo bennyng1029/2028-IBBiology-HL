@@ -143,7 +143,6 @@ IB.registerTopic({
   ],
   links: [
     { to: "B3.1", why: L("Intercostal muscles and the diaphragm change the pressure in the thorax to ventilate the lungs.", "肋間筋と横隔膜が胸腔の圧力を変えて肺を換気する。", "肋間肌和橫膈膜改變胸腔壓力以使肺通氣。") },
-    { to: "B2.2", why: L("Neuromuscular junctions are synapses, so motor units link to nerve impulses and synaptic transmission.", "神経筋接合部はシナプスであり、運動単位は神経インパルスやシナプス伝達とつながる。", "神經肌肉接合處是突觸，運動單位與神經衝動和突觸傳遞相連。") },
     { to: "B1.2", why: L("Actin, myosin and titin are proteins whose structure fits their function.", "アクチン、ミオシン、タイチンは構造が機能に合ったタンパク質である。", "肌動蛋白、肌球蛋白和肌聯蛋白都是結構配合功能的蛋白質。") },
     { to: "A4.1", why: L("Flippers and flukes show how the limbs of land mammals evolved for life in the sea.", "ひれと尾びれは、陸生哺乳類の四肢が海での生活に向けて進化したことを示す。", "鰭狀肢和尾鰭顯示陸生哺乳動物的肢體如何演化以適應海洋生活。") }
   ],

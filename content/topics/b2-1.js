@@ -476,7 +476,239 @@ ${fmFigure("zh")}
       { to: "A2.2", why: L("The plasma membrane is a feature of every cell; compare with prokaryotes and eukaryotes.", "細胞膜はあらゆる細胞に共通の特徴で、原核細胞と真核細胞を比べるときに関わる。", "質膜是所有細胞的共有特徵，可與原核及真核細胞比較。") }
     ],
     questions: [
-      /*Q_START*/
+      {
+        id: "b2-1-q01", type: "mcq", ahl: false, difficulty: 1, ref: "B2.1.3", paper: "1A",
+        stem: L("Which feature allows oxygen to cross a membrane by simple diffusion?", "酸素が単純拡散で膜を通れるのは、どの特徴によるか。", "氧能以簡單擴散穿過膜，是因為哪項特徵？"),
+        options: [
+          L("It is small and non-polar, so it passes between the phospholipids.", "小さく無極性なので、リン脂質の間を通れる。", "它細小而且非極性，所以可穿過磷脂之間。"),
+          L("It is carried by a specific channel protein.", "特定のチャネルタンパク質で運ばれる。", "由特定通道蛋白運送。"),
+          L("It is hydrophilic, so it dissolves in the phosphate heads.", "親水性なので、リン酸の頭部に溶ける。", "它是親水的，所以溶於磷酸頭部。"),
+          L("It is pumped in using ATP.", "ATP を使ってポンプで運ばれる。", "利用 ATP 被泵入。")],
+        answer: 0,
+        explanation: L("Oxygen is a small non-polar molecule, so it dissolves in the hydrophobic core and diffuses down its gradient with no protein or ATP. Options B and D are wrong because no protein or energy is needed; C is wrong because oxygen is not hydrophilic.", "酸素は小さな無極性分子なので、疎水性の中心部に溶け、タンパク質もATPも使わず濃度勾配に従って拡散する。BとDはタンパク質もエネルギーも不要なので誤り。Cは酸素が親水性ではないので誤り。", "氧是細小的非極性分子，可溶入疏水核心，無需蛋白質或 ATP 即順梯度擴散。B 和 D 錯誤，因為不需要蛋白質或能量；C 錯誤，因為氧不是親水的。")
+      },
+      {
+        id: "b2-1-q02", type: "mcq", ahl: false, difficulty: 2, ref: "B2.1.5", paper: "1A",
+        stem: L("A bag made of a membrane that is permeable to water but not to sucrose contains 0.1 mol dm⁻³ sucrose solution. It is placed in 0.3 mol dm⁻³ sucrose solution. What is the net movement?", "水は通すがスクロースは通さない膜でできた袋に、0.1 mol dm⁻³ のスクロース溶液が入っている。これを 0.3 mol dm⁻³ のスクロース溶液に入れた。正味の移動はどうなるか。", "一個由膜製成的袋，膜容許水通過但不容許蔗糖通過，袋內有 0.1 mol dm⁻³ 蔗糖溶液。把它放入 0.3 mol dm⁻³ 蔗糖溶液中。淨移動是甚麼？"),
+        options: [
+          L("Water moves out of the bag.", "水が袋の外へ出る。", "水移出袋外。"),
+          L("Water moves into the bag.", "水が袋の中へ入る。", "水移入袋內。"),
+          L("Sucrose moves into the bag.", "スクロースが袋の中へ入る。", "蔗糖移入袋內。"),
+          L("There is no net movement of anything.", "何も正味では移動しない。", "沒有任何東西淨移動。")],
+        answer: 0,
+        explanation: L("The outside has the higher solute concentration, so the net movement of water is out of the bag. Option B reverses the direction. Option C is wrong because the membrane is impermeable to sucrose.", "外側の溶質濃度が高いので、水の正味の移動は袋の外へ向かう。Bは向きが逆。Cは膜がスクロースを通さないので誤り。", "袋外溶質濃度較高，所以水的淨移動是移出袋外。B 方向相反；C 錯誤，因為膜不讓蔗糖通過。")
+      },
+      {
+        id: "b2-1-q03", type: "short", ahl: false, difficulty: 2, ref: "B2.1.5", paper: "1B",
+        commandTerm: "Deduce", marks: 4,
+        data: L(
+          `<table><tr><th>NaCl concentration (mol dm⁻³)</th><th>0.0</th><th>0.1</th><th>0.2</th><th>0.3</th><th>0.4</th><th>0.5</th></tr><tr><th>Change in mass of potato cylinder (%)</th><td>+12</td><td>+7</td><td>+2</td><td>−3</td><td>−8</td><td>−12</td></tr></table><p><em>(illustrative data)</em></p>`,
+          `<table><tr><th>NaCl 濃度 (mol dm⁻³)</th><th>0.0</th><th>0.1</th><th>0.2</th><th>0.3</th><th>0.4</th><th>0.5</th></tr><tr><th>ジャガイモ円柱の質量変化 (%)</th><td>+12</td><td>+7</td><td>+2</td><td>−3</td><td>−8</td><td>−12</td></tr></table><p><em>(説明用のデータ)</em></p>`,
+          `<table><tr><th>NaCl 濃度 (mol dm⁻³)</th><th>0.0</th><th>0.1</th><th>0.2</th><th>0.3</th><th>0.4</th><th>0.5</th></tr><tr><th>馬鈴薯柱質量變化 (%)</th><td>+12</td><td>+7</td><td>+2</td><td>−3</td><td>−8</td><td>−12</td></tr></table><p><em>(示範數據)</em></p>`),
+        stem: L("Potato cylinders were left in NaCl solutions of different concentrations and their mass change was measured. (a) Deduce the NaCl concentration at which there is no net water movement. [1] (b) Explain why the mass decreased in 0.5 mol dm⁻³ NaCl. [3]", "ジャガイモの円柱をさまざまな濃度の NaCl 溶液に入れ、質量の変化を測定した。(a) 水の正味の移動がない NaCl 濃度を推定せよ。[1] (b) 0.5 mol dm⁻³ の NaCl で質量が減った理由を説明せよ。[3]", "把馬鈴薯柱放入不同濃度的 NaCl 溶液中，量度其質量變化。(a) 推斷沒有水淨移動時的 NaCl 濃度。[1] (b) 解釋為何在 0.5 mol dm⁻³ NaCl 中質量下降。[3]"),
+        markscheme: [
+          L("(a) About 0.24 mol dm⁻³ (accept 0.22–0.26): where the line crosses 0 % change (between 0.2 and 0.3).", "(a) 約 0.24 mol dm⁻³ (0.22–0.26 可): 変化が 0 % になる点 (0.2 と 0.3 の間)。", "(a) 約 0.24 mol dm⁻³ (接受 0.22–0.26)：質量變化為 0 % 之處 (介乎 0.2 和 0.3 之間)。"),
+          L("(b) The solute concentration outside the potato was higher than inside the cells.", "(b) ジャガイモの外側の溶質濃度が、細胞内より高かった。", "(b) 馬鈴薯外的溶質濃度高於細胞內。"),
+          L("Water molecules moved randomly in both directions but more moved out of the cells than in, so there was net movement of water out by osmosis.", "水分子は両方向にランダムに動いたが、入るより出る方が多く、浸透により水が正味で外へ移動した。", "水分子向兩個方向隨機移動，但移出細胞的比移入的多，所以水經滲透淨移出。"),
+          L("The membrane is impermeable to the solute (Na⁺ and Cl⁻), so the loss of water reduced the mass.", "膜は溶質 (Na⁺ と Cl⁻) を通さないので、水が失われて質量が減った。", "膜不讓溶質 (Na⁺ 和 Cl⁻) 通過，所以失去水令質量下降。")
+        ],
+        modelAnswer: L("(a) 0.24 mol dm⁻³. (b) The NaCl solution had a higher solute concentration than the cells. More water molecules left the cells than entered, a net movement by osmosis, while the solute could not cross the membrane, so the potato lost mass.", "(a) 0.24 mol dm⁻³。(b) NaCl 溶液の溶質濃度は細胞より高かった。細胞に入る水より出る水が多く、浸透による正味の移動が起こり、溶質は膜を通れないので、ジャガイモの質量が減った。", "(a) 0.24 mol dm⁻³。(b) NaCl 溶液的溶質濃度高於細胞，移出細胞的水分子多於移入的，經滲透淨移出，而溶質不能穿過膜，所以馬鈴薯質量下降。")
+      },
+      {
+        id: "b2-1-q04", type: "mcq", ahl: false, difficulty: 2, ref: "B2.1.6", paper: "1A",
+        stem: L("A potassium channel lets K⁺ through but not Na⁺, although Na⁺ is the smaller ion. What is the best explanation?", "カリウムチャネルは K⁺ を通すが Na⁺ は通さない。Na⁺ の方が小さいイオンである。最もよい説明はどれか。", "鉀通道讓 K⁺ 通過但不讓 Na⁺ 通過，儘管 Na⁺ 是較小的離子。最佳解釋是甚麼？"),
+        options: [
+          L("The pore is too small for Na⁺.", "孔が Na⁺ には小さすぎる。", "孔道對 Na⁺ 來說太小。"),
+          L("The shape and charges lining the pore fit K⁺ specifically.", "孔の形と内壁の電荷が K⁺ に特異的に合う。", "孔道的形狀和內壁電荷特別適合 K⁺。"),
+          L("K⁺ is pumped through using ATP.", "K⁺ は ATP を使ってポンプで通される。", "K⁺ 利用 ATP 被泵過去。"),
+          L("Na⁺ is non-polar and dissolves in the bilayer instead.", "Na⁺ は無極性で、代わりに二重層に溶ける。", "Na⁺ 是非極性，改為溶於雙層。")],
+        answer: 1,
+        explanation: L("Channels are selective because the structure of the pore (shape and charge) suits one type of ion. Option A is the tempting size explanation, but Na⁺ is smaller. C is wrong because channels are passive. D is wrong because ions are charged and cannot dissolve in the hydrophobic core.", "チャネルが選択的なのは、孔の構造 (形と電荷) が特定の1種のイオンに合うからである。Aは大きさによる紛らわしい説明だが Na⁺ の方が小さい。Cはチャネルが受動的なので誤り。Dはイオンが電荷をもち疎水性の中心部に溶けないので誤り。", "通道有選擇性，是因為孔道結構 (形狀和電荷) 適合某一種離子。A 是常見的大小解釋，但 Na⁺ 較小；C 錯誤，因為通道是被動的；D 錯誤，因為離子帶電荷，不能溶於疏水核心。")
+      },
+      {
+        id: "b2-1-q05", type: "mcq", ahl: false, difficulty: 2, ref: "B2.1.7", paper: "1A",
+        stem: L("Cells in a tissue take up a mineral ion until the concentration inside is higher than outside. Uptake stops when respiration is blocked. What does this show?", "ある組織の細胞が、内側の濃度が外側より高くなるまで鉱物イオンを取り込む。呼吸を阻害すると取り込みが止まる。これは何を示すか。", "某組織的細胞吸收一種礦物離子，直至細胞內濃度高於細胞外。當呼吸被阻斷時，吸收便停止。這顯示甚麼？"),
+        options: [
+          L("The ion enters by simple diffusion.", "イオンは単純拡散で入る。", "該離子以簡單擴散進入。"),
+          L("The ion enters by facilitated diffusion through channels.", "イオンはチャネルを通る促進拡散で入る。", "該離子經通道以易化擴散進入。"),
+          L("The ion enters by active transport using ATP.", "イオンは ATP を使う能動輸送で入る。", "該離子以使用 ATP 的主動運輸進入。"),
+          L("The ion enters by osmosis.", "イオンは浸透で入る。", "該離子經滲透進入。")],
+        answer: 2,
+        explanation: L("Movement against the gradient, which stops when ATP production stops, is active transport. Diffusion (simple or facilitated) only goes down the gradient. Osmosis is the movement of water, not ions.", "勾配に逆らい、ATP 産生が止まると止まる移動は能動輸送である。拡散 (単純・促進) は勾配に従う動きだけである。浸透は水の移動でイオンではない。", "逆梯度移動且在 ATP 製造停止時停止，是主動運輸。擴散 (簡單或易化) 只會順梯度進行；滲透是水的移動，不是離子。")
+      },
+      {
+        id: "b2-1-q06", type: "match", ahl: false, difficulty: 1, ref: "B2.1.8", paper: "1A",
+        stem: L("Match each transport process with its description.", "各輸送過程とその説明を対応させよ。", "把每種運輸過程與其描述配對。"),
+        pairs: [
+          { left: L("Simple diffusion", "単純拡散", "簡單擴散"), right: L("Small non-polar molecules pass between phospholipids down a gradient, no protein", "小さな無極性分子がタンパク質なしで勾配に従いリン脂質の間を通る", "細小非極性分子順梯度穿過磷脂之間，不需蛋白質") },
+          { left: L("Facilitated diffusion", "促進拡散", "易化擴散"), right: L("Ions pass down a gradient through a channel protein, no ATP", "イオンがチャネルタンパク質を通って勾配に従い移動し、ATP は不要", "離子經通道蛋白順梯度移動，不需 ATP") },
+          { left: L("Active transport", "能動輸送", "主動運輸"), right: L("A pump uses ATP to move particles, even against a gradient", "ポンプが ATP を使い、勾配に逆らっても粒子を運ぶ", "泵利用 ATP 運送粒子，甚至可逆梯度") },
+          { left: L("Osmosis", "浸透", "滲透"), right: L("Net movement of water towards the higher solute concentration", "水が溶質濃度の高い側へ正味で移動する", "水淨移向溶質濃度較高的一側") }
+        ],
+        explanation: L("Each process is defined by whether a protein is used, whether ATP is needed and which direction the net movement goes.", "各過程は、タンパク質を使うか、ATP が必要か、正味の移動がどちら向きか、で区別される。", "各過程由是否使用蛋白質、是否需要 ATP 及淨移動方向來區分。")
+      },
+      {
+        id: "b2-1-q07", type: "short", ahl: false, difficulty: 2, ref: "B2.1.8", paper: "2",
+        commandTerm: "Distinguish", marks: 3,
+        stem: L("Distinguish between simple diffusion and facilitated diffusion across a membrane.", "膜を横切る単純拡散と促進拡散の違いを明確にせよ。", "分辨膜上的簡單擴散與易化擴散。"),
+        markscheme: [
+          L("Simple diffusion happens directly through the phospholipid bilayer, whereas facilitated diffusion uses a channel protein.", "単純拡散は二重層を直接通るが、促進拡散はチャネルタンパク質を使う。", "簡單擴散直接穿過磷脂雙層；易化擴散則經通道蛋白。"),
+          L("Simple diffusion is for small non-polar molecules (e.g. O₂, CO₂); facilitated diffusion is for ions / polar molecules.", "単純拡散は小さな無極性分子 (O₂、CO₂ など)、促進拡散はイオン・極性分子に対して起こる。", "簡單擴散適用於細小非極性分子 (如 O₂、CO₂)；易化擴散適用於離子／極性分子。"),
+          L("Simple diffusion is not selective (depends only on size and polarity); facilitated diffusion is selective because each channel is specific (and can be opened or closed).", "単純拡散は選択的でない (大きさと極性だけで決まる) が、促進拡散はチャネルごとに特異的なので選択的 (開閉もできる)。", "簡單擴散沒有選擇性 (只取決於大小和極性)；易化擴散有選擇性，因每種通道各有特異性 (並可開關)。")
+        ],
+        modelAnswer: L("Simple diffusion takes small non-polar molecules such as oxygen directly between the phospholipids and is not selective. Facilitated diffusion moves ions or polar molecules through a specific channel protein, so it is selective and can be controlled by opening or closing the channel.", "単純拡散は酸素のような小さな無極性分子がリン脂質の間を直接通り、選択性がない。促進拡散はイオンや極性分子が特異的なチャネルタンパク質を通るので選択的で、チャネルの開閉で調節できる。", "簡單擴散令氧等細小非極性分子直接穿過磷脂之間，沒有選擇性；易化擴散令離子或極性分子經特定通道蛋白通過，所以有選擇性，並可藉通道開關控制。")
+      },
+      {
+        id: "b2-1-q08", type: "short", ahl: false, difficulty: 1, ref: "B2.1.4", paper: "2",
+        commandTerm: "Distinguish", marks: 2,
+        stem: L("Distinguish between integral and peripheral proteins in a membrane.", "膜の内在性タンパク質と表在性タンパク質の違いを明確にせよ。", "分辨膜中的整合蛋白與周邊蛋白。"),
+        markscheme: [
+          L("Integral proteins are embedded in one or both layers of the bilayer (some span it).", "内在性タンパク質は二重層の片方または両方の層に埋め込まれている (貫くものもある)。", "整合蛋白嵌入雙層的一層或兩層 (有些貫穿整個膜)。"),
+          L("Peripheral proteins are attached to one surface of the bilayer (not embedded in the hydrophobic core).", "表在性タンパク質は二重層の一方の表面に付着している (疎水性の中心部には入らない)。", "周邊蛋白附於雙層其中一面表面 (不嵌入疏水核心)。")
+        ],
+        modelAnswer: L("Integral proteins are embedded in the lipid layers, sometimes across both; peripheral proteins are attached to one surface of the bilayer.", "内在性タンパク質は脂質の層に埋め込まれ、両方の層を貫くこともある。表在性タンパク質は二重層の一方の表面に付着している。", "整合蛋白嵌入脂質層，有時貫穿兩層；周邊蛋白附於雙層的一面表面。")
+      },
+      {
+        id: "b2-1-q09", type: "short", ahl: false, difficulty: 2, ref: "B2.1.10", paper: "2",
+        commandTerm: "Describe", marks: 4,
+        stem: L("Describe the fluid mosaic model of membrane structure.", "膜構造の流動モザイクモデルを説明せよ。", "描述膜結構的流動鑲嵌模型。"),
+        markscheme: [
+          L("Phospholipids form a bilayer with hydrophilic heads facing outwards (towards water) and hydrophobic tails facing inwards.", "リン脂質が二重層をつくり、親水性の頭部は外側 (水側)、疎水性の尾部は内側を向く。", "磷脂形成雙層，親水頭部向外 (朝向水)，疏水尾部向內。"),
+          L("The bilayer is fluid: phospholipids can move sideways.", "二重層は流動的で、リン脂質は横方向に動ける。", "雙層具流動性：磷脂可橫向移動。"),
+          L("Proteins are scattered through the bilayer like a mosaic: integral proteins embedded, peripheral proteins on the surface.", "タンパク質がモザイク状に散らばる。内在性は埋め込まれ、表在性は表面にある。", "蛋白質如鑲嵌般散布於雙層：整合蛋白嵌入，周邊蛋白在表面。"),
+          L("Other components: cholesterol among the phospholipids; glycoproteins/glycolipids with carbohydrate chains on the outer surface.", "他の成分: リン脂質の間にコレステロール。外側の表面に糖鎖をもつ糖タンパク質・糖脂質。", "其他成分：磷脂之間的膽固醇；外表面帶糖鏈的糖蛋白／糖脂。")
+        ],
+        modelAnswer: L("The membrane is a fluid phospholipid bilayer, with hydrophilic heads outwards and hydrophobic tails inwards, in which the phospholipids can move sideways. Integral proteins are embedded and peripheral proteins sit on the surface, forming a mosaic. Cholesterol lies among the phospholipids and glycoproteins and glycolipids have carbohydrate on the outer surface.", "膜は流動的なリン脂質二重層で、親水性の頭部が外側、疎水性の尾部が内側にあり、リン脂質は横に動ける。内在性タンパク質は埋め込まれ、表在性タンパク質は表面にあってモザイクをつくる。コレステロールはリン脂質の間にあり、糖タンパク質・糖脂質は外側の表面に糖鎖をもつ。", "膜是流動的磷脂雙層，親水頭部向外、疏水尾部向內，磷脂可橫向移動。整合蛋白嵌入，周邊蛋白在表面，形成鑲嵌圖案；膽固醇在磷脂之間，糖蛋白和糖脂的糖鏈在外表面。")
+      },
+      {
+        id: "b2-1-q10", type: "mcq", ahl: false, difficulty: 2, ref: "B2.1.9", paper: "1A",
+        stem: L("Where are the carbohydrate chains of glycoproteins found, and what is one role?", "糖タンパク質の糖鎖はどこにあり、役割の1つは何か。", "糖蛋白的糖鏈位於何處？其中一個作用是甚麼？"),
+        options: [
+          L("On the extracellular surface; cell recognition", "細胞外側の表面; 細胞の認識", "細胞外表面；細胞識別"),
+          L("On the cytoplasmic surface; cell recognition", "細胞質側の表面; 細胞の認識", "細胞質一面；細胞識別"),
+          L("In the middle of the bilayer; passage of ions", "二重層の中央; イオンの通過", "雙層中央；離子通過"),
+          L("On the extracellular surface; active transport using ATP", "細胞外側の表面; ATP を使う能動輸送", "細胞外表面；使用 ATP 的主動運輸")],
+        answer: 0,
+        explanation: L("The carbohydrate part always faces the outside of the cell and acts in cell adhesion and recognition. B has the wrong side; C and D give roles that belong to channels and pumps.", "糖鎖は常に細胞の外側を向き、細胞接着と認識に働く。Bは側が違う。CとDはチャネルやポンプの役割である。", "糖鏈部分永遠朝向細胞外面，作用於細胞黏附和識別。B 的一面錯誤；C 和 D 描述的是通道和泵的作用。")
+      },
+      {
+        id: "b2-1-q11", type: "multi", ahl: false, difficulty: 2, ref: "B2.1.8", paper: "1A",
+        stem: L("Which factors determine whether a particle can cross a membrane by simple diffusion? Select all that apply.", "粒子が単純拡散で膜を通れるかどうかを決めるのはどれか。当てはまるものをすべて選べ。", "哪些因素決定粒子能否以簡單擴散穿過膜？選出所有適用項目。"),
+        options: [
+          L("The size of the particle", "粒子の大きさ", "粒子的大小"),
+          L("Whether the particle is hydrophobic or hydrophilic", "粒子が疎水性か親水性か", "粒子是疏水還是親水"),
+          L("Whether a specific channel protein is present", "特定のチャネルタンパク質があるか", "有沒有特定通道蛋白"),
+          L("Whether ATP is available", "ATP が利用できるか", "有沒有 ATP")],
+        answer: [0, 1],
+        explanation: L("Simple diffusion is not selective: only size and hydrophobic/hydrophilic character matter. Channel proteins and ATP are needed for facilitated diffusion and active transport, not for simple diffusion.", "単純拡散は選択的でなく、大きさと疎水性・親水性だけが関係する。チャネルとATPは促進拡散と能動輸送に必要で、単純拡散には不要。", "簡單擴散沒有選擇性，只有大小和疏水／親水性質有關。通道蛋白和 ATP 是易化擴散和主動運輸才需要的，簡單擴散不需要。")
+      },
+      {
+        id: "b2-1-q12", type: "short", ahl: false, difficulty: 3, ref: "B2.1.7", paper: "1B",
+        commandTerm: "Explain", marks: 5,
+        data: L(
+          `<p>Root cells were placed in a solution containing a mineral ion at a constant 2.0 mmol dm⁻³. The concentration of the ion inside the cells was measured, with and without a respiration inhibitor.</p><table><tr><th>Time (min)</th><th>0</th><th>10</th><th>20</th><th>30</th><th>40</th><th>60</th></tr><tr><th>Inside, no inhibitor (mmol dm⁻³)</th><td>0.5</td><td>1.8</td><td>3.1</td><td>4.4</td><td>5.6</td><td>7.5</td></tr><tr><th>Inside, with inhibitor (mmol dm⁻³)</th><td>0.5</td><td>1.2</td><td>1.8</td><td>2.0</td><td>2.0</td><td>2.0</td></tr></table><p><em>(illustrative data)</em></p>`,
+          `<p>根の細胞を、鉱物イオンが 2.0 mmol dm⁻³ で一定の溶液に入れた。呼吸阻害剤ありとなしで、細胞内のイオン濃度を測定した。</p><table><tr><th>時間 (分)</th><th>0</th><th>10</th><th>20</th><th>30</th><th>40</th><th>60</th></tr><tr><th>内側・阻害剤なし (mmol dm⁻³)</th><td>0.5</td><td>1.8</td><td>3.1</td><td>4.4</td><td>5.6</td><td>7.5</td></tr><tr><th>内側・阻害剤あり (mmol dm⁻³)</th><td>0.5</td><td>1.2</td><td>1.8</td><td>2.0</td><td>2.0</td><td>2.0</td></tr></table><p><em>(説明用のデータ)</em></p>`,
+          `<p>把根細胞放入一種礦物離子濃度恆定為 2.0 mmol dm⁻³ 的溶液中，分別在有及沒有呼吸抑制劑的情況下量度細胞內該離子的濃度。</p><table><tr><th>時間 (分鐘)</th><th>0</th><th>10</th><th>20</th><th>30</th><th>40</th><th>60</th></tr><tr><th>細胞內，沒有抑制劑 (mmol dm⁻³)</th><td>0.5</td><td>1.8</td><td>3.1</td><td>4.4</td><td>5.6</td><td>7.5</td></tr><tr><th>細胞內，有抑制劑 (mmol dm⁻³)</th><td>0.5</td><td>1.2</td><td>1.8</td><td>2.0</td><td>2.0</td><td>2.0</td></tr></table><p><em>(示範數據)</em></p>`),
+        stem: L("Explain what the data show about how the ion enters the root cells. [5]", "データから、このイオンが根の細胞にどのように入るかについて何が分かるか説明せよ。[5]", "解釋數據顯示該離子如何進入根細胞。[5]"),
+        markscheme: [
+          L("Without the inhibitor, the internal concentration rises above the external concentration (2.0), e.g. 7.5 at 60 min.", "阻害剤なしでは、内側の濃度が外側 (2.0) を超えて上昇する (例: 60分で 7.5)。", "沒有抑制劑時，細胞內濃度升至高於細胞外 (2.0)，例如 60 分鐘時為 7.5。"),
+          L("So the ion moves against its concentration gradient, which diffusion cannot do (diffusion only goes down a gradient).", "つまりイオンは濃度勾配に逆らって動いており、拡散ではこれはできない (拡散は勾配に従うだけ)。", "所以離子是逆濃度梯度移動，而擴散不能做到 (擴散只能順梯度)。"),
+          L("With the inhibitor, the concentration levels off at 2.0, equal to the outside, so only diffusion (down the gradient) is occurring.", "阻害剤ありでは、濃度は外側と等しい 2.0 で頭打ちになり、拡散 (勾配に従う) だけが起こっている。", "有抑制劑時，濃度在 2.0 持平，與細胞外相等，所以只有擴散 (順梯度) 在發生。"),
+          L("The inhibitor stops respiration, so less ATP is made, which shows that the uptake needs ATP / energy.", "阻害剤が呼吸を止めて ATP の産生が減るので、取り込みには ATP (エネルギー) が必要と分かる。", "抑制劑停止呼吸，ATP 製造減少，顯示吸收需要 ATP／能量。"),
+          L("Therefore the ion enters by active transport, using pump proteins.", "したがってイオンは、ポンプタンパク質による能動輸送で入る。", "因此離子是經泵蛋白以主動運輸進入。")
+        ],
+        modelAnswer: L("Without the inhibitor the ion concentration inside rises above the outside concentration of 2.0, so the ion is moving against its gradient, which diffusion cannot do. With the inhibitor, respiration and so ATP production are reduced, and the concentration stops rising at 2.0, so only diffusion happens. This shows the ion enters by active transport using pump proteins and ATP.", "阻害剤なしでは内側の濃度が外側の 2.0 を超えるので、イオンは勾配に逆らって動いており、拡散ではできない。阻害剤ありでは呼吸が妨げられ ATP 産生が減り、濃度は 2.0 で上昇が止まり、拡散だけが起こる。これは、イオンがポンプタンパク質と ATP を使う能動輸送で入ることを示す。", "沒有抑制劑時，細胞內離子濃度升至高於細胞外的 2.0，所以離子是逆梯度移動，擴散做不到；有抑制劑時，呼吸及 ATP 製造減少，濃度升至 2.0 後不再上升，只有擴散發生。這顯示離子經泵蛋白利用 ATP 以主動運輸進入。")
+      },
+      {
+        id: "b2-1-q13", type: "mcq", ahl: true, difficulty: 2, ref: "B2.1.11", paper: "1A",
+        stem: L("Compared with a tropical fish, membranes of a fish living in polar water are likely to contain a higher proportion of which fatty acids, and why?", "熱帯の魚と比べて、極地の水にすむ魚の膜には、どの脂肪酸がより高い割合で含まれると考えられ、その理由は何か。", "與熱帶魚相比，生活在極地水域的魚，其膜中哪類脂肪酸的比例可能較高？原因是甚麼？"),
+        options: [
+          L("Unsaturated, which keeps the membrane fluid at low temperature", "不飽和脂肪酸。低温でも膜の流動性が保たれる", "不飽和脂肪酸；令膜在低溫下保持流動"),
+          L("Saturated, which keeps the membrane fluid at low temperature", "飽和脂肪酸。低温でも膜の流動性が保たれる", "飽和脂肪酸；令膜在低溫下保持流動"),
+          L("Saturated, because they have lower melting points", "飽和脂肪酸。融点が低いから", "飽和脂肪酸；因為熔點較低"),
+          L("Unsaturated, because they pack closely and make the membrane strong", "不飽和脂肪酸。密に並んで膜を強くするから", "不飽和脂肪酸；因為排列緊密令膜堅固")],
+        answer: 0,
+        explanation: L("Unsaturated fatty acids have bends and lower melting points, so they keep membranes fluid in the cold. B and C reverse the properties of saturated fatty acids (they have higher melting points and pack closely).", "不飽和脂肪酸は折れ曲がりがあり融点が低いので、寒さの中でも膜が流動的に保たれる。BとCは飽和脂肪酸の性質を逆にしている (融点が高く密に並ぶ)。", "不飽和脂肪酸有彎曲且熔點較低，所以在寒冷中仍令膜保持流動。B 和 C 弄反了飽和脂肪酸的性質 (熔點較高、排列緊密)。")
+      },
+      {
+        id: "b2-1-q14", type: "short", ahl: true, difficulty: 2, ref: "B2.1.12", paper: "2",
+        commandTerm: "Explain", marks: 4,
+        stem: L("Explain how cholesterol helps to keep the fluidity of an animal cell membrane suitable when the temperature changes.", "温度が変化したとき、コレステロールが動物細胞膜の流動性を適切に保つしくみを説明せよ。", "解釋當溫度改變時，膽固醇如何協助動物細胞膜保持適當的流動性。"),
+        markscheme: [
+          L("Cholesterol molecules are positioned between phospholipids in the bilayer.", "コレステロール分子は二重層のリン脂質の間に位置する。", "膽固醇分子位於雙層的磷脂之間。"),
+          L("At high temperatures it reduces phospholipid movement / holds them in place, stabilizing the membrane (preventing it becoming too fluid).", "高温ではリン脂質の動きを抑え、固定して膜を安定させる (流動的になりすぎるのを防ぐ)。", "高溫時減少磷脂移動／把它們固定，穩定膜 (防止變得太流動)。"),
+          L("At low temperatures it prevents phospholipids packing closely together.", "低温ではリン脂質が密に詰まるのを防ぐ。", "低溫時防止磷脂緊密排列。"),
+          L("This prevents the membrane stiffening, so cholesterol acts as a modulator of fluidity.", "これにより膜が硬くなるのを防ぐので、コレステロールは流動性の調節因子として働く。", "這防止膜變硬，所以膽固醇是流動性的調節者。")
+        ],
+        modelAnswer: L("Cholesterol sits between the phospholipids. When it is warm, it restricts their movement and stabilizes the membrane. When it is cold, it stops the tails packing tightly, so the membrane does not stiffen. It therefore modulates fluidity over a range of temperatures.", "コレステロールはリン脂質の間にある。温かいときは動きを制限して膜を安定させ、寒いときは尾部が密に詰まるのを防ぐので膜は硬くならない。このように広い温度範囲で流動性を調節する。", "膽固醇位於磷脂之間。溫度高時限制磷脂移動並穩定膜；溫度低時阻止尾部緊密排列，令膜不致變硬。因此它能在不同溫度下調節流動性。")
+      },
+      {
+        id: "b2-1-q15", type: "mcq", ahl: true, difficulty: 1, ref: "B2.1.13", paper: "1A",
+        stem: L("Which is an example of exocytosis?", "エキソサイトーシスの例はどれか。", "以下哪項是胞吐作用的例子？"),
+        options: [
+          L("A white blood cell engulfing a bacterium", "白血球が細菌を取り込む", "白血球吞入細菌"),
+          L("A pancreatic cell releasing insulin from vesicles", "膵臓の細胞が小胞からインスリンを放出する", "胰臟細胞從囊泡釋出胰島素"),
+          L("Oxygen entering a cell", "酸素が細胞に入る", "氧進入細胞"),
+          L("Water entering a cell through aquaporins", "水がアクアポリンを通って細胞に入る", "水經水通道蛋白進入細胞")],
+        answer: 1,
+        explanation: L("Insulin is released when vesicles fuse with the plasma membrane. A is endocytosis (phagocytosis); C is simple diffusion; D is osmosis.", "小胞が細胞膜と融合してインスリンが放出される。Aはエンドサイトーシス (食作用)、Cは単純拡散、Dは浸透。", "囊泡與質膜融合而釋出胰島素。A 是胞吞 (吞噬作用)；C 是簡單擴散；D 是滲透。")
+      },
+      {
+        id: "b2-1-q16", type: "order", ahl: true, difficulty: 2, ref: "B2.1.13", paper: "1A",
+        stem: L("Put the stages of endocytosis in the correct order.", "エンドサイトーシスの段階を正しい順に並べよ。", "把胞吞作用的步驟按正確次序排列。"),
+        items: [
+          L("Material outside the cell is next to the plasma membrane.", "細胞外の物質が細胞膜のそばにある。", "細胞外的物質靠近質膜。"),
+          L("The plasma membrane folds inwards around the material.", "細胞膜が物質を囲んで内側に陥入する。", "質膜向內凹陷，包圍物質。"),
+          L("The edges of the membrane fuse and the vesicle pinches off.", "膜の縁が融合し、小胞がくびれ切れる。", "膜的邊緣融合，囊泡脫離。"),
+          L("The vesicle with its contents is inside the cytoplasm.", "内容物を含む小胞が細胞質内にある。", "載有內容物的囊泡位於細胞質內。")],
+        explanation: L("The fluid membrane bends in, encloses the material, then fuses closed. The result is a vesicle in the cytoplasm.", "流動的な膜が内側に曲がり、物質を囲み、融合して閉じる。結果として細胞質内に小胞ができる。", "流動的膜向內彎曲、包圍物質，然後融合封閉，結果在細胞質內形成囊泡。")
+      },
+      {
+        id: "b2-1-q17", type: "mcq", ahl: true, difficulty: 3, ref: "B2.1.14", paper: "1A",
+        stem: L("Which statement about gated channels in neurons is correct?", "ニューロンのゲート付きチャネルについて正しいのはどれか。", "以下哪項關於神經元門控通道的敍述正確？"),
+        options: [
+          L("The nicotinic acetylcholine receptor opens when acetylcholine binds, letting positive ions such as Na⁺ in.", "ニコチン性アセチルコリン受容体は、アセチルコリンが結合すると開き、Na⁺ などの陽イオンが流入する。", "菸鹼型乙酰膽鹼受體在乙酰膽鹼結合時打開，讓 Na⁺ 等陽離子流入。"),
+          L("Voltage-gated sodium channels open when acetylcholine binds to them.", "電位依存性ナトリウムチャネルは、アセチルコリンが結合すると開く。", "電壓門控鈉通道在乙酰膽鹼與其結合時打開。"),
+          L("Gated channels use ATP to push ions against their gradients.", "ゲート付きチャネルは ATP を使ってイオンを勾配に逆らって押し出す。", "門控通道利用 ATP 把離子逆梯度推動。"),
+          L("Voltage-gated potassium channels let sodium ions through when closed.", "電位依存性カリウムチャネルは閉じているときにナトリウムイオンを通す。", "電壓門控鉀通道在關閉時讓鈉離子通過。")],
+        answer: 0,
+        explanation: L("The nicotinic acetylcholine receptor is a neurotransmitter-gated channel. B mixes up the two kinds of gating. C is wrong because channels are passive (facilitated diffusion); D is impossible because closed channels let nothing through and potassium channels are specific to K⁺.", "ニコチン性アセチルコリン受容体は神経伝達物質依存性チャネルである。Bは2種類のゲート制御を混同している。Cはチャネルが受動的 (促進拡散) なので誤り。Dは閉じたチャネルは何も通さず、カリウムチャネルは K⁺ に特異的なのでありえない。", "菸鹼型乙酰膽鹼受體是神經遞質門控通道。B 混淆了兩種門控方式；C 錯誤，因為通道是被動的 (易化擴散)；D 不可能，因為關閉的通道不讓任何物質通過，且鉀通道只對 K⁺ 有特異性。")
+      },
+      {
+        id: "b2-1-q18", type: "short", ahl: true, difficulty: 3, ref: "B2.1.15", paper: "2",
+        commandTerm: "Explain", marks: 4,
+        stem: L("Explain how sodium–potassium pumps contribute to the membrane potential of a neuron.", "ナトリウム・カリウムポンプがニューロンの膜電位にどう寄与するかを説明せよ。", "解釋鈉鉀泵如何協助形成神經元的膜電位。"),
+        markscheme: [
+          L("The pump uses ATP (active transport) to move 3 Na⁺ out of the cell and 2 K⁺ into the cell.", "ポンプは ATP を使って (能動輸送) Na⁺ 3個を細胞外へ、K⁺ 2個を細胞内へ運ぶ。", "泵利用 ATP (主動運輸) 把 3 個 Na⁺ 運出細胞，2 個 K⁺ 運入細胞。"),
+          L("This moves more positive charge out than in, so the inside of the cell becomes negative compared with the outside.", "入るより多くの正電荷が外へ出るので、細胞の内側は外側に対して負になる。", "運出的正電荷多於運入的，所以細胞內部相對外部帶負電。"),
+          L("It creates concentration gradients: Na⁺ high outside / low inside; K⁺ high inside / low outside.", "濃度勾配をつくる: Na⁺ は外側で高く内側で低く、K⁺ は内側で高く外側で低い。", "建立濃度梯度：Na⁺ 外高內低；K⁺ 內高外低。"),
+          L("The difference in electrical charge across the membrane is the membrane potential (and the gradients are used when channels open to send signals).", "膜をはさむ電気的な差が膜電位である (勾配はチャネルが開いて信号を送るときに使われる)。", "膜兩側的電荷差別就是膜電位 (這些梯度在通道打開傳送訊號時被利用)。")
+        ],
+        modelAnswer: L("Each cycle the pump uses ATP to move three Na⁺ out and two K⁺ in. More positive charge leaves than enters, so the inside becomes negative relative to the outside. It also keeps Na⁺ high outside and K⁺ high inside. The charge difference across the membrane is the membrane potential.", "1サイクルごとに ATP を使って Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ。入るより多くの正電荷が出るので、内側は外側に対して負になる。また Na⁺ は外側で、K⁺ は内側で高く保たれる。膜をはさむ電荷の差が膜電位である。", "每個循環泵利用 ATP 把三個 Na⁺ 運出、兩個 K⁺ 運入。運出的正電荷多於運入的，所以內部相對外部帶負電，同時令 Na⁺ 外高、K⁺ 內高。膜兩側的電荷差別就是膜電位。")
+      },
+      {
+        id: "b2-1-q19", type: "short", ahl: true, difficulty: 3, ref: "B2.1.16", paper: "2",
+        commandTerm: "Explain", marks: 4,
+        stem: L("Explain how sodium-dependent glucose cotransporters allow cells lining the small intestine to absorb glucose when the glucose concentration inside the cell is higher than in the gut.", "細胞内のグルコース濃度が腸管内より高いときでも、小腸の内壁の細胞がナトリウム依存性グルコース共輸送体によってグルコースを吸収できるしくみを説明せよ。", "解釋當細胞內葡萄糖濃度高於腸腔時，小腸內壁細胞如何利用鈉依賴性葡萄糖協同運輸體吸收葡萄糖。"),
+        markscheme: [
+          L("Sodium–potassium pumps use ATP to pump Na⁺ out of the cell, making the Na⁺ concentration low inside and high outside.", "ナトリウム・カリウムポンプが ATP を使って Na⁺ を細胞外へ出し、Na⁺ 濃度を内側で低く外側で高くする。", "鈉鉀泵利用 ATP 把 Na⁺ 泵出細胞，令 Na⁺ 內低外高。"),
+          L("Na⁺ moves back into the cell down its concentration gradient through the cotransporter.", "Na⁺ は共輸送体を通って濃度勾配に従い細胞内へ戻る。", "Na⁺ 經協同運輸體順濃度梯度流回細胞內。"),
+          L("The cotransporter carries glucose in at the same time (glucose and Na⁺ bind together), so glucose is moved against its concentration gradient.", "共輸送体は同時にグルコースも運び込む (グルコースと Na⁺ が一緒に結合する) ので、グルコースは濃度勾配に逆らって運ばれる。", "協同運輸體同時把葡萄糖帶入 (葡萄糖與 Na⁺ 一起結合)，所以葡萄糖是逆濃度梯度被運送。"),
+          L("This is indirect active transport: the cotransporter does not use ATP itself; the energy comes from the Na⁺ gradient.", "これは間接的能動輸送で、共輸送体自身は ATP を使わず、エネルギーは Na⁺ の勾配から得る。", "這是間接主動運輸：協同運輸體本身不用 ATP，能量來自 Na⁺ 梯度。")
+        ],
+        modelAnswer: L("Sodium–potassium pumps use ATP to keep Na⁺ low inside the cell. Na⁺ flows back in down its gradient through the cotransporter, and glucose is carried in with it, even against its own gradient. The cotransporter does not use ATP directly, so this is indirect active transport.", "ナトリウム・カリウムポンプが ATP を使って細胞内の Na⁺ を低く保つ。Na⁺ は共輸送体を通って勾配に従い戻り、グルコースも一緒に、それ自身の勾配に逆らっても運び込まれる。共輸送体は ATP を直接使わないので間接的能動輸送である。", "鈉鉀泵利用 ATP 使細胞內 Na⁺ 保持低濃度。Na⁺ 經協同運輸體順梯度流回，葡萄糖隨之被帶入，即使逆它本身的梯度。協同運輸體不直接使用 ATP，所以是間接主動運輸。")
+      },
+      {
+        id: "b2-1-q20", type: "mcq", ahl: true, difficulty: 1, ref: "B2.1.17", paper: "1A",
+        stem: L("What is the function of cell-adhesion molecules (CAMs)?", "細胞接着分子 (CAM) の機能は何か。", "細胞黏附分子 (CAM) 的功能是甚麼？"),
+        options: [
+          L("They bind cells to neighbouring cells so that tissues form.", "細胞を隣の細胞に結合させ、組織をつくる。", "把細胞與鄰近細胞結合，以形成組織。"),
+          L("They pump ions across the plasma membrane using ATP.", "ATP を使ってイオンを細胞膜の反対側へ運ぶ。", "利用 ATP 把離子泵過質膜。"),
+          L("They make up the hydrophobic core of the bilayer.", "二重層の疎水性の中心部をつくる。", "組成雙層的疏水核心。"),
+          L("They store energy in adipose tissue.", "脂肪組織にエネルギーを貯える。", "在脂肪組織中儲存能量。")],
+        answer: 0,
+        explanation: L("CAMs are membrane proteins that bind to other cells (or to the material between cells). The other options describe pumps, phospholipid tails and triglycerides.", "CAM は他の細胞 (または細胞間の物質) と結合する膜タンパク質である。他の選択肢はポンプ、リン脂質の尾部、トリグリセリドの説明である。", "CAM 是與其他細胞 (或細胞間物質) 結合的膜蛋白。其他選項描述的是泵、磷脂尾部和甘油三酯。")
+      }
     ]
   });
 })();

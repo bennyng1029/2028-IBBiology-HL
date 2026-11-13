@@ -209,12 +209,13 @@
           "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸は1つのアミノ酸で、R基の種類で色分けしています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
           "多肽中氨基酸的排列次序，由肽鍵連接。每顆珠代表一個氨基酸，按 R 基類型著色。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。"]) }));
         var svg = sv("svg", { viewBox: "0 0 360 160", role: "group", "aria-label": T(["Amino acid sequence", "アミノ酸配列", "氨基酸序列"]) });
+        var lineLayer = sv("g", {}); svg.appendChild(lineLayer);
         for (var i = 0; i < 12; i++) {
           (function (i) {
             var row = i < 6 ? 0 : 1, c = i < 6 ? i : 11 - i, x = 36 + c * 58, y = 52 + row * 62;
             if (i > 0) {
               var px = (i - 1 < 6 ? i - 1 : 11 - (i - 1)) * 58 + 36, py = 52 + (i - 1 < 6 ? 0 : 1) * 62;
-              svg.appendChild(sv("line", { x1: px, y1: py, x2: x, y2: y, stroke: "var(--k-mut)", "stroke-width": 4 }));
+              lineLayer.appendChild(sv("line", { x1: px, y1: py, x2: x, y2: y, stroke: "var(--k-mut)", "stroke-width": 4 }));
             }
             var g = sv("g", { class: "bead" + (i === sel ? " sel" : ""), tabindex: 0, role: "button", "aria-label": (i + 1) + ": " + T(CN[seq[i]]) }, [
               sv("circle", { cx: x, cy: y, r: 25, fill: "transparent" }),

@@ -1,0 +1,517 @@
+/* Widget: water-hbond — polarity of water, hydrogen bonds, and the water properties listed in IB A1.1.2–A1.1.6.
+   Scenes: structure, cohesion (xylem, surface tension), adhesion (wall, capillary rise), solvent, water vs air.
+   Qualitative models only (not to scale). */
+(function () {
+  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var RAD = Math.PI / 180;
+  var MINUS = "−";
+
+  var CSS = [
+    ".w-water-hbond{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
+    ".w-water-hbond .wh-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .6rem}",
+    ".w-water-hbond .wh-tab,.w-water-hbond .wh-sub{font:inherit;font-size:.88rem;font-weight:700;min-height:2.5rem;padding:.35rem .75rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer;line-height:1.2}",
+    ".w-water-hbond .wh-tab[aria-pressed=true],.w-water-hbond .wh-sub[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
+    ".w-water-hbond .wh-tab:focus-visible,.w-water-hbond .wh-sub:focus-visible,.w-water-hbond input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
+    ".w-water-hbond .wh-subs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0 0 .5rem}",
+    ".w-water-hbond .wh-sub{min-height:2.25rem;font-size:.82rem}",
+    ".w-water-hbond label.wh-chk{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;min-height:2.25rem;padding:0 .4rem;cursor:pointer}",
+    ".w-water-hbond label.wh-chk input{width:1.15rem;height:1.15rem;accent-color:var(--accent,#2547c7)}",
+    ".w-water-hbond .wh-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px)}",
+    ".w-water-hbond svg{display:block;width:100%;height:auto;max-height:70vh}",
+    ".w-water-hbond svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
+    ".w-water-hbond .wh-cap{margin:.6rem 0 0;font-size:.92rem;line-height:1.5}",
+    ".w-water-hbond .wh-cap strong{font-weight:800}",
+    ".w-water-hbond .wh-air{padding:.8rem}",
+    ".w-water-hbond .wh-bar{display:grid;grid-template-columns:4.5rem 1fr;gap:.5rem;align-items:center;margin:.35rem 0;font-size:.9rem}",
+    ".w-water-hbond .wh-track{background:var(--surface-2,#e3eaee);border-radius:4px;height:1.4rem;overflow:hidden}",
+    ".w-water-hbond .wh-fill{height:100%;border-radius:4px}",
+    ".w-water-hbond .wh-fill.w{background:var(--accent,#2547c7)}",
+    ".w-water-hbond .wh-fill.a{background:var(--muted,#4d626d)}",
+    ".w-water-hbond .wh-ex{margin:.6rem 0 0;padding:.6rem .8rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.9rem;line-height:1.5}",
+    ".w-water-hbond .wh-note{margin:.4rem 0 0;font-size:.78rem;color:var(--muted,#4d626d)}"
+  ].join("\n");
+
+  var T = {
+    title: L("Water: polarity, hydrogen bonds and properties", "水：極性・水素結合・性質", "水：極性、氫鍵與性質"),
+    tabs: {
+      structure: L("Polarity & H-bonds", "極性と水素結合", "極性與氫鍵"),
+      cohesion: L("Cohesion", "凝集力", "內聚力"),
+      adhesion: L("Adhesion", "付着力", "附著力"),
+      solvent: L("Solvent", "溶媒", "溶劑"),
+      air: L("Water vs air", "水と空気", "水與空氣")
+    },
+    charges: L("Show partial charges (δ+ / δ−)", "部分電荷 (δ+ / δ−) を表示", "顯示部分電荷 (δ+ / δ−)"),
+    bonds: L("Show hydrogen bonds", "水素結合を表示", "顯示氫鍵"),
+    legCov: L("covalent bond (inside a molecule)", "共有結合 (分子の内部)", "共價鍵 (分子內部)"),
+    legH: L("hydrogen bond (between molecules)", "水素結合 (分子の間)", "氫鍵 (分子之間)"),
+    legAd: L("adhesion: water to wall", "付着：水と壁", "附著：水與壁"),
+    legCo: L("cohesion: water to water", "凝集：水と水", "內聚：水與水"),
+    notScale: L("Qualitative model, not to scale.", "定性的なモデルで、縮尺は正確ではありません。", "定性模型，並非按比例繪製。"),
+    sub: {
+      xylem: L("Xylem (tension)", "木部 (張力)", "木質部 (張力)"),
+      surface: L("Surface tension", "表面張力", "表面張力"),
+      wall: L("At a wall", "壁のそば", "在壁旁"),
+      capillary: L("Capillary rise", "毛細管上昇", "毛細管上升"),
+      nacl: L("Salt (ions)", "塩 (イオン)", "鹽 (離子)"),
+      glucose: L("Glucose (polar)", "グルコース (極性)", "葡萄糖 (極性)"),
+      oil: L("Oil (non-polar)", "油 (無極性)", "油 (非極性)")
+    },
+    dissolve: L("Add water", "水を加える", "加水"),
+    reset: L("Reset crystal", "結晶に戻す", "還原晶體"),
+    cap: {
+      structure: L(
+        "<strong>Polar:</strong> oxygen pulls the shared electrons, so O is slightly negative (δ−) and each H slightly positive (δ+). A <strong>hydrogen bond</strong> is the attraction between the δ+ H of one molecule and the δ− O of a different molecule.",
+        "<strong>極性：</strong>酸素が共有電子を引き寄せるため、O はわずかに負 (δ−)、各 H はわずかに正 (δ+) になります。<strong>水素結合 (hydrogen bond)</strong> は、ある分子の δ+ の H と別の分子の δ− の O の間の引力です。",
+        "<strong>極性：</strong>氧吸引共用電子，所以 O 略帶負電 (δ−)，每個 H 略帶正電 (δ+)。<strong>氫鍵 (hydrogen bond)</strong> 是一個分子 δ+ 的 H 與另一分子 δ− 的 O 之間的吸引力。"),
+      xylem: L(
+        "<strong>Cohesion in xylem:</strong> evaporation from leaves pulls the water upwards (tension). Hydrogen bonds hold the water molecules together, so the column is pulled up without breaking.",
+        "<strong>木部での凝集力：</strong>葉からの蒸発が水を上へ引っ張ります (張力)。水素結合が水分子をつなぎとめるので、水の柱は途切れずに引き上げられます。",
+        "<strong>木質部中的內聚力：</strong>葉片蒸發水分，把水向上拉 (張力)。氫鍵把水分子連在一起，所以水柱被拉上而不會斷裂。"),
+      surface: L(
+        "<strong>Surface tension:</strong> surface molecules are pulled sideways and downwards by hydrogen bonds, but not upwards. The surface acts like a thin skin that can support a pond skater.",
+        "<strong>表面張力：</strong>水面の分子は水素結合で横と下に引かれますが、上には引かれません。水面は薄い膜のようにはたらき、アメンボを支えられます。",
+        "<strong>表面張力：</strong>水面的分子受氫鍵向側面和向下拉，但不會向上。水面像一層薄膜，可以托起水黽。"),
+      wall: L(
+        "<strong>Adhesion:</strong> water's δ+ hydrogen atoms are attracted to δ− sites on a polar or charged surface such as cellulose in a cell wall or a soil particle. Cohesion then holds the next layer of water to the first.",
+        "<strong>付着力：</strong>水の δ+ の水素は、細胞壁のセルロースや土壌粒子のような、極性または電荷をもつ表面の δ− の部位に引かれます。そして凝集力が、次の層の水を最初の層につなぎとめます。",
+        "<strong>附著力：</strong>水 δ+ 的氫原子被極性或帶電表面 (如細胞壁中的纖維素或土壤顆粒) 上 δ− 的位置吸引。然後內聚力把下一層水與第一層連在一起。"),
+      capillary: L(
+        "<strong>Capillary action:</strong> adhesion pulls water up the wall of a narrow space and cohesion drags the rest of the water after it. The narrower the space, the higher the water rises (soil, plant cell walls).",
+        "<strong>毛細管現象：</strong>付着力が狭い空間の壁に沿って水を引き上げ、凝集力が残りの水を引きずります。空間が狭いほど水は高く上昇します (土壌、植物の細胞壁)。",
+        "<strong>毛細管作用：</strong>附著力沿狹窄空間的壁把水向上拉，內聚力把其餘的水拉上。空間越窄，水升得越高 (土壤、植物細胞壁)。"),
+      nacl: L(
+        "<strong>Ions dissolve:</strong> δ− oxygen atoms are attracted to Na⁺ and δ+ hydrogen atoms to Cl⁻. Water molecules surround each ion and keep the ions apart.",
+        "<strong>イオンは溶ける：</strong>δ− の酸素は Na⁺ に、δ+ の水素は Cl⁻ に引かれます。水分子が各イオンを取り囲み、イオンどうしを引き離しておきます。",
+        "<strong>離子溶解：</strong>δ− 的氧吸引 Na⁺，δ+ 的氫吸引 Cl⁻。水分子包圍每個離子，並使離子彼此分開。"),
+      glucose: L(
+        "<strong>Polar molecules dissolve:</strong> glucose has polar –OH groups. Water forms hydrogen bonds with them, so glucose is hydrophilic and dissolves.",
+        "<strong>極性分子は溶ける：</strong>グルコースには極性のある –OH 基があります。水がこれらと水素結合をつくるので、グルコースは親水性で溶けます。",
+        "<strong>極性分子溶解：</strong>葡萄糖有極性的 –OH 基團。水與它們形成氫鍵，所以葡萄糖是親水的並能溶解。"),
+      oil: L(
+        "<strong>Non-polar molecules do not dissolve:</strong> oil has no partial charges for water to attract. Water molecules bond to each other instead, so the oil is hydrophobic and stays together.",
+        "<strong>無極性分子は溶けない：</strong>油には水が引き寄せる部分電荷がありません。水分子は代わりに互いに結合するので、油は疎水性で、ひとかたまりのままです。",
+        "<strong>非極性分子不溶解：</strong>油沒有可供水吸引的部分電荷。水分子轉而彼此結合，所以油是疏水的，並聚在一起。")
+    },
+    labels: {
+      pull: L("pull (tension)", "引く力 (張力)", "拉力 (張力)"),
+      pullLeaf: L("pull from leaf", "葉からの引力", "來自葉片的拉力"),
+      wall: L("xylem wall", "木部の壁", "木質部壁"),
+      cohesionKeeps: L("hydrogen bonds keep the column together", "水素結合が柱をつなぎとめる", "氫鍵使水柱連在一起"),
+      air: L("air", "空気", "空氣"),
+      water: L("water", "水", "水"),
+      skater: L("pond skater", "アメンボ", "水黽"),
+      noUp: L("no water above: no upward pull", "上に水はない：上向きの引力なし", "上方沒有水：沒有向上的拉力"),
+      wallLab: L("cell wall / soil particle", "細胞壁・土壌粒子", "細胞壁／土壤顆粒"),
+      polarSurf: L("polar or charged surface", "極性または電荷をもつ表面", "極性或帶電表面"),
+      level: L("water level in beaker", "ビーカーの水面", "燒杯中的水面"),
+      wide: L("wide tube", "太い管", "闊管"),
+      narrow: L("narrow tube", "細い管", "窄管"),
+      adhUp: L("adhesion pulls up the wall", "付着力が壁に沿って引き上げる", "附著力沿壁向上拉"),
+      cohUp: L("cohesion pulls the rest", "凝集力が残りを引く", "內聚力拉動其餘的水"),
+      crystal: L("salt crystal", "塩の結晶", "鹽晶體"),
+      attractIon: L("attraction to ion", "イオンへの引力", "對離子的吸引力"),
+      glucose: L("glucose", "グルコース", "葡萄糖"),
+      oil: L("oil (non-polar)", "油 (無極性)", "油 (非極性)"),
+      noAttract: L("no attraction to oil", "油への引力なし", "對油沒有吸引力"),
+      waterBonds: L("water bonds to water", "水は水と結合する", "水與水結合"),
+      polarOH: L("polar –OH groups", "極性の –OH 基", "極性 –OH 基團")
+    },
+    aria: {
+      structure: L("Diagram of six water molecules joined by hydrogen bonds", "6個の水分子が水素結合でつながった図", "六個水分子以氫鍵連接的圖"),
+      xylem: L("Diagram of a column of water molecules in a xylem vessel, held by hydrogen bonds under tension", "木部の道管内で水素結合によって張力下でつながった水分子の柱の図", "木質部導管內水分子柱受張力、由氫鍵連接的圖"),
+      surface: L("Diagram of water molecules at a surface supporting a pond skater", "水面の水分子がアメンボを支えている図", "水面的水分子托起水黽的圖"),
+      wall: L("Diagram of water molecules attracted to a polar wall and to each other", "極性のある壁と互いに引き合う水分子の図", "水分子被極性壁和彼此吸引的圖"),
+      capillary: L("Diagram of water rising higher in a narrow tube than in a wide tube", "細い管のほうが太い管より水が高く上昇している図", "水在窄管中比在闊管中升得更高的圖"),
+      nacl: L("Diagram of sodium chloride ions with and without a shell of water molecules", "水分子の殻がある場合とない場合の塩化ナトリウムのイオンの図", "氯化鈉離子有無水分子包圍的圖"),
+      glucose: L("Diagram of glucose with water molecules hydrogen bonded to its polar groups", "極性の基に水分子が水素結合しているグルコースの図", "水分子與葡萄糖極性基團形成氫鍵的圖"),
+      oil: L("Diagram of an oil droplet surrounded by water molecules that bond to each other", "互いに結合した水分子に囲まれた油滴の図", "被彼此結合的水分子包圍的油滴圖")
+    },
+    props: {
+      buoyancy: {
+        name: L("Buoyancy", "浮力", "浮力"),
+        water: L("high", "大きい", "大"), air: L("very low", "非常に小さい", "極小"),
+        text: L("Water is much denser than air, so it supports a body. Aquatic animals need less skeleton to hold up their weight; land and flying animals need legs or wings.",
+          "水は空気よりはるかに密度が高いので、体を支えます。水生動物は体重を支える骨格が少なくてすみ、陸上や空中の動物には脚や翼が必要です。",
+          "水的密度遠高於空氣，所以能支撐身體。水生動物不需要那麼多骨骼來承托體重；陸生和飛行動物則需要腿或翅膀。"),
+        ex: L("Ringed seal: its weight is supported by water. Black-throated loon: in flight, its wings must provide all the lift.",
+          "ワモンアザラシ：体重は水に支えられる。オオハム：飛行中は、翼がすべての揚力を生み出さなければならない。",
+          "環斑海豹：體重由水支撐。黑喉潛鳥：飛行時，翅膀必須提供全部升力。")
+      },
+      viscosity: {
+        name: L("Viscosity", "粘性", "黏度"),
+        water: L("high", "大きい", "大"), air: L("low", "小さい", "小"),
+        text: L("Water resists movement more than air does, so swimming takes more force and a streamlined body reduces drag.",
+          "水は空気より動きに対する抵抗が大きいので、泳ぐにはより大きな力が必要で、流線形の体が抵抗を減らします。",
+          "水對移動的阻力比空氣大，所以游泳需要更大的力，流線型身體可減少阻力。"),
+        ex: L("Ringed seal and loon: streamlined bodies reduce drag when moving through water.",
+          "ワモンアザラシとオオハム：流線形の体が、水中を動くときの抵抗を減らす。",
+          "環斑海豹和黑喉潛鳥：流線型身體減少在水中移動時的阻力。")
+      },
+      conductivity: {
+        name: L("Thermal conductivity", "熱伝導率", "熱傳導性"),
+        water: L("high", "大きい", "高"), air: L("low", "小さい", "低"),
+        text: L("Water carries heat away from a body much faster than air does, so animals in cold water lose heat quickly and need insulation. Air is a poor conductor.",
+          "水は空気よりはるかに速く体から熱を奪うので、冷たい水の中の動物はすばやく熱を失い、断熱が必要です。空気は熱を伝えにくい物質です。",
+          "水帶走身體熱量的速度遠比空氣快，所以冷水中的動物迅速失熱，需要隔熱。空氣是不良導體。"),
+        ex: L("Ringed seal: a thick layer of blubber insulates it in cold water.",
+          "ワモンアザラシ：厚い皮下脂肪 (blubber) が冷たい水の中で断熱する。",
+          "環斑海豹：厚厚的鯨脂 (blubber) 在冷水中提供隔熱。")
+      },
+      heat: {
+        name: L("Specific heat capacity", "比熱", "比熱容"),
+        water: L("high", "大きい", "大"), air: L("low", "小さい", "小"),
+        text: L("A lot of energy is needed to warm water, so the temperature of a lake or sea changes slowly. Aquatic habitats are thermally more stable than air.",
+          "水を温めるには多くのエネルギーが必要なので、湖や海の温度はゆっくり変化します。水中の生息場所は、空気中より温度が安定しています。",
+          "使水升溫需要大量能量，所以湖泊或海洋的溫度變化緩慢。水生棲息地的溫度比空氣中更穩定。"),
+        ex: L("Animals in water meet smaller and slower temperature changes than animals on land.",
+          "水中の動物が受ける温度変化は、陸上の動物より小さくゆるやかです。",
+          "水中動物所經歷的溫度變化比陸上動物更小、更慢。")
+      }
+    },
+    barW: L("Water", "水", "水"),
+    barA: L("Air", "空気", "空氣"),
+    barNote: L("Bars show which is higher, not exact values.", "棒は、どちらが大きいかを示すもので、正確な値ではありません。", "橫條只顯示哪個較高，並非準確數值。")
+  };
+
+  function svgOpen(w, h, label) {
+    return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + label.replace(/"/g, "&quot;") + '" xmlns="http://www.w3.org/2000/svg">';
+  }
+
+  function polar(x, y, ang, d) { return [x + d * Math.cos(ang * RAD), y + d * Math.sin(ang * RAD)]; }
+  function angleTo(a, b) { return Math.atan2(b[1] - a[1], b[0] - a[0]) / RAD; }
+
+  /* A water molecule: O at (x,y); H1 at angle aim; H2 at aim + 104.5 (SVG angles, y downward). */
+  function mol(x, y, aim, charges) {
+    var h1 = polar(x, y, aim, 26), h2 = polar(x, y, aim + 104.5, 26);
+    var bis = aim + 52.25;
+    var s = '';
+    s += '<line x1="' + x + '" y1="' + y + '" x2="' + h1[0] + '" y2="' + h1[1] + '" stroke="var(--ink,#0f2029)" stroke-width="3" stroke-linecap="round"/>';
+    s += '<line x1="' + x + '" y1="' + y + '" x2="' + h2[0] + '" y2="' + h2[1] + '" stroke="var(--ink,#0f2029)" stroke-width="3" stroke-linecap="round"/>';
+    s += '<circle cx="' + h1[0] + '" cy="' + h1[1] + '" r="7" fill="var(--c-hydrogen,#aebbc2)" stroke="var(--muted,#4d626d)" stroke-width="1"/>';
+    s += '<circle cx="' + h2[0] + '" cy="' + h2[1] + '" r="7" fill="var(--c-hydrogen,#aebbc2)" stroke="var(--muted,#4d626d)" stroke-width="1"/>';
+    s += '<circle cx="' + x + '" cy="' + y + '" r="11" fill="var(--c-oxygen,#d33a2c)"/>';
+    s += '<text x="' + x + '" y="' + (y + 3.5) + '" font-size="11" font-weight="800" text-anchor="middle" style="fill:#fff">O</text>';
+    s += '<text x="' + h1[0] + '" y="' + (h1[1] + 3) + '" font-size="8.5" font-weight="800" text-anchor="middle">H</text>';
+    s += '<text x="' + h2[0] + '" y="' + (h2[1] + 3) + '" font-size="8.5" font-weight="800" text-anchor="middle">H</text>';
+    if (charges) {
+      var o = polar(x, y, bis + 180, 21), a = polar(x, y, aim, 38), b = polar(x, y, aim + 104.5, 38);
+      s += '<text x="' + o[0] + '" y="' + (o[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-oxygen,#d33a2c)">δ' + MINUS + '</text>';
+      s += '<text x="' + a[0] + '" y="' + (a[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
+      s += '<text x="' + b[0] + '" y="' + (b[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
+    }
+    return { svg: s, o: [x, y], h1: h1, h2: h2 };
+  }
+
+  function hb(from, to, color) {
+    var dx = to[0] - from[0], dy = to[1] - from[1], len = Math.sqrt(dx * dx + dy * dy);
+    var ux = dx / len, uy = dy / len;
+    return '<line x1="' + (from[0] + ux * 8) + '" y1="' + (from[1] + uy * 8) + '" x2="' + (to[0] - ux * 13) + '" y2="' + (to[1] - uy * 13) + '" stroke="' + (color || "var(--hbond,#2a7de1)") + '" stroke-width="2.4" stroke-dasharray="5 4" stroke-linecap="round"/>';
+  }
+
+  function arrow(x1, y1, x2, y2, color) {
+    var a = Math.atan2(y2 - y1, x2 - x1), hx = 7;
+    var p1 = [x2 - hx * Math.cos(a - 0.45), y2 - hx * Math.sin(a - 0.45)], p2 = [x2 - hx * Math.cos(a + 0.45), y2 - hx * Math.sin(a + 0.45)];
+    return '<g stroke="' + color + '" fill="' + color + '" stroke-width="2.5" stroke-linecap="round"><line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"/><polygon points="' + x2 + ',' + y2 + ' ' + p1[0] + ',' + p1[1] + ' ' + p2[0] + ',' + p2[1] + '" stroke="none"/></g>';
+  }
+
+  function txt(x, y, str, size, anchor, weight, fillVar) {
+    return '<text x="' + x + '" y="' + y + '" font-size="' + (size || 11) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fillVar ? ' style="fill:' + fillVar + '"' : '') + '>' + str + '</text>';
+  }
+
+  /* Draw a set of molecules and the hydrogen bonds between them.
+     pos: [[x,y],...]; links: [[donorIdx, acceptorIdx], ...]; defaults: aim for molecules without a link. */
+  function network(pos, links, opts) {
+    opts = opts || {};
+    var aims = pos.map(function (p, i) { return (opts.defaultAim ? opts.defaultAim[i] : 20 + i * 47); });
+    links.forEach(function (l) { aims[l[0]] = angleTo(pos[l[0]], pos[l[1]]); });
+    var mols = pos.map(function (p, i) { return mol(p[0], p[1], aims[i], opts.charges); });
+    var bonds = '';
+    if (opts.bonds !== false) {
+      links.forEach(function (l) { bonds += hb(mols[l[0]].h1, mols[l[1]].o, opts.color && opts.color(l)); });
+    }
+    return bonds + mols.map(function (m) { return m.svg; }).join('');
+  }
+
+  function legend(y, items) {
+    var s = '', x = 14;
+    items.forEach(function (it) {
+      if (it.dash) {
+        s += '<line x1="' + x + '" y1="' + y + '" x2="' + (x + 24) + '" y2="' + y + '" stroke="' + it.color + '" stroke-width="2.4" stroke-dasharray="5 4"/>';
+      } else {
+        s += '<line x1="' + x + '" y1="' + y + '" x2="' + (x + 24) + '" y2="' + y + '" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
+      }
+      s += txt(x + 30, y + 4, it.label, 10.5, "start", 600, "var(--muted,#4d626d)");
+      x += it.w;
+    });
+    return s;
+  }
+
+  function sceneStructure(S) {
+    var pos = [[56, 62], [128, 104], [214, 84], [268, 150], [200, 196], [100, 190]];
+    var links = [[0, 1], [1, 2], [2, 3], [3, 4], [5, 1]];
+    var s = svgOpen(360, 258, S.t(T.aria.structure));
+    s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [0, 0, 0, 0, 200, 0] });
+    s += '<g>' + legend(244, [{ label: S.t(T.legCov), w: 150 }, { label: S.t(T.legH), dash: true, color: "var(--hbond,#2a7de1)", w: 0 }]) + '</g>';
+    return s + '</svg>';
+  }
+
+  function sceneXylem(S) {
+    var s = svgOpen(360, 258, S.t(T.aria.xylem));
+    // walls
+    s += '<line x1="70" y1="40" x2="70" y2="228" stroke="var(--muted,#4d626d)" stroke-width="5"/><line x1="290" y1="40" x2="290" y2="228" stroke="var(--muted,#4d626d)" stroke-width="5"/>';
+    s += txt(70, 244, S.t(T.labels.wall), 10, "middle", 600, "var(--muted,#4d626d)");
+    s += txt(290, 244, S.t(T.labels.wall), 10, "middle", 600, "var(--muted,#4d626d)");
+    var pos = [[150, 84], [150, 158], [150, 232 - 4], [230, 84], [230, 158], [230, 228]];
+    pos = [[150, 82], [150, 158], [150, 228], [230, 82], [230, 158], [230, 228]];
+    var links = [[0, 1], [1, 2], [3, 4], [4, 5]];
+    s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [90, 90, 90, 90, 90, 90] });
+    // pull arrow
+    s += arrow(190, 62, 190, 18, "var(--ink,#0f2029)");
+    s += txt(196, 34, S.t(T.labels.pullLeaf), 10.5, "start", 700);
+    s += txt(190, 12, "", 10);
+    s += txt(180, 258, S.t(T.labels.cohesionKeeps), 10, "middle", 600, "var(--muted,#4d626d)");
+    return s + '</svg>';
+  }
+
+  function sceneSurface(S) {
+    var s = svgOpen(360, 258, S.t(T.aria.surface));
+    s += txt(26, 22, S.t(T.labels.air), 11, "start", 700, "var(--muted,#4d626d)");
+    // surface line with dimples under legs
+    s += '<path d="M10 126 L145 126 Q152 134 159 126 L172 126 Q179 134 186 126 L199 126 Q206 134 213 126 L350 126" fill="none" stroke="var(--accent,#2547c7)" stroke-width="2" opacity="0.6"/>';
+    // skater
+    s += '<ellipse cx="180" cy="92" rx="24" ry="7" fill="var(--c-carbon,#4a5a63)"/><circle cx="154" cy="90" r="5" fill="var(--c-carbon,#4a5a63)"/>';
+    [[152, 124], [165, 128], [194, 128], [208, 124]].forEach(function (p) {
+      s += '<polyline points="' + (p[0] < 180 ? 168 : 192) + ',96 ' + ((p[0] + (p[0] < 180 ? 168 : 192)) / 2) + ',104 ' + p[0] + ',' + p[1] + '" fill="none" stroke="var(--c-carbon,#4a5a63)" stroke-width="2"/>';
+    });
+    s += txt(180, 76, S.t(T.labels.skater), 10.5, "middle", 700);
+    // molecules
+    var pos = [[48, 144], [126, 144], [204, 144], [282, 144], [86, 214], [165, 214], [243, 214]];
+    var links = [[0, 1], [1, 2], [2, 3], [4, 1], [5, 2], [6, 3]];
+    s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [0, 0, 0, 20, 0, 0, 0] });
+    // net force arrows on the middle surface molecule
+    s += arrow(204, 144, 170, 144, "var(--ink,#0f2029)") + arrow(204, 144, 238, 144, "var(--ink,#0f2029)") + arrow(204, 144, 204, 180, "var(--ink,#0f2029)");
+    s += txt(26, 168, S.t(T.labels.water), 11, "start", 700, "var(--muted,#4d626d)");
+    s += txt(300, 188, S.t(T.labels.noUp), 9.5, "middle", 700, "var(--muted,#4d626d)");
+    s += txt(180, 252, S.t(T.legH), 10, "middle", 600, "var(--muted,#4d626d)");
+    return s + '</svg>';
+  }
+
+  function sceneWall(S) {
+    var AD = "var(--hbond,#2a7de1)", CO = "var(--accent,#2547c7)";
+    var s = svgOpen(360, 258, S.t(T.aria.wall));
+    s += '<rect x="14" y="14" width="44" height="214" fill="var(--surface-2,#e3eaee)" stroke="var(--muted,#4d626d)" stroke-width="2"/>';
+    s += txt(36, 244, S.t(T.labels.wallLab), 10, "start", 700, "var(--muted,#4d626d)").replace('x="36"', 'x="14"');
+    var sites = [60, 126, 192];
+    sites.forEach(function (y) {
+      s += '<circle cx="66" cy="' + y + '" r="8" fill="var(--c-oxygen,#d33a2c)" opacity="0.85"/>' + txt(66, y + 3.5, "O", 9, "middle", 800, "#fff");
+      if (S.charges) s += txt(80, y - 12, "δ" + MINUS, 12, "middle", 800, "var(--c-oxygen,#d33a2c)");
+    });
+    var pos = [[138, 60], [138, 126], [138, 192], [214, 60], [214, 126], [214, 192]];
+    var mols = pos.map(function (p) { return mol(p[0], p[1], 180, S.charges); });
+    if (S.bonds) {
+      for (var i = 0; i < 3; i++) {
+        s += hb(mols[i].h1, [66, sites[i]], AD);
+        s += hb(mols[i + 3].h1, mols[i].o, CO);
+      }
+    }
+    s += mols.map(function (m) { return m.svg; }).join('');
+    s += txt(250, 16, S.t(T.labels.polarSurf), 10, "start", 700, "var(--muted,#4d626d)").replace('x="250"', 'x="70"');
+    s += legend(250, [{ label: S.t(T.legAd), dash: true, color: AD, w: 160 }, { label: S.t(T.legCo), dash: true, color: CO, w: 0 }]);
+    return s + '</svg>';
+  }
+
+  function sceneCapillary(S) {
+    var W = "var(--accent-soft,#e0e7fb)", WS = "var(--accent,#2547c7)";
+    var s = svgOpen(360, 258, S.t(T.aria.capillary));
+    // beaker water
+    s += '<rect x="12" y="186" width="336" height="62" fill="' + W + '" stroke="' + WS + '" stroke-width="1.5"/>';
+    // wide tube (x 50..130) : water rises to 160
+    s += '<rect x="52" y="160" width="76" height="86" fill="' + W + '"/>';
+    s += '<path d="M52 160 Q90 168 128 160" fill="none" stroke="' + WS + '" stroke-width="2"/>';
+    s += '<line x1="50" y1="60" x2="50" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/><line x1="130" y1="60" x2="130" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
+    // narrow tube (x 226..258): water rises to 84
+    s += '<rect x="228" y="84" width="28" height="164" fill="' + W + '"/>';
+    s += '<path d="M228 84 Q242 96 256 84" fill="none" stroke="' + WS + '" stroke-width="2"/>';
+    s += '<line x1="226" y1="40" x2="226" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/><line x1="258" y1="40" x2="258" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
+    // level line
+    s += '<line x1="12" y1="186" x2="348" y2="186" stroke="' + WS + '" stroke-width="1.5" stroke-dasharray="3 3"/>';
+    s += txt(344, 180, S.t(T.labels.level), 9.5, "end", 700, "var(--muted,#4d626d)");
+    s += txt(90, 52, S.t(T.labels.wide), 11, "middle", 700);
+    s += txt(242, 30, S.t(T.labels.narrow), 11, "middle", 700);
+    // arrows showing height difference
+    s += arrow(160, 160, 160, 124, "var(--ink,#0f2029)").replace("", "");
+    s += arrow(286, 186, 286, 90, "var(--ink,#0f2029)");
+    // adhesion arrows along narrow walls
+    s += arrow(222, 150, 222, 108, "var(--hbond,#2a7de1)") + arrow(262, 150, 262, 108, "var(--hbond,#2a7de1)");
+    s += txt(214, 124, "", 9);
+    s += '<text x="268" y="132" font-size="9.5" font-weight="700" style="fill:var(--hbond,#2a7de1)">' + S.t(T.labels.adhUp) + '</text>';
+    s += '<text x="242" y="148" font-size="9.5" font-weight="700" text-anchor="middle" style="fill:var(--accent,#2547c7)" dy="30">' + S.t(T.labels.cohUp) + '</text>';
+    return s + '</svg>';
+  }
+
+  function ringWaters(cx, cy, r, n, aims, charges, bonds) {
+    return null;
+  }
+
+  function sceneNaCl(S) {
+    var s = svgOpen(360, 258, S.t(T.aria.nacl));
+    var NA = "var(--c-nitrogen,#2d5cdd)", CL = "var(--c-sulfur,#c19a00)";
+    function ion(x, y, label, color) {
+      return '<circle cx="' + x + '" cy="' + y + '" r="14" fill="' + color + '"/>' + txt(x, y + 4, label, 11, "middle", 800, "#fff");
+    }
+    if (!S.dissolved) {
+      s += ion(150, 110, "Na⁺", NA) + ion(184, 110, "Cl⁻", CL) + ion(150, 144, "Cl⁻", CL) + ion(184, 144, "Na⁺", NA);
+      s += txt(167, 190, S.t(T.labels.crystal), 11, "middle", 700);
+      s += txt(180, 232, "", 10);
+      return s + '</svg>';
+    }
+    var out = '', waterSvg = '', att = '';
+    function shell(cx, cy, isNa) {
+      [45, 135, 225, 315].forEach(function (th) {
+        var d = 54, p = polar(cx, cy, th, d);
+        var aim = isNa ? (th - 52.25) : (th + 180 - 52.25);   // Na+: O faces ion (H away); Cl-: H faces ion
+        var m = mol(p[0], p[1], aim, S.charges);
+        // attraction line from ion to the atom facing it
+        var target = isNa ? m.o : (function () { var a = Math.abs(((angleTo(p, [cx, cy]) - aim) % 360 + 540) % 360 - 180); return a < Math.abs(((angleTo(p, [cx, cy]) - (aim + 104.5)) % 360 + 540) % 360 - 180) ? m.h1 : m.h2; })();
+        att += '<line x1="' + (cx + (target[0] - cx) * 0.3) + '" y1="' + (cy + (target[1] - cy) * 0.3) + '" x2="' + (cx + (target[0] - cx) * 0.8) + '" y2="' + (cy + (target[1] - cy) * 0.8) + '" stroke="var(--ionic,#8e44ad)" stroke-width="2" stroke-dasharray="2 3"/>';
+        waterSvg += m.svg;
+      });
+    }
+    shell(92, 126, true); shell(268, 126, false);
+    s += att + waterSvg + ion(92, 126, "Na⁺", NA) + ion(268, 126, "Cl⁻", CL);
+    s += legend(244, [{ label: S.t(T.legCov), w: 150 }, { label: S.t(T.labels.attractIon), dash: true, color: "var(--ionic,#8e44ad)", w: 0 }]);
+    return s + '</svg>';
+  }
+
+  function sceneGlucose(S) {
+    var s = svgOpen(360, 258, S.t(T.aria.glucose));
+    var cx = 180, cy = 124;
+    s += '<polygon points="' + [0, 1, 2, 3, 4, 5].map(function (i) { var p = polar(cx, cy, i * 60 - 30, 34); return p[0] + ',' + p[1]; }).join(' ') + '" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="3"/>';
+    s += txt(cx, cy + 4, S.t(T.labels.glucose), 10.5, "middle", 800);
+    var sitesAng = [-90, -30, 90, 150, 210, 30].filter(function (a, i) { return i < 5; });
+    sitesAng = [-90, -20, 55, 125, 200];
+    var waterSvg = '', bondSvg = '';
+    sitesAng.forEach(function (a) {
+      var site = polar(cx, cy, a, 50);
+      s += '<line x1="' + polar(cx, cy, a, 34)[0] + '" y1="' + polar(cx, cy, a, 34)[1] + '" x2="' + site[0] + '" y2="' + site[1] + '" stroke="var(--c-carbon,#4a5a63)" stroke-width="3"/>';
+      s += '<circle cx="' + site[0] + '" cy="' + site[1] + '" r="8" fill="var(--c-oxygen,#d33a2c)"/>' + txt(site[0], site[1] + 3.5, "O", 9, "middle", 800, "#fff");
+      var wp = polar(cx, cy, a, 112);
+      var aim = angleTo(wp, site);
+      var m = mol(wp[0], wp[1], aim, S.charges);
+      if (S.bonds) bondSvg += hb(m.h1, site);
+      waterSvg += m.svg;
+    });
+    s += bondSvg + waterSvg;
+    s += txt(180, 246, S.t(T.legH), 10, "middle", 600, "var(--muted,#4d626d)");
+    return s + '</svg>';
+  }
+
+  function sceneOil(S) {
+    var s = svgOpen(360, 258, S.t(T.aria.oil));
+    var cx = 180, cy = 124;
+    s += '<circle cx="' + cx + '" cy="' + cy + '" r="40" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="2.5" stroke-dasharray="5 4"/>';
+    s += txt(cx, cy - 2, S.t(T.labels.oil), 10, "middle", 800);
+    var n = 7, R = 98, pos = [], links = [];
+    for (var i = 0; i < n; i++) {
+      var a = -90 + i * (360 / n); pos.push(polar(cx, cy, a, R)); links.push([i, (i + 1) % n]);
+    }
+    s += network(pos, links, { charges: S.charges, bonds: S.bonds });
+    s += txt(cx, cy + 14, "", 9);
+    s += txt(cx, cy + 20, S.t(T.labels.noAttract), 8.5, "middle", 700, "var(--muted,#4d626d)");
+    s += txt(180, 248, S.t(T.labels.waterBonds), 10, "middle", 600, "var(--muted,#4d626d)");
+    return s + '</svg>';
+  }
+
+  function airPanel(S, key) {
+    var p = T.props[key];
+    var h = '<div class="wh-air">';
+    h += '<div class="wh-bar"><span>' + S.t(T.barW) + '</span><div class="wh-track"><div class="wh-fill w" style="width:92%"></div></div></div>';
+    h += '<div class="wh-bar"><span>' + S.t(T.barA) + '</span><div class="wh-track"><div class="wh-fill a" style="width:' + (key === "buoyancy" ? 6 : 12) + '%"></div></div></div>';
+    h += '<p class="wh-note">' + S.t(T.barNote) + '</p>';
+    h += '<p class="wh-cap"><strong>' + S.t(p.name) + ':</strong> ' + S.t(T.barW) + ' = ' + S.t(p.water) + '; ' + S.t(T.barA) + ' = ' + S.t(p.air) + '. ' + S.t(p.text) + '</p>';
+    h += '<div class="wh-ex">' + S.t(p.ex) + '</div></div>';
+    return h;
+  }
+
+  IB.registerWidget("water-hbond", {
+    title: T.title,
+    mount: function (el, ctx) {
+      if (!document.getElementById("w-water-hbond-style")) {
+        var st = document.createElement("style");
+        st.id = "w-water-hbond-style";
+        st.textContent = CSS;
+        document.head.appendChild(st);
+      }
+      var S = { t: ctx.t, charges: true, bonds: true, dissolved: true };
+      var state = { tab: "structure", sub: { cohesion: "xylem", adhesion: "wall", solvent: "nacl" }, prop: "buoyancy" };
+      el.classList.add("w-water-hbond");
+
+      var tabKeys = ["structure", "cohesion", "adhesion", "solvent", "air"];
+      var subKeys = { cohesion: ["xylem", "surface"], adhesion: ["wall", "capillary"], solvent: ["nacl", "glucose", "oil"] };
+      var propKeys = ["buoyancy", "viscosity", "conductivity", "heat"];
+
+      function currentKey() {
+        if (state.tab === "structure") return "structure";
+        if (state.tab === "air") return "air";
+        return state.sub[state.tab];
+      }
+
+      function render() {
+        var key = currentKey();
+        var h = '<div class="wh-tabs" role="group" aria-label="' + ctx.t(T.title) + '">';
+        tabKeys.forEach(function (k) {
+          h += '<button type="button" class="wh-tab" data-tab="' + k + '" aria-pressed="' + (state.tab === k) + '">' + ctx.t(T.tabs[k]) + '</button>';
+        });
+        h += '</div>';
+        // sub controls
+        h += '<div class="wh-subs">';
+        if (subKeys[state.tab]) {
+          subKeys[state.tab].forEach(function (k) {
+            h += '<button type="button" class="wh-sub" data-sub="' + k + '" aria-pressed="' + (state.sub[state.tab] === k) + '">' + ctx.t(T.sub[k]) + '</button>';
+          });
+        }
+        if (state.tab === "air") {
+          propKeys.forEach(function (k) {
+            h += '<button type="button" class="wh-sub" data-prop="' + k + '" aria-pressed="' + (state.prop === k) + '">' + ctx.t(T.props[k].name) + '</button>';
+          });
+        }
+        if (state.tab === "solvent" && state.sub.solvent === "nacl") {
+          h += '<button type="button" class="wh-sub" data-dissolve="1">' + ctx.t(S.dissolved ? T.reset : T.dissolve) + '</button>';
+        }
+        if (state.tab !== "air") {
+          h += '<label class="wh-chk"><input type="checkbox" data-chg ' + (S.charges ? "checked" : "") + '> ' + ctx.t(T.charges) + '</label>';
+          h += '<label class="wh-chk"><input type="checkbox" data-bnd ' + (S.bonds ? "checked" : "") + '> ' + ctx.t(T.bonds) + '</label>';
+        }
+        h += '</div>';
+        if (key === "air") {
+          h += '<div class="wh-stage">' + airPanel(ctx, state.prop) + '</div>';
+        } else {
+          var scene = { structure: sceneStructure, xylem: sceneXylem, surface: sceneSurface, wall: sceneWall, capillary: sceneCapillary, nacl: sceneNaCl, glucose: sceneGlucose, oil: sceneOil }[key];
+          h += '<div class="wh-stage">' + scene(S) + '</div>';
+          h += '<p class="wh-cap" aria-live="polite">' + ctx.t(T.cap[key]) + '</p>';
+          h += '<p class="wh-note">' + ctx.t(T.notScale) + '</p>';
+        }
+        el.innerHTML = h;
+      }
+
+      function onClick(e) {
+        var b = e.target.closest("button");
+        if (!b || !el.contains(b)) return;
+        if (b.dataset.tab) { state.tab = b.dataset.tab; render(); focusBtn('[data-tab="' + b.dataset.tab + '"]'); }
+        else if (b.dataset.sub) { state.sub[state.tab] = b.dataset.sub; render(); focusBtn('[data-sub="' + b.dataset.sub + '"]'); }
+        else if (b.dataset.prop) { state.prop = b.dataset.prop; render(); focusBtn('[data-prop="' + b.dataset.prop + '"]'); }
+        else if (b.dataset.dissolve) { S.dissolved = !S.dissolved; render(); focusBtn('[data-dissolve]'); }
+      }
+      function onChange(e) {
+        if (e.target.matches("[data-chg]")) { S.charges = e.target.checked; render(); focusBtn("[data-chg]"); }
+        else if (e.target.matches("[data-bnd]")) { S.bonds = e.target.checked; render(); focusBtn("[data-bnd]"); }
+      }
+      function focusBtn(sel) { var n = el.querySelector(sel); if (n) n.focus(); }
+
+      el.addEventListener("click", onClick);
+      el.addEventListener("change", onChange);
+      render();
+      return function () { el.removeEventListener("click", onClick); el.removeEventListener("change", onChange); };
+    }
+  });
+})();

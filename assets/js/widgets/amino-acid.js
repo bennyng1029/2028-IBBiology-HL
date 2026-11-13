@@ -174,9 +174,9 @@
       // carboxyl
       svg.appendChild(bond(258, 120, 292, 92, true)); svg.appendChild(bond(258, 120, 292, 148));
       svg.appendChild(group("carboxyl", [232, 70, 110, 100], "--k-ac", [
+        bond(294, 150, 312, 150),
         atom(258, 120, 15, "--k-C", "C", 14), atom(294, 90, 12, "--k-O", "O", 13), atom(294, 150, 12, "--k-O", "O", 13), atom(322, 150, 10, "--k-H", "H", 11),
         sv("text", { x: 290, y: 66, "text-anchor": "middle", text: "COOH" })], T(GROUPS.carboxyl.n)));
-      svg.appendChild(bond(294, 150, 312, 150));
       // H
       svg.appendChild(group("h", [150, 30, 60, 50], "--k-H", [atom(180, 56, 11, "--k-H", "H", 12)], T(GROUPS.h.n)));
       // R

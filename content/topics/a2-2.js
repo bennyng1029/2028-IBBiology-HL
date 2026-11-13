@@ -260,7 +260,7 @@
 <tr><td><strong>Centrioles</strong></td><td>Present</td><td>Absent in most fungi</td><td>Absent in most plants (e.g. flowering plants)</td></tr>
 <tr><td><strong>Cilia and flagella</strong></td><td>Present in some cells (e.g. cilia lining airways, a sperm flagellum)</td><td>Absent from most fungi</td><td>Absent from most plants (e.g. flowering plants)</td></tr>
 </table>
-<p>Fungi are not plants and not animals. Their cell walls (chitin) and lack of chloroplasts make them different from plants, while chitin and the absence of chloroplasts and centrioles also distinguish them from animals. Use the widget below to compare the cell types.</p>`,
+<p>Fungi are not plants and not animals. Unlike plants, their walls are chitin and they have no chloroplasts. Unlike animals, they have a cell wall. Use the widget below to compare the cell types.</p>`,
         `<p>3つとも真核生物で基本的な細胞小器官は同じですが、次の点が異なります。</p>
 <table>
 <tr><th>特徴</th><th>動物細胞</th><th>菌類の細胞</th><th>植物細胞</th></tr>
@@ -270,7 +270,7 @@
 <tr><td><strong>中心小体</strong> (centrioles)</td><td>あり</td><td>ほとんどの菌類にない</td><td>ほとんどの植物（被子植物など）にない</td></tr>
 <tr><td><strong>繊毛と鞭毛</strong> (cilia, flagella)</td><td>一部の細胞にある（気道の繊毛、精子の鞭毛など）</td><td>ほとんどの菌類にない</td><td>ほとんどの植物（被子植物など）にない</td></tr>
 </table>
-<p>菌類は植物でも動物でもありません。キチンの細胞壁と葉緑体の欠如が植物との違いで、キチン・葉緑体と中心小体がないことが動物との違いです。下のウィジェットで細胞の種類を比べましょう。</p>`,
+<p>菌類は植物でも動物でもありません。植物と違って壁はキチンでできており、葉緑体をもちません。動物と違って細胞壁をもちます。下のウィジェットで細胞の種類を比べましょう。</p>`,
         `<p>三者都是真核生物，有相同的基本胞器，但有以下分別：</p>
 <table>
 <tr><th>特徵</th><th>動物細胞</th><th>真菌細胞</th><th>植物細胞</th></tr>
@@ -280,10 +280,246 @@
 <tr><td><strong>中心粒</strong> (centrioles)</td><td>有</td><td>大多數真菌沒有</td><td>大多數植物（如開花植物）沒有</td></tr>
 <tr><td><strong>纖毛和鞭毛</strong> (cilia, flagella)</td><td>部分細胞有（如呼吸道的纖毛、精子的鞭毛）</td><td>大多數真菌沒有</td><td>大多數植物（如開花植物）沒有</td></tr>
 </table>
-<p>真菌既不是植物也不是動物。幾丁質細胞壁和沒有葉綠體令它與植物不同；幾丁質、沒有葉綠體和中心粒則令它與動物不同。可用下面的小工具比較各種細胞。</p>`),
+<p>真菌既不是植物也不是動物。與植物不同，它的細胞壁是幾丁質，而且沒有葉綠體；與動物不同，它有細胞壁。可用下面的小工具比較各種細胞。</p>`),
       examTip: T("Questions often ask for the DIFFERENCE between two cell types. Give a point for each cell (“plant cell has cellulose wall; animal cell has none”), not just one side.",
         "2つの細胞の「違い」を問う問題では、片側だけでなく両方について書きます（「植物はセルロースの細胞壁をもつ。動物はもたない」）。",
         "題目常問兩種細胞的「分別」。要同時寫出兩邊（「植物細胞有纖維素細胞壁；動物細胞則沒有」），不要只寫一邊。")
+    },
+
+        {
+      ref: "A2.2.9", ahl: false,
+      heading: T("Atypical cell structure in eukaryotes", "真核生物の典型的でない細胞構造", "真核生物的非典型細胞結構"),
+      widget: "cell-compare-atypical",
+      body: T(
+        `<p>A “typical” eukaryotic cell has <strong>one nucleus</strong>. Some cells do not. The guide asks you to use <strong>numbers of nuclei</strong> to illustrate atypical cell structure, with these four examples:</p>
+<table>
+<tr><th>Cell</th><th>Number of nuclei</th><th>Notes</th></tr>
+<tr><td><strong>Aseptate fungal hypha</strong></td><td>Many</td><td>A hypha is a thread-like fungal filament. “Aseptate” means it has no cross-walls (septa), so one continuous cytoplasm contains many nuclei.</td></tr>
+<tr><td><strong>Skeletal muscle fibre</strong></td><td>Many</td><td>Very long cell formed when many cells fused together, so it has many nuclei.</td></tr>
+<tr><td><strong>Red blood cell (mature, in mammals)</strong></td><td>None</td><td>No nucleus, which leaves more room for haemoglobin to carry oxygen. It cannot make new proteins or divide, so it has a limited life.</td></tr>
+<tr><td><strong>Phloem sieve tube element</strong></td><td>None (when mature)</td><td>Joined end to end to form tubes for transporting sugars. Having no nucleus and few organelles leaves a clear path for flow. A neighbouring companion cell (which has a nucleus) supports it.</td></tr>
+</table>
+<p>These cells are still alive and are still cells. They show that cell structure is not identical everywhere, even within eukaryotes.</p>`,
+        `<p>「典型的な」真核細胞には<strong>核が1つ</strong>あります。そうでない細胞もあります。指導要領は、<strong>核の数</strong>で典型的でない細胞構造を示すよう求めており、例は次の4つです。</p>
+<table>
+<tr><th>細胞</th><th>核の数</th><th>備考</th></tr>
+<tr><td><strong>隔壁のない菌糸</strong> (aseptate fungal hypha)</td><td>多数</td><td>菌糸は糸状の菌類の細胞列です。「隔壁がない (aseptate)」とは仕切り壁 (septa) がないことで、1つの連続した細胞質に多数の核が含まれます。</td></tr>
+<tr><td><strong>骨格筋線維</strong> (skeletal muscle fibre)</td><td>多数</td><td>多数の細胞が融合してできた非常に長い細胞で、核が多数あります。</td></tr>
+<tr><td><strong>赤血球</strong> (red blood cell、成熟した哺乳類)</td><td>なし</td><td>核がないので、酸素を運ぶヘモグロビンを入れる空間が増えます。新しいタンパク質を作れず分裂もできないので、寿命が限られます。</td></tr>
+<tr><td><strong>師管要素</strong> (phloem sieve tube element)</td><td>なし（成熟後）</td><td>端と端でつながり、糖を運ぶ管をつくります。核や細胞小器官が少ないため流れる通路が確保されます。隣の伴細胞（核をもつ）が支えます。</td></tr>
+</table>
+<p>これらの細胞も生きていて、細胞です。真核生物の中でも、細胞構造がどこでも同じではないことを示しています。</p>`,
+        `<p>「典型的」的真核細胞有<strong>一個細胞核</strong>，但有些細胞不是。指引要求用<strong>細胞核的數目</strong>來說明非典型的細胞結構，例子有以下四個：</p>
+<table>
+<tr><th>細胞</th><th>細胞核數目</th><th>說明</th></tr>
+<tr><td><strong>無隔膜的真菌菌絲</strong> (aseptate fungal hypha)</td><td>很多</td><td>菌絲是絲狀的真菌細胞鏈。「無隔膜」(aseptate) 指沒有橫隔 (septa)，所以一個連續的細胞質含有很多細胞核。</td></tr>
+<tr><td><strong>骨骼肌纖維</strong> (skeletal muscle fibre)</td><td>很多</td><td>由許多細胞融合而成的極長細胞，所以有很多細胞核。</td></tr>
+<tr><td><strong>紅血球</strong> (red blood cell，成熟的哺乳動物紅血球)</td><td>沒有</td><td>沒有細胞核，騰出更多空間給運載氧氣的血紅蛋白。它不能製造新蛋白質或分裂，壽命有限。</td></tr>
+<tr><td><strong>韌皮部篩管分子</strong> (phloem sieve tube element)</td><td>沒有（成熟時）</td><td>首尾相連形成運輸糖分的管道。沒有細胞核和較少胞器，令液流暢通。旁邊的伴細胞（有細胞核）為它提供支援。</td></tr>
+</table>
+<p>這些細胞仍然是活的細胞。它們顯示即使在真核生物之中，細胞結構也並非處處相同。</p>`)
+    },
+    {
+      ref: "A2.2.10", ahl: false,
+      heading: T("Reading light and electron micrographs", "光学顕微鏡・電子顕微鏡写真を読む", "閱讀光學與電子顯微照片"),
+      body: T(
+        `<p>You should be able to identify a cell in a micrograph as <strong>prokaryote, plant or animal</strong>:</p>
+<ul>
+<li><strong>Prokaryote:</strong> very small (about the size of a mitochondrion), no nucleus or other membrane-bound organelles; a pale nucleoid region; cell wall.</li>
+<li><strong>Plant:</strong> large, with a regular cell wall outside the membrane, chloroplasts and/or a large sap vacuole.</li>
+<li><strong>Animal:</strong> a nucleus but no cell wall, no chloroplasts, and no large central vacuole; irregular shape.</li>
+</ul>
+<p>In <strong>electron micrographs</strong> you should be able to identify these structures (they are in shades of grey):</p>
+<table>
+<tr><th>Structure</th><th>What it looks like</th></tr>
+<tr><td>Nucleoid region</td><td>Pale, irregular area in a prokaryote's cytoplasm containing thread-like DNA, with no membrane around it</td></tr>
+<tr><td>Prokaryotic cell wall</td><td>Thick layer outside the plasma membrane</td></tr>
+<tr><td>Nucleus</td><td>Large, rounded, surrounded by a double membrane with gaps (pores); darker patches inside</td></tr>
+<tr><td>Chromosomes</td><td>Dark, condensed threads or rods (visible when a cell is dividing)</td></tr>
+<tr><td>Mitochondrion</td><td>Oval or rod-shaped, double membrane, inner membrane folded inwards</td></tr>
+<tr><td>Chloroplast</td><td>Larger oval with a double membrane and stacks of flattened membranes inside (often starch grains too)</td></tr>
+<tr><td>Sap vacuole</td><td>Large, clear space surrounded by a single membrane, in plant cells</td></tr>
+<tr><td>Golgi apparatus</td><td>Stack of flattened, slightly curved sacs with small vesicles budding off</td></tr>
+<tr><td>Rough ER</td><td>Flattened sacs with many tiny dark dots (ribosomes) on the surface</td></tr>
+<tr><td>Smooth ER</td><td>Tubes or sacs of membrane with no dots on the surface</td></tr>
+<tr><td>Ribosomes</td><td>Very small dark dots, free in the cytoplasm or on rough ER</td></tr>
+<tr><td>Cell wall (plant)</td><td>Thick, pale layer outside the plasma membrane, between neighbouring cells</td></tr>
+<tr><td>Plasma membrane</td><td>Thin dark line at the cell's edge</td></tr>
+<tr><td>Microvilli</td><td>Many tiny finger-like projections of the plasma membrane on the cell surface</td></tr>
+</table>`,
+        `<p>顕微鏡写真の細胞を<strong>原核生物・植物・動物</strong>のどれか見分けられるようにします。</p>
+<ul>
+<li><strong>原核生物：</strong>非常に小さい（ミトコンドリア程度）。核や膜で囲まれた細胞小器官がない。色の薄い核様体領域。細胞壁がある。</li>
+<li><strong>植物：</strong>大きく、膜の外側に規則的な細胞壁がある。葉緑体や大きな中央液胞がある。</li>
+<li><strong>動物：</strong>核はあるが、細胞壁・葉緑体・大きな中央液胞はない。形は不規則。</li>
+</ul>
+<p><strong>電子顕微鏡写真</strong>では、次の構造を識別できるようにします（灰色の濃淡で見えます）。</p>
+<table>
+<tr><th>構造</th><th>見え方</th></tr>
+<tr><td>核様体領域 (nucleoid region)</td><td>原核生物の細胞質中の、糸状のDNAを含む色の薄い不規則な領域。膜で囲まれていない</td></tr>
+<tr><td>原核生物の細胞壁 (prokaryotic cell wall)</td><td>細胞膜の外側の厚い層</td></tr>
+<tr><td>核 (nucleus)</td><td>大きく丸い。すき間（核膜孔）のある二重膜に囲まれ、内部に濃い部分がある</td></tr>
+<tr><td>染色体 (chromosomes)</td><td>濃く凝縮した糸状または棒状（細胞分裂中に見える）</td></tr>
+<tr><td>ミトコンドリア (mitochondrion)</td><td>楕円形または棒状。二重膜で、内膜が内側に折りたたまれている</td></tr>
+<tr><td>葉緑体 (chloroplast)</td><td>大きめの楕円形。二重膜で、内部に平たい膜の重なり（デンプン粒もよくある）</td></tr>
+<tr><td>液胞 (sap vacuole)</td><td>植物細胞にある、単膜に囲まれた大きな透明の空間</td></tr>
+<tr><td>ゴルジ体 (Golgi apparatus)</td><td>平たく少し湾曲した袋が重なり、小さな小胞が出芽している</td></tr>
+<tr><td>粗面小胞体 (rough ER)</td><td>表面に小さな濃い点（リボソーム）が多数ある平たい袋</td></tr>
+<tr><td>滑面小胞体 (smooth ER)</td><td>表面に点がない管または袋状の膜</td></tr>
+<tr><td>リボソーム (ribosomes)</td><td>非常に小さな濃い点。細胞質中に遊離、または粗面ERに付着</td></tr>
+<tr><td>細胞壁（植物） (cell wall)</td><td>細胞膜の外側にある厚く色の薄い層。隣り合う細胞の間にある</td></tr>
+<tr><td>細胞膜 (plasma membrane)</td><td>細胞の縁にある細く濃い線</td></tr>
+<tr><td>微絨毛 (microvilli)</td><td>細胞表面にある、細胞膜の指状の小さな突起が多数</td></tr>
+</table>`,
+        `<p>你應該能分辨顯微照片中的細胞是<strong>原核、植物或動物</strong>細胞：</p>
+<ul>
+<li><strong>原核細胞：</strong>非常細小（約與線粒體相若）；沒有細胞核或其他膜包圍的胞器；有顏色較淺的擬核區；有細胞壁。</li>
+<li><strong>植物細胞：</strong>較大，質膜外有規則的細胞壁，有葉綠體及／或大型中央液泡。</li>
+<li><strong>動物細胞：</strong>有細胞核，但沒有細胞壁、葉綠體或大型中央液泡；形狀不規則。</li>
+</ul>
+<p>在<strong>電子顯微照片</strong>中，你應能辨認以下結構（以灰色深淺顯示）：</p>
+<table>
+<tr><th>結構</th><th>外觀</th></tr>
+<tr><td>擬核區 (nucleoid region)</td><td>原核細胞質中顏色較淺的不規則區域，含絲狀 DNA，沒有膜包圍</td></tr>
+<tr><td>原核細胞壁 (prokaryotic cell wall)</td><td>質膜外的厚層</td></tr>
+<tr><td>細胞核 (nucleus)</td><td>大而圓，被有缺口（核孔）的雙層膜包圍，內有較深色的部分</td></tr>
+<tr><td>染色體 (chromosomes)</td><td>深色、濃縮的絲狀或棒狀（細胞分裂時可見）</td></tr>
+<tr><td>線粒體 (mitochondrion)</td><td>橢圓或棒狀，雙層膜，內膜向內摺疊</td></tr>
+<tr><td>葉綠體 (chloroplast)</td><td>較大的橢圓形，雙層膜，內有成疊的扁平膜（常見澱粉粒）</td></tr>
+<tr><td>液泡 (sap vacuole)</td><td>植物細胞中被單層膜包圍的大型透明空間</td></tr>
+<tr><td>高爾基體 (Golgi apparatus)</td><td>一疊扁平、略彎的膜囊，旁邊有小囊泡出芽</td></tr>
+<tr><td>粗糙內質網 (rough ER)</td><td>扁平膜囊，表面有許多細小的深色點（核糖體）</td></tr>
+<tr><td>光滑內質網 (smooth ER)</td><td>管狀或囊狀的膜，表面沒有點</td></tr>
+<tr><td>核糖體 (ribosomes)</td><td>極小的深色點，游離在細胞質或附着在粗糙內質網</td></tr>
+<tr><td>細胞壁（植物） (cell wall)</td><td>質膜外的厚而淺色層，位於相鄰細胞之間</td></tr>
+<tr><td>質膜 (plasma membrane)</td><td>細胞邊緣的深色細線</td></tr>
+<tr><td>微絨毛 (microvilli)</td><td>細胞表面質膜形成的許多指狀小突起</td></tr>
+</table>`)
+    },
+    {
+      ref: "A2.2.11", ahl: false,
+      heading: T("Drawing and annotating structures from electron micrographs", "電子顕微鏡写真に基づく作図と注釈", "根據電子顯微照片繪圖與標註"),
+      body: T(
+        `<p>You should be able to <strong>draw</strong> and <strong>annotate</strong> (add brief notes to) the structures below, as seen in electron micrographs. <strong>Include the function in each annotation.</strong></p>
+<table>
+<tr><th>Structure</th><th>Function to write in the annotation</th></tr>
+<tr><td>Nucleus</td><td>Contains the chromosomes (DNA); controls the cell by storing genetic information and making mRNA. Pores allow mRNA to leave</td></tr>
+<tr><td>Chromosomes</td><td>DNA wrapped around histones; carry the genes</td></tr>
+<tr><td>Mitochondrion</td><td>Site of aerobic respiration; makes ATP</td></tr>
+<tr><td>Chloroplast</td><td>Site of photosynthesis; makes sugars using light energy</td></tr>
+<tr><td>Sap vacuole</td><td>Stores water and dissolved substances; its pressure supports the cell</td></tr>
+<tr><td>Golgi apparatus</td><td>Modifies, sorts and packages proteins in vesicles</td></tr>
+<tr><td>Rough ER</td><td>Ribosomes make proteins which are folded and carried in the ER (e.g. proteins for secretion)</td></tr>
+<tr><td>Smooth ER</td><td>Makes lipids</td></tr>
+<tr><td>Cell wall</td><td>Supports and protects the cell, prevents bursting</td></tr>
+<tr><td>Plasma membrane</td><td>Controls what enters and leaves the cell</td></tr>
+<tr><td>Secretory vesicles</td><td>Carry substances (e.g. proteins from the Golgi) to the plasma membrane to be released outside the cell</td></tr>
+<tr><td>Microvilli</td><td>Increase the surface area of the plasma membrane for absorption or secretion</td></tr>
+</table>
+<p><strong>Drawing tips (command term “Draw”).</strong> Use a sharp pencil and clear continuous lines. Draw what you see, not what a textbook shows. Use a ruler for label lines, which should touch the structure and must not cross. Do not shade. Give the drawing a title and, if asked, a scale bar or magnification. Make it large enough to show detail.</p>`,
+        `<p>電子顕微鏡写真に見える次の構造を、<strong>作図</strong> (draw) し、<strong>注釈</strong> (annotate：簡単な説明を書き加える) できるようにします。<strong>注釈には必ず働きを含めます。</strong></p>
+<table>
+<tr><th>構造</th><th>注釈に書く働き</th></tr>
+<tr><td>核 (nucleus)</td><td>染色体（DNA）を含む。遺伝情報の保存とmRNAの合成で細胞を制御する。核膜孔からmRNAが出る</td></tr>
+<tr><td>染色体 (chromosomes)</td><td>ヒストンにDNAが巻きついたもの。遺伝子をもつ</td></tr>
+<tr><td>ミトコンドリア (mitochondrion)</td><td>好気呼吸の場。ATPを合成する</td></tr>
+<tr><td>葉緑体 (chloroplast)</td><td>光合成の場。光エネルギーで糖を合成する</td></tr>
+<tr><td>液胞 (sap vacuole)</td><td>水と溶質を貯蔵する。その圧力が細胞を支える</td></tr>
+<tr><td>ゴルジ体 (Golgi apparatus)</td><td>タンパク質を修飾・選別し、小胞に包む</td></tr>
+<tr><td>粗面小胞体 (rough ER)</td><td>リボソームがタンパク質を作り、ERの中で折りたたまれ運ばれる（分泌タンパク質など）</td></tr>
+<tr><td>滑面小胞体 (smooth ER)</td><td>脂質を合成する</td></tr>
+<tr><td>細胞壁 (cell wall)</td><td>細胞を支え保護し、破裂を防ぐ</td></tr>
+<tr><td>細胞膜 (plasma membrane)</td><td>細胞に出入りする物質を制御する</td></tr>
+<tr><td>分泌小胞 (secretory vesicles)</td><td>物質（ゴルジ体からのタンパク質など）を細胞膜へ運び、細胞外へ放出する</td></tr>
+<tr><td>微絨毛 (microvilli)</td><td>細胞膜の表面積を増やし、吸収や分泌を助ける</td></tr>
+</table>
+<p><strong>作図のコツ（指示語「Draw」）。</strong>よく削った鉛筆で、はっきりした途切れない線を使います。教科書の図ではなく、見えたものを描きます。ラベル線は定規で引き、構造に接し、交差させません。影をつけません。タイトルをつけ、求められたらスケールバーや倍率も書きます。細部が分かる大きさで描きます。</p>`,
+        `<p>你應該能根據電子顯微照片<strong>繪畫</strong> (draw) 並<strong>標註</strong> (annotate，加上簡短註釋) 下列結構。<strong>每個標註都要包括功能。</strong></p>
+<table>
+<tr><th>結構</th><th>標註中要寫的功能</th></tr>
+<tr><td>細胞核 (nucleus)</td><td>含有染色體 (DNA)；儲存遺傳資訊和製造 mRNA 以控制細胞。mRNA 經核孔離開</td></tr>
+<tr><td>染色體 (chromosomes)</td><td>DNA 纏繞組蛋白；攜帶基因</td></tr>
+<tr><td>線粒體 (mitochondrion)</td><td>有氧呼吸的場所；製造 ATP</td></tr>
+<tr><td>葉綠體 (chloroplast)</td><td>光合作用的場所；利用光能製造糖</td></tr>
+<tr><td>液泡 (sap vacuole)</td><td>儲存水和溶質；其壓力支撐細胞</td></tr>
+<tr><td>高爾基體 (Golgi apparatus)</td><td>修飾、分類蛋白質並包裝入囊泡</td></tr>
+<tr><td>粗糙內質網 (rough ER)</td><td>核糖體製造蛋白質，蛋白質在內質網內摺疊和運送（如分泌蛋白）</td></tr>
+<tr><td>光滑內質網 (smooth ER)</td><td>製造脂質</td></tr>
+<tr><td>細胞壁 (cell wall)</td><td>支撐和保護細胞，防止脹破</td></tr>
+<tr><td>質膜 (plasma membrane)</td><td>控制物質進出細胞</td></tr>
+<tr><td>分泌囊泡 (secretory vesicles)</td><td>把物質（如來自高爾基體的蛋白質）運到質膜，釋出細胞外</td></tr>
+<tr><td>微絨毛 (microvilli)</td><td>增加質膜的表面積，有助吸收或分泌</td></tr>
+</table>
+<p><strong>繪圖要訣（指示詞「Draw」）。</strong>用削尖的鉛筆，線條清晰連續。畫你看到的，而非課本上的圖。標示線用直尺畫，要接觸結構，且不可交叉。不要塗陰影。加上標題，如題目要求，還要加比例尺或放大率。圖要夠大，才能顯示細節。</p>`)
+    },
+    {
+      ref: "A2.2.12", ahl: true,
+      heading: T("Origin of eukaryotic cells by endosymbiosis", "細胞内共生による真核細胞の起源", "真核細胞經內共生而起源"),
+      body: T(
+        `<p>Evidence suggests that all eukaryotes evolved from a <strong>common unicellular ancestor</strong> that had a nucleus and reproduced sexually. <strong>Mitochondria</strong> then evolved by <strong>endosymbiosis</strong>, and in some eukaryotes (plants and algae) <strong>chloroplasts</strong> also arose this way.</p>
+<p><strong>Endosymbiosis</strong> means “living together inside”. The idea is that a larger cell engulfed a smaller prokaryote, which was <em>not digested</em> but lived on inside it, so both benefited. The host provided protection and raw materials; the prokaryote supplied ATP (aerobic bacterium → mitochondrion) or sugars (photosynthetic prokaryote → chloroplast). Over time the partner became an organelle.</p>
+<p><strong>Evidence that mitochondria and chloroplasts were once free-living prokaryotes</strong> (you must include these three):</p>
+<ul>
+<li>They contain <strong>70S ribosomes</strong>, like prokaryotes (not the 80S of the cytoplasm of the cell).</li>
+<li>They contain <strong>naked, circular DNA</strong>, like prokaryotes.</li>
+<li>They can <strong>replicate</strong> themselves inside the cell (they divide to make new mitochondria or chloroplasts, rather than being made from scratch).</li>
+</ul>
+<div class="note"><strong>Nature of science.</strong> The strength of a theory comes from the observations it explains and the predictions it supports. Endosymbiosis accounts for a wide range of observations, so it is a strong theory.</div>`,
+        `<p>証拠から、すべての真核生物は、核をもち有性生殖を行う<strong>共通の単細胞の祖先</strong>から進化したと考えられます。その後<strong>ミトコンドリア</strong>が<strong>細胞内共生</strong> (endosymbiosis) で進化し、一部の真核生物（植物や藻類）では<strong>葉緑体</strong>も同様に生じました。</p>
+<p><strong>細胞内共生</strong>とは「内側で一緒に生きる」という意味です。大きな細胞が小さな原核生物を取り込み、それを<em>消化せず</em>に体内で生かし続けて、双方が利益を得たという考えです。宿主は保護と材料を、原核生物はATP（好気性細菌→ミトコンドリア）や糖（光合成する原核生物→葉緑体）を提供しました。やがてその共生者は細胞小器官になりました。</p>
+<p><strong>ミトコンドリアと葉緑体がかつて自由生活する原核生物だった証拠</strong>（次の3つを必ず挙げます）：</p>
+<ul>
+<li>原核生物と同じ<strong>70Sリボソーム</strong>をもつ（細胞質の80Sリボソームとは違う）。</li>
+<li>原核生物と同じ<strong>むき出しの環状DNA</strong>をもつ。</li>
+<li>細胞内で自分自身を<strong>複製</strong>できる（分裂して新しいミトコンドリアや葉緑体になり、ゼロから作られるのではない）。</li>
+</ul>
+<div class="note"><strong>科学の本質 (NOS)。</strong>理論の強さは、それが説明する観察と支持する予測から生まれます。細胞内共生説は幅広い観察を説明するので、強い理論です。</div>`,
+        `<p>證據顯示，所有真核生物都演化自一個有細胞核、行有性生殖的<strong>共同單細胞祖先</strong>。其後<strong>線粒體</strong>經<strong>內共生</strong> (endosymbiosis) 演化而成；在部分真核生物（植物和藻類）中，<strong>葉綠體</strong>也是這樣產生的。</p>
+<p><strong>內共生</strong>的意思是「在體內共同生活」。這個想法認為：一個較大的細胞吞入較小的原核生物，但<em>沒有消化它</em>，而是讓它在體內繼續生存，雙方都得益。宿主提供保護和原料；原核生物提供 ATP（需氧細菌→線粒體）或糖（行光合作用的原核生物→葉綠體）。經過一段時間，這個夥伴變成了胞器。</p>
+<p><strong>線粒體和葉綠體曾是自由生活原核生物的證據</strong>（必須包括這三項）：</p>
+<ul>
+<li>含有與原核生物相同的 <strong>70S 核糖體</strong>（而不是細胞質中的 80S）。</li>
+<li>含有與原核生物相同的<strong>環狀裸 DNA</strong>。</li>
+<li>能在細胞內<strong>複製</strong>自己（它們以分裂產生新的線粒體或葉綠體，而不是從頭製造）。</li>
+</ul>
+<div class="note"><strong>科學本質 (NOS)。</strong>理論的強度來自它能解釋的觀察和支持的預測。內共生學說可解釋廣泛的觀察，所以是個強而有力的學說。</div>`),
+      examTip: T("Always link each piece of evidence to a prokaryote: “mitochondria have 70S ribosomes, as bacteria do, unlike the 80S ribosomes in the cytoplasm.”",
+        "各証拠を原核生物と結びつけて書きます。「ミトコンドリアは細菌と同じ70Sリボソームをもち、細胞質の80Sリボソームとは異なる。」",
+        "每項證據都要與原核生物連結：「線粒體有與細菌相同的 70S 核糖體，而細胞質中的是 80S。」")
+    },
+    {
+      ref: "A2.2.13", ahl: true,
+      heading: T("Cell differentiation", "細胞分化", "細胞分化"),
+      body: T(
+        `<p>A multicellular organism develops from one fertilized egg. The cells made from it become different in structure and function, forming specialized <strong>tissues</strong>. This process is <strong>cell differentiation</strong>.</p>
+<p>All the cells of an organism have the <strong>same genes</strong> (the same DNA). Differentiation happens because <strong>different patterns of gene expression</strong> occur: in each cell type some genes are switched on (expressed, making proteins) and others are switched off. The proteins a cell makes decide its structure and function. The pattern is often <strong>triggered by changes in the environment</strong> of the cell, such as chemical signals from neighbouring cells.</p>`,
+        `<p>多細胞生物は1個の受精卵から発生します。そこから生じた細胞は構造と働きが異なるようになり、特殊化した<strong>組織</strong> (tissue) をつくります。この過程が<strong>細胞分化</strong> (cell differentiation) です。</p>
+<p>生物のすべての細胞は<strong>同じ遺伝子</strong>（同じDNA）をもちます。分化が起こるのは、<strong>遺伝子発現のパターンが異なる</strong>からです。細胞の種類ごとに、ある遺伝子はオン（発現してタンパク質をつくる）、別の遺伝子はオフになります。細胞がつくるタンパク質が、その構造と働きを決めます。このパターンは、隣の細胞からの化学信号など、細胞の<strong>環境の変化がきっかけ</strong>となることがよくあります。</p>`,
+        `<p>多細胞生物由一個受精卵發育而成。由它產生的細胞在結構和功能上變得不同，形成特化的<strong>組織</strong> (tissue)。這個過程稱為<strong>細胞分化</strong> (cell differentiation)。</p>
+<p>生物所有細胞都有<strong>相同的基因</strong>（相同的 DNA）。分化的發生，是因為出現<strong>不同的基因表達模式</strong>：在每種細胞類型中，有些基因被開啟（表達，製造蛋白質），有些則被關閉。細胞製造哪些蛋白質，決定了它的結構和功能。這個模式往往由細胞<strong>環境的變化所觸發</strong>，例如鄰近細胞發出的化學信號。</p>`)
+    },
+    {
+      ref: "A2.2.14", ahl: true,
+      heading: T("Evolution of multicellularity", "多細胞性の進化", "多細胞性的演化"),
+      body: T(
+        `<p><strong>Multicellularity</strong> (bodies made of many cells that work together) has <strong>evolved repeatedly</strong>, in separate groups. Many fungi and eukaryotic algae, and all plants and animals, are multicellular.</p>
+<p><strong>Advantages</strong> of being multicellular:</p>
+<ul>
+<li><strong>Larger body size</strong> becomes possible. (A single cell is limited in size because its surface area to volume ratio falls as it grows.)</li>
+<li><strong>Cell specialization</strong>: different cells can do different jobs very efficiently (see A2.2.13), so the whole organism works better than if every cell did everything.</li>
+</ul>`,
+        `<p><strong>多細胞性</strong> (multicellularity：多数の細胞が協調して体をつくること) は、別々の系統で<strong>繰り返し進化</strong>しました。多くの菌類や真核藻類、そしてすべての植物と動物は多細胞です。</p>
+<p>多細胞であることの<strong>利点</strong>：</p>
+<ul>
+<li><strong>体を大きくできる</strong>。（単細胞は、大きくなると表面積と体積の比が小さくなるため、大きさに限界がある。）</li>
+<li><strong>細胞の特殊化</strong>：細胞ごとに違う仕事を効率よく行えます（A2.2.13参照）。そのため、すべての細胞が全部の仕事をするより、生物全体がよく働きます。</li>
+</ul>`,
+        `<p><strong>多細胞性</strong> (multicellularity，由許多細胞合作組成身體) 曾在不同類群中<strong>多次獨立演化</strong>出現。許多真菌和真核藻類，以及所有植物和動物，都是多細胞的。</p>
+<p>多細胞的<strong>優點</strong>：</p>
+<ul>
+<li>可以有<strong>較大的身體</strong>。（單細胞的大小受限，因為細胞越大，表面積與體積比越小。）</li>
+<li><strong>細胞特化</strong>：不同細胞可非常有效地分工（見 A2.2.13），所以整個生物比「每個細胞都做所有工作」更有效率。</li>
+</ul>`)
     },
 
     /*@@S*/
