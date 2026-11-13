@@ -2,6 +2,22 @@
 (function () {
   const L = (en, ja, zh) => ({ en, ja, zh });
 
+  /* Illustrative line graph of forest cover (% of original area) */
+  function forestSvg(xl, yl, alt) {
+    const pts = [[1980, 100], [1990, 88], [2000, 74], [2010, 61], [2020, 50]];
+    const X = (yr) => 50 + ((yr - 1980) / 40) * 250;
+    const Y = (v) => 170 - (v / 100) * 140;
+    let g = `<line x1="50" y1="30" x2="50" y2="170" stroke="var(--ink,#111)" stroke-width="1.5"/><line x1="50" y1="170" x2="300" y2="170" stroke="var(--ink,#111)" stroke-width="1.5"/>`;
+    [0, 25, 50, 75, 100].forEach((v) => {
+      g += `<line x1="46" y1="${Y(v)}" x2="300" y2="${Y(v)}" stroke="var(--line,#ccc)" stroke-width="0.7"/><text x="42" y="${Y(v) + 4}" font-size="11" text-anchor="end" fill="var(--ink,#111)">${v}</text>`;
+    });
+    pts.forEach((p) => { g += `<text x="${X(p[0])}" y="186" font-size="11" text-anchor="middle" fill="var(--ink,#111)">${p[0]}</text>`; });
+    g += `<polyline fill="none" stroke="var(--accent,#2547c7)" stroke-width="2.5" points="${pts.map((p) => X(p[0]) + "," + Y(p[1])).join(" ")}"/>`;
+    pts.forEach((p) => { g += `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="3.5" fill="var(--accent,#2547c7)"/>`; });
+    g += `<text x="175" y="205" font-size="12" text-anchor="middle" fill="var(--ink,#111)">${xl}</text><text x="12" y="100" font-size="12" text-anchor="middle" fill="var(--ink,#111)" transform="rotate(-90 12 100)">${yl}</text>`;
+    return `<figure><svg viewBox="0 0 320 212" width="100%" style="max-width:420px" role="img" aria-label="${alt}">${g}</svg></figure>`;
+  }
+
   IB.registerTopic({
     id: "A4.2",
     slug: "a4-2",
@@ -287,7 +303,7 @@
       { to: "A3.1", why: L("eDNA and barcodes are tools for surveying biodiversity; genetic diversity is part of biodiversity.", "環境 DNA とバーコードは生物多様性の調査の道具で、遺伝的多様性は生物多様性の一部です。", "環境 DNA 和條碼是調查生物多樣性的工具；遺傳多樣性是生物多樣性的一部分。") },
       { to: "A3.2", why: L("Cladograms show how evolutionarily distinct a species is, used in the EDGE programme.", "分岐図は種の進化的な独自性を示し、EDGE 計画で使われます。", "支序圖顯示物種進化獨特的程度，EDGE 計劃會使用。") },
       { to: "A4.1", why: L("Speciation adds species and extinction removes them; the balance gives biodiversity.", "種分化は種を増やし絶滅は減らします。そのバランスが生物多様性です。", "物種形成增加物種，滅絕減少物種；兩者的平衡決定生物多樣性。") },
-      { to: "C4.1", why: L("Population change and ecosystem stability link to why variation helps communities stay stable.", "個体群の変動や生態系の安定は、変異が群集を安定に保つ理由と関連します。", "種羣變化和生態系統穩定性，與變異為何有助羣落保持穩定有關。") }
+      { to: "B4.2", why: L("Ecosystems and communities: habitats and niches are what conservation tries to protect.", "生態系と群集：保全が守ろうとするのは、生息地とニッチです。", "生態系統與羣落：保育所要保護的是生境和生態位。") }
     ],
     natureOfScience: [
       L("Classification as pattern recognition: the same observations can be classified differently, as splitters and lumpers show.", "パターン認識としての分類：分割派と統合派が示すように、同じ観察でも異なる分類ができます。", "分類作為規律識別：正如細分派與合併派所示，同一組觀察可以有不同分類。"),
