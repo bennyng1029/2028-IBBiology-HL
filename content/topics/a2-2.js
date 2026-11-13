@@ -522,10 +522,322 @@
 </ul>`)
     },
 
-    /*@@S*/
   ];
   const questions = [
-    /*@@Q*/
+        { id: "a2-2-q01", type: "mcq", ahl: false, difficulty: 1, ref: "A2.2.1", paper: "1A",
+      stem: T("Which statement is a deduction from cell theory?", "細胞説から導かれる演繹はどれですか。", "以下哪項是由細胞學說推演出來的？"),
+      options: [
+        T("A newly discovered organism will consist of one or more cells.", "新しく発見された生物は、1つ以上の細胞からできているだろう。", "新發現的生物會由一個或多個細胞構成。"),
+        T("All cells have a nucleus.", "すべての細胞に核がある。", "所有細胞都有細胞核。"),
+        T("All organisms are made of exactly one cell.", "すべての生物はちょうど1個の細胞からできている。", "所有生物都剛好由一個細胞構成。"),
+        T("Cells were first seen using a light microscope.", "細胞は光学顕微鏡ではじめて観察された。", "細胞最先是用光學顯微鏡看見的。")],
+      answer: 0,
+      explanation: T("Deduction uses a general theory to predict a specific case: if all organisms are made of cells, a new organism should be too. B and C are false statements (prokaryotes have no nucleus; many organisms have many cells). D is a historical fact, not a prediction from the theory.",
+        "演繹は一般的な理論から個別の事例を予測します。すべての生物が細胞でできているなら、新しい生物もそうだろう、ということです。BとCは誤り（原核生物には核がなく、多くの生物は多数の細胞をもつ）。Dは歴史的事実で、理論からの予測ではありません。",
+        "演繹是由一般理論預測具體個案：如果所有生物由細胞構成，新生物也應如此。B 和 C 錯誤（原核生物沒有細胞核；許多生物有很多細胞）。D 是歷史事實，不是由學說推出的預測。") },
+    { id: "a2-2-q02", type: "multi", ahl: false, difficulty: 1, ref: "A2.2.4", paper: "1A",
+      stem: T("Which structures are found in typical cells of ALL living organisms?", "すべての生物の典型的な細胞にある構造はどれですか（すべて選択）。", "哪些結構存在於<strong>所有</strong>生物的典型細胞中？（選所有正確項）"),
+      options: [
+        T("DNA as genetic material", "遺伝物質としてのDNA", "作為遺傳物質的 DNA"),
+        T("A nucleus", "核", "細胞核"),
+        T("A plasma membrane made of lipids", "脂質でできた細胞膜", "由脂質構成的質膜"),
+        T("Cytoplasm made mainly of water", "主に水からなる細胞質", "主要由水組成的細胞質")],
+      answer: [0, 2, 3],
+      explanation: T("DNA, a lipid plasma membrane and a watery cytoplasm are universal. A nucleus is found only in eukaryotes, so prokaryotes lack it.",
+        "DNA・脂質の細胞膜・水を主成分とする細胞質は共通です。核は真核生物にしかなく、原核生物にはありません。",
+        "DNA、脂質質膜和含水的細胞質是所有細胞共有的。細胞核只見於真核生物，原核生物沒有。") },
+    { id: "a2-2-q03", type: "short", ahl: false, difficulty: 2, ref: "A2.2.2", paper: "2", commandTerm: "Calculate", marks: 3,
+      stem: T("A cell is 12 µm long. In a photograph it measures 36 mm. Calculate the magnification of the photograph.",
+        "ある細胞の長さは12 µmです。写真では36 mmでした。写真の倍率を計算しなさい。",
+        "一個細胞長 12 µm，在相片中量得 36 mm。計算相片的放大率。"),
+      markscheme: [
+        T("convert to the same unit: 12 µm = 0.012 mm (or 36 mm = 36 000 µm);", "単位をそろえる：12 µm = 0.012 mm（または36 mm = 36 000 µm）;", "統一單位：12 µm = 0.012 mm（或 36 mm = 36 000 µm）;"),
+        T("magnification = image size ÷ actual size = 36 ÷ 0.012;", "倍率 = 像の大きさ ÷ 実際の大きさ = 36 ÷ 0.012;", "放大率 = 影像大小 ÷ 實際大小 = 36 ÷ 0.012;"),
+        T("= ×3000 [award 3 marks for correct answer with working; answer without working may score less].", "= ×3000［正答と途中式で3点］", "= ×3000［答案正確且有步驟得 3 分］")],
+      modelAnswer: T("12 µm = 0.012 mm. M = 36 mm ÷ 0.012 mm = ×3000.", "12 µm = 0.012 mm。M = 36 mm ÷ 0.012 mm = ×3000。", "12 µm = 0.012 mm。M = 36 mm ÷ 0.012 mm = ×3000。") },
+    { id: "a2-2-q04", type: "short", ahl: false, difficulty: 2, ref: "A2.2.2", paper: "2", commandTerm: "Calculate", marks: 4,
+      stem: T("A micrograph of bacteria has a scale bar labelled “2 µm”. The bar measures 20 mm. One bacterium measures 32 mm long. Calculate the actual length of the bacterium in µm.",
+        "細菌の顕微鏡写真に「2 µm」のスケールバーがあり、バーの長さは20 mmです。ある細菌の長さは32 mmでした。この細菌の実際の長さをµmで計算しなさい。",
+        "一張細菌顯微照片有標示「2 µm」的比例尺，比例尺量得 20 mm。一個細菌量得長 32 mm。計算該細菌的實際長度（單位 µm）。"),
+      markscheme: [
+        T("magnification = 20 mm ÷ 2 µm = 20 mm ÷ 0.002 mm (unit conversion);", "倍率 = 20 mm ÷ 2 µm = 20 mm ÷ 0.002 mm（単位換算）;", "放大率 = 20 mm ÷ 2 µm = 20 mm ÷ 0.002 mm（單位換算）;"),
+        T("= ×10 000;", "= ×10 000;", "= ×10 000;"),
+        T("actual length = 32 mm ÷ 10 000 = 0.0032 mm;", "実際の長さ = 32 mm ÷ 10 000 = 0.0032 mm;", "實際長度 = 32 mm ÷ 10 000 = 0.0032 mm;"),
+        T("= 3.2 µm [accept 3.2 µm by proportion: 32/20 × 2 µm].", "= 3.2 µm［比で 32/20 × 2 µm としてもよい］", "= 3.2 µm［用比例 32/20 × 2 µm 亦可］")],
+      modelAnswer: T("M = 20 mm ÷ 0.002 mm = ×10 000. Actual length = 32 mm ÷ 10 000 = 0.0032 mm = 3.2 µm.", "M = 20 mm ÷ 0.002 mm = ×10 000。実際の長さ = 32 mm ÷ 10 000 = 0.0032 mm = 3.2 µm。", "M = 20 mm ÷ 0.002 mm = ×10 000。實際長度 = 32 mm ÷ 10 000 = 0.0032 mm = 3.2 µm。") },
+    { id: "a2-2-q05", type: "mcq", ahl: false, difficulty: 2, ref: "A2.2.2", paper: "1A",
+      stem: T("A structure measures 5 mm in a micrograph with a magnification of ×1000. What is its actual size?", "顕微鏡写真（倍率×1000）で、ある構造は5 mmでした。実際の大きさはいくらですか。", "一個結構在放大率 ×1000 的顯微照片中量得 5 mm。它的實際大小是多少？"),
+      options: [T("5 µm", "5 µm", "5 µm"), T("0.5 µm", "0.5 µm", "0.5 µm"), T("5 mm", "5 mm", "5 mm"), T("50 µm", "50 µm", "50 µm")],
+      answer: 0,
+      explanation: T("A = I ÷ M = 5 mm ÷ 1000 = 0.005 mm = 5 µm (1 mm = 1000 µm). B and D are slips of a factor of ten when converting units. C forgets to divide.",
+        "A = I ÷ M = 5 mm ÷ 1000 = 0.005 mm = 5 µm（1 mm = 1000 µm）。BとDは単位換算で10倍ずれた誤り、Cは割り算を忘れています。",
+        "A = I ÷ M = 5 mm ÷ 1000 = 0.005 mm = 5 µm（1 mm = 1000 µm）。B 和 D 是單位換算時差了十倍；C 忘了做除法。") },
+    { id: "a2-2-q06", type: "short", ahl: false, difficulty: 2, ref: "A2.2.2", paper: "2", commandTerm: "Calculate", marks: 3,
+      stem: T("A student calibrates an eyepiece graticule. 50 graticule divisions line up with 0.25 mm on a stage micrometer. A cell then measures 18 graticule divisions. Calculate the actual length of the cell in µm.",
+        "生徒が接眼ミクロメーターを較正しました。接眼ミクロメーターの50目盛りが、対物ミクロメーターの0.25 mmと一致しました。細胞の長さは18目盛りでした。細胞の実際の長さをµmで計算しなさい。",
+        "一名學生校準目鏡測微尺：目鏡測微尺的 50 格與載物臺測微尺的 0.25 mm 對齊。其後量得一個細胞長 18 格。計算該細胞的實際長度（單位 µm）。"),
+      markscheme: [
+        T("one division = 0.25 mm ÷ 50 = 0.005 mm = 5 µm;", "1目盛り = 0.25 mm ÷ 50 = 0.005 mm = 5 µm;", "1 格 = 0.25 mm ÷ 50 = 0.005 mm = 5 µm;"),
+        T("length = 18 × 5 µm;", "長さ = 18 × 5 µm;", "長度 = 18 × 5 µm;"),
+        T("= 90 µm.", "= 90 µm。", "= 90 µm。")],
+      modelAnswer: T("1 division = 0.25 mm ÷ 50 = 0.005 mm = 5 µm. Length = 18 × 5 = 90 µm.", "1目盛り = 0.25 mm ÷ 50 = 0.005 mm = 5 µm。長さ = 18 × 5 = 90 µm。", "1 格 = 0.25 mm ÷ 50 = 0.005 mm = 5 µm。長度 = 18 × 5 = 90 µm。") },
+    { id: "a2-2-q07", type: "order", ahl: false, difficulty: 1, ref: "A2.2.2", paper: "1A",
+      stem: T("Put the steps for observing a stained temporary mount in a sensible order.", "染色した一時プレパラートを観察する手順を、適切な順に並べなさい。", "把觀察染色臨時裝片的步驟按合理次序排列。"),
+      items: [
+        T("Place a thin piece of specimen on the slide and add a drop of stain", "スライドガラスに薄い試料を置き、染色液を1滴加える", "把薄標本放在載玻片上，加一滴染色劑"),
+        T("Lower a coverslip at an angle to avoid trapping air bubbles", "気泡が入らないよう、カバーガラスを斜めから下ろす", "把蓋玻片斜着放下，避免困住氣泡"),
+        T("Use the lowest-power objective and the coarse adjustment to find the specimen", "最低倍率の対物レンズと粗動ねじで試料を見つける", "用最低倍數物鏡和粗調螺旋找到標本"),
+        T("Sharpen the image with the fine adjustment", "微動ねじで像をはっきりさせる", "用細調螺旋令影像清晰"),
+        T("Change to a higher-power objective and refocus with the fine adjustment only", "高倍率の対物レンズに替え、微動ねじだけで再びピントを合わせる", "轉用較高倍數物鏡，只用細調螺旋重新對焦")],
+      explanation: T("The mount must be prepared before viewing. You find the specimen at low power first because the field of view is larger, and at higher power you must use only the fine adjustment to avoid hitting the slide.",
+        "観察の前にプレパラートを作ります。低倍率は視野が広いので、まず低倍率で試料を見つけます。高倍率では、スライドにぶつけないよう微動ねじだけを使います。",
+        "觀察前要先製好裝片。先用低倍數是因為視野較大；轉用高倍數時只可用細調螺旋，以免撞到玻片。") },
+    { id: "a2-2-q08", type: "short", ahl: false, difficulty: 3, ref: "A2.2.2", paper: "2", commandTerm: "Calculate", marks: 4,
+      stem: T("A student draws a mitochondrion from an electron micrograph. The drawing is 45 mm long. The actual length of the mitochondrion is 1.5 µm. (a) Calculate the magnification of the drawing. [2] (b) The student wants to add a scale bar representing 2 µm. Calculate the length of the bar to draw. [2]",
+        "生徒が電子顕微鏡写真からミトコンドリアを描きました。図の長さは45 mm、ミトコンドリアの実際の長さは1.5 µmです。(a) 図の倍率を計算しなさい。[2] (b) 2 µmを表すスケールバーを加えたい。描くバーの長さを計算しなさい。[2]",
+        "一名學生根據電子顯微照片繪畫線粒體，圖長 45 mm，線粒體實際長度為 1.5 µm。(a) 計算該圖的放大率。[2] (b) 學生想加上代表 2 µm 的比例尺，計算要畫的比例尺長度。[2]"),
+      markscheme: [
+        T("(a) 1.5 µm = 0.0015 mm; M = 45 ÷ 0.0015;", "(a) 1.5 µm = 0.0015 mm；M = 45 ÷ 0.0015;", "(a) 1.5 µm = 0.0015 mm；M = 45 ÷ 0.0015;"),
+        T("(a) = ×30 000;", "(a) = ×30 000;", "(a) = ×30 000;"),
+        T("(b) bar length = actual length × magnification = 2 µm × 30 000 = 60 000 µm;", "(b) バーの長さ = 実際の長さ × 倍率 = 2 µm × 30 000 = 60 000 µm;", "(b) 比例尺長度 = 實際長度 × 放大率 = 2 µm × 30 000 = 60 000 µm;"),
+        T("(b) = 60 mm.", "(b) = 60 mm。", "(b) = 60 mm。")],
+      modelAnswer: T("(a) M = 45 mm ÷ 0.0015 mm = ×30 000. (b) Bar = 2 µm × 30 000 = 60 000 µm = 60 mm.", "(a) M = 45 mm ÷ 0.0015 mm = ×30 000。(b) バー = 2 µm × 30 000 = 60 000 µm = 60 mm。", "(a) M = 45 mm ÷ 0.0015 mm = ×30 000。(b) 比例尺 = 2 µm × 30 000 = 60 000 µm = 60 mm。") },
+    { id: "a2-2-q09", type: "short", ahl: false, difficulty: 3, ref: "A2.2.2", paper: "2", commandTerm: "Calculate", marks: 4,
+      stem: T("An electron micrograph of a virus particle has a magnification of ×200 000. The virus particle measures 24 mm across in the micrograph. Calculate the actual diameter of the virus in nanometres (nm).",
+        "ウイルス粒子の電子顕微鏡写真の倍率は×200 000で、粒子の直径は写真上で24 mmでした。ウイルスの実際の直径をナノメートル (nm) で計算しなさい。",
+        "一張病毒顆粒的電子顯微照片放大率為 ×200 000，顆粒在照片中闊 24 mm。計算病毒的實際直徑（單位納米 nm）。"),
+      markscheme: [
+        T("actual size = image size ÷ magnification = 24 mm ÷ 200 000;", "実際の大きさ = 像の大きさ ÷ 倍率 = 24 mm ÷ 200 000;", "實際大小 = 影像大小 ÷ 放大率 = 24 mm ÷ 200 000;"),
+        T("= 0.00012 mm;", "= 0.00012 mm;", "= 0.00012 mm;"),
+        T("convert: 1 mm = 1 000 000 nm (or 1 mm = 1000 µm, 1 µm = 1000 nm);", "換算：1 mm = 1 000 000 nm（または1 mm = 1000 µm、1 µm = 1000 nm）;", "換算：1 mm = 1 000 000 nm（或 1 mm = 1000 µm，1 µm = 1000 nm）;"),
+        T("= 120 nm.", "= 120 nm。", "= 120 nm。")],
+      modelAnswer: T("A = 24 mm ÷ 200 000 = 0.00012 mm = 0.12 µm = 120 nm.", "A = 24 mm ÷ 200 000 = 0.00012 mm = 0.12 µm = 120 nm。", "A = 24 mm ÷ 200 000 = 0.00012 mm = 0.12 µm = 120 nm。") },
+    { id: "a2-2-q10", type: "mcq", ahl: false, difficulty: 2, ref: "A2.2.3", paper: "1A",
+      stem: T("Why can an electron microscope show much more detail than a light microscope?", "電子顕微鏡が光学顕微鏡よりはるかに細かい構造を示せるのはなぜですか。", "為甚麼電子顯微鏡能顯示比光學顯微鏡細緻得多的結構？"),
+      options: [
+        T("Electrons have a much shorter wavelength than light, giving higher resolution.", "電子の波長は光よりずっと短く、分解能が高いから。", "電子的波長比光短得多，解像度較高。"),
+        T("It can be used to observe living cells in their natural state.", "生きた細胞を自然な状態で観察できるから。", "可以觀察處於天然狀態的活細胞。"),
+        T("It only needs a bigger lens to give higher magnification.", "より大きなレンズで倍率を上げているだけだから。", "只需要較大的透鏡便能得到更高的放大率。"),
+        T("Stains make the structures glow so they can be located.", "染色で構造が光り、位置が分かるから。", "染色劑令結構發光，所以可找出位置。")],
+      answer: 0,
+      explanation: T("Resolution is limited by wavelength, and electrons have a far shorter wavelength than visible light. B is wrong because specimens are in a vacuum and dead. C confuses magnification with resolution. D describes fluorescent staining in light microscopy.",
+        "分解能は波長で制限され、電子は可視光よりはるかに波長が短いです。Bは、試料が真空中で死んでいるので誤り。Cは倍率と分解能の混同。Dは光学顕微鏡の蛍光染色の説明です。",
+        "解像度受波長限制，而電子的波長遠比可見光短。B 錯誤，因為標本置於真空中，已經死亡。C 混淆了放大率和解像度。D 描述的是光學顯微鏡的螢光染色。") },
+    { id: "a2-2-q11", type: "match", ahl: false, difficulty: 1, ref: "A2.2.3", paper: "1A",
+      stem: T("Match each technique to its main advantage or use.", "各技術を、主な利点や用途と対応させなさい。", "把每項技術與其主要優點或用途配對。"),
+      pairs: [
+        { left: T("Electron microscopy", "電子顕微鏡", "電子顯微鏡"), right: T("High resolution, so the fine structure (ultrastructure) of cells can be seen", "分解能が高く、細胞の微細構造が見える", "解像度高，可看見細胞的超微結構") },
+        { left: T("Freeze fracture", "凍結割断法", "冷凍斷裂"), right: T("Shows the inside of membranes, including embedded proteins", "埋め込まれたタンパク質を含む、膜の内部が見える", "可看見膜的內部，包括嵌入的蛋白質") },
+        { left: T("Cryogenic electron microscopy", "クライオ電子顕微鏡", "低溫電子顯微鏡"), right: T("Keeps molecules close to their natural shape without staining or fixing", "染色や固定なしで、分子を自然に近い形に保てる", "不用染色或固定，分子保持接近天然形態") },
+        { left: T("Immunofluorescence", "免疫蛍光法", "免疫螢光"), right: T("Locates a specific protein using a fluorescent antibody", "蛍光抗体で特定のタンパク質の位置を調べる", "用螢光抗體找出特定蛋白質的位置") }],
+      explanation: T("Each technique answers a different kind of question about cell structure.", "それぞれの技術は、細胞構造についての異なる種類の疑問に答えます。", "每項技術回答關於細胞結構的不同問題。") },
+    { id: "a2-2-q12", type: "short", ahl: false, difficulty: 2, ref: "A2.2.5–A2.2.6", paper: "2", commandTerm: "Compare and contrast", marks: 4,
+      stem: T("Compare and contrast the structure of a prokaryote cell and a eukaryote cell.", "原核細胞と真核細胞の構造を比較し、対比しなさい。", "比較並對比原核細胞與真核細胞的結構。"),
+      markscheme: [
+        T("similarity: both have a plasma membrane, cytoplasm, DNA and ribosomes;", "共通点：どちらも細胞膜・細胞質・DNA・リボソームをもつ;", "相同點：兩者都有質膜、細胞質、DNA 和核糖體;"),
+        T("DNA is naked and circular, in a nucleoid (prokaryote) but linear chromosomes with histones, enclosed in a nucleus with a double membrane (eukaryote);", "DNA：原核生物はむき出しの環状DNAで核様体にある。真核生物はヒストンと結合した染色体で、二重膜の核に包まれる;", "DNA：原核生物為環狀裸 DNA，位於擬核；真核生物為與組蛋白結合的染色體，包在有雙層膜的細胞核內;"),
+        T("ribosomes are 70S (prokaryote) but 80S (eukaryote);", "リボソームは原核生物が70S、真核生物が80S;", "核糖體：原核生物為 70S，真核生物為 80S;"),
+        T("eukaryotes have membrane-bound organelles (mitochondria, ER, Golgi, lysosomes) but prokaryotes do not;", "真核生物には膜で囲まれた細胞小器官（ミトコンドリア・ER・ゴルジ体・リソソーム）があるが、原核生物にはない;", "真核生物有膜包圍的胞器（線粒體、內質網、高爾基體、溶酶體），原核生物沒有;"),
+        T("prokaryotes have a cell wall (eukaryotes: only plants and fungi) / prokaryote cells are much smaller.", "原核生物には細胞壁がある（真核生物は植物と菌類のみ）／原核細胞のほうがずっと小さい。", "原核生物有細胞壁（真核生物只有植物和真菌有）／原核細胞小得多。")],
+      modelAnswer: T("Both have a plasma membrane, cytoplasm, DNA and ribosomes. Prokaryote DNA is naked and circular in a nucleoid, while eukaryote DNA is in chromosomes with histones inside a nucleus with a double membrane. Prokaryotes have 70S ribosomes and eukaryotes 80S. Eukaryotes have membrane-bound organelles such as mitochondria and the Golgi apparatus; prokaryotes do not.",
+        "どちらも細胞膜・細胞質・DNA・リボソームをもちます。原核生物のDNAはむき出しの環状で核様体にあり、真核生物のDNAはヒストンと結合した染色体で、二重膜の核の中にあります。リボソームは原核生物が70S、真核生物が80Sです。真核生物にはミトコンドリアやゴルジ体など膜で囲まれた細胞小器官がありますが、原核生物にはありません。",
+        "兩者都有質膜、細胞質、DNA 和核糖體。原核生物的 DNA 是環狀裸 DNA，位於擬核；真核生物的 DNA 與組蛋白結合成染色體，位於有雙層膜的細胞核內。原核生物有 70S 核糖體，真核生物有 80S。真核生物有線粒體和高爾基體等膜包圍的胞器，原核生物沒有。") },
+    { id: "a2-2-q13", type: "multi", ahl: false, difficulty: 2, ref: "A2.2.6", paper: "1A",
+      stem: T("Which structures in a eukaryote cell are surrounded by a double membrane?", "真核細胞で二重膜に囲まれている構造はどれですか（すべて選択）。", "真核細胞中哪些結構被雙層膜包圍？（選所有正確項）"),
+      options: [
+        T("Nucleus", "核", "細胞核"), T("Mitochondrion", "ミトコンドリア", "線粒體"), T("Golgi apparatus", "ゴルジ体", "高爾基體"), T("Lysosome", "リソソーム", "溶酶體")],
+      answer: [0, 1],
+      explanation: T("The nuclear envelope and the mitochondrion each have two membranes. The Golgi apparatus (a stack of single-membrane sacs) and lysosomes (single-membrane vesicles) do not.",
+        "核膜とミトコンドリアはそれぞれ2枚の膜をもちます。ゴルジ体（単膜の袋の積み重ね）とリソソーム（単膜の小胞）はもちません。",
+        "核膜和線粒體各有兩層膜。高爾基體（單層膜囊的堆疊）和溶酶體（單層膜囊泡）則沒有。") },
+    { id: "a2-2-q14", type: "mcq", ahl: false, difficulty: 2, ref: "A2.2.8", paper: "1A",
+      stem: T("Which feature is present in a fungal cell but absent from both a typical animal cell and a typical plant cell?", "菌類の細胞にあり、典型的な動物細胞にも植物細胞にもない特徴はどれですか。", "哪項特徵存在於真菌細胞，但<strong>不</strong>存在於典型動物細胞和典型植物細胞？"),
+      options: [
+        T("A cell wall", "細胞壁", "細胞壁"), T("Chloroplasts", "葉緑体", "葉綠體"), T("A cell wall made mainly of chitin", "主にキチンでできた細胞壁", "主要由幾丁質構成的細胞壁"), T("A large permanent sap vacuole", "大きな永続的液胞", "大型永久性液泡")],
+      answer: 2,
+      explanation: T("Plants also have cell walls (cellulose), so A is not unique to fungi. Chitin walls are the distinguishing feature. Fungi have no chloroplasts, and the large central sap vacuole is typical of plant cells.",
+        "植物にも細胞壁（セルロース）があるので、Aは菌類に特有ではありません。キチンの細胞壁が区別点です。菌類に葉緑体はなく、大きな中央液胞は植物細胞の特徴です。",
+        "植物也有細胞壁（纖維素），所以 A 並非真菌獨有。幾丁質細胞壁才是區別點。真菌沒有葉綠體，大型中央液泡則是植物細胞的特徵。") },
+    { id: "a2-2-q15", type: "short", ahl: false, difficulty: 2, ref: "A2.2.9", paper: "2", commandTerm: "State", marks: 4,
+      stem: T("(a) State the number of nuclei in (i) a skeletal muscle fibre, (ii) a mature mammalian red blood cell and (iii) an aseptate fungal hypha. [3] (b) Suggest one advantage of the absence of a nucleus in a red blood cell. [1]",
+        "(a) (i) 骨格筋線維、(ii) 成熟した哺乳類の赤血球、(iii) 隔壁のない菌糸の核の数を述べなさい。[3] (b) 赤血球に核がないことの利点を1つ示唆しなさい。[1]",
+        "(a) 指出 (i) 骨骼肌纖維、(ii) 成熟的哺乳動物紅血球、(iii) 無隔膜真菌菌絲的細胞核數目。[3] (b) 提出紅血球沒有細胞核的一個好處。[1]"),
+      markscheme: [
+        T("(a)(i) many / multiple nuclei;", "(a)(i) 多数;", "(a)(i) 很多（多個）細胞核;"),
+        T("(a)(ii) none / no nucleus;", "(a)(ii) なし;", "(a)(ii) 沒有細胞核;"),
+        T("(a)(iii) many / multiple nuclei in a continuous cytoplasm;", "(a)(iii) 連続した細胞質に多数;", "(a)(iii) 連續細胞質內有很多細胞核;"),
+        T("(b) more space for haemoglobin so more oxygen can be carried (accept: biconcave shape is maintained / flexible to squeeze through capillaries).", "(b) ヘモグロビンを入れる空間が増え、より多くの酸素を運べる（毛細血管を通りやすいも可）。", "(b) 有更多空間容納血紅蛋白，能運載更多氧氣（亦可答：較易擠過微絲血管）。")],
+      modelAnswer: T("(a) (i) many; (ii) none; (iii) many. (b) With no nucleus there is more space for haemoglobin, so each cell can carry more oxygen.",
+        "(a) (i) 多数、(ii) なし、(iii) 多数。(b) 核がないとヘモグロビンの入る空間が増え、1個の細胞でより多くの酸素を運べます。",
+        "(a) (i) 很多；(ii) 沒有；(iii) 很多。(b) 沒有細胞核，血紅蛋白有更多空間，每個細胞可運載更多氧氣。") },
+    { id: "a2-2-q16", type: "short", ahl: false, difficulty: 2, ref: "A2.2.10", paper: "1B", commandTerm: "Identify", marks: 4,
+      data: T(
+        `<svg viewBox="0 0 300 200" role="img" aria-label="Schematic of four structures labelled A to D" style="max-width:420px;width:100%;height:auto;background:var(--surface-2);border-radius:8px">
+<title>Schematic electron micrograph (not to scale)</title>
+<ellipse cx="60" cy="55" rx="42" ry="24" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<ellipse cx="60" cy="55" rx="37" ry="19" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<path d="M32 55 q6 -14 10 0 t10 0 M54 55 q6 -14 10 0 t10 0 M43 62 q6 12 10 0 t10 0" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<text x="60" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">A</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M190 30 q40 -8 80 0"/><path d="M190 42 q40 -8 80 0"/><path d="M190 54 q40 -8 80 0"/><path d="M190 66 q40 -8 80 0"/></g>
+<g fill="var(--ink)"><circle cx="186" cy="38" r="3"/><circle cx="276" cy="50" r="3"/><circle cx="283" cy="62" r="3"/></g>
+<text x="230" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">B</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M20 130 q40 -14 90 0"/><path d="M20 146 q40 -14 90 0"/><path d="M20 162 q40 -14 90 0"/></g>
+<g fill="var(--ink)"><circle cx="35" cy="126" r="1.8"/><circle cx="55" cy="122" r="1.8"/><circle cx="75" cy="122" r="1.8"/><circle cx="95" cy="126" r="1.8"/><circle cx="35" cy="142" r="1.8"/><circle cx="55" cy="138" r="1.8"/><circle cx="75" cy="138" r="1.8"/><circle cx="95" cy="142" r="1.8"/><circle cx="35" cy="158" r="1.8"/><circle cx="55" cy="154" r="1.8"/><circle cx="75" cy="154" r="1.8"/><circle cx="95" cy="158" r="1.8"/></g>
+<text x="65" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">C</text>
+<circle cx="225" cy="140" r="32" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="34 7"/>
+<circle cx="225" cy="140" r="27" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="30 6"/>
+<path d="M210 135 q8 -8 16 0 t14 4 M208 148 q10 6 18 -2" fill="none" stroke="var(--ink)" stroke-width="3" opacity=".55"/>
+<text x="225" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">D</text></svg>
+<p style="margin:.4rem 0 0">Schematic drawing of structures in an electron micrograph (not to scale).</p>`,
+        `<svg viewBox="0 0 300 200" role="img" aria-label="A〜Dの4つの構造の模式図" style="max-width:420px;width:100%;height:auto;background:var(--surface-2);border-radius:8px">
+<title>電子顕微鏡写真の模式図（縮尺なし）</title>
+<ellipse cx="60" cy="55" rx="42" ry="24" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<ellipse cx="60" cy="55" rx="37" ry="19" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<path d="M32 55 q6 -14 10 0 t10 0 M54 55 q6 -14 10 0 t10 0 M43 62 q6 12 10 0 t10 0" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<text x="60" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">A</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M190 30 q40 -8 80 0"/><path d="M190 42 q40 -8 80 0"/><path d="M190 54 q40 -8 80 0"/><path d="M190 66 q40 -8 80 0"/></g>
+<g fill="var(--ink)"><circle cx="186" cy="38" r="3"/><circle cx="276" cy="50" r="3"/><circle cx="283" cy="62" r="3"/></g>
+<text x="230" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">B</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M20 130 q40 -14 90 0"/><path d="M20 146 q40 -14 90 0"/><path d="M20 162 q40 -14 90 0"/></g>
+<g fill="var(--ink)"><circle cx="35" cy="126" r="1.8"/><circle cx="55" cy="122" r="1.8"/><circle cx="75" cy="122" r="1.8"/><circle cx="95" cy="126" r="1.8"/><circle cx="35" cy="142" r="1.8"/><circle cx="55" cy="138" r="1.8"/><circle cx="75" cy="138" r="1.8"/><circle cx="95" cy="142" r="1.8"/><circle cx="35" cy="158" r="1.8"/><circle cx="55" cy="154" r="1.8"/><circle cx="75" cy="154" r="1.8"/><circle cx="95" cy="158" r="1.8"/></g>
+<text x="65" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">C</text>
+<circle cx="225" cy="140" r="32" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="34 7"/>
+<circle cx="225" cy="140" r="27" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="30 6"/>
+<path d="M210 135 q8 -8 16 0 t14 4 M208 148 q10 6 18 -2" fill="none" stroke="var(--ink)" stroke-width="3" opacity=".55"/>
+<text x="225" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">D</text></svg>
+<p style="margin:.4rem 0 0">電子顕微鏡写真に見える構造の模式図（縮尺なし）。</p>`,
+        `<svg viewBox="0 0 300 200" role="img" aria-label="A 至 D 四個結構的示意圖" style="max-width:420px;width:100%;height:auto;background:var(--surface-2);border-radius:8px">
+<title>電子顯微照片示意圖（未按比例）</title>
+<ellipse cx="60" cy="55" rx="42" ry="24" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<ellipse cx="60" cy="55" rx="37" ry="19" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<path d="M32 55 q6 -14 10 0 t10 0 M54 55 q6 -14 10 0 t10 0 M43 62 q6 12 10 0 t10 0" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+<text x="60" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">A</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M190 30 q40 -8 80 0"/><path d="M190 42 q40 -8 80 0"/><path d="M190 54 q40 -8 80 0"/><path d="M190 66 q40 -8 80 0"/></g>
+<g fill="var(--ink)"><circle cx="186" cy="38" r="3"/><circle cx="276" cy="50" r="3"/><circle cx="283" cy="62" r="3"/></g>
+<text x="230" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">B</text>
+<g fill="none" stroke="var(--ink)" stroke-width="2"><path d="M20 130 q40 -14 90 0"/><path d="M20 146 q40 -14 90 0"/><path d="M20 162 q40 -14 90 0"/></g>
+<g fill="var(--ink)"><circle cx="35" cy="126" r="1.8"/><circle cx="55" cy="122" r="1.8"/><circle cx="75" cy="122" r="1.8"/><circle cx="95" cy="126" r="1.8"/><circle cx="35" cy="142" r="1.8"/><circle cx="55" cy="138" r="1.8"/><circle cx="75" cy="138" r="1.8"/><circle cx="95" cy="142" r="1.8"/><circle cx="35" cy="158" r="1.8"/><circle cx="55" cy="154" r="1.8"/><circle cx="75" cy="154" r="1.8"/><circle cx="95" cy="158" r="1.8"/></g>
+<text x="65" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">C</text>
+<circle cx="225" cy="140" r="32" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="34 7"/>
+<circle cx="225" cy="140" r="27" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="30 6"/>
+<path d="M210 135 q8 -8 16 0 t14 4 M208 148 q10 6 18 -2" fill="none" stroke="var(--ink)" stroke-width="3" opacity=".55"/>
+<text x="225" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">D</text></svg>
+<p style="margin:.4rem 0 0">電子顯微照片中結構的示意圖（未按比例）。</p>`),
+      stem: T("Identify the structures labelled A, B, C and D.", "A、B、C、Dで示された構造を答えなさい。", "指出標示為 A、B、C、D 的結構。"),
+      markscheme: [
+        T("A: mitochondrion (double membrane, inner membrane folded);", "A：ミトコンドリア（二重膜、内膜が折りたたまれている）;", "A：線粒體（雙層膜，內膜摺疊）;"),
+        T("B: Golgi apparatus (stack of flattened sacs with vesicles);", "B：ゴルジ体（小胞をともなう平たい袋の積み重ね）;", "B：高爾基體（扁平膜囊堆疊，旁有囊泡）;"),
+        T("C: rough endoplasmic reticulum (flattened sacs with ribosomes);", "C：粗面小胞体（リボソームのついた平たい袋）;", "C：粗糙內質網（附有核糖體的扁平囊）;"),
+        T("D: nucleus (double membrane with pores).", "D：核（核膜孔のある二重膜）。", "D：細胞核（有核孔的雙層膜）。")],
+      modelAnswer: T("A: mitochondrion. B: Golgi apparatus. C: rough endoplasmic reticulum. D: nucleus.", "A：ミトコンドリア。B：ゴルジ体。C：粗面小胞体。D：核。", "A：線粒體。B：高爾基體。C：粗糙內質網。D：細胞核。") },
+    { id: "a2-2-q17", type: "short", ahl: false, difficulty: 2, ref: "A2.2.11", paper: "2", commandTerm: "State", marks: 3,
+      stem: T("State one function for each of the following structures: (a) sap vacuole, (b) Golgi apparatus, (c) microvilli.", "次の構造について、働きを1つずつ述べなさい。(a) 液胞 (b) ゴルジ体 (c) 微絨毛", "指出下列每個結構的一項功能：(a) 液泡 (b) 高爾基體 (c) 微絨毛。"),
+      markscheme: [
+        T("(a) stores water and dissolved substances / pressure supports the cell (turgor);", "(a) 水や溶質を貯蔵する／圧力で細胞を支える;", "(a) 儲存水和溶質／壓力支撐細胞（膨壓）;"),
+        T("(b) modifies, sorts and packages proteins into vesicles;", "(b) タンパク質を修飾・選別して小胞に包む;", "(b) 修飾、分類蛋白質並包入囊泡;"),
+        T("(c) increase the surface area of the plasma membrane for absorption (or secretion).", "(c) 細胞膜の表面積を増やし、吸収（や分泌）を助ける。", "(c) 增加質膜表面積，有助吸收（或分泌）。")],
+      modelAnswer: T("(a) Stores water and dissolved substances. (b) Modifies and packages proteins in vesicles. (c) Increase the surface area for absorption.", "(a) 水や溶質を貯蔵する。(b) タンパク質を修飾して小胞に包む。(c) 表面積を増やして吸収を助ける。", "(a) 儲存水和溶質。(b) 修飾蛋白質並包入囊泡。(c) 增加表面積以助吸收。") },
+    { id: "a2-2-q18", type: "short", ahl: true, difficulty: 3, ref: "A2.2.12", paper: "2", commandTerm: "Explain", marks: 4,
+      stem: T("Explain how the structure of mitochondria and chloroplasts supports the theory that they originated by endosymbiosis.", "ミトコンドリアと葉緑体の構造が、これらが細胞内共生で生じたという説をどう支持するか説明しなさい。", "解釋線粒體和葉綠體的結構如何支持它們源自內共生的學說。"),
+      markscheme: [
+        T("they have 70S ribosomes, like prokaryotes (cytoplasm of eukaryotes has 80S);", "原核生物と同じ70Sリボソームをもつ（真核生物の細胞質は80S）;", "它們有與原核生物相同的 70S 核糖體（真核生物細胞質是 80S）;"),
+        T("they have naked, circular DNA, like prokaryotes (eukaryote nuclear DNA is bound to histones);", "原核生物と同じむき出しの環状DNAをもつ（真核生物の核DNAはヒストンと結合）;", "它們有與原核生物相同的環狀裸 DNA（真核生物核 DNA 與組蛋白結合）;"),
+        T("they can replicate / divide independently inside the cell, as prokaryotes do;", "原核生物のように、細胞内で独立して複製・分裂できる;", "它們能像原核生物一樣，在細胞內獨立複製／分裂;"),
+        T("so they were probably once free-living prokaryotes engulfed by a larger cell but not digested, with both benefiting.", "したがって、かつて自由生活の原核生物で、大きな細胞に取り込まれて消化されず、双方が利益を得たと考えられる。", "所以它們很可能曾是自由生活的原核生物，被較大的細胞吞入而沒有被消化，雙方得益。")],
+      modelAnswer: T("Mitochondria and chloroplasts have 70S ribosomes and naked circular DNA, like prokaryotes, and they can replicate themselves within the cell. This suggests they were once free-living prokaryotes that were engulfed by a larger cell but not digested, so that both benefited.",
+        "ミトコンドリアと葉緑体は、原核生物と同じ70Sリボソームとむき出しの環状DNAをもち、細胞内で自己複製できます。これは、かつて自由生活の原核生物だったものが大きな細胞に取り込まれ、消化されずに双方が利益を得たことを示唆します。",
+        "線粒體和葉綠體像原核生物一樣有 70S 核糖體和環狀裸 DNA，而且能在細胞內自行複製。這顯示它們曾是自由生活的原核生物，被較大的細胞吞入但沒有被消化，雙方都得益。") },
+    { id: "a2-2-q19", type: "short", ahl: true, difficulty: 3, ref: "A2.2.13", paper: "2", commandTerm: "Explain", marks: 3,
+      stem: T("A muscle cell and a nerve cell in the same person have identical DNA but very different structures and functions. Explain how this can happen.", "同じ人の筋細胞と神経細胞は同一のDNAをもちますが、構造と働きは大きく異なります。これがどうして起こるのか説明しなさい。", "同一個人的肌肉細胞和神經細胞 DNA 相同，但結構和功能非常不同。解釋這是怎樣發生的。"),
+      markscheme: [
+        T("both cells contain the same genes / DNA;", "どちらの細胞も同じ遺伝子（DNA）をもつ;", "兩種細胞都含有相同的基因（DNA）;"),
+        T("different genes are expressed (switched on/off) in the two cell types (different patterns of gene expression);", "2種類の細胞で発現する（オン・オフになる）遺伝子が異なる（遺伝子発現のパターンが違う）;", "兩種細胞表達（開啟／關閉）的基因不同（基因表達模式不同）;"),
+        T("so different proteins are made, giving different structure and function (differentiation), often triggered by environmental signals.", "そのため異なるタンパク質が作られ、構造と働きが異なる（分化）。環境の信号が引き金になることが多い。", "所以製造的蛋白質不同，造成結構和功能不同（分化），往往由環境信號觸發。")],
+      modelAnswer: T("Both cells have the same genes, but different genes are expressed in each. So different proteins are made, which gives each cell its own structure and function. This differentiation is often triggered by changes in the cell's environment.",
+        "どちらの細胞も同じ遺伝子をもちますが、発現する遺伝子が異なります。そのため作られるタンパク質が異なり、各細胞に固有の構造と働きが生じます。この分化は細胞の環境の変化が引き金になることが多いです。",
+        "兩種細胞有相同的基因，但各自表達的基因不同，所以製造的蛋白質不同，令每種細胞有自己的結構和功能。這種分化往往由細胞環境的變化所觸發。") },
+    { id: "a2-2-q20", type: "mcq", ahl: true, difficulty: 2, ref: "A2.2.14", paper: "1A",
+      stem: T("Which is an advantage of multicellularity over being unicellular?", "単細胞であることに比べた多細胞であることの利点はどれですか。", "與單細胞相比，多細胞有甚麼優點？"),
+      options: [
+        T("Every cell must carry out all the functions of life.", "すべての細胞が生命のすべての機能を行わなければならない。", "每個細胞都必須進行所有生命功能。"),
+        T("Cells can specialize in different jobs and the organism can reach a larger size.", "細胞が異なる仕事に特殊化でき、生物が大きくなれる。", "細胞可以特化負責不同工作，而且生物可以長得較大。"),
+        T("Multicellular organisms have evolved only once.", "多細胞生物は1回しか進化していない。", "多細胞生物只演化過一次。"),
+        T("Multicellular organisms do not need cell differentiation.", "多細胞生物は細胞分化を必要としない。", "多細胞生物不需要細胞分化。")],
+      answer: 1,
+      explanation: T("Larger body size and cell specialization are the advantages named in the guide. A describes a unicellular organism. C is false because multicellularity evolved repeatedly. D is false because specialization depends on differentiation.",
+        "指導要領が挙げる利点は、体の大型化と細胞の特殊化です。Aは単細胞生物の説明。Cは多細胞性が繰り返し進化したので誤り。Dは特殊化が分化に基づくので誤りです。",
+        "指引所列的優點是身體較大和細胞特化。A 描述的是單細胞生物。C 錯誤，多細胞性曾多次演化出現。D 錯誤，特化要靠分化。") },
+
   ];
-  /*@@META*/
+    IB.registerTopic({
+    id: "A2.2", slug: "a2-2", theme: "A", level: 2, ahlOnly: false,
+    title: T("Cell structure", "細胞の構造", "細胞結構"),
+    guidingQuestions: [
+      T("What are the features common to all cells and the features that differ?", "すべての細胞に共通する特徴と、異なる特徴は何か。", "所有細胞有哪些共同特徵？哪些特徵不同？"),
+      T("How is microscopy used to investigate cell structure?", "細胞の構造を調べるために顕微鏡はどのように使われるか。", "顯微鏡如何用於研究細胞結構？")],
+    summary: T(
+      "All living things are made of cells. In this subtopic you learn the microscope skills used to study them (including calculating magnification and actual size), the features shared by all cells, and how prokaryote, animal, plant and fungal cells differ. At HL you also study how eukaryotic cells arose by endosymbiosis, how cells differentiate, and how multicellularity evolved.",
+      "すべての生物は細胞からできています。この単元では、細胞を調べる顕微鏡の技能（倍率や実際の大きさの計算を含む）、すべての細胞に共通する特徴、原核・動物・植物・菌類の細胞の違いを学びます。HLでは、細胞内共生による真核細胞の起源、細胞分化、多細胞性の進化も学びます。",
+      "所有生物都由細胞構成。這個子課題學習研究細胞的顯微鏡技能（包括計算放大率和實際大小）、所有細胞的共同特徵，以及原核、動物、植物和真菌細胞的分別。HL 還要學習真核細胞如何經內共生產生、細胞如何分化，以及多細胞性如何演化。"),
+    sections,
+    keyTerms: [
+      { ahl: false, term: T("cell theory", "細胞説", "細胞學說"), def: T("All organisms are made of one or more cells, and cells are the basic structural unit of life.", "すべての生物は1つ以上の細胞からなり、細胞は生命の基本的な構造単位であるという説。", "所有生物由一個或多個細胞構成，細胞是生命的基本結構單位。") },
+      { ahl: false, term: T("magnification", "倍率", "放大率"), def: T("Size of the image divided by the actual size of the object; it has no unit.", "像の大きさを実際の大きさで割った値。単位はない。", "影像大小除以物體實際大小；沒有單位。") },
+      { ahl: false, term: T("resolution", "分解能", "解像度"), def: T("The ability to show two close points as separate; it decides how much detail can be seen.", "近接した2点を別々のものとして見分けられる能力。見える細部の量を決める。", "把靠近的兩點分辨為獨立兩點的能力；決定能看見多少細節。") },
+      { ahl: false, term: T("scale bar", "スケールバー", "比例尺"), def: T("A line on a micrograph or drawing labelled with the actual length it represents.", "顕微鏡写真や図にある、実際の長さを表示した線。", "顯微照片或繪圖上的一條線，標示它所代表的實際長度。") },
+      { ahl: false, term: T("eyepiece graticule", "接眼ミクロメーター", "目鏡測微尺"), def: T("A small ruler in the eyepiece of a microscope, calibrated against a stage micrometer.", "顕微鏡の接眼レンズ内の小さな物差し。対物ミクロメーターで較正して使う。", "顯微鏡目鏡內的小尺，用載物臺測微尺校準後使用。") },
+      { ahl: false, term: T("immunofluorescence", "免疫蛍光法", "免疫螢光"), def: T("Using a fluorescent-labelled antibody to show where a specific protein is in a cell.", "蛍光標識した抗体で、特定のタンパク質が細胞のどこにあるかを示す方法。", "利用螢光標記的抗體顯示特定蛋白質在細胞中的位置。") },
+      { ahl: false, term: T("prokaryote", "原核生物", "原核生物"), def: T("An organism whose cells have no nucleus or membrane-bound organelles; DNA is naked and in a loop; 70S ribosomes.", "細胞に核や膜で囲まれた細胞小器官がない生物。DNAはむき出しで環状、70Sリボソーム。", "細胞沒有細胞核或膜包圍胞器的生物；DNA 為環狀裸 DNA；有 70S 核糖體。") },
+      { ahl: false, term: T("nucleoid", "核様体", "擬核"), def: T("The region of a prokaryote cell where the DNA is found; it has no surrounding membrane.", "原核細胞でDNAがある領域。囲む膜はない。", "原核細胞中存放 DNA 的區域，沒有膜包圍。") },
+      { ahl: false, term: T("eukaryote", "真核生物", "真核生物"), def: T("An organism whose cells have a nucleus and other membrane-bound organelles; 80S ribosomes.", "細胞に核と膜で囲まれた細胞小器官がある生物。80Sリボソームをもつ。", "細胞有細胞核和其他膜包圍胞器的生物；有 80S 核糖體。") },
+      { ahl: false, term: T("histone", "ヒストン", "組蛋白"), def: T("A protein that DNA is wrapped around in eukaryote chromosomes.", "真核生物の染色体でDNAが巻きつくタンパク質。", "真核染色體中 DNA 所纏繞的蛋白質。") },
+      { ahl: false, term: T("cytoskeleton", "細胞骨格", "細胞骨架"), def: T("A network of microtubules and microfilaments that supports the cell and moves organelles.", "細胞を支え、細胞小器官を動かす微小管と微小繊維のネットワーク。", "由微管和微絲組成的網絡，支撐細胞並移動胞器。") },
+      { ahl: false, term: T("lysosome", "リソソーム", "溶酶體"), def: T("A vesicle containing digestive enzymes that break down materials.", "物質を分解する消化酵素を含む小胞。", "含有消化酶、分解物質的囊泡。") },
+      { ahl: false, term: T("sap vacuole", "液胞", "液泡"), def: T("The large central vacuole of a plant cell that stores water and solutes and keeps the cell firm.", "植物細胞の大きな中央液胞。水と溶質を貯蔵し、細胞を張った状態に保つ。", "植物細胞的大型中央液泡，儲存水和溶質並使細胞保持堅挺。") },
+      { ahl: false, term: T("chitin", "キチン", "幾丁質"), def: T("The polysaccharide that forms the cell walls of fungi.", "菌類の細胞壁をつくる多糖。", "構成真菌細胞壁的多糖。") },
+      { ahl: false, term: T("aseptate hypha", "隔壁のない菌糸", "無隔膜菌絲"), def: T("A fungal filament with no cross-walls, so many nuclei share one cytoplasm.", "仕切り壁がなく、多数の核が1つの細胞質を共有する菌類の糸状体。", "沒有橫隔的真菌絲狀體，很多細胞核共用一個細胞質。") },
+      { ahl: false, term: T("microvilli", "微絨毛", "微絨毛"), def: T("Finger-like projections of the plasma membrane that increase surface area.", "細胞膜の指状の突起で、表面積を増やす。", "質膜的指狀突起，增加表面積。") },
+      { ahl: true, term: T("endosymbiosis", "細胞内共生", "內共生"), def: T("A cell living inside another cell to the benefit of both; mitochondria and chloroplasts are thought to have arisen this way.", "ある細胞が別の細胞の内部で双方に利益をもたらして生きること。ミトコンドリアと葉緑体はこうして生じたと考えられる。", "一種細胞在另一細胞內生活而雙方得益；線粒體和葉綠體被認為是這樣產生的。") },
+      { ahl: true, term: T("cell differentiation", "細胞分化", "細胞分化"), def: T("Development of cells into specialized types by expressing different genes.", "異なる遺伝子を発現することで、細胞が特殊化した型に発達すること。", "細胞透過表達不同基因而發育成特化類型。") },
+      { ahl: true, term: T("gene expression", "遺伝子発現", "基因表達"), def: T("Use of a gene's information to make a protein; genes can be switched on or off.", "遺伝子の情報を使ってタンパク質をつくること。遺伝子はオン・オフが切り替わる。", "利用基因的資訊製造蛋白質；基因可以被開啟或關閉。") },
+      { ahl: true, term: T("multicellularity", "多細胞性", "多細胞性"), def: T("Having a body made of many cells that work together, which evolved repeatedly.", "多数の細胞が協調して体をつくること。繰り返し進化した。", "身體由許多細胞合作構成，曾多次演化出現。") }
+    ],
+    misconceptions: [
+      { wrong: T("Magnification and resolution mean the same thing.", "倍率と分解能は同じ意味である。", "放大率和解像度是同一回事。"),
+        right: T("Magnification makes an image bigger; resolution is how much detail can be distinguished. A high magnification with poor resolution gives a big, blurry image.", "倍率は像を大きくすること、分解能は区別できる細部の量です。分解能が低いと、倍率を上げても大きくぼやけた像になるだけです。", "放大率令影像變大；解像度是能分辨多少細節。解像度差而放大率高，只會得到大而模糊的影像。") },
+      { wrong: T("Prokaryotes have no DNA because they have no nucleus.", "原核生物は核がないのでDNAがない。", "原核生物沒有細胞核，所以沒有 DNA。"),
+        right: T("Prokaryotes have DNA. It is naked (no histones), in a loop, and lies in the nucleoid region in the cytoplasm.", "原核生物にもDNAがあります。ヒストンのないむき出しの環状で、細胞質の核様体領域にあります。", "原核生物有 DNA。它是沒有組蛋白的環狀裸 DNA，位於細胞質中的擬核區。") },
+      { wrong: T("Plant cells have chloroplasts instead of mitochondria.", "植物細胞はミトコンドリアのかわりに葉緑体をもつ。", "植物細胞有葉綠體，所以沒有線粒體。"),
+        right: T("Plant cells have both. Chloroplasts carry out photosynthesis and mitochondria carry out aerobic respiration.", "植物細胞には両方あります。葉緑体は光合成を、ミトコンドリアは好気呼吸を行います。", "植物細胞兩者都有。葉綠體進行光合作用，線粒體進行有氧呼吸。") },
+      { wrong: T("Fungi are plants because they have cell walls.", "菌類は細胞壁があるので植物である。", "真菌有細胞壁，所以是植物。"),
+        right: T("Fungal cell walls are mainly chitin (plants: cellulose), and fungi have no chloroplasts. Fungi are a separate group.", "菌類の細胞壁は主にキチン（植物はセルロース）で、葉緑体もありません。菌類は別のグループです。", "真菌的細胞壁主要是幾丁質（植物是纖維素），而且沒有葉綠體。真菌是獨立的類群。") },
+      { wrong: T("Cells that look different have different genes (they lose the genes they do not use).", "見た目が違う細胞は遺伝子が違う（使わない遺伝子を失う）。", "外觀不同的細胞有不同的基因（會失去不用的基因）。"),
+        right: T("Differentiated cells of one organism keep the same genes. They differ because different genes are expressed (switched on or off).", "1つの生物の分化した細胞は同じ遺伝子をもち続けます。違いは、発現する遺伝子（オン・オフ）が異なるためです。", "同一生物中分化的細胞保留相同的基因。分別在於表達（開啟或關閉）的基因不同。") },
+      { wrong: T("Endosymbiosis means a big cell ate bacteria and digested them.", "細胞内共生とは、大きな細胞が細菌を食べて消化したことである。", "內共生是指大細胞吃掉細菌並把它消化。"),
+        right: T("The engulfed prokaryote was not digested. It survived inside the host and both benefited, eventually becoming a mitochondrion or chloroplast.", "取り込まれた原核生物は消化されませんでした。宿主の中で生き続けて双方が利益を得、やがてミトコンドリアや葉緑体になりました。", "被吞入的原核生物沒有被消化，而是在宿主內存活，雙方得益，最終變成線粒體或葉綠體。") }
+    ],
+    beyondSyllabus: [
+      T("You do not need the internal parts of mitochondria and chloroplasts (cristae, matrix, thylakoids, grana, stroma) or how they are adapted for A2.2. That is B2.2 (AHL).", "A2.2では、ミトコンドリアや葉緑体の内部構造（クリステ・マトリックス・チラコイド・グラナ・ストロマ）やその適応は不要です。それはB2.2 (AHL) の内容です。", "在 A2.2 你不需要認識線粒體和葉綠體的內部結構（嵴、基質、類囊體、基粒、基質）及其適應特徵，那是 B2.2 (AHL) 的內容。"),
+      T("You do not need other prokaryote structures such as the capsule, pili, plasmids or the structure of the bacterial flagellum, nor the Gram-staining procedure or peptidoglycan structure, to answer A2.2.5.", "A2.2.5では、莢膜・線毛・プラスミド・細菌の鞭毛の構造、グラム染色の手順、ペプチドグリカンの構造などは不要です。", "回答 A2.2.5 時，你不需要認識莢膜、菌毛、質粒、細菌鞭毛的結構，也不需要認識革蘭氏染色步驟或肽聚糖結構。"),
+      T("You do not need to know how the lenses and electromagnets of TEM and SEM work, or exact resolution limits. Know the advantages of each technique.", "TEMとSEMのレンズや電磁石のしくみ、正確な分解能の限界は不要です。各技術の利点を知っていれば十分です。", "你不需要認識 TEM 和 SEM 的透鏡及電磁鐵如何運作，也不需要認識確切的解像度極限。只需認識各技術的優點。"),
+      T("You do not need the detailed molecular structure of the cytoskeleton (tubulin, actin) or the “9+2” structure of cilia.", "細胞骨格の詳しい分子構造（チューブリン・アクチン）や繊毛の「9+2」構造は不要です。", "你不需要認識細胞骨架的詳細分子結構（微管蛋白、肌動蛋白）或纖毛的「9+2」結構。"),
+      T("You do not need the molecular mechanisms of differentiation (transcription factors, epigenetics) or types of stem cell. The guide asks only that differentiation is based on different patterns of gene expression, often triggered by the environment.", "分化の分子機構（転写因子・エピジェネティクス）や幹細胞の種類は不要です。分化が遺伝子発現パターンの違いに基づき、環境が引き金になることが多い、という点だけです。", "你不需要認識分化的分子機制（轉錄因子、表觀遺傳）或幹細胞的類型。指引只要求知道分化基於不同的基因表達模式，往往由環境觸發。"),
+      T("You do not need named multicellular lineages or details such as which archaeon was the host cell in the origin of eukaryotes.", "多細胞化した具体的な系統名や、真核生物の起源でどの古細菌が宿主だったかといった詳細は不要です。", "你不需要認識具名的多細胞譜系，也不需要認識真核生物起源中哪種古菌是宿主等細節。")
+    ],
+    links: [
+      { to: "A1.2", why: T("DNA is the genetic material in every cell; naked DNA vs DNA with histones.", "DNAはすべての細胞の遺伝物質です。むき出しのDNAとヒストンと結合したDNAの違い。", "DNA 是每個細胞的遺傳物質；裸 DNA 與和組蛋白結合的 DNA。") },
+      { to: "A2.1", why: T("Prokaryote-like cells came first; endosymbiosis built on them.", "原核生物のような細胞が先に生じ、細胞内共生はその上に成り立ちました。", "類似原核生物的細胞最先出現，內共生建基於它們之上。") },
+      { to: "A2.3", why: T("Compare viruses (no cells) with prokaryotes and eukaryotes.", "ウイルス（細胞なし）を原核生物・真核生物と比べましょう。", "把病毒（沒有細胞）與原核生物和真核生物比較。") },
+      { to: "B2.1", why: T("The plasma membrane is a phospholipid bilayer with embedded proteins.", "細胞膜はタンパク質が埋め込まれたリン脂質二重層です。", "質膜是嵌有蛋白質的磷脂雙層。") },
+      { to: "B2.2", why: T("Adaptations of each organelle to its function.", "各細胞小器官の働きへの適応。", "各胞器對其功能的適應。") },
+      { to: "B2.3", why: T("Specialized cells in tissues result from differentiation.", "組織の特殊化した細胞は分化の結果です。", "組織中的特化細胞是分化的結果。") }
+    ],
+    natureOfScience: [
+      T("Deductive reasoning generates predictions from theories: based on cell theory, a newly discovered organism can be predicted to consist of one or more cells.", "演繹的推論は理論から予測を導きます。細胞説に基づけば、新しく発見された生物は1つ以上の細胞からなると予測できます。", "演繹推理由理論產生預測：根據細胞學說，可預測新發現的生物由一個或多個細胞構成。"),
+      T("Measurement using instruments (such as an eyepiece graticule or a ruler) is a form of quantitative observation.", "器具（接眼ミクロメーターや定規）による測定は、定量的観察の一種です。", "用儀器（如目鏡測微尺或直尺）量度是一種定量觀察。"),
+      T("The strength of a theory comes from the observations it explains and the predictions it supports. Endosymbiosis accounts for a wide range of observations.", "理論の強さは、それが説明する観察と支持する予測から生まれます。細胞内共生説は幅広い観察を説明します。", "理論的強度來自它能解釋的觀察和支持的預測。內共生學說解釋了廣泛的觀察。")
+    ],
+    questions
+  });
+
 })();

@@ -340,7 +340,7 @@
 <li>新しい倍数体の植物は、両方の親の種から<strong>すぐに生殖的に隔離</strong>される。親と交配すると染色体のセット数が奇数の子ができ、不妊になるからである。</li>
 </ol>
 <p>植物は自家受粉や栄養生殖ができることが多いので、新しい倍数体の植物が一個体だけでも、個体群を始められます。</p>
-<p><strong>例：</strong>イタドリ類 (knotweed / smartweed)、<em>Persicaria</em> 属には、雑種形成と倍数性で生じた種が多く含まれます。試験では一般名でも学名でも認められます。</p>`,
+<p><strong>例：</strong>タデ類 (knotweed / smartweed)、<em>Persicaria</em> 属（タデ属）には、雑種形成と倍数性で生じた種が多く含まれます。試験では一般名でも学名でも認められます。</p>`,
           `<p>大部分的物種形成是逐漸的，但在<strong>植物</strong>中，新物種可以通過<strong>雜交和多倍體</strong>在一代之內<strong>突然</strong>形成。<em>多倍體 (polyploid)</em> 指有<strong>多於兩套染色體</strong>。</p>
 <ol>
 <li>兩個不同的物種<strong>雜交</strong>。雜種從每個親本物種各得到一套染色體。</li>
@@ -398,7 +398,7 @@
       L("You do not need to know the mechanism of natural selection in full detail here; that is developed in Theme D. For A4.1 the focus is the evidence and speciation.", "ここで自然選択の仕組みを詳しく知る必要はありません。それはテーマ D で扱います。A4.1 の中心は証拠と種分化です。", "你在這裏不需要詳細認識自然選擇的機制；那在主題 D 發展。A4.1 的重點是證據和物種形成。"),
       L("You do not need to learn named examples of adaptive radiation (such as Darwin's finches); the guide gives none.", "適応放散の具体例（ダーウィンフィンチなど）を覚える必要はありません。ガイドは例を挙げていません。", "你不需要學習適應輻射的指定例子（例如達爾文雀）；課程指引沒有給出任何例子。"),
       L("You do not need the terms prezygotic and postzygotic barriers, or a list of every type of barrier. Know courtship behaviour and hybrid sterility with the mule.", "接合前障壁・接合後障壁という用語や、障壁のあらゆる種類の一覧は不要です。求愛行動と、ラバによる雑種不妊を知っていれば十分です。", "你不需要「合子前／合子後障礙」這些術語，也不需要列出所有障礙類型。認識求偶行為和以騾為例的雜種不育便可。"),
-      L("You do not need to know the names of types of polyploidy (autopolyploidy, allopolyploidy) or the chemicals used to double chromosomes. Use Persicaria as the example.", "倍数性の種類の名称（同質倍数体、異質倍数体）や、染色体を倍加させる薬品の名前は不要です。例はイタドリ類 (Persicaria) を使います。", "你不需要知道多倍體類型的名稱（同源多倍體、異源多倍體）或令染色體加倍的化學物質。以蓼屬 (Persicaria) 作例子便可。"),
+      L("You do not need to know the names of types of polyploidy (autopolyploidy, allopolyploidy) or the chemicals used to double chromosomes. Use Persicaria as the example.", "倍数性の種類の名称（同質倍数体、異質倍数体）や、染色体を倍加させる薬品の名前は不要です。例はタデ類 (Persicaria) を使います。", "你不需要知道多倍體類型的名稱（同源多倍體、異源多倍體）或令染色體加倍的化學物質。以蓼屬 (Persicaria) 作例子便可。"),
       L("You do not need other examples of fossil, biogeographical or embryological evidence for A4.1; the guide lists sequences, selective breeding and homologous structures.", "A4.1 のために、化石、生物地理学、発生学の証拠の他の例は不要です。ガイドが挙げるのは配列、選択育種、相同構造です。", "A4.1 不需要化石、生物地理學或胚胎學證據的其他例子；課程指引列出的是序列、選擇性育種和同源結構。")
     ],
     links: [
@@ -410,6 +410,161 @@
     natureOfScience: [
       L("Theories and truth: evolution by natural selection explains a broad range of observations and is unlikely to be falsified, but science cannot formally prove a theory true; it is a pragmatic truth.", "理論と真理：自然選択による進化は広範な観察を説明し反証される可能性は低いが、科学は理論が真であると正式に証明できません。それは実用的な真理です。", "理論與真理：自然選擇進化論解釋大量觀察結果，不太可能被推翻，但科學無法正式證明理論為真；它是一種實用的真理。")
     ],
-    questions: []
+    questions: [
+      {
+        id: "a4-1-q01", type: "mcq", ahl: false, difficulty: 1, ref: "A4.1.1", paper: "1A",
+        stem: L("Which statement best defines evolution?", "進化の定義として最も適切なのはどれか。", "以下哪項最能定義進化？"),
+        options: [L("Changes that an individual acquires during its lifetime", "個体が生きている間に獲得する変化", "個體在一生中獲得的改變"), L("Change in the heritable characteristics of a population over generations", "世代を通じた個体群の遺伝する特徴の変化", "種羣可遺傳特徵在世代之間的改變"), L("The appearance of new organisms from non-living matter", "無生物から新しい生物が現れること", "新生物由非生物物質產生"), L("The improvement of species towards a perfect form", "種が完全な形へ向けて向上すること", "物種朝向完美形態改進")],
+        answer: 1,
+        explanation: L("Evolution needs heritable change in a population. A is the Lamarckian idea: changes acquired during life are not inherited. C is not evolution, and D wrongly suggests evolution has a goal.", "進化には個体群の遺伝する変化が必要です。Aはラマルク的な考えで、生きている間に得た変化は遺伝しません。Cは進化ではなく、Dは進化に目的があるという誤った考えです。", "進化需要種羣中可遺傳的改變。A 是拉馬克的想法：一生中獲得的改變不會遺傳。C 不是進化，D 錯誤地暗示進化有目標。")
+      },
+      {
+        id: "a4-1-q02", type: "mcq", ahl: false, difficulty: 2, ref: "A4.1.1", paper: "1A",
+        stem: L("Which of these is an example of evolution?", "次のうち、進化の例はどれか。", "以下哪個是進化的例子？"),
+        options: [L("A weightlifter develops large muscles and his children are born strong", "重量挙げ選手が大きな筋肉をつけ、その子が力強く生まれる", "舉重運動員練出強壯肌肉，他的子女天生強壯"), L("The frequency of a dark-wing allele in a moth population rises over many generations", "ガの個体群で、暗色の翅の対立遺伝子の頻度が何世代にもわたって上がる", "蛾種羣中暗色翅膀等位基因的頻率在多個世代中上升"), L("A plant grows taller when it is given fertilizer", "植物が肥料を与えられて背が高くなる", "植物在施肥後長得更高"), L("A person's skin becomes darker after sunbathing", "日光浴をして人の皮膚が黒くなる", "一個人曬日光浴後皮膚變黑")],
+        answer: 1,
+        explanation: L("Only B is a change in the heritable (genetic) characteristics of a population. A, C and D are acquired changes that are not passed on through genes.", "Bだけが、個体群の遺伝する（遺伝的な）特徴の変化です。A、C、Dは遺伝子で伝わらない獲得された変化です。", "只有 B 是種羣可遺傳（基因）特徵的改變。A、C、D 都是不會透過基因傳遞的獲得性改變。")
+      },
+      {
+        id: "a4-1-q03", type: "mcq", ahl: false, difficulty: 1, ref: "A4.1.5", paper: "1A",
+        stem: L("Which pair is an example of analogous structures?", "相似構造の例となる組はどれか。", "哪一對是同功結構的例子？"),
+        options: [L("Human arm and whale flipper", "ヒトの腕とクジラの胸びれ", "人類的手臂和鯨的鰭肢"), L("Insect wing and bird wing", "昆虫の翅と鳥の翼", "昆蟲的翅和鳥的翼"), L("Horse leg and human arm", "ウマの脚とヒトの腕", "馬的腿和人類的手臂"), L("Bat wing and human arm", "コウモリの翼とヒトの腕", "蝙蝠的翼和人類的手臂")],
+        answer: 1,
+        explanation: L("Insect and bird wings have the same function but different origins. The other pairs are built on the same pentadactyl limb plan, so they are homologous.", "昆虫の翅と鳥の翼は働きが同じで起源が異なります。他の組は同じ五指性の肢の設計に基づいているので相同です。", "昆蟲和鳥的翼功能相同但起源不同。其他各對都建基於同一個五指型肢格局，所以是同源的。")
+      },
+      {
+        id: "a4-1-q04", type: "multi", ahl: false, difficulty: 2, ref: "A4.1.2–4", paper: "1A",
+        stem: L("Select ALL the types of evidence for evolution named in the IB guide for A4.1.", "A4.1 で IB ガイドが挙げている進化の証拠の種類をすべて選べ。", "選出 IB 課程指引在 A4.1 中列出的所有進化證據類型。"),
+        options: [L("Similarities in DNA base sequences and protein amino acid sequences", "DNA の塩基配列やタンパク質のアミノ酸配列の類似", "DNA 鹼基序列和蛋白質氨基酸序列的相似性"), L("Variation produced by selective breeding of domesticated species", "家畜や栽培植物の選択育種によって生じた変異", "馴養物種經選擇性育種產生的變異"), L("Homologous structures such as the pentadactyl limb", "五指性の肢などの相同構造", "五指型肢等同源結構"), L("Muscles that get bigger with exercise in a lifetime", "生涯の運動で大きくなる筋肉", "一生中因運動而變大的肌肉")],
+        answer: [0, 1, 2],
+        explanation: L("Sequences, selective breeding and homologous structures are the guide's three examples. D is an acquired change, not heritable, so it is not evidence for evolution.", "配列、選択育種、相同構造がガイドの三つの例です。Dは獲得された変化で遺伝しないので、進化の証拠にはなりません。", "序列、選擇性育種和同源結構是課程指引的三個例子。D 是獲得性改變、不可遺傳，所以不是進化的證據。")
+      },
+      {
+        id: "a4-1-q05", type: "short", ahl: false, difficulty: 2, ref: "A4.1.2", paper: "1B", commandTerm: "Deduce", marks: 3,
+        stem: L("The table shows the number of amino acid differences from the human protein, in the same 140-amino-acid protein from other species (illustrative data). (a) Deduce which species shares the most recent common ancestor with humans. (b) Explain how the data support the theory of evolution.", "表は、他の種の同じ140アミノ酸のタンパク質について、ヒトのタンパク質とのアミノ酸の違いの数を示す（例示データ）。(a) ヒトと最も新しい共通祖先を共有する種を推論せよ (Deduce)。(b) このデータが進化論を支持する仕組みを説明せよ (Explain)。", "下表顯示其他物種的同一種 140 個氨基酸的蛋白質與人類蛋白質之間的氨基酸差異數目（示例數據）。(a) 推斷 (Deduce) 哪一個物種與人類共有最近的共同祖先。(b) 解釋 (Explain) 這些數據如何支持進化論。"),
+        data: L(
+          `<table><tr><th>Species</th><th>Differences from human</th></tr><tr><td>Chimpanzee</td><td>0</td></tr><tr><td>Rhesus monkey</td><td>8</td></tr><tr><td>Mouse</td><td>16</td></tr><tr><td>Chicken</td><td>45</td></tr></table>`,
+          `<table><tr><th>種</th><th>ヒトとの違い</th></tr><tr><td>チンパンジー</td><td>0</td></tr><tr><td>アカゲザル</td><td>8</td></tr><tr><td>マウス</td><td>16</td></tr><tr><td>ニワトリ</td><td>45</td></tr></table>`,
+          `<table><tr><th>物種</th><th>與人類的差異</th></tr><tr><td>黑猩猩</td><td>0</td></tr><tr><td>恆河猴</td><td>8</td></tr><tr><td>小鼠</td><td>16</td></tr><tr><td>雞</td><td>45</td></tr></table>`
+        ),
+        markscheme: [
+          L("(a) Chimpanzee (fewest/no differences)", "(a) チンパンジー（違いが最も少ない／ない）", "(a) 黑猩猩（差異最少／沒有差異）"),
+          L("(b) Fewer differences in species thought to be closely related / more differences in distantly related species", "(b) 近縁と考えられる種では違いが少なく、遠縁の種では違いが多い", "(b) 被認為親緣近的物種差異較少／親緣遠的物種差異較多"),
+          L("Differences accumulate by mutation over time since the common ancestor, so the pattern matches relationships predicted from other evidence (shared ancestry)", "共通祖先から時間がたつにつれ突然変異で違いが蓄積するので、このパターンは他の証拠から予想される関係（共通祖先）と一致する", "差異隨共同祖先之後的時間因突變而累積，所以這規律與從其他證據預測的親緣關係（共同祖先）相符")
+        ],
+        modelAnswer: L("(a) The chimpanzee, which has no differences. (b) The number of differences rises as the species become less closely related. Mutations build up after lineages split, so more differences mean an older common ancestor. This matches the relationships predicted from other evidence, which supports common ancestry.", "(a) 違いがないチンパンジー。(b) 種の近縁度が下がるにつれ、違いの数が増える。系統が分かれた後に突然変異が蓄積するので、違いが多いほど共通祖先は古い。これは他の証拠から予想される関係と一致し、共通祖先を支持する。", "(a) 黑猩猩，沒有差異。(b) 物種親緣越遠，差異數目越多。譜系分開後突變不斷累積，差異越多代表共同祖先越古老。這與從其他證據預測的親緣關係相符，支持共同祖先的說法。")
+      },
+      {
+        id: "a4-1-q06", type: "short", ahl: false, difficulty: 2, ref: "A4.1.3", paper: "2", commandTerm: "Explain", marks: 3,
+        stem: L("Cabbage, broccoli, cauliflower and kale were all bred from one wild plant. Explain how this is evidence for evolution.", "キャベツ、ブロッコリー、カリフラワー、ケールは、一つの野生植物から作り出された。これがなぜ進化の証拠になるか説明せよ (Explain)。", "椰菜、西蘭花、椰菜花和羽衣甘藍都是由同一種野生植物培育出來的。解釋 (Explain) 這為何是進化的證據。"),
+        markscheme: [
+          L("The wild population had heritable variation", "野生の個体群には遺伝する変異があった", "野生種羣有可遺傳的變異"),
+          L("Breeders chose individuals with wanted traits to breed, repeated over generations, so the traits became common / characteristics of the population changed", "育種家は望む形質をもつ個体を選んで繁殖させ、これを世代にわたって繰り返したので、その形質が一般的になった／個体群の特徴が変化した", "育種者選擇具有所需性狀的個體繁殖，並代代重複，所以這些性狀變得普遍／種羣的特徵改變"),
+          L("Large differences arose in a short (geologically) time, showing how rapidly evolutionary change can happen", "地質学的には短い時間で大きな違いが生じ、進化的変化がいかに速く起こり得るかを示す", "在（地質上）很短的時間內產生很大的差異，顯示進化改變可以多麼迅速")
+        ],
+        modelAnswer: L("The wild plant population contained heritable variation. Breeders selected plants with the traits they wanted and bred them over many generations, so each trait became common. Very different forms arose in a short time, which shows that populations can change rapidly when some individuals reproduce more than others.", "野生植物の個体群には遺伝する変異があった。育種家は望む形質をもつ植物を選び何世代も繁殖させたので、各形質が一般的になった。短い期間で非常に異なる形が生じたことは、一部の個体が他より多く繁殖すると個体群が速く変化し得ることを示す。", "野生植物種羣有可遺傳的變異。育種者選擇具有所需性狀的植物，經多個世代繁殖，使每種性狀變得普遍。在短時間內產生非常不同的形態，顯示當部分個體比其他個體繁殖更多時，種羣可以迅速改變。")
+      },
+      {
+        id: "a4-1-q07", type: "mcq", ahl: false, difficulty: 2, ref: "A4.1.4", paper: "1A",
+        stem: L("The forelimbs of humans, bats, whales and horses are used in different ways but contain the same set of bones. What is the best explanation?", "ヒト、コウモリ、クジラ、ウマの前肢は使い方が違うが、同じ骨の組をもつ。最もよい説明はどれか。", "人類、蝙蝠、鯨和馬的前肢用途不同，但包含相同的一組骨骼。哪個是最好的解釋？"),
+        options: [L("Convergent evolution to the same function", "同じ働きに向かう収斂進化", "朝向相同功能的趨同進化"), L("Inheritance of the limb plan from a common ancestor, modified in each lineage", "共通祖先から肢の設計を受け継ぎ、各系統で変化した", "由共同祖先遺傳肢的格局，在每個譜系中各自改變"), L("Each animal acquired the bones by using its limb", "各動物が肢を使うことで骨を獲得した", "每種動物因使用肢而獲得這些骨骼"), L("Chance: all animals happen to have five fingers", "偶然：すべての動物がたまたま五本指をもっている", "巧合：所有動物碰巧都有五隻指")],
+        answer: 1,
+        explanation: L("Homologous structures share an origin, so common ancestry explains them. A is the tempting wrong answer: convergence produces similar function from different origins, the opposite situation. C is Lamarckism.", "相同構造は起源を共有するので、共通祖先で説明できます。Aは紛らわしい誤答で、収斂進化は異なる起源から似た働きが生じる逆の状況です。Cはラマルク説です。", "同源結構有共同起源，所以可用共同祖先解釋。A 是具誘惑力的錯誤答案：趨同進化是不同起源產生相似功能，情況剛好相反。C 是拉馬克學說。")
+      },
+      {
+        id: "a4-1-q08", type: "short", ahl: false, difficulty: 2, ref: "A4.1.4–5", paper: "2", commandTerm: "Distinguish", marks: 3,
+        stem: L("Distinguish between homologous structures and analogous structures, giving one example of an analogous structure.", "相同構造と相似構造を区別し (Distinguish)、相似構造の例を一つ挙げよ。", "區分 (Distinguish) 同源結構與同功結構，並給出同功結構的一個例子。"),
+        markscheme: [
+          L("Homologous structures have the same evolutionary origin (common ancestor), whereas analogous structures have different origins", "相同構造は進化的起源が同じ（共通祖先）だが、相似構造は起源が異なる", "同源結構有相同的進化起源（共同祖先），而同功結構的起源不同"),
+          L("Homologous structures may have different functions, whereas analogous structures have the same function", "相同構造は働きが異なることがあるが、相似構造は働きが同じ", "同源結構的功能可以不同，而同功結構的功能相同"),
+          L("Example of analogous structures: wings of insects and birds / eyes of squid and vertebrates / streamlined body of shark and dolphin (any one; convergent evolution)", "相似構造の例：昆虫と鳥の翼／イカと脊椎動物の眼／サメとイルカの流線形の体（いずれか一つ。収斂進化）", "同功結構的例子：昆蟲與鳥的翼／魷魚與脊椎動物的眼睛／鯊魚與海豚的流線型身體（任一；趨同進化）")
+        ],
+        modelAnswer: L("Homologous structures share a common evolutionary origin and can have different functions (pentadactyl limbs). Analogous structures have the same function but different origins, from convergent evolution, for example insect and bird wings.", "相同構造は進化的起源が共通で、働きが違ってよい（五指性の肢）。相似構造は働きが同じで起源が異なり、収斂進化による。例：昆虫と鳥の翼。", "同源結構有共同的進化起源，功能可以不同（五指型肢）。同功結構功能相同但起源不同，由趨同進化而來，例如昆蟲和鳥的翼。")
+      },
+      {
+        id: "a4-1-q09", type: "mcq", ahl: false, difficulty: 3, ref: "A4.1.6", paper: "1A",
+        stem: L("Fossils show that a single lineage of horses slowly increased in size over ten million years, with one species at each time and no splitting. How does this relate to speciation?", "化石から、あるウマの単一の系統が一千万年かけて少しずつ大きくなり、各時代に一種だけで分裂はなかったことが分かった。これは種分化とどう関係するか。", "化石顯示，一個馬的單一譜系在一千萬年間慢慢變大，每個時期只有一個物種，沒有分裂。這與物種形成有何關係？"),
+        options: [L("It is speciation because the animals changed", "動物が変化したので種分化である", "因為動物改變了，所以是物種形成"), L("It is evolution but not speciation, because the number of species did not increase", "進化ではあるが、種の数が増えていないので種分化ではない", "這是進化但不是物種形成，因為物種數目沒有增加"), L("It is neither evolution nor speciation", "進化でも種分化でもない", "既不是進化也不是物種形成"), L("It is speciation because extinction decreased the number of species", "絶滅で種の数が減ったので種分化である", "因為滅絕減少了物種數目，所以是物種形成")],
+        answer: 1,
+        explanation: L("The heritable characteristics changed, so it is evolution. But speciation is a split of one species into two or more, which increases the number of species. Option A is the common confusion between evolution and speciation.", "遺伝する特徴が変化したので進化です。しかし種分化は一つの種が二つ以上に分かれて種の数が増えることです。Aは進化と種分化の典型的な混同です。", "可遺傳特徵改變了，所以是進化。但物種形成是一個物種分裂為兩個或以上、令物種數目增加。A 是進化與物種形成的常見混淆。")
+      },
+      {
+        id: "a4-1-q10", type: "order", ahl: false, difficulty: 1, ref: "A4.1.7", paper: "1A",
+        stem: L("Put the stages of speciation caused by a geographical barrier into order.", "地理的な障壁による種分化の段階を順に並べよ。", "把由地理屏障引起的物種形成各階段排成次序。"),
+        items: [L("One population lives in one area and interbreeds freely", "一つの個体群が一つの地域に住み、自由に交配している", "一個種羣生活在一個地區，自由交配"), L("A barrier (e.g. a river) separates it into two populations with no gene flow", "障壁（例：川）が二つの個体群に分け、遺伝子の流れがなくなる", "屏障（例如河流）把它分成兩個種羣，沒有基因流動"), L("Different environments cause different alleles to be selected in each population", "異なる環境のために、各個体群で異なる対立遺伝子が選択される", "不同的環境令每個種羣選擇不同的等位基因"), L("The populations can no longer interbreed to produce fertile offspring: two species", "個体群は交配して生殖能力のある子を作れなくなる：二つの種", "兩個種羣不能再交配產生可育後代：形成兩個物種")],
+        explanation: L("Isolation must come before differences can build up, and the differences must be large enough to block interbreeding before we call them separate species.", "違いが蓄積するには、まず隔離が先に必要で、違いが交配を妨げるほど大きくなって初めて別の種と呼べます。", "必須先有隔離，差異才能累積；差異大到阻止交配後，才稱為不同物種。")
+      },
+      {
+        id: "a4-1-q11", type: "short", ahl: false, difficulty: 2, ref: "A4.1.7", paper: "2", commandTerm: "Outline", marks: 3,
+        stem: L("Outline how the Congo River is thought to have led to the formation of two species, the bonobo and the common chimpanzee.", "コンゴ川が、ボノボとチンパンジーという二つの種の形成につながったと考えられる過程を説明せよ (Outline)。", "概述 (Outline) 剛果河如何被認為導致倭黑猩猩與黑猩猩兩個物種的形成。"),
+        markscheme: [
+          L("The river divided an ancestral population into two (geographical isolation / reproductive isolation)", "川が祖先の集団を二つに分けた（地理的隔離／生殖的隔離）", "河流把祖先種羣分成兩個（地理隔離／生殖隔離）"),
+          L("No gene flow / interbreeding between the populations across the river", "川を越えた集団間に遺伝子の流れ／交配がない", "河兩岸的種羣之間沒有基因流動／交配"),
+          L("Different environments/selection pressures on each side led to differential selection of alleles", "川の両側の異なる環境／選択圧が、対立遺伝子の分化的選択をもたらした", "兩岸不同的環境／選擇壓力導致等位基因的差異選擇"),
+          L("The populations diverged until they became separate species", "個体群が分岐して別々の種になった", "種羣分歧直至成為不同的物種")
+        ],
+        modelAnswer: L("The Congo River split an ancestral ape population in two, so there was no interbreeding across the river. The two populations lived in different environments, so differential selection acted on them. Over time they diverged and became the two separate species, the bonobo and the common chimpanzee.", "コンゴ川が祖先の類人猿の集団を二つに分け、川を越えた交配がなくなった。二つの集団は異なる環境で生活したため、分化的選択が働いた。やがて分岐し、ボノボとチンパンジーという別々の二つの種になった。", "剛果河把祖先猿類種羣分成兩個，所以河兩岸之間沒有交配。兩個種羣生活在不同環境，所以受到差異選擇。經過一段時間，牠們分歧，成為倭黑猩猩和黑猩猩兩個獨立的物種。")
+      },
+      {
+        id: "a4-1-q12", type: "match", ahl: true, difficulty: 1, ref: "A4.1.8", paper: "1A",
+        stem: L("Match each situation to the type of reproductive isolation.", "各状況を生殖的隔離の種類と結び付けよ。", "把每種情況配對生殖隔離的類型。"),
+        pairs: [
+          { left: L("A mountain range divides one species into two populations", "山脈が一つの種を二つの個体群に分ける", "山脈把一個物種分成兩個種羣"), right: L("Geographic isolation", "地理的隔離", "地理隔離") },
+          { left: L("Two groups in the same forest respond only to their own group's song", "同じ森にいる二つの群れが、自分の群れの鳴き声にだけ反応する", "同一片森林中的兩羣只對自己羣體的叫聲有反應"), right: L("Behavioural isolation", "行動的隔離", "行為隔離") },
+          { left: L("Two groups of plants in the same field flower in different months", "同じ畑の二つの植物集団が、異なる月に開花する", "同一塊田中的兩羣植物在不同月份開花"), right: L("Temporal isolation", "時間的隔離", "時間隔離") }
+        ],
+        explanation: L("Geographic isolation depends on a barrier, behavioural isolation on mate recognition and temporal isolation on timing of breeding or flowering. The last two can occur in the same area (sympatric speciation).", "地理的隔離は障壁、行動的隔離は配偶相手の認識、時間的隔離は繁殖や開花の時期によります。後の二つは同じ地域で起こり得ます（同所的種分化）。", "地理隔離依賴屏障，行為隔離依賴配偶識別，時間隔離依賴繁殖或開花的時間。後兩者可以在同一地區發生（同域物種形成）。")
+      },
+      {
+        id: "a4-1-q13", type: "short", ahl: true, difficulty: 3, ref: "A4.1.8", paper: "2", commandTerm: "Compare and contrast", marks: 4,
+        stem: L("Compare and contrast allopatric and sympatric speciation.", "異所的種分化と同所的種分化を比較し対比せよ (Compare and contrast)。", "比較並對比 (Compare and contrast) 異域物種形成與同域物種形成。"),
+        markscheme: [
+          L("Similarity: both involve reproductive isolation / no gene flow between the populations", "共通点：どちらも生殖的隔離／集団間の遺伝子の流れがない", "相同：兩者都涉及生殖隔離／種羣之間沒有基因流動"),
+          L("Similarity: both result in new species through divergence of gene pools by mutation and natural selection (differential selection)", "共通点：どちらも突然変異と自然選択（分化的選択）によって遺伝子プールが分岐し、新しい種ができる", "相同：兩者都透過突變和自然選擇（差異選擇）令基因庫分歧而形成新物種"),
+          L("Difference: allopatric populations are in different places, sympatric populations live in the same area", "相違点：異所的では集団が別々の場所にいて、同所的では同じ地域にいる", "不同：異域的種羣在不同地方，同域的種羣生活在同一地區"),
+          L("Difference: allopatric isolation is by a geographic barrier; sympatric isolation is by behavioural or temporal differences (or polyploidy), without a barrier", "相違点：異所的では地理的障壁で隔離され、同所的では障壁なしに行動的・時間的な違い（または倍数性）で隔離される", "不同：異域以地理屏障隔離；同域以行為或時間差異（或多倍體）隔離，沒有屏障")
+        ],
+        modelAnswer: L("Both are speciation in which a population splits into two gene pools that stop exchanging alleles, and then mutation and natural selection make them differ until they are separate species. In allopatric speciation the populations are in different places, separated by a geographical barrier. In sympatric speciation they live in the same area and are isolated by behavioural or temporal differences (or polyploidy), not by a barrier.", "どちらも、集団が対立遺伝子をやり取りしない二つの遺伝子プールに分かれ、突然変異と自然選択で別々の種になるまで違っていく種分化である。異所的種分化では集団は別々の場所にあり、地理的な障壁で隔てられる。同所的種分化では同じ地域に住み、障壁ではなく行動的・時間的な違い（または倍数性）で隔離される。", "兩者都是種羣分成停止交換等位基因的兩個基因庫，然後突變和自然選擇令牠們變得不同，直至成為不同物種。在異域物種形成中，種羣在不同地方，被地理屏障分隔。在同域物種形成中，牠們生活在同一地區，由行為或時間差異（或多倍體）而非屏障所隔離。")
+      },
+      {
+        id: "a4-1-q14", type: "mcq", ahl: true, difficulty: 2, ref: "A4.1.9", paper: "1A",
+        stem: L("Which situation is most likely to lead to adaptive radiation?", "適応放散が最も起こりやすい状況はどれか。", "哪種情況最有可能導致適應輻射？"),
+        options: [L("A species lives in a stable, fully occupied habitat", "一つの種が、安定して完全に占有された生息地に住んでいる", "一個物種生活在穩定、已被完全佔據的生境"), L("A few individuals of one species colonise a new island with many vacant niches", "一つの種の少数の個体が、空いたニッチの多い新しい島に移り住む", "一個物種的少數個體遷入有許多空缺生態位的新島嶼"), L("A species is hunted until only a few individuals remain", "一つの種が狩られて少数の個体しか残らない", "一個物種被獵捕至只剩少數個體"), L("Two species compete for the same food in the same place", "二つの種が同じ場所で同じ食物を巡って競争する", "兩個物種在同一地方競爭相同食物")],
+        answer: 1,
+        explanation: L("Adaptive radiation needs vacant niches so that descendants can specialise in different ways of life without competing. In A there are no vacant niches; C reduces the population; D describes competition, which adaptive radiation reduces.", "適応放散には空いたニッチが必要で、子孫が競争せずに異なる生活様式に特化できます。Aには空いたニッチがなく、Cは個体群を減らし、Dは競争の状況で、適応放散はそれを減らします。", "適應輻射需要空缺生態位，後代才能在不競爭的情況下專門適應不同生活方式。A 沒有空缺生態位；C 令種羣減少；D 描述的是競爭，而適應輻射會減少競爭。")
+      },
+      {
+        id: "a4-1-q15", type: "mcq", ahl: true, difficulty: 3, ref: "A4.1.10", paper: "1A",
+        stem: L("Two closely related bird species sometimes mate, but their hybrid young are sterile. How does this help keep the two species separate?", "近縁な二種の鳥がときどき交配するが、雑種の子は不妊である。これは二種を分けておくのにどう役立つか。", "兩種近緣鳥類有時會交配，但牠們的雜種後代不育。這如何有助保持兩個物種分隔？"),
+        options: [L("The hybrids die before they can be counted", "雑種は数えられる前に死ぬ", "雜種在被計數前便死亡"), L("No alleles can pass through the hybrids from one species' gene pool to the other", "雑種を通して、一方の種の遺伝子プールから他方へ対立遺伝子が渡ることができない", "等位基因不能透過雜種由一個物種的基因庫傳到另一個物種的基因庫"), L("The hybrids are stronger than either parent species", "雑種はどちらの親の種より強い", "雜種比任何一個親本物種都強壯"), L("The parent species never meet again", "親の種は二度と出会わない", "親本物種不會再相遇")],
+        answer: 1,
+        explanation: L("Because the hybrids cannot reproduce, alleles are not mixed between the two species' gene pools. The wasted mating also costs the parents. A is not stated, C is not the reason (a mule is strong yet sterile) and D is false because they do mate sometimes.", "雑種が繁殖できないので、二種の遺伝子プールの間で対立遺伝子が混ざりません。無駄な交配は親にとっても損失です。Aは述べられておらず、Cは理由ではなく（ラバは強いが不妊）、Dはときどき交配するので誤りです。", "雜種不能繁殖，所以兩個物種的基因庫之間不會混合等位基因。徒勞的交配對親本也是損失。A 並未提及；C 不是原因（騾強壯但不育）；D 錯，因為牠們有時確實交配。")
+      },
+      {
+        id: "a4-1-q16", type: "short", ahl: true, difficulty: 3, ref: "A4.1.11", paper: "2", commandTerm: "Explain", marks: 4,
+        stem: L("Explain how a new plant species can arise abruptly by hybridization and polyploidy.", "雑種形成と倍数性によって、新しい植物の種が急速に生じる仕組みを説明せよ (Explain)。", "解釋 (Explain) 新的植物物種如何透過雜交和多倍體突然形成。"),
+        markscheme: [
+          L("Two different species hybridize / interbreed, giving a hybrid with one set of chromosomes from each parent", "二つの異なる種が交雑し、両親から一組ずつ染色体をもつ雑種ができる", "兩個不同物種雜交，產生從每個親本各得一套染色體的雜種"),
+          L("The hybrid is sterile because the chromosomes from the two species cannot pair in meiosis", "二つの種の染色体が減数分裂で対になれないため、雑種は不妊である", "雜種不育，因為兩個物種的染色體在減數分裂時不能配對"),
+          L("The chromosome number doubles (polyploidy), so each chromosome has a matching partner", "染色体数が倍加し（倍数性）、各染色体に対応する相手ができる", "染色體數目加倍（多倍體），所以每條染色體都有配對夥伴"),
+          L("Meiosis can now occur, so the polyploid is fertile, and is reproductively isolated from the parent species (offspring of crosses would be sterile)", "減数分裂が起こせるので倍数体は生殖能力をもち、親の種から生殖的に隔離される（交配の子は不妊になる）", "減數分裂現在可以進行，所以多倍體可育，並與親本物種產生生殖隔離（雜交後代不育）")
+        ],
+        modelAnswer: L("Two species hybridize, giving a hybrid with one set of chromosomes from each parent. It is sterile because these chromosomes cannot pair in meiosis. If the chromosome number then doubles, each chromosome has a partner, meiosis works and the plant is fertile. It is reproductively isolated from both parent species, because crosses with them give sterile offspring, so it is a new species formed in a single generation.", "二つの種が交雑し、両親から一組ずつ染色体をもつ雑種ができる。これらの染色体は減数分裂で対になれないので不妊である。染色体数が倍加すると各染色体に相手ができ、減数分裂が働いて生殖能力をもつ。親の種との交配では不妊の子ができるので、両方の親の種から生殖的に隔離され、一世代で新しい種ができたことになる。", "兩個物種雜交，產生從每個親本各得一套染色體的雜種。由於這些染色體在減數分裂時不能配對，雜種不育。如果染色體數目其後加倍，每條染色體都有夥伴，減數分裂得以進行，植物便可育。它與兩個親本物種都產生生殖隔離，因為與親本雜交的後代不育，所以是一代之內形成的新物種。")
+      },
+      {
+        id: "a4-1-q17", type: "mcq", ahl: true, difficulty: 3, ref: "A4.1.11", paper: "1A",
+        stem: L("A fertile tetraploid plant (4n) arises from a diploid species (2n). Why is the tetraploid reproductively isolated from the diploid parent species?", "二倍体の種 (2n) から、生殖能力のある四倍体 (4n) の植物が生じた。四倍体が二倍体の親の種から生殖的に隔離されるのはなぜか。", "一種可育的四倍體植物 (4n) 由二倍體物種 (2n) 產生。為何四倍體與二倍體親本物種有生殖隔離？"),
+        options: [L("Their offspring have three sets of chromosomes (3n), which cannot pair evenly in meiosis, so are sterile", "子は三組の染色体 (3n) をもち、減数分裂で均等に対になれないので不妊になる", "後代有三套染色體 (3n)，在減數分裂時不能均等配對，所以不育"), L("Tetraploid plants have no flowers", "四倍体の植物には花がない", "四倍體植物沒有花"), L("Tetraploid plants live in a different continent", "四倍体の植物は別の大陸に住む", "四倍體植物生活在另一個大洲"), L("Tetraploid pollen cannot be produced by mitosis", "四倍体の花粉は体細胞分裂では作れない", "四倍體的花粉不能由有絲分裂產生")],
+        answer: 0,
+        explanation: L("A tetraploid gamete has 2n chromosomes and a diploid gamete has n, so the offspring are triploid. An odd number of sets cannot pair evenly in meiosis, so they are sterile. B, C and D are not stated and are not the cause; the new species is isolated by chromosome number, not by place or flowers.", "四倍体の配偶子は 2n、二倍体の配偶子は n なので、子は三倍体です。染色体のセット数が奇数だと減数分裂で均等に対になれず不妊です。B、C、D は述べられておらず原因ではありません。新しい種は場所や花ではなく染色体数によって隔離されています。", "四倍體的配子有 2n 條染色體，二倍體的配子有 n 條，所以後代是三倍體。奇數套染色體在減數分裂時不能均等配對，所以不育。B、C、D 沒有提及，也不是原因；新物種是靠染色體數目而不是地點或花來隔離的。")
+      },
+      {
+        id: "a4-1-q18", type: "mcq", ahl: false, difficulty: 2, ref: "A4.1.1", paper: "1A",
+        stem: L("Evolution by natural selection is called a theory even though it has a huge amount of supporting evidence. Which statement reflects the nature of science?", "自然選択による進化は、膨大な裏付けの証拠があるにもかかわらず「理論」と呼ばれる。科学の本質を反映しているのはどれか。", "儘管自然選擇進化論有大量證據支持，它仍被稱為理論。哪項陳述反映了科學的本質？"),
+        options: [L("It is only a guess that scientists have not yet tested", "科学者がまだ検証していないただの推測である", "它只是科學家尚未檢驗的猜測"), L("It explains many observations and is unlikely to be falsified, but a theory cannot be formally proved true", "多くの観察を説明し反証される可能性は低いが、理論が真だと正式に証明することはできない", "它解釋許多觀察結果，不太可能被推翻，但理論不能被正式證明為真"), L("It has been proved to be absolutely true", "絶対的に真だと証明されている", "它已被證明絕對為真"), L("A theory becomes a law when enough evidence is collected", "十分な証拠が集まると、理論は法則になる", "當收集到足夠證據，理論就變成定律")],
+        answer: 1,
+        explanation: L("Science gives pragmatic truth: the best-supported explanation. A confuses the everyday meaning of theory with the scientific one, C overstates what science can do, and D is a common myth.", "科学が与えるのは実用的な真理、つまり最も裏付けられた説明です。Aは日常語の「理論」と科学の理論の混同、Cは科学にできることの言い過ぎ、Dはよくある俗説です。", "科學提供的是實用的真理：證據最充分的解釋。A 混淆了「理論」的日常意義與科學意義，C 誇大了科學的能力，D 是常見的迷思。")
+      }
+    ]
   });
 })();

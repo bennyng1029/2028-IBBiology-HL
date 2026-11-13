@@ -6,44 +6,53 @@ function climatograph(lang) {
   const T = {
     x: { en: "Mean annual temperature (°C)", ja: "年平均気温 (°C)", zh: "年平均氣溫 (°C)" },
     y: { en: "Annual rainfall (mm)", ja: "年降水量 (mm)", zh: "年降雨量 (mm)" },
-    cap: { en: "Simplified biome map (illustrative boundaries). Real biomes overlap and change gradually.", ja: "バイオームの簡略図（境界は説明用）。実際のバイオームは重なり、徐々に移り変わります。", zh: "簡化的生物群系圖（界線只作示意）。實際的生物群系會重疊並逐漸過渡。" },
-    tun: { en: "Tundra", ja: "ツンドラ (tundra)", zh: "苔原 (tundra)" },
-    tai: { en: "Taiga", ja: "タイガ (taiga)", zh: "針葉林 (taiga)" },
-    gra: { en: "Grassland", ja: "草原 (grassland)", zh: "草原 (grassland)" },
-    tem: { en: "Temperate forest", ja: "温帯林", zh: "溫帶森林" },
-    des: { en: "Hot desert", ja: "熱帯砂漠", zh: "熱帶沙漠" },
-    tro: { en: "Tropical forest", ja: "熱帯林", zh: "熱帶森林" }
+    cap: { en: "Simplified biome map (illustrative boundaries). Real biomes overlap and change gradually. Tropical forest continues above 4000 mm.", ja: "バイオームの簡略図（境界は説明用）。実際のバイオームは重なり、徐々に移り変わります。熱帯林は4000 mmを超える範囲にも続きます。", zh: "簡化的生物群系圖（界線只作示意）。實際的生物群系會重疊並逐漸過渡。熱帶森林在4000 mm以上仍繼續。" },
+    tun: ["Tundra", "ツンドラ", "苔原", "tundra"],
+    tai: ["Taiga", "タイガ", "針葉林", "taiga"],
+    gra: ["Grassland", "草原", "草原", "grassland"],
+    tem: ["Temperate forest", "温帯林", "溫帶森林", "temperate forest"],
+    des: ["Hot desert", "熱帯砂漠", "熱帶沙漠", "hot desert"],
+    tro: ["Tropical forest", "熱帯林", "熱帶森林", "tropical forest"]
   };
-  const t = (k) => T[k][lang] || T[k].en;
-  // plot area: x 60..340 (temp -15..30), y 20..200 (rain 4500..0)
+  const lg = { en: 0, ja: 1, zh: 2 }[lang];
+  const cap = T.cap[lang] || T.cap.en;
+  // plot area: x 60..340 (temp -15..30), y 20..210 (rain 4000..0)
   const X = (c) => 60 + (c + 15) / 45 * 280;
-  const Y = (r) => 200 - r / 4500 * 180;
-  const rect = (c1, c2, r1, r2, cls) => `<rect x="${X(c1)}" y="${Y(r2)}" width="${X(c2) - X(c1)}" height="${Y(r1) - Y(r2)}" class="${cls}"/>`;
-  return `<figure><svg viewBox="0 0 360 250" width="100%" role="img" aria-label="${t('cap')}" style="max-width:520px;font-family:var(--font-body,sans-serif)">
-  <rect x="60" y="20" width="280" height="180" fill="var(--surface-2,#e3eaee)" stroke="var(--line,#c3d0d7)"/>
+  const Y = (r) => 210 - Math.min(r, 4000) / 4000 * 190;
+  const box = (c1, c2, r1, r2, fill) => `<rect x="${X(c1).toFixed(1)}" y="${Y(r2).toFixed(1)}" width="${(X(c2) - X(c1)).toFixed(1)}" height="${(Y(r1) - Y(r2)).toFixed(1)}" fill="${fill}"/>`;
+  // label: one line (name + english in brackets) or two lines
+  const label = (k, c1, c2, r1, r2, two) => {
+    const arr = T[k], cx = (X(c1) + X(c2)) / 2, cy = (Y(r1) + Y(r2)) / 2;
+    const en = arr[0];
+    if (lang === "en") return `<text x="${cx.toFixed(1)}" y="${(cy + 3).toFixed(1)}">${en}</text>`;
+    if (two) return `<text x="${cx.toFixed(1)}" y="${(cy - 1).toFixed(1)}">${arr[lg]}</text><text x="${cx.toFixed(1)}" y="${(cy + 8).toFixed(1)}" font-size="6.5">(${arr[3]})</text>`;
+    return `<text x="${cx.toFixed(1)}" y="${(cy + 2.5).toFixed(1)}" font-size="7.5">${arr[lg]} (${arr[3]})</text>`;
+  };
+  return `<figure><svg viewBox="0 0 360 270" width="100%" role="img" aria-label="${cap}" style="max-width:520px;font-family:var(--font-body,sans-serif)">
+  <rect x="60" y="20" width="280" height="190" fill="var(--surface-2,#e3eaee)" stroke="var(--line,#c3d0d7)"/>
   <g stroke="var(--ink,#0f2029)" stroke-width="0.8" fill-opacity="0.55">
-   <rect x="${X(-15)}" y="${Y(500)}" width="${X(-3) - X(-15)}" height="${Y(0) - Y(500)}" fill="var(--theme-a,#07756f)"/>
-   <rect x="${X(-10)}" y="${Y(1000)}" width="${X(5) - X(-10)}" height="${Y(500) - Y(1000)}" fill="var(--lvl-3,#4a7a2a)"/>
-   <rect x="${X(0)}" y="${Y(750)}" width="${X(28) - X(0)}" height="${Y(250) - Y(750)}" fill="var(--warn,#c98a00)"/>
-   <rect x="${X(5)}" y="${Y(2500)}" width="${X(20) - X(5)}" height="${Y(1000) - Y(2500)}" fill="var(--good,#2a9d5c)"/>
-   <rect x="${X(15)}" y="${Y(250)}" width="${X(30) - X(15)}" height="${Y(0) - Y(250)}" fill="var(--bad,#d1495b)"/>
-   <rect x="${X(20)}" y="${Y(4500)}" width="${X(30) - X(20)}" height="${Y(2000) - Y(4500)}" fill="var(--accent,#2547c7)"/>
+   ${box(-15, -3, 0, 500, "var(--theme-a,#07756f)")}
+   ${box(-10, 5, 500, 1000, "var(--lvl-3,#4a7a2a)")}
+   ${box(0, 28, 250, 750, "var(--warn,#c98a00)")}
+   ${box(5, 20, 1000, 2500, "var(--good,#2a9d5c)")}
+   ${box(15, 30, 0, 250, "var(--bad,#d1495b)")}
+   ${box(20, 30, 2000, 4000, "var(--accent,#2547c7)")}
   </g>
-  <g font-size="9" fill="var(--ink,#0f2029)" text-anchor="middle">
-   <text x="${X(-9)}" y="${Y(250) + 3}">${t('tun')}</text>
-   <text x="${X(-2)}" y="${Y(780)}">${t('tai')}</text>
-   <text x="${X(14)}" y="${Y(500) + 3}">${t('gra')}</text>
-   <text x="${X(12.5)}" y="${Y(1800)}">${t('tem')}</text>
-   <text x="${X(22.5)}" y="${Y(130)}">${t('des')}</text>
-   <text x="${X(25)}" y="${Y(3200)}">${t('tro')}</text>
+  <g font-size="8.5" fill="var(--ink,#0f2029)" text-anchor="middle" style="fill:var(--ink,#0f2029)">
+   ${label("tun", -15, -3, 0, 500, true)}
+   ${label("tai", -10, 5, 500, 1000, true)}
+   ${label("gra", 5, 28, 250, 750, false)}
+   ${label("tem", 5, 20, 1000, 2500, true)}
+   ${label("des", 15, 30, 0, 250, false)}
+   ${label("tro", 20, 30, 2000, 4000, true)}
   </g>
-  <g font-size="8" fill="var(--muted,#4d626d)" text-anchor="middle">
-   ${[-15, -10, -5, 0, 5, 10, 15, 20, 25, 30].map(c => `<text x="${X(c)}" y="212">${c}</text>`).join('')}
-   ${[0, 1000, 2000, 3000, 4000].map(r => `<text x="52" y="${Y(r) + 3}" text-anchor="end">${r}</text>`).join('')}
+  <g font-size="8" fill="var(--muted,#4d626d)" text-anchor="middle" style="fill:var(--muted,#4d626d)">
+   ${[-15, -10, -5, 0, 5, 10, 15, 20, 25, 30].map(c => `<text x="${X(c)}" y="222">${c}</text>`).join('')}
+   ${[0, 1000, 2000, 3000, 4000].map(r => `<text x="54" y="${Y(r) + 3}" text-anchor="end">${r}</text>`).join('')}
   </g>
-  <text x="200" y="238" font-size="10" fill="var(--ink,#0f2029)" text-anchor="middle">${t('x')}</text>
-  <text transform="translate(12 110) rotate(-90)" font-size="10" fill="var(--ink,#0f2029)" text-anchor="middle">${t('y')}</text>
- </svg><figcaption>${t('cap')}</figcaption></figure>`;
+  <text x="200" y="244" font-size="10" text-anchor="middle" style="fill:var(--ink,#0f2029)">${T.x[lang] || T.x.en}</text>
+  <text transform="translate(12 115) rotate(-90)" font-size="10" text-anchor="middle" style="fill:var(--ink,#0f2029)">${T.y[lang] || T.y.en}</text>
+ </svg><figcaption>${cap}</figcaption></figure>`;
 }
 const CL = { en: climatograph("en"), ja: climatograph("ja"), zh: climatograph("zh") };
 

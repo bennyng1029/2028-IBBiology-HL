@@ -173,6 +173,9 @@
     barNote: L("Bars show which is higher, not exact values.", "棒は、どちらが大きいかを示すもので、正確な値ではありません。", "橫條只顯示哪個較高，並非準確數值。")
   };
 
+  var VB_H = 300;
+  var BL = 34, RH = 8.5, RO = 14;
+
   function svgOpen(w, h, label) {
     return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + label.replace(/"/g, "&quot;") + '" xmlns="http://www.w3.org/2000/svg">';
   }
@@ -180,46 +183,47 @@
   function polar(x, y, ang, d) { return [x + d * Math.cos(ang * RAD), y + d * Math.sin(ang * RAD)]; }
   function angleTo(a, b) { return Math.atan2(b[1] - a[1], b[0] - a[0]) / RAD; }
 
-  /* A water molecule: O at (x,y); H1 at angle aim; H2 at aim + 104.5 (SVG angles, y downward). */
-  function mol(x, y, aim, charges) {
-    var h1 = polar(x, y, aim, 26), h2 = polar(x, y, aim + 104.5, 26);
-    var bis = aim + 52.25;
-    var s = '';
-    s += '<line x1="' + x + '" y1="' + y + '" x2="' + h1[0] + '" y2="' + h1[1] + '" stroke="var(--ink,#0f2029)" stroke-width="3" stroke-linecap="round"/>';
-    s += '<line x1="' + x + '" y1="' + y + '" x2="' + h2[0] + '" y2="' + h2[1] + '" stroke="var(--ink,#0f2029)" stroke-width="3" stroke-linecap="round"/>';
-    s += '<circle cx="' + h1[0] + '" cy="' + h1[1] + '" r="7" fill="var(--c-hydrogen,#aebbc2)" stroke="var(--muted,#4d626d)" stroke-width="1"/>';
-    s += '<circle cx="' + h2[0] + '" cy="' + h2[1] + '" r="7" fill="var(--c-hydrogen,#aebbc2)" stroke="var(--muted,#4d626d)" stroke-width="1"/>';
-    s += '<circle cx="' + x + '" cy="' + y + '" r="11" fill="var(--c-oxygen,#d33a2c)"/>';
-    s += '<text x="' + x + '" y="' + (y + 3.5) + '" font-size="11" font-weight="800" text-anchor="middle" style="fill:#fff">O</text>';
-    s += '<text x="' + h1[0] + '" y="' + (h1[1] + 3) + '" font-size="8.5" font-weight="800" text-anchor="middle">H</text>';
-    s += '<text x="' + h2[0] + '" y="' + (h2[1] + 3) + '" font-size="8.5" font-weight="800" text-anchor="middle">H</text>';
-    if (charges) {
-      var o = polar(x, y, bis + 180, 21), a = polar(x, y, aim, 38), b = polar(x, y, aim + 104.5, 38);
-      s += '<text x="' + o[0] + '" y="' + (o[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-oxygen,#d33a2c)">δ' + MINUS + '</text>';
-      s += '<text x="' + a[0] + '" y="' + (a[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
-      s += '<text x="' + b[0] + '" y="' + (b[1] + 4) + '" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
-    }
-    return { svg: s, o: [x, y], h1: h1, h2: h2 };
-  }
-
-  function hb(from, to, color) {
-    var dx = to[0] - from[0], dy = to[1] - from[1], len = Math.sqrt(dx * dx + dy * dy);
-    var ux = dx / len, uy = dy / len;
-    return '<line x1="' + (from[0] + ux * 8) + '" y1="' + (from[1] + uy * 8) + '" x2="' + (to[0] - ux * 13) + '" y2="' + (to[1] - uy * 13) + '" stroke="' + (color || "var(--hbond,#2a7de1)") + '" stroke-width="2.4" stroke-dasharray="5 4" stroke-linecap="round"/>';
-  }
-
-  function arrow(x1, y1, x2, y2, color) {
-    var a = Math.atan2(y2 - y1, x2 - x1), hx = 7;
-    var p1 = [x2 - hx * Math.cos(a - 0.45), y2 - hx * Math.sin(a - 0.45)], p2 = [x2 - hx * Math.cos(a + 0.45), y2 - hx * Math.sin(a + 0.45)];
-    return '<g stroke="' + color + '" fill="' + color + '" stroke-width="2.5" stroke-linecap="round"><line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"/><polygon points="' + x2 + ',' + y2 + ' ' + p1[0] + ',' + p1[1] + ' ' + p2[0] + ',' + p2[1] + '" stroke="none"/></g>';
-  }
-
   function txt(x, y, str, size, anchor, weight, fillVar) {
     return '<text x="' + x + '" y="' + y + '" font-size="' + (size || 11) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fillVar ? ' style="fill:' + fillVar + '"' : '') + '>' + str + '</text>';
   }
 
-  /* Draw a set of molecules and the hydrogen bonds between them.
-     pos: [[x,y],...]; links: [[donorIdx, acceptorIdx], ...]; defaults: aim for molecules without a link. */
+  /* A water molecule: O at (x,y); H1 at angle aim; H2 at aim + 104.5 (SVG angles, y downward). */
+  function mol(x, y, aim, charges) {
+    var h1 = polar(x, y, aim, BL), h2 = polar(x, y, aim + 104.5, BL);
+    var bis = aim + 52.25;
+    var s = '';
+    [h1, h2].forEach(function (h) {
+      s += '<line x1="' + x + '" y1="' + y + '" x2="' + h[0] + '" y2="' + h[1] + '" stroke="var(--ink,#0f2029)" stroke-width="3.5" stroke-linecap="round"/>';
+    });
+    [h1, h2].forEach(function (h) {
+      s += '<circle cx="' + h[0] + '" cy="' + h[1] + '" r="' + RH + '" fill="var(--c-hydrogen,#aebbc2)" stroke="var(--muted,#4d626d)" stroke-width="1"/>';
+      s += '<text x="' + h[0] + '" y="' + (h[1] + 3.5) + '" font-size="10" font-weight="800" text-anchor="middle" style="fill:#0f2029">H</text>';
+    });
+    s += '<circle cx="' + x + '" cy="' + y + '" r="' + RO + '" fill="var(--c-oxygen,#d33a2c)"/>';
+    s += '<text x="' + x + '" y="' + (y + 4.5) + '" font-size="13" font-weight="800" text-anchor="middle" style="fill:#fff">O</text>';
+    if (charges) {
+      var o = polar(x, y, bis + 180, 28), a = polar(x, y, aim, 49), b = polar(x, y, aim + 104.5, 49);
+      s += '<text x="' + o[0] + '" y="' + (o[1] + 4.5) + '" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c-oxygen,#d33a2c)">δ' + MINUS + '</text>';
+      s += '<text x="' + a[0] + '" y="' + (a[1] + 4.5) + '" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
+      s += '<text x="' + b[0] + '" y="' + (b[1] + 4.5) + '" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c-nitrogen,#2d5cdd)">δ+</text>';
+    }
+    return { svg: s, o: [x, y], h1: h1, h2: h2 };
+  }
+
+  /* dashed line from a hydrogen centre to the centre of an acceptor atom (radius rt) */
+  function hb(from, to, color, rt) {
+    var dx = to[0] - from[0], dy = to[1] - from[1], len = Math.sqrt(dx * dx + dy * dy);
+    var ux = dx / len, uy = dy / len, r2 = (rt || RO) + 3;
+    return '<line x1="' + (from[0] + ux * (RH + 2)) + '" y1="' + (from[1] + uy * (RH + 2)) + '" x2="' + (to[0] - ux * r2) + '" y2="' + (to[1] - uy * r2) + '" stroke="' + (color || "var(--hbond,#2a7de1)") + '" stroke-width="2.6" stroke-dasharray="5 4" stroke-linecap="round"/>';
+  }
+
+  function arrow(x1, y1, x2, y2, color) {
+    var a = Math.atan2(y2 - y1, x2 - x1), hx = 9;
+    var p1 = [x2 - hx * Math.cos(a - 0.45), y2 - hx * Math.sin(a - 0.45)], p2 = [x2 - hx * Math.cos(a + 0.45), y2 - hx * Math.sin(a + 0.45)];
+    return '<g stroke="' + color + '" fill="' + color + '" stroke-width="2.8" stroke-linecap="round"><line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"/><polygon points="' + x2 + ',' + y2 + ' ' + p1[0] + ',' + p1[1] + ' ' + p2[0] + ',' + p2[1] + '" stroke="none"/></g>';
+  }
+
+  /* pos: [[x,y],...]; links: [[donorIdx, acceptorIdx], ...] */
   function network(pos, links, opts) {
     opts = opts || {};
     var aims = pos.map(function (p, i) { return (opts.defaultAim ? opts.defaultAim[i] : 20 + i * 47); });
@@ -227,198 +231,179 @@
     var mols = pos.map(function (p, i) { return mol(p[0], p[1], aims[i], opts.charges); });
     var bonds = '';
     if (opts.bonds !== false) {
-      links.forEach(function (l) { bonds += hb(mols[l[0]].h1, mols[l[1]].o, opts.color && opts.color(l)); });
+      links.forEach(function (l) { bonds += hb(mols[l[0]].h1, mols[l[1]].o); });
     }
     return bonds + mols.map(function (m) { return m.svg; }).join('');
   }
 
+  /* legend: stacked rows at the bottom of the viewBox */
   function legend(y, items) {
-    var s = '', x = 14;
-    items.forEach(function (it) {
+    var s = '';
+    items.forEach(function (it, i) {
+      var yy = y + i * 15;
       if (it.dash) {
-        s += '<line x1="' + x + '" y1="' + y + '" x2="' + (x + 24) + '" y2="' + y + '" stroke="' + it.color + '" stroke-width="2.4" stroke-dasharray="5 4"/>';
+        s += '<line x1="14" y1="' + yy + '" x2="40" y2="' + yy + '" stroke="' + it.color + '" stroke-width="2.6" stroke-dasharray="5 4"/>';
       } else {
-        s += '<line x1="' + x + '" y1="' + y + '" x2="' + (x + 24) + '" y2="' + y + '" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
+        s += '<line x1="14" y1="' + yy + '" x2="40" y2="' + yy + '" stroke="var(--ink,#0f2029)" stroke-width="3.5"/>';
       }
-      s += txt(x + 30, y + 4, it.label, 10.5, "start", 600, "var(--muted,#4d626d)");
-      x += it.w;
+      s += txt(46, yy + 4, it.label, 10.5, "start", 600, "var(--muted,#4d626d)");
     });
     return s;
   }
 
   function sceneStructure(S) {
-    var pos = [[56, 62], [128, 104], [214, 84], [268, 150], [200, 196], [100, 190]];
+    var pos = [[46, 50], [142, 94], [242, 62], [302, 152], [218, 218], [78, 192]];
     var links = [[0, 1], [1, 2], [2, 3], [3, 4], [5, 1]];
-    var s = svgOpen(360, 258, S.t(T.aria.structure));
+    var s = svgOpen(360, VB_H, S.t(T.aria.structure));
     s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [0, 0, 0, 0, 200, 0] });
-    s += '<g>' + legend(244, [{ label: S.t(T.legCov), w: 150 }, { label: S.t(T.legH), dash: true, color: "var(--hbond,#2a7de1)", w: 0 }]) + '</g>';
+    s += legend(268, [{ label: S.t(T.legCov) }, { label: S.t(T.legH), dash: true, color: "var(--hbond,#2a7de1)" }]);
     return s + '</svg>';
   }
 
   function sceneXylem(S) {
-    var s = svgOpen(360, 258, S.t(T.aria.xylem));
-    // walls
-    s += '<line x1="70" y1="40" x2="70" y2="228" stroke="var(--muted,#4d626d)" stroke-width="5"/><line x1="290" y1="40" x2="290" y2="228" stroke="var(--muted,#4d626d)" stroke-width="5"/>';
-    s += txt(70, 244, S.t(T.labels.wall), 10, "middle", 600, "var(--muted,#4d626d)");
-    s += txt(290, 244, S.t(T.labels.wall), 10, "middle", 600, "var(--muted,#4d626d)");
-    var pos = [[150, 84], [150, 158], [150, 232 - 4], [230, 84], [230, 158], [230, 228]];
-    pos = [[150, 82], [150, 158], [150, 228], [230, 82], [230, 158], [230, 228]];
+    var s = svgOpen(360, VB_H, S.t(T.aria.xylem));
+    s += '<line x1="50" y1="36" x2="50" y2="290" stroke="var(--muted,#4d626d)" stroke-width="6"/><line x1="310" y1="36" x2="310" y2="290" stroke="var(--muted,#4d626d)" stroke-width="6"/>';
+    s += txt(58, 28, S.t(T.labels.wall), 10, "start", 700, "var(--muted,#4d626d)");
+    var pos = [[132, 72], [132, 152], [132, 232], [236, 72], [236, 152], [236, 232]];
     var links = [[0, 1], [1, 2], [3, 4], [4, 5]];
     s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [90, 90, 90, 90, 90, 90] });
-    // pull arrow
-    s += arrow(190, 62, 190, 18, "var(--ink,#0f2029)");
-    s += txt(196, 34, S.t(T.labels.pullLeaf), 10.5, "start", 700);
-    s += txt(190, 12, "", 10);
-    s += txt(180, 258, S.t(T.labels.cohesionKeeps), 10, "middle", 600, "var(--muted,#4d626d)");
+    s += arrow(184, 66, 184, 14, "var(--ink,#0f2029)");
+    s += txt(192, 40, S.t(T.labels.pullLeaf), 10.5, "start", 700);
+    s += txt(184, 294, S.t(T.labels.cohesionKeeps), 10, "middle", 600, "var(--muted,#4d626d)");
     return s + '</svg>';
   }
 
   function sceneSurface(S) {
-    var s = svgOpen(360, 258, S.t(T.aria.surface));
-    s += txt(26, 22, S.t(T.labels.air), 11, "start", 700, "var(--muted,#4d626d)");
-    // surface line with dimples under legs
-    s += '<path d="M10 126 L145 126 Q152 134 159 126 L172 126 Q179 134 186 126 L199 126 Q206 134 213 126 L350 126" fill="none" stroke="var(--accent,#2547c7)" stroke-width="2" opacity="0.6"/>';
-    // skater
-    s += '<ellipse cx="180" cy="92" rx="24" ry="7" fill="var(--c-carbon,#4a5a63)"/><circle cx="154" cy="90" r="5" fill="var(--c-carbon,#4a5a63)"/>';
-    [[152, 124], [165, 128], [194, 128], [208, 124]].forEach(function (p) {
-      s += '<polyline points="' + (p[0] < 180 ? 168 : 192) + ',96 ' + ((p[0] + (p[0] < 180 ? 168 : 192)) / 2) + ',104 ' + p[0] + ',' + p[1] + '" fill="none" stroke="var(--c-carbon,#4a5a63)" stroke-width="2"/>';
+    var s = svgOpen(360, VB_H, S.t(T.aria.surface));
+    s += txt(14, 24, S.t(T.labels.air), 11, "start", 700, "var(--muted,#4d626d)");
+    s += txt(348, 112, S.t(T.labels.noUp), 9.5, "end", 700, "var(--muted,#4d626d)");
+    s += '<path d="M6 134 L132 134 Q140 142 148 134 L154 134 Q162 142 170 134 L176 134 Q184 142 192 134 L354 134" fill="none" stroke="var(--accent,#2547c7)" stroke-width="2" opacity="0.6"/>';
+    s += '<ellipse cx="162" cy="104" rx="24" ry="7" fill="var(--c-carbon,#4a5a63)"/><circle cx="135" cy="102" r="5" fill="var(--c-carbon,#4a5a63)"/>';
+    [[136, 132], [148, 136], [176, 136], [188, 132]].forEach(function (p) {
+      var x0 = p[0] < 162 ? 150 : 174;
+      s += '<polyline points="' + x0 + ',108 ' + ((p[0] + x0) / 2) + ',116 ' + p[0] + ',' + p[1] + '" fill="none" stroke="var(--c-carbon,#4a5a63)" stroke-width="2.2"/>';
     });
-    s += txt(180, 76, S.t(T.labels.skater), 10.5, "middle", 700);
-    // molecules
-    var pos = [[48, 144], [126, 144], [204, 144], [282, 144], [86, 214], [165, 214], [243, 214]];
-    var links = [[0, 1], [1, 2], [2, 3], [4, 1], [5, 2], [6, 3]];
-    s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [0, 0, 0, 20, 0, 0, 0] });
-    // net force arrows on the middle surface molecule
-    s += arrow(204, 144, 170, 144, "var(--ink,#0f2029)") + arrow(204, 144, 238, 144, "var(--ink,#0f2029)") + arrow(204, 144, 204, 180, "var(--ink,#0f2029)");
-    s += txt(26, 168, S.t(T.labels.water), 11, "start", 700, "var(--muted,#4d626d)");
-    s += txt(300, 188, S.t(T.labels.noUp), 9.5, "middle", 700, "var(--muted,#4d626d)");
-    s += txt(180, 252, S.t(T.legH), 10, "middle", 600, "var(--muted,#4d626d)");
+    s += txt(162, 84, S.t(T.labels.skater), 10.5, "middle", 700);
+    var pos = [[66, 158], [162, 158], [258, 158], [114, 244], [210, 244]];
+    var links = [[0, 1], [1, 2], [3, 1], [4, 2]];
+    s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [0, 0, 20, 0, 0] });
+    s += arrow(162, 158, 118, 158, "var(--ink,#0f2029)") + arrow(162, 158, 206, 158, "var(--ink,#0f2029)") + arrow(162, 158, 162, 204, "var(--ink,#0f2029)");
+    s += txt(10, 292, S.t(T.labels.water), 11, "start", 700, "var(--muted,#4d626d)");
+    s += txt(350, 292, S.t(T.legH), 10, "end", 600, "var(--muted,#4d626d)");
     return s + '</svg>';
   }
 
   function sceneWall(S) {
     var AD = "var(--hbond,#2a7de1)", CO = "var(--accent,#2547c7)";
-    var s = svgOpen(360, 258, S.t(T.aria.wall));
-    s += '<rect x="14" y="14" width="44" height="214" fill="var(--surface-2,#e3eaee)" stroke="var(--muted,#4d626d)" stroke-width="2"/>';
-    s += txt(36, 244, S.t(T.labels.wallLab), 10, "start", 700, "var(--muted,#4d626d)").replace('x="36"', 'x="14"');
-    var sites = [60, 126, 192];
+    var s = svgOpen(360, VB_H, S.t(T.aria.wall));
+    s += '<rect x="8" y="30" width="38" height="226" fill="var(--surface-2,#e3eaee)" stroke="var(--muted,#4d626d)" stroke-width="2"/>';
+    s += txt(8, 20, S.t(T.labels.wallLab), 10, "start", 700, "var(--muted,#4d626d)");
+    var sites = [66, 146, 226];
     sites.forEach(function (y) {
-      s += '<circle cx="66" cy="' + y + '" r="8" fill="var(--c-oxygen,#d33a2c)" opacity="0.85"/>' + txt(66, y + 3.5, "O", 9, "middle", 800, "#fff");
-      if (S.charges) s += txt(80, y - 12, "δ" + MINUS, 12, "middle", 800, "var(--c-oxygen,#d33a2c)");
+      s += '<circle cx="54" cy="' + y + '" r="10" fill="var(--c-oxygen,#d33a2c)"/>' + txt(54, y + 4, "O", 10, "middle", 800, "#fff");
+      if (S.charges) s += txt(62, y - 17, "δ" + MINUS, 13, "middle", 800, "var(--c-oxygen,#d33a2c)");
     });
-    var pos = [[138, 60], [138, 126], [138, 192], [214, 60], [214, 126], [214, 192]];
-    var mols = pos.map(function (p) { return mol(p[0], p[1], 180, S.charges); });
+    var mols = [];
+    sites.forEach(function (y) { mols.push(mol(150, y, 180, S.charges)); });
+    sites.forEach(function (y) { mols.push(mol(250, y, 180, S.charges)); });
     if (S.bonds) {
       for (var i = 0; i < 3; i++) {
-        s += hb(mols[i].h1, [66, sites[i]], AD);
+        s += hb(mols[i].h1, [54, sites[i]], AD, 10);
         s += hb(mols[i + 3].h1, mols[i].o, CO);
       }
     }
     s += mols.map(function (m) { return m.svg; }).join('');
-    s += txt(250, 16, S.t(T.labels.polarSurf), 10, "start", 700, "var(--muted,#4d626d)").replace('x="250"', 'x="70"');
-    s += legend(250, [{ label: S.t(T.legAd), dash: true, color: AD, w: 160 }, { label: S.t(T.legCo), dash: true, color: CO, w: 0 }]);
+    s += legend(268, [{ label: S.t(T.legAd), dash: true, color: AD }, { label: S.t(T.legCo), dash: true, color: CO }]);
     return s + '</svg>';
   }
 
   function sceneCapillary(S) {
-    var W = "var(--accent-soft,#e0e7fb)", WS = "var(--accent,#2547c7)";
-    var s = svgOpen(360, 258, S.t(T.aria.capillary));
-    // beaker water
-    s += '<rect x="12" y="186" width="336" height="62" fill="' + W + '" stroke="' + WS + '" stroke-width="1.5"/>';
-    // wide tube (x 50..130) : water rises to 160
-    s += '<rect x="52" y="160" width="76" height="86" fill="' + W + '"/>';
-    s += '<path d="M52 160 Q90 168 128 160" fill="none" stroke="' + WS + '" stroke-width="2"/>';
-    s += '<line x1="50" y1="60" x2="50" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/><line x1="130" y1="60" x2="130" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
-    // narrow tube (x 226..258): water rises to 84
-    s += '<rect x="228" y="84" width="28" height="164" fill="' + W + '"/>';
-    s += '<path d="M228 84 Q242 96 256 84" fill="none" stroke="' + WS + '" stroke-width="2"/>';
-    s += '<line x1="226" y1="40" x2="226" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/><line x1="258" y1="40" x2="258" y2="248" stroke="var(--ink,#0f2029)" stroke-width="3"/>';
-    // level line
-    s += '<line x1="12" y1="186" x2="348" y2="186" stroke="' + WS + '" stroke-width="1.5" stroke-dasharray="3 3"/>';
-    s += txt(344, 180, S.t(T.labels.level), 9.5, "end", 700, "var(--muted,#4d626d)");
-    s += txt(90, 52, S.t(T.labels.wide), 11, "middle", 700);
-    s += txt(242, 30, S.t(T.labels.narrow), 11, "middle", 700);
-    // arrows showing height difference
-    s += arrow(160, 160, 160, 124, "var(--ink,#0f2029)").replace("", "");
-    s += arrow(286, 186, 286, 90, "var(--ink,#0f2029)");
-    // adhesion arrows along narrow walls
-    s += arrow(222, 150, 222, 108, "var(--hbond,#2a7de1)") + arrow(262, 150, 262, 108, "var(--hbond,#2a7de1)");
-    s += txt(214, 124, "", 9);
-    s += '<text x="268" y="132" font-size="9.5" font-weight="700" style="fill:var(--hbond,#2a7de1)">' + S.t(T.labels.adhUp) + '</text>';
-    s += '<text x="242" y="148" font-size="9.5" font-weight="700" text-anchor="middle" style="fill:var(--accent,#2547c7)" dy="30">' + S.t(T.labels.cohUp) + '</text>';
+    var W = "var(--accent-soft,#e0e7fb)", WS = "var(--accent,#2547c7)", INK = "var(--ink,#0f2029)", AD = "var(--hbond,#2a7de1)";
+    var s = svgOpen(360, VB_H, S.t(T.aria.capillary));
+    s += '<rect x="8" y="196" width="344" height="96" fill="' + W + '" stroke="' + WS + '" stroke-width="1.5"/>';
+    s += '<rect x="26" y="168" width="90" height="124" fill="' + W + '"/>';
+    s += '<path d="M26 168 Q71 178 116 168" fill="none" stroke="' + WS + '" stroke-width="2.5"/>';
+    s += '<line x1="24" y1="70" x2="24" y2="292" stroke="' + INK + '" stroke-width="3.5"/><line x1="118" y1="70" x2="118" y2="292" stroke="' + INK + '" stroke-width="3.5"/>';
+    s += '<rect x="152" y="92" width="30" height="200" fill="' + W + '"/>';
+    s += '<path d="M152 92 Q167 106 182 92" fill="none" stroke="' + WS + '" stroke-width="2.5"/>';
+    s += '<line x1="150" y1="40" x2="150" y2="292" stroke="' + INK + '" stroke-width="3.5"/><line x1="184" y1="40" x2="184" y2="292" stroke="' + INK + '" stroke-width="3.5"/>';
+    s += '<line x1="8" y1="196" x2="352" y2="196" stroke="' + WS + '" stroke-width="1.5" stroke-dasharray="3 3"/>';
+    s += txt(352, 189, S.t(T.labels.level), 10, "end", 700, "var(--muted,#4d626d)");
+    s += txt(71, 56, S.t(T.labels.wide), 11.5, "middle", 700);
+    s += txt(167, 26, S.t(T.labels.narrow), 11.5, "middle", 700);
+    s += arrow(86, 196, 86, 174, INK);
+    s += arrow(206, 196, 206, 98, INK);
+    s += arrow(158, 156, 158, 118, AD) + arrow(176, 156, 176, 118, AD);
+    s += txt(222, 120, S.t(T.labels.adhUp), 10, "start", 700, AD);
+    s += txt(222, 140, S.t(T.labels.cohUp), 10, "start", 700, WS);
     return s + '</svg>';
   }
 
-  function ringWaters(cx, cy, r, n, aims, charges, bonds) {
-    return null;
-  }
-
   function sceneNaCl(S) {
-    var s = svgOpen(360, 258, S.t(T.aria.nacl));
-    var NA = "var(--c-nitrogen,#2d5cdd)", CL = "var(--c-sulfur,#c19a00)";
+    var s = svgOpen(360, VB_H, S.t(T.aria.nacl));
+    var NA = "var(--c-nitrogen,#2d5cdd)", CL = "var(--c-sulfur,#9a7a00)";
     function ion(x, y, label, color) {
-      return '<circle cx="' + x + '" cy="' + y + '" r="14" fill="' + color + '"/>' + txt(x, y + 4, label, 11, "middle", 800, "#fff");
+      var r = S.dissolved ? 17 : 24;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/>' + txt(x, y + 4.5, label, S.dissolved ? 11.5 : 14, "middle", 800, "#fff");
     }
     if (!S.dissolved) {
-      s += ion(150, 110, "Na⁺", NA) + ion(184, 110, "Cl⁻", CL) + ion(150, 144, "Cl⁻", CL) + ion(184, 144, "Na⁺", NA);
-      s += txt(167, 190, S.t(T.labels.crystal), 11, "middle", 700);
-      s += txt(180, 232, "", 10);
+      s += ion(154, 116, "Na⁺", NA) + ion(206, 116, "Cl⁻", CL) + ion(154, 168, "Cl⁻", CL) + ion(206, 168, "Na⁺", NA);
+      s += txt(180, 228, S.t(T.labels.crystal), 12, "middle", 700);
       return s + '</svg>';
     }
-    var out = '', waterSvg = '', att = '';
-    function shell(cx, cy, isNa) {
-      [45, 135, 225, 315].forEach(function (th) {
-        var d = 54, p = polar(cx, cy, th, d);
-        var aim = isNa ? (th - 52.25) : (th + 180 - 52.25);   // Na+: O faces ion (H away); Cl-: H faces ion
+    var waterSvg = '', att = '';
+    function shell(cx, cy, isNa, angs) {
+      angs.forEach(function (th) {
+        var p = polar(cx, cy, th, 72);
+        var aim = isNa ? (th - 52.25) : (th + 180 - 52.25);
         var m = mol(p[0], p[1], aim, S.charges);
-        // attraction line from ion to the atom facing it
-        var target = isNa ? m.o : (function () { var a = Math.abs(((angleTo(p, [cx, cy]) - aim) % 360 + 540) % 360 - 180); return a < Math.abs(((angleTo(p, [cx, cy]) - (aim + 104.5)) % 360 + 540) % 360 - 180) ? m.h1 : m.h2; })();
-        att += '<line x1="' + (cx + (target[0] - cx) * 0.3) + '" y1="' + (cy + (target[1] - cy) * 0.3) + '" x2="' + (cx + (target[0] - cx) * 0.8) + '" y2="' + (cy + (target[1] - cy) * 0.8) + '" stroke="var(--ionic,#8e44ad)" stroke-width="2" stroke-dasharray="2 3"/>';
+        var t, rt;
+        if (isNa) { t = m.o; rt = RO; }
+        else {
+          var d1 = Math.hypot(m.h1[0] - cx, m.h1[1] - cy), d2 = Math.hypot(m.h2[0] - cx, m.h2[1] - cy);
+          t = d1 < d2 ? m.h1 : m.h2; rt = RH;
+        }
+        var ux = (t[0] - cx), uy = (t[1] - cy), L2 = Math.hypot(ux, uy); ux /= L2; uy /= L2;
+        att += '<line x1="' + (cx + ux * 19) + '" y1="' + (cy + uy * 19) + '" x2="' + (t[0] - ux * (rt + 2)) + '" y2="' + (t[1] - uy * (rt + 2)) + '" stroke="var(--ionic,#8e44ad)" stroke-width="2.4" stroke-dasharray="2 3" stroke-linecap="round"/>';
         waterSvg += m.svg;
       });
     }
-    shell(92, 126, true); shell(268, 126, false);
-    s += att + waterSvg + ion(92, 126, "Na⁺", NA) + ion(268, 126, "Cl⁻", CL);
-    s += legend(244, [{ label: S.t(T.legCov), w: 150 }, { label: S.t(T.labels.attractIon), dash: true, color: "var(--ionic,#8e44ad)", w: 0 }]);
+    shell(112, 140, true, [-90, 90, 150]); shell(250, 140, false, [-90, 90, 30]);
+    s += att + waterSvg + ion(112, 140, "Na⁺", NA) + ion(250, 140, "Cl⁻", CL);
+    s += legend(268, [{ label: S.t(T.legCov) }, { label: S.t(T.labels.attractIon), dash: true, color: "var(--ionic,#8e44ad)" }]);
     return s + '</svg>';
   }
 
   function sceneGlucose(S) {
-    var s = svgOpen(360, 258, S.t(T.aria.glucose));
-    var cx = 180, cy = 124;
-    s += '<polygon points="' + [0, 1, 2, 3, 4, 5].map(function (i) { var p = polar(cx, cy, i * 60 - 30, 34); return p[0] + ',' + p[1]; }).join(' ') + '" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="3"/>';
+    var s = svgOpen(360, VB_H, S.t(T.aria.glucose));
+    var cx = 180, cy = 150;
+    s += '<polygon points="' + [0, 1, 2, 3, 4, 5].map(function (i) { var p = polar(cx, cy, i * 60 - 30, 38); return p[0] + ',' + p[1]; }).join(' ') + '" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="3"/>';
     s += txt(cx, cy + 4, S.t(T.labels.glucose), 10.5, "middle", 800);
-    var sitesAng = [-90, -30, 90, 150, 210, 30].filter(function (a, i) { return i < 5; });
-    sitesAng = [-90, -20, 55, 125, 200];
+    var angs = [-90, -20, 55, 125, 200];
     var waterSvg = '', bondSvg = '';
-    sitesAng.forEach(function (a) {
-      var site = polar(cx, cy, a, 50);
-      s += '<line x1="' + polar(cx, cy, a, 34)[0] + '" y1="' + polar(cx, cy, a, 34)[1] + '" x2="' + site[0] + '" y2="' + site[1] + '" stroke="var(--c-carbon,#4a5a63)" stroke-width="3"/>';
-      s += '<circle cx="' + site[0] + '" cy="' + site[1] + '" r="8" fill="var(--c-oxygen,#d33a2c)"/>' + txt(site[0], site[1] + 3.5, "O", 9, "middle", 800, "#fff");
-      var wp = polar(cx, cy, a, 112);
-      var aim = angleTo(wp, site);
-      var m = mol(wp[0], wp[1], aim, S.charges);
-      if (S.bonds) bondSvg += hb(m.h1, site);
+    angs.forEach(function (a) {
+      var e = polar(cx, cy, a, 36), site = polar(cx, cy, a, 58);
+      s += '<line x1="' + e[0] + '" y1="' + e[1] + '" x2="' + site[0] + '" y2="' + site[1] + '" stroke="var(--c-carbon,#4a5a63)" stroke-width="3.5"/>';
+      s += '<circle cx="' + site[0] + '" cy="' + site[1] + '" r="10" fill="var(--c-oxygen,#d33a2c)"/>' + txt(site[0], site[1] + 4, "O", 10, "middle", 800, "#fff");
+      var wp = polar(cx, cy, a, 126);
+      var m = mol(wp[0], wp[1], angleTo(wp, site), S.charges);
+      if (S.bonds) bondSvg += hb(m.h1, site, null, 10);
       waterSvg += m.svg;
     });
     s += bondSvg + waterSvg;
-    s += txt(180, 246, S.t(T.legH), 10, "middle", 600, "var(--muted,#4d626d)");
     return s + '</svg>';
   }
 
   function sceneOil(S) {
-    var s = svgOpen(360, 258, S.t(T.aria.oil));
-    var cx = 180, cy = 124;
-    s += '<circle cx="' + cx + '" cy="' + cy + '" r="40" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="2.5" stroke-dasharray="5 4"/>';
-    s += txt(cx, cy - 2, S.t(T.labels.oil), 10, "middle", 800);
-    var n = 7, R = 98, pos = [], links = [];
-    for (var i = 0; i < n; i++) {
-      var a = -90 + i * (360 / n); pos.push(polar(cx, cy, a, R)); links.push([i, (i + 1) % n]);
-    }
+    var s = svgOpen(360, VB_H, S.t(T.aria.oil));
+    var cx = 180, cy = 150;
+    s += '<circle cx="' + cx + '" cy="' + cy + '" r="52" fill="var(--surface-2,#e3eaee)" stroke="var(--c-carbon,#4a5a63)" stroke-width="2.5" stroke-dasharray="5 4"/>';
+    s += txt(cx, cy - 4, S.t(T.labels.oil), 10.5, "middle", 800);
+    s += txt(cx, cy + 12, S.t(T.labels.noAttract), 9, "middle", 600, "var(--muted,#4d626d)");
+    var n = 7, R = 108, pos = [], links = [];
+    for (var i = 0; i < n; i++) { pos.push(polar(cx, cy, -90 + i * (360 / n), R)); links.push([i, (i + 1) % n]); }
     s += network(pos, links, { charges: S.charges, bonds: S.bonds });
-    s += txt(cx, cy + 14, "", 9);
-    s += txt(cx, cy + 20, S.t(T.labels.noAttract), 8.5, "middle", 700, "var(--muted,#4d626d)");
-    s += txt(180, 248, S.t(T.labels.waterBonds), 10, "middle", 600, "var(--muted,#4d626d)");
+    s += txt(180, 296, S.t(T.labels.waterBonds), 10, "middle", 600, "var(--muted,#4d626d)");
     return s + '</svg>';
   }
 
