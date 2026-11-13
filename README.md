@@ -1,5 +1,10 @@
 # IB Biology A & B
 
+
+**Live site:** https://bennyng1029.github.io/2028-IBBiology-HL/ (after GitHub Pages is enabled: Settings → Pages → Deploy from branch → `main` / root).
+
+**What's inside:** all 19 subtopics of Themes A and B (SL and AHL), 211 sections, 356 original practice questions (77 challenge level), 277 glossary terms, 28 interactive models, and a six-step Protein Lab. Every subtopic was checked by an accuracy reviewer against the IB guide's understandings and limits, including a "Beyond the syllabus" box listing extras you do not need.
+
 A free, static, open-source study site for **IB Diploma Biology, Themes A (Unity and diversity) and B (Form and function)**, SL and AHL, for students sitting the **May 2028** exams. Syllabus: IB Biology guide, first assessment 2025.
 
 - Languages: English (default), Japanese, Hong Kong Traditional Chinese. The language never switches automatically.

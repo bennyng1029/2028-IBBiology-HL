@@ -19,7 +19,7 @@ Sources were not copied. Where mark-scheme material was seen, only the *type* of
 
 Notes:
 - Totals used by the sources: SL = 55 marks (P1) + 50 marks (P2); HL = 75 marks (P1) + 80 marks (P2).
-- **Conflict to resolve:** my prior understanding was that SL Paper 1 is 1 h 15 min, not 1 h 30 min, and that exam marks are not always listed the way the sources state. Only the sources' figures are recorded here. **Verify all durations and mark totals against the subject guide's "Assessment" section.**
+- **Verified against the subject guide (first assessment 2025, assessment outline):** SL Paper 1 is 1 h 30 min (55 marks: 1A 30, 1B 25), SL Paper 2 1 h 30 min (50 marks: A 34, B 16); HL Paper 1 is 2 h (75 marks: 1A 40, 1B 35), HL Paper 2 2 h 30 min (80 marks: A 48, B 32). Weightings: Paper 1 36%, Paper 2 44%, IA 20%. The figures in the table above therefore have **high** confidence.
 - HL extended-response questions were reported as **[16] each**, split as 15 marks for content and 1 mark for the quality of the answer (from an unofficial mirror of the May 2025 HL Paper 2 mark scheme, not verified; **low**).
 - Calculator: one source says a calculator is needed for the current Paper 1. Not confirmed. **low**.
 - A secondary site claims Paper 2 format changes from May 2027. Not confirmed, and the source says content is unchanged. This does **not** affect May 2028 if true, but **check the IBO's official "changes" notice** before the site states a format. **low**.
