@@ -41,7 +41,7 @@
     draw(root);
     const w = 24 + H * dx + 40;
     const h = 20 + 26 * leaves;
-    return `<svg viewBox="0 0 ${w} ${h}" width="100%" style="max-width:${Math.round(w * 1.5)}px" role="img" aria-label="cladogram">${out}</svg>`;
+    return `<svg viewBox="0 0 ${w} ${h}" width="100%" style="max-width:${Math.round(w * 0.95)}px" role="img" aria-label="cladogram">${out}</svg>`;
   }
 
   IB.registerTopic({

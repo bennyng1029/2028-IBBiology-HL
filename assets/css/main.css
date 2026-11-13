@@ -320,10 +320,10 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
 .cell__name { hyphens: auto; overflow-wrap: anywhere; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
 .cell--soon { background: var(--surface-2); color: var(--muted); }
 .cell--soon .cell__code { opacity: 0.55; }
-.meter { display: flex; height: 5px; background: var(--surface-2); overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; }
-.meter i { display: block; height: 100%; }
-.meter .ok { background: var(--good); }
-.meter .bad { background: var(--bad); }
+.cell-meter { display: flex; height: 5px; background: var(--surface-2); overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; }
+.cell-meter i { display: block; height: 100%; }
+.cell-meter .ok { background: var(--good); }
+.cell-meter .bad { background: var(--bad); }
 @media (min-width: 56em) {
   .map { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 }

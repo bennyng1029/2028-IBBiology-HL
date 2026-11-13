@@ -104,8 +104,7 @@
           "<ul><li>葉片蒸發水分，拉動木質部中的水，水因而受到<strong>張力 (tension)</strong> (拉力)。</li>" +
           "<li>由於內聚力，水分子保持連結，所以整條水柱可被向上拉而不會斷開。</li></ul>" +
           "<p><strong>2. 表面張力。</strong>在水面，分子受氫鍵向側面和向下拉，但不會向上 (上方是空氣)。這使水面像一層繃緊的薄膜。這種效應稱為<strong>表面張力 (surface tension)</strong>。</p>" +
-          "<ul><li>水黽 (pond skater) 等小型動物可以站在水面上行走，水面成為牠們的棲息地。</li></ul>"),
-        widget: "water-hbond"
+          "<ul><li>水黽 (pond skater) 等小型動物可以站在水面上行走，水面成為牠們的棲息地。</li></ul>")
       },
       {
         ref: "A1.1.4",
@@ -126,8 +125,7 @@
           "<p>需要涵蓋的兩個例子：</p>" +
           "<ul><li><strong>植物細胞壁。</strong>細胞壁含纖維素，帶有許多極性基團。水附著在細胞壁上，並被保留在壁內的微小空隙中。附著力亦有助木質部的水不致向下滑落。</li>" +
           "<li><strong>土壤。</strong>土壤顆粒表面帶電。水附著在顆粒上，並被保留在顆粒之間的狹窄空隙中。</li></ul>" +
-          "<p><strong>毛細管作用 (capillary action)</strong> 是水在狹窄空間中向上移動。附著力沿壁拉動水，內聚力再把其餘的水拉上去。空間越窄，水能升得越高。這有助水在土壤和植物細胞壁中移動。</p>"),
-        widget: "water-hbond"
+          "<p><strong>毛細管作用 (capillary action)</strong> 是水在狹窄空間中向上移動。附著力沿壁拉動水，內聚力再把其餘的水拉上去。空間越窄，水能升得越高。這有助水在土壤和植物細胞壁中移動。</p>")
       },
       {
         ref: "A1.1.5",
@@ -155,7 +153,6 @@
           "<ul><li><strong>新陳代謝。</strong>溶解的物質可以四處移動並相遇，反應才得以發生。大部分酶 (enzyme) 在水溶液 (aqueous solution) 中發揮作用。</li>" +
           "<li><strong>運輸。</strong>動物的血漿 (blood plasma) 運載葡萄糖和離子等溶解物質；植物的汁液則運載溶解物質。</li>" +
           "<li><strong>疏水分子也有用。</strong>細胞中有些結構必須保持不溶。例如磷脂的疏水尾部形成不會溶於兩側水中的膜。</li></ul>"),
-        widget: "water-hbond",
         examTip: L(
           "\"Dissolve\" is not the same as \"melt\". And \"hydrophobic\" does not mean the molecule is repelled by water; it means it does not mix with it. Use \"insoluble\" or \"does not dissolve\".",
           "「溶ける (dissolve)」と「融ける (melt)」は別の意味です。また「疎水性」は水に反発されるという意味ではなく、水と混ざらないという意味です。「不溶性」「溶けない」と書くと安全です。",
@@ -196,7 +193,6 @@
           "<ul><li><strong>環斑海豹 (ringed seal)</strong> (<em>Pusa hispida</em>) 生活在冷水中。流線型身體減少在黏度大的水中受到的阻力。厚厚的脂肪層 (鯨脂 (blubber)) 提供隔熱，否則水會很快帶走熱量。浮力支撐牠的體重。</li>" +
           "<li><strong>黑喉潛鳥 (black-throated loon)</strong> (<em>Gavia arctica</em>) 是潛水的鳥類。牠在水中游泳和潛水時，要克服黏度大的水並保持體溫。牠在空中飛行時幾乎沒有浮力，所以翅膀必須提供全部升力。牠在兩種環境中都需要流線型身體。</li></ul>" +
           "<p>考試時，可以用俗名或學名。</p>"),
-        widget: "water-hbond",
         examTip: L(
           "A \"contrast\" answer needs both habitats in the same sentence or table row (\"water is more viscous than air, so …\"). Do not just describe water on its own.",
           "「対比 (contrast)」の解答では、同じ文または表の同じ行で両方の環境に触れます (「水は空気より粘性が高いので…」)。水だけを説明して終わらないこと。",
@@ -292,7 +288,7 @@
       L("You do not need to know the bond angle of water (about 104.5°) or why the molecule is bent.", "水分子の結合角 (約104.5°) や分子が折れ曲がっている理由を知る必要はありません。", "你不需要知道水分子的鍵角 (約 104.5°) 或分子為何呈彎曲形。"),
       L("You do not need to know electronegativity values, or to use the term \"dipole\" in answers (\"polar\" and partial charges δ+/δ− are enough).", "電気陰性度の値を知る必要はなく、解答で「双極子 (dipole)」という語を使う必要もありません (「極性」と部分電荷 δ+/δ− で十分です)。", "你不需要知道電負性數值，答題時也不必用「偶極 (dipole)」一詞 (只需「極性」和部分電荷 δ+/δ−)。"),
       L("You do not need the numerical values of specific heat capacity, latent heat of vaporisation or density, nor to explain the anomalous density of ice or why ice floats; the guide does not list them for A1.1.", "比熱、蒸発熱、密度の数値を知る必要はありません。氷の密度の異常さや氷が浮く理由を説明する必要もありません。A1.1 ではガイドが挙げていません。", "你不需要記住比熱容、汽化潛熱或密度的數值，也不必解釋冰的密度反常或冰為何會浮起；課程指引在 A1.1 沒有列出這些內容。"),
-      L("You do not need to know the pH scale, ionisation of water or the terms \"acid\" and \"base\" for this subtopic.", "このサブトピックでは、pH、水の電離、「酸」「塩基」という用語は必要ありません。", "此子課題不需要 pH 值、水的電離，或「酸」與「鹼」等術語。"),
+      L("You do not need the ionisation of water, or acids and bases, for this subtopic. pH is not needed here either: it is taught in B1.2 (Proteins: effect of pH on protein structure) and C1.1 (Enzymes and metabolism).", "このサブトピックでは、水の電離や酸・塩基は必要ありません。pH もここでは不要です。pH は B1.2 (タンパク質：pH がタンパク質の構造に与える影響) と C1.1 (酵素と代謝) で学びます。", "此子課題不需要水的電離或酸與鹼。pH 在這裏也不需要：它會在 B1.2 (蛋白質：pH 對蛋白質結構的影響) 和 C1.1 (酶與新陳代謝) 中學習。"),
       L("You do not need to know the Reynolds number, Poiseuille's law, or any equation for surface tension or capillary rise; explanations are qualitative.", "レイノルズ数、ポアズイユの法則、表面張力や毛細管上昇の式は不要です。説明は定性的なもので足ります。", "你不需要雷諾數、泊肅葉定律，或表面張力和毛細管上升的任何公式；解釋只需定性描述。"),
       L("You do not need to recall specific hypotheses for the origin of water on Earth other than asteroids, or details of any particular exoplanet or moon.", "小惑星以外の地球の水の起源の仮説や、特定の系外惑星・衛星の詳細を覚える必要はありません。", "你不需要記住小行星以外有關地球水來源的假說，也不必記住任何特定系外行星或衛星的細節。")
     ],
@@ -586,7 +582,7 @@
       },
       {
         id: "a1-1-q19", type: "multi", ahl: true, difficulty: 3, ref: "A1.1.7–8", paper: "1A",
-        stem: L("A planet is found in the Goldilocks zone of its star. Which conclusions are justified? Select all that apply.", "ある惑星が、その恒星のゴルディロックスゾーンに見つかった。正当化できる結論をすべて選べ。", "發現一顆行星位於其恆星的適居帶。哪些結論是合理的？(選出所有適用者)"),
+        stem: L("A planet is found in the Goldilocks zone of its star. Which statements about this planet are correct? Select all that apply.", "ある惑星が、その恒星のゴルディロックスゾーンに見つかった。この惑星について正しい記述をすべて選べ。", "發現一顆行星位於其恆星的適居帶。下列有關這顆行星的敘述，哪些正確？(選出所有適用者)"),
         options: [
           L("The planet's temperature could allow liquid water on its surface.", "惑星の温度は、表面に液体の水が存在することを許す可能性がある。", "行星的溫度可能容許其表面有液態水。"),
           L("The planet must contain living organisms.", "その惑星には生物が必ずいる。", "該行星必定有生物。"),

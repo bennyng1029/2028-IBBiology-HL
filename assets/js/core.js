@@ -286,7 +286,7 @@
     return d;
   }
   function meter(st) {
-    var m = h('span', { class: 'meter', 'aria-hidden': 'true' });
+    var m = h('span', { class: 'cell-meter', 'aria-hidden': 'true' });
     if (st.total) {
       m.appendChild(h('i', { class: 'ok', style: 'width:' + (100 * st.right / st.total) + '%' }));
       m.appendChild(h('i', { class: 'bad', style: 'width:' + (100 * st.bad / st.total) + '%' }));

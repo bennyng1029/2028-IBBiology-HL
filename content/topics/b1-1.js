@@ -439,9 +439,9 @@ ${STEROID_SVG.replace('The steroid skeleton: three six-sided rings (A, B, C) and
       L("You do not need to know the structure of cholesterol or the sex hormones in detail. You only need to recognise a steroid by its four rings.",
         "コレステロールや性ホルモンの詳しい構造は必要ない。4つの環でステロイドを見分けられればよい。",
         "你不需要詳細認識膽固醇或性激素的結構，只需能憑四個環辨認出類固醇。"),
-      L("You do not need to know the detailed biochemistry of fat or glycogen metabolism (such as beta-oxidation or glycogenolysis enzymes) in this subtopic.",
-        "この小テーマで、脂肪やグリコーゲン代謝の詳しい生化学 (β酸化や分解酵素など) は必要ない。",
-        "在此子課題中，你不需要認識脂肪或糖原代謝的詳細生化過程 (如 β-氧化或糖原分解酶)。")
+      L("Not needed for this subtopic: how lipids and carbohydrates compare as respiratory substrates (fatty acids broken into 2-carbon acetyl groups that enter respiration as acetyl-CoA) is taught in C1.2 (Cell respiration, AHL). The enzymes of beta-oxidation and of glycogen breakdown are not required anywhere.",
+        "この小テーマでは不要: 呼吸基質としての脂質と炭水化物の比較 (脂肪酸が炭素2個のアセチル基に分解され、アセチルCoAとして呼吸に入る) は C1.2 (細胞呼吸, AHL) で学ぶ。β酸化やグリコーゲン分解の酵素名はどこでも求められない。",
+        "此子課題不需要：脂質與碳水化合物作為呼吸底物的比較 (脂肪酸分解成二碳的乙酰基，以乙酰輔酶A進入呼吸作用) 會在 C1.2 (細胞呼吸，AHL) 學習。β-氧化及糖原分解的酶在整個課程中都不需要。")
     ],
     links: [
       { to: "B1.2", why: L("Condensation and hydrolysis also build and break polypeptides; glycoproteins link carbohydrates to proteins.", "縮合と加水分解はポリペプチドの合成・分解にも関わる。糖タンパク質は糖とタンパク質を結ぶ。", "縮合與水解同樣用於合成和分解多肽；糖蛋白連接碳水化合物與蛋白質。") },
@@ -536,7 +536,7 @@ ${STEROID_SVG.replace('The steroid skeleton: three six-sided rings (A, B, C) and
         explanation: L("Straight chains lie side by side and are cross-linked by many hydrogen bonds. Hydrogen bonds are individually weak but numerous. Covalent links join the glucose units within a chain, not the chains to each other. Peptide bonds occur in proteins.", "まっすぐな鎖が並び、多数の水素結合で架橋される。1本は弱いが数が多い。共有結合は鎖の中のグルコース同士を結ぶもので、鎖どうしではない。ペプチド結合はタンパク質にある。", "筆直的鏈並排，以大量氫鍵橫向連接；氫鍵各自雖弱，但數量多。共價鍵連接的是鏈內的葡萄糖單位，而非鏈與鏈之間。肽鍵存在於蛋白質中。")
       },
       {
-        id: "b1-1-q09", type: "short", ahl: false, difficulty: 2, ref: "B1.1.5", paper: "2",
+        id: "b1-1-q09", type: "short", ahl: false, difficulty: 2, ref: "B1.1.6", paper: "2",
         commandTerm: "Distinguish", marks: 3,
         stem: L("Distinguish between the structure and function of starch and cellulose.", "デンプンとセルロースの構造と機能の違いを明確にせよ。", "分辨澱粉與纖維素在結構和功能上的差異。"),
         markscheme: [
@@ -575,7 +575,7 @@ ${STEROID_SVG.replace('The steroid skeleton: three six-sided rings (A, B, C) and
         stem: L("How many molecules of water are released when one triglyceride is formed from glycerol and fatty acids?", "グリセロールと脂肪酸から1分子のトリグリセリドができるとき、放出される水は何分子か。", "由甘油和脂肪酸形成一個甘油三酯時，會釋出多少個水分子？"),
         options: [L("1", "1", "1"), L("2", "2", "2"), L("3", "3", "3"), L("4", "4", "4")],
         answer: 2,
-        explanation: L("One glycerol joins to three fatty acids by three condensation reactions, each releasing one water. Two would be correct for a phospholipid only if you forget the bond to the phosphate group.", "グリセロール1分子が脂肪酸3分子と3回の縮合で結合し、各回で水1分子が出る。2と答えるのはリン脂質でリン酸との結合を忘れた場合の誤り。", "一個甘油經三次縮合反應連接三個脂肪酸，每次釋出一個水分子。")
+        explanation: L("One glycerol joins to three fatty acids by three condensation reactions, each releasing one water. Answering 2 is a tempting mistake that comes from thinking of the two fatty acids in a phospholipid (a phospholipid also needs three condensation reactions: two fatty acids plus one phosphate).", "グリセロール1分子が脂肪酸3分子と3回の縮合で結合し、各回で水1分子が出る。2と答えるのは、リン脂質の脂肪酸2本を思い浮かべた誤り (リン脂質も、脂肪酸2本とリン酸1つで計3回の縮合が必要)。", "一個甘油經三次縮合反應連接三個脂肪酸，每次釋出一個水分子。答 2 是常見錯誤，源於想到磷脂只有兩個脂肪酸 (其實磷脂同樣需要三次縮合：兩個脂肪酸加一個磷酸基)。")
       },
       {
         id: "b1-1-q14", type: "short", ahl: false, difficulty: 2, ref: "B1.1.10", paper: "1B",
