@@ -645,8 +645,8 @@
         curQ = Math.random() < 0.5 ? "artery" : "vein";
         host.innerHTML = "";
         var art = mk("div", "hc-art");
-        var jitter = 0.9 + Math.random() * 0.2;
-        art.innerHTML = '<svg viewBox="0 0 340 150" role="img" aria-label="' + t(VC.q) + '"><g transform="translate(170,75) scale(' + jitter.toFixed(2) + ')">' + vesselSVG(curQ) + '</g></svg>';
+        var jitter = curQ === "artery" ? 0.9 + Math.random() * 0.6 : 0.7 + Math.random() * 0.5;
+        art.innerHTML = '<svg viewBox="0 0 340 190" role="img" aria-label="' + t(VC.q) + '"><g transform="translate(170,95) scale(' + jitter.toFixed(2) + ')">' + vesselSVG(curQ) + '</g></svg>';
         host.appendChild(art);
         host.appendChild(mk("p", "", "<strong>" + t(VC.q) + "</strong> <span class=\"hc-tag\">" + t(VC.score) + ": " + score + " / " + asked + "</span>"));
         var row = mk("div", "hc-row");

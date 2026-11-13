@@ -164,15 +164,15 @@
         ref: "B2.1.6", ahl: false,
         heading: L("Channel proteins and facilitated diffusion", "チャネルタンパク質と促進拡散", "通道蛋白與易化擴散"),
         body: L(
-          `<p>Ions and polar molecules cannot cross the hydrophobic core, but they can cross through <span class="term">channel proteins</span>. A channel protein has a water-filled pore through the membrane. This is called <span class="term">facilitated diffusion</span>: the particles still move <strong>down their concentration gradient</strong> and it needs <strong>no ATP</strong>, but a protein helps.</p>
+          `<p>Ions cannot cross the hydrophobic core, but they can cross through <span class="term">channel proteins</span>. A channel protein has a water-filled pore through the membrane. This is called <span class="term">facilitated diffusion</span>: the particles still move <strong>down their concentration gradient</strong> and it needs <strong>no ATP</strong>, but a protein helps.</p>
 <p><strong>Why channels make membranes selectively permeable:</strong></p>
 <ul><li>The shape and charges lining the pore fit <strong>one specific type of ion</strong> (for example a potassium channel lets K⁺ through but not Na⁺). Other particles do not fit or are not attracted.</li>
 <li>A channel can be <strong>open</strong> (ions diffuse through) or <strong>closed</strong> (no ions pass). So the cell can control when transport happens.</li></ul>`,
-          `<p>イオンや極性分子は疎水性の中心部を通れないが、<span class="term">チャネルタンパク質 (channel protein)</span> を通って膜を横切れる。チャネルタンパク質には、膜を貫く水で満たされた孔がある。これを<span class="term">促進拡散 (facilitated diffusion)</span> という。粒子は<strong>濃度勾配に従って</strong>動き、<strong>ATPは不要</strong>だが、タンパク質が助ける。</p>
+          `<p>イオンは疎水性の中心部を通れないが、<span class="term">チャネルタンパク質 (channel protein)</span> を通って膜を横切れる。チャネルタンパク質には、膜を貫く水で満たされた孔がある。これを<span class="term">促進拡散 (facilitated diffusion)</span> という。粒子は<strong>濃度勾配に従って</strong>動き、<strong>ATPは不要</strong>だが、タンパク質が助ける。</p>
 <p><strong>チャネルが膜に選択的透過性を与える理由:</strong></p>
 <ul><li>孔の形と内壁の電荷が<strong>特定の1種類のイオン</strong>に合う (例: カリウムチャネルは K⁺ を通すが Na⁺ は通さない)。他の粒子は合わない、または引きつけられない。</li>
 <li>チャネルは<strong>開いて</strong> (イオンが拡散して通る) <strong>閉じる</strong> (イオンが通らない) ことができる。そのため細胞は輸送が起こる時を調節できる。</li></ul>`,
-          `<p>離子和極性分子不能穿過疏水核心，但可以經<span class="term">通道蛋白 (channel protein)</span> 穿過。通道蛋白有一個貫穿膜、充滿水的孔道。這稱為<span class="term">易化擴散 (facilitated diffusion)</span>：粒子仍然<strong>順濃度梯度</strong>移動，<strong>不需 ATP</strong>，但有蛋白質協助。</p>
+          `<p>離子不能穿過疏水核心，但可以經<span class="term">通道蛋白 (channel protein)</span> 穿過。通道蛋白有一個貫穿膜、充滿水的孔道。這稱為<span class="term">易化擴散 (facilitated diffusion)</span>：粒子仍然<strong>順濃度梯度</strong>移動，<strong>不需 ATP</strong>，但有蛋白質協助。</p>
 <p><strong>通道為何令膜具選擇透過性：</strong></p>
 <ul><li>孔道的形狀和內壁電荷只適合<strong>某一種離子</strong> (例如鉀通道讓 K⁺ 通過而不讓 Na⁺ 通過)，其他粒子不合適或不被吸引。</li>
 <li>通道可以<strong>開啟</strong> (離子擴散通過) 或<strong>關閉</strong> (離子不能通過)，所以細胞能控制運輸何時發生。</li></ul>`),
@@ -366,11 +366,11 @@ ${fmFigure("zh")}
         heading: L("Sodium–potassium pumps", "ナトリウム・カリウムポンプ", "鈉鉀泵"),
         body: L(
           `<p>The <span class="term">sodium–potassium pump</span> is an <span class="term">exchange transporter</span>: it swaps one ion for another across the plasma membrane. Each cycle uses one ATP to move <strong>3 sodium ions (Na⁺) out</strong> of the cell and <strong>2 potassium ions (K⁺) in</strong>. Both ions are moved <strong>against</strong> their concentration gradients, so this is active transport.</p>
-<p><strong>Why it matters: membrane potentials.</strong> The pump makes Na⁺ concentration low inside and high outside, and K⁺ concentration high inside and low outside. It also moves more positive charge out (3) than in (2). So the <strong>inside of the cell becomes negative compared with the outside</strong>. This difference in electrical charge across the membrane is the <span class="term">membrane potential</span>. Neurons depend on it to send nerve impulses.</p>`,
+<p><strong>Why it matters: membrane potentials.</strong> The pump makes Na⁺ concentration low inside and high outside, and K⁺ concentration high inside and low outside. It also moves more positive charge out (3) than in (2), and some K⁺ leaks back out through open potassium channels. So the <strong>inside of the cell becomes negative compared with the outside</strong>. This difference in electrical charge across the membrane is the <span class="term">membrane potential</span>. Neurons depend on it to send nerve impulses.</p>`,
           `<p><span class="term">ナトリウム・カリウムポンプ (sodium–potassium pump)</span> は<span class="term">交換輸送体 (exchange transporter)</span> で、細胞膜をはさんで1種のイオンを別のイオンと入れ替える。1回のサイクルで ATP を1個使い、<strong>ナトリウムイオン (Na⁺) 3個を細胞外へ</strong>、<strong>カリウムイオン (K⁺) 2個を細胞内へ</strong>運ぶ。どちらも濃度勾配に<strong>逆らって</strong>運ばれるので、能動輸送である。</p>
-<p><strong>重要な理由: 膜電位。</strong> このポンプにより、Na⁺ の濃度は内側で低く外側で高く、K⁺ の濃度は内側で高く外側で低くなる。また、外へ出す正電荷 (3) が入る正電荷 (2) より多い。そのため<strong>細胞の内側は外側に対して負になる</strong>。膜をはさむこの電気的な差が<span class="term">膜電位 (membrane potential)</span> である。ニューロンは神経インパルスを送るためにこれを利用する。</p>`,
+<p><strong>重要な理由: 膜電位。</strong> このポンプにより、Na⁺ の濃度は内側で低く外側で高く、K⁺ の濃度は内側で高く外側で低くなる。また、外へ出す正電荷 (3) が入る正電荷 (2) より多く、さらに一部の K⁺ が開いたカリウムチャネルから外へ漏れ出る。そのため<strong>細胞の内側は外側に対して負になる</strong>。膜をはさむこの電気的な差が<span class="term">膜電位 (membrane potential)</span> である。ニューロンは神経インパルスを送るためにこれを利用する。</p>`,
           `<p><span class="term">鈉鉀泵 (sodium–potassium pump)</span> 是一種<span class="term">交換運輸體 (exchange transporter)</span>：在質膜兩側以一種離子交換另一種離子。每個循環消耗一個 ATP，把<strong>3 個鈉離子 (Na⁺) 運出</strong>細胞，同時把<strong>2 個鉀離子 (K⁺) 運入</strong>。兩種離子都是<strong>逆</strong>濃度梯度移動，所以這是主動運輸。</p>
-<p><strong>重要性：膜電位。</strong>這個泵令細胞內 Na⁺ 濃度低、細胞外高，而 K⁺ 濃度則內高外低。它運出的正電荷 (3) 亦多於運入的 (2)，所以<strong>細胞內部相對外部帶負電</strong>。膜兩側這種電荷差別就是<span class="term">膜電位 (membrane potential)</span>，神經元依靠它來傳送神經衝動。</p>`),
+<p><strong>重要性：膜電位。</strong>這個泵令細胞內 Na⁺ 濃度低、細胞外高，而 K⁺ 濃度則內高外低。它運出的正電荷 (3) 亦多於運入的 (2)，加上部分 K⁺ 經開啟的鉀通道漏出細胞，所以<strong>細胞內部相對外部帶負電</strong>。膜兩側這種電荷差別就是<span class="term">膜電位 (membrane potential)</span>，神經元依靠它來傳送神經衝動。</p>`),
         examTip: L("Learn the numbers: 3 Na⁺ out, 2 K⁺ in, per ATP. Say the pump helps set up the membrane potential (inside negative).",
           "数を覚える: ATP 1個につき Na⁺ 3個が外へ、K⁺ 2個が内へ。ポンプが膜電位 (内側が負) をつくるのに役立つと書く。",
           "記住數目：每個 ATP，3 個 Na⁺ 運出、2 個 K⁺ 運入。要寫出泵有助建立膜電位 (內部為負)。")
@@ -423,7 +423,7 @@ ${fmFigure("zh")}
       { term: L("peripheral protein", "表在性タンパク質", "周邊蛋白"), def: L("A membrane protein attached to one surface of the bilayer.", "二重層の一方の表面に付着した膜タンパク質。", "附於雙層其中一面表面的膜蛋白。"), ahl: false },
       { term: L("osmosis", "浸透", "滲透"), def: L("Net movement of water molecules across a membrane from lower to higher solute concentration.", "水分子が膜を通って、溶質濃度の低い側から高い側へ正味で移動すること。", "水分子穿過膜，由溶質濃度較低處淨移向較高處。"), ahl: false },
       { term: L("aquaporin", "アクアポリン", "水通道蛋白"), def: L("A channel protein that lets water molecules cross a membrane quickly.", "水分子が膜を速く通るためのチャネルタンパク質。", "讓水分子快速穿過膜的通道蛋白。"), ahl: false },
-      { term: L("facilitated diffusion", "促進拡散", "易化擴散"), def: L("Passive movement of particles down a concentration gradient through a channel protein.", "粒子がチャネルタンパク質を通って濃度勾配に従って受動的に移動すること。", "粒子經通道蛋白順濃度梯度的被動移動。"), ahl: false },
+      { term: L("facilitated diffusion", "促進拡散", "易化擴散"), def: L("Passive movement of particles down a concentration gradient through a membrane protein, such as a channel protein (no ATP used).", "粒子がチャネルタンパク質などの膜タンパク質を通って、濃度勾配に従って受動的に移動すること (ATP は使わない)。", "粒子經通道蛋白等膜蛋白順濃度梯度的被動移動 (不使用 ATP)。"), ahl: false },
       { term: L("active transport", "能動輸送", "主動運輸"), def: L("Movement of particles across a membrane by a pump protein using ATP, possibly against a concentration gradient.", "ポンプタンパク質が ATP を使って粒子を膜の反対側へ運ぶこと。濃度勾配に逆らうこともできる。", "泵蛋白利用 ATP 把粒子運過膜，可以逆濃度梯度進行。"), ahl: false },
       { term: L("selectively permeable", "選択的透過性", "選擇透過性"), def: L("Allowing some substances to cross a membrane but not others.", "ある物質は通すが他の物質は通さないこと。", "讓某些物質通過膜，而不讓其他物質通過。"), ahl: false },
       { term: L("glycoprotein / glycolipid", "糖タンパク質／糖脂質", "糖蛋白／糖脂"), def: L("A protein or lipid with a carbohydrate chain on the outer surface of the membrane; used in cell adhesion and recognition.", "膜の外側の表面に糖鎖をもつタンパク質または脂質。細胞接着と認識に使われる。", "在膜外表面連有糖鏈的蛋白質或脂質，用於細胞黏附和識別。"), ahl: false },
@@ -449,18 +449,18 @@ ${fmFigure("zh")}
         right: L("Cholesterol is a modulator: it reduces fluidity at high temperature and prevents stiffening at low temperature.", "コレステロールは調節因子で、高温では流動性を下げ、低温では硬くなるのを防ぐ。", "膽固醇是調節者：高溫時降低流動性，低溫時防止變硬。") }
     ],
     beyondSyllabus: [
-      L("You do not need to calculate water potential, solute potential or pressure potential. The guide describes osmosis in terms of solute concentration and random movement.",
-        "水ポテンシャル、溶質ポテンシャル、圧ポテンシャルの計算は必要ない。ガイドは浸透を溶質濃度とランダムな運動で説明する。",
-        "你不需要計算水勢、溶質勢或壓力勢。課程指引以溶質濃度和隨機運動來描述滲透。"),
-      L("You do not need to memorize the terms hypotonic, hypertonic and isotonic. Explain in terms of higher and lower solute concentration.",
-        "低張・高張・等張という用語を覚える必要はない。溶質濃度が高い・低いで説明すればよい。",
-        "你不需要記住 hypotonic、hypertonic 和 isotonic 等詞。以溶質濃度較高和較低來解釋即可。"),
-      L("You do not need the carrier-protein model of facilitated diffusion or the terms uniport, symport and antiport. For SL the guide only asks for channel proteins; at HL, only the sodium–potassium pump and the sodium-dependent glucose cotransporter.",
-        "促進拡散の輸送体 (キャリア) モデルや、ユニポート・シンポート・アンチポートという用語は必要ない。SLでは求められるのはチャネルタンパク質だけで、HLではナトリウム・カリウムポンプとナトリウム依存性グルコース共輸送体だけである。",
-        "你不需要認識易化擴散的載體蛋白模型，或單向、同向、反向運輸 (uniport、symport、antiport) 等術語。SL 只要求通道蛋白；HL 只要求鈉鉀泵和鈉依賴性葡萄糖協同運輸體。"),
-      L("You do not need the step-by-step cycle of the sodium–potassium pump (phosphorylation and shape changes) or to calculate a membrane potential with the Nernst equation.",
-        "ナトリウム・カリウムポンプの段階的なサイクル (リン酸化と形の変化) や、ネルンストの式による膜電位の計算は必要ない。",
-        "你不需要認識鈉鉀泵的逐步循環 (磷酸化及形狀改變)，亦不需要用能斯特方程 (Nernst equation) 計算膜電位。"),
+      L("Not needed for this subtopic: water potential, solute potential and pressure potential (ψw = ψs + ψp). These are taught in D2.3 (Water potential, AHL part). Here, explain osmosis with solute concentration and random movement.",
+        "この小テーマでは不要: 水ポテンシャル・溶質ポテンシャル・圧ポテンシャル (ψw = ψs + ψp)。これらは D2.3 (水ポテンシャル, AHL の部分) で学ぶ。ここでは浸透を溶質濃度とランダムな運動で説明する。",
+        "此子課題不需要：水勢、溶質勢和壓力勢 (ψw = ψs + ψp)。這些會在 D2.3 (水勢，AHL 部分) 學習。這裏以溶質濃度和隨機運動解釋滲透即可。"),
+      L("Not needed for this subtopic: the terms hypotonic, hypertonic and isotonic, and their effects on cells (bursting, crenation, turgor, plasmolysis). These are taught in D2.3 (Water potential, SL and HL), where you must use them.",
+        "この小テーマでは不要: 低張 (hypotonic)・高張 (hypertonic)・等張 (isotonic) という用語と、細胞への影響 (破裂、収縮、膨圧、原形質分離)。これらは D2.3 (水ポテンシャル, SL・HL 共通) で学び、そこでは使えなければならない。",
+        "此子課題不需要：低滲 (hypotonic)、高滲 (hypertonic)、等滲 (isotonic) 等詞及其對細胞的影響 (脹破、皺縮、膨壓、質壁分離)。這些會在 D2.3 (水勢，SL 及 HL) 學習，屆時必須使用。"),
+      L("You do not need carrier proteins for facilitated diffusion (for example the GLUT glucose transporters) or the terms uniport, symport and antiport. Glucose really does cross many membranes by facilitated diffusion through carriers, but the guide only asks for channel proteins (B2.1.6) and, at HL, the sodium–potassium pump and the sodium-dependent glucose cotransporter.",
+        "促進拡散の輸送体 (キャリア) タンパク質 (例: グルコース輸送体 GLUT) や、ユニポート・シンポート・アンチポートという用語は必要ない。実際にはグルコースは多くの膜をキャリアによる促進拡散で通るが、ガイドが求めるのはチャネルタンパク質 (B2.1.6) と、HL ではナトリウム・カリウムポンプとナトリウム依存性グルコース共輸送体だけである。",
+        "你不需要認識易化擴散的載體蛋白 (例如葡萄糖運輸體 GLUT)，或單向、同向、反向運輸 (uniport、symport、antiport) 等術語。葡萄糖其實經載體以易化擴散穿過很多膜，但課程指引只要求通道蛋白 (B2.1.6)，HL 則只要求鈉鉀泵和鈉依賴性葡萄糖協同運輸體。"),
+      L("You do not need the step-by-step cycle of the sodium–potassium pump (phosphorylation and shape changes) or to calculate a membrane potential with the Nernst equation. Resting and action potentials in neurons are taught in C2.2 (Neural signalling).",
+        "ナトリウム・カリウムポンプの段階的なサイクル (リン酸化と形の変化) や、ネルンストの式による膜電位の計算は必要ない。ニューロンの静止電位と活動電位は C2.2 (神経による情報伝達) で学ぶ。",
+        "你不需要認識鈉鉀泵的逐步循環 (磷酸化及形狀改變)，亦不需要用能斯特方程 (Nernst equation) 計算膜電位。神經元的靜息電位和動作電位會在 C2.2 (神經訊號傳遞) 學習。"),
       L("You do not need detailed knowledge of the different cell-adhesion molecules or cell junctions (the guide says so). You only need the term CAM and the idea that different forms suit different junctions.",
         "個々の細胞接着分子や細胞間結合の詳しい知識は必要ない (ガイドにそう書かれている)。CAM という語と、結合の種類ごとに異なる形があるという考えがあればよい。",
         "你不需要詳細認識不同的細胞黏附分子或細胞間連接 (課程指引已明確指出)。只需認識 CAM 一詞，以及不同形式適用於不同連接這個概念。"),
@@ -682,7 +682,8 @@ ${fmFigure("zh")}
           L("The pump uses ATP (active transport) to move 3 Na⁺ out of the cell and 2 K⁺ into the cell.", "ポンプは ATP を使って (能動輸送) Na⁺ 3個を細胞外へ、K⁺ 2個を細胞内へ運ぶ。", "泵利用 ATP (主動運輸) 把 3 個 Na⁺ 運出細胞，2 個 K⁺ 運入細胞。"),
           L("This moves more positive charge out than in, so the inside of the cell becomes negative compared with the outside.", "入るより多くの正電荷が外へ出るので、細胞の内側は外側に対して負になる。", "運出的正電荷多於運入的，所以細胞內部相對外部帶負電。"),
           L("It creates concentration gradients: Na⁺ high outside / low inside; K⁺ high inside / low outside.", "濃度勾配をつくる: Na⁺ は外側で高く内側で低く、K⁺ は内側で高く外側で低い。", "建立濃度梯度：Na⁺ 外高內低；K⁺ 內高外低。"),
-          L("The difference in electrical charge across the membrane is the membrane potential (and the gradients are used when channels open to send signals).", "膜をはさむ電気的な差が膜電位である (勾配はチャネルが開いて信号を送るときに使われる)。", "膜兩側的電荷差別就是膜電位 (這些梯度在通道打開傳送訊號時被利用)。")
+          L("The difference in electrical charge across the membrane is the membrane potential (and the gradients are used when channels open to send signals).", "膜をはさむ電気的な差が膜電位である (勾配はチャネルが開いて信号を送るときに使われる)。", "膜兩側的電荷差別就是膜電位 (這些梯度在通道打開傳送訊號時被利用)。"),
+          L("K⁺ diffuses back out through open potassium channels (down the gradient made by the pump), adding to the negative charge inside.", "K⁺ は (ポンプがつくった勾配に従って) 開いたカリウムチャネルから外へ拡散し、内側の負の電荷を強める。", "K⁺ 經開啟的鉀通道 (順泵建立的梯度) 擴散出細胞，令細胞內的負電荷增加。")
         ],
         modelAnswer: L("Each cycle the pump uses ATP to move three Na⁺ out and two K⁺ in. More positive charge leaves than enters, so the inside becomes negative relative to the outside. It also keeps Na⁺ high outside and K⁺ high inside. The charge difference across the membrane is the membrane potential.", "1サイクルごとに ATP を使って Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ。入るより多くの正電荷が出るので、内側は外側に対して負になる。また Na⁺ は外側で、K⁺ は内側で高く保たれる。膜をはさむ電荷の差が膜電位である。", "每個循環泵利用 ATP 把三個 Na⁺ 運出、兩個 K⁺ 運入。運出的正電荷多於運入的，所以內部相對外部帶負電，同時令 Na⁺ 外高、K⁺ 內高。膜兩側的電荷差別就是膜電位。")
       },
