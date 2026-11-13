@@ -101,17 +101,17 @@
 <ul><li><strong>Double membrane with a small intermembrane space.</strong> Hydrogen ions (protons) are pumped into this narrow space. Because the volume is small, their concentration rises quickly, which builds a steep gradient used to make ATP.</li>
 <li><strong>Cristae (folds of the inner membrane) give a large surface area.</strong> The inner membrane carries the proteins for the electron transport chain and ATP synthesis, so more surface means more ATP made per second.</li>
 <li><strong>Matrix (the fluid inside the inner membrane) compartmentalizes the enzymes and substrates of the Krebs cycle.</strong> They are concentrated together, so the cycle runs efficiently.</li></ul>
-<p>(The reactions of respiration are in Theme C/D; here you only need the structure–function links above.)</p>`,
+<p>(The reactions of respiration are taught in C1.2 Cell respiration; here you only need the structure–function links above.)</p>`,
           `<p><span class="term">ミトコンドリア (mitochondrion)</span> は好気的な細胞呼吸で ATP をつくる。その適応は次のとおり。</p>
 <ul><li><strong>二重膜と小さな膜間腔。</strong> 水素イオン (プロトン) がこの狭い空間に汲み出される。体積が小さいので濃度がすぐ高くなり、ATP 合成に使われる急な勾配ができる。</li>
 <li><strong>クリステ (cristae、内膜のひだ) が大きな表面積を与える。</strong> 内膜には電子伝達系と ATP 合成のタンパク質があるので、表面積が大きいほど毎秒つくれる ATP が増える。</li>
 <li><strong>マトリックス (matrix、内膜の内側の液体) にクレブス回路の酵素と基質が区画化されている。</strong> 一か所に集まっているので、回路が効率よく進む。</li></ul>
-<p>(呼吸の反応は別のテーマで扱う。ここでは上の構造と機能のつながりだけでよい。)</p>`,
+<p>(呼吸の反応は C1.2 (細胞呼吸) で学ぶ。ここでは上の構造と機能のつながりだけでよい。)</p>`,
           `<p><span class="term">線粒體 (mitochondrion)</span> 透過有氧細胞呼吸製造 ATP。它的適應特徵：</p>
 <ul><li><strong>雙層膜，膜間腔體積小。</strong>氫離子 (質子) 被泵入這個狹窄的空間，由於體積小，濃度迅速上升，形成陡峭的梯度，用於製造 ATP。</li>
 <li><strong>嵴 (cristae，內膜的褶疊) 提供很大的表面積。</strong>內膜載有電子傳遞鏈及 ATP 合成所需的蛋白質，表面積越大，每秒製造的 ATP 越多。</li>
 <li><strong>線粒體基質 (matrix) 把克雷布斯循環 (Krebs cycle) 的酶和底物區室化。</strong>它們集中在一起，令循環更有效率。</li></ul>
-<p>(呼吸作用的反應在其他主題學習；這裏只需掌握以上結構與功能的關係。)</p>`),
+<p>(呼吸作用的反應在 C1.2 (細胞呼吸) 學習；這裏只需掌握以上結構與功能的關係。)</p>`),
         examTip: L("Link each feature to its effect: small intermembrane space → H⁺ concentration builds quickly; cristae → large surface area for ATP production; matrix → enzymes and substrates concentrated.",
           "各特徴を効果に結びつける: 小さな膜間腔→H⁺ 濃度がすぐ上がる、クリステ→ATP 産生のための大きな表面積、マトリックス→酵素と基質が集まる。",
           "把每個特徵連到其作用：膜間腔小→H⁺ 濃度迅速上升；嵴→製造 ATP 的表面積大；基質→酶和底物集中。")
@@ -248,12 +248,12 @@
         right: L("It has pores for controlled movement of molecules, and it breaks into vesicles during mitosis and meiosis before reforming.", "核膜には分子を制御して通す孔があり、体細胞分裂や減数分裂のときは小胞に分かれ、その後再形成される。", "核膜有孔讓分子受控地進出，並會在有絲分裂和減數分裂時分解成囊泡，之後再重新形成。") }
     ],
     beyondSyllabus: [
-      L("You do not need the detailed steps of cell respiration or photosynthesis here. B2.2 only asks how the mitochondrion and chloroplast are adapted in structure.",
-        "ここで呼吸や光合成の詳しい段階は必要ない。B2.2 が求めるのは、ミトコンドリアと葉緑体の構造がどう適応しているかだけである。",
-        "你在此不需要認識呼吸作用或光合作用的詳細步驟。B2.2 只要求說明線粒體和葉綠體在結構上如何適應功能。"),
-      L("You do not need the roles of the smooth endoplasmic reticulum, peroxisomes or the cytoskeleton in B2.2. The guide covers only the organelles named above.",
-        "B2.2 で滑面小胞体、ペルオキシソーム、細胞骨格の役割は必要ない。ガイドが扱うのは上に挙げた細胞小器官だけである。",
-        "在 B2.2 你不需要認識滑面內質網、過氧化物酶體或細胞骨架的作用。課程指引只涵蓋上文列出的細胞器。"),
+      L("Not needed for this subtopic: the detailed steps of cell respiration and photosynthesis (electron transport, Krebs cycle, Calvin cycle reactions). They are taught in C1.2 (Cell respiration) and C1.3 (Photosynthesis). B2.2 only asks how the mitochondrion and chloroplast are adapted in structure.",
+        "この小テーマでは不要: 細胞呼吸と光合成の詳しい段階 (電子伝達、クレブス回路やカルビン回路の反応)。これらは C1.2 (細胞呼吸) と C1.3 (光合成) で学ぶ。B2.2 が求めるのは、ミトコンドリアと葉緑体の構造がどう適応しているかだけである。",
+        "此子課題不需要：細胞呼吸和光合作用的詳細步驟 (電子傳遞、克雷布斯循環和卡爾文循環的反應)。這些會在 C1.2 (細胞呼吸) 和 C1.3 (光合作用) 學習。B2.2 只要求說明線粒體和葉綠體在結構上如何適應功能。"),
+      L("Not needed for this subtopic: the functions of the smooth endoplasmic reticulum and the cytoskeleton (peroxisomes are not in the guide at all). You must still identify smooth ER in electron micrographs and know that the cytoskeleton is made of microtubules and microfilaments: this is taught in A2.2 (Cell structure).",
+        "この小テーマでは不要: 滑面小胞体と細胞骨格の働き (ペルオキシソームはガイドにまったく出てこない)。ただし電子顕微鏡写真で滑面小胞体を識別すること、細胞骨格が微小管とマイクロフィラメントからなることは A2.2 (細胞の構造) で学び、必要である。",
+        "此子課題不需要：滑面內質網和細胞骨架的功能 (過氧化物酶體則完全不在課程指引內)。但你仍須能在電子顯微圖中辨認滑面內質網，並知道細胞骨架由微管和微絲組成，這些在 A2.2 (細胞結構) 學習。"),
       L("You do not need the Golgi apparatus’s roles beyond protein processing and secretion (the guide limits it to this), such as detailed carbohydrate or lipid processing.",
         "ゴルジ体のタンパク質のプロセシングと分泌以外の役割 (糖や脂質の詳しい修飾など) は必要ない (ガイドはここまでに限っている)。",
         "你不需要認識高爾基體在蛋白質加工和分泌以外的功能 (如詳細的糖類或脂質加工)，課程指引已限於此範圍。"),

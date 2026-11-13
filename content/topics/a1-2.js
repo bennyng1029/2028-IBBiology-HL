@@ -70,8 +70,7 @@
           "<p>骨格が強いので鎖は簡単には切れず、塩基の並び順が守られます。</p>",
           "<p>核苷酸連成鏈。一個核苷酸的磷酸與下一個核苷酸的糖結合。這些是<strong>共價鍵</strong>，所以很強。</p>" +
           "<p>沿著鏈重複這種連接，便形成一條由共價鍵連接的原子連續線：糖、磷酸、糖、磷酸……這就是 DNA 或 RNA 鏈的<strong>糖−磷酸骨架 (sugar–phosphate backbone)</strong>。鹼基從骨架向側面伸出。</p>" +
-          "<p>骨架很堅固，鏈不易斷裂，因此鹼基的排列次序得到保護。</p>"),
-        widget: "dna-builder"
+          "<p>骨架很堅固，鏈不易斷裂，因此鹼基的排列次序得到保護。</p>")
       },
       {
         ref: "A1.2.4",
@@ -101,8 +100,7 @@
           "<tr><td>胞嘧啶 (cytosine)</td><td>C</td><td>有</td><td>有</td></tr>" +
           "<tr><td>胸腺嘧啶 (thymine)</td><td>T</td><td>有</td><td>無</td></tr>" +
           "<tr><td>尿嘧啶 (uracil)</td><td>U</td><td>無</td><td>有</td></tr></table>" +
-          "<p>沿著一條鏈的鹼基序列 (排列次序) 就是<strong>密碼 (code)</strong>。就像字母的次序組成詞語，鹼基的次序承載資訊。這是基因儲存指令的基礎。</p>"),
-        widget: "dna-builder"
+          "<p>沿著一條鏈的鹼基序列 (排列次序) 就是<strong>密碼 (code)</strong>。就像字母的次序組成詞語，鹼基的次序承載資訊。這是基因儲存指令的基礎。</p>")
       },
       {
         ref: "A1.2.5",
@@ -121,7 +119,6 @@
           "<p>核苷酸以<strong>縮合反應 (condensation reaction)</strong> 連接。每次反應中，一個核苷酸的磷酸與另一個核苷酸的糖結合，並<strong>釋出一分子水</strong>。重複這個過程便建成糖−磷酸骨架。</p>" +
           "<p>RNA 是核苷酸的<strong>單鏈</strong>，含有鹼基 A、U、G 和 C。</p>" +
           "<p><strong>技能。</strong>你應能用圓形 (磷酸)、五邊形 (核糖) 和長方形 (鹼基)，繪畫並辨認單個核苷酸和短的 RNA 聚合物。在 RNA 聚合物中，五邊形與圓形重複連接成鏈，每個五邊形伸出一個長方形。</p>"),
-        widget: "dna-builder",
         examTip: L(
           "\"Condensation\" means joining with the loss of water. The opposite, adding water to break a bond, is hydrolysis. Always mention water when asked about condensation.",
           "「縮合」は水が失われながらつながることです。逆に水を加えて結合を切るのは加水分解です。縮合について問われたら、必ず水に触れましょう。",
@@ -138,6 +135,7 @@
           "<p style=\"text-align:center\"><strong>A pairs with T &nbsp;&nbsp;|&nbsp;&nbsp; G pairs with C</strong></p>" +
           "<p>Each hydrogen bond is weak, but there are very many along a DNA molecule, so together they hold the strands firmly. They can still be pulled apart when needed, for example when DNA is copied.</p>" +
           "<p><strong>How to draw it.</strong> Draw the two backbones as two lines running in opposite directions (antiparallel). Draw the bases as rectangles between the strands, with A opposite T and G opposite C, and dashed lines for the hydrogen bonds. You do <em>not</em> need to draw the helical (twisted) shape.</p>" +
+          "<p>Try it: in the DNA builder below, open the <em>Build a DNA strand</em> tab to pair bases on antiparallel strands, and the <em>DNA vs RNA</em> tab for A1.2.7. HL students can also show the 5′ and 3′ ends and colour purines and pyrimidines there.</p>" +
           "<p>You are <em>not</em> required to memorize the relative lengths of the bases, or the number of hydrogen bonds in each pair.</p>",
           "<p>DNA は<strong>二重らせん (double helix)</strong> です。ヌクレオチドの2本の鎖が互いにねじれ合っています。</p>" +
           "<ul><li>2本の鎖は<strong>逆向き</strong>に走っています。これを<strong>逆平行 (antiparallel)</strong> といいます。</li>" +
@@ -145,6 +143,7 @@
           "<p style=\"text-align:center\"><strong>A は T と対をつくる &nbsp;&nbsp;|&nbsp;&nbsp; G は C と対をつくる</strong></p>" +
           "<p>水素結合1本は弱いのですが、DNA 分子に沿って非常に多くあるため、全体として2本の鎖をしっかり結びつけます。それでも、DNA が複製されるときなど、必要なときには引き離すことができます。</p>" +
           "<p><strong>図の描き方。</strong>2本の骨格を、逆向きに走る2本の線 (逆平行) として描きます。塩基は鎖の間の長方形で表し、A の向かいに T、G の向かいに C を置き、水素結合は破線で描きます。らせん (ねじれた) 形を描く必要は<em>ありません</em>。</p>" +
+          "<p>やってみよう：下の DNA ビルダーで「DNA 鎖をつくる」タブを開くと、逆平行の鎖で塩基を対にできます。「DNA と RNA」タブは A1.2.7 に対応します。HL の人は、そこで 5′・3′ 末端の表示や、プリン・ピリミジンの色分けもできます。</p>" +
           "<p>塩基の相対的な長さや、各塩基対の水素結合の数を暗記する必要は<em>ありません</em>。</p>",
           "<p>DNA 是<strong>雙螺旋 (double helix)</strong>：兩條核苷酸鏈互相纏繞。</p>" +
           "<ul><li>兩條鏈的走向<strong>相反</strong>，稱為<strong>反向平行 (antiparallel)</strong>。</li>" +
@@ -152,6 +151,7 @@
           "<p style=\"text-align:center\"><strong>A 與 T 配對 &nbsp;&nbsp;|&nbsp;&nbsp; G 與 C 配對</strong></p>" +
           "<p>每個氫鍵都很弱，但 DNA 分子上有非常多氫鍵，合起來能把兩條鏈牢牢固定。需要時 (例如 DNA 複製時) 它們仍可被拉開。</p>" +
           "<p><strong>繪圖方法。</strong>把兩條骨架畫成方向相反的兩條線 (反向平行)。鹼基用長方形畫在兩條鏈之間，A 對 T、G 對 C，氫鍵用虛線表示。<em>不需要</em>畫出螺旋 (扭曲) 形狀。</p>" +
+          "<p>試試看：在下方的 DNA 建構器中，打開「建構 DNA 鏈」分頁，在反向平行的鏈上配對鹼基；「DNA 與 RNA」分頁則對應 A1.2.7。HL 學生還可以在那裏顯示 5′ 與 3′ 端，並以顏色區分嘌呤與嘧啶。</p>" +
           "<p><em>不需要</em>記住各種鹼基的相對長度，或每個鹼基對的氫鍵數目。</p>"),
         widget: "dna-builder",
         examTip: L(
@@ -181,8 +181,7 @@
           "<tr><td>戊糖</td><td>脫氧核糖</td><td>核糖</td></tr>" +
           "<tr><td>含氮鹼基</td><td>A、T、G、C</td><td>A、U、G、C</td></tr></table>" +
           "<p><strong>核糖與脫氧核糖。</strong>兩者都是環狀的五碳糖。核糖在 2′ 位碳上有 –OH 基團，而脫氧核糖該處只有 –H (「脫氧」即「少了一個氧」)。你應能繪出這個差異的簡圖。</p>" +
-          "<p><strong>核酸的例子。</strong>要熟悉 DNA (例如染色體中的 DNA) 和不同類型的 RNA，如信使 RNA (messenger RNA, mRNA)、轉運 RNA (transfer RNA, tRNA) 和核糖體 RNA (ribosomal RNA, rRNA)。它們的功能會在主題 D 中詳細學習。</p>"),
-        widget: "dna-builder"
+          "<p><strong>核酸的例子。</strong>要熟悉 DNA (例如染色體中的 DNA) 和不同類型的 RNA，如信使 RNA (messenger RNA, mRNA)、轉運 RNA (transfer RNA, tRNA) 和核糖體 RNA (ribosomal RNA, rRNA)。它們的功能會在主題 D 中詳細學習。</p>")
       },
       {
         ref: "A1.2.8",
@@ -280,7 +279,6 @@
           "<ul><li><strong>複製 (replication)：</strong>以舊鏈為模板，按 5′→3′ 合成新的 DNA 鏈。</li>" +
           "<li><strong>轉錄 (transcription)：</strong>以 DNA 為模板，按 5′→3′ 合成 RNA。</li>" +
           "<li><strong>翻譯 (translation)：</strong>核糖體按 5′→3′ 方向讀取 mRNA。</li></ul>"),
-        widget: "dna-builder",
         examTip: L(
           "When you label a diagram, the 5′ end of a strand is the end with the free phosphate and the 3′ end is the end with the free –OH. On two antiparallel strands the labels are opposite each other.",
           "図に記入するとき、鎖の5′末端は遊離のリン酸のある端、3′末端は遊離の –OH のある端です。逆平行の2本の鎖では、記号は互いに反対になります。",
@@ -305,8 +303,7 @@
           "<ul><li><strong>嘌呤 (purine)</strong> 有雙環結構：腺嘌呤 (A) 和鳥嘌呤 (G)。</li>" +
           "<li><strong>嘧啶 (pyrimidine)</strong> 有單環結構：胞嘧啶 (C)、胸腺嘧啶 (T) 和尿嘧啶 (U)。</li></ul>" +
           "<p>在 DNA 中，每個鹼基對都是一個嘌呤配一個嘧啶：A–T 和 G–C。兩種鹼基對的<strong>長度相同</strong>，所以不論鹼基序列如何，兩條骨架之間的距離在整個分子上都保持一致。螺旋的三維結構處處相同，使 DNA 螺旋保持穩定。</p>" +
-          "<p>(嘌呤與嘌呤配對會太寬，嘧啶與嘧啶配對則太窄。)</p>"),
-        widget: "dna-builder"
+          "<p>(嘌呤與嘌呤配對會太寬，嘧啶與嘧啶配對則太窄。)</p>")
       },
       {
         ref: "A1.2.13",

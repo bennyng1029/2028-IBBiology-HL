@@ -57,7 +57,8 @@
           "<p>Opposite partial charges attract. The δ<sup>+</sup> hydrogen of one water molecule is attracted to the δ<sup>−</sup> oxygen of a <em>different</em> water molecule. This attraction is a <strong>hydrogen bond</strong>.</p>" +
           "<ul><li>A hydrogen bond is much weaker than a covalent bond, but there are huge numbers of them.</li>" +
           "<li>They constantly break and re-form in liquid water.</li></ul>" +
-          "<p><strong>How to draw it.</strong> Draw each molecule as O with two H. Mark δ<sup>−</sup> on O and δ<sup>+</sup> on each H. Draw the hydrogen bond as a <em>dashed line</em> from an H of one molecule to the O of the next. Always draw at least two molecules.</p>",
+          "<p><strong>How to draw it.</strong> Draw each molecule as O with two H. Mark δ<sup>−</sup> on O and δ<sup>+</sup> on each H. Draw the hydrogen bond as a <em>dashed line</em> from an H of one molecule to the O of the next. Always draw at least two molecules.</p>" +
+          "<p>The interactive below also has tabs for cohesion, adhesion, solvent properties and water versus air, so you can come back to it for A1.1.3 to A1.1.6.</p>",
           "<p>水分子 (H<sub>2</sub>O) では、酸素原子が2つの水素原子と<strong>共有結合 (covalent bond)</strong> (電子対を共有する結合) でつながっています。</p>" +
           "<p>共有された電子は<strong>均等には共有されません</strong>。酸素のほうが水素よりも電子を強く引き寄せます。その結果、</p>" +
           "<ul><li>酸素の側はわずかに負の電荷をもち、δ<sup>−</sup> と書きます。</li>" +
@@ -66,7 +67,8 @@
           "<p>異なる部分電荷は引き合います。ある水分子の δ<sup>+</sup> の水素は、<em>別の</em>水分子の δ<sup>−</sup> の酸素に引き寄せられます。この引力が<strong>水素結合 (hydrogen bond)</strong> です。</p>" +
           "<ul><li>水素結合は共有結合よりずっと弱いのですが、数が非常に多くなります。</li>" +
           "<li>液体の水の中では、絶えず切れたりつながったりしています。</li></ul>" +
-          "<p><strong>図の描き方。</strong>各分子を O と 2 つの H で描き、O に δ<sup>−</sup>、各 H に δ<sup>+</sup> を付けます。水素結合は、ある分子の H から隣の分子の O へ<em>破線</em>で描きます。最低でも2分子を描きます。</p>",
+          "<p><strong>図の描き方。</strong>各分子を O と 2 つの H で描き、O に δ<sup>−</sup>、各 H に δ<sup>+</sup> を付けます。水素結合は、ある分子の H から隣の分子の O へ<em>破線</em>で描きます。最低でも2分子を描きます。</p>" +
+          "<p>下のインタラクティブ教材には、凝集力・付着力・溶媒としての性質・水と空気の比較のタブもあるので、A1.1.3〜A1.1.6 を学ぶときにも戻って使えます。</p>",
           "<p>水分子 (H<sub>2</sub>O) 中，一個氧原子透過<strong>共價鍵 (covalent bond)</strong> (共用電子對) 與兩個氫原子連接。</p>" +
           "<p>共用電子<strong>並非平均分配</strong>。氧原子比氫原子更強烈地吸引共用電子，因此：</p>" +
           "<ul><li>氧的一端帶少量負電荷，寫作 δ<sup>−</sup>；</li>" +
@@ -75,7 +77,8 @@
           "<p>相反的部分電荷會互相吸引。一個水分子帶 δ<sup>+</sup> 的氫，會被<em>另一個</em>水分子帶 δ<sup>−</sup> 的氧吸引。這種吸引力就是<strong>氫鍵 (hydrogen bond)</strong>。</p>" +
           "<ul><li>氫鍵遠比共價鍵弱，但數量極多。</li>" +
           "<li>在液態水中，氫鍵不斷斷開又重新形成。</li></ul>" +
-          "<p><strong>繪圖方法。</strong>每個分子畫成一個 O 和兩個 H，在 O 上標 δ<sup>−</sup>，在每個 H 上標 δ<sup>+</sup>。氫鍵用<em>虛線</em>由一個分子的 H 畫到相鄰分子的 O。至少要畫兩個分子。</p>"),
+          "<p><strong>繪圖方法。</strong>每個分子畫成一個 O 和兩個 H，在 O 上標 δ<sup>−</sup>，在每個 H 上標 δ<sup>+</sup>。氫鍵用<em>虛線</em>由一個分子的 H 畫到相鄰分子的 O。至少要畫兩個分子。</p>" +
+          "<p>下方的互動工具還有內聚力、附著力、溶劑性質和水與空氣比較的分頁，學習 A1.1.3 至 A1.1.6 時可以回來使用。</p>"),
         widget: "water-hbond",
         examTip: L(
           "A hydrogen bond is between molecules, from δ+ H to δ− O. The O–H bond inside a molecule is covalent. Do not mix them up, and do not write \"hydrogen bonds break when water boils\" as if the molecule splits: only the attractions between molecules are overcome.",

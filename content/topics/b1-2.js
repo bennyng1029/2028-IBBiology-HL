@@ -49,11 +49,11 @@ IB.registerTopic({
 <p>The amine group, alpha carbon and carboxyl group are the same in every amino acid. Together they make the <strong>backbone</strong> once amino acids are joined. Only the R-group changes from one amino acid to the next. That one changing part is what makes amino acids, and later proteins, different from each other.</p>
 <p><em>Analogy:</em> think of a LEGO brick. Every brick has the same studs underneath so it can click onto the next one (the backbone). The coloured, shaped top is different on each brick (the R-group).</p>
 <div class="note"><p>You must be able to <strong>draw</strong> this generalized amino acid: alpha carbon in the middle, with amine group, carboxyl group, H and R attached. You do not need to know any individual amino acid by name or structure. The one exception comes later: cysteine, in disulfide bonds.</p></div>
-<p><strong>The staircase for this topic.</strong> We will climb one step at a time. Steps 1 and 2 are core (SL and HL), along with the ideas of variety (B1.2.4) and denaturation (B1.2.5). Steps 3 to 7, the named levels of structure, are <strong>AHL</strong> (HL only).</p>
+<p><strong>The staircase for this topic.</strong> We will climb one step at a time. Steps 1 and 2 are core (SL and HL). So are the variety of possible sequences (B1.2.4: 20 amino acids, any length, any order) and denaturation (B1.2.5). Step 3 is split: the sequence itself is met in B1.2.4 (core), but the term <em>primary structure</em> and how the sequence decides the 3D shape (B1.2.7) are <strong>AHL</strong>. Steps 4 to 7 are <strong>AHL</strong> (HL only).</p>
 <ol>
 <li>Amino acid (this section)</li>
 <li>Peptide bond: joining amino acids</li>
-<li>Primary structure: the sequence</li>
+<li>Primary structure: the sequence (variety of sequences: core; how it decides shape: AHL)</li>
 <li>Secondary structure: helices and sheets (AHL)</li>
 <li>Tertiary structure: the folded chain (AHL)</li>
 <li>Quaternary structure: several chains together (AHL)</li>
@@ -69,11 +69,11 @@ IB.registerTopic({
 <p>アミノ基、α炭素、カルボキシ基はどのアミノ酸でも同じです。アミノ酸がつながると、この部分が<strong>骨格 (backbone)</strong>になります。アミノ酸ごとに変わるのはR基だけです。この変わる部分が、アミノ酸を、そして後にはタンパク質を、互いに違うものにします。</p>
 <p><em>たとえ：</em>レゴブロックを考えてください。どのブロックも、次のブロックとはめ込める下側の突起は同じです（骨格）。上側の色や形はブロックごとに違います（R基）。</p>
 <div class="note"><p>一般化したアミノ酸の図を<strong>描ける (draw)</strong>ようにしましょう。中心にα炭素、そこにアミノ基、カルボキシ基、H、Rがつきます。個々のアミノ酸の名前や構造を覚える必要はありません。例外は、後で出てくるシステイン (cysteine)（ジスルフィド結合）だけです。</p></div>
-<p><strong>この単元の階段。</strong>一段ずつ登ります。1と2は共通（SLとHL）で、多様性 (B1.2.4) と変性 (B1.2.5) も共通です。3〜7、つまり構造の各段階の名前は<strong>AHL</strong>（HLのみ）です。</p>
+<p><strong>この単元の階段。</strong>一段ずつ登ります。1と2は共通（SLとHL）です。可能な配列の多様性（B1.2.4：20種類のアミノ酸、任意の長さ、任意の順序）と変性 (B1.2.5) も共通です。3は分かれます。配列そのものはB1.2.4（共通）で学びますが、<em>一次構造 (primary structure)</em>という用語と、配列が立体構造を決めるしくみ (B1.2.7) は<strong>AHL</strong>です。4〜7は<strong>AHL</strong>（HLのみ）です。</p>
 <ol>
 <li>アミノ酸（この節）</li>
 <li>ペプチド結合 (peptide bond)：アミノ酸をつなぐ</li>
-<li>一次構造 (primary structure)：配列</li>
+<li>一次構造 (primary structure)：配列（配列の多様性は共通、形を決めるしくみはAHL）</li>
 <li>二次構造 (secondary structure)：らせんとシート（AHL）</li>
 <li>三次構造 (tertiary structure)：折りたたまれた鎖（AHL）</li>
 <li>四次構造 (quaternary structure)：複数の鎖の集まり（AHL）</li>
@@ -89,11 +89,11 @@ IB.registerTopic({
 <p>氨基、α-碳和羧基在每種氨基酸中都相同。氨基酸連接後，這部分就成為<strong>骨架 (backbone)</strong>。氨基酸之間只有 R 基不同。就是這個可變部分，令氨基酸以至其後的蛋白質各不相同。</p>
 <p><em>比喻：</em>想像一塊積木。每塊積木底部的凸點都一樣，可以扣在下一塊上（骨架）。頂部的顏色和形狀則每塊不同（R 基）。</p>
 <div class="note"><p>你須要懂得<strong>繪畫 (draw)</strong>這個通用氨基酸：中央是α-碳，連接氨基、羧基、H 和 R。你不用認識任何個別氨基酸的名稱或結構。唯一例外是之後會出現的半胱氨酸 (cysteine)（二硫鍵）。</p></div>
-<p><strong>本課題的樓梯。</strong>我們一步一步向上走。第 1 和第 2 步屬核心內容（SL 和 HL 都要學），多樣性 (B1.2.4) 和變性 (B1.2.5) 也是核心。第 3 至 7 步，即各級結構的名稱，屬<strong>AHL</strong>（只限 HL）。</p>
+<p><strong>本課題的樓梯。</strong>我們一步一步向上走。第 1 和第 2 步屬核心內容（SL 和 HL 都要學）。可能序列的多樣性（B1.2.4：20 種氨基酸、任何長度、任何次序）和變性 (B1.2.5) 也是核心。第 3 步分兩部分：序列本身在 B1.2.4（核心）學習，但<em>一級結構 (primary structure)</em>這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬<strong>AHL</strong>。第 4 至 7 步屬<strong>AHL</strong>（只限 HL）。</p>
 <ol>
 <li>氨基酸（本節）</li>
 <li>肽鍵 (peptide bond)：把氨基酸連起來</li>
-<li>一級結構 (primary structure)：序列</li>
+<li>一級結構 (primary structure)：序列（序列的多樣性屬核心；如何決定形狀屬 AHL）</li>
 <li>二級結構 (secondary structure)：螺旋和摺板（AHL）</li>
 <li>三級結構 (tertiary structure)：摺疊好的長鏈（AHL）</li>
 <li>四級結構 (quaternary structure)：多條長鏈組合（AHL）</li>
@@ -129,7 +129,7 @@ IB.registerTopic({
 <p>Two amino acids make a <strong>dipeptide</strong>. Adding a third makes a tripeptide, and so on. A long chain is a <strong>polypeptide</strong>. Each extra amino acid is added by another condensation reaction, so one water molecule is released for every peptide bond made. In cells, ribosomes build polypeptides this way.</p>
 <p>The reverse reaction is <strong>hydrolysis</strong>: water is added and the peptide bond is broken. This is how proteins are digested.</p>
 <p><em>Analogy:</em> linking paper clips, or railway carriages. Each coupling is strong and permanent (covalent). It only comes apart if something, like a digestive enzyme, specifically unhooks it.</p>
-<div class="note"><p><strong>Clearing up a classic mix-up.</strong> The peptide bond is a <em>strong covalent bond in the backbone</em>. It is not a hydrogen bond and it is not a disulfide bond. Remember: <em>peptide bond = primary structure</em>.</p></div>
+<div class="note"><p><strong>Clearing up a classic mix-up.</strong> The peptide bond is a <em>strong covalent bond in the backbone</em>. It is not a hydrogen bond and it is not a disulfide bond. Remember: <em>peptide bonds hold the amino acid sequence together</em> (at HL this sequence is called the primary structure).</p></div>
 <p>The guide expects you to model this reaction with molecular models (physical or digital), write the word equation, and draw a generalized dipeptide. In your drawing, the peptide bond is the C–N link between the two alpha-carbon units, with one carbon double-bonded to oxygen (C=O), and the nitrogen carrying an H.</p>`,
         ja: `<p>2つのアミノ酸は<strong>縮合反応 (condensation reaction)</strong>で結合します。縮合反応とは、2つの分子がつながるときに小さな分子がはずれる反応で、ここでは<strong>水</strong>がはずれます。</p>
 <ul>
@@ -142,7 +142,7 @@ IB.registerTopic({
 <p>アミノ酸2個で<strong>ジペプチド (dipeptide)</strong>ができます。3個目を加えるとトリペプチド、というように続きます。長い鎖は<strong>ポリペプチド (polypeptide)</strong>です。アミノ酸を1つ加えるたびに縮合反応が起こるので、ペプチド結合1つにつき水が1分子できます。細胞では、リボソームがこのようにポリペプチドをつくります。</p>
 <p>逆の反応は<strong>加水分解 (hydrolysis)</strong>です。水が加わってペプチド結合が切れます。タンパク質の消化はこの反応です。</p>
 <p><em>たとえ：</em>クリップや列車の連結に似ています。1つ1つの連結は強く、ずっと保たれます（共有結合）。消化酵素のように、それを狙ってはずすものがなければ、はずれません。</p>
-<div class="note"><p><strong>よくある混同を整理します。</strong>ペプチド結合は骨格にある<em>強い共有結合</em>です。水素結合でも、ジスルフィド結合でもありません。覚え方：<em>ペプチド結合 = 一次構造</em>。</p></div>
+<div class="note"><p><strong>よくある混同を整理します。</strong>ペプチド結合は骨格にある<em>強い共有結合</em>です。水素結合でも、ジスルフィド結合でもありません。覚え方：<em>ペプチド結合がアミノ酸の配列をつなぎとめる</em>（HLではこの配列を一次構造 (primary structure) とよびます）。</p></div>
 <p>IBのガイドでは、分子模型（実物またはデジタル）でこの反応を再現し、言葉の式を書き、一般化したジペプチドを描くことが求められます。図では、ペプチド結合は2つのα炭素ユニットをつなぐC–N結合で、炭素は酸素と二重結合（C=O）、窒素にはHがついています。</p>`,
         zh: `<p>兩個氨基酸以<strong>縮合反應 (condensation reaction)</strong>連接。縮合反應是把兩個分子連起來，同時放出一個小分子，這裏放出的是<strong>水</strong>。</p>
 <ul>
@@ -155,7 +155,7 @@ IB.registerTopic({
 <p>兩個氨基酸形成<strong>二肽 (dipeptide)</strong>。再加第三個就成三肽，如此類推。很長的鏈稱為<strong>多肽 (polypeptide)</strong>。每加入一個氨基酸就進行一次縮合反應，所以每形成一個肽鍵就釋出一個水分子。在細胞內，核糖體就是這樣建造多肽的。</p>
 <p>相反的反應是<strong>水解 (hydrolysis)</strong>：加入水，肽鍵斷開。蛋白質的消化就是這樣進行。</p>
 <p><em>比喻：</em>像把紙夾或火車車卡連起來。每個連接都牢固而持久（共價鍵）。除非有東西（例如消化酶）專門把它解開，否則不會分開。</p>
-<div class="note"><p><strong>澄清一個典型混淆。</strong>肽鍵是骨架上的<em>強共價鍵</em>。它不是氫鍵，也不是二硫鍵。記住：<em>肽鍵 = 一級結構</em>。</p></div>
+<div class="note"><p><strong>澄清一個典型混淆。</strong>肽鍵是骨架上的<em>強共價鍵</em>。它不是氫鍵，也不是二硫鍵。記住：<em>肽鍵把氨基酸序列連在一起</em>（HL 稱這個序列為一級結構 (primary structure)）。</p></div>
 <p>IB 指引要求你用分子模型（實物或電腦）模擬此反應、寫出文字方程式，並繪畫通用二肽。繪圖時，肽鍵是連接兩個α-碳單位的 C–N 鍵，其中的碳與氧形成雙鍵 (C=O)，氮則帶有一個 H。</p>`
       },
       examTip: {
@@ -226,7 +226,7 @@ IB.registerTopic({
 <li>100 amino acids: 20<sup>100</sup> ≈ 1.3 × 10<sup>130</sup>, far more than the number of atoms in the observable universe</li>
 </ul>
 <p><em>Analogy:</em> a 20-letter alphabet and no limit on word length. The same letters make a short word or a book-length one, and a different order is a different word.</p>
-<p>Real polypeptides show the range of lengths. Insulin has 51 amino acids in total (in two chains). One of the chains in haemoglobin has about 140. One chain of collagen has roughly a thousand. The giant muscle protein titin has over 30 000. In real life only a tiny fraction of the possible sequences exist, because genes code for particular ones.</p>`,
+<p>Real polypeptides show the range of lengths. Insulin has 51 amino acids in total, in two chains (21 + 30). Each haemoglobin chain has about 140 (141 or 146). One collagen chain has roughly 1000. The giant muscle protein titin has about 30 000 or more (you meet titin again in B3.3, at HL). In real life only a tiny fraction of the possible sequences exist, because genes code for particular ones.</p>`,
         ja: `<p>次の3つの事実が重なって、大きな多様性が生まれます。</p>
 <ol>
 <li>遺伝暗号でコードされるアミノ酸は<strong>20種類</strong>です。</li>
@@ -241,7 +241,7 @@ IB.registerTopic({
 <li>アミノ酸100個：20<sup>100</sup> ≈ 1.3 × 10<sup>130</sup>。観測可能な宇宙の原子の数よりはるかに多い数です。</li>
 </ul>
 <p><em>たとえ：</em>20文字のアルファベットがあり、単語の長さに制限がない状況です。同じ文字でも短い単語にも本1冊分にもなり、順序が違えば別の単語です。</p>
-<p>実際のポリペプチドの長さの幅を見てみましょう。インスリン (insulin) は合計51個のアミノ酸（2本の鎖）です。ヘモグロビン (haemoglobin) の鎖1本は約140個です。コラーゲン (collagen) の鎖1本は約1000個です。筋肉の巨大なタンパク質タイチン (titin) は3万個を超えます。現実には、遺伝子が特定の配列をコードするので、可能な配列のごく一部だけが存在します。</p>`,
+<p>実際のポリペプチドの長さの幅を見てみましょう。インスリン (insulin) は2本の鎖で合計51個のアミノ酸です（21個 + 30個）。ヘモグロビン (haemoglobin) の鎖は1本あたり約140個（141個または146個）です。コラーゲン (collagen) の鎖1本は約1000個です。筋肉の巨大なタンパク質タイチン (titin) は約3万個以上です（タイチンはHLのB3.3でまた出てきます）。現実には、遺伝子が特定の配列をコードするので、可能な配列のごく一部だけが存在します。</p>`,
         zh: `<p>以下三個事實合起來，就造成龐大的多樣性：</p>
 <ol>
 <li>遺傳密碼編碼<strong> 20 種不同的氨基酸</strong>。</li>
@@ -256,7 +256,7 @@ IB.registerTopic({
 <li>100 個氨基酸：20<sup>100</sup> ≈ 1.3 × 10<sup>130</sup>，遠多於可觀測宇宙中的原子數目。</li>
 </ul>
 <p><em>比喻：</em>有 20 個字母的字母表，而字的長度不設上限。同樣的字母可以組成短字，也可以組成一整本書那麼長的字，次序不同就是另一個字。</p>
-<p>真實多肽的長度相差很大。胰島素 (insulin) 合共有 51 個氨基酸（分成兩條鏈）。血紅蛋白 (haemoglobin) 的一條鏈約有 140 個。膠原蛋白 (collagen) 的一條鏈約有一千個。巨大的肌肉蛋白質肌聯蛋白 (titin) 超過 3 萬個。實際上，只有可能序列中極少數真的存在，因為基因只編碼特定的序列。</p>`
+<p>真實多肽的長度相差很大。胰島素 (insulin) 合共有 51 個氨基酸，分成兩條鏈（21 + 30 個）。血紅蛋白 (haemoglobin) 每條鏈約有 140 個（141 或 146 個）。膠原蛋白 (collagen) 的一條鏈約有一千個。巨大的肌肉蛋白質肌聯蛋白 (titin) 約有 3 萬個或以上（HL 的 B3.3 會再遇到肌聯蛋白）。實際上，只有可能序列中極少數真的存在，因為基因只編碼特定的序列。</p>`
       },
       examTip: {
         en: "For 'Calculate' questions, show the working: 20<sup>n</sup>, then the value. The base is 20 (types of amino acid) and the power is the chain length.",
@@ -276,22 +276,22 @@ IB.registerTopic({
       },
       widget: "denaturation",
       body: {
-        en: `<p>A protein's function depends on its three-dimensional shape. <strong>Denaturation</strong> is a change in that shape, caused by something like heat or extreme pH. After denaturation the protein usually can no longer do its job. An enzyme's active site, for example, no longer fits its substrate. Denaturation is often permanent (a boiled egg white does not turn clear again).</p>
+        en: `<p>A protein's function depends on its three-dimensional shape. <strong>Denaturation</strong> is a change in that shape, caused by something like heat or extreme pH. After denaturation the protein usually can no longer do its job. An enzyme's active site, for example, no longer fits its substrate. Denaturation is usually permanent: the protein does not return to its original shape when conditions return to normal (a boiled egg white does not turn clear again).</p>
 <p><strong>Temperature.</strong> Higher temperature gives atoms more kinetic energy, so they vibrate more. Above a certain point the vibrations break the weak interactions that hold the protein in shape, and the chain unfolds.</p>
 <p><strong>pH.</strong> A very high or low pH changes the hydrogen-ion concentration around the protein. This changes the electrical charges on some groups in the protein. Charge-based attractions between parts of the chain are lost, so the shape changes.</p>
-<div class="note"><p><strong>The key point.</strong> Denaturation breaks the <em>weak</em> bonds and interactions that hold the folded shape (hydrogen bonds, ionic bonds, hydrophobic interactions). It does <strong>not</strong> break the <strong>peptide bonds</strong>. The amino acid sequence, the primary structure, stays the same. The chain is not cut. It unfolds, like a tangled string being pulled loose, not a string being cut.</p></div>
+<div class="note"><p><strong>The key point.</strong> Denaturation breaks the <em>weak</em> bonds and interactions that hold the folded shape (hydrogen bonds, ionic bonds, hydrophobic interactions). It does <strong>not</strong> break the <strong>peptide bonds</strong>. The amino acid sequence (at HL called the primary structure) stays the same. The chain is not cut. It unfolds, like a tangled string being pulled loose, not a string being cut.</p></div>
 <p><em>Analogy:</em> a folded paper aeroplane. If you crush it, it will not fly (function lost), yet it is still the same sheet of paper (peptide bonds intact).</p>
 <p>At SL, you only need to know that pH and temperature affect protein structure and what denaturation means. The next AHL sections explain exactly which bonds hold each level, so you can say precisely what is lost.</p>`,
-        ja: `<p>タンパク質の働きは、立体的な形に依存します。<strong>変性 (denaturation)</strong>とは、熱や極端なpHなどによってその形が変わることです。変性すると、たいていは本来の働きができなくなります。たとえば酵素の活性部位が基質に合わなくなります。変性はしばしば元に戻りません（ゆで卵の白身は透明に戻りません）。</p>
+        ja: `<p>タンパク質の働きは、立体的な形に依存します。<strong>変性 (denaturation)</strong>とは、熱や極端なpHなどによってその形が変わることです。変性すると、たいていは本来の働きができなくなります。たとえば酵素の活性部位が基質に合わなくなります。変性はふつう元に戻りません。条件が元に戻っても、タンパク質は元の形に戻らないのです（ゆで卵の白身は透明に戻りません）。</p>
 <p><strong>温度。</strong>温度が上がると原子の運動エネルギーが増え、より激しく振動します。ある温度を超えると、その振動がタンパク質の形を保っている弱い相互作用を壊し、鎖がほどけます。</p>
 <p><strong>pH。</strong>pHが極端に高いか低いと、タンパク質の周りの水素イオン濃度が変わります。すると、タンパク質のいくつかの基の電荷が変わります。鎖の離れた部分どうしの電荷による引き合いが失われ、形が変わります。</p>
-<div class="note"><p><strong>重要なポイント。</strong>変性で切れるのは、折りたたまれた形を保つ<em>弱い</em>結合や相互作用（水素結合、イオン結合、疎水性相互作用）です。<strong>ペプチド結合は切れません</strong>。アミノ酸の配列、つまり一次構造は変わりません。鎖は切断されるのではなく、からまったひもが引っぱられてほどけるように、ほどけるのです。</p></div>
+<div class="note"><p><strong>重要なポイント。</strong>変性で切れるのは、折りたたまれた形を保つ<em>弱い</em>結合や相互作用（水素結合、イオン結合、疎水性相互作用）です。<strong>ペプチド結合は切れません</strong>。アミノ酸の配列（HLでは一次構造とよぶ）は変わりません。鎖は切断されるのではなく、からまったひもが引っぱられてほどけるように、ほどけるのです。</p></div>
 <p><em>たとえ：</em>折った紙飛行機です。ぐしゃっとつぶすと飛びません（働きの喪失）が、紙そのものは同じ1枚です（ペプチド結合はそのまま）。</p>
 <p>SLでは、pHと温度がタンパク質の構造に影響することと、変性の意味を知っていれば十分です。次のAHLの節で、各段階の構造をどの結合が支えているかを説明するので、何が失われるかを正確に言えるようになります。</p>`,
-        zh: `<p>蛋白質的功能取決於它的三維形狀。<strong>變性 (denaturation)</strong>是指這個形狀因高溫或極端 pH 值等因素而改變。變性後，蛋白質通常不能再發揮功能。例如酶的活性位點不再配合底物。變性往往是永久的（煮熟的蛋白不會變回透明）。</p>
+        zh: `<p>蛋白質的功能取決於它的三維形狀。<strong>變性 (denaturation)</strong>是指這個形狀因高溫或極端 pH 值等因素而改變。變性後，蛋白質通常不能再發揮功能。例如酶的活性位點不再配合底物。變性通常是永久的：即使條件回復正常，蛋白質也不會回復原來的形狀（煮熟的蛋白不會變回透明）。</p>
 <p><strong>溫度。</strong>溫度上升，原子的動能增加，振動更劇烈。超過某個溫度後，振動會破壞維持蛋白質形狀的弱相互作用，長鏈便展開。</p>
 <p><strong>pH 值。</strong>過高或過低的 pH 值會改變蛋白質周圍的氫離子濃度，令蛋白質中某些基團的電荷改變。長鏈各部分之間依靠電荷的吸引力因而消失，形狀就改變了。</p>
-<div class="note"><p><strong>重點。</strong>變性破壞的是維持摺疊形狀的<em>弱</em>鍵和相互作用（氫鍵、離子鍵、疏水相互作用），<strong>不會破壞肽鍵</strong>。氨基酸序列，即一級結構，保持不變。長鏈不是被切斷，而是展開，就像纏結的繩被拉鬆，而不是繩被剪斷。</p></div>
+<div class="note"><p><strong>重點。</strong>變性破壞的是維持摺疊形狀的<em>弱</em>鍵和相互作用（氫鍵、離子鍵、疏水相互作用），<strong>不會破壞肽鍵</strong>。氨基酸序列（HL 稱為一級結構）保持不變。長鏈不是被切斷，而是展開，就像纏結的繩被拉鬆，而不是繩被剪斷。</p></div>
 <p><em>比喻：</em>一架摺好的紙飛機。把它揉皺，它就飛不了（功能喪失），但它仍然是同一張紙（肽鍵完好）。</p>
 <p>在 SL 階段，你只需知道 pH 值和溫度會影響蛋白質結構，以及變性的意思。之後的 AHL 部分會說明每一級結構由哪些鍵維持，讓你能準確說出失去了甚麼。</p>`
       },
@@ -379,7 +379,7 @@ IB.registerTopic({
 <li>the <em>exact position</em> of each one</li>
 </ul>
 <p>together determine the three-dimensional shape. Because the sequence is fixed by the gene, the same polypeptide folds into the same shape every time. Proteins are very complex, yet their structures are <strong>precise, predictable and repeatable</strong>.</p>
-<p><em>Analogy:</em> a recipe (or a line of beads with a fixed colour order). Same ingredients in the same order give the same dish every time. Change the order, or swap one ingredient, and you may get something different. Changing even a single amino acid can sometimes alter the shape and function of a protein (the best-known example is sickle-cell haemoglobin).</p>
+<p><em>Analogy:</em> a recipe (or a line of beads with a fixed colour order). Same ingredients in the same order give the same dish every time. Change the order, or swap one ingredient, and you may get something different. Changing even a single amino acid can sometimes alter the shape and function of a protein. A well-known example (not required by the guide) is sickle-cell haemoglobin: one charged amino acid is replaced by a non-polar one, and the haemoglobin molecules then stick together into long fibres when oxygen is low.</p>
 <p><strong>The big picture of the levels.</strong> Use the explorer above to move between levels. Each level builds on the one before it, and each has its own bonds:</p>
 <table>
 <tr><th>Level</th><th>What it is</th><th>Held together by</th></tr>
@@ -395,7 +395,7 @@ IB.registerTopic({
 <li>それぞれの<em>正確な位置</em></li>
 </ul>
 <p>が合わさって立体構造を決めます。配列は遺伝子で決まっているので、同じポリペプチドはいつも同じ形に折りたたまれます。タンパク質は非常に複雑ですが、その構造は<strong>精密で、予測でき、再現できます</strong>。</p>
-<p><em>たとえ：</em>レシピ（または色の順序が決まったビーズの列）です。同じ材料を同じ順序で使えば、毎回同じ料理ができます。順序を変えたり、材料を1つ替えたりすれば、違うものになるかもしれません。アミノ酸が1つ変わるだけで、タンパク質の形や働きが変わることがあります（最もよく知られた例が鎌状赤血球のヘモグロビンです）。</p>
+<p><em>たとえ：</em>レシピ（または色の順序が決まったビーズの列）です。同じ材料を同じ順序で使えば、毎回同じ料理ができます。順序を変えたり、材料を1つ替えたりすれば、違うものになるかもしれません。アミノ酸が1つ変わるだけで、タンパク質の形や働きが変わることがあります。よく知られた例（ガイドでは必須ではありません）が鎌状赤血球症のヘモグロビン (sickle-cell haemoglobin) です。電荷をもつアミノ酸1つが無極性のアミノ酸に置き換わり、酸素が少ないとヘモグロビン分子どうしがくっついて長い繊維になります。</p>
 <p><strong>構造の段階の全体像。</strong>上の探索ツールで段階を行き来してみましょう。各段階は前の段階の上に築かれ、段階ごとに働く結合が違います。</p>
 <table>
 <tr><th>段階</th><th>内容</th><th>何で保たれるか</th></tr>
@@ -411,7 +411,7 @@ IB.registerTopic({
 <li>每個氨基酸的<em>準確位置</em></li>
 </ul>
 <p>一起決定三維形狀。由於序列由基因固定，同一條多肽每次都會摺疊成相同的形狀。蛋白質雖然十分複雜，但它們的結構<strong>精確、可預測、可重複</strong>。</p>
-<p><em>比喻：</em>像一份食譜（或一串顏色次序固定的珠子）。相同的材料、相同的次序，每次都做出相同的菜式。改變次序或換掉一種材料，結果可能不同。即使只改變一個氨基酸，有時也會改變蛋白質的形狀和功能（最著名的例子是鐮狀細胞的血紅蛋白）。</p>
+<p><em>比喻：</em>像一份食譜（或一串顏色次序固定的珠子）。相同的材料、相同的次序，每次都做出相同的菜式。改變次序或換掉一種材料，結果可能不同。即使只改變一個氨基酸，有時也會改變蛋白質的形狀和功能。一個著名的例子（指引並不要求）是鐮狀細胞血紅蛋白 (sickle-cell haemoglobin)：一個帶電荷的氨基酸被一個非極性的氨基酸取代，於是在缺氧時血紅蛋白分子會黏在一起，形成長纖維。</p>
 <p><strong>各級結構的概覽。</strong>利用上面的探索工具在各級之間切換。每一級都建基於前一級，而且各有不同的鍵：</p>
 <table>
 <tr><th>級別</th><th>內容</th><th>由甚麼維持</th></tr>
@@ -593,15 +593,15 @@ IB.registerTopic({
 <p><strong>The classic confusion:</strong> "conjugated" does NOT mean "more than one chain". That is quaternary. Conjugated means "has a non-protein group attached". A protein can be quaternary but non-conjugated (insulin, collagen), or conjugated (haemoglobin). Two separate questions: how many chains? Any non-protein part?</p>
 <p>The three guide examples:</p>
 <ul>
-<li><strong>Insulin</strong> (non-conjugated): two polypeptide chains, held together by disulfide bonds.</li>
+<li><strong>Insulin</strong> (non-conjugated): two polypeptide chains (the A chain, 21 amino acids, and the B chain, 30), held together by disulfide bonds.</li>
 <li><strong>Collagen</strong> (non-conjugated): three polypeptide chains wound together in a <strong>triple helix</strong>, like three strands twisted into a rope.</li>
-<li><strong>Haemoglobin</strong> (conjugated): four polypeptide chains, each with a <strong>haem group</strong>, a non-protein group containing an iron atom that can bind oxygen.</li>
+<li><strong>Haemoglobin</strong> (conjugated): four polypeptide chains, two α (alpha) and two β (beta). Each chain has a <strong>haem group</strong>, a non-protein group containing an iron ion (Fe<sup>2+</sup>) that can bind one oxygen molecule.</li>
 </ul>
 <table>
 <tr><th>Protein</th><th>Polypeptide chains</th><th>Non-polypeptide part?</th><th>Type</th></tr>
 <tr><td>Insulin</td><td>2 (linked by disulfide bonds)</td><td>no</td><td>non-conjugated</td></tr>
 <tr><td>Collagen</td><td>3 (triple helix)</td><td>no</td><td>non-conjugated</td></tr>
-<tr><td>Haemoglobin</td><td>4</td><td>yes: haem (iron) in each chain</td><td>conjugated</td></tr>
+<tr><td>Haemoglobin</td><td>4 (2α + 2β)</td><td>yes: haem (Fe<sup>2+</sup>) in each chain</td><td>conjugated</td></tr>
 </table>
 <p><em>Analogy:</em> quaternary = a team of players (several chains). Conjugated = the team plus a piece of equipment that is not a player (the prosthetic group), like a goalkeeper's gloves.</p>
 <p><strong>Nature of science.</strong> Cryogenic electron microscopy (cryo-EM) lets scientists image single protein molecules and how they interact with other molecules. These structures are far too small to see with our unaided senses, so technology extends what we can observe.</p>`,
@@ -614,15 +614,15 @@ IB.registerTopic({
 <p><strong>よくある混同：</strong>「複合 (conjugated)」は「複数の鎖」という意味ではありません。それは四次構造です。複合とは「タンパク質以外の基がついている」という意味です。四次構造をもつが複合ではないもの（インスリン、コラーゲン）も、複合のもの（ヘモグロビン）もあります。別々の2つの問いです：鎖は何本か。タンパク質以外の部分はあるか。</p>
 <p>ガイドの3つの例：</p>
 <ul>
-<li><strong>インスリン (insulin)</strong>（非複合）：2本のポリペプチド鎖がジスルフィド結合でつながっています。</li>
+<li><strong>インスリン (insulin)</strong>（非複合）：2本のポリペプチド鎖（A鎖21個、B鎖30個のアミノ酸）がジスルフィド結合でつながっています。</li>
 <li><strong>コラーゲン (collagen)</strong>（非複合）：3本のポリペプチド鎖が<strong>三重らせん (triple helix)</strong>にねじれています。3本の糸をよってロープにしたようなものです。</li>
-<li><strong>ヘモグロビン (haemoglobin)</strong>（複合）：4本のポリペプチド鎖で、それぞれが<strong>ヘム基</strong>をもちます。ヘムはタンパク質以外の基で、酸素と結合できる鉄原子を含みます。</li>
+<li><strong>ヘモグロビン (haemoglobin)</strong>（複合）：4本のポリペプチド鎖（α鎖2本とβ鎖2本）です。それぞれの鎖が<strong>ヘム基 (haem group)</strong>をもちます。ヘムはタンパク質以外の基で、酸素1分子と結合できる鉄イオン (Fe<sup>2+</sup>) を含みます。</li>
 </ul>
 <table>
 <tr><th>タンパク質</th><th>ポリペプチド鎖</th><th>ポリペプチド以外の部分</th><th>種類</th></tr>
 <tr><td>インスリン</td><td>2本（ジスルフィド結合でつながる）</td><td>なし</td><td>非複合</td></tr>
 <tr><td>コラーゲン</td><td>3本（三重らせん）</td><td>なし</td><td>非複合</td></tr>
-<tr><td>ヘモグロビン</td><td>4本</td><td>あり：各鎖にヘム（鉄）</td><td>複合</td></tr>
+<tr><td>ヘモグロビン</td><td>4本（α2本 + β2本）</td><td>あり：各鎖にヘム（Fe<sup>2+</sup>）</td><td>複合</td></tr>
 </table>
 <p><em>たとえ：</em>四次構造 = チーム（複数の鎖）。複合 = チームに選手ではない道具（補欠分子族）が加わったもの。たとえばゴールキーパーのグローブです。</p>
 <p><strong>科学の本質 (Nature of science)。</strong>クライオ電子顕微鏡 (cryo-EM) を使うと、タンパク質の分子1個や、それが他の分子とどう相互作用するかを画像として見ることができます。これらの構造は小さすぎて人間の感覚では観察できないので、技術が観察できる範囲を広げているのです。</p>`,
@@ -635,15 +635,15 @@ IB.registerTopic({
 <p><strong>典型的混淆：</strong>「結合 (conjugated)」並<strong>不是</strong>「多於一條鏈」的意思，那是四級結構。結合是指「連有非蛋白質的基團」。蛋白質可以有四級結構但非結合（胰島素、膠原蛋白），也可以是結合的（血紅蛋白）。這是兩條獨立的問題：有多少條鏈？有沒有非蛋白質部分？</p>
 <p>指引中的三個例子：</p>
 <ul>
-<li><strong>胰島素 (insulin)</strong>（非結合）：兩條多肽鏈，由二硫鍵連接。</li>
+<li><strong>胰島素 (insulin)</strong>（非結合）：兩條多肽鏈（A 鏈有 21 個氨基酸，B 鏈有 30 個），由二硫鍵連接。</li>
 <li><strong>膠原蛋白 (collagen)</strong>（非結合）：三條多肽鏈纏繞成<strong>三股螺旋 (triple helix)</strong>，像三股線搓成一條繩。</li>
-<li><strong>血紅蛋白 (haemoglobin)</strong>（結合）：四條多肽鏈，每條都有一個<strong>血紅素基團</strong>，是含鐵原子的非蛋白質基團，可以結合氧。</li>
+<li><strong>血紅蛋白 (haemoglobin)</strong>（結合）：四條多肽鏈，即兩條 α 鏈和兩條 β 鏈。每條鏈都有一個<strong>血紅素基團 (haem group)</strong>，是含鐵離子 (Fe<sup>2+</sup>) 的非蛋白質基團，可以結合一個氧分子。</li>
 </ul>
 <table>
 <tr><th>蛋白質</th><th>多肽鏈</th><th>有非多肽部分嗎？</th><th>類別</th></tr>
 <tr><td>胰島素</td><td>2 條（由二硫鍵連接）</td><td>沒有</td><td>非結合</td></tr>
 <tr><td>膠原蛋白</td><td>3 條（三股螺旋）</td><td>沒有</td><td>非結合</td></tr>
-<tr><td>血紅蛋白</td><td>4 條</td><td>有：每條鏈有血紅素（含鐵）</td><td>結合</td></tr>
+<tr><td>血紅蛋白</td><td>4 條（2α + 2β）</td><td>有：每條鏈有血紅素（含 Fe<sup>2+</sup>）</td><td>結合</td></tr>
 </table>
 <p><em>比喻：</em>四級結構 = 一隊球員（多條鏈）。結合 = 球隊再加上一件不是球員的裝備（輔基），例如守門員的手套。</p>
 <p><strong>科學的本質 (Nature of science)。</strong>冷凍電子顯微術 (cryo-EM) 令科學家可以拍攝單一蛋白質分子，以及它與其他分子相互作用的影像。這些結構小得無法用人的感官直接觀察，所以技術擴闊了我們能觀察的範圍。</p>`
@@ -772,13 +772,14 @@ IB.registerTopic({
     { en: "You do not need to know which amino acids are essential or non-essential.", ja: "どのアミノ酸が必須か非必須かを知る必要はありません。", zh: "你不須要知道哪些氨基酸是必需或非必需的。" },
     { en: "You do not need pKa values, isoelectric points or zwitterion chemistry, or any pH calculations for amino acids.", ja: "pKa、等電点、双性イオンの化学、アミノ酸のpH計算は必要ありません。", zh: "你不須要 pKa 值、等電點、兩性離子化學，或任何有關氨基酸的 pH 計算。" },
     { en: "You do not need chaperone proteins, folding pathways or the details of how a protein finds its shape.", ja: "シャペロンタンパク質、折りたたみの経路、タンパク質が形をとる詳しい仕組みは必要ありません。", zh: "你不須要認識分子伴侶蛋白、摺疊途徑，或蛋白質如何形成其形狀的細節。" },
-    { en: "You do not need to know how structure is found by X-ray crystallography or NMR, or the details of cryo-EM. Only that technology such as cryo-EM allows imaging of single protein molecules.", ja: "X線結晶構造解析やNMRで構造がどう決まるか、クライオ電子顕微鏡の詳細は必要ありません。クライオ電子顕微鏡のような技術でタンパク質1分子を画像化できることだけ知っていれば十分です。", zh: "你不須要知道 X 射線晶體學或核磁共振如何測定結構，也不須要冷凍電子顯微術的細節，只須知道像冷凍電子顯微術這類技術可以拍攝單一蛋白質分子的影像。" },
-    { en: "You do not need the Bohr effect, haemoglobin's oxygen-binding curve details or other allosteric mechanisms for this subtopic.", ja: "このサブトピックでは、ボーア効果、ヘモグロビンの酸素結合曲線の詳細、他のアロステリック機構は必要ありません。", zh: "在這個課題中，你不須要玻爾效應、血紅蛋白氧結合曲線的細節，或其他別構機制。" }
+    { en: "You do not need to know how structures are found by X-ray crystallography or NMR. Cryo-EM: here you only need the NOS point that it allows imaging of single protein molecules. Its advantages as a microscopy method are not needed for this subtopic — they are taught in A2.2 (Cells).", ja: "X線結晶構造解析やNMRで構造がどう決まるかは必要ありません。クライオ電子顕微鏡 (cryo-EM) については、ここではタンパク質1分子を画像化できるという「科学の本質」の要点だけで十分です。顕微鏡法としての利点はこのサブトピックでは不要で、A2.2（細胞）で学びます。", zh: "你不須要知道 X 射線晶體學或核磁共振如何測定結構。冷凍電子顯微術 (cryo-EM)：這裏只須知道「科學的本質」的要點，即它能拍攝單一蛋白質分子的影像。它作為顯微技術的優點在本課題不需要，會在 A2.2（細胞）學習。" },
+    { en: "Not needed for this subtopic: cooperative oxygen binding, oxygen dissociation curves and the Bohr shift of haemoglobin — they are taught in B3.1 (Gas exchange, AHL).", ja: "このサブトピックでは不要：ヘモグロビンの酸素の協同的結合、酸素解離曲線、ボーア効果 (Bohr shift)。これらはB3.1（ガス交換、AHL）で学びます。", zh: "本課題不需要：血紅蛋白與氧的協同結合、氧解離曲線和玻爾效應 (Bohr shift)——這些在 B3.1（氣體交換，AHL）學習。" }
   ],
 
   links: [
     { to: "B1.1", why: { en: "Condensation and hydrolysis (B1.1) make and break peptide bonds; amphipathic properties and hydrophobic effects also shape membranes.", ja: "縮合と加水分解 (B1.1) がペプチド結合をつくり、切ります。両親媒性と疎水性の効果は膜の形成にも関わります。", zh: "縮合與水解 (B1.1) 形成和斷開肽鍵；兩親性和疏水作用也塑造膜的結構。" } },
-    { to: "B2.1", why: { en: "Integral membrane proteins have hydrophobic regions that embed in the bilayer (B1.2.10).", ja: "膜の内在性タンパク質は、二重層に埋め込まれる疎水性の領域をもちます (B1.2.10)。", zh: "膜的整合蛋白質有嵌入雙層的疏水區域 (B1.2.10)。" } }
+    { to: "B2.1", why: { en: "Integral membrane proteins have hydrophobic regions that embed in the bilayer (B1.2.10).", ja: "膜の内在性タンパク質は、二重層に埋め込まれる疎水性の領域をもちます (B1.2.10)。", zh: "膜的整合蛋白質有嵌入雙層的疏水區域 (B1.2.10)。" } },
+    { to: "B3.1", why: { en: "Haemoglobin's four chains and haem groups (B1.2.11) are the basis of its oxygen binding and the Bohr shift (AHL).", ja: "ヘモグロビンの4本の鎖とヘム (B1.2.11) が、酸素の結合とボーア効果のもとになります（AHL）。", zh: "血紅蛋白的四條鏈和血紅素 (B1.2.11) 是它結合氧和玻爾效應的基礎（AHL）。" } }
   ],
 
   natureOfScience: [
