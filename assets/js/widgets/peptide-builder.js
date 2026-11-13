@@ -143,8 +143,8 @@
         res = [makeRes(0), makeRes(1)];
         res.forEach(function (g) { svg.appendChild(g); });
         svg.appendChild(waterLayer);
-        svg.appendChild(sv("text", { x: X0, y: 178, "text-anchor": "middle", style: "font-size:11px", text: "N-terminus" }));
-        var ct = sv("text", { class: "ct", x: 0, y: 178, "text-anchor": "middle", style: "font-size:11px", text: "C-terminus" });
+        svg.appendChild(sv("text", { x: X0, y: 178, "text-anchor": "middle", style: "font-size:11px", text: T(["N-terminus", "N末端", "N 端"]) }));
+        var ct = sv("text", { class: "ct", x: 0, y: 178, "text-anchor": "middle", style: "font-size:11px", text: T(["C-terminus", "C末端", "C 端"]) });
         svg.appendChild(ct);
         root.appendChild(svg);
         function placeCT() { var x = xOf(n - 1) + 74; ct.setAttribute("x", Math.min(x, 352)); ct.setAttribute("style", "font-size:11px;transition:all .8s"); }

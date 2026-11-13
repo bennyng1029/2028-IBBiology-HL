@@ -54,7 +54,7 @@
       var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st);
     }
     var t = ctx.t;
-    var f = 0.6, c = 0.8, strongB = true;
+    var f = 0.6, c = 0.8, strongB = true, removed = false;
     var X0 = 40, W = 540, BASE = 230, H = 140;
     function px(x) { return X0 + x * W; }
     function h(x, lo, hi) { var u = (x - lo) / (hi - lo); return u <= 0 || u >= 1 ? 0 : Math.pow(Math.sin(Math.PI * u), 0.8); }
@@ -82,7 +82,7 @@
       return { inp: inp, out: out };
     }
     var sOver = slider(t(T.overlap), f, function (v) { f = v; draw(); });
-    var sComp = slider(t(T.comp), c, function (v) { c = v; draw(); });
+    var sComp = slider(t(T.comp), c, function (v) { c = v; removed = false; draw(); });
     var btns = document.createElement("div"); btns.className = "ni-btns"; ctl.appendChild(btns);
     function btn(label, fn, pressed) {
       var b = document.createElement("button"); b.type = "button"; b.className = "ni-btn"; b.textContent = label;
@@ -91,8 +91,8 @@
     }
     var bStrong = btn(t(T.strong), function () { strongB = true; draw(); }, true);
     var bEqual = btn(t(T.equal), function () { strongB = false; draw(); }, false);
-    btn(t(T.removeB), function () { c = 0; sComp.inp.value = 0; sComp.out.textContent = "0%"; draw(); });
-    btn(t(T.reset), function () { f = 0.6; c = 0.8; strongB = true; sOver.inp.value = 60; sOver.out.textContent = "60%"; sComp.inp.value = 80; sComp.out.textContent = "80%"; draw(); });
+    btn(t(T.removeB), function () { c = 0; removed = true; sComp.inp.value = 0; sComp.out.textContent = "0%"; draw(); });
+    btn(t(T.reset), function () { f = 0.6; c = 0.8; strongB = true; removed = false; sOver.inp.value = 60; sOver.out.textContent = "60%"; sComp.inp.value = 80; sComp.out.textContent = "80%"; draw(); });
 
     var msg = document.createElement("div"); msg.className = "ni-msg"; msg.setAttribute("aria-live", "polite"); el.appendChild(msg);
     var leg = document.createElement("div"); leg.className = "ni-leg";
@@ -115,9 +115,11 @@
       var s = '<svg viewBox="0 0 600 316" role="img" aria-label="' + t(T.axis) + '">';
       s += '<line x1="' + X0 + '" y1="' + BASE + '" x2="' + (X0 + W) + '" y2="' + BASE + '" stroke="var(--ink,#0f2029)" stroke-width="2"/>';
       // B
+      if (!removed) {
       s += '<path d="' + path(bLo, bHi, bLo, bHi, false) + '" fill="none" stroke="var(--theme-b,#b82a56)" stroke-width="2" stroke-dasharray="5 4" opacity="0.6"/>';
       if (bHi > bRLo) s += '<path d="' + path(bLo, bHi, bRLo, bHi, true) + '" fill="var(--theme-b,#b82a56)" opacity="0.35" stroke="var(--theme-b,#b82a56)" stroke-width="2"/>';
       s += '<text x="' + px(0.75) + '" y="' + (BASE - H - 8) + '" text-anchor="middle" font-size="28" font-weight="800" style="fill:var(--theme-b,#b82a56)">B</text>';
+      }
       // A fundamental
       s += '<path d="' + path(a0, aHi, a0, aHi, false) + '" fill="none" stroke="var(--theme-a,#07756f)" stroke-width="2.5" stroke-dasharray="6 4"/>';
       // A realized

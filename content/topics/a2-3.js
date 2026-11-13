@@ -335,7 +335,7 @@
         T("Viruses use the same genetic code as living organisms.", "ウイルスは生物と同じ遺伝暗号を使う。", "病毒使用與生物相同的遺傳密碼。")],
       answer: [0, 2, 3],
       explanation: T("A, C and D are part of the evidence discussed in the guide. B is false: if all viruses were the same, a single origin would be more likely.",
-        "A・C・Dは指導要領で扱われる証拠です。Bは誤りで、もしすべてのウイルスが同じなら、単一の起源のほうがもっともらしくなります。",
+        "A・C・DはIB のガイドで扱われる証拠です。Bは誤りで、もしすべてのウイルスが同じなら、単一の起源のほうがもっともらしくなります。",
         "A、C、D 是指引所討論的證據。B 錯誤：如果所有病毒都相同，單一起源反而更合理。") },
     { id: "a2-3-q11", type: "short", ahl: true, difficulty: 3, ref: "A2.3.5", paper: "2", commandTerm: "Explain", marks: 4,
       stem: T("Viruses that are not closely related share features such as small size, a protein capsid and no metabolism. Explain how convergent evolution could account for these shared features.",
@@ -430,7 +430,7 @@
     ],
     misconceptions: [
       { wrong: T("Antibiotics can be used to treat viral infections.", "抗生物質でウイルス感染症を治療できる。", "抗生素可以治療病毒感染。"),
-        right: T("Antibiotics act on bacterial structures and processes. Viruses have no cell wall or ribosomes of their own, and use the host's, so antibiotics do not work on them. (This is a general fact; it is not a required statement of the guide.)", "抗生物質は細菌の構造や過程に作用します。ウイルスには自前の細胞壁やリボソームがなく、宿主のものを使うため、効きません。（一般的な事実で、指導要領の必須事項ではありません。）", "抗生素作用於細菌的結構和過程。病毒沒有自己的細胞壁或核糖體，而是利用宿主的，所以抗生素對它們無效。（這是一般事實，並非指引的必修陳述。）") },
+        right: T("Antibiotics act on bacterial structures and processes. Viruses have no cell wall or ribosomes of their own, and use the host's, so antibiotics do not work on them. (Not needed for A2.3: this is taught in C3.2 Defence against disease, which includes why antibiotics fail to control viral infections.)", "抗生物質は細菌の構造や過程に作用します。ウイルスには自前の細胞壁やリボソームがなく、宿主のものを使うため、効きません。（A2.3 では不要：C3.2（病気に対する防御）で、抗生物質がウイルス感染に効かない理由とともに学びます。）", "抗生素作用於細菌的結構和過程。病毒沒有自己的細胞壁或核糖體，而是利用宿主的，所以抗生素對它們無效。（A2.3 不需要：這會在 C3.2 抵禦疾病中學習，包括抗生素為何不能控制病毒感染。）") },
       { wrong: T("The lysogenic cycle is a type of infection where the virus does nothing and then dies.", "溶原サイクルとは、ウイルスが何もせず、やがて死ぬ感染のことである。", "溶原週期是病毒甚麼也不做然後死亡的感染。"),
         right: T("In the lysogenic cycle the viral DNA is integrated as a prophage and copied every time the host divides. It can later switch to the lytic cycle.", "溶原サイクルではウイルスDNAがプロファージとして組み込まれ、宿主の分裂のたびに複製されます。のちに溶菌サイクルへ切り替わることがあります。", "在溶原週期中，病毒 DNA 以原噬菌體形式整合，每當宿主分裂就被複製，其後可以轉為裂解週期。") },
       { wrong: T("Viruses are very small cells.", "ウイルスは非常に小さい細胞である。", "病毒是非常細小的細胞。"),
@@ -442,8 +442,8 @@
       T("You do not need to know the full replication cycles of coronaviruses or HIV (for example entry through receptors or the steps of reverse transcription and integration). Only lambda's lytic and lysogenic cycles are required.", "コロナウイルスやHIVの複製サイクルの詳細（受容体を介した侵入、逆転写や組み込みの手順など）は不要です。必要なのはλファージの溶菌・溶原サイクルだけです。", "你不需要認識冠狀病毒或 HIV 的完整複製週期（例如經受體進入，或逆轉錄和整合的步驟）。只需要 λ 噬菌體的裂解和溶原週期。"),
       T("You do not need the terms antigenic drift and antigenic shift, or the H and N numbering of influenza subtypes.", "抗原連続変異・抗原不連続変異という用語や、インフルエンザの亜型のH・N番号は不要です。", "你不需要認識「抗原漂移」和「抗原轉變」這些術語，也不需要認識流感亞型的 H 和 N 編號。"),
       T("You do not need to know virus classification schemes (e.g. the Baltimore classification) or the names of virus families.", "ウイルスの分類体系（ボルチモア分類など）やウイルス科の名前は不要です。", "你不需要認識病毒分類系統（例如巴爾的摩分類）或病毒科的名稱。"),
-      T("You do not need prions, viroids, giant viruses or the details of specific origin hypotheses with names (e.g. “escape” or “regressive” hypotheses). Know the guide's evidence for several origins.", "プリオン、ウイロイド、巨大ウイルス、名前のついた起源仮説（「脱出説」「退行説」など）の詳細は不要です。指導要領が示す、複数起源の証拠を知っていれば十分です。", "你不需要認識普里昂、類病毒、巨型病毒，或有名稱的起源假說（如「逃逸」或「退化」假說）的細節。只需認識指引所列有多個起源的證據。"),
-      T("You do not need details of how vaccines or antiviral drugs work at the molecular level, or the names of HIV drugs. The guide asks only about the consequences of rapid evolution for treatment.", "ワクチンや抗ウイルス薬の分子レベルの作用や、HIV治療薬の名前は不要です。指導要領が求めるのは、急速な進化が治療に及ぼす影響だけです。", "你不需要認識疫苗或抗病毒藥物在分子層面的作用，也不需要認識 HIV 藥物的名稱。指引只要求考慮快速演化對治療的影響。")
+      T("You do not need prions, viroids, giant viruses or the details of specific origin hypotheses with names (e.g. “escape” or “regressive” hypotheses). Know the guide's evidence for several origins.", "プリオン、ウイロイド、巨大ウイルス、名前のついた起源仮説（「脱出説」「退行説」など）の詳細は不要です。IB のガイドが示す、複数起源の証拠を知っていれば十分です。", "你不需要認識普里昂、類病毒、巨型病毒，或有名稱的起源假說（如「逃逸」或「退化」假說）的細節。只需認識指引所列有多個起源的證據。"),
+      T("You do not need how antiviral drugs work at the molecular level, or the names of HIV drugs. A2.3.6 asks only about the consequences of rapid evolution for treatment. How vaccines work, and HIV infection of lymphocytes leading to AIDS, are not needed here either: they are taught in C3.2 (Defence against disease).", "抗ウイルス薬の分子レベルの作用や、HIV治療薬の名前は不要です。A2.3.6 が求めるのは、急速な進化が治療に及ぼす影響だけです。ワクチンのしくみや、HIV がリンパ球に感染してエイズになることもここでは不要で、C3.2 (病気に対する防御) で学びます。", "你不需要認識抗病毒藥物在分子層面的作用，也不需要認識 HIV 藥物的名稱。A2.3.6 只要求考慮快速演化對治療的影響。疫苗如何運作，以及 HIV 感染淋巴細胞導致愛滋病，在這裏也不需要：它們會在 C3.2 (抵禦疾病) 中學習。")
     ],
     links: [
       { to: "A2.1", why: T("Viruses are non-living (A2.1.2), and their origins relate to the origin of life.", "ウイルスは非生物であり（A2.1.2）、その起源は生命の起源と関係します。", "病毒是非生物 (A2.1.2)，其起源與生命起源有關。") },

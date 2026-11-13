@@ -84,7 +84,7 @@
       var m = MODELS[0], temp = 37, ph = 7, lock = 1, shown = 1, timer, tick = 0, reduced = REDUCED();
 
       root.appendChild(el("h4", { text: T(["Denaturation of a model protein", "モデルタンパク質の変性 (denaturation)", "模型蛋白質的變性 (denaturation)"]) }));
-      root.appendChild(el("p", { class: "small", text: T(["This is an illustrative model. Different proteins have different optimum conditions: choose a model, then move the sliders.", "これは説明用のモデルです。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這是示意模型。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。"]) }));
+      root.appendChild(el("p", { class: "small", text: T(["These three models are illustrative, not measured data for real proteins. Different proteins have different optimum conditions: choose a model, then move the sliders.", "この3つは説明用のモデルで、実在のタンパク質の測定値ではありません。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這三個都是示意模型，並非真實蛋白質的量度數據。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。"]) }));
       var mb = MODELS.map(function (md, i) {
         var b = el("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", text: T(md.n) });
         b.addEventListener("click", function () { setModel(i); });
@@ -107,7 +107,7 @@
       beadEls.forEach(function (b) { svg.appendChild(b); });
       root.appendChild(svg);
       root.appendChild(el("div", { class: "legend" }, [
-        legendItem("l", "var(--k-mut)", T(["peptide bonds (backbone)", "ペプチド結合 (主鎖)", "肽鍵（主鏈）"])),
+        legendItem("l", "var(--k-mut)", T(["peptide bonds (backbone)", "ペプチド結合 (骨格)", "肽鍵（骨架）"])),
         legendItem("l", "var(--k-hb)", T(["hydrogen bonds", "水素結合", "氫鍵"])),
         legendItem("l", "var(--k-io)", T(["ionic bonds", "イオン結合", "離子鍵"])),
         legendItem("i", "var(--k-hp)", T(["hydrophobic core", "疎水性の核", "疏水核心"]))

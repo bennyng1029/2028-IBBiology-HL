@@ -166,7 +166,7 @@
       var T = mkT(ctx);
       var tab = 0, sub = "helix", sel = 6, seq = SEQ0.slice(), nq = 2;
       var TABS = [
-        { n: ["1 Primary", "1 一次構造", "1 一級結構"], t: ["primary structure", "primary structure", "primary structure"], a: false },
+        { n: ["1 Primary", "1 一次構造", "1 一級結構"], a: true },
         { n: ["2 Secondary", "2 二次構造", "2 二級結構"], a: true },
         { n: ["3 Tertiary", "3 三次構造", "3 三級結構"], a: true },
         { n: ["4 Quaternary", "4 四次構造", "4 四級結構"], a: true }
@@ -181,8 +181,8 @@
       root.appendChild(body);
       root.appendChild(exam(T, [
         "Primary = order of amino acids (peptide bonds). Secondary = α-helix / β-pleated sheet held by hydrogen bonds between backbone C=O and N–H (AHL). Tertiary = whole-chain 3-D shape from R-group interactions (AHL). Quaternary = 2 or more polypeptides (AHL). The sequence determines the shape.",
-        "一次 = アミノ酸の並び順（ペプチド結合）。二次 = 主鎖の C=O と N–H の間の水素結合で保たれる α-ヘリックス／β-プリーツシート (AHL)。三次 = R基 の相互作用による鎖全体の立体構造 (AHL)。四次 = 2本以上のポリペプチド (AHL)。配列が形を決める。",
-        "一級 = 氨基酸的排列次序（肽鍵）。二級 = 由主鏈 C=O 與 N–H 之間氫鍵維持的 α 螺旋／β 摺疊片 (AHL)。三級 = 由 R 基相互作用形成的整條鏈的立體形狀 (AHL)。四級 = 兩條或以上多肽 (AHL)。序列決定形狀。"]));
+        "一次 = アミノ酸の並び順（ペプチド結合）。二次 = 骨格の C=O と N–H の間の水素結合で保たれる α-ヘリックス／βシート (AHL)。三次 = R基 の相互作用による鎖全体の立体構造 (AHL)。四次 = 2本以上のポリペプチド (AHL)。配列が形を決める。",
+        "一級 = 氨基酸的排列次序（肽鍵）。二級 = 由骨架 C=O 與 N–H 之間氫鍵維持的 α 螺旋／β 摺板 (AHL)。三級 = 由 R 基相互作用形成的整條鏈的立體形狀 (AHL)。四級 = 兩條或以上多肽 (AHL)。序列決定形狀。"]));
 
       function renderTabs() {
         tabBar.innerHTML = "";
@@ -203,11 +203,15 @@
       function same() { return seq.join("") === SEQ0.join(""); }
 
       function primary() {
-        body.appendChild(head(T(["Primary structure: the sequence", "一次構造 (primary structure)：配列", "一級結構 (primary structure)：序列"]), false));
+        body.appendChild(head(T(["Primary structure: the sequence", "一次構造 (primary structure)：配列", "一級結構 (primary structure)：序列"]), true));
         body.appendChild(el("p", { text: T([
           "The order of amino acids in a polypeptide, joined by peptide bonds. Each bead is one amino acid, coloured by the type of its R-group. Tap a bead, then change its R-group type to see what happens to the folded shape.",
           "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸は1つのアミノ酸で、R基の種類で色分けしています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
           "多肽中氨基酸的排列次序，由肽鍵連接。每顆珠代表一個氨基酸，按 R 基類型著色。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。"]) }));
+        body.appendChild(el("p", { class: "small", text: T([
+          "Level check: that amino acids can be joined in any order is core for SL and HL (B1.2.4). The term primary structure and how the sequence decides the 3-D shape (B1.2.7) are AHL.",
+          "レベルの確認: アミノ酸がどんな順序でもつながることは SL・HL 共通です (B1.2.4)。一次構造という用語と、配列が立体構造を決めるしくみ (B1.2.7) は AHL です。",
+          "程度提示：氨基酸可按任何次序連接，屬 SL 和 HL 共同內容 (B1.2.4)。「一級結構」這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬 AHL。"]) }));
         var svg = sv("svg", { viewBox: "0 0 360 160", role: "group", "aria-label": T(["Amino acid sequence", "アミノ酸配列", "氨基酸序列"]) });
         var lineLayer = sv("g", {}); svg.appendChild(lineLayer);
         for (var i = 0; i < 12; i++) {
@@ -260,10 +264,10 @@
         body.appendChild(head(T(["Secondary structure: coiling and pleating", "二次構造 (secondary structure)：らせんとひだ", "二級結構 (secondary structure)：螺旋與摺疊"]), true));
         body.appendChild(el("p", { text: T([
           "Parts of the chain coil into an α-helix or pleat into a β-pleated sheet. Both are held in shape by hydrogen bonds between the C=O of one peptide link and the N–H of another, at regular positions along the backbone. The R-groups are not involved.",
-          "鎖の一部は α-ヘリックス (alpha helix) にコイル状に巻くか、β-プリーツシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が主鎖に沿って規則的な位置に生じて保たれます。R基は関与しません。",
-          "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺疊片 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在主鏈上的位置有規律。R 基並不參與。"]) }));
+          "鎖の一部は α-ヘリックス (alpha helix) にコイル状に巻くか、βシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が骨格に沿って規則的な位置に生じて保たれます。R基は関与しません。",
+          "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。"]) }));
         var bs = ["helix", "sheet"].map(function (k) {
-          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "α-ヘリックス (coiling)", "α 螺旋 (coiling)"]) : T(["β-pleated sheet (pleating)", "β-プリーツシート (pleating)", "β 摺疊片 (pleating)"]) });
+          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "α-ヘリックス (coiling)", "α 螺旋 (coiling)"]) : T(["β-pleated sheet (pleating)", "βシート (pleating)", "β 摺板 (pleating)"]) });
           b.addEventListener("click", function () { sub = k; render(); }); return b;
         });
         body.appendChild(el("div", { class: "bar" }, bs));
@@ -272,11 +276,11 @@
         body.appendChild(svg);
         body.appendChild(el("div", { class: "legend" }, [
           legendItem("l", "var(--k-hb)", T(["hydrogen bond (C=O ··· H–N)", "水素結合 (C=O ··· H–N)", "氫鍵 (C=O ··· H–N)"])),
-          legendItem("i", "var(--k-mut)", T(["polypeptide backbone", "ポリペプチドの主鎖", "多肽主鏈"]))
+          legendItem("i", "var(--k-mut)", T(["polypeptide backbone", "ポリペプチドの骨格", "多肽骨架"]))
         ]));
         body.appendChild(el("p", { class: "small", text: sub === "helix" ?
-          T(["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 主鎖がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：主鏈盤繞，氫鍵有規律地連接相鄰的每一圈。"]) :
-          T(["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 主鎖の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：主鏈相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。"]) }));
+          T(["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 骨格がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：骨架盤繞，氫鍵有規律地連接相鄰的每一圈。"]) :
+          T(["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 骨格の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：骨架相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。"]) }));
       }
       function lab(svg, x, y, txt, col, anchor) {
         svg.appendChild(sv("text", { x: x, y: y, "text-anchor": anchor || "middle", style: "font-size:12px;font-weight:700;fill:" + col + ";paint-order:stroke;stroke:var(--k-sf);stroke-width:3px", text: txt }));
@@ -321,9 +325,9 @@
       function tertiary() {
         body.appendChild(head(T(["Tertiary structure: the whole chain", "三次構造 (tertiary structure)：鎖全体", "三級結構 (tertiary structure)：整條鏈"]), true));
         body.appendChild(el("p", { text: T([
-          "The overall 3-D shape of one whole polypeptide. The chain folds up because of interactions between R-groups: hydrogen bonds, ionic bonds, disulfide bonds and hydrophobic interactions (see the protein folding widget). Hydrophobic R-groups end up clustered together in the core.",
-          "1本のポリペプチド全体の立体的な形です。R基どうしの相互作用（水素結合、イオン結合、ジスルフィド結合、疎水性相互作用）で鎖が折りたたまれます（タンパク質の折りたたみの教材を参照）。疎水性の R基は核に集まります。",
-          "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。疏水的 R 基會聚集在核心。"]) }));
+          "The overall 3-D shape of one whole polypeptide. The chain folds up because of interactions between R-groups: hydrogen bonds, ionic bonds, disulfide bonds and hydrophobic interactions (see the protein folding widget). In a water-soluble protein, hydrophobic R-groups end up clustered together in the core.",
+          "1本のポリペプチド全体の立体的な形です。R基どうしの相互作用（水素結合、イオン結合、ジスルフィド結合、疎水性相互作用）で鎖が折りたたまれます（タンパク質の折りたたみの教材を参照）。水に溶けるタンパク質では、疎水性の R基は核に集まります。",
+          "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。在水溶性蛋白質中，疏水的 R 基會聚集在核心。"]) }));
         var svg = sv("svg", { viewBox: "0 0 360 250", role: "img", "aria-label": T(["Folded polypeptide", "折りたたまれたポリペプチド", "摺疊的多肽"]) });
         svg.appendChild(drawFold(seq, 360, 250, { pad: 36, r: 13, max: 62, w: 6 }));
         body.appendChild(svg);
@@ -334,9 +338,9 @@
       function quaternary() {
         body.appendChild(head(T(["Quaternary structure: more than one polypeptide", "四次構造 (quaternary structure)：複数のポリペプチド", "四級結構 (quaternary structure)：多於一條多肽"]), true));
         body.appendChild(el("p", { text: T([
-          "Some proteins are made of two or more polypeptides assembled into one functional protein. Examples: insulin (2), collagen (3) and haemoglobin (4). A conjugated protein also has a non-polypeptide part (a prosthetic group), such as the haem in haemoglobin.",
-          "2本以上のポリペプチドが集まって1つの機能するタンパク質になっているものがあります。例: インスリン (2本)、コラーゲン (3本)、ヘモグロビン (4本)。複合タンパク質 (conjugated protein) には、ヘモグロビンのヘムのようにポリペプチド以外の部分 (prosthetic group) もあります。",
-          "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條)。結合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。"]) }));
+          "Some proteins are made of two or more polypeptides assembled into one functional protein. Examples: insulin (2), collagen (3) and haemoglobin (4: two α and two β chains). A conjugated protein also has a non-polypeptide part (a prosthetic group), such as the haem in haemoglobin.",
+          "2本以上のポリペプチドが集まって1つの機能するタンパク質になっているものがあります。例: インスリン (2本)、コラーゲン (3本)、ヘモグロビン (4本: α鎖2本とβ鎖2本)。複合タンパク質 (conjugated protein) には、ヘモグロビンのヘムのようにポリペプチド以外の部分 (prosthetic group) もあります。",
+          "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。結合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。"]) }));
         var bs = [2, 4].map(function (k) {
           var b = el("button", { type: "button", "aria-pressed": nq === k ? "true" : "false", text: k + " " + T(["polypeptides", "本のポリペプチド", "條多肽"]) });
           b.addEventListener("click", function () { nq = k; render(); }); return b;

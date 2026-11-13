@@ -90,7 +90,7 @@
       root.appendChild(el("h4", { text: T(["Tertiary structure and the bonds that hold it", "三次構造 (tertiary structure) とそれを保つ結合", "三級結構 (tertiary structure) 及維持它的鍵"]) })).appendChild(ahl());
       root.appendChild(el("p", { text: T(["A polypeptide folds because of interactions between its R-groups. Switch each type on to see where it acts.", "ポリペプチドは R基どうしの相互作用で折りたたまれます。種類ごとにオンにして、どこで働くか見てみましょう。", "多肽因 R 基之間的相互作用而摺疊。逐一開啟各類型，看看它們在哪裏起作用。"]) }));
       var bs = ["glob", "mem"].map(function (k) {
-        var b = el("button", { type: "button", text: k === "glob" ? T(["Globular protein in water", "水中の球状タンパク質 (globular)", "水中的球狀蛋白質 (globular)"]) : T(["Integral membrane protein", "膜貫通型の内在性タンパク質 (integral)", "嵌入膜的內在蛋白質 (integral)"]) });
+        var b = el("button", { type: "button", text: k === "glob" ? T(["Globular protein in water", "水中の球状タンパク質 (globular)", "水中的球狀蛋白質 (globular)"]) : T(["Integral membrane protein", "膜貫通型の内在性タンパク質 (integral)", "嵌入膜的整合蛋白質 (integral)"]) });
         b.setAttribute("aria-pressed", mode === k ? "true" : "false");
         b.addEventListener("click", function () { mode = k; bs.forEach(function (x, i) { x.setAttribute("aria-pressed", ["glob", "mem"][i] === mode ? "true" : "false"); }); render(); });
         return b;
@@ -104,7 +104,7 @@
       root.appendChild(exam(T, [
         "Tertiary structure is held by hydrogen bonds, ionic bonds, disulfide (covalent) bonds between cysteines, and hydrophobic interactions. In water-soluble globular proteins hydrophobic R-groups are in the core; integral membrane proteins have hydrophobic regions in the membrane.",
         "三次構造は、水素結合、イオン結合、システイン間のジスルフィド結合（共有結合）、疎水性相互作用で保たれる。水溶性の球状タンパク質では疎水性の R基 は核に、内在性膜タンパク質では疎水性の領域が膜の中にある。",
-        "三級結構由氫鍵、離子鍵、半胱氨酸之間的二硫鍵（共價鍵）和疏水相互作用維持。水溶性球狀蛋白質的疏水 R 基位於核心；內在膜蛋白的疏水區域位於膜內。"]));
+        "三級結構由氫鍵、離子鍵、半胱氨酸之間的二硫鍵（共價鍵）和疏水相互作用維持。水溶性球狀蛋白質的疏水 R 基位於核心；整合膜蛋白質的疏水區域位於膜內。"]));
 
       function line(a, b, col, w, dash) {
         return sv("line", { x1: R[a][1], y1: R[a][2], x2: R[b][1], y2: R[b][2], stroke: "var(" + col + ")", "stroke-width": w, "stroke-dasharray": dash || null, "stroke-linecap": "round" });
@@ -170,7 +170,7 @@
         body.appendChild(el("p", { class: "small", text: T(["Strength: disulfide bonds are covalent and the strongest. The other three are weak individually, but together they hold the shape. Only cysteine needs to be named for disulfide bonds; you do not need to name other amino acids.", "強さ: ジスルフィド結合は共有結合で最も強い結合です。他の3つは1つ1つは弱いですが、まとまって形を保ちます。名前を覚える必要があるのはジスルフィド結合をつくるシステインだけで、他のアミノ酸の名前は不要です。", "強度：二硫鍵是共價鍵，最強。其餘三種個別都較弱，但合起來維持形狀。只需記得形成二硫鍵的半胱氨酸，不需要記其他氨基酸的名稱。"]) }));
       }
       function membrane() {
-        var svg = sv("svg", { viewBox: "0 0 360 300", role: "img", "aria-label": T(["Integral membrane protein in a phospholipid bilayer", "リン脂質二重層にある内在性膜タンパク質", "磷脂雙層中的內在膜蛋白"]) });
+        var svg = sv("svg", { viewBox: "0 0 360 300", role: "img", "aria-label": T(["Integral membrane protein in a phospholipid bilayer", "リン脂質二重層にある内在性膜タンパク質", "磷脂雙層中的整合膜蛋白質"]) });
         svg.appendChild(sv("rect", { x: 0, y: 104, width: 360, height: 92, fill: "var(--k-hp)", opacity: .12 }));
         for (var x = 8; x < 360; x += 17) {
           svg.appendChild(sv("path", { d: "M" + (x - 3) + " 110V150M" + (x + 3) + " 110V150M" + (x - 3) + " 190V150M" + (x + 3) + " 190V150", stroke: "var(--k-mut)", "stroke-width": 1.5, fill: "none", opacity: .6 }));
@@ -190,7 +190,7 @@
         lab(8, 98, T(["phospholipid bilayer", "リン脂質二重層", "磷脂雙層"]));
         host.appendChild(svg);
         body.appendChild(el("div", { class: "panel info" }, [
-          el("p", { text: T(["Integral proteins have a region of hydrophobic (non-polar) amino acids. This region sits among the hydrophobic fatty-acid tails inside the membrane and helps embed the protein. Polar and charged R-groups stay at the surfaces, in contact with water.", "内在性タンパク質 (integral protein) には疎水性（非極性）のアミノ酸の領域があります。この領域は膜内部の疎水性の脂肪酸の尾部の間に位置し、タンパク質を膜に埋め込むのに役立ちます。極性や電荷をもつ R基 は、水に接する表面にあります。", "內在蛋白質 (integral protein) 有一段疏水（非極性）氨基酸的區域。這個區域位於膜內疏水的脂肪酸尾部之間，幫助蛋白質嵌入膜中。極性和帶電的 R 基則在與水接觸的表面。"]) }),
+          el("p", { text: T(["Integral proteins have a region of hydrophobic (non-polar) amino acids. This region sits among the hydrophobic fatty-acid tails inside the membrane and helps embed the protein. Polar and charged R-groups stay at the surfaces, in contact with water.", "内在性タンパク質 (integral protein) には疎水性（非極性）のアミノ酸の領域があります。この領域は膜内部の疎水性の脂肪酸の尾部の間に位置し、タンパク質を膜に埋め込むのに役立ちます。極性や電荷をもつ R基 は、水に接する表面にあります。", "整合蛋白質 (integral protein) 有一段疏水（非極性）氨基酸的區域。這個區域位於膜內疏水的脂肪酸尾部之間，幫助蛋白質嵌入膜中。極性和帶電的 R 基則在與水接觸的表面。"]) }),
           el("p", { class: "small", text: T(["Compare: in a soluble globular protein the hydrophobic R-groups are in the core, away from water. Here they face the membrane lipids instead.", "比較: 水溶性の球状タンパク質では、疎水性の R基 は水から離れた核にあります。ここでは膜の脂質に向いています。", "比較：水溶性球狀蛋白質的疏水 R 基在核心，遠離水；這裏則面向膜脂質。"]) })
         ]));
       }

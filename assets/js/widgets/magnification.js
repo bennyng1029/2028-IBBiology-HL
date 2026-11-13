@@ -91,7 +91,7 @@
     qAll: T("All", "すべて", "全部"),
     qBasic: T("Magnification and size", "倍率と大きさ", "放大率與大小"),
     qBar: T("Scale bars", "スケールバー", "比例尺"),
-    qM: T("A cell is {a} {u} long. In a micrograph it measures {I} mm. Calculate the magnification.", "ある構造の実際の長さは {a} {u} です。顕微鏡写真では {I} mm でした。倍率を計算しなさい。", "一個結構的實際長度為 {a} {u}。在顯微照片中量得 {I} mm。計算放大率。"),
+    qM: T("A structure is {a} {u} long. In a micrograph it measures {I} mm. Calculate the magnification.", "ある構造の実際の長さは {a} {u} です。顕微鏡写真では {I} mm でした。倍率を計算しなさい。", "一個結構的實際長度為 {a} {u}。在顯微照片中量得 {I} mm。計算放大率。"),
     qA: T("A micrograph has a magnification of ×{M}. A structure measures {I} mm in the micrograph. Calculate its actual size.", "顕微鏡写真の倍率は ×{M} です。ある構造は写真上で {I} mm でした。実際の大きさを計算しなさい。", "一張顯微照片的放大率為 ×{M}。一個結構在照片中量得 {I} mm。計算它的實際大小。"),
     qI: T("A structure is {a} {u} long. A drawing of it has a magnification of ×{M}. Calculate the length of the structure in the drawing.", "ある構造の長さは {a} {u} です。×{M} の倍率で描いた図での長さを計算しなさい。", "一個結構長 {a} {u}。以 ×{M} 的放大率繪畫，計算它在圖中的長度。"),
     qS: T("The scale bar in the micrograph is labelled “{b} {bu}” and measures {bl} mm. A structure measures {sl} mm. Calculate the actual length of the structure.", "顕微鏡写真のスケールバーは「{b} {bu}」と表示され、長さは {bl} mm です。ある構造は {sl} mm でした。構造の実際の長さを計算しなさい。", "顯微照片的比例尺標示為「{b} {bu}」，量得 {bl} mm。一個結構量得 {sl} mm。計算該結構的實際長度。"),

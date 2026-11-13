@@ -66,13 +66,13 @@
     ".W .tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;border:1.5px solid var(--k-line);margin-right:4px}" +
     ".W dl.defs{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px;margin:0}.W dl.defs dt{font-weight:700}.W dl.defs dd{margin:0}";
 
-  function iconInsulin() {
+  function iconInsulin(T) {
     var s = sv("svg", { viewBox: "0 0 160 100", role: "img", "aria-label": "insulin" });
     s.appendChild(sv("path", { d: "M30 70C40 30 70 20 95 35S115 20 128 28", fill: "none", stroke: "var(--k-acc)", "stroke-width": 6, "stroke-linecap": "round" }));
     s.appendChild(sv("path", { d: "M25 55C35 85 70 90 95 72S125 80 135 66", fill: "none", stroke: "var(--k-pol)", "stroke-width": 6, "stroke-linecap": "round" }));
     [[58, 33, 80], [98, 36, 70]].forEach(function (b) { s.appendChild(sv("line", { x1: b[0], y1: b[1] + 2, x2: b[0], y2: b[2] - 2, stroke: "var(--k-ds)", "stroke-width": 5, "stroke-linecap": "round" })); });
-    s.appendChild(sv("text", { x: 12, y: 24, style: "font-size:11px;font-weight:700;fill:var(--k-acc)", text: "A chain" }));
-    s.appendChild(sv("text", { x: 12, y: 96, style: "font-size:11px;font-weight:700;fill:var(--k-pol)", text: "B chain" }));
+    s.appendChild(sv("text", { x: 12, y: 24, style: "font-size:11px;font-weight:700;fill:var(--k-acc)", text: T(["A chain", "A鎖", "A 鏈"]) }));
+    s.appendChild(sv("text", { x: 12, y: 96, style: "font-size:11px;font-weight:700;fill:var(--k-pol)", text: T(["B chain", "B鎖", "B 鏈"]) }));
     s.appendChild(sv("text", { x: 78, y: 58, "text-anchor": "start", style: "font-size:10px;fill:var(--k-ds);font-weight:700", text: "S–S" }));
     return s;
   }
@@ -116,7 +116,7 @@
       facts: [
         [["Shape", "形", "形狀"], ["Globular", "球状 (globular)", "球狀 (globular)"]],
         [["Type", "種類", "類型"], ["Conjugated: has a non-polypeptide prosthetic group", "複合 (conjugated)：ポリペプチド以外の補欠分子族 (prosthetic group) をもつ", "結合 (conjugated)：含有非多肽的輔基 (prosthetic group)"]],
-        [["Quaternary", "四次構造", "四級結構"], ["4 polypeptides (in adults: 2 α-globin + 2 β-globin), each with a haem group containing an iron ion", "4本のポリペプチド (成人: α鎖2本 + β鎖2本)。それぞれ鉄イオンを含むヘム (haem) をもつ", "4 條多肽（成人：2 條 α + 2 條 β），每條各有一個含鐵離子的血紅素 (haem)"]],
+        [["Quaternary", "四次構造", "四級結構"], ["4 polypeptides (in adults: 2 α-globin + 2 β-globin), each with a haem group containing an iron ion (Fe²⁺)", "4本のポリペプチド (成人: α鎖2本 + β鎖2本)。それぞれ鉄イオン (Fe²⁺) を含むヘム (haem) をもつ", "4 條多肽（成人：2 條 α + 2 條 β），每條各有一個含鐵離子 (Fe²⁺) 的血紅素 (haem)"]],
         [["Function", "はたらき", "功能"], ["Carries oxygen in red blood cells: each haem binds one O₂", "赤血球で酸素を運ぶ: 各ヘムが O₂ を1分子結合", "在紅血球中運載氧：每個血紅素結合一個 O₂"]],
         [["Solubility", "溶解性", "溶解性"], ["Soluble in water", "水に溶ける", "可溶於水"]]
       ] }
@@ -143,7 +143,7 @@
       root.appendChild(el("div", { class: "panel" }, [el("dl", { class: "defs" }, [
         el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。"]) }),
         el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。"]) }),
-        el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of amino acids only.", "アミノ酸だけでできている。", "只由氨基酸組成。"]) }),
+        el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。"]) }),
         el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。"]) })
       ])]));
       root.appendChild(el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。"]) }));
@@ -178,7 +178,7 @@
         PROT.forEach(function (p) {
           var done = shapeOK[p.id] && conjOK[p.id];
           if (done) n++;
-          var c = el("div", { class: "pc" }, [el("h5", { text: T(p.name) }), p.icon()]);
+          var c = el("div", { class: "pc" }, [el("h5", { text: T(p.name) }), p.icon(T)]);
           if (!quiz || done) {
             if (quiz) c.appendChild(el("p", { class: "fb good", text: "✔ " + T(["Both correct. Here are the facts:", "両方正解。詳しい情報:", "兩項皆正確。以下是資料："]) }));
             c.appendChild(factsOf(p));

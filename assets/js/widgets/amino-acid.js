@@ -205,7 +205,7 @@
       pick("alpha");
 
       // ---- Part 2: R-group classifier
-      root.appendChild(el("h4", { text: T(["2. Sort the R-groups", "2. R基 (R-group) を分類しよう", "2. 為 R 基 (R-group) 分類"]) }));
+      root.appendChild(el("h4", { text: T(["2. Sort the R-groups", "2. R基 (R-group) を分類しよう", "2. 為 R 基 (R-group) 分類"]) })).appendChild(ahl());
       root.appendChild(el("p", { text: T([
         "R-groups are either hydrophobic (they avoid water) or hydrophilic (they attract water). Hydrophilic R-groups are polar or charged, and charged R-groups are acidic (negative) or basic (positive).",
         "R基は、疎水性 (hydrophobic：水をはじく) か親水性 (hydrophilic：水とひきあう) のどちらかです。親水性の R基は極性 (polar) か、電荷をもつもの（酸性 acidic は負、塩基性 basic は正）です。",
@@ -258,9 +258,9 @@
       var sp = el("div", { class: "card", style: "border-left-color:var(--k-S)" }, [
         el("div", { class: "f", html: "R = –CH<sub>2</sub>–SH" }),
         el("p", { class: "small", text: T([
-          "For interest only: this sulfur-containing R-group is cysteine. Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). You are not asked to sort it.",
-          "参考: この硫黄を含む R基 はシステイン (cysteine) です。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。分類は不要です。",
-          "備註：這個含硫的 R 基屬於半胱氨酸 (cysteine)。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。不需要為它分類。"]) })
+          "This sulfur-containing R-group belongs to cysteine, the one amino acid you need to name (AHL, B1.2.9). Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). You are not asked to sort it here.",
+          "この硫黄を含む R基 はシステイン (cysteine) のもので、名前を覚える必要がある唯一のアミノ酸です（AHL, B1.2.9）。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。ここでは分類は不要です。",
+          "這個含硫的 R 基屬於半胱氨酸 (cysteine)，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏不需要為它分類。"]) })
       ]);
       root.appendChild(sp);
       var rb = el("button", { type: "button", text: T(["Reset", "リセット", "重設"]) });

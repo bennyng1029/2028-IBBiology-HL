@@ -155,7 +155,7 @@
         `<p>脂肪酸は、<strong>親水性</strong> (hydrophilic) の頭部と<strong>疎水性</strong> (hydrophobic) の炭化水素の尾部をもつ長い分子です。水中で十分な濃度になると、脂肪酸は<strong>合体</strong> (coalesce) して<strong>二重層</strong> (bilayer) をつくります。頭部は両側で水に面し、尾部は内側で向き合います。二重層は閉じて、中空の球である<strong>小胞</strong> (vesicle) になることがあります。</p>
 <p>これは酵素も細胞からのエネルギーも必要とせず、自然に起こります。脂肪酸はA2.1.1で述べたような反応でできるため、小胞は原始地球でできえたと考えられます。</p>
 <p><strong>なぜ重要か。</strong>膜に包まれた区画があると、<em>内部の化学反応を外部と違うものにできます</em>。反応物を集めて濃縮でき、生成物が拡散して失われません。内部に自己複製する分子があれば、原始細胞になりえます。</p>`,
-        `<p>脂肪酸是長分子，一端是<strong>親水</strong> (hydrophilic) 的頭部，另一端是<strong>疏水</strong> (hydrophobic) 的烴尾。在水中，脂肪酸（濃度足夠時）可以<strong>聚合</strong> (coalesce)，自行排列成<strong>雙層</strong> (bilayer)：頭部在兩側朝向水，尾部在內側互相相對。雙層可以閉合成一個空心的球，稱為<strong>囊泡</strong> (vesicle)。</p>
+        `<p>脂肪酸是長分子，一端是<strong>親水</strong> (hydrophilic) 的頭部，另一端是<strong>疏水</strong> (hydrophobic) 的烴尾。在水中，脂肪酸（濃度足夠時）可以<strong>聚集</strong> (coalesce)，自行排列成<strong>雙層</strong> (bilayer)：頭部在兩側朝向水，尾部在內側互相相對。雙層可以閉合成一個空心的球，稱為<strong>囊泡</strong> (vesicle)。</p>
 <p>這個過程是自發的，不需要酶，也不需要細胞提供能量。脂肪酸可由 A2.1.1 所述的反應產生，所以囊泡可能在早期地球形成。</p>
 <p><strong>為何重要？</strong>有膜包圍的區室，可令<em>內部的化學反應與外面不同</em>。反應物可被聚集並濃縮，產物也不會擴散流失。如果內部再有能自我複製的分子，就可能形成原始細胞。</p>`)
     },
@@ -217,21 +217,21 @@
 <li><strong>Fossils and rock chemistry.</strong> The age of the oldest rocks that contain fossil cells or chemical traces of life is found by <strong>radiometric dating</strong> (using the steady decay of radioactive isotopes in the rock).</li>
 <li><strong>Molecular clock.</strong> Differences between the DNA or protein sequences of living species build up at a roughly steady rate. Counting the differences and using a rate calibrated from fossils gives an estimate of when two lineages split. Applied to the oldest branches of the tree of life, this gives a date for LUCA.</li>
 </ul>
-<p>Estimates for the first living cells and LUCA fall in the range of roughly <strong>3.5 to 4 billion years ago</strong>; the exact value depends on the method and is debated. Earth itself is about 4.5 billion years old. Single-celled life existed for most of Earth's history, and humans are a tiny final fraction.</p>
+<p>Most estimates for the first living cells and for LUCA fall between about <strong>3.5 and 4.3 billion years ago</strong>; the exact value depends on the method and is debated. Earth itself is about 4.5 billion years old. For more than half of the time since life began, all life was single-celled, and humans have existed for only a tiny final fraction of it.</p>
 <p>The aim is to appreciate the <strong>immense length of time</strong> over which life has been evolving.</p>`,
         `<p>生命の誕生ははるか昔なので、年代は間接的な方法による<em>推定</em>です。</p>
 <ul>
 <li><strong>化石と岩石の化学的証拠。</strong>細胞の化石や生命の化学的痕跡を含む最古の岩石の年代は、<strong>放射年代測定</strong> (radiometric dating)、つまり岩石中の放射性同位体の一定の崩壊を使って求めます。</li>
 <li><strong>分子時計</strong> (molecular clock)：現生種のDNAやタンパク質の配列の違いは、ほぼ一定の速さで蓄積します。違いを数え、化石で較正した速度を使うと、2つの系統が分かれた時期を推定できます。生命の樹の最も古い枝に応用すると、LUCAの年代が推定されます。</li>
 </ul>
-<p>最初の生きた細胞やLUCAの推定年代は、おおむね<strong>35億〜40億年前</strong>の範囲にあり、正確な値は方法によって異なり議論があります。地球自体は約45億年前にできました。地球の歴史の大部分は単細胞生物の時代で、ヒトはそのごく最後の一部にすぎません。</p>
+<p>最初の生きた細胞やLUCAの推定年代の多くは、おおむね<strong>35億〜43億年前</strong>の範囲にあり、正確な値は方法によって異なり議論があります。地球自体は約45億年前にできました。生命が誕生してからの時間の半分以上、生物はすべて単細胞でした。ヒトが存在するのは、そのごく最後の一部にすぎません。</p>
 <p>大切なのは、生命が進化してきた<strong>途方もなく長い時間</strong>を実感することです。</p>`,
         `<p>生命開始於非常久遠以前，所以年代只能用間接方法<em>估計</em>：</p>
 <ul>
 <li><strong>化石和岩石化學。</strong>含有細胞化石或生命化學痕跡的最古老岩石，其年齡可用<strong>放射性定年法</strong> (radiometric dating) 求得（利用岩石中放射性同位素的穩定衰變）。</li>
 <li><strong>分子鐘</strong> (molecular clock)：現存物種的 DNA 或蛋白質序列差異以大致穩定的速率累積。數算差異，再用由化石校準的速率，就可估計兩個譜系何時分開。把方法用於生命樹最古老的分支，便得出 LUCA 的年代。</li>
 </ul>
-<p>對最初活細胞和 LUCA 的估計，大約落在<strong>35 億至 40 億年前</strong>之間，確實數值視乎方法而定，亦有爭議。地球本身約有 45 億年歷史。地球歷史的大部分時間都只有單細胞生物，人類只是最後極短的一段。</p>
+<p>對最初活細胞和 LUCA 的估計，大多落在約 <strong>35 億至 43 億年前</strong>之間，確實數值視乎方法而定，亦有爭議。地球本身約有 45 億年歷史。自生命出現以來，超過一半的時間裏所有生物都是單細胞的，而人類只存在於最後極短的一段。</p>
 <p>目的是讓你體會生命演化所經歷的<strong>極其漫長的時間</strong>。</p>`),
       examTip: T("You do not need to memorize exact dates. Know the two approaches and that the timescale is billions of years.",
         "正確な年代を暗記する必要はありません。2つの方法と、時間が数十億年規模であることを理解しましょう。",
@@ -443,7 +443,7 @@
         "把生命起源的一個建議過程按先後次序排列。（細節仍有爭議。）"),
       items: [
         T("Small carbon compounds (e.g. amino acids) form spontaneously from simple gases", "単純な気体から小さな炭素化合物（アミノ酸など）が自然にできる", "簡單氣體自發形成小型含碳化合物（如氨基酸）"),
-        T("Fatty acids coalesce into vesicles; RNA molecules form that can replicate and catalyse", "脂肪酸が合体して小胞になる。複製と触媒ができるRNA分子ができる", "脂肪酸聚合成囊泡；形成能複製和催化的 RNA 分子"),
+        T("Fatty acids coalesce into vesicles; RNA molecules form that can replicate and catalyse", "脂肪酸が合体して小胞になる。複製と触媒ができるRNA分子ができる", "脂肪酸聚集成囊泡；形成能複製和催化的 RNA 分子"),
         T("Self-replicating RNA becomes enclosed within a membrane, forming protocells", "自己複製するRNAが膜に包まれ、原始細胞ができる", "自我複製的 RNA 被膜包圍，形成原始細胞"),
         T("Protocells evolve into the first true cells; LUCA lives", "原始細胞が最初の真の細胞へと進化し、LUCAが生きる", "原始細胞演化成最初的真正細胞；LUCA 出現")],
       explanation: T("Building blocks must exist before they can assemble, and a replicating molecule inside a membrane gives a protocell that can then evolve. Ordering of the vesicle and RNA steps is debated, so the question groups them.",
@@ -543,17 +543,17 @@
     ],
     beyondSyllabus: [
       T("You do not need to know the names of the amino acids or other compounds made in the Miller–Urey experiment, or the exact apparatus measurements.", "ミラーとユーリーの実験でできたアミノ酸などの化合物の名前や、装置の正確な数値を知る必要はありません。", "你不需要認識米勒–尤里實驗所產生的氨基酸或其他化合物的名稱，也不需要知道裝置的確切數值。"),
-      T("You do not need to know the Oparin–Haldane “primordial soup” hypothesis by name, or alternative ideas such as panspermia. The guide does not name them.", "「オパーリン・ホールデン」の原始スープ説の名称や、パンスペルミア説などの別の考えを知る必要はありません。指導要領に挙げられていません。", "你不需要認識奧巴林–霍爾丹「原始湯」假說的名稱，也不需要認識泛種論等其他想法。指引中沒有提到。"),
+      T("You do not need to know the Oparin–Haldane “primordial soup” hypothesis by name, or alternative ideas such as panspermia. The guide does not name them.", "「オパーリン・ホールデン」の原始スープ説の名称や、パンスペルミア説などの別の考えを知る必要はありません。IB のガイドには挙げられていません。", "你不需要認識奧巴林–霍爾丹「原始湯」假說的名稱，也不需要認識泛種論等其他想法。指引中沒有提到。"),
       T("You do not need detailed RNA-world chemistry, such as names of specific ribozymes or how RNA is replicated without enzymes. Know only that RNA can be copied and can catalyse, and that the ribosome uses a ribozyme.", "RNAワールドの詳しい化学（特定のリボザイムの名前や、酵素なしのRNA複製の仕組み）は不要です。RNAは複製でき触媒にもなること、リボソームにリボザイムがあることだけ知っていれば十分です。", "你不需要認識 RNA 世界的詳細化學，例如特定核酶的名稱，或 RNA 如何在沒有酶時複製。只須知道 RNA 可被複製、可作催化劑，而核糖體含有核酶。"),
       T("You do not need to memorize exact dates for the first cells or LUCA, or the number or names of genes inferred to be in LUCA.", "最初の細胞やLUCAの正確な年代、LUCAがもっていたと推定される遺伝子の数や名前を暗記する必要はありません。", "你不需要背誦最初細胞或 LUCA 的確切年代，也不需要背誦推斷屬於 LUCA 的基因數目或名稱。"),
-      T("You do not need to name the three domains of life or to draw the tree of life in this subtopic.", "この単元で、生物の3つのドメインの名称や生命の樹の描画は不要です。", "在這個子課題中，你不需要說出三個域的名稱，也不需要繪畫生命樹。")
+      T("Not needed for this subtopic: naming the three domains of life or drawing the tree of life. The three domains are taught in A3.2 (Classification and cladistics).", "この単元では不要：生物の3つのドメインの名称や生命の樹の描画。3つのドメインは A3.2 (分類と分岐学) で学びます。", "此子課題不需要：說出生物的三個域或繪畫生命樹。三個域會在 A3.2 (分類與支序分類學) 中學習。")
     ],
     links: [
       { to: "A1.2", why: T("RNA and DNA are nucleic acids; the genetic code links LUCA to every living cell.", "RNAとDNAは核酸で、遺伝暗号がLUCAとすべての生きた細胞をつなぎます。", "RNA 和 DNA 都是核酸；遺傳密碼把 LUCA 與所有活細胞連繫起來。") },
-      { to: "A2.2", why: T("Endosymbiosis explains how eukaryotic cells later evolved from prokaryotes.", "細胞内共生は、真核細胞が原核生物からどう進化したかを説明します。", "內共生說明真核細胞後來如何由原核生物演化而來。") },
-      { to: "A2.3", why: T("Viruses are non-living but evolve; their origin may be separate from cells.", "ウイルスは非生物ですが進化します。その起源は細胞とは別かもしれません。", "病毒是非生物但會演化；它們的起源可能與細胞無關。") },
+      { to: "A2.2", why: T("Endosymbiosis explains how mitochondria and chloroplasts in eukaryotic cells later evolved from prokaryotic cells.", "細胞内共生は、真核細胞のミトコンドリアと葉緑体が、のちに原核細胞からどう進化したかを説明します。", "內共生說明真核細胞中的線粒體和葉綠體後來如何由原核細胞演化而來。") },
+      { to: "A2.3", why: T("Viruses are non-living but evolve; evidence suggests they arose several times from other organisms.", "ウイルスは非生物ですが進化します。証拠から、ウイルスはほかの生物から何度か別々に生じたと考えられます。", "病毒是非生物但會演化；證據顯示它們曾多次由其他生物演變而來。") },
       { to: "B2.1", why: T("The vesicle bilayer is the same basic structure as the phospholipid bilayer of cell membranes.", "小胞の二重層は、細胞膜のリン脂質二重層と同じ基本構造です。", "囊泡的雙層與細胞膜的磷脂雙層是相同的基本結構。") },
-      { to: "A4.1", why: T("Structures need heredity and variation to evolve by natural selection.", "構造が自然選択で進化するには、遺伝と変異が必要です。", "結構要靠遺傳和變異才能透過自然選擇演化。") }
+      { to: "A4.1", why: T("Shared DNA and protein sequences are evidence for evolution from common ancestors, the same kind of evidence used for LUCA.", "共通する DNA やタンパク質の配列は、共通祖先からの進化の証拠であり、LUCA の証拠と同じ種類のものです。", "共有的 DNA 和蛋白質序列是由共同祖先演化的證據，與支持 LUCA 的證據屬同一類。") }
     ],
     natureOfScience: [
       T("Claims in science, including hypotheses and theories, must be testable. Some hypotheses are hard to test: the exact conditions on pre-biotic Earth cannot be replicated, and the first protocells did not fossilize.", "仮説や理論を含む科学の主張は検証可能でなければなりません。原始地球の正確な条件は再現できず、最初の原始細胞は化石になっていないため、検証が難しい仮説もあります。", "科學主張（包括假說和理論）必須是可檢驗的。有些假說難以檢驗：前生物時期地球的確切條件無法重現，而最初的原始細胞也沒有形成化石。")

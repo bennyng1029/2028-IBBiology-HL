@@ -125,7 +125,7 @@
         {
       ref: "A2.2.5", ahl: false,
       heading: T("Prokaryote cell structure", "原核細胞の構造", "原核細胞的結構"),
-      widget: "cell-compare",
+      widget: "cell-compare-pro",
       body: T(
         `<p><strong>Prokaryotes</strong> (bacteria) have no nucleus and no membrane-bound organelles. The type you need is the cell of <strong>Gram-positive eubacteria</strong> such as <em>Bacillus</em> and <em>Staphylococcus</em>. Components to know:</p>
 <table>
@@ -231,7 +231,7 @@
 <tr><td><strong>刺激への応答</strong> (response to stimuli)</td><td>変化を感知して反応する</td><td>クラミドモナスは光に向かって泳ぐ（眼点が光を感知）。ゾウリムシは有害な化学物質から遠ざかる</td></tr>
 <tr><td><strong>生殖</strong> (reproduction)</td><td>新しい個体をつくる</td><td>どちらも分裂して新しい細胞をつくる（無性生殖）</td></tr>
 </table>
-<p>ゾウリムシとクラミドモナスは説明のために選んだ例です。指導要領が挙げているのは8つの機能だけです。</p>`,
+<p>ゾウリムシとクラミドモナスは説明のために選んだ例です。IB のガイドが挙げているのは8つの機能だけです。</p>`,
         `<p>單細胞生物是單獨一個細胞，必須自己進行<em>所有</em>生命功能。需要認識的八項功能：</p>
 <table>
 <tr><th>功能</th><th>意思</th><th><em>草履蟲</em> (Paramecium)／<em>衣藻</em> (Chlamydomonas) 的例子</th></tr>
@@ -300,7 +300,7 @@
 <tr><td><strong>Phloem sieve tube element</strong></td><td>None (when mature)</td><td>Joined end to end to form tubes for transporting sugars. Having no nucleus and few organelles leaves a clear path for flow. A neighbouring companion cell (which has a nucleus) supports it.</td></tr>
 </table>
 <p>These cells are still alive and are still cells. They show that cell structure is not identical everywhere, even within eukaryotes.</p>`,
-        `<p>「典型的な」真核細胞には<strong>核が1つ</strong>あります。そうでない細胞もあります。指導要領は、<strong>核の数</strong>で典型的でない細胞構造を示すよう求めており、例は次の4つです。</p>
+        `<p>「典型的な」真核細胞には<strong>核が1つ</strong>あります。そうでない細胞もあります。IB のガイドは、<strong>核の数</strong>で典型的でない細胞構造を示すよう求めており、例は次の4つです。</p>
 <table>
 <tr><th>細胞</th><th>核の数</th><th>備考</th></tr>
 <tr><td><strong>隔壁のない菌糸</strong> (aseptate fungal hypha)</td><td>多数</td><td>菌糸は糸状の菌類の細胞列です。「隔壁がない (aseptate)」とは仕切り壁 (septa) がないことで、1つの連続した細胞質に多数の核が含まれます。</td></tr>
@@ -765,7 +765,7 @@
         T("Multicellular organisms do not need cell differentiation.", "多細胞生物は細胞分化を必要としない。", "多細胞生物不需要細胞分化。")],
       answer: 1,
       explanation: T("Larger body size and cell specialization are the advantages named in the guide. A describes a unicellular organism. C is false because multicellularity evolved repeatedly. D is false because specialization depends on differentiation.",
-        "指導要領が挙げる利点は、体の大型化と細胞の特殊化です。Aは単細胞生物の説明。Cは多細胞性が繰り返し進化したので誤り。Dは特殊化が分化に基づくので誤りです。",
+        "IB のガイドが挙げる利点は、体の大型化と細胞の特殊化です。Aは単細胞生物の説明。Cは多細胞性が繰り返し進化したので誤り。Dは特殊化が分化に基づくので誤りです。",
         "指引所列的優點是身體較大和細胞特化。A 描述的是單細胞生物。C 錯誤，多細胞性曾多次演化出現。D 錯誤，特化要靠分化。") },
 
   ];
@@ -820,8 +820,8 @@
       T("You do not need the internal parts of mitochondria and chloroplasts (cristae, matrix, thylakoids, grana, stroma) or how they are adapted for A2.2. That is B2.2 (AHL).", "A2.2では、ミトコンドリアや葉緑体の内部構造（クリステ・マトリックス・チラコイド・グラナ・ストロマ）やその適応は不要です。それはB2.2 (AHL) の内容です。", "在 A2.2 你不需要認識線粒體和葉綠體的內部結構（嵴、基質、類囊體、基粒、基質）及其適應特徵，那是 B2.2 (AHL) 的內容。"),
       T("You do not need other prokaryote structures such as the capsule, pili, plasmids or the structure of the bacterial flagellum, nor the Gram-staining procedure or peptidoglycan structure, to answer A2.2.5.", "A2.2.5では、莢膜・線毛・プラスミド・細菌の鞭毛の構造、グラム染色の手順、ペプチドグリカンの構造などは不要です。", "回答 A2.2.5 時，你不需要認識莢膜、菌毛、質粒、細菌鞭毛的結構，也不需要認識革蘭氏染色步驟或肽聚糖結構。"),
       T("You do not need to know how the lenses and electromagnets of TEM and SEM work, or exact resolution limits. Know the advantages of each technique.", "TEMとSEMのレンズや電磁石のしくみ、正確な分解能の限界は不要です。各技術の利点を知っていれば十分です。", "你不需要認識 TEM 和 SEM 的透鏡及電磁鐵如何運作，也不需要認識確切的解像度極限。只需認識各技術的優點。"),
-      T("You do not need the detailed molecular structure of the cytoskeleton (tubulin, actin) or the “9+2” structure of cilia.", "細胞骨格の詳しい分子構造（チューブリン・アクチン）や繊毛の「9+2」構造は不要です。", "你不需要認識細胞骨架的詳細分子結構（微管蛋白、肌動蛋白）或纖毛的「9+2」結構。"),
-      T("You do not need the molecular mechanisms of differentiation (transcription factors, epigenetics) or types of stem cell. The guide asks only that differentiation is based on different patterns of gene expression, often triggered by the environment.", "分化の分子機構（転写因子・エピジェネティクス）や幹細胞の種類は不要です。分化が遺伝子発現パターンの違いに基づき、環境が引き金になることが多い、という点だけです。", "你不需要認識分化的分子機制（轉錄因子、表觀遺傳）或幹細胞的類型。指引只要求知道分化基於不同的基因表達模式，往往由環境觸發。"),
+      T("You do not need the detailed molecular structure of the cytoskeleton (tubulin, actin) or the “9+2” structure of cilia. (Actin and myosin filaments in muscle contraction are taught in B3.3 Muscle and motility, AHL.)", "細胞骨格の詳しい分子構造（チューブリン・アクチン）や繊毛の「9+2」構造は不要です。（筋収縮におけるアクチンとミオシンのフィラメントは B3.3 筋肉と運動 (AHL) で学びます。）", "你不需要認識細胞骨架的詳細分子結構（微管蛋白、肌動蛋白）或纖毛的「9+2」結構。（肌肉收縮中的肌動蛋白和肌球蛋白絲會在 B3.3 肌肉與運動 (AHL) 學習。）"),
+      T("Not needed for this subtopic: the molecular mechanisms of differentiation (transcription factors, epigenetics) and types of stem cell. A2.2.13 asks only that differentiation is based on different patterns of gene expression, often triggered by the environment. Stem cells are taught in B2.3 (Cell specialization), and transcription factors and epigenetics in D2.2 (Gene expression).", "この単元では不要：分化の分子機構（転写因子・エピジェネティクス）や幹細胞の種類。A2.2.13 で求められるのは、分化が遺伝子発現パターンの違いに基づき、環境が引き金になることが多い、という点だけです。幹細胞は B2.3 (細胞の特殊化)、転写因子とエピジェネティクスは D2.2 (遺伝子発現) で学びます。", "此子課題不需要：分化的分子機制（轉錄因子、表觀遺傳）和幹細胞的類型。A2.2.13 只要求知道分化基於不同的基因表達模式，往往由環境觸發。幹細胞在 B2.3 (細胞特化) 學習，轉錄因子和表觀遺傳則在 D2.2 (基因表達) 學習。"),
       T("You do not need named multicellular lineages or details such as which archaeon was the host cell in the origin of eukaryotes.", "多細胞化した具体的な系統名や、真核生物の起源でどの古細菌が宿主だったかといった詳細は不要です。", "你不需要認識具名的多細胞譜系，也不需要認識真核生物起源中哪種古菌是宿主等細節。")
     ],
     links: [

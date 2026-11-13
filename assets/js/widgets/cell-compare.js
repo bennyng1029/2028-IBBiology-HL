@@ -1,5 +1,6 @@
 /* Widget: cell-compare — prokaryote vs animal vs plant vs fungal cell, plus atypical cells (A2.2.5, A2.2.6, A2.2.8, A2.2.9)
-   Registers "cell-compare" (opens on the diagram tab) and "cell-compare-atypical" (opens on the atypical-cells tab). */
+   Registers "cell-compare" (opens on the diagram tab, animal cell), "cell-compare-pro" (diagram tab, prokaryote cell)
+   and "cell-compare-atypical" (opens on the atypical-cells tab). */
 (function () {
   "use strict";
   var STYLE_ID = "ibw-cell-compare-css";
@@ -175,6 +176,9 @@
     plant: ["wall_plant", "membrane", "cytoplasm", "nucleus", "chrom", "rib80", "mito", "chlo", "plastid", "vac_sap", "rer", "golgi", "cskel"],
     fungal: ["wall_fungal", "membrane", "cytoplasm", "nucleus", "chrom", "rib80", "mito", "vac_fungal", "rer", "golgi", "vesicle", "cskel"]
   };
+
+  /* structures present in a cell type but not drawn in its diagram (used for the "Found in" tags) */
+  var ALSO = { ser: ["plant", "fungal"], vesicle: ["plant"], lyso: ["plant", "fungal"] };
 
   /* ---------- SVG helpers ---------- */
   function g(id, inner) { return '<g class="hit" data-s="' + id + '">' + inner + "</g>"; }
@@ -393,13 +397,13 @@
   ];
 
   /* ---------- widget ---------- */
-  function make(startTab) {
+  function make(startTab, startCell) {
     return {
       title: UI.title,
       mount: function (el, ctx) {
         injectCss();
         var t = function (o) { return ctx.t(o); };
-        var st = { tab: startTab, cell: "animal", sel: null, atyp: "hypha" };
+        var st = { tab: startTab, cell: startCell || "animal", sel: null, atyp: "hypha" };
         var body;
 
         el.classList.add("w-cell-compare");
@@ -422,7 +426,7 @@
 
         function foundTags(id) {
           return CELLORDER.map(function (c) {
-            var on = CELLIDS[c].indexOf(id) >= 0;
+            var on = CELLIDS[c].indexOf(id) >= 0 || (ALSO[id] || []).indexOf(c) >= 0;
             return '<span class="cc-tag' + (on ? " on" : "") + '">' + (on ? "✓ " : "✗ ") + t(CELLSHORT[c]) + "</span>";
           }).join("");
         }
@@ -509,5 +513,6 @@
   if (typeof IB !== "undefined" && IB.registerWidget) {
     IB.registerWidget("cell-compare", make("diagram"));
     IB.registerWidget("cell-compare-atypical", make("atypical"));
+    IB.registerWidget("cell-compare-pro", make("diagram", "pro"));
   }
 })();
