@@ -475,7 +475,312 @@
     ],
 
     questions: [
-/*Q*/
+      {
+        id: "a1-2-q01", type: "mcq", ahl: false, difficulty: 1, ref: "A1.2.2", paper: "1A",
+        stem: L("Which three components make up one nucleotide of DNA?", "DNA の1つのヌクレオチドを構成する3つの成分はどれか。", "下列哪三種成分組成一個 DNA 核苷酸？"),
+        options: [
+          L("Phosphate, deoxyribose and a nitrogenous base", "リン酸、デオキシリボース、窒素を含む塩基", "磷酸、脫氧核糖和含氮鹼基"),
+          L("Phosphate, ribose and a nitrogenous base", "リン酸、リボース、窒素を含む塩基", "磷酸、核糖和含氮鹼基"),
+          L("Amino group, carboxyl group and an R group", "アミノ基、カルボキシ基、R 基", "氨基、羧基和 R 基"),
+          L("Glycerol, a phosphate and two fatty acids", "グリセロール、リン酸、2つの脂肪酸", "甘油、磷酸和兩個脂肪酸")
+        ],
+        answer: 0,
+        explanation: L(
+          "A is correct. B is the tempting wrong answer: ribose is the sugar of RNA, not DNA. C is an amino acid. D is a phospholipid.",
+          "A が正解です。B は引っかかりやすい誤りで、リボースは RNA の糖であり DNA の糖ではありません。C はアミノ酸、D はリン脂質です。",
+          "答案是 A。B 是容易誤選的答案：核糖是 RNA 的糖，不是 DNA 的糖。C 是氨基酸，D 是磷脂。")
+      },
+      {
+        id: "a1-2-q02", type: "mcq", ahl: false, difficulty: 1, ref: "A1.2.3", paper: "1A",
+        stem: L("What makes up the sugar–phosphate backbone of a DNA strand?", "DNA 鎖の糖−リン酸骨格をつくっているのは何か。", "DNA 鏈的糖−磷酸骨架由什麼組成？"),
+        options: [
+          L("Sugars and phosphates joined by covalent bonds", "共有結合でつながった糖とリン酸", "以共價鍵連接的糖和磷酸"),
+          L("Bases joined to each other by hydrogen bonds", "水素結合で互いにつながった塩基", "以氫鍵互相連接的鹼基"),
+          L("Sugars and bases joined by hydrogen bonds", "水素結合でつながった糖と塩基", "以氫鍵連接的糖和鹼基"),
+          L("Phosphates joined to bases by ionic bonds", "イオン結合で塩基につながったリン酸", "以離子鍵連接鹼基的磷酸")
+        ],
+        answer: 0,
+        explanation: L(
+          "A is correct: the backbone is a continuous chain of alternating sugars and phosphates, joined by strong covalent bonds. B describes the link between the two strands. C and D put the wrong parts and bonds together.",
+          "A が正解です。骨格は、糖とリン酸が交互に並んだ連続した鎖で、強い共有結合でつながっています。B は2本の鎖の間の結合の説明です。C と D は部品と結合の組み合わせが誤りです。",
+          "答案是 A：骨架是糖與磷酸交替排列的連續鏈，由堅固的共價鍵連接。B 描述的是兩條鏈之間的連接。C 和 D 把部件和化學鍵配錯了。")
+      },
+      {
+        id: "a1-2-q03", type: "short", ahl: false, difficulty: 1, ref: "A1.2.2", paper: "2",
+        commandTerm: "Draw", marks: 3,
+        stem: L("Draw a diagram of one nucleotide using the shapes recommended by the guide. Label each part.", "ガイドが推奨する図形を使って、1つのヌクレオチドの図を描け。各部分に名前を付けよ。", "用課程指引建議的形狀畫出一個核苷酸的圖，並標示各部分名稱。"),
+        markscheme: [
+          L("Circle labelled phosphate", "円に「リン酸」と記す", "圓形標示為磷酸"),
+          L("Pentagon labelled (pentose) sugar [accept deoxyribose or ribose]", "五角形に「(五炭) 糖」と記す [デオキシリボースまたはリボースも可]", "五邊形標示為 (戊) 糖 [接受脫氧核糖或核糖]"),
+          L("Rectangle labelled (nitrogenous) base, with the phosphate and base both joined to the sugar", "長方形に「(窒素を含む) 塩基」と記し、リン酸と塩基の両方が糖につながっている", "長方形標示為 (含氮) 鹼基，而磷酸和鹼基都與糖連接")
+        ],
+        modelAnswer: L(
+          "A circle (phosphate) joined to a pentagon (sugar), with a rectangle (base) joined to a different side of the pentagon. All three shapes are labelled.",
+          "円 (リン酸) が五角形 (糖) につながり、長方形 (塩基) が五角形の別の側につながっている。3つの図形すべてに名前が付いている。",
+          "一個圓形 (磷酸) 連接五邊形 (糖)，長方形 (鹼基) 連接在五邊形的另一側。三個形狀都有標示。")
+      },
+      {
+        id: "a1-2-q04", type: "short", ahl: false, difficulty: 2, ref: "A1.2.6", paper: "2",
+        commandTerm: "Draw", marks: 4,
+        stem: L("Draw a diagram to show the structure of two antiparallel strands of DNA with four base pairs. You do not need to show the helix.", "4つの塩基対をもつ、逆平行な2本の DNA 鎖の構造を図示せよ。らせんの形は描かなくてよい。", "繪畫圖解，顯示有四個鹼基對的兩條反向平行 DNA 鏈的結構。不需要畫出螺旋。"),
+        markscheme: [
+          L("Two sugar–phosphate backbones drawn as two lines/chains of alternating circles and pentagons", "2本の糖−リン酸骨格を、円と五角形が交互に並ぶ2本の線／鎖として描いている", "兩條糖−磷酸骨架畫成由圓形和五邊形交替排列的兩條線／鏈"),
+          L("Strands shown running in opposite directions (antiparallel), e.g. with arrows or 5′/3′ labels", "鎖が逆向きに走っている (逆平行) ことが、矢印や 5′/3′ 記号などで示されている", "顯示兩條鏈走向相反 (反向平行)，例如用箭頭或 5′／3′ 標示"),
+          L("Bases drawn as rectangles between the strands, with A opposite T and G opposite C", "塩基が鎖の間の長方形として描かれ、A の向かいが T、G の向かいが C になっている", "鹼基畫成兩鏈之間的長方形，A 對 T、G 對 C"),
+          L("Hydrogen bonds drawn as dashed lines between the paired bases", "対になった塩基の間に水素結合が破線で描かれている", "配對鹼基之間以虛線畫出氫鍵")
+        ],
+        modelAnswer: L(
+          "Two vertical backbones of alternating circles (phosphate) and pentagons (sugar), one with an arrow pointing up and the other pointing down. Four rectangles join the strands in pairs, A–T, T–A, G–C and C–G, with dashed lines between the bases to show hydrogen bonds.",
+          "円 (リン酸) と五角形 (糖) が交互に並ぶ2本の縦の骨格。一方は上向き、もう一方は下向きの矢印を付ける。4つの長方形が鎖を対にしてつなぎ、A–T、T–A、G–C、C–G とし、塩基の間に水素結合を示す破線を引く。",
+          "兩條由圓形 (磷酸) 和五邊形 (糖) 交替排列的垂直骨架，一條箭頭向上，另一條箭頭向下。四個長方形把兩鏈成對連接，為 A–T、T–A、G–C 和 C–G，鹼基之間用虛線表示氫鍵。")
+      },
+      {
+        id: "a1-2-q05", type: "match", ahl: false, difficulty: 1, ref: "A1.2.2–6", paper: "1A",
+        stem: L("Match each structure or bond to its role in DNA.", "DNA における各構造または結合を、その役割と対応させよ。", "把 DNA 中每種結構或化學鍵與其功用配對。"),
+        pairs: [
+          { left: L("Phosphate", "リン酸", "磷酸"), right: L("Joins to the sugar of the next nucleotide in the backbone", "骨格で次のヌクレオチドの糖とつながる", "在骨架中與下一個核苷酸的糖連接") },
+          { left: L("Nitrogenous base", "窒素を含む塩基", "含氮鹼基"), right: L("Carries the code", "暗号を担う", "攜帶密碼") },
+          { left: L("Hydrogen bond", "水素結合", "氫鍵"), right: L("Holds complementary bases together between the two strands", "2本の鎖の間で相補的な塩基をつなぎとめる", "在兩條鏈之間把互補鹼基連在一起") },
+          { left: L("Covalent sugar–phosphate bond", "糖−リン酸の共有結合", "糖−磷酸共價鍵"), right: L("Makes the strong backbone of each strand", "各鎖の強い骨格をつくる", "構成每條鏈的堅固骨架") }
+        ],
+        explanation: L(
+          "Covalent bonds make each strand strong; weak hydrogen bonds join the two strands and can be separated when DNA is copied.",
+          "共有結合は各鎖を強くし、弱い水素結合は2本の鎖をつなぎ、DNA がコピーされるときには引き離せます。",
+          "共價鍵使每條鏈堅固；弱的氫鍵連接兩條鏈，在 DNA 複製時可被拉開。")
+      },
+      {
+        id: "a1-2-q06", type: "mcq", ahl: false, difficulty: 1, ref: "A1.2.7", paper: "1A",
+        stem: L("Which row correctly compares DNA with RNA?", "DNA と RNA を正しく比較している行はどれか。", "哪一行正確比較 DNA 與 RNA？"),
+        options: [
+          L("DNA: two strands, deoxyribose, thymine. RNA: one strand, ribose, uracil.", "DNA：2本鎖、デオキシリボース、チミン。RNA：1本鎖、リボース、ウラシル。", "DNA：兩條鏈、脫氧核糖、胸腺嘧啶。RNA：一條鏈、核糖、尿嘧啶。"),
+          L("DNA: one strand, deoxyribose, uracil. RNA: two strands, ribose, thymine.", "DNA：1本鎖、デオキシリボース、ウラシル。RNA：2本鎖、リボース、チミン。", "DNA：一條鏈、脫氧核糖、尿嘧啶。RNA：兩條鏈、核糖、胸腺嘧啶。"),
+          L("DNA: two strands, ribose, thymine. RNA: one strand, deoxyribose, uracil.", "DNA：2本鎖、リボース、チミン。RNA：1本鎖、デオキシリボース、ウラシル。", "DNA：兩條鏈、核糖、胸腺嘧啶。RNA：一條鏈、脫氧核糖、尿嘧啶。"),
+          L("DNA: two strands, deoxyribose, uracil. RNA: one strand, ribose, thymine.", "DNA：2本鎖、デオキシリボース、ウラシル。RNA：1本鎖、リボース、チミン。", "DNA：兩條鏈、脫氧核糖、尿嘧啶。RNA：一條鏈、核糖、胸腺嘧啶。")
+        ],
+        answer: 0,
+        explanation: L(
+          "A is correct. B, C and D each swap one or more features. D is the tempting one because it gets the strands and sugars right but swaps the bases.",
+          "A が正解です。B、C、D は特徴を1つ以上入れ替えています。D は鎖の数と糖が正しく塩基だけが入れ替わっているので、引っかかりやすい選択肢です。",
+          "答案是 A。B、C、D 都調換了一項或多項特徵。D 最具迷惑性，因為鏈和糖都對，只是鹼基調換了。")
+      },
+      {
+        id: "a1-2-q07", type: "short", ahl: false, difficulty: 2, ref: "A1.2.7", paper: "2",
+        commandTerm: "Distinguish", marks: 3,
+        stem: L("Distinguish between the structure of DNA and the structure of RNA.", "DNA の構造と RNA の構造を区別せよ。", "區分 DNA 與 RNA 的結構。"),
+        markscheme: [
+          L("DNA is double-stranded but RNA is single-stranded", "DNA は2本鎖だが、RNA は1本鎖である", "DNA 是雙鏈，RNA 是單鏈"),
+          L("DNA contains deoxyribose but RNA contains ribose", "DNA はデオキシリボースをもつが、RNA はリボースをもつ", "DNA 含脫氧核糖，RNA 含核糖"),
+          L("DNA has the base thymine but RNA has uracil instead (both have A, G and C)", "DNA の塩基はチミンだが、RNA は代わりにウラシルをもつ (どちらも A、G、C をもつ)", "DNA 含胸腺嘧啶，RNA 則以尿嘧啶代替 (兩者都有 A、G、C)")
+        ],
+        modelAnswer: L(
+          "DNA has two strands and RNA has one. DNA's sugar is deoxyribose, while RNA's is ribose. DNA contains thymine but RNA contains uracil in its place.",
+          "DNA は2本鎖で RNA は1本鎖。DNA の糖はデオキシリボース、RNA の糖はリボース。DNA はチミンをもつが、RNA は代わりにウラシルをもつ。",
+          "DNA 有兩條鏈，RNA 有一條。DNA 的糖是脫氧核糖，RNA 的糖是核糖。DNA 含胸腺嘧啶，而 RNA 以尿嘧啶取代。")
+      },
+      {
+        id: "a1-2-q08", type: "mcq", ahl: false, difficulty: 1, ref: "A1.2.6", paper: "1A",
+        stem: L("One strand of DNA has the base sequence A T T G C A. What is the sequence of the complementary strand (reading in the matching order)?", "DNA の一方の鎖の塩基配列が A T T G C A である。相補的な鎖の配列 (対応する順に読む) はどれか。", "DNA 一條鏈的鹼基序列為 A T T G C A。互補鏈的序列 (按對應次序讀) 是什麼？"),
+        options: [
+          L("T A A C G T", "T A A C G T", "T A A C G T"),
+          L("U A A C G U", "U A A C G U", "U A A C G U"),
+          L("T A A G C T", "T A A G C T", "T A A G C T"),
+          L("A T T G C A", "A T T G C A", "A T T G C A")
+        ],
+        answer: 0,
+        explanation: L(
+          "A pairs with T and G pairs with C, giving T A A C G T. B uses uracil, which is not in DNA. C pairs G with G or C with C in places. D is a copy, not the complement.",
+          "A は T と、G は C と対をつくるので T A A C G T になります。B は DNA にないウラシルを使っています。C は一部の塩基の対が誤りです。D は相補鎖ではなく同じ配列のコピーです。",
+          "A 配 T、G 配 C，得出 T A A C G T。B 用了 DNA 中沒有的尿嘧啶。C 有些位置配對錯誤。D 是複本而不是互補序列。")
+      },
+      {
+        id: "a1-2-q10", type: "short", ahl: false, difficulty: 2, ref: "A1.2.5", paper: "2",
+        commandTerm: "Outline", marks: 3,
+        stem: L("Outline how a polymer of RNA is formed from nucleotides.", "ヌクレオチドから RNA のポリマーがどのようにつくられるかを概説せよ。", "概述 RNA 聚合物如何由核苷酸形成。"),
+        markscheme: [
+          L("Nucleotides are joined by condensation reactions", "ヌクレオチドは縮合反応でつながる", "核苷酸以縮合反應連接"),
+          L("The phosphate of one nucleotide bonds to the sugar of the next [accept covalent bond]", "あるヌクレオチドのリン酸が次のヌクレオチドの糖と結合する [共有結合も可]", "一個核苷酸的磷酸與下一個的糖結合 [接受共價鍵]"),
+          L("A molecule of water is released at each bond, and repeating this builds the sugar–phosphate backbone", "各結合で水の分子が1つ放出され、これを繰り返して糖−リン酸骨格ができる", "每形成一個鍵就釋出一分子水，重複此過程建成糖−磷酸骨架")
+        ],
+        modelAnswer: L(
+          "In a condensation reaction the phosphate of one nucleotide is covalently bonded to the sugar of the next, and water is released. Repeating this many times makes a single strand with a sugar–phosphate backbone.",
+          "縮合反応で、あるヌクレオチドのリン酸が次のヌクレオチドの糖と共有結合し、水が放出される。これを何度も繰り返して、糖−リン酸骨格をもつ1本の鎖ができる。",
+          "在縮合反應中，一個核苷酸的磷酸與下一個的糖以共價鍵結合，並釋出水。重複多次便形成具有糖−磷酸骨架的單鏈。")
+      },
+      {
+        id: "a1-2-q11", type: "short", ahl: false, difficulty: 2, ref: "A1.2.8", paper: "2",
+        commandTerm: "Explain", marks: 3,
+        stem: L("Explain how complementary base pairing allows DNA to be replicated accurately.", "相補的塩基対形成が、DNA の正確な複製をどのように可能にするかを説明せよ。", "解釋互補鹼基配對如何使 DNA 能準確複製。"),
+        markscheme: [
+          L("The two strands separate (hydrogen bonds between bases are broken) and each acts as a template", "2本の鎖が分かれ (塩基間の水素結合が切れ)、それぞれが鋳型になる", "兩條鏈分開 (鹼基之間的氫鍵斷開)，每條都作為模板"),
+          L("Each base only pairs with its complementary base (A with T, G with C) through hydrogen bonding", "各塩基は、水素結合により相補的な塩基とだけ対をつくる (A は T、G は C)", "每種鹼基只會透過氫鍵與其互補鹼基配對 (A 與 T，G 與 C)"),
+          L("So the new strand has a sequence determined by the template, giving two identical DNA molecules", "したがって新しい鎖の配列は鋳型で決まり、同じ DNA 分子が2つできる", "所以新鏈的序列由模板決定，產生兩個相同的 DNA 分子")
+        ],
+        modelAnswer: L(
+          "The strands separate and each is used as a template. New nucleotides can only pair with a base on the template through hydrogen bonds: A with T and G with C. The sequence of each new strand is therefore fixed by the template, so two identical DNA molecules are made.",
+          "鎖が分かれ、それぞれが鋳型として使われる。新しいヌクレオチドは、水素結合によって鋳型上の塩基と対をつくることしかできない (A は T、G は C)。したがって、各新しい鎖の配列は鋳型によって決まり、同じ DNA 分子が2つできる。",
+          "兩條鏈分開，各自作為模板。新的核苷酸只能透過氫鍵與模板上的鹼基配對：A 與 T、G 與 C。因此每條新鏈的序列由模板決定，產生兩個相同的 DNA 分子。")
+      },
+      {
+        id: "a1-2-q12", type: "short", ahl: false, difficulty: 2, ref: "A1.2.9", paper: "2",
+        commandTerm: "Calculate", marks: 3,
+        stem: L("A short length of DNA has 8 bases in a strand. (a) Calculate the number of different base sequences that are possible. (b) Explain why the capacity of DNA to store information has no upper limit.", "ある短い DNA の1本の鎖に8個の塩基がある。 (a) 可能な塩基配列の数を計算せよ。 (b) DNA が蓄えられる情報量に上限がない理由を説明せよ。", "一段 DNA 短鏈上有 8 個鹼基。 (a) 計算可能的鹼基序列數目。 (b) 解釋為何 DNA 儲存資訊的容量沒有上限。"),
+        markscheme: [
+          L("4 possible bases at each of 8 positions: 4⁸", "8つの位置のそれぞれに4種類の塩基が入りうる：4⁸", "8 個位置各有 4 種可能的鹼基：4⁸"),
+          L("= 65 536", "= 65 536", "= 65 536"),
+          L("DNA molecules can be any length and the bases can be in any order, so the number of possible sequences is unlimited", "DNA 分子はどんな長さにもなり、塩基はどんな順序にも並べられるので、可能な配列の数に限りがない", "DNA 分子可以是任何長度，鹼基可按任何次序排列，所以可能的序列數目沒有限制")
+        ],
+        modelAnswer: L(
+          "(a) 4⁸ = 65 536 sequences. (b) A DNA molecule can be any length and its four bases can be arranged in any order, so there is no limit to the number of different sequences, and so no limit to the information stored.",
+          "(a) 4⁸ = 65 536 通り。 (b) DNA 分子はどんな長さにもなり、4種類の塩基はどんな順序にも並べられるので、異なる配列の数に限りがなく、蓄えられる情報にも限りがない。",
+          "(a) 4⁸ = 65 536 種序列。 (b) DNA 分子可以是任何長度，四種鹼基可按任何次序排列，所以不同序列的數目沒有限制，儲存的資訊也沒有限制。")
+      },
+      {
+        id: "a1-2-q13", type: "mcq", ahl: false, difficulty: 2, ref: "A1.2.10", paper: "1A",
+        stem: L("Which observation provides the best evidence that all living organisms share a common ancestor?", "すべての生物が共通の祖先をもつことの最もよい証拠となる観察はどれか。", "哪項觀察最能證明所有生物有共同祖先？"),
+        options: [
+          L("All organisms need water.", "すべての生物は水を必要とする。", "所有生物都需要水。"),
+          L("DNA is double-stranded in all cells.", "すべての細胞で DNA は2本鎖である。", "所有細胞中的 DNA 都是雙鏈。"),
+          L("The same triplets of bases code for the same amino acids in almost all organisms.", "ほぼすべての生物で、同じ3つ組の塩基が同じアミノ酸を指定する。", "在幾乎所有生物中，相同的三個鹼基組合都編碼相同的氨基酸。"),
+          L("All organisms contain ribosomes of exactly the same size.", "すべての生物が、まったく同じ大きさのリボソームをもつ。", "所有生物都含有大小完全相同的核糖體。")
+        ],
+        answer: 2,
+        explanation: L(
+          "C is correct: a shared code is arbitrary, so it is best explained by inheritance from a common ancestor. A is true but could result from any origin of life. B is not true of all cells (and some viruses use RNA). D is not true: ribosomes differ in size between prokaryotes and eukaryotes.",
+          "C が正解です。共有された暗号は恣意的なものなので、共通祖先からの遺伝で最もよく説明されます。A は事実ですが、生命がどのように始まったとしても起こりえます。B はすべての細胞には当てはまりません (また、RNA を使うウイルスもあります)。D は誤りで、リボソームの大きさは原核生物と真核生物で異なります。",
+          "答案是 C：共用的密碼是任意的，最好的解釋是從共同祖先遺傳而來。A 正確，但無論生命如何起源都可能成立。B 不適用於所有細胞 (而且有些病毒使用 RNA)。D 不正確，原核生物與真核生物的核糖體大小不同。")
+      },
+      {
+        id: "a1-2-q14", type: "mcq", ahl: false, difficulty: 3, ref: "A1.2.6–7", paper: "1A",
+        data: L(
+          "<p>Base composition of a nucleic acid from a virus (illustrative data).</p><table><tr><th>A</th><th>G</th><th>C</th><th>U</th><th>T</th></tr><tr><td>31%</td><td>19%</td><td>24%</td><td>26%</td><td>0%</td></tr></table>",
+          "<p>あるウイルスの核酸の塩基組成 (架空のデータ)。</p><table><tr><th>A</th><th>G</th><th>C</th><th>U</th><th>T</th></tr><tr><td>31%</td><td>19%</td><td>24%</td><td>26%</td><td>0%</td></tr></table>",
+          "<p>某病毒核酸的鹼基組成 (虛構數據)。</p><table><tr><th>A</th><th>G</th><th>C</th><th>U</th><th>T</th></tr><tr><td>31%</td><td>19%</td><td>24%</td><td>26%</td><td>0%</td></tr></table>"),
+        stem: L("Which conclusion can be deduced from the data?", "このデータから導ける結論はどれか。", "從數據可推斷出哪項結論？"),
+        options: [
+          L("It is double-stranded DNA, because A is close to U.", "A が U に近いので、2本鎖 DNA である。", "因為 A 接近 U，所以是雙鏈 DNA。"),
+          L("It is RNA, because it contains uracil, and probably single-stranded, because A ≠ U and G ≠ C.", "ウラシルを含むので RNA であり、A ≠ U かつ G ≠ C なので、おそらく1本鎖である。", "因為含尿嘧啶，所以是 RNA；又因為 A ≠ U 且 G ≠ C，所以很可能是單鏈。"),
+          L("It is DNA, because the percentages add up to 100%.", "合計が100%なので、DNA である。", "因為百分比總和為 100%，所以是 DNA。"),
+          L("It is double-stranded RNA, because it contains purines and pyrimidines.", "プリンとピリミジンを含むので、2本鎖 RNA である。", "因為含有嘌呤和嘧啶，所以是雙鏈 RNA。")
+        ],
+        answer: 1,
+        explanation: L(
+          "B is correct. U is found only in RNA. In double-stranded nucleic acid, A would equal U (or T) and G would equal C, because of base pairing; here they do not, so it is probably single-stranded. A is wrong because 31% is not equal to 26%. C is wrong because all nucleic acids total 100%. D is wrong because every nucleic acid has both types of base.",
+          "B が正解です。U は RNA にしかありません。2本鎖の核酸では、塩基対形成により A は U (または T) と、G は C と等しくなるはずですが、ここでは等しくないので、おそらく1本鎖です。A は、31%と26%が等しくないので誤りです。C は、どの核酸でも合計は100%になるので誤りです。D は、どの核酸も両方のタイプの塩基をもつので誤りです。",
+          "答案是 B。U 只存在於 RNA。在雙鏈核酸中，由於鹼基配對，A 應等於 U (或 T)，G 應等於 C；這裏並不相等，所以很可能是單鏈。A 錯誤，因為 31% 不等於 26%。C 錯誤，因為任何核酸的總和都是 100%。D 錯誤，因為所有核酸都含有兩類鹼基。")
+      },
+      {
+        id: "a1-2-q15", type: "mcq", ahl: true, difficulty: 2, ref: "A1.2.11", paper: "1A",
+        stem: L("A new DNA strand is made during replication. In which direction is it built?", "複製中に新しい DNA 鎖がつくられる。どの方向に合成されるか。", "複製過程中製造新的 DNA 鏈。它按哪個方向合成？"),
+        options: [
+          L("5′ to 3′, by adding nucleotides to the 3′ end", "5′から3′へ、3′末端にヌクレオチドを付加して", "5′ 至 3′，在 3′ 端加入核苷酸"),
+          L("3′ to 5′, by adding nucleotides to the 5′ end", "3′から5′へ、5′末端にヌクレオチドを付加して", "3′ 至 5′，在 5′ 端加入核苷酸"),
+          L("Either direction, depending on the base sequence", "塩基配列によって、どちらの方向にもなる", "視乎鹼基序列，兩個方向皆可"),
+          L("From the middle of the strand outwards in both directions", "鎖の中央から両方向へ外側に向かって", "由鏈的中間向兩端同時合成")
+        ],
+        answer: 0,
+        explanation: L(
+          "A is correct: nucleotides can only be added to the free 3′ end, so strands grow 5′→3′. B reverses this and is the common mix-up (the template is read 3′→5′, but the new strand grows 5′→3′). C and D are not how the enzymes work.",
+          "A が正解です。ヌクレオチドは遊離の3′末端にしか付加できないので、鎖は 5′→3′ に伸びます。B は逆で、よくある取り違えです (鋳型は 3′→5′ に読まれますが、新しい鎖は 5′→3′ に伸びます)。C と D は酵素の働き方ではありません。",
+          "答案是 A：核苷酸只能加到游離的 3′ 端，所以鏈按 5′→3′ 延長。B 剛好相反，是常見的混淆 (模板按 3′→5′ 被讀取，但新鏈按 5′→3′ 延長)。C 和 D 不是酶的運作方式。")
+      },
+      {
+        id: "a1-2-q16", type: "short", ahl: true, difficulty: 2, ref: "A1.2.12", paper: "2",
+        commandTerm: "Explain", marks: 3,
+        stem: L("Explain how the bonding of purines to pyrimidines contributes to the stability of the DNA helix.", "プリンとピリミジンの結合が DNA らせんの安定性にどのように寄与するか説明せよ。", "解釋嘌呤與嘧啶的配對如何有助 DNA 螺旋的穩定。"),
+        markscheme: [
+          L("Each base pair is one purine (double ring: A or G) with one pyrimidine (single ring: T or C)", "各塩基対は、プリン (二重の環：A または G) 1つとピリミジン (単一の環：T または C) 1つからなる", "每個鹼基對由一個嘌呤 (雙環：A 或 G) 和一個嘧啶 (單環：T 或 C) 組成"),
+          L("A–T and G–C pairs have the same length / width", "A–T と G–C の対は同じ長さ／幅である", "A–T 和 G–C 鹼基對的長度／寬度相同"),
+          L("So the two backbones are always the same distance apart and the helix has the same 3D structure whatever the base sequence", "したがって2本の骨格は常に同じ距離に保たれ、塩基配列にかかわらずらせんは同じ立体構造をもつ", "所以兩條骨架之間的距離恆常相同，不論鹼基序列如何，螺旋都有相同的三維結構")
+        ],
+        modelAnswer: L(
+          "Every base pair is a double-ringed purine joined to a single-ringed pyrimidine, so A–T and G–C pairs are the same length. The two sugar–phosphate backbones are therefore the same distance apart along the whole molecule, and the helix keeps the same regular three-dimensional shape whatever the sequence of bases.",
+          "すべての塩基対は、二重環のプリンと単環のピリミジンの組み合わせなので、A–T と G–C の対は同じ長さである。したがって、2本の糖−リン酸骨格は分子全体で同じ距離を保ち、塩基配列にかかわらずらせんは同じ規則的な立体構造を保つ。",
+          "每個鹼基對都是雙環的嘌呤與單環的嘧啶配對，所以 A–T 和 G–C 鹼基對長度相同。因此兩條糖−磷酸骨架在整個分子上相距相同，不論鹼基序列如何，螺旋都保持相同而規則的三維形狀。")
+      },
+      {
+        id: "a1-2-q17", type: "multi", ahl: true, difficulty: 2, ref: "A1.2.13", paper: "1A",
+        stem: L("Which statements about a nucleosome are correct? Select all that apply.", "ヌクレオソームについて正しい記述をすべて選べ。", "關於核小體，哪些陳述正確？(選出所有適用者)"),
+        options: [
+          L("DNA is wrapped around a core of eight histone proteins.", "DNA が8個のヒストンタンパク質の核に巻き付いている。", "DNA 纏繞在由八個組蛋白組成的核心上。"),
+          L("An additional histone is attached to the linker DNA.", "追加のヒストンがリンカー DNA に付いている。", "一個額外的組蛋白連接在連接 DNA 上。"),
+          L("The histone core is made of DNA.", "ヒストンの核は DNA でできている。", "組蛋白核心由 DNA 構成。"),
+          L("Linker DNA is the DNA wrapped around the core.", "リンカー DNA とは、核に巻き付いている DNA のことである。", "連接 DNA 就是纏繞在核心上的 DNA。")
+        ],
+        answer: [0, 1],
+        explanation: L(
+          "A and B describe the guide's nucleosome. C is wrong because histones are proteins. D is wrong because linker DNA is the DNA between nucleosomes, not the wrapped part.",
+          "A と B がガイドのヌクレオソームの説明です。C は誤りで、ヒストンはタンパク質です。D は誤りで、リンカー DNA はヌクレオソームの間の DNA であり、巻き付いている部分ではありません。",
+          "A 和 B 描述了課程指引中的核小體。C 錯誤，組蛋白是蛋白質。D 錯誤，連接 DNA 是核小體之間的 DNA，而不是纏繞的部分。")
+      },
+      {
+        id: "a1-2-q18", type: "order", ahl: true, difficulty: 2, ref: "A1.2.14", paper: "1A",
+        stem: L("Put the steps of the Hershey–Chase experiment in order.", "ハーシー・チェイスの実験の手順を正しい順に並べよ。", "把赫爾希−蔡斯實驗的步驟按正確次序排列。"),
+        items: [
+          L("Bacteriophages are grown with 35S (labelling protein) or with 32P (labelling DNA).", "バクテリオファージを 35S (タンパク質を標識) または 32P (DNA を標識) とともに育てる。", "用 35S (標記蛋白質) 或 32P (標記 DNA) 培養噬菌體。"),
+          L("The labelled phages are mixed with bacteria and infect them.", "標識したファージを細菌と混ぜ、感染させる。", "把已標記的噬菌體與細菌混合，使其感染細菌。"),
+          L("The mixture is blended to remove phage coats from the outside of the bacteria.", "混合液を撹拌して、細菌の外側からファージの殻を取り除く。", "攪拌混合物，使噬菌體外殼從細菌外面脫落。"),
+          L("The mixture is spun in a centrifuge so that bacteria form a pellet.", "混合液を遠心分離し、細菌を沈殿 (ペレット) にする。", "用離心機離心混合物，使細菌形成沉澱。"),
+          L("Radioactivity in the pellet and the liquid is measured.", "沈殿と上の液の放射能を測定する。", "量度沉澱和液體中的放射性。")
+        ],
+        explanation: L(
+          "The labelled phages have to be made first, then infect bacteria; blending removes the outside coats; centrifuging separates bacteria from coats; only then can radioactivity be measured.",
+          "標識ファージを先につくり、それを細菌に感染させます。撹拌で外側の殻を取り除き、遠心分離で細菌と殻を分け、その後に初めて放射能を測定できます。",
+          "必須先製備已標記的噬菌體，再讓它們感染細菌；攪拌除去外殼，離心把細菌與外殼分開，然後才能量度放射性。")
+      },
+      {
+        id: "a1-2-q19", type: "short", ahl: true, difficulty: 3, ref: "A1.2.14", paper: "1B",
+        commandTerm: "Deduce", marks: 5,
+        data: L(
+          "<p>Bacteriophages were labelled with <sup>35</sup>S or <sup>32</sup>P, allowed to infect bacteria, blended and centrifuged. The percentage of the total radioactivity found in the bacterial pellet and in the liquid above it was measured (illustrative data).</p><table><tr><th>Label</th><th>In liquid (outside bacteria) / %</th><th>In pellet (inside bacteria) / %</th></tr><tr><td><sup>35</sup>S</td><td>80</td><td>20</td></tr><tr><td><sup>32</sup>P</td><td>30</td><td>70</td></tr></table>",
+          "<p>バクテリオファージを <sup>35</sup>S または <sup>32</sup>P で標識し、細菌に感染させ、撹拌して遠心分離した。細菌の沈殿と、その上の液に見られた全放射能の割合を測定した (架空のデータ)。</p><table><tr><th>標識</th><th>上の液 (細菌の外) / %</th><th>沈殿 (細菌の内) / %</th></tr><tr><td><sup>35</sup>S</td><td>80</td><td>20</td></tr><tr><td><sup>32</sup>P</td><td>30</td><td>70</td></tr></table>",
+          "<p>用 <sup>35</sup>S 或 <sup>32</sup>P 標記噬菌體，讓它們感染細菌，攪拌後離心。量度在細菌沉澱和上層液體中找到的總放射性百分比 (虛構數據)。</p><table><tr><th>標記</th><th>在液體中 (細菌外) / %</th><th>在沉澱中 (細菌內) / %</th></tr><tr><td><sup>35</sup>S</td><td>80</td><td>20</td></tr><tr><td><sup>32</sup>P</td><td>30</td><td>70</td></tr></table>"),
+        stem: L("(a) State which isotope labels the protein coat and which labels the DNA. (b) Deduce what the data show about the material that enters the bacteria. (c) Suggest why the results are not exactly 100% and 0%.", "(a) タンパク質の殻を標識する同位体と DNA を標識する同位体を、それぞれ述べよ。 (b) 細菌に入る物質について、このデータから何が導けるか推論せよ。 (c) 結果がちょうど 100% と 0% にならない理由を示せ。", "(a) 指出哪種同位素標記蛋白質外殼，哪種標記 DNA。 (b) 推斷數據顯示進入細菌的是什麼物質。 (c) 提出為何結果不是剛好 100% 和 0%。"),
+        markscheme: [
+          L("35S labels protein (sulfur is in protein, not in DNA)", "35S はタンパク質を標識する (硫黄はタンパク質にあり、DNA にはない)", "35S 標記蛋白質 (硫在蛋白質中，不在 DNA 中)"),
+          L("32P labels DNA (phosphorus is in DNA phosphate groups)", "32P は DNA を標識する (リンは DNA のリン酸基にある)", "32P 標記 DNA (磷在 DNA 的磷酸基團中)"),
+          L("Most 35S (80%) stayed outside the bacteria, so protein did not enter / mostly stayed outside", "35S の大部分 (80%) は細菌の外にとどまったので、タンパク質は入らなかった／ほとんど外に残った", "大部分 35S (80%) 留在細菌外，所以蛋白質沒有進入／大多留在外面"),
+          L("Most 32P (70%) was inside the bacteria, so DNA enters the bacteria, supporting DNA as the genetic material", "32P の大部分 (70%) は細菌の内側にあったので、DNA が細菌に入る。DNA が遺伝物質であることを支持する", "大部分 32P (70%) 在細菌內，所以 DNA 進入細菌，支持 DNA 是遺傳物質"),
+          L("Separation was incomplete (blending did not remove all coats / some phages had not yet injected DNA / some DNA left the bacteria)", "分離が不完全だった (撹拌がすべての殻を取り除けなかった／まだ DNA を注入していないファージがあった／一部の DNA が細菌から出た)", "分離不完全 (攪拌未能除去所有外殼／有些噬菌體尚未注入 DNA／有些 DNA 離開了細菌)")
+        ],
+        modelAnswer: L(
+          "(a) 35S labels protein; 32P labels DNA. (b) Most of the 32P (70%) was in the bacteria but most of the 35S (80%) stayed outside, so DNA, not protein, enters the bacteria. This supports DNA as the genetic material. (c) Blending and centrifuging did not separate everything perfectly, for example some phage coats stayed attached to the bacteria and some DNA had not yet entered.",
+          "(a) 35S がタンパク質、32P が DNA を標識する。 (b) 32P の大部分 (70%) は細菌内にあり、35S の大部分 (80%) は外にとどまったので、細菌に入るのはタンパク質ではなく DNA である。これは DNA が遺伝物質であることを支持する。 (c) 撹拌と遠心分離では完全には分離できず、たとえば一部のファージの殻が細菌に付着したままだったり、まだ DNA が入っていないものがあったりした。",
+          "(a) 35S 標記蛋白質；32P 標記 DNA。 (b) 大部分 32P (70%) 在細菌內，而大部分 35S (80%) 留在外面，所以進入細菌的是 DNA 而不是蛋白質。這支持 DNA 是遺傳物質。 (c) 攪拌和離心未能完美分離所有東西，例如有些噬菌體外殼仍黏在細菌上，有些 DNA 尚未進入。")
+      },
+      {
+        id: "a1-2-q20", type: "short", ahl: true, difficulty: 3, ref: "A1.2.15", paper: "1B",
+        commandTerm: "Using the data", marks: 5,
+        data: L(
+          "<p>Percentage of each base in the DNA of three species (illustrative data).</p><table><tr><th>Species</th><th>A</th><th>T</th><th>G</th><th>C</th></tr><tr><td>P</td><td>29.7</td><td>30.3</td><td>20.1</td><td>19.9</td></tr><tr><td>Q</td><td>24.5</td><td>24.5</td><td>25.4</td><td>25.6</td></tr><tr><td>R</td><td>20.1</td><td>19.9</td><td>30.0</td><td>30.0</td></tr></table>",
+          "<p>3つの種の DNA における各塩基の割合 (%) (架空のデータ)。</p><table><tr><th>種</th><th>A</th><th>T</th><th>G</th><th>C</th></tr><tr><td>P</td><td>29.7</td><td>30.3</td><td>20.1</td><td>19.9</td></tr><tr><td>Q</td><td>24.5</td><td>24.5</td><td>25.4</td><td>25.6</td></tr><tr><td>R</td><td>20.1</td><td>19.9</td><td>30.0</td><td>30.0</td></tr></table>",
+          "<p>三個物種 DNA 中各種鹼基的百分比 (虛構數據)。</p><table><tr><th>物種</th><th>A</th><th>T</th><th>G</th><th>C</th></tr><tr><td>P</td><td>29.7</td><td>30.3</td><td>20.1</td><td>19.9</td></tr><tr><td>Q</td><td>24.5</td><td>24.5</td><td>25.4</td><td>25.6</td></tr><tr><td>R</td><td>20.1</td><td>19.9</td><td>30.0</td><td>30.0</td></tr></table>"),
+        stem: L("(a) Calculate the ratio (A + G) : (T + C) for species P, to two decimal places. (b) Describe what the data show about A compared with T, and G compared with C, in each species. (c) The tetranucleotide hypothesis predicted that all four bases are present in equal amounts. Explain how the data falsify this hypothesis.", "(a) 種 P について、(A + G) : (T + C) の比を小数第2位まで計算せよ。 (b) 各種で A と T、G と C を比べて、データが示すことを述べよ。 (c) テトラヌクレオチド仮説は、4種類の塩基がすべて等量存在すると予測した。データがこの仮説をどのように反証するか説明せよ。", "(a) 計算物種 P 的 (A + G) : (T + C) 比值，答案取至小數點後兩位。 (b) 描述數據顯示每個物種中 A 與 T、G 與 C 的比較。 (c) 四核苷酸假說預測四種鹼基的含量相等。解釋數據如何證偽這個假說。"),
+        markscheme: [
+          L("(29.7 + 20.1) ÷ (30.3 + 19.9) = 49.8 ÷ 50.2 = 0.99", "(29.7 + 20.1) ÷ (30.3 + 19.9) = 49.8 ÷ 50.2 = 0.99", "(29.7 + 20.1) ÷ (30.3 + 19.9) = 49.8 ÷ 50.2 = 0.99"),
+          L("In each species A is (almost) equal to T", "どの種でも、A は T とほぼ等しい", "每個物種中 A (幾乎) 等於 T"),
+          L("In each species G is (almost) equal to C", "どの種でも、G は C とほぼ等しい", "每個物種中 G (幾乎) 等於 C"),
+          L("If all four bases were equal, each would be about 25% in every species, but P has about 30% A/T and 20% G/C and R the reverse", "4種類の塩基がすべて等量なら、どの種でも各塩基は約25%のはずだが、P は A/T が約30%で G/C が約20%、R はその逆である", "若四種鹼基含量相等，每個物種中各約佔 25%，但 P 的 A/T 約 30%、G/C 約 20%，R 則相反"),
+          L("The base proportions differ between species, so DNA is not a simple repeating sequence of the four bases", "塩基の割合は種によって異なるので、DNA は4種類の塩基の単純な繰り返し配列ではない", "鹼基比例因物種而異，所以 DNA 不是四種鹼基的簡單重複序列")
+        ],
+        modelAnswer: L(
+          "(a) 49.8 ÷ 50.2 = 0.99. (b) In each species the percentage of A is almost the same as T, and G is almost the same as C. (c) If the hypothesis were true, every base would be about 25% in all species. P has about 30% A and T but only about 20% G and C, and R shows the opposite, so the base proportions differ between species and the hypothesis is falsified.",
+          "(a) 49.8 ÷ 50.2 = 0.99。 (b) どの種でも、A の割合は T とほぼ同じで、G は C とほぼ同じである。 (c) 仮説が正しければ、すべての種で各塩基は約25%になるはずである。P は A と T が約30%、G と C は約20%しかなく、R はその逆なので、塩基の割合は種によって異なり、仮説は反証される。",
+          "(a) 49.8 ÷ 50.2 = 0.99。 (b) 在每個物種中，A 的百分比與 T 幾乎相同，G 與 C 幾乎相同。 (c) 若假說成立，所有物種中每種鹼基都應約佔 25%。P 的 A 和 T 約 30%，G 和 C 只約 20%，R 則相反，所以鹼基比例因物種而異，假說被證偽。")
+      },
+      {
+        id: "a1-2-q21", type: "short", ahl: true, difficulty: 3, ref: "A1.2.15", paper: "2",
+        commandTerm: "Explain", marks: 3,
+        stem: L("Explain how Chargaff's data illustrate the way in which the \"problem of induction\" is addressed by the \"certainty of falsification\".", "シャルガフのデータが、「帰納の問題」が「反証の確実性」によってどのように扱われるかを、どのように示しているか説明せよ。", "解釋查加夫的數據如何說明「歸納問題」由「證偽的確定性」處理。"),
+        markscheme: [
+          L("Problem of induction: no number of observations that agree with a hypothesis can prove it is true (e.g. DNA from a few species fitting a repeating-sequence idea)", "帰納の問題：仮説に合う観察がいくつあっても、仮説が真であることは証明できない (例：少数の種の DNA が繰り返し配列の考えに合っても)", "歸納問題：無論有多少符合假說的觀察，都不能證明它是真的 (例如少數物種的 DNA 符合重複序列的想法)"),
+          L("Chargaff found that base proportions differ between species, which does not fit the tetranucleotide hypothesis", "シャルガフは塩基の割合が種によって異なることを見いだし、これはテトラヌクレオチド仮説に合わない", "查加夫發現鹼基比例因物種而異，這與四核苷酸假說不符"),
+          L("Evidence that disagrees can show with certainty that the hypothesis is false (falsification)", "合わない証拠は、仮説が偽であることを確実に示せる (反証)", "不符的證據可確定地顯示假說是假的 (證偽)")
+        ],
+        modelAnswer: L(
+          "However many observations agree with an idea, they cannot prove it is true (the problem of induction). But one reliable observation that disagrees can show it is false. Chargaff showed that base proportions differ between species, which did not fit the tetranucleotide hypothesis, so he falsified it.",
+          "ある考えに合う観察がどれだけあっても、それが真であることは証明できない (帰納の問題)。しかし、合わない信頼できる観察が1つあれば、それが偽であることを示せる。シャルガフは塩基の割合が種によって異なることを示し、テトラヌクレオチド仮説に合わないことから、その仮説を反証した。",
+          "無論有多少觀察符合某個想法，都不能證明它是真的 (歸納問題)。但只要有一個可靠的不符觀察，就能證明它是假的。查加夫顯示鹼基比例因物種而異，與四核苷酸假說不符，因此證偽了該假說。")
+      }
     ]
   });
 })();

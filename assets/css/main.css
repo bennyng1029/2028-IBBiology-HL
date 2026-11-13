@@ -317,7 +317,7 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
 .cell__top { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; min-height: 1.3rem; }
 .cell__pct { color: var(--muted); font-variant-numeric: tabular-nums; }
 .cell__code { font-family: var(--font-display); font-weight: 750; font-size: clamp(1.9rem, 4vw, 2.4rem); line-height: 1; color: var(--tc); letter-spacing: -0.02em; margin-top: 0.1rem; }
-.cell__name { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
+.cell__name { hyphens: auto; overflow-wrap: anywhere; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
 .cell--soon { background: var(--surface-2); color: var(--muted); }
 .cell--soon .cell__code { opacity: 0.55; }
 .meter { display: flex; height: 5px; background: var(--surface-2); overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; }

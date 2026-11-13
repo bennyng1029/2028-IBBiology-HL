@@ -277,9 +277,204 @@ ${fmFigure("zh")}
           "2分以内で描く練習をする。得点は通常: 頭部が外向きの二重層、内在性と表在性のタンパク質、外側に糖鎖のある糖タンパク質、コレステロール、親水性・疎水性のラベル。",
           "練習在兩分鐘內畫出此圖。得分點通常是：頭部向外的雙層、至少一個整合蛋白和一個周邊蛋白、糖鏈在外側的糖蛋白、膽固醇，以及親水／疏水的標示。")
       },
-      /*AHL_START*/
+      {
+        ref: "B2.1.11", ahl: true,
+        heading: L("Fatty acids and membrane fluidity", "脂肪酸の組成と膜の流動性", "脂肪酸組成與膜的流動性"),
+        body: L(
+          `<p>Membrane <span class="term">fluidity</span> depends on the fatty acid tails of the phospholipids (see B1.1.10).</p>
+<ul><li><strong>Unsaturated</strong> fatty acids have C=C bends and <strong>lower melting points</strong>. Tails pack loosely, so the membrane stays fluid and therefore <strong>flexible</strong> at the temperatures the cell experiences.</li>
+<li><strong>Saturated</strong> fatty acids are straight, pack closely and have <strong>higher melting points</strong>. They make the membrane <strong>stronger</strong> (less likely to become too runny) at higher temperatures.</li></ul>
+<p>A membrane needs a balance. If it is too stiff, proteins and vesicles cannot move properly. If it is too fluid, it is weak and leaks.</p>
+<p><strong>Adaptation to habitat (example):</strong> fish and other ectotherms that live in very cold water have a higher proportion of unsaturated fatty acids in their membrane phospholipids, which keeps their membranes fluid at low temperatures. Organisms in hot environments, such as bacteria living in hot springs, have more saturated fatty acids, which keeps their membranes strong at high temperatures.</p>`,
+          `<p>膜の<span class="term">流動性 (fluidity)</span> は、リン脂質の脂肪酸の尾部に左右される (B1.1.10 参照)。</p>
+<ul><li><strong>不飽和</strong>脂肪酸は C=C で折れ曲がり、<strong>融点が低い</strong>。尾部が疎に並ぶので、膜は流動的で、細胞が経験する温度で<strong>柔軟</strong>に保たれる。</li>
+<li><strong>飽和</strong>脂肪酸はまっすぐで密に並び、<strong>融点が高い</strong>。高い温度でも膜が流れすぎないように、膜を<strong>強く</strong>する。</li></ul>
+<p>膜にはバランスが必要である。硬すぎるとタンパク質や小胞が正しく動けない。流動的すぎると弱くなり、漏れる。</p>
+<p><strong>生息地への適応 (例):</strong> 非常に冷たい水にすむ魚などの変温動物は、膜のリン脂質に不飽和脂肪酸の割合が高く、低温でも膜の流動性が保たれる。温泉にすむ細菌のように高温の環境の生物は飽和脂肪酸が多く、高温でも膜の強さが保たれる。</p>`,
+          `<p>膜的<span class="term">流動性 (fluidity)</span> 取決於磷脂的脂肪酸尾部 (見 B1.1.10)。</p>
+<ul><li><strong>不飽和</strong>脂肪酸有 C=C 造成的彎曲，<strong>熔點較低</strong>。尾部排列疏鬆，所以膜保持流動，因而在細胞所處的溫度下仍然<strong>有彈性</strong>。</li>
+<li><strong>飽和</strong>脂肪酸筆直、排列緊密，<strong>熔點較高</strong>。它們令膜在較高溫度下更<strong>堅固</strong> (不致太稀軟)。</li></ul>
+<p>膜需要取得平衡：太硬，蛋白質和囊泡不能正常移動；太流動，膜便不夠堅固，容易滲漏。</p>
+<p><strong>對棲息環境的適應 (例子)：</strong>生活在極冷水中的魚等變溫動物，膜磷脂中不飽和脂肪酸的比例較高，令膜在低溫下仍保持流動。生活在高溫環境的生物 (如溫泉中的細菌) 則含較多飽和脂肪酸，令膜在高溫下保持堅固。</p>`),
+        examTip: L("Always connect: fatty acid type → melting point → fluidity or strength → habitat temperature.",
+          "つなげて書く: 脂肪酸の種類→融点→流動性または強さ→生息地の温度。",
+          "要連繫書寫：脂肪酸類型→熔點→流動性或強度→棲息地溫度。")
+      },
+      {
+        ref: "B2.1.12", ahl: true,
+        heading: L("Cholesterol and membrane fluidity", "コレステロールと膜の流動性", "膽固醇與膜的流動性"),
+        body: L(
+          `<p><span class="term">Cholesterol</span> is a steroid (B1.1.13) found in the membranes of <strong>animal cells</strong>. Its molecules sit <strong>between the phospholipids</strong> in both layers. A small hydrophilic –OH group is near the phospholipid heads, and the rest of the molecule lies among the hydrophobic tails.</p>
+<p>Cholesterol is a <strong>modulator</strong> (adjuster) of fluidity:</p>
+<ul><li><strong>At higher temperatures</strong>, it holds phospholipids in place and reduces their movement. This <strong>stabilizes</strong> the membrane so it does not become too fluid.</li>
+<li><strong>At lower temperatures</strong>, it keeps the phospholipid tails from packing tightly together. This <strong>prevents the membrane from stiffening</strong>.</li></ul>
+<p>So cholesterol helps keep membrane fluidity fairly steady when temperature changes.</p>`,
+          `<p><span class="term">コレステロール (cholesterol)</span> は<strong>動物細胞</strong>の膜にあるステロイド (B1.1.13) である。分子は両方の層の<strong>リン脂質の間</strong>に位置する。小さな親水性の –OH 基がリン脂質の頭部の近くにあり、残りの部分は疎水性の尾部の間にある。</p>
+<p>コレステロールは流動性の<strong>調節因子 (modulator)</strong> である。</p>
+<ul><li><strong>高温では</strong>、リン脂質を固定して動きを抑える。これにより膜が流動的になりすぎないよう<strong>安定させる</strong>。</li>
+<li><strong>低温では</strong>、リン脂質の尾部が密に詰まるのを防ぐ。これにより<strong>膜が硬くなるのを防ぐ</strong>。</li></ul>
+<p>このようにコレステロールは、温度が変わっても膜の流動性をほぼ一定に保つのを助ける。</p>`,
+          `<p><span class="term">膽固醇 (cholesterol)</span> 是存在於<strong>動物細胞</strong>膜中的類固醇 (B1.1.13)。它的分子位於兩層的<strong>磷脂之間</strong>：細小的親水 –OH 基靠近磷脂頭部，其餘部分在疏水尾部之間。</p>
+<p>膽固醇是流動性的<strong>調節者 (modulator)</strong>：</p>
+<ul><li><strong>在較高溫度時</strong>，它固定磷脂並減少其移動，<strong>穩定</strong>膜，使它不會太流動。</li>
+<li><strong>在較低溫度時</strong>，它阻止磷脂尾部緊密排列，<strong>防止膜變硬</strong>。</li></ul>
+<p>因此，當溫度改變時，膽固醇有助維持膜的流動性相對穩定。</p>`),
+        examTip: L("Cholesterol does two opposite jobs. Say both: stabilizes at high temperature; prevents stiffening at low temperature.",
+          "コレステロールは正反対の2つの働きをする。両方書く: 高温では安定させ、低温では硬くなるのを防ぐ。",
+          "膽固醇有兩個相反的作用，兩個都要寫：高溫時穩定；低溫時防止變硬。")
+      },
+      {
+        ref: "B2.1.13", ahl: true,
+        heading: L("Vesicles, endocytosis and exocytosis", "小胞、エンドサイトーシスとエキソサイトーシス", "囊泡、胞吞作用與胞吐作用"),
+        body: L(
+          `<p>A <span class="term">vesicle</span> is a small sphere of membrane enclosing fluid. Because membranes are fluid, a piece of membrane can <strong>bend, pinch off and fuse</strong> with another membrane. Vesicles can therefore form and fuse easily.</p>
+<ul><li><span class="term">Endocytosis</span>: the cell takes in material. A region of the plasma membrane folds inwards, surrounds the material and pinches off as a vesicle inside the cell. <em>Example:</em> a white blood cell (phagocyte) engulfs a bacterium by phagocytosis.</li>
+<li><span class="term">Exocytosis</span>: the cell releases material. A vesicle moves to the plasma membrane and fuses with it, and its contents are released outside. The vesicle membrane becomes part of the plasma membrane. <em>Examples:</em> a nerve cell releasing neurotransmitter into a synapse; a pancreatic cell secreting insulin.</li></ul>
+<p>Endocytosis and exocytosis let large molecules and even whole cells cross the plasma membrane without crossing the bilayer particle by particle. They use ATP. See the Transport lab (AHL mode) for the steps.</p>`,
+          `<p><span class="term">小胞 (vesicle)</span> は、液体を包む小さな球状の膜である。膜は流動的なので、膜の一部が<strong>曲がり、くびれ切れ、他の膜と融合</strong>できる。そのため小胞は容易にできたり融合したりする。</p>
+<ul><li><span class="term">エンドサイトーシス (endocytosis)</span>: 細胞が物質を取り込む。細胞膜の一部が内側に陥入して物質を囲み、くびれ切れて細胞内の小胞になる。<em>例:</em> 白血球 (食細胞) が食作用 (phagocytosis) で細菌を取り込む。</li>
+<li><span class="term">エキソサイトーシス (exocytosis)</span>: 細胞が物質を放出する。小胞が細胞膜に移動して融合し、内容物が外へ放出される。小胞の膜は細胞膜の一部になる。<em>例:</em> 神経細胞がシナプスへ神経伝達物質を放出する。膵臓の細胞がインスリンを分泌する。</li></ul>
+<p>エンドサイトーシスとエキソサイトーシスにより、大きな分子や細胞全体でさえ、二重層を粒子ごとに通ることなく細胞膜を出入りできる。ATP を使う。段階は輸送ラボ (AHL モード) で確かめよう。</p>`,
+          `<p><span class="term">囊泡 (vesicle)</span> 是包着液體的細小球形膜。由於膜具流動性，一片膜可以<strong>彎曲、脫離和融合</strong>到另一層膜上，所以囊泡容易形成和融合。</p>
+<ul><li><span class="term">胞吞作用 (endocytosis)</span>：細胞攝入物質。質膜的一部分向內凹陷，包圍物質後脫離成細胞內的囊泡。<em>例子：</em>白血球 (吞噬細胞) 以吞噬作用 (phagocytosis) 吞入細菌。</li>
+<li><span class="term">胞吐作用 (exocytosis)</span>：細胞釋出物質。囊泡移向質膜並與其融合，內容物釋放到細胞外，囊泡膜成為質膜的一部分。<em>例子：</em>神經細胞向突觸釋出神經遞質；胰臟細胞分泌胰島素。</li></ul>
+<p>胞吞和胞吐令大分子甚至整個細胞可以出入質膜，而不必逐個粒子穿過雙層。這過程需要 ATP。可在運輸實驗室 (AHL 模式) 查看各步驟。</p>`),
+        links: undefined
+      },
+      {
+        ref: "B2.1.14", ahl: true,
+        heading: L("Gated ion channels in neurons", "ニューロンのゲート付きイオンチャネル", "神經元的門控離子通道"),
+        body: L(
+          `<p>Many channel proteins in nerve cells (<span class="term">neurons</span>) have a “gate”. The gate is <strong>closed</strong> until a signal opens it, so the neuron controls when ions flow.</p>
+<ul><li><strong>Neurotransmitter-gated channels</strong> open when a chemical signal binds to them. <em>Example:</em> the <span class="term">nicotinic acetylcholine receptor</span>. When the neurotransmitter acetylcholine binds, the channel opens and positive ions (mainly Na⁺) flow in through the pore.</li>
+<li><strong>Voltage-gated channels</strong> open or close when the electrical voltage across the membrane changes. <em>Examples:</em> <span class="term">sodium channels</span> and <span class="term">potassium channels</span> in the axon membrane. Each opens at a particular voltage and lets only its own ion through.</li></ul>
+<p>Because ions move through open channels down their concentration gradients without ATP, this is facilitated diffusion that can be switched on and off. It is how neurons send electrical signals (nerve impulses).</p>`,
+          `<p>神経細胞 (<span class="term">ニューロン, neuron</span>) の多くのチャネルタンパク質には「ゲート」がある。ゲートは信号で開くまで<strong>閉じて</strong>おり、ニューロンはイオンが流れる時を制御できる。</p>
+<ul><li><strong>神経伝達物質依存性 (ゲート付き) チャネル</strong>は、化学的な信号が結合すると開く。<em>例:</em> <span class="term">ニコチン性アセチルコリン受容体 (nicotinic acetylcholine receptor)</span>。神経伝達物質のアセチルコリンが結合するとチャネルが開き、正の電荷をもつイオン (主に Na⁺) が孔を通って流入する。</li>
+<li><strong>電位依存性チャネル (voltage-gated channel)</strong> は、膜をはさむ電位が変わると開閉する。<em>例:</em> 軸索の膜の<span class="term">ナトリウムチャネル (sodium channel)</span> と<span class="term">カリウムチャネル (potassium channel)</span>。それぞれ特定の電位で開き、自分のイオンだけを通す。</li></ul>
+<p>開いたチャネルをイオンが濃度勾配に従って ATP なしで通るので、これはオン・オフできる促進拡散である。ニューロンはこのしくみで電気信号 (神経インパルス) を送る。</p>`,
+          `<p>神經細胞 (<span class="term">神經元, neuron</span>) 中很多通道蛋白都有「門」。門會一直<strong>關閉</strong>，直至有訊號令它打開，所以神經元能控制離子何時流動。</p>
+<ul><li><strong>神經遞質門控通道</strong>在化學訊號與它結合時打開。<em>例子：</em><span class="term">菸鹼型乙酰膽鹼受體 (nicotinic acetylcholine receptor)</span>。神經遞質乙酰膽鹼結合後，通道打開，帶正電荷的離子 (主要是 Na⁺) 經孔道流入。</li>
+<li><strong>電壓門控通道 (voltage-gated channel)</strong> 在膜兩側的電壓改變時開啟或關閉。<em>例子：</em>軸突膜上的<span class="term">鈉通道 (sodium channel)</span> 和<span class="term">鉀通道 (potassium channel)</span>。每種通道在特定電壓下打開，只讓自己的離子通過。</li></ul>
+<p>離子經開啟的通道順濃度梯度移動，不需 ATP，所以這是可開可關的易化擴散。神經元就是這樣傳送電訊號 (神經衝動)。</p>`),
+        examTip: L("Know one example of each trigger: acetylcholine (nicotinic receptor) = ligand-gated; Na⁺ and K⁺ channels = voltage-gated.",
+          "それぞれの引き金の例を1つずつ: アセチルコリン (ニコチン性受容体)=リガンド (神経伝達物質) 依存性、Na⁺・K⁺ チャネル=電位依存性。",
+          "要認識每種觸發方式的一個例子：乙酰膽鹼 (菸鹼型受體) = 配體 (神經遞質) 門控；Na⁺ 和 K⁺ 通道 = 電壓門控。")
+      },
+      {
+        ref: "B2.1.15", ahl: true,
+        heading: L("Sodium–potassium pumps", "ナトリウム・カリウムポンプ", "鈉鉀泵"),
+        body: L(
+          `<p>The <span class="term">sodium–potassium pump</span> is an <span class="term">exchange transporter</span>: it swaps one ion for another across the plasma membrane. Each cycle uses one ATP to move <strong>3 sodium ions (Na⁺) out</strong> of the cell and <strong>2 potassium ions (K⁺) in</strong>. Both ions are moved <strong>against</strong> their concentration gradients, so this is active transport.</p>
+<p><strong>Why it matters: membrane potentials.</strong> The pump makes Na⁺ concentration low inside and high outside, and K⁺ concentration high inside and low outside. It also moves more positive charge out (3) than in (2). So the <strong>inside of the cell becomes negative compared with the outside</strong>. This difference in electrical charge across the membrane is the <span class="term">membrane potential</span>. Neurons depend on it to send nerve impulses.</p>`,
+          `<p><span class="term">ナトリウム・カリウムポンプ (sodium–potassium pump)</span> は<span class="term">交換輸送体 (exchange transporter)</span> で、細胞膜をはさんで1種のイオンを別のイオンと入れ替える。1回のサイクルで ATP を1個使い、<strong>ナトリウムイオン (Na⁺) 3個を細胞外へ</strong>、<strong>カリウムイオン (K⁺) 2個を細胞内へ</strong>運ぶ。どちらも濃度勾配に<strong>逆らって</strong>運ばれるので、能動輸送である。</p>
+<p><strong>重要な理由: 膜電位。</strong> このポンプにより、Na⁺ の濃度は内側で低く外側で高く、K⁺ の濃度は内側で高く外側で低くなる。また、外へ出す正電荷 (3) が入る正電荷 (2) より多い。そのため<strong>細胞の内側は外側に対して負になる</strong>。膜をはさむこの電気的な差が<span class="term">膜電位 (membrane potential)</span> である。ニューロンは神経インパルスを送るためにこれを利用する。</p>`,
+          `<p><span class="term">鈉鉀泵 (sodium–potassium pump)</span> 是一種<span class="term">交換運輸體 (exchange transporter)</span>：在質膜兩側以一種離子交換另一種離子。每個循環消耗一個 ATP，把<strong>3 個鈉離子 (Na⁺) 運出</strong>細胞，同時把<strong>2 個鉀離子 (K⁺) 運入</strong>。兩種離子都是<strong>逆</strong>濃度梯度移動，所以這是主動運輸。</p>
+<p><strong>重要性：膜電位。</strong>這個泵令細胞內 Na⁺ 濃度低、細胞外高，而 K⁺ 濃度則內高外低。它運出的正電荷 (3) 亦多於運入的 (2)，所以<strong>細胞內部相對外部帶負電</strong>。膜兩側這種電荷差別就是<span class="term">膜電位 (membrane potential)</span>，神經元依靠它來傳送神經衝動。</p>`),
+        examTip: L("Learn the numbers: 3 Na⁺ out, 2 K⁺ in, per ATP. Say the pump helps set up the membrane potential (inside negative).",
+          "数を覚える: ATP 1個につき Na⁺ 3個が外へ、K⁺ 2個が内へ。ポンプが膜電位 (内側が負) をつくるのに役立つと書く。",
+          "記住數目：每個 ATP，3 個 Na⁺ 運出、2 個 K⁺ 運入。要寫出泵有助建立膜電位 (內部為負)。")
+      },
+      {
+        ref: "B2.1.16", ahl: true,
+        heading: L("Sodium-dependent glucose cotransporters", "ナトリウム依存性グルコース共輸送体", "鈉依賴性葡萄糖協同運輸體"),
+        body: L(
+          `<p>A <span class="term">sodium-dependent glucose cotransporter</span> is a membrane protein that carries <strong>sodium ions and glucose together</strong> in the same direction into the cell. This is an example of <span class="term">indirect active transport</span>.</p>
+<ol><li>A sodium–potassium pump (using ATP) keeps Na⁺ concentration <strong>low inside</strong> the cell and high outside.</li>
+<li>Na⁺ then tends to move back in down its gradient. The cotransporter lets Na⁺ in <strong>only if glucose binds too</strong>, so the flow of Na⁺ drags glucose in with it.</li>
+<li>Glucose can be moved <strong>against its own concentration gradient</strong> this way.</li></ol>
+<p>It is “indirect” because the cotransporter does <strong>not use ATP itself</strong>. The energy comes from the Na⁺ gradient, which was set up by ATP-driven pumps.</p>
+<p><strong>Importance:</strong> absorbing glucose into the cells lining the <strong>small intestine</strong>, and reabsorbing glucose from the filtrate by cells in the <strong>nephron</strong> of the kidney, so that glucose is not lost in urine.</p>`,
+          `<p><span class="term">ナトリウム依存性グルコース共輸送体 (sodium-dependent glucose cotransporter)</span> は、<strong>ナトリウムイオンとグルコースを一緒に</strong>同じ向きに細胞内へ運ぶ膜タンパク質である。これは<span class="term">間接的能動輸送 (indirect active transport)</span> の例である。</p>
+<ol><li>ナトリウム・カリウムポンプ (ATP を使う) が、細胞内の Na⁺ 濃度を<strong>低く</strong>、外側を高く保つ。</li>
+<li>Na⁺ は濃度勾配に従って内側へ戻ろうとする。共輸送体は、<strong>グルコースも結合したときだけ</strong> Na⁺ を通すので、Na⁺ の流れがグルコースを一緒に引き込む。</li>
+<li>こうして、グルコースを<strong>それ自身の濃度勾配に逆らって</strong>運べる。</li></ol>
+<p>「間接的」というのは、共輸送体自身は <strong>ATP を使わない</strong>からである。エネルギーは、ATP で動くポンプがつくった Na⁺ の勾配から得られる。</p>
+<p><strong>重要性:</strong> <strong>小腸</strong>の内壁の細胞へのグルコース吸収と、腎臓の<strong>ネフロン</strong>の細胞による濾液からのグルコース再吸収 (グルコースが尿中に失われないようにする)。</p>`,
+          `<p><span class="term">鈉依賴性葡萄糖協同運輸體 (sodium-dependent glucose cotransporter)</span> 是一種膜蛋白，把<strong>鈉離子和葡萄糖一起</strong>朝同一方向運入細胞。這是<span class="term">間接主動運輸 (indirect active transport)</span> 的例子。</p>
+<ol><li>鈉鉀泵 (使用 ATP) 令細胞內 Na⁺ 濃度<strong>偏低</strong>，細胞外偏高。</li>
+<li>Na⁺ 傾向順濃度梯度流回細胞內。協同運輸體<strong>只有在葡萄糖也結合時</strong>才讓 Na⁺ 進入，所以 Na⁺ 的流動帶動葡萄糖一同進入。</li>
+<li>這樣葡萄糖就可以<strong>逆它本身的濃度梯度</strong>被運入。</li></ol>
+<p>稱為「間接」，是因為協同運輸體<strong>本身不使用 ATP</strong>；能量來自 Na⁺ 梯度，而這個梯度是由耗用 ATP 的泵建立的。</p>
+<p><strong>重要性：</strong>令<strong>小腸</strong>內壁的細胞吸收葡萄糖，以及令腎臟<strong>腎單位 (nephron)</strong> 的細胞從濾液中重吸收葡萄糖，使葡萄糖不會隨尿液流失。</p>`),
+        examTip: L("“Indirect” = the cotransporter does not use ATP directly; the energy is stored in the Na⁺ gradient made by the Na⁺/K⁺ pump.",
+          "「間接」=共輸送体は ATP を直接使わない。エネルギーは Na⁺/K⁺ ポンプがつくった Na⁺ の勾配に蓄えられている。",
+          "「間接」= 協同運輸體不直接使用 ATP；能量貯存於由 Na⁺/K⁺ 泵建立的 Na⁺ 梯度中。")
+      },
+      {
+        ref: "B2.1.17", ahl: true,
+        heading: L("Cell adhesion and tissues", "細胞接着と組織", "細胞黏附與組織"),
+        body: L(
+          `<p>In animals, cells must stick together to form <strong>tissues</strong>. <span class="term">Cell-adhesion molecules (CAMs)</span> are membrane proteins that bind to other CAMs on neighbouring cells (or to the material between cells). They hold cells in place.</p>
+<p>Different forms of CAM are used for different types of <strong>cell–cell junction</strong>, for example one type of junction seals the gap between cells and another gives mechanical strength. You do not need detailed knowledge of the different CAMs or junctions.</p>
+<p>Link: carbohydrate chains of glycoproteins (B2.1.9) also help cells adhere.</p>`,
+          `<p>動物では、細胞どうしがくっついて<strong>組織 (tissue)</strong> をつくる必要がある。<span class="term">細胞接着分子 (cell-adhesion molecule, CAM)</span> は、隣の細胞の CAM (または細胞間の物質) と結合する膜タンパク質で、細胞を所定の位置に保つ。</p>
+<p>CAM は、<strong>細胞間結合 (cell–cell junction)</strong> の種類ごとに異なる形が使われる。例えば、細胞間の隙間をふさぐ結合や、機械的な強さを与える結合がある。個々の CAM や結合についての詳しい知識は不要である。</p>
+<p>関連: 糖タンパク質の糖鎖 (B2.1.9) も細胞の接着を助ける。</p>`,
+          `<p>在動物中，細胞必須黏合在一起形成<strong>組織 (tissue)</strong>。<span class="term">細胞黏附分子 (cell-adhesion molecule, CAM)</span> 是膜蛋白，能與鄰近細胞上的 CAM (或細胞間物質) 結合，把細胞固定在位。</p>
+<p>不同類型的<strong>細胞間連接 (cell–cell junction)</strong> 使用不同形式的 CAM，例如有的連接封閉細胞之間的空隙，有的提供機械強度。你不需要詳細認識不同的 CAM 或連接。</p>
+<p>關聯：糖蛋白的糖鏈 (B2.1.9) 同樣有助細胞黏附。</p>`)
+      }
     ],
-    /*META_START*/
+    keyTerms: [
+      { term: L("phospholipid bilayer", "リン脂質二重層", "磷脂雙層"), def: L("Two layers of phospholipids with hydrophobic tails inside and hydrophilic heads facing the water; the basis of membranes.", "疎水性の尾部を内側、親水性の頭部を水側に向けた2層のリン脂質。膜の基本構造。", "兩層磷脂，疏水尾部在內，親水頭部面向水；是膜的基礎結構。"), ahl: false },
+      { term: L("simple diffusion", "単純拡散", "簡單擴散"), def: L("Passive movement of small non-polar molecules (e.g. O₂, CO₂) between phospholipids, down a concentration gradient.", "小さな無極性分子 (O₂、CO₂ など) が濃度勾配に従ってリン脂質の間を通る受動的な移動。", "細小的非極性分子 (如 O₂、CO₂) 順濃度梯度穿過磷脂之間的被動移動。"), ahl: false },
+      { term: L("integral protein", "内在性タンパク質", "整合蛋白"), def: L("A membrane protein embedded in one or both lipid layers.", "脂質の片方または両方の層に埋め込まれた膜タンパク質。", "嵌入脂質層其中一層或兩層的膜蛋白。"), ahl: false },
+      { term: L("peripheral protein", "表在性タンパク質", "周邊蛋白"), def: L("A membrane protein attached to one surface of the bilayer.", "二重層の一方の表面に付着した膜タンパク質。", "附於雙層其中一面表面的膜蛋白。"), ahl: false },
+      { term: L("osmosis", "浸透", "滲透"), def: L("Net movement of water molecules across a membrane from lower to higher solute concentration.", "水分子が膜を通って、溶質濃度の低い側から高い側へ正味で移動すること。", "水分子穿過膜，由溶質濃度較低處淨移向較高處。"), ahl: false },
+      { term: L("aquaporin", "アクアポリン", "水通道蛋白"), def: L("A channel protein that lets water molecules cross a membrane quickly.", "水分子が膜を速く通るためのチャネルタンパク質。", "讓水分子快速穿過膜的通道蛋白。"), ahl: false },
+      { term: L("facilitated diffusion", "促進拡散", "易化擴散"), def: L("Passive movement of particles down a concentration gradient through a channel protein.", "粒子がチャネルタンパク質を通って濃度勾配に従って受動的に移動すること。", "粒子經通道蛋白順濃度梯度的被動移動。"), ahl: false },
+      { term: L("active transport", "能動輸送", "主動運輸"), def: L("Movement of particles across a membrane by a pump protein using ATP, possibly against a concentration gradient.", "ポンプタンパク質が ATP を使って粒子を膜の反対側へ運ぶこと。濃度勾配に逆らうこともできる。", "泵蛋白利用 ATP 把粒子運過膜，可以逆濃度梯度進行。"), ahl: false },
+      { term: L("selectively permeable", "選択的透過性", "選擇透過性"), def: L("Allowing some substances to cross a membrane but not others.", "ある物質は通すが他の物質は通さないこと。", "讓某些物質通過膜，而不讓其他物質通過。"), ahl: false },
+      { term: L("glycoprotein / glycolipid", "糖タンパク質／糖脂質", "糖蛋白／糖脂"), def: L("A protein or lipid with a carbohydrate chain on the outer surface of the membrane; used in cell adhesion and recognition.", "膜の外側の表面に糖鎖をもつタンパク質または脂質。細胞接着と認識に使われる。", "在膜外表面連有糖鏈的蛋白質或脂質，用於細胞黏附和識別。"), ahl: false },
+      { term: L("fluid mosaic model", "流動モザイクモデル", "流動鑲嵌模型"), def: L("Model of the membrane as a fluid phospholipid bilayer with a mosaic of proteins, cholesterol and carbohydrates.", "膜を、流動的なリン脂質二重層にタンパク質・コレステロール・糖鎖がモザイク状に存在するものとみなすモデル。", "把膜視為流動的磷脂雙層，其中鑲嵌着蛋白質、膽固醇和糖類的模型。"), ahl: false },
+      { term: L("membrane fluidity", "膜の流動性", "膜的流動性"), def: L("How easily phospholipids move within the bilayer; affected by fatty acid saturation and cholesterol.", "二重層内でリン脂質がどれだけ動きやすいか。脂肪酸の飽和度とコレステロールの影響を受ける。", "磷脂在雙層內移動的難易程度，受脂肪酸飽和程度和膽固醇影響。"), ahl: true },
+      { term: L("cholesterol", "コレステロール", "膽固醇"), def: L("A steroid between phospholipids in animal cell membranes that modulates fluidity.", "動物細胞膜でリン脂質の間にあり、流動性を調節するステロイド。", "存在於動物細胞膜磷脂之間、調節流動性的類固醇。"), ahl: true },
+      { term: L("endocytosis / exocytosis", "エンドサイトーシス／エキソサイトーシス", "胞吞作用／胞吐作用"), def: L("Endocytosis: the cell takes in material in a vesicle formed from the plasma membrane. Exocytosis: a vesicle fuses with the plasma membrane and releases its contents.", "エンドサイトーシス: 細胞膜からできた小胞で物質を取り込む。エキソサイトーシス: 小胞が細胞膜と融合して内容物を放出する。", "胞吞：細胞利用由質膜形成的囊泡攝入物質。胞吐：囊泡與質膜融合並釋出內容物。"), ahl: true },
+      { term: L("gated ion channel", "ゲート付きイオンチャネル", "門控離子通道"), def: L("A channel that opens or closes in response to a signal: a neurotransmitter binding or a change in voltage.", "神経伝達物質の結合や電位の変化などの信号で開閉するチャネル。", "因訊號 (神經遞質結合或電壓改變) 而開啟或關閉的通道。"), ahl: true },
+      { term: L("sodium–potassium pump", "ナトリウム・カリウムポンプ", "鈉鉀泵"), def: L("An exchange transporter using ATP to move 3 Na⁺ out and 2 K⁺ in; helps create the membrane potential.", "ATP を使って Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ交換輸送体。膜電位の形成に役立つ。", "利用 ATP 把 3 個 Na⁺ 運出、2 個 K⁺ 運入的交換運輸體，有助建立膜電位。"), ahl: true },
+      { term: L("indirect active transport", "間接的能動輸送", "間接主動運輸"), def: L("Transport driven by an ion gradient (e.g. Na⁺) rather than by ATP directly, as in the sodium-dependent glucose cotransporter.", "ATP ではなくイオンの勾配 (Na⁺ など) で駆動される輸送。ナトリウム依存性グルコース共輸送体など。", "由離子梯度 (如 Na⁺) 而非直接由 ATP 驅動的運輸，例如鈉依賴性葡萄糖協同運輸體。"), ahl: true },
+      { term: L("cell-adhesion molecule (CAM)", "細胞接着分子 (CAM)", "細胞黏附分子 (CAM)"), def: L("A membrane protein that binds cells to neighbouring cells to form tissues.", "細胞を隣の細胞に結合させて組織をつくる膜タンパク質。", "把細胞與鄰近細胞結合以形成組織的膜蛋白。"), ahl: true }
+    ],
+    misconceptions: [
+      { wrong: L("The membrane has little holes that small molecules fit through.", "膜には小さな穴があり、小さな分子はそこを通る。", "膜上有小孔，細小分子可從中通過。"),
+        right: L("Small non-polar molecules dissolve in and pass between the hydrophobic tails. Ions and polar molecules, even small ones, are blocked and need proteins.", "小さな無極性分子は疎水性の尾部の間に溶け込んで通る。イオンや極性分子は小さくても阻まれ、タンパク質が必要である。", "細小的非極性分子溶入並穿過疏水尾部之間；離子和極性分子即使很小也被阻擋，需要蛋白質。") },
+      { wrong: L("Facilitated diffusion is a type of active transport.", "促進拡散は能動輸送の一種である。", "易化擴散是主動運輸的一種。"),
+        right: L("Facilitated diffusion is passive: it goes down the gradient and needs no ATP.", "促進拡散は受動的で、勾配に従い ATP は不要である。", "易化擴散是被動的：順梯度進行，不需 ATP。") },
+      { wrong: L("In osmosis the solute pulls water across the membrane.", "浸透では、溶質が水を膜の向こうへ引っ張る。", "滲透時，溶質把水「拉」過膜。"),
+        right: L("Water moves randomly both ways. The net movement is towards the higher solute concentration because the membrane stops the solute and fewer water molecules reach the membrane from that side.", "水はランダムに両方向へ動く。膜が溶質を通さず、溶質濃度の高い側から膜に達する水分子が少ないため、正味は高濃度側へ動く。", "水向兩個方向隨機移動。由於膜不讓溶質通過，且溶質濃度較高一側到達膜的水分子較少，所以淨移動是朝向高溶質濃度。") },
+      { wrong: L("Active transport always moves substances out of cells.", "能動輸送は常に物質を細胞外へ出す。", "主動運輸總是把物質運出細胞。"),
+        right: L("Active transport can go in either direction. It is defined by using ATP (directly or indirectly) and being able to move particles against their gradient.", "能動輸送はどちら向きにもなる。ATP を (直接または間接に) 使い、勾配に逆らえることが特徴である。", "主動運輸可朝任一方向進行；其特點是 (直接或間接) 使用能量，並能逆梯度運送粒子。") },
+      { wrong: L("Cholesterol makes membranes more fluid.", "コレステロールは膜をより流動的にする。", "膽固醇令膜更流動。"),
+        right: L("Cholesterol is a modulator: it reduces fluidity at high temperature and prevents stiffening at low temperature.", "コレステロールは調節因子で、高温では流動性を下げ、低温では硬くなるのを防ぐ。", "膽固醇是調節者：高溫時降低流動性，低溫時防止變硬。") }
+    ],
+    beyondSyllabus: [
+      L("You do not need to calculate water potential, solute potential or pressure potential. The guide describes osmosis in terms of solute concentration and random movement.",
+        "水ポテンシャル、溶質ポテンシャル、圧ポテンシャルの計算は必要ない。ガイドは浸透を溶質濃度とランダムな運動で説明する。",
+        "你不需要計算水勢、溶質勢或壓力勢。課程指引以溶質濃度和隨機運動來描述滲透。"),
+      L("You do not need to memorize the terms hypotonic, hypertonic and isotonic. Explain in terms of higher and lower solute concentration.",
+        "低張・高張・等張という用語を覚える必要はない。溶質濃度が高い・低いで説明すればよい。",
+        "你不需要記住 hypotonic、hypertonic 和 isotonic 等詞。以溶質濃度較高和較低來解釋即可。"),
+      L("You do not need the carrier-protein model of facilitated diffusion or the terms uniport, symport and antiport. For SL the guide only asks for channel proteins; at HL, only the sodium–potassium pump and the sodium-dependent glucose cotransporter.",
+        "促進拡散の輸送体 (キャリア) モデルや、ユニポート・シンポート・アンチポートという用語は必要ない。SLでは求められるのはチャネルタンパク質だけで、HLではナトリウム・カリウムポンプとナトリウム依存性グルコース共輸送体だけである。",
+        "你不需要認識易化擴散的載體蛋白模型，或單向、同向、反向運輸 (uniport、symport、antiport) 等術語。SL 只要求通道蛋白；HL 只要求鈉鉀泵和鈉依賴性葡萄糖協同運輸體。"),
+      L("You do not need the step-by-step cycle of the sodium–potassium pump (phosphorylation and shape changes) or to calculate a membrane potential with the Nernst equation.",
+        "ナトリウム・カリウムポンプの段階的なサイクル (リン酸化と形の変化) や、ネルンストの式による膜電位の計算は必要ない。",
+        "你不需要認識鈉鉀泵的逐步循環 (磷酸化及形狀改變)，亦不需要用能斯特方程 (Nernst equation) 計算膜電位。"),
+      L("You do not need detailed knowledge of the different cell-adhesion molecules or cell junctions (the guide says so). You only need the term CAM and the idea that different forms suit different junctions.",
+        "個々の細胞接着分子や細胞間結合の詳しい知識は必要ない (ガイドにそう書かれている)。CAM という語と、結合の種類ごとに異なる形があるという考えがあればよい。",
+        "你不需要詳細認識不同的細胞黏附分子或細胞間連接 (課程指引已明確指出)。只需認識 CAM 一詞，以及不同形式適用於不同連接這個概念。"),
+      L("You do not need lipid rafts or the detailed chemistry of how membrane proteins are inserted into the bilayer.",
+        "脂質ラフトや、膜タンパク質が二重層に挿入される仕組みの詳しい化学は必要ない。",
+        "你不需要認識脂質筏 (lipid rafts)，或膜蛋白插入雙層的詳細化學機制。")
+    ],
+    links: [
+      { to: "B1.1", why: L("Phospholipid structure, amphipathic molecules, steroids and glycoproteins underpin membrane structure.", "リン脂質の構造、両親媒性分子、ステロイド、糖タンパク質が膜構造の基礎になる。", "磷脂結構、兩親性分子、類固醇和糖蛋白是膜結構的基礎。") },
+      { to: "B1.2", why: L("Integral and peripheral proteins, channels and pumps are proteins: their shape (structure) decides their function and specificity.", "内在性・表在性タンパク質、チャネル、ポンプはタンパク質で、その形 (構造) が機能と特異性を決める。", "整合蛋白、周邊蛋白、通道和泵都是蛋白質，其形狀 (結構) 決定功能及特異性。") },
+      { to: "B2.2", why: L("Vesicles, the Golgi apparatus and organelle membranes all use the membrane properties learned here.", "小胞、ゴルジ体、細胞小器官の膜は、ここで学んだ膜の性質を使っている。", "囊泡、高爾基體和細胞器的膜都運用了這裏所學的膜性質。") },
+      { to: "B3.2", why: L("Active transport and osmosis underlie transport in plants and uptake by roots.", "浸透と能動輸送は、根での吸収など植物の輸送で使われる。", "滲透和主動運輸應用於植物的運輸，例如根部的吸收。") },
+      { to: "A2.2", why: L("The plasma membrane is a feature of every cell; compare with prokaryotes and eukaryotes.", "細胞膜はあらゆる細胞に共通の特徴で、原核細胞と真核細胞を比べるときに関わる。", "質膜是所有細胞的共有特徵，可與原核及真核細胞比較。") }
+    ],
     questions: [
       /*Q_START*/
     ]

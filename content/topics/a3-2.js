@@ -396,6 +396,170 @@
       L("Different criteria for judgement can lead to different hypotheses; parsimony picks the cladogram needing the fewest changes.", "判断基準が違うと異なる仮説になることがあります。最節約法は変化が最も少ない分岐図を選びます。", "不同的判斷準則可以導致不同的假說；簡約法選擇所需變化最少的支序圖。"),
       L("Scientific knowledge claims may eventually be falsified: classification by similar morphology in the figwort family was falsified by cladistics.", "科学的知識の主張はいずれ反証されることがあります。ゴマノハグサ科の形態の類似に基づく分類は、分岐学によって反証されました。", "科學知識主張最終可能被推翻：玄參科以形態相似為基礎的分類，被支序學證偽。")
     ],
-    questions: []
+    questions: [
+      {
+        id: "a3-2-q01", type: "mcq", ahl: true, difficulty: 1, ref: "A3.2.1", paper: "1A",
+        stem: L("Why is classification of organisms needed?", "生物の分類が必要なのはなぜか。", "為何需要對生物進行分類？"),
+        options: [L("Because every species is identical", "すべての種が同一だから", "因為每個物種都相同"), L("Because of the immense diversity of species", "種の多様性が非常に大きいから", "因為物種的多樣性極大"), L("Because species never change", "種は決して変化しないから", "因為物種永遠不變"), L("Because only a few species exist", "存在する種がわずかだから", "因為只存在少數物種")],
+        answer: 1,
+        explanation: L("Millions of species exist, so a system is needed to name, organize and study them. Options A, C and D are all false statements about life.", "種は数百万もあるので、名前を付け、整理し、研究するための体系が必要です。A、C、Dはいずれも生物について誤った記述です。", "物種有數百萬種，所以需要一個系統來命名、整理和研究牠們。A、C、D 都是關於生命的錯誤說法。")
+      },
+      {
+        id: "a3-2-q02", type: "order", ahl: true, difficulty: 1, ref: "A3.2.2", paper: "1A",
+        stem: L("Put the taxa of the traditional hierarchy in order, from the largest group to the smallest.", "伝統的な階層の分類階級を、最大のグループから最小のグループの順に並べよ。", "把傳統階層的分類等級由最大的組別排到最小的組別。"),
+        items: [L("kingdom", "界", "界"), L("phylum", "門", "門"), L("class", "綱", "綱"), L("order", "目", "目"), L("family", "科", "科"), L("genus", "属", "屬"), L("species", "種", "種")],
+        explanation: L("Each rank contains one or more groups of the rank below it. A mnemonic such as 'King Philip Came Over For Good Soup' can help.", "各階級は、その下の階級のグループを一つ以上含みます。「King Philip Came Over For Good Soup」のような語呂合わせが役立ちます。", "每一等級包含下一等級的一個或多個組別。可以用 'King Philip Came Over For Good Soup' 這類記憶口訣。")
+      },
+      {
+        id: "a3-2-q03", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.2", paper: "1A",
+        stem: L("Which statement is a criticism of the traditional ranked hierarchy of taxa?", "伝統的な階級づけされた分類階層への批判はどれか。", "以下哪項是對傳統分級分類階層的批評？"),
+        options: [L("It has too few ranks to name any species", "階級が少なすぎてどの種にも名前を付けられない", "等級太少，無法為任何物種命名"), L("The ranks are arbitrary and do not always match patterns of divergence in evolution", "階級は恣意的で、進化における分岐のパターンと必ずしも一致しない", "各等級是武斷的，並不總是與進化中的分歧規律相符"), L("It is based only on DNA sequences", "DNA 配列だけに基づいている", "它只以 DNA 序列為基礎"), L("It was invented after cladistics", "分岐学より後に考案された", "它是在支序學之後才發明的")],
+        answer: 1,
+        explanation: L("A fixed rank such as 'family' is a human decision and two families may have diverged at very different times. C and D are wrong: the traditional system came first and used mainly morphology.", "「科」のような固定された階級は人間が決めたもので、二つの科が分岐した時期が大きく違うことがあります。CとDは誤りで、伝統的な体系のほうが先にあり、主に形態を使っていました。", "「科」這類固定等級是人為決定的，兩個科可能在非常不同的時間分歧。C 和 D 錯誤：傳統系統較早出現，主要使用形態。")
+      },
+      {
+        id: "a3-2-q04", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.3", paper: "1A",
+        stem: L("What is an advantage of a classification that follows evolutionary relationships?", "進化的関係に沿った分類の利点は何か。", "按進化關係分類有甚麼好處？"),
+        options: [L("It makes all species look alike", "すべての種が似て見える", "令所有物種看起來相似"), L("Characteristics of an organism can be predicted from the clade it belongs to", "所属するクレードから、その生物の特徴を予測できる", "可以由生物所屬的演化支預測其特徵"), L("It removes the need for DNA evidence", "DNA の証拠が不要になる", "不再需要 DNA 證據"), L("It guarantees no species will ever be reclassified", "どの種も二度と再分類されないことが保証される", "保證沒有物種會被重新分類")],
+        answer: 1,
+        explanation: L("Members of a clade inherited traits from their common ancestor, so they share them. D is wrong: new evidence can still change a cladogram.", "クレードの構成員は共通祖先から形質を受け継ぐので共有しています。Dは誤りで、新しい証拠で分岐図は変わり得ます。", "演化支的成員從共同祖先遺傳性狀，所以共有這些性狀。D 錯誤：新證據仍可令支序圖改變。")
+      },
+      {
+        id: "a3-2-q05", type: "mcq", ahl: true, difficulty: 1, ref: "A3.2.4", paper: "1A",
+        stem: L("Which best defines a clade?", "クレードの定義として最も適切なのはどれか。", "以下哪項最能定義演化支？"),
+        options: [L("Any group of organisms that look similar", "見た目が似ている生物の集団", "外貌相似的任何一羣生物"), L("A common ancestor and all of its descendants", "共通祖先とそのすべての子孫", "一個共同祖先及其所有後代"), L("All organisms living in the same habitat", "同じ生息地に住むすべての生物", "生活在同一生境的所有生物"), L("The organisms at the tips of a cladogram only", "分岐図の先端にある生物だけ", "只是支序圖尖端的生物")],
+        answer: 1,
+        explanation: L("A clade is defined by ancestry, not by appearance (A) or habitat (C), and it includes the ancestor, not just the tips (D).", "クレードは見た目 (A) や生息地 (C) ではなく祖先関係で定義され、先端だけ (D) でなく祖先も含みます。", "演化支由祖先關係定義，而不是外貌 (A) 或生境 (C)；它包括祖先，而不只是尖端 (D)。")
+      },
+      {
+        id: "a3-2-q06", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.7", paper: "1B",
+        stem: L("Study the cladogram. Which organism is most closely related to T?", "分岐図を調べよ。Tに最も近縁な生物はどれか。", "觀察支序圖。哪一種生物與 T 的親緣最近？"),
+        data: L(`<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`, `<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`, `<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`),
+        options: [L("P", "P", "P"), L("Q", "Q", "Q"), L("R", "R", "R"), L("S", "S", "S")],
+        answer: 3,
+        explanation: L("S and T meet at the nearest node, so they share the most recent common ancestor. R is the next closest because it joins the S and T branch at the next node. The tempting wrong answer is R, which is drawn next to T, but only the node position matters.", "SとTは最も近い節で出会うので、最も新しい共通祖先を共有します。Rは次の節でSとTの枝につながるので次に近い関係です。誤って選びがちなのはTの隣に描かれたRですが、重要なのは節の位置だけです。", "S 和 T 在最近的節點相遇，所以牠們共有最近的共同祖先。R 在下一個節點才連上 S 和 T 的分支，所以其次最近。容易誤選的是畫在 T 旁邊的 R，但關鍵只在節點的位置。")
+      },
+      {
+        id: "a3-2-q07", type: "short", ahl: true, difficulty: 2, ref: "A3.2.7", paper: "1B", commandTerm: "Deduce", marks: 4,
+        stem: L("Use the cladogram (nodes are numbered). (a) Identify the node that represents the most recent common ancestor of C and E. (b) State the members of the clade that starts at node 3. (c) State what a node represents. (d) Deduce whether A or C is more closely related to E.", "分岐図（節に番号が付いている）を使え。(a) CとEの最も近い共通祖先を表す節を答えよ (Identify)。(b) 節3から始まるクレードの構成員を答えよ (State)。(c) 節が何を表すか答えよ (State)。(d) AとCのどちらがEにより近縁か推論せよ (Deduce)。", "利用支序圖（節點已編號）。(a) 識別 (Identify) 代表 C 與 E 最近共同祖先的節點。(b) 說出 (State) 由節點 3 開始的演化支的成員。(c) 說出 (State) 節點代表甚麼。(d) 推斷 (Deduce) A 與 C 哪一個與 E 的親緣較近。"),
+        data: L(`<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`),
+        markscheme: [
+          L("(a) Node 3", "(a) 節3", "(a) 節點 3"),
+          L("(b) C, D and E", "(b) C、D、E", "(b) C、D 和 E"),
+          L("(c) A hypothetical common ancestor (of the organisms/clades that branch from it)", "(c) 仮想の共通祖先（そこから分かれる生物／クレードの）", "(c) 假設的共同祖先（由它分出的生物／演化支的）"),
+          L("(d) C is more closely related to E, because C and E share a more recent common ancestor (node 3) than A and E (node 1, the root)", "(d) CのほうがEに近縁。CとEが共有する共通祖先（節3）は、AとEの共通祖先（節1、根）より新しいから", "(d) C 與 E 的親緣較近，因為 C 與 E 的共同祖先（節點 3）比 A 與 E 的共同祖先（節點 1，即根）更近期")
+        ],
+        modelAnswer: L("(a) Node 3. (b) C, D and E. (c) A hypothetical common ancestor. (d) C, because C and E meet at node 3, which is more recent than node 1 where A and E meet.", "(a) 節3。(b) C、D、E。(c) 仮想の共通祖先。(d) C。CとEは節3で出会い、AとEが出会う節1より新しいから。", "(a) 節點 3。(b) C、D 和 E。(c) 假設的共同祖先。(d) C，因為 C 與 E 在節點 3 相遇，比 A 與 E 相遇的節點 1 更近期。")
+      },
+      {
+        id: "a3-2-q08", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.7", paper: "1A",
+        stem: L("A student redraws a cladogram by rotating the two branches that come from one node, so the tips appear in a different order. What happens to the evolutionary relationships shown?", "ある生徒が、一つの節から出る二本の枝を回転させて分岐図を描き直し、先端の並び順が変わった。示される進化的関係はどうなるか。", "一名學生把由某一節點分出的兩條分支旋轉，重新畫出支序圖，使尖端的次序改變。所顯示的進化關係會怎樣？"),
+        options: [L("They change, because the neighbours are now different", "隣り合う生物が変わるので、変わる", "會改變，因為相鄰的生物不同了"), L("They stay the same, because relationships depend on the nodes, not the order of the tips", "変わらない。関係は先端の並び順ではなく節で決まるから", "不變，因為關係取決於節點，而不是尖端的次序"), L("They are reversed in time", "時間が逆になる", "時間次序倒轉"), L("The root moves to a different node", "根が別の節に移る", "根移到另一個節點")],
+        answer: 1,
+        explanation: L("Rotation around a node changes only how the diagram is drawn. Who shares which common ancestor is unchanged. A is the common misconception that neighbours on the page are closest relatives.", "節を中心とした回転は、図の描き方が変わるだけです。誰がどの共通祖先を共有するかは変わりません。Aは、紙面で隣り合うものが最も近縁だという典型的な誤解です。", "圍繞節點旋轉只改變圖的畫法；誰與誰共有哪個共同祖先並沒有改變。A 是常見的誤解，以為圖上相鄰的就是最近的親屬。")
+      },
+      {
+        id: "a3-2-q09", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.5", paper: "1B",
+        stem: L("The table shows the number of amino acid differences in the same protein between species pairs (illustrative data). Using the idea of the molecular clock, which conclusion is most reasonable?", "表は、同じタンパク質のアミノ酸配列の種の組ごとの違いの数を示す（例示データ）。分子時計の考え方を使うと、最も適切な結論はどれか。", "下表顯示同一種蛋白質在不同物種配對之間的氨基酸差異數目（示例數據）。運用分子鐘的概念，哪個結論最合理？"),
+        data: L(
+          `<table><tr><th>Species pair</th><th>Amino acid differences</th></tr><tr><td>P – Q</td><td>4</td></tr><tr><td>P – R</td><td>12</td></tr><tr><td>Q – R</td><td>12</td></tr></table>`,
+          `<table><tr><th>種の組</th><th>アミノ酸の違い</th></tr><tr><td>P – Q</td><td>4</td></tr><tr><td>P – R</td><td>12</td></tr><tr><td>Q – R</td><td>12</td></tr></table>`,
+          `<table><tr><th>物種配對</th><th>氨基酸差異</th></tr><tr><td>P – Q</td><td>4</td></tr><tr><td>P – R</td><td>12</td></tr><tr><td>Q – R</td><td>12</td></tr></table>`
+        ),
+        options: [L("P and Q diverged most recently; R split off from their common ancestor earlier", "PとQが最も最近分岐した。Rはその共通祖先からもっと前に分かれた", "P 和 Q 最近才分歧；R 較早從牠們的共同祖先分出"), L("Q and R diverged most recently", "QとRが最も最近分岐した", "Q 和 R 最近才分歧"), L("All three species diverged at exactly the same time", "三種はまったく同時に分岐した", "三個物種剛好在同一時間分歧"), L("R is the ancestor of P and Q", "RはPとQの祖先である", "R 是 P 和 Q 的祖先")],
+        answer: 0,
+        explanation: L("Fewer differences mean less time has passed since the split, so P and Q share the most recent ancestor. R differs equally from both, so it branched off earlier. D is wrong: R is a living species, not the ancestor, and its protein has also changed since the split.", "違いが少ないほど分岐からの時間が短いので、PとQが最も新しい共通祖先を共有します。RはPとQの両方と同じだけ違うので、もっと前に分かれました。Dは誤りで、Rは現存する種であり祖先ではなく、分岐後にRのタンパク質も変化しています。", "差異越少，表示分開後經過的時間越短，所以 P 和 Q 有最近的共同祖先。R 與兩者的差異相同，所以較早分出。D 錯誤：R 是現存物種，不是祖先，牠的蛋白質在分開後也有改變。")
+      },
+      {
+        id: "a3-2-q10", type: "short", ahl: true, difficulty: 2, ref: "A3.2.5", paper: "2", commandTerm: "Suggest", marks: 2,
+        stem: L("Suggest two reasons why molecular clock estimates of the time clades diverged are only approximate.", "分子時計によるクレードの分岐時期の推定が、おおよそのものにすぎない理由を二つ挙げよ (Suggest)。", "提出 (Suggest) 兩個原因，說明為何分子鐘對演化支分歧時間的估計只是概約的。"),
+        markscheme: [
+          L("Mutation rate is affected by generation time (more generations = more mutations copied)", "突然変異の速さは世代時間の影響を受ける（世代が多いほど多くの突然変異が複製される）", "突變率受世代時間影響（世代越多，被複製的突變越多）"),
+          L("Mutation rate/spread of mutations is affected by population size", "突然変異の速さや広がり方は個体群の大きさの影響を受ける", "突變率／突變的擴散受種羣大小影響"),
+          L("Selective pressure differs between lineages/over time", "選択圧が系統間や時代で異なる", "選擇壓力在不同譜系／不同時期並不相同"),
+          L("Any other valid factor that makes mutation rates vary", "突然変異の速さを変えるその他の妥当な要因", "其他令突變率不同的有效因素")
+        ],
+        modelAnswer: L("The rate at which differences accumulate is not constant. It is affected by generation time and by population size, and also by how strong selection is in each lineage.", "違いが蓄積する速さは一定ではない。世代時間や個体群の大きさ、また各系統での選択の強さに影響される。", "差異累積的速率並不恆定，會受世代時間和種羣大小影響，也受各譜系選擇強度影響。")
+      },
+      {
+        id: "a3-2-q11", type: "short", ahl: true, difficulty: 3, ref: "A3.2.6", paper: "1B", commandTerm: "Deduce", marks: 4,
+        stem: L("The table shows base sequences at six sites for four species (sample data). Trees 2 and 3 each need more changes than Tree 1. (a) Determine the minimum number of changes on Tree 1, ((A,B),(C,D)). (b) Tree 2 ((A,C),(B,D)) needs 7 changes and Tree 3 ((A,D),(B,C)) needs 8. Deduce which cladogram is the most probable and explain your choice.", "表は四種の六つの部位の塩基配列を示す（サンプルデータ）。木2と木3は、いずれも木1より多くの変化を必要とする。(a) 木1 ((A,B),(C,D)) に必要な最小の変化の数を求めよ (Determine)。(b) 木2 ((A,C),(B,D)) は変化7回、木3 ((A,D),(B,C)) は変化8回を要する。最も確からしい分岐図を推論し (Deduce)、理由を説明せよ。", "下表顯示四個物種在六個位點的鹼基序列（樣本數據）。樹 2 和樹 3 所需的變化都比樹 1 多。(a) 求出 (Determine) 樹 1 ((A,B),(C,D)) 所需的最少變化次數。(b) 樹 2 ((A,C),(B,D)) 需要 7 次變化，樹 3 ((A,D),(B,C)) 需要 8 次。推斷 (Deduce) 哪一個支序圖最有可能，並解釋你的選擇。"),
+        data: L(
+          `<table><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td>A</td><td>T</td><td>G</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>B</td><td>T</td><td>G</td><td>A</td><td>T</td><td>T</td><td>C</td></tr><tr><td>C</td><td>C</td><td>A</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>D</td><td>C</td><td>A</td><td>G</td><td>T</td><td>T</td><td>G</td></tr></table>`,
+          `<table><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td>A</td><td>T</td><td>G</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>B</td><td>T</td><td>G</td><td>A</td><td>T</td><td>T</td><td>C</td></tr><tr><td>C</td><td>C</td><td>A</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>D</td><td>C</td><td>A</td><td>G</td><td>T</td><td>T</td><td>G</td></tr></table>`,
+          `<table><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td>A</td><td>T</td><td>G</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>B</td><td>T</td><td>G</td><td>A</td><td>T</td><td>T</td><td>C</td></tr><tr><td>C</td><td>C</td><td>A</td><td>A</td><td>C</td><td>T</td><td>G</td></tr><tr><td>D</td><td>C</td><td>A</td><td>G</td><td>T</td><td>T</td><td>G</td></tr></table>`
+        ),
+        markscheme: [
+          L("(a) Sites 1, 2: one change each (2); site 3: one (D differs); site 4: two; site 5: none; site 6: one (B differs)", "(a) 部位1・2は各1回（計2）、部位3は1回（Dだけ異なる）、部位4は2回、部位5は0回、部位6は1回（Bだけ異なる）", "(a) 位點 1、2 各一次（共 2）；位點 3 一次（只有 D 不同）；位點 4 兩次；位點 5 沒有；位點 6 一次（只有 B 不同）"),
+          L("Total = 6 changes on Tree 1", "木1の合計は6回", "樹 1 合共 6 次變化"),
+          L("(b) Tree 1 is the most probable cladogram", "(b) 木1が最も確からしい分岐図", "(b) 樹 1 是最有可能的支序圖"),
+          L("Parsimony: it explains the sequence differences with the fewest changes (6 < 7 < 8)", "最節約法：配列の違いを最も少ない変化（6 < 7 < 8）で説明できる", "簡約法：它以最少的變化次數 (6 < 7 < 8) 解釋序列差異")
+        ],
+        modelAnswer: L("(a) 6 changes (1 + 1 + 1 + 2 + 0 + 1). (b) Tree 1, ((A,B),(C,D)), because it needs the fewest changes (6, against 7 and 8). This is the parsimony principle: the cladogram that explains the observed differences with the smallest number of changes is the most probable.", "(a) 6回 (1 + 1 + 1 + 2 + 0 + 1)。(b) 木1 ((A,B),(C,D))。必要な変化が最も少ない（6回で、7回と8回より少ない）から。これが最節約の原則で、観察された違いを最も少ない回数の変化で説明できる分岐図が最も確からしい。", "(a) 6 次變化 (1 + 1 + 1 + 2 + 0 + 1)。(b) 樹 1 ((A,B),(C,D))，因為它所需的變化最少（6 次，對比 7 次和 8 次）。這是簡約原則：以最少變化次數解釋所觀察差異的支序圖最有可能。")
+      },
+      {
+        id: "a3-2-q12", type: "mcq", ahl: true, difficulty: 2, ref: "A3.2.8", paper: "1A",
+        stem: L("Cladistic analysis of DNA showed that some plants placed in the figwort family because of similar flowers belong in other families. What best explains the similar flowers?", "DNA の分岐学的解析により、花が似ているためにゴマノハグサ科に入れられていた一部の植物は、他の科に属することが分かった。似た花を最もよく説明するのはどれか。", "對 DNA 的支序學分析顯示，一些因花相似而被放入玄參科的植物其實屬於其他科。甚麼最能解釋相似的花？"),
+        options: [L("Convergent evolution", "収斂進化", "趨同進化"), L("They are the same species", "同じ種である", "牠們是同一物種"), L("Lamarckian inheritance", "ラマルク的な遺伝", "拉馬克式遺傳"), L("Horizontal gene transfer between all the plants", "すべての植物間の遺伝子の水平伝播", "所有植物之間的水平基因轉移")],
+        answer: 0,
+        explanation: L("Similar features arose independently in unrelated lineages (convergent evolution), so morphology misled the original classification. B is wrong because they are in different families; C and D are not the explanation given by the evidence.", "似た特徴が無関係な系統で独立に生じた（収斂進化）ため、形態が最初の分類を誤らせました。Bは科が異なるので誤りで、CとDは証拠が示す説明ではありません。", "相似的特徵在沒有親緣關係的譜系中獨立出現（趨同進化），所以形態誤導了原本的分類。B 錯，因為牠們屬於不同的科；C 和 D 不是證據所顯示的解釋。")
+      },
+      {
+        id: "a3-2-q13", type: "mcq", ahl: true, difficulty: 1, ref: "A3.2.9", paper: "1A",
+        stem: L("Which evidence was used to propose the three-domain system?", "三ドメイン説の提案に使われた証拠はどれか。", "提出三域系統時使用了哪種證據？"),
+        options: [L("Presence or absence of a cell wall", "細胞壁の有無", "有沒有細胞壁"), L("Base sequences of ribosomal RNA", "リボソーム RNA の塩基配列", "核糖體 RNA 的鹼基序列"), L("Body size", "体の大きさ", "體型大小"), L("Habitat of the organisms", "生物の生息地", "生物的生境")],
+        answer: 1,
+        explanation: L("rRNA is present in all cells, so its sequence can be compared across all life. Cell wall, size and habitat do not separate the three domains reliably.", "rRNA はすべての細胞にあるので、すべての生物で配列を比較できます。細胞壁、大きさ、生息地は三つのドメインを確実には分けません。", "rRNA 存在於所有細胞，所以可以比較所有生物的序列。細胞壁、大小和生境都不能可靠地區分三個域。")
+      },
+      {
+        id: "a3-2-q14", type: "multi", ahl: true, difficulty: 2, ref: "A3.2.4", paper: "1B",
+        stem: L("In the cladogram, which groups are clades? Select ALL that apply.", "この分岐図で、クレードであるグループをすべて選べ。", "在這支序圖中，哪些類羣是演化支？選出所有適用的選項。"),
+        data: L(`<figure>${treeSvg([["A","B"],["C",["D","E"]]])}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]])}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]])}</figure>`),
+        options: [L("D and E", "DとE", "D 和 E"), L("B and C", "BとC", "B 和 C"), L("C, D and E", "C、D、E", "C、D 和 E"), L("A, B and C", "A、B、C", "A、B 和 C")],
+        answer: [0, 2],
+        explanation: L("A clade is a node plus all of its descendants: D+E and C+D+E each come from one node. B and C do not share a node of their own, and A, B, C leaves out D and E, which descend from the same node as C.", "クレードは一つの節とそのすべての子孫です。D+EとC+D+Eはそれぞれ一つの節に由来します。BとCは自分たちだけの節をもたず、A、B、Cは、Cと同じ節の子孫であるDとEを除いています。", "演化支是一個節點加上它所有的後代：D+E 和 C+D+E 各自由一個節點而來。B 和 C 沒有只屬於自己的節點；A、B、C 則漏掉了與 C 出自同一節點的 D 和 E。")
+      },
+      {
+        id: "a3-2-q15", type: "match", ahl: true, difficulty: 1, ref: "A3.2.7", paper: "1A",
+        stem: L("Match each cladogram term with its meaning.", "分岐図の各用語を意味と結び付けよ。", "把每個支序圖術語配對其意思。"),
+        pairs: [
+          { left: L("Root", "根", "根"), right: L("Common ancestor of all organisms on the cladogram", "分岐図のすべての生物の共通祖先", "支序圖上所有生物的共同祖先") },
+          { left: L("Node", "節", "節點"), right: L("Branching point; a hypothetical common ancestor", "枝分かれ点。仮想の共通祖先", "分支點；假設的共同祖先") },
+          { left: L("Terminal branch", "末端の枝", "末端分支"), right: L("Branch ending at a tip, leading to one organism or group", "先端で終わり、一つの生物またはグループにつながる枝", "終止於尖端、通向一種生物或一個類羣的分支") },
+          { left: L("Clade", "クレード", "演化支"), right: L("A node together with all of its descendants", "一つの節とそのすべての子孫", "一個節點連同其所有後代") }
+        ],
+        explanation: L("The root is the base of the whole tree; every node is a split; tips are the organisms studied.", "根は木全体の根元、節はすべて分岐点、先端は調べる生物です。", "根是整棵樹的底部；每個節點是一次分支；尖端是被研究的生物。")
+      },
+      {
+        id: "a3-2-q16", type: "short", ahl: true, difficulty: 2, ref: "A3.2.2", paper: "2", commandTerm: "Explain", marks: 3,
+        stem: L("Explain why a fixed ranking of taxa (kingdom, phylum and so on) is regarded as arbitrary, and outline the alternative offered by cladistics.", "階級を固定した分類（界、門など）が恣意的とみなされる理由を説明し (Explain)、分岐学が提供する代わりの方法を説明せよ (Outline)。", "解釋 (Explain) 為何固定的分類等級（界、門等）被視為武斷，並概述 (Outline) 支序學提供的另一種方法。"),
+        markscheme: [
+          L("Variation between organisms changes gradually / in degrees, so there are no natural cut-off points between ranks", "生物間の変異は連続的に変わるので、階級の間に自然な区切りがない", "生物之間的變異是逐步改變的，所以各等級之間沒有天然的分界"),
+          L("Ranks do not necessarily correspond to the patterns/timing of divergence in evolution", "階級は進化における分岐のパターンや時期と必ずしも対応しない", "等級不一定與進化中分歧的規律／時間相對應"),
+          L("Cladistics classifies organisms into unranked clades based on common ancestry", "分岐学は共通祖先に基づいて生物をランクのないクレードに分類する", "支序學按共同祖先把生物分為不分等級的演化支")
+        ],
+        modelAnswer: L("Variation between organisms is gradual, so there is no natural place where a family ends and an order begins, and ranks do not match the timing of splits. Cladistics instead groups organisms into unranked clades defined by common ancestry.", "生物間の変異は連続的で、科が終わり目が始まる自然な場所はなく、階級は分岐の時期とも対応しない。分岐学は代わりに、共通祖先で定義されるランクのないクレードに生物をまとめる。", "生物之間的變異是逐步的，所以沒有天然的位置說明科在哪裏結束、目在哪裏開始，而且等級與分歧的時間並不吻合。支序學則改以共同祖先所界定的不分等級演化支來為生物分組。")
+      },
+      {
+        id: "a3-2-q17", type: "short", ahl: true, difficulty: 3, ref: "A3.2.8", paper: "2", commandTerm: "Discuss", marks: 4,
+        stem: L("Discuss how cladistics can show that a traditional classification based on similar structures is not correct, using one example.", "分岐学によって、似た構造に基づく伝統的な分類が正しくないことを示せることを、一つの例を使って論述せよ (Discuss)。", "運用一個例子，論述 (Discuss) 支序學如何可以顯示以相似結構為基礎的傳統分類並不正確。"),
+        markscheme: [
+          L("Traditional classification grouped organisms by similarity in morphology", "伝統的な分類は形態の類似によって生物をまとめた", "傳統分類按形態的相似性把生物分組"),
+          L("Cladistics compares DNA/protein sequences, which is more objective evidence of common ancestry", "分岐学は DNA／タンパク質の配列を比べ、これは共通祖先のより客観的な証拠である", "支序學比較 DNA／蛋白質序列，這是共同祖先較客觀的證據"),
+          L("Example: figwort family plants with similar flowers were shown to be more closely related to plants in other families / were moved to other families", "例：花が似ていたゴマノハグサ科の植物は、他の科の植物とより近縁であると示され、他の科に移された", "例子：因花相似而屬玄參科的植物，被證明與其他科的植物親緣更近／被移到其他科"),
+          L("The similar structures arose by convergent evolution, not common ancestry, so the old grouping was falsified", "似た構造は共通祖先ではなく収斂進化で生じたので、古い分類は反証された", "相似的結構是趨同進化而非共同祖先所致，所以舊分類被證偽"),
+          L("Balanced view: morphology can still be useful / sequences may also give conflicting hypotheses", "バランスのとれた見方：形態は今でも役に立つ／配列も異なる仮説を与えることがある", "持平看法：形態仍然有用／序列也可能給出相互衝突的假說")
+        ],
+        modelAnswer: L("Traditional classification grouped plants by similar flowers. Cladistic analysis of DNA, which is more objective evidence of ancestry, showed that many figwort family plants were closer relatives of plants in other families, so they were moved. The similar flowers had evolved independently (convergent evolution). Morphology is still useful, but it can mislead when features evolve more than once.", "伝統的な分類は花の似た植物をまとめた。祖先関係のより客観的な証拠である DNA の分岐学的解析により、ゴマノハグサ科の多くの植物が他の科の植物とより近縁だと示され、移された。似た花は独立に進化していた（収斂進化）。形態は今でも役に立つが、特徴が何度も進化すると誤解を招く。", "傳統分類把花相似的植物歸在一起。對 DNA（祖先關係較客觀的證據）的支序學分析顯示，許多玄參科植物與其他科的植物親緣更近，所以被移走。相似的花是獨立演化出來的（趨同進化）。形態仍然有用，但當特徵多次獨立演化時，可能產生誤導。")
+      },
+      {
+        id: "a3-2-q18", type: "mcq", ahl: true, difficulty: 3, ref: "A3.2.7", paper: "1B",
+        stem: L("Which statement about this cladogram is correct?", "この分岐図について正しい記述はどれか。", "關於這個支序圖，哪項陳述正確？"),
+        data: L(`<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`, `<figure>${treeSvg([["A","B"],["C",["D","E"]]], { nodes: true })}</figure>`),
+        options: [L("C is the ancestor of D and E", "CはDとEの祖先である", "C 是 D 和 E 的祖先"), L("Node 4 represents a hypothetical common ancestor of D and E", "節4はDとEの仮想の共通祖先を表す", "節點 4 代表 D 和 E 的假設共同祖先"), L("B is more closely related to C than to A", "BはAよりCに近縁である", "B 與 C 的親緣比與 A 的更近"), L("A and E are the most closely related pair", "AとEが最も近縁な組である", "A 和 E 是親緣最近的一對")],
+        answer: 1,
+        explanation: L("Tips are living (or studied) organisms, never the ancestors of other tips (A is wrong); nodes are the hypothetical ancestors. B and A share node 2, which is more recent than node 1, so B is closer to A (C is wrong). A and E meet only at the root (D is wrong).", "先端は現存する（または研究対象の）生物であり、他の先端の祖先ではありません (Aは誤り)。祖先にあたるのは節です。BとAは節2を共有し、これは節1より新しいので、BはAに近縁です (Cは誤り)。AとEは根でしか出会いません (Dは誤り)。", "尖端是現存（或被研究）的生物，絕不是其他尖端的祖先（A 錯）；節點才是假設的祖先。B 與 A 共有節點 2，比節點 1 更近期，所以 B 與 A 較近（C 錯）。A 與 E 只在根相遇（D 錯）。")
+      }
+    ]
   });
 })();
