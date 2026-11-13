@@ -406,7 +406,7 @@
     z1: { en: "1 slow start", ja: "1 ゆるやかな立ち上がり", zh: "1 起初緩慢" },
     z2: { en: "2 steep", ja: "2 急な部分", zh: "2 陡峭" },
     z3: { en: "3 levels off", ja: "3 平らになる", zh: "3 趨平" },
-    sites: { en: "Haem sites carrying O₂ (adult), out of 4:", ja: "O₂を運んでいるヘム部位（成人型）、4つのうち：", zh: "載有O₂的血紅素位點（成人），共4個：" },
+    sites: { en: "Average number of haem groups carrying O₂ per adult haemoglobin (out of 4):", ja: "成人型ヘモグロビン1分子あたり、O₂を結合しているヘム基の平均数（4つのうち）：", zh: "每個成人血紅蛋白中載有O₂的血紅素基團平均數目（共4個）：" },
     ill: { en: "Illustrative values. Real curves differ a little between sources. The positions of 'lungs' and 'tissue' are approximate.", ja: "イラスト用の値です。実際の曲線は資料によって少し異なります。「肺」「組織」の位置はおおよそです。", zh: "示範數值。實際曲線在不同資料中略有差異。「肺」和「組織」的位置只是大約。" },
     sat: { en: "saturation", ja: "飽和度", zh: "飽和度" },
     expl: {

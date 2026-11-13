@@ -12,6 +12,7 @@
     ".sav input[type=range]{width:100%;accent-color:var(--accent,#2547c7);min-height:2rem}",
     ".sav .sv-btn{font:inherit;font-weight:600;min-height:2.5rem;padding:.4rem .9rem;border-radius:var(--radius,6px);border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".sav .sv-btn:hover{background:var(--surface-2,#e3eaee)}",
+    ".sav .sv-btn:disabled{opacity:.5;cursor:default}",
     ".sav .sv-btn:focus-visible,.sav input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".sav .sv-grid{display:grid;grid-template-columns:1fr;gap:1rem}",
     "@media(min-width:640px){.sav .sv-grid{grid-template-columns:1fr 1fr}}",
@@ -123,6 +124,7 @@
       var b1 = root.querySelector(".sv-b1");
       var b2 = root.querySelector(".sv-b2");
       var msg = root.querySelector(".sv-msg");
+      var dblBtn = root.querySelector(".sv-dbl");
 
       function isoCube(x, y, s, id) {
         // x,y = bottom-front corner; s = edge length in px; simple oblique projection
@@ -179,7 +181,7 @@
         }
         g += '<line class="gl" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '" style="stroke:var(--ink,#0f2029)"/><line class="gl" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '" style="stroke:var(--ink,#0f2029)"/>';
         var pts = [];
-        for (var k = 1; k <= 100; k++) { var v = k / 10; pts.push(X(v).toFixed(1) + "," + Y(6 / v).toFixed(1)); }
+        for (var k = 10; k <= 100; k++) { var v = k / 10; pts.push(X(v).toFixed(1) + "," + Y(6 / v).toFixed(1)); }
         g += '<polyline class="curve" points="' + pts.join(" ") + '"/>';
         g += '<line class="gl" style="stroke-dasharray:3 3;stroke:var(--theme-b,#b82a56)" x1="' + X(l) + '" x2="' + X(l) + '" y1="' + Y(6 / l) + '" y2="' + B + '"/>';
         g += '<line class="gl" style="stroke-dasharray:3 3;stroke:var(--theme-b,#b82a56)" x1="' + L + '" x2="' + X(l) + '" y1="' + Y(6 / l) + '" y2="' + Y(6 / l) + '"/>';
@@ -204,13 +206,14 @@
       function render() {
         valEl.textContent = l + " " + S.unit;
         slider.setAttribute("aria-valuetext", l + " µm");
+        dblBtn.disabled = l * 2 > 10;
         drawCube(); drawNums(); drawTable(); drawGraph(); drawBars();
       }
 
       function onInput() { l = parseInt(slider.value, 10); render(); }
       slider.addEventListener("input", onInput);
       root.querySelector(".sv-dbl").addEventListener("click", function () {
-        l = Math.min(10, l * 2); slider.value = l; render();
+        if (l * 2 > 10) return; l = l * 2; slider.value = l; render();
       });
       root.querySelector(".sv-rst").addEventListener("click", function () {
         l = 1; slider.value = l; render();
