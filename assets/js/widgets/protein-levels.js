@@ -340,7 +340,7 @@
         body.appendChild(el("p", { text: T([
           "Some proteins are made of two or more polypeptides assembled into one functional protein. Examples: insulin (2), collagen (3) and haemoglobin (4: two α and two β chains). A conjugated protein also has a non-polypeptide part (a prosthetic group), such as the haem in haemoglobin.",
           "2本以上のポリペプチドが集まって1つの機能するタンパク質になっているものがあります。例: インスリン (2本)、コラーゲン (3本)、ヘモグロビン (4本: α鎖2本とβ鎖2本)。複合タンパク質 (conjugated protein) には、ヘモグロビンのヘムのようにポリペプチド以外の部分 (prosthetic group) もあります。",
-          "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。結合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。"]) }));
+          "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。綴合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。"]) }));
         var bs = [2, 4].map(function (k) {
           var b = el("button", { type: "button", "aria-pressed": nq === k ? "true" : "false", text: k + " " + T(["polypeptides", "本のポリペプチド", "條多肽"]) });
           b.addEventListener("click", function () { nq = k; render(); }); return b;

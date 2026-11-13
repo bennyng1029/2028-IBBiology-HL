@@ -954,7 +954,7 @@
       intro: {
         en: '<p>A protein’s shape decides what it can do. Globular proteins are compact and rounded, and are usually soluble in water, for example insulin. Fibrous proteins form long strands that give strength, for example collagen. A conjugated protein contains a non-protein part, such as the haem group in haemoglobin; a non-conjugated protein does not. This whole step is AHL (B1.2.11 and B1.2.12).</p>',
         ja: '<p>タンパク質の形は、その働きを決めます。球状タンパク質 (globular protein) は丸くコンパクトで、ふつう水に溶けます（例：インスリン）。繊維状タンパク質 (fibrous protein) は長い繊維になって強度を与えます（例：コラーゲン）。複合タンパク質 (conjugated protein) はタンパク質以外の部分をもち、たとえばヘモグロビンのヘム基がそうです。非複合タンパク質 (non-conjugated protein) はそれをもちません。このステップはすべてAHL（B1.2.11とB1.2.12）です。</p>',
-        zh: '<p>蛋白質的形狀決定它的功能。球狀蛋白質 (globular protein) 結構緊密、呈圓形，通常可溶於水，例如胰島素。纖維狀蛋白質 (fibrous protein) 形成長纖維，提供強度，例如膠原蛋白。結合蛋白質 (conjugated protein) 含有非蛋白質部分，例如血紅蛋白中的血紅素基團；非結合蛋白質 (non-conjugated protein) 則沒有。這一步全部屬於 AHL（B1.2.11 和 B1.2.12）。</p>'
+        zh: '<p>蛋白質的形狀決定它的功能。球狀蛋白質 (globular protein) 結構緊密、呈圓形，通常可溶於水，例如胰島素。纖維狀蛋白質 (fibrous protein) 形成長纖維，提供強度，例如膠原蛋白。綴合蛋白質 (conjugated protein) 含有非蛋白質部分，例如血紅蛋白中的血紅素基團；非綴合蛋白質 (non-conjugated protein) 則沒有。這一步全部屬於 AHL（B1.2.11 和 B1.2.12）。</p>'
       } }
   ];
   function renderLab(app) {

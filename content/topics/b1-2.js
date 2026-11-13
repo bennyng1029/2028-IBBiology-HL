@@ -629,8 +629,8 @@ IB.registerTopic({
         zh: `<p><strong>四級結構 (quaternary structure)</strong>是指兩條或以上的多肽鏈組合成一個有功能的蛋白質。如果蛋白質只由一條鏈組成，就沒有四級結構。各鏈之間由與三級結構相同種類的相互作用維持（氫鍵、離子鍵、疏水相互作用，有時還有二硫鍵），只是這次是在不同鏈之間形成。</p>
 <p>蛋白質也可按組成成分分類：</p>
 <ul>
-<li><strong>非結合蛋白質 (non-conjugated proteins)</strong>只由多肽鏈組成。</li>
-<li><strong>結合蛋白質 (conjugated proteins)</strong>還含有<strong>非多肽部分</strong>，稱為<strong>輔基 (prosthetic group)</strong>（例如<strong>血紅素 (haem)</strong>）。</li>
+<li><strong>非綴合蛋白質 (non-conjugated proteins)</strong>只由多肽鏈組成。</li>
+<li><strong>綴合蛋白質 (conjugated proteins)</strong>還含有<strong>非多肽部分</strong>，稱為<strong>輔基 (prosthetic group)</strong>（例如<strong>血紅素 (haem)</strong>）。</li>
 </ul>
 <p><strong>典型的混淆：</strong>「結合 (conjugated)」並<strong>不是</strong>「多於一條鏈」的意思，那是四級結構。結合是指「連有非蛋白質的基團」。蛋白質可以有四級結構但非結合（胰島素、膠原蛋白），也可以是結合的（血紅蛋白）。這是兩條獨立的問題：有多少條鏈？有沒有非蛋白質部分？</p>
 <p>指引中的三個例子：</p>
@@ -742,8 +742,8 @@ IB.registerTopic({
       def: { en: "The clustering of non-polar R-groups together, away from water. It helps fold a protein.", ja: "無極性のR基が水を避けて集まること。タンパク質の折りたたみを助ける。", zh: "非極性 R 基聚在一起、避開水的現象，有助蛋白質摺疊。" }, ahl: true },
     { term: { en: "quaternary structure", ja: "四次構造", zh: "四級結構" },
       def: { en: "A protein made of two or more polypeptide chains assembled together.", ja: "2本以上のポリペプチド鎖が組み合わさったタンパク質の構造。", zh: "由兩條或以上多肽鏈組合而成的蛋白質結構。" }, ahl: true },
-    { term: { en: "conjugated protein / prosthetic group", ja: "複合タンパク質／補欠分子族", zh: "結合蛋白質／輔基" },
-      def: { en: "A conjugated protein contains a non-polypeptide part called a prosthetic group, for example haem in haemoglobin. A non-conjugated protein has polypeptide chain(s) only.", ja: "複合タンパク質はポリペプチド以外の部分（補欠分子族）をもつ。たとえばヘモグロビンのヘム。非複合タンパク質はポリペプチド鎖だけでできている。", zh: "結合蛋白質含有稱為輔基的非多肽部分，例如血紅蛋白中的血紅素。非結合蛋白質只由多肽鏈組成。" }, ahl: true },
+    { term: { en: "conjugated protein / prosthetic group", ja: "複合タンパク質／補欠分子族", zh: "綴合蛋白質／輔基" },
+      def: { en: "A conjugated protein contains a non-polypeptide part called a prosthetic group, for example haem in haemoglobin. A non-conjugated protein has polypeptide chain(s) only.", ja: "複合タンパク質はポリペプチド以外の部分（補欠分子族）をもつ。たとえばヘモグロビンのヘム。非複合タンパク質はポリペプチド鎖だけでできている。", zh: "綴合蛋白質含有稱為輔基的非多肽部分，例如血紅蛋白中的血紅素。非綴合蛋白質只由多肽鏈組成。" }, ahl: true },
     { term: { en: "globular protein", ja: "球状タンパク質", zh: "球狀蛋白質" },
       def: { en: "A compact, rounded protein, usually water-soluble, with hydrophobic R-groups in the core. Example: insulin.", ja: "コンパクトで丸いタンパク質。ふつう水に溶け、疎水性のR基が芯にある。例：インスリン。", zh: "緊密、圓形的蛋白質，通常可溶於水，疏水性 R 基在核心。例子：胰島素。" }, ahl: true },
     { term: { en: "fibrous protein", ja: "繊維状タンパク質", zh: "纖維狀蛋白質" },
@@ -757,8 +757,8 @@ IB.registerTopic({
       right: { en: "Secondary: hydrogen bonds between the backbone C=O and N–H groups, in a regular pattern. Tertiary: hydrogen bonds between polar R-groups, irregular, along with ionic, disulfide and hydrophobic interactions.", ja: "二次構造は、骨格のC=OとN–Hの間の規則的な水素結合です。三次構造は、極性のR基の間の不規則な水素結合で、イオン結合、ジスルフィド結合、疎水性相互作用も加わります。", zh: "二級結構：骨架上 C=O 與 N–H 之間有規律的氫鍵。三級結構：極性 R 基之間不規則的氫鍵，另外還有離子鍵、二硫鍵和疏水相互作用。" } },
     { wrong: { en: "A disulfide bond is just another name for a peptide bond.", ja: "ジスルフィド結合はペプチド結合の別名だ。", zh: "二硫鍵只是肽鍵的另一個名稱。" },
       right: { en: "A peptide bond (C–N) joins neighbouring amino acids in the backbone. A disulfide bond (S–S) joins the R-groups of two cysteines, which can be far apart. Both are covalent, but they are different bonds at different levels.", ja: "ペプチド結合 (C–N) は骨格でとなり合うアミノ酸を結びます。ジスルフィド結合 (S–S) は2つのシステインのR基を結び、それらは離れていてもかまいません。どちらも共有結合ですが、別の結合で、働く段階も違います。", zh: "肽鍵 (C–N) 連接骨架上相鄰的氨基酸。二硫鍵 (S–S) 連接兩個半胱氨酸的 R 基，它們可以相隔很遠。兩者都是共價鍵，但是不同的鍵，作用於不同的結構層次。" } },
-    { wrong: { en: "A conjugated protein is one with more than one polypeptide chain.", ja: "複合タンパク質とは、ポリペプチド鎖が複数あるタンパク質のことだ。", zh: "結合蛋白質就是有多於一條多肽鏈的蛋白質。" },
-      right: { en: "More than one chain is quaternary structure. Conjugated means a non-polypeptide (prosthetic) group is attached, such as haem in haemoglobin. Insulin and collagen have several chains but are non-conjugated.", ja: "複数の鎖は四次構造のことです。複合とは、ヘモグロビンのヘムのように、ポリペプチド以外（補欠分子族）の基がついていることです。インスリンとコラーゲンは複数の鎖をもちますが非複合です。", zh: "多於一條鏈是四級結構。結合是指連有非多肽（輔）基團，例如血紅蛋白中的血紅素。胰島素和膠原蛋白有多條鏈，但屬非結合蛋白質。" } },
+    { wrong: { en: "A conjugated protein is one with more than one polypeptide chain.", ja: "複合タンパク質とは、ポリペプチド鎖が複数あるタンパク質のことだ。", zh: "綴合蛋白質就是有多於一條多肽鏈的蛋白質。" },
+      right: { en: "More than one chain is quaternary structure. Conjugated means a non-polypeptide (prosthetic) group is attached, such as haem in haemoglobin. Insulin and collagen have several chains but are non-conjugated.", ja: "複数の鎖は四次構造のことです。複合とは、ヘモグロビンのヘムのように、ポリペプチド以外（補欠分子族）の基がついていることです。インスリンとコラーゲンは複数の鎖をもちますが非複合です。", zh: "多於一條鏈是四級結構。結合是指連有非多肽（輔）基團，例如血紅蛋白中的血紅素。胰島素和膠原蛋白有多條鏈，但屬非綴合蛋白質。" } },
     { wrong: { en: "Every protein has a quaternary structure.", ja: "すべてのタンパク質に四次構造がある。", zh: "每種蛋白質都有四級結構。" },
       right: { en: "Quaternary structure needs at least two polypeptides. A protein made of one chain stops at tertiary structure.", ja: "四次構造には少なくとも2本のポリペプチドが必要です。1本の鎖でできたタンパク質は三次構造で終わりです。", zh: "四級結構需要至少兩條多肽。只由一條鏈組成的蛋白質，結構只到三級。" } },
     { wrong: { en: "Hydrophobic R-groups are always inside a protein.", ja: "疎水性のR基は、いつもタンパク質の内側にある。", zh: "疏水性 R 基永遠在蛋白質內部。" },
@@ -1003,14 +1003,14 @@ IB.registerTopic({
 
     /* q16 */
     { id: "b1-2-q16", type: "mcq", ahl: true, difficulty: 2, ref: "B1.2.11", paper: "1A",
-      stem: { en: "What does it mean to say that a protein is conjugated?", ja: "あるタンパク質が複合タンパク質であるとはどういう意味か。", zh: "說一種蛋白質是結合蛋白質，是甚麼意思？" },
+      stem: { en: "What does it mean to say that a protein is conjugated?", ja: "あるタンパク質が複合タンパク質であるとはどういう意味か。", zh: "說一種蛋白質是綴合蛋白質，是甚麼意思？" },
       options: [
         { en: "It is made of two or more polypeptide chains.", ja: "2本以上のポリペプチド鎖でできている。", zh: "它由兩條或以上多肽鏈組成。" },
         { en: "It contains a non-polypeptide (prosthetic) group, such as haem.", ja: "ヘムのような、ポリペプチド以外（補欠分子族）の基を含む。", zh: "它含有非多肽（輔）基團，例如血紅素。" },
         { en: "It contains disulfide bonds between its chains.", ja: "鎖の間にジスルフィド結合がある。", zh: "它的各鏈之間有二硫鍵。" },
         { en: "It has been denatured and has joined with other proteins.", ja: "変性して、他のタンパク質と結合した。", zh: "它已變性，並與其他蛋白質結合。" }
       ], answer: 1,
-      explanation: { en: "Conjugated proteins have a non-polypeptide prosthetic group, for example the haem groups of haemoglobin. The first option defines quaternary structure, which is a different idea: insulin and collagen have several chains but are non-conjugated. Disulfide bonds link cysteines and say nothing about a prosthetic group.", ja: "複合タンパク質は、ヘモグロビンのヘム基のように、ポリペプチド以外の補欠分子族をもちます。1番目は四次構造の定義で、別の概念です。インスリンとコラーゲンは複数の鎖をもちますが非複合です。ジスルフィド結合はシステインどうしをつなぐもので、補欠分子族とは関係ありません。", zh: "結合蛋白質含有非多肽的輔基，例如血紅蛋白的血紅素基團。第一項是四級結構的定義，是另一個概念：胰島素和膠原蛋白有多條鏈，但屬非結合蛋白質。二硫鍵連接半胱氨酸，與輔基無關。" } },
+      explanation: { en: "Conjugated proteins have a non-polypeptide prosthetic group, for example the haem groups of haemoglobin. The first option defines quaternary structure, which is a different idea: insulin and collagen have several chains but are non-conjugated. Disulfide bonds link cysteines and say nothing about a prosthetic group.", ja: "複合タンパク質は、ヘモグロビンのヘム基のように、ポリペプチド以外の補欠分子族をもちます。1番目は四次構造の定義で、別の概念です。インスリンとコラーゲンは複数の鎖をもちますが非複合です。ジスルフィド結合はシステインどうしをつなぐもので、補欠分子族とは関係ありません。", zh: "綴合蛋白質含有非多肽的輔基，例如血紅蛋白的血紅素基團。第一項是四級結構的定義，是另一個概念：胰島素和膠原蛋白有多條鏈，但屬非綴合蛋白質。二硫鍵連接半胱氨酸，與輔基無關。" } },
 
     /* q17 */
     { id: "b1-2-q17", type: "multi", ahl: true, difficulty: 3, ref: "B1.2.11", paper: "1A",
@@ -1021,7 +1021,7 @@ IB.registerTopic({
         { en: "Collagen, made of three polypeptide chains wound into a triple helix", ja: "コラーゲン：3本のポリペプチド鎖が三重らせんになったもの", zh: "膠原蛋白：由三條多肽鏈纏繞成三股螺旋" },
         { en: "A single polypeptide folded by disulfide bonds between two of its own cysteines", ja: "1本のポリペプチドが、自身の2つのシステイン間のジスルフィド結合で折りたたまれたもの", zh: "一條多肽由自身兩個半胱氨酸之間的二硫鍵摺疊而成" }
       ], answer: [0, 2],
-      explanation: { en: "Quaternary structure needs at least two polypeptide chains: insulin (2) and collagen (3). The second option is conjugated (it has a haem group) but has only one chain, so it is not quaternary. The last option has a disulfide bond, but within one chain, which is tertiary structure.", ja: "四次構造には少なくとも2本のポリペプチド鎖が必要です。インスリン（2本）とコラーゲン（3本）が該当します。2番目は複合ですが（ヘム基をもつ）鎖が1本だけなので四次構造ではありません。最後はジスルフィド結合がありますが1本の鎖の中なので、三次構造です。", zh: "四級結構需要至少兩條多肽鏈：胰島素（2 條）和膠原蛋白（3 條）。第二項是結合蛋白質（有血紅素基團），但只有一條鏈，所以不是四級結構。最後一項雖有二硫鍵，但在同一條鏈內，屬三級結構。" } },
+      explanation: { en: "Quaternary structure needs at least two polypeptide chains: insulin (2) and collagen (3). The second option is conjugated (it has a haem group) but has only one chain, so it is not quaternary. The last option has a disulfide bond, but within one chain, which is tertiary structure.", ja: "四次構造には少なくとも2本のポリペプチド鎖が必要です。インスリン（2本）とコラーゲン（3本）が該当します。2番目は複合ですが（ヘム基をもつ）鎖が1本だけなので四次構造ではありません。最後はジスルフィド結合がありますが1本の鎖の中なので、三次構造です。", zh: "四級結構需要至少兩條多肽鏈：胰島素（2 條）和膠原蛋白（3 條）。第二項是綴合蛋白質（有血紅素基團），但只有一條鏈，所以不是四級結構。最後一項雖有二硫鍵，但在同一條鏈內，屬三級結構。" } },
 
     /* q18 data: sequence comparison */
     { id: "b1-2-q18", type: "short", ahl: true, difficulty: 3, ref: "B1.2.7", paper: "1B", commandTerm: "Suggest", marks: 3,
