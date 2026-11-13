@@ -289,13 +289,13 @@
         body: L(
           `<p><strong>Adaptive radiation</strong> is when one ancestral species rapidly gives rise to <strong>many new species</strong>, each <strong>adapted to a different way of life (niche)</strong>. It happens when there are <strong>vacant niches</strong>, for example on newly formed islands or after a mass extinction has removed other species.</p>
 <p>As the descendants specialise on different foods or habitats, <strong>closely related species can coexist without competing</strong>. This increases <strong>biodiversity</strong> in ecosystems that had vacant niches.</p>
-<div class="note">The guide does not name an example. A well-known one is Darwin's finches on the Galápagos Islands, where beaks differ for different foods. You do not need to learn specific examples for the exam.</div>`,
+<div class="note">The guide does not name an example. A well-known one is Darwin's finches on the Galápagos Islands, where beaks differ for different foods. No particular example is required, but having one ready helps you illustrate an extended answer.</div>`,
           `<p><strong>適応放散 (adaptive radiation)</strong> とは、一つの祖先種から短期間に<strong>多くの新しい種</strong>が生じ、それぞれが<strong>異なる生活様式（ニッチ, niche）に適応</strong>することです。新しくできた島や、大量絶滅で他の種がいなくなった後など、<strong>空いているニッチ</strong>があるときに起こります。</p>
 <p>子孫がそれぞれ異なる食物や生息場所に特化することで、<strong>近縁な種が競争せずに共存</strong>できます。これは、空いたニッチがあった生態系の<strong>生物多様性</strong>を高めます。</p>
-<div class="note">ガイドは例を挙げていません。よく知られた例はガラパゴス諸島のダーウィンフィンチで、食物に応じてくちばしが違います。試験のために特定の例を覚える必要はありません。</div>`,
+<div class="note">ガイドは例を挙げていません。よく知られた例はガラパゴス諸島のダーウィンフィンチで、食物に応じてくちばしが違います。特定の例は必須ではありませんが、一つ用意しておくと記述問題で説明しやすくなります。</div>`,
           `<p><strong>適應輻射 (adaptive radiation)</strong> 是指一個祖先物種迅速產生<strong>許多新物種</strong>，每個物種都<strong>適應不同的生活方式（生態位 niche）</strong>。它在有<strong>空缺生態位</strong>時發生，例如新形成的島嶼，或大規模滅絕移走了其他物種之後。</p>
 <p>當後代各自專門適應不同的食物或生境時，<strong>近緣物種可以共存而不互相競爭</strong>。這增加了有空缺生態位的生態系統的<strong>生物多樣性</strong>。</p>
-<div class="note">課程指引沒有指定例子。一個著名的例子是加拉帕戈斯羣島的達爾文雀，牠們的喙因食物不同而有差異。考試時不需要學習特定的例子。</div>`
+<div class="note">課程指引沒有指定例子。一個著名的例子是加拉帕戈斯羣島的達爾文雀，牠們的喙因食物不同而有差異。課程並不要求特定例子，但準備一個有助你在長答題中舉例說明。</div>`
         ),
         widget: "speciation-radiation"
       },
@@ -395,8 +395,8 @@
       }
     ],
     beyondSyllabus: [
-      L("You do not need to know the mechanism of natural selection in full detail here; that is developed in Theme D. For A4.1 the focus is the evidence and speciation.", "ここで自然選択の仕組みを詳しく知る必要はありません。それはテーマ D で扱います。A4.1 の中心は証拠と種分化です。", "你在這裏不需要詳細認識自然選擇的機制；那在主題 D 發展。A4.1 的重點是證據和物種形成。"),
-      L("You do not need to learn named examples of adaptive radiation (such as Darwin's finches); the guide gives none.", "適応放散の具体例（ダーウィンフィンチなど）を覚える必要はありません。ガイドは例を挙げていません。", "你不需要學習適應輻射的指定例子（例如達爾文雀）；課程指引沒有給出任何例子。"),
+      L("The detailed mechanism of natural selection is not needed for this subtopic: it is taught in D4.1 (Natural selection). For A4.1 the focus is the evidence and speciation.", "自然選択の詳しい仕組みはこの小項目では不要です。D4.1（自然選択 Natural selection）で学びます。A4.1 の中心は証拠と種分化です。", "這個小節不需要自然選擇的詳細機制：它在 D4.1（自然選擇 Natural selection）中講授。A4.1 的重點是證據和物種形成。"),
+      L("No named example of adaptive radiation is required (the guide gives none), and you do not need its details; one example such as Darwin's finches is useful only to illustrate an answer.", "適応放散の指定された例はなく（ガイドは例を挙げていません）、詳細も不要です。ダーウィンフィンチなどの例は、答えを説明するのに役立つ程度です。", "適應輻射沒有指定的例子（課程指引沒有給出），也不需要其細節；達爾文雀等例子只用來協助說明答案。"),
       L("You do not need the terms prezygotic and postzygotic barriers, or a list of every type of barrier. Know courtship behaviour and hybrid sterility with the mule.", "接合前障壁・接合後障壁という用語や、障壁のあらゆる種類の一覧は不要です。求愛行動と、ラバによる雑種不妊を知っていれば十分です。", "你不需要「合子前／合子後障礙」這些術語，也不需要列出所有障礙類型。認識求偶行為和以騾為例的雜種不育便可。"),
       L("You do not need to know the names of types of polyploidy (autopolyploidy, allopolyploidy) or the chemicals used to double chromosomes. Use Persicaria as the example.", "倍数性の種類の名称（同質倍数体、異質倍数体）や、染色体を倍加させる薬品の名前は不要です。例はタデ類 (Persicaria) を使います。", "你不需要知道多倍體類型的名稱（同源多倍體、異源多倍體）或令染色體加倍的化學物質。以蓼屬 (Persicaria) 作例子便可。"),
       L("You do not need other examples of fossil, biogeographical or embryological evidence for A4.1; the guide lists sequences, selective breeding and homologous structures.", "A4.1 のために、化石、生物地理学、発生学の証拠の他の例は不要です。ガイドが挙げるのは配列、選択育種、相同構造です。", "A4.1 不需要化石、生物地理學或胚胎學證據的其他例子；課程指引列出的是序列、選擇性育種和同源結構。")
@@ -556,7 +556,7 @@
         stem: L("A fertile tetraploid plant (4n) arises from a diploid species (2n). Why is the tetraploid reproductively isolated from the diploid parent species?", "二倍体の種 (2n) から、生殖能力のある四倍体 (4n) の植物が生じた。四倍体が二倍体の親の種から生殖的に隔離されるのはなぜか。", "一種可育的四倍體植物 (4n) 由二倍體物種 (2n) 產生。為何四倍體與二倍體親本物種有生殖隔離？"),
         options: [L("Their offspring have three sets of chromosomes (3n), which cannot pair evenly in meiosis, so are sterile", "子は三組の染色体 (3n) をもち、減数分裂で均等に対になれないので不妊になる", "後代有三套染色體 (3n)，在減數分裂時不能均等配對，所以不育"), L("Tetraploid plants have no flowers", "四倍体の植物には花がない", "四倍體植物沒有花"), L("Tetraploid plants live in a different continent", "四倍体の植物は別の大陸に住む", "四倍體植物生活在另一個大洲"), L("Tetraploid pollen cannot be produced by mitosis", "四倍体の花粉は体細胞分裂では作れない", "四倍體的花粉不能由有絲分裂產生")],
         answer: 0,
-        explanation: L("A tetraploid gamete has 2n chromosomes and a diploid gamete has n, so the offspring are triploid. An odd number of sets cannot pair evenly in meiosis, so they are sterile. B, C and D are not stated and are not the cause; the new species is isolated by chromosome number, not by place or flowers.", "四倍体の配偶子は 2n、二倍体の配偶子は n なので、子は三倍体です。染色体のセット数が奇数だと減数分裂で均等に対になれず不妊です。B、C、D は述べられておらず原因ではありません。新しい種は場所や花ではなく染色体数によって隔離されています。", "四倍體的配子有 2n 條染色體，二倍體的配子有 n 條，所以後代是三倍體。奇數套染色體在減數分裂時不能均等配對，所以不育。B、C、D 沒有提及，也不是原因；新物種是靠染色體數目而不是地點或花來隔離的。")
+        explanation: L("A tetraploid gamete has 2n chromosomes and a diploid gamete has n, so the offspring are triploid. An odd number of sets cannot pair evenly in meiosis, so they are sterile. B, C and D are false; the new species is isolated by chromosome number, not by place or flowers.", "四倍体の配偶子は 2n、二倍体の配偶子は n なので、子は三倍体です。染色体のセット数が奇数だと減数分裂で均等に対になれず不妊です。B、C、D は誤りです。新しい種は場所や花ではなく染色体数によって隔離されています。", "四倍體的配子有 2n 條染色體，二倍體的配子有 n 條，所以後代是三倍體。奇數套染色體在減數分裂時不能均等配對，所以不育。B、C、D 都是錯的；新物種是靠染色體數目而不是地點或花來隔離的。")
       },
       {
         id: "a4-1-q18", type: "mcq", ahl: false, difficulty: 2, ref: "A4.1.1", paper: "1A",

@@ -65,7 +65,7 @@ IB.registerTopic({
         `<p>Gas-exchange surfaces in very different organisms share the same four properties. The guide asks you to include all four.</p>
 <table>
 <tr><th>Property</th><th>Why it helps</th></tr>
-<tr><td><strong>Permeable</strong></td><td>Gases (and only the right ones) must be able to pass through the surface. Cell membranes and the cell walls of the surface cells allow oxygen and carbon dioxide through.</td></tr>
+<tr><td><strong>Permeable</strong></td><td>Oxygen and carbon dioxide must be able to pass freely through the surface. These small molecules diffuse easily through the cell membranes of the surface cells (and through plant cell walls).</td></tr>
 <tr><td><strong>Thin tissue layer</strong></td><td>A thin layer, often only one cell thick, makes the distance for diffusion very short, so diffusion is fast.</td></tr>
 <tr><td><strong>Moist</strong></td><td>Gases dissolve in a thin film of water before they diffuse across cell membranes. The surface must stay moist.</td></tr>
 <tr><td><strong>Large surface area</strong></td><td>More surface means more gas can cross at the same time. Surfaces are often folded, branched or divided into many small units.</td></tr>
@@ -74,7 +74,7 @@ IB.registerTopic({
         `<p>非常に異なる生物のガス交換面も、同じ4つの性質を共有しています。ガイドは4つすべてを含めるよう求めています。</p>
 <table>
 <tr><th>性質</th><th>役立つ理由</th></tr>
-<tr><td><strong>透過性 (permeable)</strong></td><td>気体（適切なものだけ）が表面を通れなければなりません。細胞膜と表面の細胞の細胞壁は、酸素や二酸化炭素を通します。</td></tr>
+<tr><td><strong>透過性 (permeable)</strong></td><td>酸素と二酸化炭素が表面を自由に通れなければなりません。これらの小さな分子は、表面の細胞の細胞膜（植物では細胞壁も）を容易に拡散して通ります。</td></tr>
 <tr><td><strong>薄い組織の層 (thin tissue layer)</strong></td><td>薄い層（しばしば細胞1個分の厚さ）は拡散距離をごく短くし、拡散を速くします。</td></tr>
 <tr><td><strong>湿っていること (moist)</strong></td><td>気体は、細胞膜を拡散して通る前に、水の薄い膜に溶けます。表面は湿っていなければなりません。</td></tr>
 <tr><td><strong>広い表面積 (large surface area)</strong></td><td>表面が広いほど、同時に多くの気体が通れます。表面はしばしば折りたたまれたり、枝分かれしたり、多数の小さな単位に分かれたりします。</td></tr>
@@ -83,7 +83,7 @@ IB.registerTopic({
         `<p>非常不同的生物，其氣體交換表面都有相同的四項特性。課程指引要求你包括全部四項。</p>
 <table>
 <tr><th>特性</th><th>為何有幫助</th></tr>
-<tr><td><strong>可滲透 (permeable)</strong></td><td>氣體（而且只是適當的氣體）必須能通過表面。細胞膜和表面細胞的細胞壁容許氧氣和二氧化碳通過。</td></tr>
+<tr><td><strong>可滲透 (permeable)</strong></td><td>氧氣和二氧化碳必須能自由通過表面。這些小分子很容易擴散穿過表面細胞的細胞膜（植物還有細胞壁）。</td></tr>
 <tr><td><strong>薄組織層 (thin tissue layer)</strong></td><td>薄層（通常只有一個細胞厚）使擴散距離極短，所以擴散很快。</td></tr>
 <tr><td><strong>濕潤 (moist)</strong></td><td>氣體先溶解在薄水膜中，才擴散穿過細胞膜。表面必須保持濕潤。</td></tr>
 <tr><td><strong>大表面面積 (large surface area)</strong></td><td>表面越大，同一時間可通過的氣體越多。表面常摺疊、分支或分成許多細小單位。</td></tr>
@@ -124,7 +124,7 @@ IB.registerTopic({
       body: T(
         `<p>The guide limits this to the <strong>alveolar lungs of a mammal</strong>. Air travels down the trachea, into the bronchi, then into narrower tubes called bronchioles, and ends in tiny air sacs called <strong>alveoli</strong> (singular alveolus), where gas exchange happens. Adaptations for gas exchange:</p>
 <ul>
-<li><strong>Surfactant.</strong> Each alveolus is lined by a thin film of water (the moisture that gases dissolve in). Surfactant is a substance secreted into this film. It reduces the surface tension of the water, which stops the walls of the alveoli sticking together and collapsing when we breathe out, and helps keep the surface moist and easy to inflate.</li>
+<li><strong>Surfactant.</strong> Each alveolus is lined by a thin film of water (the moisture that gases dissolve in). Surfactant is a substance secreted into this film. It reduces the surface tension of the water, which stops the walls of the alveoli sticking together and collapsing when we breathe out, and makes the alveoli easier to inflate when we breathe in.</li>
 <li><strong>A branched network of bronchioles</strong> carries air to all the alveoli, spreading the air through the whole lung.</li>
 <li><strong>Extensive capillary beds.</strong> Each alveolus is surrounded by a dense network of capillaries. They bring blood with a low oxygen concentration and carry oxygen away, keeping the concentration gradient steep.</li>
 <li><strong>A high surface area.</strong> There are huge numbers of alveoli, so the total area for gas exchange is very large.</li>
@@ -132,7 +132,7 @@ IB.registerTopic({
 <p>The wall of an alveolus and of a capillary are each very thin (see B2.3.8 for type I pneumocytes at HL), so diffusion distance is short.</p>`,
         `<p>ガイドは<strong>哺乳類の肺胞を持つ肺</strong>に限っています。空気は気管を通り、気管支に入り、さらに細い気管支（細気管支 bronchiole）を経て、ガス交換が行われる小さな空気の袋、<strong>肺胞 (alveoli)</strong> で終わります。ガス交換への適応は次のとおりです。</p>
 <ul>
-<li><strong>サーファクタント (surfactant)</strong>。各肺胞の内側は水の薄い膜（気体が溶ける水分）で覆われています。サーファクタントはこの膜に分泌される物質です。水の表面張力を下げ、息を吐くときに肺胞の壁がくっついてつぶれるのを防ぎ、表面を湿った状態に保ち、膨らみやすくします。</li>
+<li><strong>サーファクタント (surfactant)</strong>。各肺胞の内側は水の薄い膜（気体が溶ける水分）で覆われています。サーファクタントはこの膜に分泌される物質です。水の表面張力を下げ、息を吐くときに肺胞の壁がくっついてつぶれるのを防ぎ、息を吸うときに肺胞を膨らみやすくします。</li>
 <li><strong>枝分かれした細気管支の網目 (branched network of bronchioles)</strong> が、すべての肺胞へ空気を運び、肺全体に空気を行き渡らせます。</li>
 <li><strong>広い毛細血管床 (extensive capillary beds)</strong>。各肺胞は毛細血管の密な網目に囲まれています。酸素濃度の低い血液を運び込み、酸素を運び去って、濃度勾配を急に保ちます。</li>
 <li><strong>広い表面積 (high surface area)</strong>。肺胞の数が非常に多いので、ガス交換の総面積はきわめて大きくなります。</li>
@@ -140,7 +140,7 @@ IB.registerTopic({
 <p>肺胞の壁も毛細血管の壁もそれぞれ非常に薄く（HLのI型肺胞上皮細胞についてはB2.3.8を参照）、拡散距離は短くなっています。</p>`,
         `<p>課程指引限於<strong>哺乳動物的肺泡肺</strong>。空氣經氣管向下，進入支氣管，再進入較窄的管道稱為細支氣管 (bronchiole)，最後到達稱為<strong>肺泡 (alveoli)</strong>（單數 alveolus）的細小氣囊，氣體交換就在此進行。氣體交換的適應特徵：</p>
 <ul>
-<li><strong>表面活性物質 (surfactant)</strong>。每個肺泡內襯一層薄水膜（氣體溶解其中的水分）。表面活性物質分泌入這層膜，降低水的表面張力，防止肺泡壁在呼氣時黏在一起而塌陷，並有助保持表面濕潤和容易擴張。</li>
+<li><strong>表面活性物質 (surfactant)</strong>。每個肺泡內襯一層薄水膜（氣體溶解其中的水分）。表面活性物質分泌入這層膜，降低水的表面張力，防止肺泡壁在呼氣時黏在一起而塌陷，並使肺泡在吸氣時較容易擴張。</li>
 <li><strong>分支的細支氣管網絡 (branched network of bronchioles)</strong> 把空氣帶到所有肺泡，使空氣遍及整個肺。</li>
 <li><strong>廣闊的微血管床 (extensive capillary beds)</strong>。每個肺泡被稠密的微血管網絡包圍。它們帶來低氧濃度的血液，並把氧氣帶走，保持陡的濃度梯度。</li>
 <li><strong>大表面面積 (high surface area)</strong>。肺泡數目極多，所以氣體交換的總面積非常大。</li>
@@ -361,15 +361,15 @@ IB.registerTopic({
       body: T(
         `<p><strong>Haemoglobin</strong> is the protein in red blood cells that carries oxygen. It has four polypeptide chains, and each chain has a <strong>haem group</strong> containing iron. One haem group can bind one oxygen molecule (O₂), so one haemoglobin can carry up to four O₂. (See B1.2 for haemoglobin as a conjugated protein.)</p>
 <p><strong>Cooperative binding of oxygen to haem groups.</strong> The four sites do not work independently. When the first O₂ binds, the shape of the haemoglobin changes slightly. This makes it <em>easier</em> for the next O₂ to bind, and so on. Binding of one O₂ helps binding of the next. In the same way, once one O₂ is released, the others are released more easily.</p>
-<p><strong>Allosteric binding of carbon dioxide.</strong> An <em>allosteric</em> site is a binding site that is different from the active site (here, the haem group). When CO₂ binds to haemoglobin at such a site, the protein changes shape and its affinity (attraction) for oxygen falls, so oxygen is released more easily.</p>
+<p><strong>Allosteric binding of carbon dioxide.</strong> An <em>allosteric</em> site is a binding site that is different from the oxygen-binding site (the haem group). When CO₂ binds to haemoglobin at such a site, the protein changes shape and its affinity (attraction) for oxygen falls, so oxygen is released more easily.</p>
 <p><strong>Foetal and adult haemoglobin.</strong> A foetus gets its oxygen from its mother's blood across the placenta. The foetus makes <strong>foetal haemoglobin</strong>, which is made of different polypeptide chains from adult haemoglobin. Foetal haemoglobin has a <strong>higher affinity for oxygen</strong> than adult haemoglobin at the same oxygen concentration. So at the placenta, where oxygen is low, the foetal haemoglobin takes up oxygen from the mother's haemoglobin. Adult haemoglobin has a lower affinity, which lets it release oxygen in the tissues.</p>`,
         `<p><strong>ヘモグロビン (haemoglobin)</strong> は、赤血球にある酸素を運ぶタンパク質です。4本のポリペプチド鎖を持ち、各鎖には鉄を含む<strong>ヘム基 (haem group)</strong> があります。1つのヘム基は酸素分子 (O₂) を1つ結合できるので、1分子のヘモグロビンは最大4個のO₂を運べます。（結合タンパク質としてのヘモグロビンはB1.2を参照。）</p>
 <p><strong>ヘム基への酸素の協同的結合 (cooperative binding)。</strong>4つの結合部位は独立して働くのではありません。最初のO₂が結合すると、ヘモグロビンの形が少し変わります。これにより次のO₂が結合し<em>やすく</em>なり、以下同様です。1つのO₂の結合が次の結合を助けます。同じように、1つのO₂が離れると、残りも離れやすくなります。</p>
-<p><strong>二酸化炭素のアロステリック結合 (allosteric binding)。</strong><em>アロステリック</em>部位とは、活性部位（ここではヘム基）とは別の結合部位です。CO₂がこのような部位でヘモグロビンに結合すると、タンパク質の形が変わり、酸素への親和性（引きつける力）が下がるので、酸素が離れやすくなります。</p>
+<p><strong>二酸化炭素のアロステリック結合 (allosteric binding)。</strong><em>アロステリック</em>部位とは、酸素の結合部位（ヘム基）とは別の結合部位です。CO₂がこのような部位でヘモグロビンに結合すると、タンパク質の形が変わり、酸素への親和性（引きつける力）が下がるので、酸素が離れやすくなります。</p>
 <p><strong>胎児型ヘモグロビンと成人型ヘモグロビン。</strong>胎児は、胎盤を通して母親の血液から酸素を得ます。胎児は<strong>胎児型ヘモグロビン (foetal haemoglobin)</strong> をつくります。これは成人型とは異なるポリペプチド鎖でできています。胎児型ヘモグロビンは、同じ酸素濃度で成人型より<strong>酸素への親和性が高い</strong>です。そのため酸素濃度の低い胎盤で、母親のヘモグロビンから酸素を受け取れます。成人型は親和性が低いので、組織で酸素を放出できます。</p>`,
         `<p><strong>血紅蛋白 (haemoglobin)</strong> 是紅血球中運載氧氣的蛋白質。它有四條多肽鏈，每條鏈有一個含鐵的<strong>血紅素基團 (haem group)</strong>。一個血紅素基團可結合一個氧分子 (O₂)，所以一個血紅蛋白最多可運載四個O₂。（血紅蛋白作為綴合蛋白，見B1.2。）</p>
 <p><strong>氧氣與血紅素基團的協同結合 (cooperative binding)。</strong>四個結合位點並不是各自獨立工作。當第一個O₂結合時，血紅蛋白的形狀略為改變，使下一個O₂<em>更容易</em>結合，如此類推。一個O₂的結合有助下一個結合。同樣，一個O₂釋出後，其餘的也更容易釋出。</p>
-<p><strong>二氧化碳的別構結合 (allosteric binding)。</strong><em>別構</em>位點是不同於活性位點（此處為血紅素基團）的結合位點。當CO₂在這樣的位點結合血紅蛋白時，蛋白質改變形狀，對氧氣的親和力（吸引力）下降，所以氧氣更容易釋出。</p>
+<p><strong>二氧化碳的別構結合 (allosteric binding)。</strong><em>別構</em>位點是不同於氧結合位點（血紅素基團）的結合位點。當CO₂在這樣的位點結合血紅蛋白時，蛋白質改變形狀，對氧氣的親和力（吸引力）下降，所以氧氣更容易釋出。</p>
 <p><strong>胎兒與成人血紅蛋白。</strong>胎兒經胎盤從母親血液取得氧氣。胎兒製造<strong>胎兒血紅蛋白 (foetal haemoglobin)</strong>，它由與成人血紅蛋白不同的多肽鏈組成。在相同氧濃度下，胎兒血紅蛋白對氧氣的<strong>親和力比成人血紅蛋白高</strong>。所以在氧濃度低的胎盤，胎兒血紅蛋白可從母親的血紅蛋白取得氧氣。成人血紅蛋白親和力較低，使它能在組織中釋出氧氣。</p>`),
       examTip: T(
         "Do not mix up cooperative binding (O₂ helps the next O₂ to bind) and allosteric binding (CO₂ binds at a different site and lowers the affinity for O₂).",
@@ -473,7 +473,7 @@ IB.registerTopic({
     { term: T("plan diagram", "平面図", "平面圖"), def: T("A diagram showing the arrangement of tissues as outlines, without drawing individual cells.", "個々の細胞を描かず、組織の配置を輪郭で示す図。", "以輪廓顯示組織排列、不繪畫個別細胞的圖。"), ahl: false },
     { term: T("haem group", "ヘム基", "血紅素基團"), def: T("The iron-containing group in each haemoglobin polypeptide that binds one oxygen molecule.", "ヘモグロビンの各ポリペプチドにある、鉄を含み酸素分子1個を結合する基。", "血紅蛋白每條多肽鏈上含鐵、可結合一個氧分子的基團。"), ahl: true },
     { term: T("cooperative binding", "協同的結合", "協同結合"), def: T("Binding of one oxygen molecule to haemoglobin changes its shape so that the next oxygen binds more easily.", "ヘモグロビンに1個の酸素が結合すると形が変わり、次の酸素が結合しやすくなること。", "一個氧分子與血紅蛋白結合後令其形狀改變，使下一個氧分子更容易結合。"), ahl: true },
-    { term: T("allosteric binding", "アロステリック結合", "別構結合"), def: T("Binding of a molecule (such as CO₂) at a site other than the active site, which changes the protein's shape and its affinity for oxygen.", "分子（CO₂など）が活性部位とは別の部位に結合し、タンパク質の形と酸素への親和性を変えること。", "分子（如CO₂）在活性位點以外的位點結合，改變蛋白質形狀及其對氧氣的親和力。"), ahl: true },
+    { term: T("allosteric binding", "アロステリック結合", "別構結合"), def: T("Binding of a molecule (such as CO₂) at a site other than the oxygen-binding site (haem group), which changes the protein's shape and its affinity for oxygen.", "分子（CO₂など）が酸素の結合部位（ヘム基）とは別の部位に結合し、タンパク質の形と酸素への親和性を変えること。", "分子（如CO₂）在氧結合位點（血紅素基團）以外的位點結合，改變蛋白質形狀及其對氧氣的親和力。"), ahl: true },
     { term: T("affinity", "親和性", "親和力"), def: T("How strongly haemoglobin attracts and holds oxygen.", "ヘモグロビンが酸素をどれだけ強く引きつけて保持するか。", "血紅蛋白吸引並保持氧氣的強度。"), ahl: true },
     { term: T("Bohr shift", "ボーア効果", "玻爾效應"), def: T("The shift of the oxygen dissociation curve to the right when CO₂ concentration is higher, so more oxygen is released.", "CO₂濃度が高いと酸素解離曲線が右へずれ、より多くの酸素が放出されること。", "CO₂濃度較高時，氧解離曲線向右移，釋出更多氧氣。"), ahl: true },
     { term: T("oxygen dissociation curve", "酸素解離曲線", "氧解離曲線"), def: T("A graph of percentage saturation of haemoglobin against oxygen concentration (partial pressure).", "酸素濃度（分圧）に対するヘモグロビンの飽和度（%）のグラフ。", "血紅蛋白飽和度（%）對氧濃度（分壓）的曲線圖。"), ahl: true }
@@ -493,7 +493,7 @@ IB.registerTopic({
       right: T("The S-shape is due to cooperative binding: each O₂ that binds makes the next one bind more easily until the sites are nearly full.", "S字形は協同的結合によります。O₂が1つ結合するごとに次が結合しやすくなり、部位がほぼ埋まるまで続きます。", "S形是由於協同結合：每結合一個O₂，下一個便更容易結合，直至位點差不多全滿。") }
   ],
   beyondSyllabus: [
-    T("You do not need to know the structure of the human respiratory control centre in the brain, or how chemoreceptors control breathing rate. (This is not in B3.1.)", "脳の呼吸中枢の構造や、化学受容器が呼吸数を制御する仕組みを知る必要はありません。（B3.1には含まれません。）", "你不需要認識腦部呼吸中樞的結構，或化學感受器如何控制呼吸率。（B3.1沒有此內容。）"),
+    T("Not needed for this subtopic: how chemoreceptors and the brainstem control the ventilation rate. It is taught in C3.1.15 (Feedback control of ventilation rate, in C3.1 Integration of body systems).", "このサブトピックでは不要：化学受容器と脳幹が換気の速さを調節する仕組み。これはC3.1.15（換気速度のフィードバック調節、C3.1 体の器官系の統合）で学びます。", "此子課題不需要：化學感受器和腦幹如何控制通氣速率。這會在C3.1.15（通氣速率的反饋控制，屬C3.1 身體系統的整合）學習。"),
     T("You do not need countercurrent exchange in fish gills or the structure of gill filaments. The guide only asks for ventilation of gills with water as one way of maintaining gradients.", "魚のえらでの向流交換や、えらのフィラメントの構造は不要です。ガイドが求めるのは、濃度勾配を保つ方法の1つとして、水でえらを換気することだけです。", "你不需要認識魚鰓的逆流交換或鰓絲的結構。課程指引只要求「以水為鰓通氣」作為維持梯度的方法之一。"),
     T("You do not need residual volume, total lung capacity or minute ventilation formulae. The guide lists tidal volume, vital capacity and the inspiratory and expiratory reserves.", "残気量、全肺気量、分時換気量の式は不要です。ガイドが挙げるのは、1回換気量、肺活量、予備吸気量・予備呼気量です。", "你不需要殘氣量、總肺容量或每分鐘通氣量的公式。課程指引列出的是潮氣量、肺活量、吸氣和呼氣儲備量。"),
     T("You do not need other lung structures or diseases (for example emphysema or asthma) for B3.1. The guide limits lung adaptations to surfactant, bronchioles, capillary beds and surface area.", "B3.1では、肺のほかの構造や病気（肺気腫や喘息など）は不要です。ガイドは肺の適応をサーファクタント、細気管支、毛細血管床、表面積に限っています。", "B3.1不需要認識肺的其他結構或疾病（如肺氣腫或哮喘）。課程指引把肺的適應特徵限於表面活性物質、細支氣管、微血管床和表面面積。"),

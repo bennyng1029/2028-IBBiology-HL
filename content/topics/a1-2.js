@@ -18,9 +18,9 @@
         "DNA 的結構如何有助於準確複製？")
     ],
     summary: L(
-      "DNA and RNA are long chains of nucleotides. The order of the four bases is a code that stores genetic information. Because A always pairs with T (or U in RNA) and G always pairs with C, one strand can be used to make a copy of the other, and the same code is used by nearly all living things. HL students also learn about strand direction, nucleosomes and two key experiments.",
-      "DNA と RNA はヌクレオチド (nucleotide) が長くつながった鎖です。4種類の塩基 (base) の並び順が、遺伝情報を蓄える暗号になっています。A は常に T (RNA では U) と、G は常に C と対をつくるので、一方の鎖を使ってもう一方の鎖のコピーをつくれます。また、ほぼすべての生物が同じ暗号を使っています。HLでは、鎖の方向性、ヌクレオソーム、2つの重要な実験も学びます。",
-      "DNA 和 RNA 是由核苷酸 (nucleotide) 連成的長鏈。四種鹼基 (base) 的排列次序就是儲存遺傳資訊的密碼。A 總是與 T (RNA 中為 U) 配對，G 總是與 C 配對，所以可以用一條鏈來製造另一條鏈的複本，而且幾乎所有生物都使用同一套密碼。HL 學生還會學習鏈的方向性、核小體和兩個重要實驗。"),
+      "DNA and RNA are long chains of nucleotides. The order of the four bases is a code that stores genetic information. Because A always pairs with T (or U in RNA) and G always pairs with C, one strand can be used to make a copy of the other, and the same code is used by nearly all living things. HL students also learn about strand direction, nucleosomes, the Hershey–Chase experiment and Chargaff's data.",
+      "DNA と RNA はヌクレオチド (nucleotide) が長くつながった鎖です。4種類の塩基 (base) の並び順が、遺伝情報を蓄える暗号になっています。A は常に T (RNA では U) と、G は常に C と対をつくるので、一方の鎖を使ってもう一方の鎖のコピーをつくれます。また、ほぼすべての生物が同じ暗号を使っています。HLでは、鎖の方向性、ヌクレオソーム、ハーシー・チェイスの実験、シャルガフのデータも学びます。",
+      "DNA 和 RNA 是由核苷酸 (nucleotide) 連成的長鏈。四種鹼基 (base) 的排列次序就是儲存遺傳資訊的密碼。A 總是與 T (RNA 中為 U) 配對，G 總是與 C 配對，所以可以用一條鏈來製造另一條鏈的複本，而且幾乎所有生物都使用同一套密碼。HL 學生還會學習鏈的方向性、核小體、赫爾希−蔡斯實驗和查加夫的數據。"),
 
     sections: [
       {

@@ -388,7 +388,8 @@ IB.registerTopic({
 <li><strong>Haploid nucleus</strong>, which combines with the sperm nucleus at fertilization.</li>
 <li><strong>Cortical granules</strong> just under the surface membrane. After one sperm enters, they release their contents. This changes the outer layer around the egg (the zona pellucida) so that other sperm cannot enter. This prevents more than one sperm from fertilizing the egg.</li>
 <li>A protective layer, the <strong>zona pellucida</strong>, around the egg, which the sperm's enzymes must digest.</li>
-</ul>`,
+</ul>
+<div class="note">How the acrosome reaction and the cortical reaction work together to stop more than one sperm entering is taught in D3.1.15 (Mechanisms to prevent polyspermy, AHL). Here you only need these structures as adaptations of the gametes.</div>`,
         `<p>ガイドはこれを<strong>ヒトの配偶子</strong>に限っています。どちらも受精に特殊化していますが、方向は逆です。精子は<em>移動して入る</em>ように、卵は<em>受け入れて支える</em>ようにできています。</p>
 <p><strong>精子 (sperm)</strong></p>
 <ul>
@@ -403,7 +404,8 @@ IB.registerTopic({
 <li>受精のときに精子の核と合わさる<strong>半数体の核</strong>。</li>
 <li>細胞膜のすぐ下にある<strong>表層粒 (cortical granules)</strong>。1個の精子が入ると内容物を放出します。これにより卵を囲む外層（透明帯）が変化し、ほかの精子が入れなくなります。1個の卵が複数の精子と受精することを防ぎます。</li>
 <li>卵を囲む保護層の<strong>透明帯 (zona pellucida)</strong>。精子の酵素がこれを消化しなければなりません。</li>
-</ul>`,
+</ul>
+<div class="note">先体反応 (acrosome reaction) と表層反応 (cortical reaction) が協力して複数の精子の侵入を防ぐ仕組みは、D3.1.15（多精拒否の仕組み、AHL）で学びます。ここでは、これらの構造を配偶子の適応として知っていれば十分です。</div>`,
         `<p>課程指引把範圍限於<strong>人類的配子</strong>。兩者都為受精而特化，但方向相反：精子是為了<em>前進和進入</em>，卵是為了<em>接收和支持</em>。</p>
 <p><strong>精子 (sperm)</strong></p>
 <ul>
@@ -418,7 +420,8 @@ IB.registerTopic({
 <li><strong>單倍體細胞核</strong>，受精時與精子的細胞核結合。</li>
 <li>緊貼表面膜下方的<strong>皮質顆粒 (cortical granules)</strong>。一個精子進入後，它們釋出內容物，改變卵周圍的外層（透明帶），使其他精子不能進入，防止多於一個精子使卵受精。</li>
 <li>卵周圍的保護層<strong>透明帶 (zona pellucida)</strong>，精子的酶必須將它消化。</li>
-</ul>`)
+</ul>
+<div class="note">頂體反應 (acrosome reaction) 和皮質反應 (cortical reaction) 如何共同防止多於一個精子進入，會在D3.1.15（防止多精受精的機制，AHL）學習。這裏只需把這些結構視為配子的適應特徵。</div>`)
     }
   ],
   keyTerms: [
@@ -457,7 +460,8 @@ IB.registerTopic({
     T("You do not need to memorize exact cell sizes. You should know the rough range and order of size of the cells listed in B2.3.5.", "細胞の正確な大きさを暗記する必要はありません。B2.3.5に挙がった細胞のおおよその範囲と大小関係を知っていれば十分です。", "你不需要背誦細胞的準確大小，只需知道B2.3.5所列細胞的大約範圍和大小次序。"),
     T("You do not need to calculate SA:V for shapes other than cubes (for example spheres or cylinders). The guide uses cubes as the model.", "立方体以外の形（球や円柱など）のSA:Vを計算する必要はありません。ガイドはモデルとして立方体を使っています。", "你不需要計算立方體以外形狀（如球體或圓柱體）的SA:V。課程指引以立方體作模型。"),
     T("You do not need to know the sliding filament mechanism or sarcomere structure here. That is B3.3. For B2.3.9 you only need myofibrils, branching, length and number of nuclei.", "ここで滑り説（フィラメント滑走）やサルコメアの構造を知る必要はありません。それはB3.3です。B2.3.9では、筋原線維、枝分かれ、長さ、核の数だけで十分です。", "這裏不需要認識滑動肌絲機制或肌節結構，那屬於B3.3。B2.3.9只需肌原纖維、分支、長度和細胞核數目。"),
-    T("You do not need the names of the type I and type II pneumocyte sub-types beyond 'type I' and 'type II', nor their other roles. Learn only the two adaptations given.", "I型・II型肺胞上皮細胞について、その名称以上の分類や他の役割は必要ありません。示された2つの適応だけを学べば十分です。", "第I型和第II型肺泡細胞除了「第I型」和「第II型」之外的分類或其他作用都不需要，只學所給的兩項適應特徵。")
+    T("You do not need other roles of pneumocytes (for example, type II cells dividing to replace damaged type I cells). Learn only the two adaptations in the guide: the extreme thinness of type I cells and the lamellar bodies of type II cells.", "肺胞上皮細胞のほかの役割（たとえば、II型細胞が分裂して傷ついたI型細胞を置き換えること）は必要ありません。ガイドにある2つの適応、I型細胞の極端な薄さとII型細胞の層板小体だけを学べば十分です。", "你不需要認識肺泡細胞的其他作用（例如第II型細胞分裂以取代受損的第I型細胞）。只需學習課程指引中的兩項適應特徵：第I型細胞極薄，以及第II型細胞的板層小體。"),
+    T("You do not need the step-by-step acrosome reaction or cortical reaction for this subtopic. They are taught in D3.1.15 (Mechanisms to prevent polyspermy, AHL).", "このサブトピックでは、先体反応や表層反応の段階的な仕組みは不要です。それらはD3.1.15（多精拒否の仕組み、AHL）で学びます。", "此子課題不需要逐步認識頂體反應或皮質反應，它們會在D3.1.15（防止多精受精的機制，AHL）學習。")
   ],
   links: [
     { to: "B2.1", why: T("Membranes are the surface across which exchange happens. The SA:V ratio explains why membrane area matters.", "膜は交換が行われる表面です。SA:Vは、なぜ膜の面積が重要なのかを説明します。", "膜是進行交換的表面。SA:V說明了為何膜面積重要。") },
@@ -575,7 +579,7 @@ IB.registerTopic({
         T("700 µm", "700 µm", "700 µm")
       ],
       answer: 1,
-      explanation: T("A red blood cell is about 7 µm across. 0.7 µm is the size of a small bacterium or large organelle. 70 µm is too large and nearer to a human egg (about 100 µm). 700 µm (0.7 mm) is far too big: it is bigger than a human egg.", "赤血球は直径約7 µmです。0.7 µmは小さな細菌や大きな細胞小器官の大きさです。70 µmは大きすぎ、卵（約100 µm）に近い値です。700 µmは肉眼で見える大きさに近く、大きすぎます。", "紅血球直徑約7 µm。0.7 µm是細小細菌或大型胞器的大小。70 µm太大，較接近人類卵（約100 µm）。700 µm (0.7 mm) 遠遠太大，比人類卵還要大。") },
+      explanation: T("A red blood cell is about 7 µm across. 0.7 µm is the size of a small bacterium or large organelle. 70 µm is too large and nearer to a human egg (about 100 µm). 700 µm (0.7 mm) is far too big: it is bigger than a human egg.", "赤血球は直径約7 µmです。0.7 µmは小さな細菌や大きな細胞小器官の大きさです。70 µmは大きすぎ、卵（約100 µm）に近い値です。700 µm (0.7 mm) ははるかに大きすぎ、ヒトの卵よりも大きくなります。", "紅血球直徑約7 µm。0.7 µm是細小細菌或大型胞器的大小。70 µm太大，較接近人類卵（約100 µm）。700 µm (0.7 mm) 遠遠太大，比人類卵還要大。") },
     { id: "b2-3-q12", type: "multi", ahl: true, difficulty: 2, ref: "B2.3.7", paper: "1A",
       stem: T("Which features increase the surface area-to-volume ratio of a cell? Select all that apply.", "細胞の表面積と体積の比を高める特徴はどれか。当てはまるものをすべて選びなさい。", "哪些特徵提高細胞的表面面積與體積比？選出所有適用者。"),
       options: [

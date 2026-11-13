@@ -163,7 +163,7 @@
 <li><strong>Centromere position</strong>: the centromere is the pinched region. It can be near the middle or towards one end, which changes the shape.</li>
 </ol>
 <p>A karyogram shows the chromosome number and can show the sex chromosomes or an extra or missing chromosome.</p>
-<p><strong>Worked evidence: human chromosome 2.</strong> Humans have 46 chromosomes and chimpanzees (and other apes) have 48. The hypothesis is that human chromosome 2 was formed when <strong>two chromosomes of an ancestor that humans share with other primates fused</strong> (the guide names them as chromosomes 12 and 13; in modern chimpanzee naming they are labelled 2A and 2B). Evidence you should be able to evaluate:</p>
+<p><strong>Worked evidence: human chromosome 2.</strong> Humans have 46 chromosomes and chimpanzees (and other apes) have 48. The hypothesis is that human chromosome 2 was formed when <strong>two chromosomes of an ancestor that humans share with other primates fused</strong> (the guide calls them chromosomes 12 and 13, which is an older numbering of the ape chromosomes; today they are named 2A and 2B. Either name is fine in an exam). Evidence you should be able to evaluate:</p>
 <ul>
 <li>Banding patterns of human chromosome 2 match, end to end, those of two separate chimpanzee chromosomes.</li>
 <li>Human chromosome 2 has the DNA sequences found at the <strong>ends of chromosomes (telomeres)</strong> in the middle of the chromosome, where they would not normally be.</li>
@@ -179,7 +179,7 @@
 <li><strong>動原体（セントロメア）の位置 (centromere position)</strong>：くびれた部分です。中央付近にあることも端に寄ることもあり、形が変わります。</li>
 </ol>
 <p>核型図から染色体数が分かり、性染色体や、余分な染色体・足りない染色体も分かります。</p>
-<p><strong>証拠の検討：ヒトの2番染色体。</strong>ヒトの染色体は46本、チンパンジー（などの類人猿）は48本です。仮説は、ヒトの2番染色体は<strong>ヒトと他の霊長類が共有する祖先の二つの染色体が融合してできた</strong>というものです（ガイドでは12番と13番としており、現在のチンパンジーの表記では2Aと2Bです）。評価できるようにしておくべき証拠：</p>
+<p><strong>証拠の検討：ヒトの2番染色体。</strong>ヒトの染色体は46本、チンパンジー（などの類人猿）は48本です。仮説は、ヒトの2番染色体は<strong>ヒトと他の霊長類が共有する祖先の二つの染色体が融合してできた</strong>というものです（ガイドでは12番と13番と呼んでいます。これは類人猿の染色体の古い番号づけで、現在は2Aと2Bと呼ばれます。試験ではどちらの呼び方でも構いません）。評価できるようにしておくべき証拠：</p>
 <ul>
 <li>ヒト2番染色体の縞模様は、チンパンジーの二つの別々の染色体を端と端でつないだものとよく一致する。</li>
 <li>ヒト2番染色体には、本来は<strong>染色体の末端 (テロメア)</strong> にある DNA 配列が、染色体の途中にある。</li>
@@ -195,7 +195,7 @@
 <li><strong>著絲粒位置 (centromere position)</strong>：著絲粒是染色體縮窄的部位，可以靠近中央或偏向一端，因此形狀不同。</li>
 </ol>
 <p>核型圖顯示染色體數目，也可顯示性染色體以及多出或缺少的染色體。</p>
-<p><strong>證據評估：人類第 2 號染色體。</strong>人類有 46 條染色體，黑猩猩（及其他猿類）有 48 條。假說認為人類第 2 號染色體是由<strong>人類與其他靈長類共同祖先的兩條染色體融合而成</strong>（課程指引稱之為第 12 和第 13 號染色體；現時黑猩猩的命名為 2A 和 2B）。你應能評估的證據：</p>
+<p><strong>證據評估：人類第 2 號染色體。</strong>人類有 46 條染色體，黑猩猩（及其他猿類）有 48 條。假說認為人類第 2 號染色體是由<strong>人類與其他靈長類共同祖先的兩條染色體融合而成</strong>（課程指引稱之為第 12 和第 13 號染色體，這是猿類染色體較舊的編號；現時稱為 2A 和 2B。考試時兩種名稱皆可）。你應能評估的證據：</p>
 <ul>
 <li>人類第 2 號染色體的帶紋，與黑猩猩兩條獨立染色體首尾相接的帶紋相吻合。</li>
 <li>人類第 2 號染色體中央有通常只出現在<strong>染色體末端（端粒）</strong>的 DNA 序列。</li>
@@ -301,19 +301,19 @@
         body: L(
           `<p>The biological species concept needs organisms that <em>breed with each other</em>. It works badly in two situations:</p>
 <ol>
-<li><strong>Asexually reproducing species.</strong> Organisms that reproduce asexually (for example many bacteria, and some plants and fungi) never breed with a partner. "Can breed and produce fertile offspring" does not apply to them, so the concept cannot be used to decide what is one species and what is another.</li>
+<li><strong>Asexually reproducing species.</strong> Organisms that reproduce asexually (for example bacteria, and some plants, fungi and animals) never breed with a partner. "Can breed and produce fertile offspring" does not apply to them, so the concept cannot be used to decide what is one species and what is another.</li>
 <li><strong>Bacteria with horizontal gene transfer.</strong> Bacteria can pass genes <em>sideways</em> to other bacteria, even of a different species, instead of only passing genes to offspring. Genes can be moved between groups that we would call different species, so gene pools are not kept separate in the way the concept assumes.</li>
 </ol>
 <p>For these groups, other definitions of species (for example based on DNA sequence similarity) are used instead.</p>`,
           `<p>生物学的種概念は、生物が<em>互いに交配する</em>ことを前提にしています。次の二つの場合にはうまく働きません。</p>
 <ol>
-<li><strong>無性生殖をする種。</strong>無性生殖をする生物（多くの細菌や、一部の植物・菌類）は、相手と交配しません。「交配して生殖能力のある子を作れる」という条件が当てはまらないので、この概念では何が一つの種で何が別の種かを決められません。</li>
+<li><strong>無性生殖をする種。</strong>無性生殖をする生物（細菌や、一部の植物・菌類・動物）は、相手と交配しません。「交配して生殖能力のある子を作れる」という条件が当てはまらないので、この概念では何が一つの種で何が別の種かを決められません。</li>
 <li><strong>遺伝子の水平伝播 (horizontal gene transfer) をする細菌。</strong>細菌は子にだけ遺伝子を渡すのではなく、別の種の細菌にも遺伝子を<em>横向きに</em>渡すことがあります。別種とされる集団の間で遺伝子が移動するので、この概念が前提とする「遺伝子プールが分かれている」状態になりません。</li>
 </ol>
 <p>これらの生物群には、他の種の定義（例：DNA 配列の類似性に基づくもの）が使われます。</p>`,
           `<p>生物學物種概念要求生物<em>互相交配</em>。在以下兩種情況下它的效果不佳：</p>
 <ol>
-<li><strong>無性生殖的物種。</strong>進行無性生殖的生物（例如許多細菌，以及某些植物和真菌）從不與配偶交配。「能交配並產生可育後代」不適用於牠們，因此這個概念無法用來決定哪些是同一物種、哪些是不同物種。</li>
+<li><strong>無性生殖的物種。</strong>進行無性生殖的生物（例如細菌，以及某些植物、真菌和動物）從不與配偶交配。「能交配並產生可育後代」不適用於牠們，因此這個概念無法用來決定哪些是同一物種、哪些是不同物種。</li>
 <li><strong>有水平基因轉移 (horizontal gene transfer) 的細菌。</strong>細菌除了把基因傳給後代，還可以把基因<em>橫向</em>傳給其他細菌，甚至不同物種的細菌。基因可在被視為不同物種的類羣之間移動，所以基因庫並不像這個概念所假設的那樣保持分隔。</li>
 </ol>
 <p>對於這些類羣，會改用其他的物種定義（例如以 DNA 序列相似度為基礎）。</p>`
@@ -360,7 +360,8 @@
 <tr><td>4a</td><td>Hard shell present</td><td>Snail</td></tr>
 <tr><td>4b</td><td>No shell, body made of rings</td><td>Earthworm</td></tr>
 </table>
-<p>A key for N organisms needs N − 1 pairs of statements. This key has 4 pairs for 5 organisms.</p>`,
+<p>A key for N organisms needs N − 1 pairs of statements. This key has 4 pairs for 5 organisms.</p>
+<div class="note">The understanding A3.1.14 is AHL, but "design dichotomous keys" is also one of the guide's general tools (skills for all students), so SL students may also be asked to use or design a key.</div>`,
           `<p><strong>スキル (AHL)：</strong>地域の植物や動物（校庭、公園、海岸など）に<strong>実際に触れ</strong>、<strong>二分検索表を作る</strong>ことが求められます。</p>
 <p><strong>二分検索表 (dichotomous key)</strong> は、番号の付いた二つ一組の記述を並べたものです。各組には<em>二つ</em>の選択肢があります（「二分」は二つに分けるという意味）。各選択肢は、別の番号の組か名前につながります。</p>
 <p><strong>作り方の手順：</strong></p>
@@ -381,7 +382,8 @@
 <tr><td>4a</td><td>硬い殻がある</td><td>カタツムリ</td></tr>
 <tr><td>4b</td><td>殻がなく、体が環状の節でできている</td><td>ミミズ</td></tr>
 </table>
-<p>N 種の生物の検索表には N − 1 組の記述が必要です。この表は5種に対して4組です。</p>`,
+<p>N 種の生物の検索表には N − 1 組の記述が必要です。この表は5種に対して4組です。</p>
+<div class="note">A3.1.14 は AHL の項目ですが、「二分検索表を設計する」はガイドの共通のツール（すべての生徒の技能）にも含まれているので、SL の生徒も検索表の使用や作成を問われることがあります。</div>`,
           `<p><strong>技能 (AHL)：</strong>你須<strong>接觸本地的動植物</strong>（例如在校園、公園或海灘），並<strong>製作二歧檢索表</strong>。</p>
 <p><strong>二歧檢索表 (dichotomous key)</strong> 是一組編了號的成對描述。每一對提供<em>兩個</em>選擇（「二歧」即一分為二）。每個選擇會引導你去另一對編號的描述，或得出一個名稱。</p>
 <p><strong>設計檢索表的步驟：</strong></p>
@@ -402,7 +404,8 @@
 <tr><td>4a</td><td>有硬殼</td><td>蝸牛</td></tr>
 <tr><td>4b</td><td>沒有殼，身體由環節組成</td><td>蚯蚓</td></tr>
 </table>
-<p>N 種生物的檢索表需要 N − 1 對描述。這個檢索表為 5 種生物用了 4 對。</p>`
+<p>N 種生物的檢索表需要 N − 1 對描述。這個檢索表為 5 種生物用了 4 對。</p>
+<div class="note">A3.1.14 屬 AHL，但「設計二歧檢索表」也是課程指引中的通用工具（所有學生的技能），所以 SL 學生也可能被要求使用或設計檢索表。</div>`
         ),
         examTip: L("Each statement must be a clear yes/no feature you can observe. Never end a pair with two choices that go to the same place.", "各記述は、観察できる明確なはい／いいえの特徴にします。一組の二つの選択肢が同じ行き先にならないようにしましょう。", "每項描述都要是清楚、可觀察、「是或否」的特徵。同一對的兩個選擇不可通往同一個地方。")
       },
@@ -565,9 +568,9 @@
         id: "a3-1-q09", type: "mcq", ahl: false, difficulty: 2, ref: "A3.1.10", paper: "1B",
         stem: L("The table gives approximate genome sizes (illustrative data). Which conclusion is best supported?", "表はおおよそのゲノムサイズを示す（例示データ）。最もよく支持される結論はどれか。", "下表列出概約的基因組大小（示例數據）。以下哪個結論最受數據支持？"),
         data: L(
-          `<table><tr><th>Organism</th><th>Group</th><th>Genome size (Mbp)</th></tr><tr><td>Yeast</td><td>Fungus</td><td>12</td></tr><tr><td>Fruit fly</td><td>Insect</td><td>140</td></tr><tr><td>Human</td><td>Mammal</td><td>3 100</td></tr><tr><td>Wheat</td><td>Plant</td><td>16 000</td></tr><tr><td>Lily-type plant</td><td>Plant</td><td>150 000</td></tr></table>`,
-          `<table><tr><th>生物</th><th>分類群</th><th>ゲノムサイズ (Mbp)</th></tr><tr><td>酵母</td><td>菌類</td><td>12</td></tr><tr><td>ショウジョウバエ</td><td>昆虫</td><td>140</td></tr><tr><td>ヒト</td><td>哺乳類</td><td>3 100</td></tr><tr><td>コムギ</td><td>植物</td><td>16 000</td></tr><tr><td>ユリ科の植物</td><td>植物</td><td>150 000</td></tr></table>`,
-          `<table><tr><th>生物</th><th>類羣</th><th>基因組大小 (Mbp)</th></tr><tr><td>酵母</td><td>真菌</td><td>12</td></tr><tr><td>果蠅</td><td>昆蟲</td><td>140</td></tr><tr><td>人類</td><td>哺乳動物</td><td>3 100</td></tr><tr><td>小麥</td><td>植物</td><td>16 000</td></tr><tr><td>百合類植物</td><td>植物</td><td>150 000</td></tr></table>`
+          `<table><tr><th>Organism</th><th>Group</th><th>Genome size (Mbp)</th></tr><tr><td>Yeast</td><td>Fungus</td><td>12</td></tr><tr><td>Fruit fly</td><td>Insect</td><td>140</td></tr><tr><td>Human</td><td>Mammal</td><td>3 100</td></tr><tr><td>Wheat</td><td>Plant</td><td>16 000</td></tr><tr><td><em>Paris japonica</em></td><td>Plant</td><td>150 000</td></tr></table>`,
+          `<table><tr><th>生物</th><th>分類群</th><th>ゲノムサイズ (Mbp)</th></tr><tr><td>酵母</td><td>菌類</td><td>12</td></tr><tr><td>ショウジョウバエ</td><td>昆虫</td><td>140</td></tr><tr><td>ヒト</td><td>哺乳類</td><td>3 100</td></tr><tr><td>コムギ</td><td>植物</td><td>16 000</td></tr><tr><td><em>Paris japonica</em>（キヌガサソウ）</td><td>植物</td><td>150 000</td></tr></table>`,
+          `<table><tr><th>生物</th><th>類羣</th><th>基因組大小 (Mbp)</th></tr><tr><td>酵母</td><td>真菌</td><td>12</td></tr><tr><td>果蠅</td><td>昆蟲</td><td>140</td></tr><tr><td>人類</td><td>哺乳動物</td><td>3 100</td></tr><tr><td>小麥</td><td>植物</td><td>16 000</td></tr><tr><td><em>Paris japonica</em></td><td>植物</td><td>150 000</td></tr></table>`
         ),
         options: [L("Genome size increases with organism complexity", "ゲノムサイズは生物の複雑さとともに増える", "基因組大小隨生物的複雜程度增加"), L("Humans have the largest genome of all organisms", "ヒトはすべての生物の中で最大のゲノムをもつ", "人類擁有所有生物中最大的基因組"), L("There is no simple link between genome size and complexity", "ゲノムサイズと複雑さの間に単純な関係はない", "基因組大小與複雜程度之間沒有簡單的關係"), L("Plants always have larger genomes than animals", "植物のゲノムは常に動物より大きい", "植物的基因組永遠比動物大")],
         answer: 2,

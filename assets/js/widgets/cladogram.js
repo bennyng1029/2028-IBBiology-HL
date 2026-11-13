@@ -290,9 +290,14 @@
         do { a = lv[Math.floor(Math.random() * lv.length)]; b = lv[Math.floor(Math.random() * lv.length)]; } while (a === b);
         task = { kind: kind, node: lca(tree, a, b), a: a, b: b, q: tr("qMrca", { a: nm(a), b: nm(b) }) };
       } else if (kind === "closest") {
-        var x = lv[Math.floor(Math.random() * lv.length)];
-        var others = lv.filter(function (k) { return k !== x; }).map(function (k) { return { k: k, s: leavesOf(lca(tree, x, k)).length }; });
-        others.sort(function (p, q) { return p.s - q.s; });
+        /* choose an organism x whose relatives are not all equally related to it
+           (e.g. not the outgroup, which meets every other tip only at the root) */
+        var x, others, tries = 0;
+        do {
+          x = lv[Math.floor(Math.random() * lv.length)];
+          others = lv.filter(function (k) { return k !== x; }).map(function (k) { return { k: k, s: leavesOf(lca(tree, x, k)).length }; });
+          others.sort(function (p, q) { return p.s - q.s; });
+        } while (others[0].s === others[others.length - 1].s && ++tries < 50);
         var y = others[0], z = others[others.length - 1 - Math.floor(Math.random() * Math.max(1, others.length - 2))];
         if (z.s === y.s) z = others[others.length - 1];
         var ord = Math.random() < 0.5 ? [y.k, z.k] : [z.k, y.k];
