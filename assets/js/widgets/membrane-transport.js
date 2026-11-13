@@ -114,9 +114,9 @@
     d_chan: ["Ions cannot cross the hydrophobic core, but they can diffuse through a channel protein. This is facilitated diffusion: still passive (down the gradient, no ATP). Each channel fits a specific ion, so this makes the membrane selectively permeable.",
       "イオンは疎水性の中心部を通れないが、チャネルタンパク質を通って拡散できる。これが促進拡散で、受動的 (勾配に従い ATP は不要) である。各チャネルは特定のイオンに合うので、膜が選択的透過性をもつようになる。",
       "離子不能穿過疏水核心，但可經通道蛋白擴散。這就是易化擴散：仍是被動的 (順梯度、不需 ATP)。每種通道只適合特定離子，所以令膜具選擇透過性。"],
-    d_osm: ["Water molecules move randomly in both directions. The solute cannot cross. Where solute concentration is higher, a smaller share of the particles are water, so fewer water molecules hit the membrane from that side. So the net movement of water is towards the higher solute concentration. Aquaporins let water cross much faster than the bilayer alone. (In this model the volumes are fixed. In a real cell, the volume would change.)",
-      "水分子は両方向にランダムに動く。溶質は通れない。溶質濃度が高い側では、粒子のうち水の割合が小さく、その側から膜に当たる水分子が少ない。そのため水の正味の移動は溶質濃度の高い側へ向かう。アクアポリンがあると、二重層だけの場合よりずっと速く水が通る。(このモデルでは体積は固定。実際の細胞では体積が変わる。)",
-      "水分子向兩個方向隨機移動，溶質不能穿過。溶質濃度較高的一側，粒子中水所佔比例較小，所以從該側撞向膜的水分子較少。因此水的淨移動朝向溶質濃度較高處。水通道蛋白令水穿過膜的速度比單靠雙層快得多。(此模型的體積是固定的；真實的細胞體積會改變。)"],
+    d_osm: ["Water molecules move randomly in both directions. The solute cannot cross. Where solute concentration is higher, a smaller share of the particles are water, so fewer water molecules hit the membrane from that side. So the net movement of water is towards the higher solute concentration. Aquaporins let water cross much faster than the bilayer alone. (In this model the volumes are fixed, so the net movement fades as the water evens out. In a real cell, the volume would change.)",
+      "水分子は両方向にランダムに動く。溶質は通れない。溶質濃度が高い側では、粒子のうち水の割合が小さく、その側から膜に当たる水分子が少ない。そのため水の正味の移動は溶質濃度の高い側へ向かう。アクアポリンがあると、二重層だけの場合よりずっと速く水が通る。(このモデルでは体積が固定なので、水が均等になるにつれ正味の移動は弱まる。実際の細胞では体積が変わる。)",
+      "水分子向兩個方向隨機移動，溶質不能穿過。溶質濃度較高的一側，粒子中水所佔比例較小，所以從該側撞向膜的水分子較少。因此水的淨移動朝向溶質濃度較高處。水通道蛋白令水穿過膜的速度比單靠雙層快得多。(此模型的體積是固定的，所以當水變得均等時，淨移動會減弱；真實的細胞體積會改變。)"],
     d_act: ["A pump protein uses energy from ATP to carry specific particles across the membrane. Because energy is used, pumps can move particles against a concentration gradient, from low to high concentration. The ions cannot cross the bilayer by themselves. If ATP is switched off, pumping stops.",
       "ポンプタンパク質は ATP のエネルギーを使い、特定の粒子を膜の反対側へ運ぶ。エネルギーを使うので、ポンプは粒子を濃度勾配に逆らって、低濃度から高濃度へ運べる。イオンは二重層を自力では通れない。ATP をオフにするとポンプは止まる。",
       "泵蛋白利用 ATP 的能量把特定粒子運過膜。由於耗用能量，泵可以把粒子逆濃度梯度由低濃度運往高濃度。離子本身不能穿過雙層。關閉 ATP 後，泵便停止運作。"],
@@ -146,7 +146,7 @@
     { id: "diff", ahl: false }, { id: "chan", ahl: false }, { id: "osm", ahl: false }, { id: "act", ahl: false },
     { id: "gate", ahl: true }, { id: "nak", ahl: true }, { id: "sglt", ahl: true }, { id: "vesc", ahl: true }
   ];
-  var DEF = { diff: [12, 3], chan: [12, 3], osm: [2, 8], act: [5, 10], gate: [12, 3], sglt: [4, 10] };
+  var DEF = { diff: [12, 3], chan: [12, 3], osm: [1, 10], act: [5, 10], gate: [12, 3], sglt: [4, 10] };
 
   var CSS =
     ".W{font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;color:var(--ink,#101826);max-width:100%;text-align:left}" +
@@ -182,7 +182,7 @@
   /* ---------- geometry ---------- */
   var VW = 360, VH = 300, YO = 114, YI = 176, MID = 145;
   var KS = { np: 4, ion: 5.5, sol: 4.5, w: 3, na: 5.5, k: 6, g: 5.5 };
-  var SPD = { np: 1.5, ion: 1.2, sol: 1.0, w: 1.9, na: 1.2, k: 1.2, g: 1.0 };
+  var SPD = { np: 2.0, ion: 1.6, sol: 1.2, w: 2.3, na: 1.6, k: 1.6, g: 1.3 };
   function shapeFor(k) {
     var st = "stroke:var(--ink,#101826);stroke-width:.7;";
     if (k === "np") return sv("circle", { r: 4, style: st + "fill:var(--c-oxygen,#D33A2C)" });
@@ -253,14 +253,14 @@
       function near(x, xs, r) { for (var i = 0; i < xs.length; i++) if (Math.abs(x - xs[i]) < r) return xs[i]; return null; }
       function tryCross(p, x) {
         var m = st.mode;
-        if (m === "diff") return p.k === "np" && Math.random() < 0.3;
+        if (m === "diff") return p.k === "np" && Math.random() < 0.4;
         if (m === "chan") { return p.k === "ion" && near(x, chanXs(), 14) !== null && Math.random() < 0.8 ? near(x, chanXs(), 14) : false; }
         if (m === "gate") { return st.gateOpen && p.k === "ion" && near(x, chanXs(), 14) !== null && Math.random() < 0.8 ? near(x, chanXs(), 14) : false; }
         if (m === "osm") {
           if (p.k !== "w") return false;
           var c = near(x, chanXs(), 14);
-          if (c !== null) return Math.random() < 0.8 ? c : false;
-          return Math.random() < 0.05;
+          if (c !== null) return Math.random() < 0.9 ? c : false;
+          return Math.random() < 0.06;
         }
         return false;
       }

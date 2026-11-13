@@ -25,7 +25,7 @@
     ".gx-info .gx-tag{color:var(--muted,#4d626d);font-size:.85rem}",
     ".gx-info.good{border-left-color:var(--good,#17703f);background:var(--good-soft,#dcf2e4)}",
     ".gx-info.bad{border-left-color:var(--bad,#b3261e);background:var(--bad-soft,#fbe0de)}",
-    ".gx-ahl{display:inline-block;margin-left:.4rem;padding:0 .4rem;border-radius:3px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000);font-size:.7rem;font-weight:800;letter-spacing:.04em;vertical-align:middle}",
+    ".gx-al{display:inline-block;margin-left:.4rem;padding:0 .4rem;border-radius:3px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000);font-size:.7rem;font-weight:800;letter-spacing:.04em;vertical-align:middle}",
     ".gx-note{color:var(--muted,#4d626d);font-size:.85rem;margin:.5rem 0 0}",
     ".gx-hs{cursor:pointer}",
     ".gx-hs circle{fill:var(--surface,#fff);stroke:var(--accent,#2547c7);stroke-width:2}",
@@ -102,7 +102,9 @@
     tapHint: { en: "Tap a numbered circle (or a button below) to see what it is and how it helps gas exchange.", ja: "番号の付いた丸（または下のボタン）をタップして、それが何か、ガス交換にどう役立つかを見ましょう。", zh: "點選有編號的圓圈（或下面的按鈕），了解它是甚麼，以及如何有助氣體交換。" },
     find: { en: "Tap the part: ", ja: "次の部分をタップ：", zh: "請點選這個部分：" },
     right: { en: "Correct!", ja: "正解です！", zh: "正確！" },
-    wrong: { en: "Not quite. That is: ", ja: "違います。それは：", zh: "不太對。那是：" },
+    wrong: { en: "Not quite. You tapped: ", ja: "違います。タップしたのは：", zh: "不太對。你點選的是：" },
+    ans: { en: "The answer is: ", ja: "正解は：", zh: "答案是：" },
+    air: { en: "air", ja: "空気", zh: "空氣" },
     score: { en: "Score", ja: "得点", zh: "得分" },
     done: { en: "Finished. Press Quiz me to try again.", ja: "終了です。もう一度挑戦するには「クイズ」を押してください。", zh: "完成了。按「自我測驗」可再試一次。" },
     lung: { en: "Alveolus (lung)", ja: "肺胞（肺）", zh: "肺泡（肺）" },
@@ -115,8 +117,8 @@
   /* ------------------------------------------------------ alveolus parts */
   var LUNG = {
     title: { en: "Gas exchange in the alveolus", ja: "肺胞でのガス交換", zh: "肺泡中的氣體交換" },
-    vb: "0 0 340 270",
-    art: function () {
+    vb: "48 0 250 266",
+    art: function (ctxLang) {
       var cx = 170, cy = 158, r = 78;
       var s = "";
       // capillary band + red blood cells
@@ -132,6 +134,7 @@
       s += '<circle class="air" cx="' + cx + '" cy="' + cy + '" r="' + r + '"/>';
       s += '<circle class="wall" cx="' + cx + '" cy="' + cy + '" r="' + r + '"/>';
       s += '<circle class="film" cx="' + cx + '" cy="' + cy + '" r="' + (r - 5) + '"/>';
+      s += '<rect x="157" y="' + (cy - r - 5) + '" width="26" height="12" style="fill:var(--surface,#fff)"/>';
       // type II cell (bulge at left-lower, angle 200deg)
       var ta = 200 * Math.PI / 180, tx = cx + r * Math.cos(ta), ty = cy - r * Math.sin(ta);
       s += '<circle class="t2" cx="' + tx.toFixed(1) + '" cy="' + ty.toFixed(1) + '" r="13"/>';
@@ -141,7 +144,7 @@
       s += '<text class="tx" x="226" y="143">O₂</text>';
       s += '<line class="arr" x1="262" y1="176" x2="226" y2="176"/><polygon class="arrf" points="222,176 232,171 232,181"/>';
       s += '<text class="tx" x="226" y="193">CO₂</text>';
-      s += '<text class="tm" x="196" y="30">air</text>';
+      s += '<text class="tm" x="196" y="30">' + UI.air[ctxLang] + '</text>';
       return s;
     },
     parts: [
@@ -247,7 +250,7 @@
     var note = mk("p", "gx-note", cfg.note ? t(cfg.note) : "");
     root.appendChild(bar); root.appendChild(art); root.appendChild(chips); root.appendChild(info); root.appendChild(note);
 
-    var svg = '<svg viewBox="' + cfg.vb + '" role="group" aria-label="' + t(cfg.title) + '">' + cfg.art();
+    var svg = '<svg viewBox="' + cfg.vb + '" role="group" aria-label="' + t(cfg.title) + '">' + cfg.art(ctx.lang);
     for (var i = 0; i < parts.length; i++) {
       svg += '<g class="gx-hs" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '"><circle cx="' + parts[i].x + '" cy="' + parts[i].y + '" r="11"/><text x="' + parts[i].x + '" y="' + (parts[i].y + 4) + '">' + (i + 1) + '</text></g>';
     }
@@ -267,7 +270,7 @@
     function showPart(k) {
       var p = parts[k];
       info.className = "gx-info";
-      info.innerHTML = "<strong>" + (k + 1) + ". " + t(p.name) + "</strong>" + (p.ahl ? '<span class="gx-ahl">AHL</span>' : "") +
+      info.innerHTML = "<strong>" + (k + 1) + ". " + t(p.name) + "</strong>" + (p.ahl ? '<span class="gx-al">AHL</span>' : "") +
         "<p>" + t(p.info) + "</p><p class=\"gx-tag\">" + t(UI.guide) + t(p.tag) + "</p>";
     }
     function selectExplore(k) {
@@ -299,7 +302,7 @@
       } else {
         hs[k].classList.add("no"); hs[target].classList.add("ok");
         info.className = "gx-info bad";
-        info.innerHTML = "<strong>" + t(UI.wrong) + "</strong>" + t(parts[k].name) + "<p>" + (k + 1 > 0 ? t(parts[target].name) + " = " + (target + 1) : "") + "</p>";
+        info.innerHTML = "<strong>" + t(UI.wrong) + "</strong>" + t(parts[k].name) + " (" + (k + 1) + ")<p>" + t(UI.ans) + "<strong>" + t(parts[target].name) + " (" + (target + 1) + ")</strong></p>";
       }
       qi++;
       var nb = document.createElement("button");
@@ -430,7 +433,7 @@
       function Y(v) { return B - (v / 100) * (B - T); }
 
       root.innerHTML =
-        '<div style="margin-bottom:.4rem"><span class="gx-ahl" style="margin:0 .4rem 0 0">AHL</span><strong>' + t(OC.title) + '</strong></div>' +
+        '<div style="margin-bottom:.4rem"><span class="gx-al" style="margin:0 .4rem 0 0">AHL</span><strong>' + t(OC.title) + '</strong></div>' +
         '<div class="gx-tog">' +
         '<button type="button" class="gx-b" data-k="fo" aria-pressed="false"><span class="gx-sw" style="border-top-style:dashed;border-color:var(--theme-b,#b82a56)"></span>' + t(OC.foetal) + '</button>' +
         '<button type="button" class="gx-b" data-k="bo" aria-pressed="false"><span class="gx-sw" style="border-top-style:dotted;border-color:var(--theme-a,#07756f)"></span>' + t(OC.bohr) + '</button>' +
@@ -460,9 +463,9 @@
           g += '<rect class="zone" x="' + X(0) + '" y="' + T + '" width="' + (X(2.5) - X(0)) + '" height="' + (B - T) + '"/>';
           g += '<rect class="zone2" x="' + X(2.5) + '" y="' + T + '" width="' + (X(6) - X(2.5)) + '" height="' + (B - T) + '"/>';
           g += '<rect class="zone" x="' + X(8) + '" y="' + T + '" width="' + (X(14) - X(8)) + '" height="' + (B - T) + '"/>';
-          g += '<text class="tx" x="' + (X(0) + 3) + '" y="' + (T + 11) + '">' + t(OC.z1) + '</text>';
-          g += '<text class="tx" x="' + (X(2.5) + 4) + '" y="' + (T + 11) + '">' + t(OC.z2) + '</text>';
-          g += '<text class="tx" x="' + (X(8) + 4) + '" y="' + (T + 11) + '">' + t(OC.z3) + '</text>';
+          g += '<text class="tx" x="' + (X(0) + 3) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '1' + '</text>';
+          g += '<text class="tx" x="' + (X(2.5) + 4) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '2' + '</text>';
+          g += '<text class="tx" x="' + (X(8) + 4) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '3' + '</text>';
         }
         for (i = 0; i <= 100; i += 25) g += '<line class="gl" x1="' + L + '" x2="' + R + '" y1="' + Y(i) + '" y2="' + Y(i) + '"/><text class="tm" x="' + (L - 5) + '" y="' + (Y(i) + 3) + '" text-anchor="end">' + i + '</text>';
         for (i = 0; i <= 14; i += 2) g += '<text class="tm" x="' + X(i) + '" y="' + (B + 13) + '" text-anchor="middle">' + i + '</text>';

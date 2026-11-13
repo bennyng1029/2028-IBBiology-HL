@@ -19,14 +19,16 @@
     ".w-cell-compare .cc-tag{border:1px solid var(--line,#c3d0d7);background:var(--surface-2,#e3eaee);border-radius:999px;padding:1px 8px;color:var(--ink,#0f2029)}",
     ".w-cell-compare .cc-tag.on{background:var(--accent-soft,#e0e7fb);border-color:var(--accent,#2547c7)}",
     ".w-cell-compare .cc-big{display:inline-block;font-weight:700;font-size:1.05rem;padding:2px 10px;border-radius:999px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000);margin-bottom:6px}",
-    ".w-cell-compare .cc-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}",
-    ".w-cell-compare table.cc-table{border-collapse:collapse;width:100%;min-width:430px;font-size:.8rem}",
-    ".w-cell-compare .cc-table th,.w-cell-compare .cc-table td{border:1px solid var(--line,#c3d0d7);padding:5px 6px;vertical-align:top;text-align:left;line-height:1.3}",
-    ".w-cell-compare .cc-table thead th{background:var(--surface-2,#e3eaee)}",
-    ".w-cell-compare .cc-table tbody th{background:var(--surface,#fff);font-weight:600;width:25%}",
-    ".w-cell-compare .cc-table td.y{background:var(--good-soft,#dcf2e4)}",
-    ".w-cell-compare .cc-table td.n{background:var(--surface,#fff);color:var(--muted,#4d626d)}",
-    ".w-cell-compare .cc-table td.d{background:var(--accent-soft,#e0e7fb)}",
+    ".w-cell-compare .cc-grid{border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px);overflow:hidden;font-size:.76rem}",
+    ".w-cell-compare .cc-gr{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(4,minmax(0,1fr));border-top:1px solid var(--line,#c3d0d7)}",
+    ".w-cell-compare .cc-gr.head{border-top:0}",
+    ".w-cell-compare .cc-gh,.w-cell-compare .cc-gt,.w-cell-compare .cc-gc{padding:5px 5px;line-height:1.3;border-left:1px solid var(--line,#c3d0d7);overflow-wrap:anywhere}",
+    ".w-cell-compare .cc-gh:first-child,.w-cell-compare .cc-gt{border-left:0}",
+    ".w-cell-compare .cc-gh{background:var(--surface-2,#e3eaee);font-weight:700}",
+    ".w-cell-compare .cc-gt{background:var(--surface,#fff);font-weight:600}",
+    ".w-cell-compare .cc-gc.y{background:var(--good-soft,#dcf2e4)}",
+    ".w-cell-compare .cc-gc.n{background:var(--surface,#fff);color:var(--muted,#4d626d)}",
+    ".w-cell-compare .cc-gc.d{background:var(--accent-soft,#e0e7fb)}",
     ".w-cell-compare .cc-note{font-size:.78rem;color:var(--muted,#4d626d);margin:6px 0 0}",
     /* shapes */
     ".w-cell-compare .hit{cursor:pointer}",
@@ -231,6 +233,7 @@
   }
 
   var VB = "0 0 400 320";
+  var VBS = { pro: "0 70 400 180", animal: VB, plant: VB, fungal: "0 70 400 180" };
 
   function svgPro() {
     var s = "";
@@ -245,15 +248,15 @@
   }
 
   function svgAnimal() {
-    var cx = 200, cy = 142, rx = 168, ry = 112, s = "";
+    var cx = 198, cy = 140, rx = 158, ry = 108, s = "";
     // surface projections drawn first (behind)
     var mv = ellNormalPts(cx, cy, rx, ry, [-132, -118, -104, -90, -76, -62, -48], 16);
     var mvd = "";
     mv.forEach(function (p) { mvd += "M" + f1(p[0]) + " " + f1(p[1]) + " L" + f1(p[2]) + " " + f1(p[3]) + " "; });
     s += g("microvilli", '<path class="pad" d="' + mvd + '"/><path class="k-mvil" d="' + mvd + '"/>');
-    var ci = ellNormalPts(cx, cy, rx, ry, [-24, -12, 0, 12, 24], 22), cid = "";
+    var ci = ellNormalPts(cx, cy, rx, ry, [-24, -12, 0, 12, 24], 18), cid = "";
     ci.forEach(function (p) { var mx = (p[0] + p[2]) / 2, my = (p[1] + p[3]) / 2; cid += "M" + f1(p[0]) + " " + f1(p[1]) + " Q" + f1(mx + 5) + " " + f1(my - 5) + " " + f1(p[2]) + " " + f1(p[3]) + " "; });
-    var fl = "M178 252 q-14 14 0 28 t0 28 t0 20";
+    var fl = "M178 246 q-14 14 0 28 t0 28 t0 20";
     s += g("cilia", '<path class="pad" d="' + cid + fl + '"/><path class="k-cilia" d="' + cid + '"/><path class="k-cilia" d="' + fl + '"/>');
     s += g("membrane", '<ellipse class="k-mem" cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '"/>');
     s += g("cytoplasm", '<ellipse class="k-cyt" cx="' + cx + '" cy="' + cy + '" rx="' + (rx - 6) + '" ry="' + (ry - 6) + '"/>');
@@ -278,7 +281,7 @@
     s += g("wall_plant", '<rect class="k-wall" x="22" y="28" width="356" height="264" rx="20"/>');
     s += g("membrane", '<rect class="k-mem" x="38" y="44" width="324" height="232" rx="10"/>');
     s += g("cytoplasm", '<rect class="k-cyt" x="43" y="49" width="314" height="222" rx="7"/>');
-    s += g("vac_sap", '<ellipse class="k-vac" cx="244" cy="160" rx="104" ry="72"/>');
+    s += g("vac_sap", '<ellipse class="k-vac" cx="246" cy="160" rx="92" ry="64"/>');
     var cs = "M60 270 L130 250 M360 120 L356 90 M150 270 L200 268";
     s += g("cskel", '<path class="pad" d="' + cs + '"/><path class="k-csk" d="' + cs + '"/>');
     s += g("nucleus", nucleusSvg(90, 112, 34));
@@ -286,12 +289,12 @@
     function chloro(cx, cy, rot) {
       return '<g transform="translate(' + cx + " " + cy + ") rotate(" + rot + ')"><ellipse class="k-chlo" rx="26" ry="12"/><rect class="k-grana" x="-14" y="-5" width="6" height="10" rx="1"/><rect class="k-grana" x="-4" y="-5" width="6" height="10" rx="1"/><rect class="k-grana" x="6" y="-5" width="6" height="10" rx="1"/></g>';
     }
-    s += g("chlo", chloro(200, 66, 0) + chloro(318, 66, 0) + chloro(320, 252, -8) + chloro(80, 200, 70));
-    s += g("mito", mito(150, 100, 20, 22, 10) + mito(268, 252, 0, 22, 10));
+    s += g("chlo", chloro(200, 66, 0) + chloro(318, 66, 0) + chloro(322, 250, -8));
+    s += g("mito", mito(138, 78, 15, 22, 10) + mito(268, 252, 0, 22, 10));
     s += g("plastid", '<ellipse class="k-plast" cx="196" cy="252" rx="20" ry="14"/><ellipse class="k-starch" cx="190" cy="252" rx="6" ry="5"/><ellipse class="k-starch" cx="204" cy="251" rx="5" ry="4"/>');
     s += g("rer", bands(58, 160, 54, 3, 11, 9, "k-er", true));
     s += g("golgi", bands(60, 224, 50, 4, 9, 7, "k-golgi", false));
-    s += g("rib80", dotsSvg([[130, 140], [132, 178], [140, 215], [152, 70], [284, 70], [150, 245], [112, 66]], 3.6));
+    s += g("rib80", dotsSvg([[130, 140], [132, 178], [140, 215], [260, 70], [284, 90], [150, 245], [112, 56]], 3.6));
     return s;
   }
 
@@ -378,7 +381,7 @@
   var ROWS = [
     [T("Plasma membrane", "細胞膜", "質膜"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
     [T("Cytoplasm", "細胞質", "細胞質"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
-    [T("DNA", "DNA", "DNA"), [[D, T("Naked loop (nucleoid)", "環状・むき出し（核様体）", "環狀裸 DNA（擬核）")], [D, T("Chromosomes + histones, in nucleus", "染色体＋ヒストン、核内", "染色體＋組蛋白，在核內")], [D, T("Chromosomes + histones, in nucleus", "染色体＋ヒストン、核内", "染色體＋組蛋白，在核內")], [D, T("Chromosomes + histones, in nucleus", "染色体＋ヒストン、核内", "染色體＋組蛋白，在核內")]]],
+    [T("DNA", "DNA", "DNA"), [[D, T("Naked loop", "環状・むき出し", "環狀裸 DNA")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")]]],
     [T("Ribosomes", "リボソーム", "核糖體"), [[D, T("70S", "70S", "70S")], [D, T("80S", "80S", "80S")], [D, T("80S", "80S", "80S")], [D, T("80S", "80S", "80S")]]],
     [T("Nucleus (double membrane, pores)", "核（二重膜・核膜孔）", "細胞核（雙層膜、核孔）"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
     [T("Mitochondria, ER, Golgi", "ミトコンドリア・小胞体・ゴルジ体", "線粒體、內質網、高爾基體"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
@@ -429,7 +432,7 @@
           var h = '<div class="cc-chips" role="group" aria-label="' + t(UI.tabDiagram) + '">';
           CELLORDER.forEach(function (c) { h += '<button type="button" class="cc-chip" data-cell="' + c + '" aria-pressed="' + (c === cell) + '" style="font-size:.88rem">' + t(CELLNAME[c]) + "</button>"; });
           h += "</div>";
-          h += '<svg class="cc-svg" viewBox="' + VB + '" role="group" aria-label="' + t(CELLNAME[cell]) + '">' + SVGS[cell]() + "</svg>";
+          h += '<svg class="cc-svg" viewBox="' + VBS[cell] + '" role="group" aria-label="' + t(CELLNAME[cell]) + '">' + SVGS[cell]() + "</svg>";
           h += '<p class="cc-cap">' + t(UI.drawing) + "</p>";
           h += '<div class="cc-info" aria-live="polite"></div>';
           h += '<p class="cc-cap">' + t(UI.structures) + "</p>";
@@ -465,15 +468,15 @@
         }
 
         function renderTable() {
-          var h = '<div class="cc-tablewrap"><table class="cc-table"><thead><tr><th>' + t(UI.feature) + "</th>";
-          CELLORDER.forEach(function (c) { h += "<th>" + t(CELLSHORT[c]) + "</th>"; });
-          h += "</tr></thead><tbody>";
+          var h = '<div class="cc-grid" role="table"><div class="cc-gr head" role="row"><div class="cc-gh" role="columnheader">' + t(UI.feature) + "</div>";
+          CELLORDER.forEach(function (c) { h += '<div class="cc-gh" role="columnheader">' + t(CELLSHORT[c]) + "</div>"; });
+          h += "</div>";
           ROWS.forEach(function (r) {
-            h += "<tr><th scope='row'>" + t(r[0]) + "</th>";
-            r[1].forEach(function (c) { h += '<td class="' + c[0] + '">' + t(c[1]) + "</td>"; });
-            h += "</tr>";
+            h += '<div class="cc-gr" role="row"><div class="cc-gt" role="rowheader">' + t(r[0]) + "</div>";
+            r[1].forEach(function (c) { h += '<div class="cc-gc ' + c[0] + '" role="cell">' + t(c[1]) + "</div>"; });
+            h += "</div>";
           });
-          h += '</tbody></table></div><p class="cc-note">' + t(UI.tableNote) + "</p>";
+          h += '</div><p class="cc-note">' + t(UI.tableNote) + "</p>";
           body.innerHTML = h;
         }
 

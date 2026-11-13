@@ -44,6 +44,16 @@
 </svg>
 <figcaption>${'The steroid skeleton: three six-sided rings (A, B, C) and one five-sided ring (D) joined together.'}</figcaption></figure>`;
 
+  function bilSVG(lang) {
+    const T = { w: { en: "water", ja: "水 (water)", zh: "水 (water)" }, t: { en: "tails", ja: "尾部 (tails)", zh: "尾部 (tails)" }, h: { en: "heads", ja: "頭部 (heads)", zh: "頭部 (heads)" } };
+    let g = "";
+    for (let x = 20; x <= 280; x += 20) {
+      g += `<circle cx="${x}" cy="38" r="7.5" fill="var(--theme-b,#c2456b)" stroke="currentColor" stroke-width=".7"/><path d="M${x - 3} 46V68M${x + 3} 46V68" stroke="currentColor" stroke-width="1.5" fill="none"/>`;
+      g += `<circle cx="${x}" cy="102" r="7.5" fill="var(--theme-b,#c2456b)" stroke="currentColor" stroke-width=".7"/><path d="M${x - 3} 94V72M${x + 3} 94V72" stroke="currentColor" stroke-width="1.5" fill="none"/>`;
+    }
+    return `<svg viewBox="0 0 300 140" role="img" aria-label="Phospholipid bilayer" style="width:100%;max-width:360px;color:var(--ink,#0f2029)" font-family="sans-serif"><rect width="300" height="140" fill="var(--accent-soft,#dbe7ff)" opacity=".4"/>${g}<g fill="currentColor" font-size="10"><text x="4" y="14">${T.w[lang]}</text><text x="4" y="134">${T.w[lang]}</text><text x="150" y="74" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface,#fff);stroke-width:3px">${T.t[lang]}</text></g></svg>`;
+  }
+
   const FA_TABLE = `<table><tr><th>Fatty acid (all 18 carbons)</th><th>Number of C=C bonds</th><th>Melting point (°C)</th></tr>
 <tr><td>A</td><td>0</td><td>69</td></tr><tr><td>B</td><td>1</td><td>13</td></tr><tr><td>C</td><td>2</td><td>−5</td></tr><tr><td>D</td><td>3</td><td>−11</td></tr></table>
 <p><em>(illustrative data)</em></p>`;
@@ -352,42 +362,15 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
         body: L(
           `<p>A phospholipid is <span class="term">amphipathic</span>: one part of the molecule is hydrophilic (the phosphate-containing head) and another part is hydrophobic (the two fatty acid tails).</p>
 <p>In water, the hydrophilic heads are attracted to water. The hydrophobic tails are pushed away from it. Phospholipids therefore arrange themselves, with no energy needed, into a <span class="term">bilayer</span>: two layers with the tails pointing inwards, together in the middle, and the heads facing the water on both sides.</p>
-<figure><svg viewBox="0 0 300 130" role="img" aria-label="Phospholipid bilayer" style="width:100%;max-width:360px;color:var(--ink,#0f2029)">
-<rect x="0" y="0" width="300" height="130" fill="var(--accent-soft,#dbe7ff)" opacity=".35"/>
-<g stroke="currentColor" stroke-width="1.5" fill="none">
-<path d="M30 48v28M54 48v28M78 48v28M102 48v28M126 48v28M150 48v28M174 48v28M198 48v28M222 48v28M246 48v28M270 48v28"/>
-<path d="M36 52v24M60 52v24M84 52v24M108 52v24M132 52v24M156 52v24M180 52v24M204 52v24M228 52v24M252 52v24M276 52v24" transform="translate(0 6)"/>
-</g>
-<g fill="var(--theme-b,#c2456b)"><circle cx="30" cy="42" r="7"/><circle cx="54" cy="42" r="7"/><circle cx="78" cy="42" r="7"/><circle cx="102" cy="42" r="7"/><circle cx="126" cy="42" r="7"/><circle cx="150" cy="42" r="7"/><circle cx="174" cy="42" r="7"/><circle cx="198" cy="42" r="7"/><circle cx="222" cy="42" r="7"/><circle cx="246" cy="42" r="7"/><circle cx="270" cy="42" r="7"/>
-<circle cx="36" cy="88" r="7"/><circle cx="60" cy="88" r="7"/><circle cx="84" cy="88" r="7"/><circle cx="108" cy="88" r="7"/><circle cx="132" cy="88" r="7"/><circle cx="156" cy="88" r="7"/><circle cx="180" cy="88" r="7"/><circle cx="204" cy="88" r="7"/><circle cx="228" cy="88" r="7"/><circle cx="252" cy="88" r="7"/><circle cx="276" cy="88" r="7"/></g>
-<g fill="currentColor" font-family="sans-serif" font-size="10"><text x="4" y="16">water</text><text x="4" y="124">water</text><text x="150" y="68" text-anchor="middle">tails</text></g>
-</svg><figcaption>${'Heads (circles) face the water; tails point inwards. Each head is attached to two tails.'}</figcaption></figure>
+<figure>${bilSVG("en")}<figcaption>${'Heads (circles) face the water; tails point inwards. Each head is attached to two tails.'}</figcaption></figure>
 <p>The bilayer is the basis of cell membranes (B2.1). Because it has a hydrophobic centre, it forms a barrier between two watery solutions.</p>`,
           `<p>リン脂質は<span class="term">両親媒性 (amphipathic)</span> である。分子の一部は親水性 (リン酸を含む頭部)、別の部分は疎水性 (2本の脂肪酸の尾部) である。</p>
 <p>水中では、親水性の頭部は水に引きつけられ、疎水性の尾部は水から遠ざけられる。そのためリン脂質は、エネルギーを使わずに自然に<span class="term">二重層 (bilayer)</span> をつくる。尾部を内側に向けて中央に集め、頭部は両側で水に面する2層である。</p>
-<figure><svg viewBox="0 0 300 130" role="img" aria-label="リン脂質二重層 (phospholipid bilayer)" style="width:100%;max-width:360px;color:var(--ink,#0f2029)">
-<rect x="0" y="0" width="300" height="130" fill="var(--accent-soft,#dbe7ff)" opacity=".35"/>
-<g stroke="currentColor" stroke-width="1.5" fill="none">
-<path d="M30 48v28M54 48v28M78 48v28M102 48v28M126 48v28M150 48v28M174 48v28M198 48v28M222 48v28M246 48v28M270 48v28"/>
-<path d="M36 52v24M60 52v24M84 52v24M108 52v24M132 52v24M156 52v24M180 52v24M204 52v24M228 52v24M252 52v24M276 52v24" transform="translate(0 6)"/>
-</g>
-<g fill="var(--theme-b,#c2456b)"><circle cx="30" cy="42" r="7"/><circle cx="54" cy="42" r="7"/><circle cx="78" cy="42" r="7"/><circle cx="102" cy="42" r="7"/><circle cx="126" cy="42" r="7"/><circle cx="150" cy="42" r="7"/><circle cx="174" cy="42" r="7"/><circle cx="198" cy="42" r="7"/><circle cx="222" cy="42" r="7"/><circle cx="246" cy="42" r="7"/><circle cx="270" cy="42" r="7"/>
-<circle cx="36" cy="88" r="7"/><circle cx="60" cy="88" r="7"/><circle cx="84" cy="88" r="7"/><circle cx="108" cy="88" r="7"/><circle cx="132" cy="88" r="7"/><circle cx="156" cy="88" r="7"/><circle cx="180" cy="88" r="7"/><circle cx="204" cy="88" r="7"/><circle cx="228" cy="88" r="7"/><circle cx="252" cy="88" r="7"/><circle cx="276" cy="88" r="7"/></g>
-<g fill="currentColor" font-family="sans-serif" font-size="10"><text x="4" y="16">水 (water)</text><text x="4" y="124">水 (water)</text><text x="150" y="68" text-anchor="middle">尾部 (tails)</text></g>
-</svg><figcaption>頭部 (円) は水に面し、尾部は内側を向く。各頭部には2本の尾部がつく。</figcaption></figure>
+<figure>${bilSVG("ja")}<figcaption>頭部 (円) は水に面し、尾部は内側を向く。各頭部には2本の尾部がつく。</figcaption></figure>
 <p>二重層は細胞膜 (B2.1) の基本構造である。中心が疎水性なので、2つの水溶液の間の障壁になる。</p>`,
           `<p>磷脂是<span class="term">兩親性 (amphipathic)</span> 的：分子的一部分是親水的 (含磷酸的頭部)，另一部分是疏水的 (兩條脂肪酸尾部)。</p>
 <p>在水中，親水的頭部被水吸引，疏水的尾部則被推離水。因此磷脂無需耗用能量，就會自然排成<span class="term">雙層 (bilayer)</span>：兩層磷脂的尾部向內並聚在中間，頭部在兩側面向水。</p>
-<figure><svg viewBox="0 0 300 130" role="img" aria-label="磷脂雙層 (phospholipid bilayer)" style="width:100%;max-width:360px;color:var(--ink,#0f2029)">
-<rect x="0" y="0" width="300" height="130" fill="var(--accent-soft,#dbe7ff)" opacity=".35"/>
-<g stroke="currentColor" stroke-width="1.5" fill="none">
-<path d="M30 48v28M54 48v28M78 48v28M102 48v28M126 48v28M150 48v28M174 48v28M198 48v28M222 48v28M246 48v28M270 48v28"/>
-<path d="M36 52v24M60 52v24M84 52v24M108 52v24M132 52v24M156 52v24M180 52v24M204 52v24M228 52v24M252 52v24M276 52v24" transform="translate(0 6)"/>
-</g>
-<g fill="var(--theme-b,#c2456b)"><circle cx="30" cy="42" r="7"/><circle cx="54" cy="42" r="7"/><circle cx="78" cy="42" r="7"/><circle cx="102" cy="42" r="7"/><circle cx="126" cy="42" r="7"/><circle cx="150" cy="42" r="7"/><circle cx="174" cy="42" r="7"/><circle cx="198" cy="42" r="7"/><circle cx="222" cy="42" r="7"/><circle cx="246" cy="42" r="7"/><circle cx="270" cy="42" r="7"/>
-<circle cx="36" cy="88" r="7"/><circle cx="60" cy="88" r="7"/><circle cx="84" cy="88" r="7"/><circle cx="108" cy="88" r="7"/><circle cx="132" cy="88" r="7"/><circle cx="156" cy="88" r="7"/><circle cx="180" cy="88" r="7"/><circle cx="204" cy="88" r="7"/><circle cx="228" cy="88" r="7"/><circle cx="252" cy="88" r="7"/><circle cx="276" cy="88" r="7"/></g>
-<g fill="currentColor" font-family="sans-serif" font-size="10"><text x="4" y="16">水 (water)</text><text x="4" y="124">水 (water)</text><text x="150" y="68" text-anchor="middle">尾部 (tails)</text></g>
-</svg><figcaption>頭部 (圓點) 面向水，尾部向內。每個頭部連接兩條尾部。</figcaption></figure>
+<figure>${bilSVG("zh")}<figcaption>頭部 (圓點) 面向水，尾部向內。每個頭部連接兩條尾部。</figcaption></figure>
 <p>雙層是細胞膜 (B2.1) 的基礎。由於中心疏水，它能在兩種水溶液之間形成屏障。</p>`),
         examTip: L("Use the word “amphipathic” and name both regions. “Hydrophilic heads face the water; hydrophobic tails face each other” earns the marks.",
           "「両親媒性」という語を使い、両方の部分を挙げる。「親水性の頭部が水に面し、疎水性の尾部が向き合う」と書く。",

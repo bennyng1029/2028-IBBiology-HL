@@ -45,12 +45,11 @@
     ".w-cladogram .cl-cand{display:block;font:inherit;text-align:center;padding:.3rem;border:1.5px solid var(--line-strong,var(--line,#c3d0d7));border-radius:var(--radius,6px);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".w-cladogram .cl-cand[aria-pressed=true]{border-color:var(--accent,#2547c7);box-shadow:0 0 0 2px var(--accent,#2547c7)}",
     ".w-cladogram .cl-cand:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".w-cladogram .cl-cand svg{max-width:150px}",
+    ".w-cladogram .cl-cand svg{max-width:150px;width:100%}",
     ".w-cladogram .cl-cand b{display:block;font-size:.82rem;margin-bottom:.1rem}",
     ".w-cladogram .cl-note{margin:.3rem 0 0;font-size:.76rem;color:var(--muted,#4d626d)}",
     ".w-cladogram .cl-chtbl td.cl-ch{text-align:left}",
     ".w-cladogram .cl-chtbl .cl-btn{min-height:2.2rem;padding:.2rem .6rem;width:100%;text-align:left}",
-    "@media (max-width:420px){.w-cladogram .cl-cands{grid-template-columns:1fr}}",
     "@media (prefers-reduced-motion:no-preference){.w-cladogram .cl-ln,.w-cladogram .cl-node{transition:stroke .15s,fill .15s}}"
   ].join("\n");
 
@@ -183,13 +182,13 @@
       if (o.nodeLabel) { var lb = o.nodeLabel(nd); if (lb) extra += '<text class="cl-chl" x="' + (x - 5) + '" y="' + (nd.y - 7) + '">' + esc(lb) + "</text>"; }
     })(root);
     if (o.terms) {
-      var T0 = o.T, ins = internals(root), deep = ins[ins.length - 1], last = root, lastLeaf = null;
-      (function w(nd) { if (nd.leaf) { lastLeaf = nd; return; } nd.kids.forEach(w); })(root);
-      extra += '<text class="cl-term" x="4" y="' + (root.y - 16) + '">' + esc(T0.root[lang] || T0.root.en) + '</text><path class="cl-tl" d="M14 ' + (root.y - 12) + "V" + (root.y - 2) + '"/>';
-      if (deep !== root) extra += '<path class="cl-tl" d="M' + (X(deep) + 12) + " " + (deep.y - 12) + "l16 -12" + '"/><text class="cl-term" x="' + (X(deep) + 30) + '" y="' + (deep.y - 26) + '">' + esc(T0.node[lang] || T0.node.en) + "</text>";
-      extra += '<text class="cl-term" text-anchor="middle" x="' + ((X({ h: 1 }) + xt) / 2 + 20) + '" y="' + (lastLeaf.y + 18) + '">' + esc(T0.term[lang] || T0.term.en) + "</text>";
+      var T0 = o.T, ins = internals(root), deep = ins[ins.length - 1], firstLeaf = null;
+      (function w(nd) { if (nd.leaf) { if (!firstLeaf) firstLeaf = nd; return; } nd.kids.forEach(w); })(root);
+      extra += '<text class="cl-term" x="4" y="' + (root.y - 24) + '">' + esc(T0.root[lang] || T0.root.en) + '</text><path class="cl-tl" d="M14 ' + (root.y - 20) + "V" + (root.y - 2) + '"/>';
+      if (deep !== root) extra += '<text class="cl-term" text-anchor="end" x="' + (X(deep) - 12) + '" y="' + (deep.y - 16) + '">' + esc(T0.node[lang] || T0.node.en) + "</text>";
+      extra += '<text class="cl-term" text-anchor="end" x="' + (xt - 4) + '" y="' + (firstLeaf.y - 7) + '">' + esc(T0.term[lang] || T0.term.en) + "</text>";
     }
-    var Hh = top + rowH * (n - 1) + rowH / 2 + (o.terms ? 14 : 4);
+    var Hh = top + rowH * (n - 1) + rowH / 2 + (o.terms ? 14 : 4) + (o.tipExtra ? 12 : 0);
     return '<svg viewBox="0 0 ' + W + " " + Hh + '" role="img" aria-label="cladogram">' + lines + extra + nodes + tips + "</svg>";
   }
 

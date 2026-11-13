@@ -13,6 +13,7 @@
     ".w-magnification button[aria-selected='true'],.w-magnification button[aria-pressed='true']{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-magnification button:focus-visible,.w-magnification input:focus-visible,.w-magnification select:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".w-magnification .mg-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}",
+    ".w-magnification .mg-s>label{flex:1 1 100%}",
     ".w-magnification .mg-row>label,.w-magnification .mg-lab{min-width:7.2em;font-weight:600}",
     ".w-magnification input[type=number],.w-magnification select{font:inherit;padding:6px 8px;border:1px solid var(--line-strong,var(--line,#c3d0d7));border-radius:var(--radius,6px);background:var(--surface,#fff);color:var(--ink,#0f2029);min-height:38px}",
     ".w-magnification input[type=number]{width:8.5em}",
@@ -241,8 +242,8 @@
           var h = '<div class="mg-row"><label for="' + uid + 'bb">' + t(UI.barLabel) + '</label><select id="' + uid + 'bb" aria-label="' + t(UI.barLabel) + '">';
           [["1", "µm"], ["2", "µm"], ["5", "µm"], ["10", "µm"], ["500", "nm"], ["200", "nm"], ["100", "nm"], ["50", "nm"]].forEach(function (p) { h += '<option value="' + p[0] + "|" + p[1] + '"' + (p[0] === bar.b && p[1] === bar.bu ? " selected" : "") + ">" + p[0] + " " + p[1] + "</option>"; });
           h += "</select></div>";
-          h += '<div class="mg-row"><label for="' + uid + 'bl">' + t(UI.barLen) + '</label><input type="range" id="' + uid + 'bl" min="5" max="60" step="1" value="' + bar.bl + '"><output id="' + uid + 'blo">' + bar.bl + "</output></div>";
-          h += '<div class="mg-row"><label for="' + uid + 'sl">' + t(UI.cellLen) + '</label><input type="range" id="' + uid + 'sl" min="5" max="100" step="1" value="' + bar.sl + '"><output id="' + uid + 'slo">' + bar.sl + "</output></div>";
+          h += '<div class="mg-row mg-s"><label for="' + uid + 'bl">' + t(UI.barLen) + '</label><input type="range" id="' + uid + 'bl" min="5" max="60" step="1" value="' + bar.bl + '"><output id="' + uid + 'blo">' + bar.bl + "</output></div>";
+          h += '<div class="mg-row mg-s"><label for="' + uid + 'sl">' + t(UI.cellLen) + '</label><input type="range" id="' + uid + 'sl" min="5" max="100" step="1" value="' + bar.sl + '"><output id="' + uid + 'slo">' + bar.sl + "</output></div>";
           h += '<div id="' + uid + 'pic"></div><p class="mg-small">' + t(UI.barNote) + '</p><div class="mg-out" aria-live="polite" id="' + uid + 'bout"></div>';
           body.innerHTML = h;
           var sb = body.querySelector("#" + uid + "bb"), rl = body.querySelector("#" + uid + "bl"), rs = body.querySelector("#" + uid + "sl");

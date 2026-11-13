@@ -21,7 +21,8 @@
     ".sav .sv-nums dt{color:var(--muted,#4d626d)}",
     ".sav .sv-nums dd{margin:0;font-weight:700}",
     ".sav table{width:100%;border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums}",
-    ".sav th,.sav td{padding:.2rem .35rem;text-align:right;border-bottom:1px solid var(--line,#c3d0d7)}",
+    ".sav th,.sav td{white-space:nowrap;padding:.2rem .35rem;text-align:right;border-bottom:1px solid var(--line,#c3d0d7)}",
+    ".sav th{white-space:normal}",
     ".sav th:first-child,.sav td:first-child{text-align:left}",
     ".sav tr.on td{background:var(--accent-soft,#e0e7fb);font-weight:700}",
     ".sav .sv-bar{height:.9rem;border-radius:999px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);overflow:hidden}",
@@ -101,7 +102,7 @@
         '<button type="button" class="sv-btn sv-rst">' + t(S.reset) + '</button>' +
         '</div>' +
         '<div class="sv-grid">' +
-        '<div class="sv-card"><h4>' + t(S.cube) + '</h4><svg class="sv-cube" viewBox="0 0 220 190" role="img"></svg>' +
+        '<div class="sv-card"><h4>' + t(S.cube) + '</h4><svg class="sv-cube" viewBox="0 0 220 176" role="img"></svg>' +
         '<dl class="sv-nums" aria-live="polite"></dl></div>' +
         '<div class="sv-card"><h4>' + t(S.graph) + '</h4><svg class="sv-graph" viewBox="0 0 300 200" role="img" aria-label="' + t(S.graph) + '"></svg></div>' +
         '<div class="sv-card"><table class="sv-tab"></table></div>' +
@@ -138,7 +139,7 @@
         // 11 px per µm so a 10 µm cube is 110 px wide; the 1 µm reference cube is 11 px.
         var u = 11;
         var s = l * u;
-        var x0 = 14, y0 = 168;
+        var x0 = 14, y0 = 156;
         var h = isoCube(x0, y0, s, "yc");
         var refX = 192;
         var ref = isoCube(refX, y0, u, "rc");
