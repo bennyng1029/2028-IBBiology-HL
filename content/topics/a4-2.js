@@ -310,6 +310,182 @@
       L("Verifiable evidence usually comes from published, peer-reviewed sources; citizen science brings benefits and its own methodological concerns.", "検証可能な証拠は通常、出版された査読付きの情報源から得られます。市民科学には利点と、特有の方法上の懸念があります。", "可驗證的證據通常來自已發表、經同行評審的來源；公民科學既有好處，也有其獨特的方法學疑慮。"),
       L("Prioritizing which species to conserve has ethical, environmental, political, social, cultural and economic implications and needs debate.", "どの種を保全するかの優先順位づけには、倫理的、環境的、政治的、社会的、文化的、経済的な意味があり、議論が必要です。", "決定優先保育哪些物種涉及倫理、環境、政治、社會、文化和經濟含意，需要辯論。")
     ],
-    questions: []
+    questions: [
+      {
+        id: "a4-2-q01", type: "mcq", ahl: false, difficulty: 1, ref: "A4.2.1", paper: "1A",
+        stem: L("Which list gives the three levels of biodiversity that you must include?", "必ず含めるべき生物多様性の三つのレベルを示しているのはどれか。", "哪一個列表給出你必須包括的三個生物多樣性層次？"),
+        options: [L("Ecosystem, species and genetic diversity", "生態系、種、遺伝的多様性", "生態系統、物種和遺傳多樣性"), L("Plant, animal and fungal diversity", "植物、動物、菌類の多様性", "植物、動物和真菌多樣性"), L("Land, freshwater and marine diversity", "陸、淡水、海洋の多様性", "陸地、淡水和海洋多樣性"), L("Past, present and future diversity", "過去、現在、未来の多様性", "過去、現在和未來的多樣性")],
+        answer: 0,
+        explanation: L("The guide names ecosystem diversity, species diversity and genetic diversity. The other lists describe groups or habitats, not levels of biodiversity.", "ガイドが挙げるのは生態系の多様性、種の多様性、遺伝的多様性です。他の選択肢は生物群や生息地を表しており、生物多様性のレベルではありません。", "課程指引列出生態系統多樣性、物種多樣性和遺傳多樣性。其他列表描述的是類羣或生境，不是生物多樣性的層次。")
+      },
+      {
+        id: "a4-2-q02", type: "multi", ahl: false, difficulty: 2, ref: "A4.2.6", paper: "1A",
+        stem: L("Select ALL the specific causes of the current biodiversity crisis named in the guide.", "ガイドが挙げている、現在の生物多様性の危機の個別の原因をすべて選べ。", "選出課程指引所列出的目前生物多樣性危機的所有具體原因。"),
+        options: [L("Over-exploitation such as hunting", "狩猟などの過剰な利用", "狩獵等過度開發"), L("Urbanization", "都市化", "城市化"), L("Spread of invasive alien species by global transport", "世界的な輸送による外来種の拡散", "全球運輸令外來入侵物種擴散"), L("Increased numbers of natural predators", "自然の捕食者の増加", "天然掠食者數目增加")],
+        answer: [0, 1, 2],
+        explanation: L("Over-exploitation, urbanization and invasive species are all on the guide's list (with deforestation, land clearance for agriculture and pollution). More natural predators is not a human-driven cause of the crisis.", "過剰な利用、都市化、外来種はいずれもガイドの一覧にあります（森林破壊、農地のための開墾、汚染も）。自然の捕食者の増加は、危機の人為的な原因ではありません。", "過度開發、城市化和入侵物種都在課程指引列表上（還有砍伐森林、為農業清理土地和污染）。天然掠食者增加不是危機的人為成因。")
+      },
+      {
+        id: "a4-2-q03", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.2", paper: "1A",
+        stem: L("Which statement about the number of species is supported by evidence from fossils and surveys?", "化石と調査の証拠が支持する、種の数についての記述はどれか。", "有關物種數目，哪項陳述得到化石和調查證據支持？"),
+        options: [L("All species on Earth have now been discovered and named", "地球上のすべての種がすでに発見・命名された", "地球上所有物種現在都已被發現和命名"), L("There are currently more species alive than at any time in the past", "現在生きている種は、過去のどの時代よりも多い", "現今存活的物種比過去任何時候都多"), L("There are fewer species alive now than in the Cambrian period", "現在生きている種は、カンブリア紀より少ない", "現今存活的物種比寒武紀少"), L("The number of species has never changed", "種の数が変わったことは一度もない", "物種的數目從未改變")],
+        answer: 1,
+        explanation: L("Millions of species are described, many more remain undiscovered (A is wrong), and fossils suggest today's species number is higher than ever. This does not mean the extinction crisis is not real: species are being lost very fast.", "数百万種が記載されていますが、さらに多くが未発見です (Aは誤り)。化石は、現在の種の数が過去最多であることを示唆します。だからといって絶滅の危機が現実でないわけではなく、種は非常に速く失われています。", "已有數百萬個物種被描述，還有更多物種未被發現（A 錯），而化石顯示今日的物種數目比以往任何時候都多。這並不表示滅絕危機不真實：物種正在極快地消失。")
+      },
+      {
+        id: "a4-2-q04", type: "short", ahl: false, difficulty: 2, ref: "A4.2.2", paper: "2", commandTerm: "Explain", marks: 2,
+        stem: L("Scientists studying the same group of beetles disagree about how many species it contains. Explain how this can happen, using the terms splitters and lumpers.", "ある甲虫の同じグループを研究している科学者の間で、何種含まれるかについて意見が分かれている。分割派と統合派という語を使って、なぜそうなり得るか説明せよ (Explain)。", "研究同一類甲蟲的科學家，對該類羣含有多少物種意見不一。運用「細分派」與「合併派」兩詞，解釋 (Explain) 這為何會發生。"),
+        markscheme: [
+          L("The same observations can be classified in different ways (classification is pattern recognition)", "同じ観察でも異なる方法で分類できる（分類はパターン認識）", "同一組觀察可以用不同方法分類（分類是規律識別）"),
+          L("Splitters recognize more species by dividing the group into many; lumpers group similar forms together into fewer species", "分割派はグループを細かく分けてより多くの種を認め、統合派は似た形態をまとめてより少ない種にする", "細分派把類羣分得較細，認出較多物種；合併派把相似的形態合併，物種較少")
+        ],
+        modelAnswer: L("Classification is pattern recognition, and the same observations can be classified in different ways. Splitters divide the beetles into many species whereas lumpers group similar forms together into fewer species.", "分類はパターン認識であり、同じ観察でも異なる方法で分類できる。分割派は甲虫を多くの種に分け、統合派は似た形態を一緒にして少ない種にする。", "分類是規律識別，同一組觀察可以用不同方法分類。細分派把甲蟲分成很多物種，而合併派把相似的形態合併，物種較少。")
+      },
+      {
+        id: "a4-2-q05", type: "short", ahl: false, difficulty: 2, ref: "A4.2.3", paper: "2", commandTerm: "Outline", marks: 4,
+        stem: L("Outline the causes of the extinction of (a) the North Island giant moa and (b) the Caribbean monk seal.", "(a) ニュージーランド北島のジャイアントモアと、(b) カリブモンクアザラシの絶滅の原因を説明せよ (Outline)。", "概述 (Outline) (a) 北島巨型恐鳥和 (b) 加勒比僧海豹滅絕的原因。"),
+        markscheme: [
+          L("(a) Hunted by humans for meat (and eggs taken)", "(a) 人間に肉のために狩られた（卵も採られた）", "(a) 被人類獵殺取肉（蛋亦被取走）"),
+          L("(a) Habitat loss from burning/clearing of forest and scrub; slow reproduction made them vulnerable", "(a) 森や低木林の焼き払い・開墾による生息地の消失。繁殖が遅く絶滅しやすかった", "(a) 因焚燒／清除森林和灌叢而喪失生境；繁殖緩慢令牠們易受影響"),
+          L("(b) Hunted for oil, meat and skins", "(b) 油、肉、皮のために狩られた", "(b) 因油脂、肉和皮而被獵殺"),
+          L("(b) Killed by fishers as competitors for fish / disturbed at breeding beaches, so fewer breeding sites", "(b) 魚を巡る競争相手として漁師に殺された／繁殖する海岸で妨害され、繁殖地が減った", "(b) 被漁民當作爭奪魚類的對手而殺死／繁殖海灘受騷擾，繁殖地減少")
+        ],
+        modelAnswer: L("(a) Moas were hunted by people for meat and eggs, and their forest and scrub habitat was burned and cleared; they reproduced slowly. (b) Monk seals were hunted for oil, meat and skins, killed by fishers who saw them as competitors, and disturbed at their breeding beaches.", "(a) モアは人間に肉や卵のために狩られ、生息する森や低木林が焼かれ開墾された。繁殖は遅かった。(b) モンクアザラシは油、肉、皮のために狩られ、競争相手とみなす漁師に殺され、繁殖する海岸でも妨害された。", "(a) 恐鳥被人類獵殺取肉和蛋，牠們的森林和灌叢生境被焚燒和清除；牠們繁殖緩慢。(b) 僧海豹因油脂、肉和皮而被獵殺，被視之為對手的漁民殺死，又在繁殖海灘受到騷擾。")
+      },
+      {
+        id: "a4-2-q06", type: "match", ahl: false, difficulty: 1, ref: "A4.2.3–4", paper: "1A",
+        stem: L("Match each case study to its main human-driven cause.", "各事例を、主な人為的原因と結び付けよ。", "把每個個案配對其主要的人為成因。"),
+        pairs: [
+          { left: L("North Island giant moa", "ニュージーランド北島のジャイアントモア", "北島巨型恐鳥"), right: L("Hunting for meat and eggs, plus habitat clearance", "肉と卵のための狩猟と、生息地の開墾", "為取肉和蛋而獵殺，加上清除生境") },
+          { left: L("Caribbean monk seal", "カリブモンクアザラシ", "加勒比僧海豹"), right: L("Hunting for oil, meat and skins; persecution by fishers", "油、肉、皮のための狩猟と、漁師による迫害", "為油脂、肉和皮而獵殺；被漁民迫害") },
+          { left: L("Mixed dipterocarp forest", "混交フタバガキ林", "混合龍腦香林"), right: L("Logging and clearance for plantations such as oil palm", "伐採と、アブラヤシなどのプランテーションのための開墾", "砍伐，以及為油棕等種植園而清理土地") }
+        ],
+        explanation: L("Over-exploitation drove the extinctions of the two species, while habitat conversion drove the loss of the forest ecosystem.", "過剰な利用が二種の絶滅を、土地利用の転換が森林生態系の消失を引き起こしました。", "過度開發導致兩個物種滅絕，而生境轉換則導致森林生態系統喪失。")
+      },
+      {
+        id: "a4-2-q07", type: "short", ahl: false, difficulty: 2, ref: "A4.2.4", paper: "2", commandTerm: "Explain", marks: 3,
+        stem: L("Explain how human activities have led to the loss of mixed dipterocarp forest in Southeast Asia.", "人間の活動が東南アジアの混交フタバガキ林の消失につながった仕組みを説明せよ (Explain)。", "解釋 (Explain) 人類活動如何導致東南亞混合龍腦香林喪失。"),
+        markscheme: [
+          L("Logging of the valuable timber trees", "価値の高い木材となる木の伐採", "砍伐珍貴的木材樹木"),
+          L("Clearance of forest for oil palm and other plantations/farmland (driven by demand for products, an indirect cause)", "アブラヤシなどのプランテーションや農地のための森林の開墾（製品の需要が背景にある間接的な原因）", "為油棕和其他種植園／農地而清除森林（受產品需求推動，是間接原因）"),
+          L("Fires set to clear land spread into forest / roads open up forest to settlers and loggers", "土地を開くための火入れが森に広がる／道路が入植者や伐採者に森を開く", "為清理土地而放的火蔓延入森林／道路令移民和伐木者進入森林")
+        ],
+        modelAnswer: L("Forest has been logged for valuable timber and cleared for oil palm plantations and farmland, driven by demand for palm oil and timber. Fires set to clear land can spread into forest, and new roads let loggers and settlers in.", "価値の高い木材のために伐採され、アブラヤシのプランテーションや農地のために開墾された。パーム油や木材の需要が背景にある。土地を開く火が森に広がり、新しい道路が伐採者や入植者を呼び込む。", "森林因珍貴木材而被砍伐，並為油棕種植園和農地而被清除，背後是對棕櫚油和木材的需求。為清理土地而放的火可蔓延入森林，新道路讓伐木者和移民進入。")
+      },
+      {
+        id: "a4-2-q08", type: "short", ahl: false, difficulty: 3, ref: "A4.2.5", paper: "1B", commandTerm: "Calculate", marks: 4,
+        stem: L("A wetland bird count was done by the same method in the same place in two years (illustrative data). (a) State the species richness in each year. (b) Calculate the percentage change in the total number of birds. (c) Explain why repeated surveys are needed to provide evidence of a biodiversity crisis.", "湿地の鳥の個体数調査が、同じ場所で同じ方法により二つの年に行われた（例示データ）。(a) 各年の種の豊富さを答えよ (State)。(b) 鳥の総数の変化率（％）を計算せよ (Calculate)。(c) 生物多様性の危機の証拠を得るために繰り返しの調査が必要な理由を説明せよ (Explain)。", "同一濕地在兩個年份以相同方法進行了鳥類計數（示例數據）。(a) 說出 (State) 每年的物種豐富度。(b) 計算 (Calculate) 鳥類總數的百分比變化。(c) 解釋 (Explain) 為何需要重複調查才能提供生物多樣性危機的證據。"),
+        data: L(
+          `<table><tr><th>Species</th><th>Year 1: number counted</th><th>Year 2: number counted</th></tr><tr><td>A</td><td>40</td><td>12</td></tr><tr><td>B</td><td>35</td><td>30</td></tr><tr><td>C</td><td>25</td><td>28</td></tr><tr><td>D</td><td>10</td><td>2</td></tr><tr><td>E</td><td>5</td><td>0</td></tr></table>`,
+          `<table><tr><th>種</th><th>1年目：数えた数</th><th>2年目：数えた数</th></tr><tr><td>A</td><td>40</td><td>12</td></tr><tr><td>B</td><td>35</td><td>30</td></tr><tr><td>C</td><td>25</td><td>28</td></tr><tr><td>D</td><td>10</td><td>2</td></tr><tr><td>E</td><td>5</td><td>0</td></tr></table>`,
+          `<table><tr><th>物種</th><th>第 1 年：計得數目</th><th>第 2 年：計得數目</th></tr><tr><td>A</td><td>40</td><td>12</td></tr><tr><td>B</td><td>35</td><td>30</td></tr><tr><td>C</td><td>25</td><td>28</td></tr><tr><td>D</td><td>10</td><td>2</td></tr><tr><td>E</td><td>5</td><td>0</td></tr></table>`
+        ),
+        markscheme: [
+          L("(a) Year 1: 5 species; Year 2: 4 species", "(a) 1年目：5種、2年目：4種", "(a) 第 1 年：5 個物種；第 2 年：4 個物種"),
+          L("(b) Totals 115 and 72", "(b) 合計は115と72", "(b) 總數 115 和 72"),
+          L("(b) (72 − 115) ÷ 115 × 100 = −37.4% (a decrease of about 37%)", "(b) (72 − 115) ÷ 115 × 100 = −37.4％（約37％の減少）", "(b) (72 − 115) ÷ 115 × 100 = −37.4%（減少約 37%）"),
+          L("(c) One survey shows only the present state; repeating it with the same method shows change over time in richness/evenness (and numbers)", "(c) 一回の調査は現在の状態しか示さない。同じ方法で繰り返すと、豊富さ・均等度（と個体数）の時間的な変化が分かる", "(c) 一次調查只顯示現況；用相同方法重複調查才能顯示豐富度／均勻度（和數量）隨時間的變化")
+        ],
+        modelAnswer: L("(a) 5 species in year 1 and 4 in year 2. (b) Totals are 115 and 72, so the change is (72 − 115) ÷ 115 × 100 = −37.4%, a fall of about 37%. (c) A single survey only tells you what is there at one time. Repeating the survey with the same method shows whether richness, evenness and numbers are changing.", "(a) 1年目は5種、2年目は4種。(b) 合計は115と72なので、変化率は (72 − 115) ÷ 115 × 100 = −37.4％で、約37％の減少。(c) 一回の調査はその時点の状況しか示さない。同じ方法で繰り返せば、豊富さ、均等度、個体数が変化しているかが分かる。", "(a) 第 1 年有 5 個物種，第 2 年有 4 個。(b) 總數為 115 和 72，所以變化是 (72 − 115) ÷ 115 × 100 = −37.4%，減少約 37%。(c) 單次調查只顯示某一時間有甚麼。用相同方法重複調查，才能顯示豐富度、均勻度和數量是否正在改變。")
+      },
+      {
+        id: "a4-2-q09", type: "short", ahl: false, difficulty: 2, ref: "A4.2.5", paper: "2", commandTerm: "Evaluate", marks: 4,
+        stem: L("Evaluate the use of data collected by citizen scientists as evidence of changes in biodiversity.", "市民科学者が集めたデータを、生物多様性の変化の証拠として使うことを評価せよ (Evaluate)。", "評價 (Evaluate) 把公民科學家收集的數據用作生物多樣性變化證據的做法。"),
+        markscheme: [
+          L("Strength: many observers can cover many places and years / large amounts of data at low cost", "長所：多くの観察者が多くの場所と年を調べられる／低コストで大量のデータ", "優點：眾多觀察者可涵蓋許多地點和年份／以低成本得到大量數據"),
+          L("Strength: can show long-term change/ increases public engagement in science", "長所：長期的な変化を示せる／科学への市民の関与が高まる", "優點：可顯示長期變化／提升公眾對科學的參與"),
+          L("Limitation: observers vary in skill, so species may be misidentified", "短所：観察者の技能に差があり、種を誤って同定するかもしれない", "限制：觀察者的技能參差，可能誤認物種"),
+          L("Limitation: methods may differ / bias towards accessible places or well-known species, so data need checking/validating against expert surveys; verification needs published, peer-reviewed methodology", "短所：方法が異なる／行きやすい場所や有名な種に偏る。専門家の調査と照らして確認する必要がある。検証には出版された査読付きの方法が必要", "限制：方法可能不同／偏向容易到達的地方或知名物種，所以數據需對照專家調查來檢查／驗證；驗證需要已發表並經同行評審的方法")
+        ],
+        modelAnswer: L("Citizen scientists can cover many sites and years cheaply, so they provide large data sets that can show long-term change. However, they differ in skill, so species may be misidentified, and methods can vary or be biased towards easy-to-reach places or familiar species. The data are most useful when the methods are standardized and checked against expert surveys.", "市民科学者は多くの場所と年を安く調べられるので、長期的な変化を示せる大規模なデータが得られる。しかし技能に差があり種を誤って同定することがあり、方法が異なったり、行きやすい場所や身近な種に偏ったりする。方法を標準化し、専門家の調査と照らして確認すれば最も役立つ。", "公民科學家可以低成本涵蓋許多地點和年份，提供能顯示長期變化的大量數據。但他們的技能參差，可能誤認物種，方法也可能不同，或偏向容易到達的地方或熟悉的物種。當方法標準化，並對照專家調查檢查時，這些數據最有用。")
+      },
+      {
+        id: "a4-2-q10", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.5", paper: "1A",
+        stem: L("Why is evidence for a biodiversity crisis usually taken from published, peer-reviewed sources?", "生物多様性の危機の証拠が、通常、出版された査読付きの情報源から取られるのはなぜか。", "為何生物多樣性危機的證據通常取自已發表、經同行評審的來源？"),
+        options: [L("The methodology can be checked by other scientists, so the evidence is verifiable", "他の科学者が方法を確認でき、証拠が検証可能になるから", "其他科學家可以檢查方法，使證據可被驗證"), L("Published results are always correct", "出版された結果は常に正しいから", "已發表的結果必然正確"), L("It avoids the need to repeat surveys", "調査を繰り返す必要がなくなるから", "這樣就無須重複調查"), L("Only experts are allowed to count species", "専門家だけが種を数えられるから", "只有專家才可計數物種")],
+        answer: 0,
+        explanation: L("Peer review and publication let others check the methods and judge the data. B overstates it: published work can still contain errors, which is why checking matters. C and D are not true.", "査読と出版により、他の人が方法を確認しデータを判断できます。Bは言い過ぎで、出版された研究にも誤りはあり得るので確認が重要です。CとDは正しくありません。", "同行評審和發表讓其他人可檢查方法並判斷數據。B 說得太絕對：已發表的工作仍可能有錯誤，所以檢查才重要。C 和 D 並不正確。")
+      },
+      {
+        id: "a4-2-q11", type: "short", ahl: false, difficulty: 2, ref: "A4.2.4", paper: "1B", commandTerm: "Describe", marks: 4,
+        stem: L("The graph shows the area of a tropical forest as a percentage of its area in 1980 (illustrative data). (a) Describe the trend. (b) Calculate the mean loss in percentage points per decade between 1980 and 2020. (c) Suggest two human activities that could explain the trend.", "グラフは、熱帯林の面積を1980年の面積に対する割合で示す（例示データ）。(a) 傾向を述べよ (Describe)。(b) 1980年から2020年の十年あたりの平均減少（パーセントポイント）を計算せよ (Calculate)。(c) この傾向を説明し得る人間の活動を二つ示せ (Suggest)。", "圖表顯示某熱帶森林面積佔 1980 年面積的百分比（示例數據）。(a) 描述 (Describe) 趨勢。(b) 計算 (Calculate) 1980 年至 2020 年間每十年平均損失的百分點。(c) 提出 (Suggest) 兩項可解釋這趨勢的人類活動。"),
+        data: L(
+          forestSvg("Year", "Forest area (% of 1980)", "Forest area falling from 100 to 50 percent between 1980 and 2020"),
+          forestSvg("年", "森林面積（1980年に対する％）", "1980年から2020年に森林面積が100％から50％に減少"),
+          forestSvg("年份", "森林面積（佔 1980 年的 %）", "森林面積由 1980 年的 100% 降至 2020 年的 50%")
+        ),
+        markscheme: [
+          L("(a) Forest area falls continuously from 100% to 50% (1980–2020)", "(a) 森林面積は100％から50％へ、継続的に減少している（1980〜2020年）", "(a) 森林面積持續下降，由 100% 降至 50%（1980–2020 年）"),
+          L("The fall is steady, about 11–14 percentage points in each decade (e.g. use of data values: 100 to 50)", "減少は安定しており、各十年で約11〜14パーセントポイント（データの値を引用：100から50）", "下降穩定，每個十年約 11–14 個百分點（引用數據值：由 100 降至 50）"),
+          L("(b) (100 − 50) ÷ 4 decades = 12.5 percentage points per decade", "(b) (100 − 50) ÷ 4 十年 = 十年あたり12.5パーセントポイント", "(b) (100 − 50) ÷ 4 個十年 = 每十年 12.5 個百分點"),
+          L("(c) Any two: logging; clearance for agriculture/plantations; urbanization/roads; fires to clear land", "(c) 次のうち二つ：伐採、農地／プランテーションのための開墾、都市化／道路、土地を開くための火入れ", "(c) 任何兩項：砍伐；為農業／種植園開墾；城市化／道路；為清理土地而放火")
+        ],
+        modelAnswer: L("(a) The forest area falls steadily from 100% to 50% over the 40 years. (b) (100 − 50) ÷ 4 = 12.5 percentage points per decade. (c) Logging for timber and clearance of land for plantations or farming.", "(a) 森林面積は40年間で100％から50％へ着実に減少している。(b) (100 − 50) ÷ 4 = 十年あたり12.5パーセントポイント。(c) 木材のための伐採と、プランテーションや農地のための開墾。", "(a) 森林面積在 40 年間由 100% 穩步降至 50%。(b) (100 − 50) ÷ 4 = 每十年 12.5 個百分點。(c) 為取木材而砍伐，以及為種植園或農耕而開墾土地。")
+      },
+      {
+        id: "a4-2-q12", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.6", paper: "1A",
+        stem: L("A ship's cargo accidentally carries a snake to an island that has no native snakes. Many ground-nesting birds are eaten and some disappear. Which cause of the biodiversity crisis does this show?", "船の貨物にまぎれて、在来のヘビがいない島に偶然ヘビが運ばれた。地上で営巣する多くの鳥が食べられ、一部は姿を消した。これは生物多様性の危機のどの原因を示しているか。", "一艘船的貨物意外地把一條蛇帶到沒有本地蛇的島上。許多在地面築巢的鳥被吃掉，部分消失。這顯示了生物多樣性危機的哪項成因？"),
+        options: [L("Urbanization", "都市化", "城市化"), L("Spread of invasive alien species due to global transport", "世界的な輸送による外来種の拡散", "全球運輸令外來入侵物種擴散"), L("Pollution by fertilizer runoff", "肥料の流出による汚染", "肥料徑流造成污染"), L("Over-exploitation by hunting", "狩猟による過剰な利用", "獵捕造成的過度開發")],
+        answer: 1,
+        explanation: L("The snake is a non-native species moved by global transport and it preys on native birds that have no defence against it. The other causes are not involved in the scenario.", "ヘビは世界的な輸送で運ばれた非在来種で、それに対する防御をもたない在来の鳥を捕食します。他の原因はこの状況に関係しません。", "蛇是由全球運輸帶來的非本地物種，並捕食對牠毫無防禦能力的本地鳥類。情景中不涉及其他成因。")
+      },
+      {
+        id: "a4-2-q13", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.7", paper: "1A",
+        stem: L("Which of these is an example of ex situ conservation?", "次のうち、生息域外保全の例はどれか。", "以下哪個是非原地保育的例子？"),
+        options: [L("Controlling invasive plants inside a national park", "国立公園内での外来植物の駆除", "在國家公園內控制入侵植物"), L("Freezing seeds of endangered plants in a seed bank", "絶滅危惧植物の種子を種子バンクで凍結保存する", "把瀕危植物的種子冷凍貯存在種子庫"), L("Reintroducing wolves to restore a natural ecosystem", "自然の生態系を回復させるためにオオカミを再導入する", "重新引入狼以恢復天然生態系統"), L("Banning hunting in a nature reserve", "自然保護区での狩猟を禁止する", "在自然保護區內禁止狩獵")],
+        answer: 1,
+        explanation: L("A seed bank stores genetic material outside the natural habitat. A, C and D all protect species or ecosystems in their natural habitat (in situ; C is rewilding).", "種子バンクは自然の生息地の外で遺伝物質を保存します。A、C、Dはいずれも自然の生息地で種や生態系を守るもの（生息域内。Cは再野生化）です。", "種子庫在天然生境之外貯存遺傳物質。A、C、D 都是在天然生境中保護物種或生態系統（原地；C 是重新野化）。")
+      },
+      {
+        id: "a4-2-q14", type: "match", ahl: false, difficulty: 1, ref: "A4.2.7", paper: "1A",
+        stem: L("Match each conservation approach to its description.", "各保全方法を説明と結び付けよ。", "把每種保育方法配對其說明。"),
+        pairs: [
+          { left: L("In situ conservation", "生息域内保全", "原地保育"), right: L("Protecting species in their natural habitat, e.g. managing a nature reserve", "自然保護区の管理など、自然の生息地で種を守ること", "在天然生境中保護物種，例如管理自然保護區") },
+          { left: L("Ex situ conservation", "生息域外保全", "非原地保育"), right: L("Protecting species outside their habitat, e.g. in zoos and botanic gardens", "動物園や植物園など、生息地の外で種を守ること", "在生境之外保護物種，例如在動物園和植物園") },
+          { left: L("Rewilding", "再野生化", "重新野化"), right: L("Restoring an area to a more natural state, e.g. reintroducing missing species", "不在の種を再導入するなど、地域をより自然な状態に戻すこと", "使地區恢復較自然的狀態，例如重新引入已消失的物種") },
+          { left: L("Germ plasm storage", "遺伝資源の保存", "種質貯存"), right: L("Keeping seeds or tissue alive in seed banks or tissue banks", "種子バンクや組織バンクで種子や組織を生きたまま保つこと", "在種子庫或組織庫中保存有活力的種子或組織") }
+        ],
+        explanation: L("These are the approaches the guide asks you to include; reclamation of degraded ecosystems is a fifth.", "ガイドが含めるよう求めている方法です。劣化した生態系の再生が五つ目です。", "這些是課程指引要求你包括的方法；復原退化的生態系統是第五種。")
+      },
+      {
+        id: "a4-2-q15", type: "short", ahl: false, difficulty: 3, ref: "A4.2.7", paper: "2", commandTerm: "Discuss", marks: 4,
+        stem: L("Discuss why several approaches to conservation are needed, rather than one.", "一つではなく複数の保全のアプローチが必要な理由を論述せよ (Discuss)。", "論述 (Discuss) 為何保育需要多種方法，而不是只用一種。"),
+        markscheme: [
+          L("No single approach is sufficient by itself; different species require different measures", "単独で十分なアプローチはなく、種によって必要な対策が異なる", "沒有單一方法本身足夠；不同物種需要不同措施"),
+          L("In situ conservation / reserves protect whole ecosystems and interactions, but need land and management", "生息域内保全／保護区は生態系全体と相互作用を守るが、土地と管理が必要", "原地保育／保護區保護整個生態系統及其相互作用，但需要土地和管理"),
+          L("Ex situ (zoos, botanic gardens) can breed species whose habitat is lost or save very rare species, but populations may lose genetic diversity or adapt to captivity", "生息域外（動物園、植物園）は、生息地を失った種や非常に希少な種を繁殖させられるが、遺伝的多様性を失ったり飼育環境に適応したりする恐れがある", "非原地（動物園、植物園）可繁殖生境已喪失的物種或拯救極稀有物種，但種羣可能失去遺傳多樣性或適應圈養環境"),
+          L("Seed/tissue banks store genetic diversity cheaply in little space but cannot protect habitats; rewilding/reclamation restore damaged ecosystems", "種子・組織バンクは小さな場所に安く遺伝的多様性を保存できるが生息地は守れない。再野生化・再生は損なわれた生態系を回復させる", "種子／組織庫能以低成本和小空間貯存遺傳多樣性，但不能保護生境；重新野化／復原則恢復受損生態系統")
+        ],
+        modelAnswer: L("Different species need different measures, so no single approach is enough. Reserves protect whole ecosystems in situ but need land and management. Zoos and botanic gardens can breed species that have lost their habitat, but captive populations may lose genetic diversity. Seed and tissue banks store genetic material cheaply but cannot protect habitat, and rewilding or reclamation restores damaged ecosystems. Used together, they cover each other's weaknesses.", "種によって必要な対策が異なるので、単独のアプローチでは足りない。保護区は生態系全体を生息域内で守るが、土地と管理が必要である。動物園や植物園は生息地を失った種を繁殖させられるが、飼育個体群は遺伝的多様性を失うことがある。種子・組織バンクは遺伝物質を安く保存できるが生息地は守れず、再野生化や再生は損なわれた生態系を回復させる。組み合わせることで互いの弱点を補う。", "不同物種需要不同措施，所以單一方法並不足夠。保護區在原地保護整個生態系統，但需要土地和管理。動物園和植物園可繁殖失去生境的物種，但圈養種羣可能失去遺傳多樣性。種子和組織庫能低成本貯存遺傳物質，但不能保護生境；重新野化或復原則恢復受損生態系統。配合使用可以互補各自的弱點。")
+      },
+      {
+        id: "a4-2-q16", type: "short", ahl: false, difficulty: 2, ref: "A4.2.8", paper: "2", commandTerm: "Explain", marks: 3,
+        stem: L("Explain the rationale for focusing conservation efforts on EDGE species.", "EDGE 種に保全の努力を集中させる根拠を説明せよ (Explain)。", "解釋 (Explain) 為何要把保育工作集中在 EDGE 物種上。"),
+        markscheme: [
+          L("EDGE = evolutionarily distinct (few close relatives) and globally endangered (high risk of extinction)", "EDGE ＝進化的に独特（近縁種が少ない）かつ地球規模で絶滅の危機にある（絶滅の危険が高い）", "EDGE = 進化獨特（近親很少）且全球瀕危（滅絕風險高）"),
+          L("Losing such a species would remove a unique branch of the tree of life / unique genetic diversity for ever", "そのような種を失うと、系統樹の独自の枝／独自の遺伝的多様性が永久に失われる", "失去這類物種，會令生命之樹的獨特分支／獨特的遺傳多樣性永遠消失"),
+          L("Resources are limited, so targeting these species saves the most evolutionary history/biodiversity per unit of effort", "資源は限られているので、これらの種に絞ると、努力あたりで最も多くの進化の歴史／生物多様性を守れる", "資源有限，所以針對這些物種，每單位努力可保住最多的進化歷史／生物多樣性")
+        ],
+        modelAnswer: L("EDGE species are evolutionarily distinct, with few close relatives, and globally endangered. If one goes extinct, a unique branch of the tree of life and its genetic diversity is lost for ever. Since money and time are limited, focusing on these species saves the most evolutionary history for the effort spent.", "EDGE 種は進化的に独特で近縁種が少なく、地球規模で絶滅の危機にある。絶滅すると、系統樹の独自の枝とその遺伝的多様性が永久に失われる。お金と時間は限られているので、これらの種に集中すれば、努力に対して最も多くの進化の歴史を守れる。", "EDGE 物種在進化上獨特，近親很少，並且全球瀕危。若其中一個滅絕，生命之樹上獨特的分支及其遺傳多樣性便永遠消失。由於金錢和時間有限，集中處理這些物種，可以用所花的努力保住最多的進化歷史。")
+      },
+      {
+        id: "a4-2-q17", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.8", paper: "1A",
+        stem: L("Each species below is critically endangered. Which one would the EDGE programme most likely give the highest priority?", "以下の種はいずれも深刻な絶滅の危機にある。EDGE 計画が最も高い優先順位を与える可能性が高いのはどれか。", "以下每個物種都是極危。EDGE 計劃最有可能給予哪一個最高優先？"),
+        options: [L("A species in a genus with 20 other similar species", "他に20種の似た種がいる属の一種", "屬內有另外 20 個相似物種的一個物種"), L("The only living species in its family, with no close relatives", "近縁種がなく、その科で唯一の現生種", "在其科中唯一現存、沒有近親的物種"), L("A common species that is not threatened", "絶滅の危機にない普通種", "不受威脅的常見物種"), L("A species with many close relatives that are also common", "近縁種が多く、それらも普通種である種", "有許多近親、而近親也很常見的物種")],
+        answer: 1,
+        explanation: L("EDGE combines evolutionary distinctiveness and endangerment. B is both. A is endangered but has many relatives, so less evolutionary history would be lost; C and D are not threatened or distinct.", "EDGE は進化的な独自性と絶滅の危機を組み合わせます。Bは両方を満たします。Aは危機にあるものの近縁種が多く、失われる進化の歴史は少なくなります。CとDは危機にも独特でもありません。", "EDGE 結合進化獨特性和瀕危程度。B 兩者兼備。A 瀕危但有許多近親，所失去的進化歷史較少；C 和 D 既不受威脅也不獨特。")
+      },
+      {
+        id: "a4-2-q18", type: "short", ahl: false, difficulty: 3, ref: "A4.2.8", paper: "2", commandTerm: "Discuss", marks: 4,
+        stem: L("A conservation group has money to save only one of two species: a large, popular mammal that is not evolutionarily distinct, or a small, unattractive reptile that is evolutionarily distinct and equally endangered. Discuss the issues involved in deciding which to prioritize.", "ある保全団体は、二種のうち一種しか救う資金がない。進化的に独特ではない大型の人気のある哺乳類か、進化的に独特で同じくらい絶滅の危機にある、小さく見栄えのしない爬虫類である。どちらを優先するかを決めるときの問題点を論述せよ (Discuss)。", "一個保育團體只有足夠金錢拯救兩個物種之一：一種在進化上並不獨特、體型大而受歡迎的哺乳動物，或一種在進化上獨特、同樣瀕危而細小不起眼的爬行動物。論述 (Discuss) 決定優先保育哪一個時所涉及的問題。"),
+        markscheme: [
+          L("Evolutionary argument: the distinct reptile represents a unique lineage/genetic diversity that would be lost for ever", "進化の観点：独特な爬虫類は独自の系統／遺伝的多様性を代表し、それが永久に失われる", "進化論點：獨特的爬行動物代表獨特的譜系／遺傳多樣性，會永遠消失"),
+          L("Social/economic argument: the popular mammal may attract more donations/public support and ecotourism income", "社会的・経済的観点：人気のある哺乳類は、より多くの寄付、市民の支持、エコツーリズムの収入を呼ぶかもしれない", "社會／經濟論點：受歡迎的哺乳動物可能吸引更多捐款／公眾支持和生態旅遊收入"),
+          L("Environmental argument: the role of each species in its ecosystem (e.g. a large mammal's effect on habitat) should be considered", "環境の観点：各種が生態系で果たす役割（たとえば大型哺乳類が生息地に与える影響）を考慮すべき", "環境論點：應考慮每個物種在其生態系統中的作用（例如大型哺乳動物對生境的影響）"),
+          L("There are ethical, cultural and political implications, so the decision needs debate with local people and experts; no single answer is correct", "倫理的、文化的、政治的な意味があるので、地域の人々や専門家との議論が必要で、唯一の正解はない", "涉及倫理、文化和政治含意，所以需要與當地居民和專家辯論；沒有唯一正確的答案")
+        ],
+        modelAnswer: L("The reptile is evolutionarily distinct, so its loss would remove a unique part of the tree of life, which supports saving it. The popular mammal might attract more public support and tourism money, and may be important in its habitat. There are also ethical, cultural, political and economic implications, such as the views of local communities. So the decision needs debate, and there is no single right answer.", "爬虫類は進化的に独特なので、失うと系統樹の独自の部分が失われ、救うことを支持する根拠になる。人気のある哺乳類は市民の支持や観光収入を集めるかもしれず、生息地で重要な役割をもつこともある。地域社会の意見など、倫理的、文化的、政治的、経済的な意味もある。したがって決定には議論が必要で、唯一の正解はない。", "爬行動物在進化上獨特，所以失去牠會令生命之樹失去獨特的一部分，這支持拯救牠。受歡迎的哺乳動物可能吸引更多公眾支持和旅遊收入，也可能在其生境中很重要。此外還有倫理、文化、政治和經濟含意，例如當地社區的意見。所以這個決定需要辯論，沒有唯一正確的答案。")
+      }
+    ]
   });
 })();

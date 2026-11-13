@@ -34,39 +34,39 @@
   var T = {
     title: L("Water: polarity, hydrogen bonds and properties", "水：極性・水素結合・性質", "水：極性、氫鍵與性質"),
     tabs: {
-      structure: L("Polarity & H-bonds", "極性と水素結合", "極性與氫鍵"),
-      cohesion: L("Cohesion", "凝集力", "內聚力"),
-      adhesion: L("Adhesion", "付着力", "附著力"),
-      solvent: L("Solvent", "溶媒", "溶劑"),
-      air: L("Water vs air", "水と空気", "水與空氣")
+      structure: L("Polarity & H-bonds", "極性と水素結合 (polarity)", "極性與氫鍵 (polarity)"),
+      cohesion: L("Cohesion", "凝集力 (cohesion)", "內聚力 (cohesion)"),
+      adhesion: L("Adhesion", "付着力 (adhesion)", "附著力 (adhesion)"),
+      solvent: L("Solvent", "溶媒 (solvent)", "溶劑 (solvent)"),
+      air: L("Water vs air", "水と空気 (water vs air)", "水與空氣 (water vs air)")
     },
     charges: L("Show partial charges (δ+ / δ−)", "部分電荷 (δ+ / δ−) を表示", "顯示部分電荷 (δ+ / δ−)"),
     bonds: L("Show hydrogen bonds", "水素結合を表示", "顯示氫鍵"),
-    legCov: L("covalent bond (inside a molecule)", "共有結合 (分子の内部)", "共價鍵 (分子內部)"),
-    legH: L("hydrogen bond (between molecules)", "水素結合 (分子の間)", "氫鍵 (分子之間)"),
-    legAd: L("adhesion: water to wall", "付着：水と壁", "附著：水與壁"),
-    legCo: L("cohesion: water to water", "凝集：水と水", "內聚：水與水"),
+    legCov: L("covalent bond (inside a molecule)", "共有結合 (covalent bond)：分子の内部", "共價鍵 (covalent bond)：分子內部"),
+    legH: L("hydrogen bond (between molecules)", "水素結合 (hydrogen bond)：分子の間", "氫鍵 (hydrogen bond)：分子之間"),
+    legAd: L("adhesion: water to wall", "付着力 (adhesion)：水と壁", "附著力 (adhesion)：水與壁"),
+    legCo: L("cohesion: water to water", "凝集力 (cohesion)：水と水", "內聚力 (cohesion)：水與水"),
     notScale: L("Qualitative model, not to scale.", "定性的なモデルで、縮尺は正確ではありません。", "定性模型，並非按比例繪製。"),
     sub: {
       xylem: L("Xylem (tension)", "木部 (張力)", "木質部 (張力)"),
-      surface: L("Surface tension", "表面張力", "表面張力"),
+      surface: L("Surface tension", "表面張力 (surface tension)", "表面張力 (surface tension)"),
       wall: L("At a wall", "壁のそば", "在壁旁"),
-      capillary: L("Capillary rise", "毛細管上昇", "毛細管上升"),
-      nacl: L("Salt (ions)", "塩 (イオン)", "鹽 (離子)"),
-      glucose: L("Glucose (polar)", "グルコース (極性)", "葡萄糖 (極性)"),
-      oil: L("Oil (non-polar)", "油 (無極性)", "油 (非極性)")
+      capillary: L("Capillary rise", "毛細管現象 (capillary action)", "毛細管作用 (capillary action)"),
+      nacl: L("Salt (ions)", "塩 (イオン (ions))", "鹽 (離子 (ions))"),
+      glucose: L("Glucose (polar)", "グルコース (極性 (polar))", "葡萄糖 (極性 (polar))"),
+      oil: L("Oil (non-polar)", "油 (無極性 (non-polar))", "油 (非極性 (non-polar))")
     },
     dissolve: L("Add water", "水を加える", "加水"),
     reset: L("Reset crystal", "結晶に戻す", "還原晶體"),
     cap: {
       structure: L(
         "<strong>Polar:</strong> oxygen pulls the shared electrons, so O is slightly negative (δ−) and each H slightly positive (δ+). A <strong>hydrogen bond</strong> is the attraction between the δ+ H of one molecule and the δ− O of a different molecule.",
-        "<strong>極性：</strong>酸素が共有電子を引き寄せるため、O はわずかに負 (δ−)、各 H はわずかに正 (δ+) になります。<strong>水素結合 (hydrogen bond)</strong> は、ある分子の δ+ の H と別の分子の δ− の O の間の引力です。",
-        "<strong>極性：</strong>氧吸引共用電子，所以 O 略帶負電 (δ−)，每個 H 略帶正電 (δ+)。<strong>氫鍵 (hydrogen bond)</strong> 是一個分子 δ+ 的 H 與另一分子 δ− 的 O 之間的吸引力。"),
+        "<strong>極性 (polar)：</strong>酸素が共有電子を引き寄せるため、O はわずかに負 (δ−)、各 H はわずかに正 (δ+) になります。<strong>水素結合 (hydrogen bond)</strong> は、ある分子の δ+ の H と別の分子の δ− の O の間の引力です。",
+        "<strong>極性 (polar)：</strong>氧吸引共用電子，所以 O 略帶負電 (δ−)，每個 H 略帶正電 (δ+)。<strong>氫鍵 (hydrogen bond)</strong> 是一個分子 δ+ 的 H 與另一分子 δ− 的 O 之間的吸引力。"),
       xylem: L(
         "<strong>Cohesion in xylem:</strong> evaporation from leaves pulls the water upwards (tension). Hydrogen bonds hold the water molecules together, so the column is pulled up without breaking.",
-        "<strong>木部での凝集力：</strong>葉からの蒸発が水を上へ引っ張ります (張力)。水素結合が水分子をつなぎとめるので、水の柱は途切れずに引き上げられます。",
-        "<strong>木質部中的內聚力：</strong>葉片蒸發水分，把水向上拉 (張力)。氫鍵把水分子連在一起，所以水柱被拉上而不會斷裂。"),
+        "<strong>木部 (xylem) での凝集力：</strong>葉からの蒸発が水を上へ引っ張ります (張力)。水素結合が水分子をつなぎとめるので、水の柱は途切れずに引き上げられます。",
+        "<strong>木質部 (xylem) 中的內聚力：</strong>葉片蒸發水分，把水向上拉 (張力)。氫鍵把水分子連在一起，所以水柱被拉上而不會斷裂。"),
       surface: L(
         "<strong>Surface tension:</strong> surface molecules are pulled sideways and downwards by hydrogen bonds, but not upwards. The surface acts like a thin skin that can support a pond skater.",
         "<strong>表面張力：</strong>水面の分子は水素結合で横と下に引かれますが、上には引かれません。水面は薄い膜のようにはたらき、アメンボを支えられます。",
@@ -81,37 +81,37 @@
         "<strong>毛細管作用：</strong>附著力沿狹窄空間的壁把水向上拉，內聚力把其餘的水拉上。空間越窄，水升得越高 (土壤、植物細胞壁)。"),
       nacl: L(
         "<strong>Ions dissolve:</strong> δ− oxygen atoms are attracted to Na⁺ and δ+ hydrogen atoms to Cl⁻. Water molecules surround each ion and keep the ions apart.",
-        "<strong>イオンは溶ける：</strong>δ− の酸素は Na⁺ に、δ+ の水素は Cl⁻ に引かれます。水分子が各イオンを取り囲み、イオンどうしを引き離しておきます。",
-        "<strong>離子溶解：</strong>δ− 的氧吸引 Na⁺，δ+ 的氫吸引 Cl⁻。水分子包圍每個離子，並使離子彼此分開。"),
+        "<strong>イオン (ion) は溶ける：</strong>δ− の酸素は Na⁺ に、δ+ の水素は Cl⁻ に引かれます。水分子が各イオンを取り囲み、イオンどうしを引き離しておきます。",
+        "<strong>離子 (ion) 溶解：</strong>δ− 的氧吸引 Na⁺，δ+ 的氫吸引 Cl⁻。水分子包圍每個離子，並使離子彼此分開。"),
       glucose: L(
         "<strong>Polar molecules dissolve:</strong> glucose has polar –OH groups. Water forms hydrogen bonds with them, so glucose is hydrophilic and dissolves.",
-        "<strong>極性分子は溶ける：</strong>グルコースには極性のある –OH 基があります。水がこれらと水素結合をつくるので、グルコースは親水性で溶けます。",
-        "<strong>極性分子溶解：</strong>葡萄糖有極性的 –OH 基團。水與它們形成氫鍵，所以葡萄糖是親水的並能溶解。"),
+        "<strong>極性分子 (polar molecule) は溶ける：</strong>グルコースには極性のある –OH 基があります。水がこれらと水素結合をつくるので、グルコースは親水性で溶けます。",
+        "<strong>極性分子 (polar molecule) 溶解：</strong>葡萄糖有極性的 –OH 基團。水與它們形成氫鍵，所以葡萄糖是親水的並能溶解。"),
       oil: L(
         "<strong>Non-polar molecules do not dissolve:</strong> oil has no partial charges for water to attract. Water molecules bond to each other instead, so the oil is hydrophobic and stays together.",
-        "<strong>無極性分子は溶けない：</strong>油には水が引き寄せる部分電荷がありません。水分子は代わりに互いに結合するので、油は疎水性で、ひとかたまりのままです。",
-        "<strong>非極性分子不溶解：</strong>油沒有可供水吸引的部分電荷。水分子轉而彼此結合，所以油是疏水的，並聚在一起。")
+        "<strong>無極性分子 (non-polar molecule) は溶けない：</strong>油には水が引き寄せる部分電荷がありません。水分子は代わりに互いに結合するので、油は疎水性で、ひとかたまりのままです。",
+        "<strong>非極性分子 (non-polar molecule) 不溶解：</strong>油沒有可供水吸引的部分電荷。水分子轉而彼此結合，所以油是疏水的，並聚在一起。")
     },
     labels: {
       pull: L("pull (tension)", "引く力 (張力)", "拉力 (張力)"),
       pullLeaf: L("pull from leaf", "葉からの引力", "來自葉片的拉力"),
-      wall: L("xylem wall", "木部の壁", "木質部壁"),
+      wall: L("xylem wall", "木部 (xylem) の壁", "木質部 (xylem) 壁"),
       cohesionKeeps: L("hydrogen bonds keep the column together", "水素結合が柱をつなぎとめる", "氫鍵使水柱連在一起"),
       air: L("air", "空気", "空氣"),
       water: L("water", "水", "水"),
-      skater: L("pond skater", "アメンボ", "水黽"),
+      skater: L("pond skater", "アメンボ (pond skater)", "水黽 (pond skater)"),
       noUp: L("no water above: no upward pull", "上に水はない：上向きの引力なし", "上方沒有水：沒有向上的拉力"),
-      wallLab: L("cell wall / soil particle", "細胞壁・土壌粒子", "細胞壁／土壤顆粒"),
+      wallLab: L("cell wall / soil particle", "細胞壁・土壌粒子 (cell wall / soil)", "細胞壁／土壤顆粒 (cell wall / soil)"),
       polarSurf: L("polar or charged surface", "極性または電荷をもつ表面", "極性或帶電表面"),
       level: L("water level in beaker", "ビーカーの水面", "燒杯中的水面"),
       wide: L("wide tube", "太い管", "闊管"),
       narrow: L("narrow tube", "細い管", "窄管"),
-      adhUp: L("adhesion pulls up the wall", "付着力が壁に沿って引き上げる", "附著力沿壁向上拉"),
-      cohUp: L("cohesion pulls the rest", "凝集力が残りを引く", "內聚力拉動其餘的水"),
-      crystal: L("salt crystal", "塩の結晶", "鹽晶體"),
+      adhUp: L("adhesion pulls up the wall", "付着力 (adhesion) が壁に沿って引き上げる", "附著力 (adhesion) 沿壁向上拉"),
+      cohUp: L("cohesion pulls the rest", "凝集力 (cohesion) が残りを引く", "內聚力 (cohesion) 拉動其餘的水"),
+      crystal: L("salt crystal", "塩の結晶 (salt crystal)", "鹽晶體 (salt crystal)"),
       attractIon: L("attraction to ion", "イオンへの引力", "對離子的吸引力"),
-      glucose: L("glucose", "グルコース", "葡萄糖"),
-      oil: L("oil (non-polar)", "油 (無極性)", "油 (非極性)"),
+      glucose: L("glucose", "グルコース (glucose)", "葡萄糖 (glucose)"),
+      oil: L("oil (non-polar)", "油 (non-polar)", "油 (non-polar)"),
       noAttract: L("no attraction to oil", "油への引力なし", "對油沒有吸引力"),
       waterBonds: L("water bonds to water", "水は水と結合する", "水與水結合"),
       polarOH: L("polar –OH groups", "極性の –OH 基", "極性 –OH 基團")
@@ -128,7 +128,7 @@
     },
     props: {
       buoyancy: {
-        name: L("Buoyancy", "浮力", "浮力"),
+        name: L("Buoyancy", "浮力 (buoyancy)", "浮力 (buoyancy)"),
         water: L("high", "大きい", "大"), air: L("very low", "非常に小さい", "極小"),
         text: L("Water is much denser than air, so it supports a body. Aquatic animals need less skeleton to hold up their weight; land and flying animals need legs or wings.",
           "水は空気よりはるかに密度が高いので、体を支えます。水生動物は体重を支える骨格が少なくてすみ、陸上や空中の動物には脚や翼が必要です。",
@@ -138,7 +138,7 @@
           "環斑海豹：體重由水支撐。黑喉潛鳥：飛行時，翅膀必須提供全部升力。")
       },
       viscosity: {
-        name: L("Viscosity", "粘性", "黏度"),
+        name: L("Viscosity", "粘性 (viscosity)", "黏度 (viscosity)"),
         water: L("high", "大きい", "大"), air: L("low", "小さい", "小"),
         text: L("Water resists movement more than air does, so swimming takes more force and a streamlined body reduces drag.",
           "水は空気より動きに対する抵抗が大きいので、泳ぐにはより大きな力が必要で、流線形の体が抵抗を減らします。",
@@ -148,7 +148,7 @@
           "環斑海豹和黑喉潛鳥：流線型身體減少在水中移動時的阻力。")
       },
       conductivity: {
-        name: L("Thermal conductivity", "熱伝導率", "熱傳導性"),
+        name: L("Thermal conductivity", "熱伝導率 (thermal conductivity)", "熱傳導性 (thermal conductivity)"),
         water: L("high", "大きい", "高"), air: L("low", "小さい", "低"),
         text: L("Water carries heat away from a body much faster than air does, so animals in cold water lose heat quickly and need insulation. Air is a poor conductor.",
           "水は空気よりはるかに速く体から熱を奪うので、冷たい水の中の動物はすばやく熱を失い、断熱が必要です。空気は熱を伝えにくい物質です。",
@@ -158,7 +158,7 @@
           "環斑海豹：厚厚的鯨脂 (blubber) 在冷水中提供隔熱。")
       },
       heat: {
-        name: L("Specific heat capacity", "比熱", "比熱容"),
+        name: L("Specific heat capacity", "比熱 (specific heat capacity)", "比熱容 (specific heat capacity)"),
         water: L("high", "大きい", "大"), air: L("low", "小さい", "小"),
         text: L("A lot of energy is needed to warm water, so the temperature of a lake or sea changes slowly. Aquatic habitats are thermally more stable than air.",
           "水を温めるには多くのエネルギーが必要なので、湖や海の温度はゆっくり変化します。水中の生息場所は、空気中より温度が安定しています。",
@@ -168,8 +168,8 @@
           "水中動物所經歷的溫度變化比陸上動物更小、更慢。")
       }
     },
-    barW: L("Water", "水", "水"),
-    barA: L("Air", "空気", "空氣"),
+    barW: L("Water", "水 (water)", "水 (water)"),
+    barA: L("Air", "空気 (air)", "空氣 (air)"),
     barNote: L("Bars show which is higher, not exact values.", "棒は、どちらが大きいかを示すもので、正確な値ではありません。", "橫條只顯示哪個較高，並非準確數值。")
   };
 
@@ -185,6 +185,22 @@
 
   function txt(x, y, str, size, anchor, weight, fillVar) {
     return '<text x="' + x + '" y="' + y + '" font-size="' + (size || 11) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fillVar ? ' style="fill:' + fillVar + '"' : '') + '>' + str + '</text>';
+  }
+
+  function wrapLines(str, maxEm) {
+    function w(t) { var n = 0; for (var i = 0; i < t.length; i++) n += t.charCodeAt(i) >= 0x3000 ? 1 : 0.56; return n; }
+    var raw = str.match(/\([^)]*\)|[A-Za-z0-9\u2032'.,:;\-\u2013\u2212\/+]+|\s|[^\s]/g) || [], toks = [], lines = [], cur = "";
+    raw.forEach(function (t) { if (t.charAt(0) === "(" && w(t) > maxEm) { t.split(/(\s)/).forEach(function (u) { if (u) toks.push(u); }); } else toks.push(t); });
+    toks.forEach(function (t) {
+      if (/^\s$/.test(t) && !cur) return;
+      if (cur && w(cur + t) > maxEm && !/^\s$/.test(t)) { lines.push(cur.replace(/\s+$/, "")); cur = ""; }
+      cur += t;
+    });
+    if (cur) lines.push(cur.replace(/\s+$/, ""));
+    return lines;
+  }
+  function wrap(x, y, str, size, anchor, weight, fillVar, maxEm) {
+    return wrapLines(str, maxEm).map(function (ln, i) { return txt(x, y + i * (size + 3), ln, size, anchor, weight, fillVar); }).join("");
   }
 
   /* A water molecule: O at (x,y); H1 at angle aim; H2 at aim + 104.5 (SVG angles, y downward). */
@@ -268,15 +284,15 @@
     var links = [[0, 1], [1, 2], [3, 4], [4, 5]];
     s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [90, 90, 90, 90, 90, 90] });
     s += arrow(184, 66, 184, 14, "var(--ink,#0f2029)");
-    s += txt(192, 40, S.t(T.labels.pullLeaf), 10.5, "start", 700);
-    s += txt(184, 294, S.t(T.labels.cohesionKeeps), 10, "middle", 600, "var(--muted,#4d626d)");
+    s += wrap(192, 36, S.t(T.labels.pullLeaf), 10.5, "start", 700, null, 11);
+    s += wrap(184, 288, S.t(T.labels.cohesionKeeps), 10, "middle", 600, "var(--muted,#4d626d)", 28);
     return s + '</svg>';
   }
 
   function sceneSurface(S) {
     var s = svgOpen(360, VB_H, S.t(T.aria.surface));
     s += txt(14, 24, S.t(T.labels.air), 11, "start", 700, "var(--muted,#4d626d)");
-    s += txt(348, 112, S.t(T.labels.noUp), 9.5, "end", 700, "var(--muted,#4d626d)");
+    s += wrap(348, 100, S.t(T.labels.noUp), 9.5, "end", 700, "var(--muted,#4d626d)", 13);
     s += '<path d="M6 134 L132 134 Q140 142 148 134 L154 134 Q162 142 170 134 L176 134 Q184 142 192 134 L354 134" fill="none" stroke="var(--accent,#2547c7)" stroke-width="2" opacity="0.6"/>';
     s += '<ellipse cx="162" cy="104" rx="24" ry="7" fill="var(--c-carbon,#4a5a63)"/><circle cx="135" cy="102" r="5" fill="var(--c-carbon,#4a5a63)"/>';
     [[136, 132], [148, 136], [176, 136], [188, 132]].forEach(function (p) {
@@ -297,7 +313,7 @@
     var AD = "var(--hbond,#2a7de1)", CO = "var(--accent,#2547c7)";
     var s = svgOpen(360, VB_H, S.t(T.aria.wall));
     s += '<rect x="8" y="30" width="38" height="226" fill="var(--surface-2,#e3eaee)" stroke="var(--muted,#4d626d)" stroke-width="2"/>';
-    s += txt(8, 20, S.t(T.labels.wallLab), 10, "start", 700, "var(--muted,#4d626d)");
+    s += wrap(8, 12, S.t(T.labels.wallLab), 10, "start", 700, "var(--muted,#4d626d)", 16);
     var sites = [66, 146, 226];
     sites.forEach(function (y) {
       s += '<circle cx="54" cy="' + y + '" r="10" fill="var(--c-oxygen,#d33a2c)"/>' + txt(54, y + 4, "O", 10, "middle", 800, "#fff");
@@ -334,8 +350,8 @@
     s += arrow(86, 196, 86, 174, INK);
     s += arrow(206, 196, 206, 98, INK);
     s += arrow(158, 156, 158, 118, AD) + arrow(176, 156, 176, 118, AD);
-    s += txt(222, 120, S.t(T.labels.adhUp), 10, "start", 700, AD);
-    s += txt(222, 140, S.t(T.labels.cohUp), 10, "start", 700, WS);
+    s += wrap(212, 112, S.t(T.labels.adhUp), 10, "start", 700, AD, 12);
+    s += wrap(212, 152, S.t(T.labels.cohUp), 10, "start", 700, WS, 12);
     return s + '</svg>';
   }
 
