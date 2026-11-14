@@ -112,6 +112,8 @@
       },
       {
         ref: "B1.1.2–3", ahl: false,
+        widget: "carb-builder",
+        widgetOptions: {tab: 0},
         heading: L("Condensation and hydrolysis", "縮合反応と加水分解", "縮合反應與水解"),
         body: L(
           `<p>Living things make big molecules (<span class="term">macromolecules</span>) from small repeating units. The small unit is a <span class="term">monomer</span>. The big molecule is a <span class="term">polymer</span>.</p>
@@ -144,6 +146,8 @@
       },
       {
         ref: "B1.1.4", ahl: false,
+        widget: "carb-builder",
+        widgetOptions: {tab: 1},
         heading: L("Monosaccharides: form and function", "単糖類の構造と機能", "單糖的結構與功能"),
         body: L(
           `<p><span class="term">Monosaccharides</span> are single sugar units. They are named by the number of carbon atoms: a <strong>pentose</strong> has 5 carbons (for example ribose) and a <strong>hexose</strong> has 6 carbons (for example glucose).</p>
@@ -176,6 +180,8 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
       },
       {
         ref: "B1.1.5", ahl: false,
+        widget: "carb-builder",
+        widgetOptions: {tab: 2},
         heading: L("Polysaccharides for energy storage", "エネルギー貯蔵物質としての多糖類", "多糖作為儲能物質"),
         body: L(
           `<p>Cells store glucose as a polysaccharide: <strong>starch</strong> in plants and <strong>glycogen</strong> in animals. Both are polymers of <strong>α-glucose</strong>, joined by condensation reactions.</p>
@@ -199,6 +205,8 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
       },
       {
         ref: "B1.1.6", ahl: false,
+        widget: "carb-builder",
+        widgetOptions: {tab: 2, poly: 3},
         heading: L("Cellulose: a structural polysaccharide", "セルロース：構造をつくる多糖類", "纖維素：結構多糖"),
         body: L(
           `<p><span class="term">Cellulose</span> is the main substance of plant cell walls. It is a polymer of <strong>β-glucose</strong>.</p>
@@ -265,6 +273,8 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
       },
       {
         ref: "B1.1.9", ahl: false,
+        widget: "lipid-builder",
+        widgetOptions: {tab: 0},
         heading: L("Triglycerides and phospholipids", "トリグリセリドとリン脂質", "甘油三酯與磷脂"),
         body: L(
           `<p>Both are built by <strong>condensation reactions</strong> using <span class="term">glycerol</span> (a small 3-carbon molecule with three –OH groups) and <span class="term">fatty acids</span> (a long hydrocarbon chain with a –COOH group at one end).</p>
@@ -285,6 +295,8 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
       },
       {
         ref: "B1.1.10", ahl: false,
+        widget: "lipid-builder",
+        widgetOptions: {tab: 1},
         heading: L("Saturated, monounsaturated and polyunsaturated fatty acids", "飽和・一価不飽和・多価不飽和脂肪酸", "飽和、單元不飽和及多元不飽和脂肪酸"),
         body: L(
           `<p>Fatty acids differ in the number of carbon–carbon double bonds (C=C) in the hydrocarbon chain.</p>
@@ -358,6 +370,8 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
       },
       {
         ref: "B1.1.12", ahl: false,
+        widget: "lipid-builder",
+        widgetOptions: {tab: 2},
         heading: L("Phospholipid bilayers", "リン脂質二重層", "磷脂雙層"),
         body: L(
           `<p>A phospholipid is <span class="term">amphipathic</span>: one part of the molecule is hydrophilic (the phosphate-containing head) and another part is hydrophobic (the two fatty acid tails).</p>

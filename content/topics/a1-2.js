@@ -60,6 +60,7 @@
       {
         ref: "A1.2.3",
         ahl: false,
+        widget: "mol3d-dna",
         heading: L("The sugar–phosphate backbone", "糖−リン酸の骨格", "糖−磷酸骨架"),
         body: L(
           "<p>Nucleotides join in a chain. The phosphate of one nucleotide bonds to the sugar of the next nucleotide. These are <strong>covalent bonds</strong>, so they are strong.</p>" +

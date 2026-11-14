@@ -160,14 +160,14 @@
         "変性 = 立体構造 (conformation) が失われ、はたらきも失われること。熱は振動を大きくして弱い結合を切る。極端な pH は R基の電荷 (H⁺ の授受) を変え、イオン結合と水素結合を壊す。ペプチド結合は切れない。ふつう不可逆。",
         "變性 = 失去立體形狀 (conformation)，因而失去功能。熱令振動加劇，弱鍵斷開；極端 pH 改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵。肽鍵保持完整。通常是永久的。"];
       root.appendChild(el("div", { class: "wl" }, [
-        el("div", { class: "wl-stage" }, [svg, legend, st, meter, lockEl, NAR ? null : defn]),
+        el("div", { class: "wl-stage" }, [svg, legend, st, meter, NAR ? null : defn]),
         el("div", { class: "wl-panel" }, [
           NAR ? null : intro,
           el("div", { class: "seg" }, mb),
           NAR ? el("div", { class: "orow" }, [optNote, rb]) : optNote,
           ts[0], ps[0],
           NAR ? null : el("div", { class: "bar", style: "margin:0" }, [rb]),
-          why,
+          why, lockEl,
           NAR ? more(T, [intro, defn]) : null,
           exam(T, EXAMTXT)
         ])

@@ -151,6 +151,7 @@ IB.registerTopic({
     {
       ref: "B3.1.5",
       ahl: false,
+      widget: "ventilation",
       heading: T("Ventilation of the lungs", "肺の換気", "肺的通氣"),
       body: T(
         `<p><strong>Ventilation</strong> means moving air in and out of the lungs. Lungs have no muscle of their own, so the movement comes from muscles around them. Changes in the volume of the chest (thorax) cause changes in pressure, and air flows from high pressure to low pressure.</p>

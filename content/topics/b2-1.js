@@ -69,6 +69,8 @@
     sections: [
       {
         ref: "B2.1.1–2", ahl: false,
+        widget: "lipid-builder",
+        widgetOptions: {tab: 2},
         heading: L("Lipid bilayers: the basis of membranes and a barrier", "脂質二重層：膜の基本構造と障壁", "脂質雙層：膜的基礎與屏障"),
         body: L(
           `<p>In water, phospholipids and other amphipathic lipids naturally assemble into continuous, sheet-like <span class="term">bilayers</span> (see B1.1). The hydrophobic fatty acid tails sit in the middle; the hydrophilic heads face the watery fluid on each side. This bilayer is the basic structure of all cell membranes.</p>
@@ -130,6 +132,7 @@
       },
       {
         ref: "B2.1.5", ahl: false,
+        widget: "osmosis-anim",
         heading: L("Osmosis and aquaporins", "浸透とアクアポリン", "滲透與水通道蛋白"),
         body: L(
           `<p><span class="term">Osmosis</span> is the net movement of water molecules across a membrane, from a region of <strong>lower</strong> solute concentration to a region of <strong>higher</strong> solute concentration.</p>

@@ -636,3 +636,6 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Keep the hidden attribute authoritative inside layout grids */
+[hidden] { display: none !important; }

@@ -427,6 +427,8 @@ IB.registerTopic({
     {
       ref: "B1.2.8",
       ahl: true,
+      widget: "mol3d-protein",
+      widgetOptions: {preset: "helix-sheet"},
       heading: {
         en: "Step 4: secondary structure — coiling and pleating of the backbone",
         ja: "ステップ4：二次構造 ― 骨格のコイル状とひだ状の折れ曲がり",
@@ -545,6 +547,8 @@ IB.registerTopic({
     {
       ref: "B1.2.10",
       ahl: true,
+      widget: "mol3d-protein",
+      widgetOptions: {preset: "hydrophobic"},
       heading: {
         en: "Where do the hydrophobic R-groups go? Globular and membrane proteins",
         ja: "疎水性のR基はどこに行くか：球状タンパク質と膜タンパク質",
@@ -578,6 +582,8 @@ IB.registerTopic({
     {
       ref: "B1.2.11",
       ahl: true,
+      widget: "mol3d-protein",
+      widgetOptions: {preset: "haemoglobin"},
       heading: {
         en: "Step 6: quaternary structure — more than one polypeptide",
         ja: "ステップ6：四次構造 ― 2本以上のポリペプチド",

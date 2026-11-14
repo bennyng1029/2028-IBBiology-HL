@@ -515,7 +515,7 @@ IB.registerTopic({
 <p>瓣膜因<em>壓力差</em>而開合：血液由高壓流向低壓，當壓力從錯誤的一側推向瓣膜時，瓣膜便關閉。</p>
 <p><strong>血壓 (blood pressure)。</strong><strong>收縮壓 (systolic pressure)</strong> 是心室收縮期動脈中的最高壓力。<strong>舒張壓 (diastolic pressure)</strong> 是舒張期的最低壓力。靜止的正常成年人讀數約為120/80 mmHg（收縮壓／舒張壓）。你應能<strong>從數據和圖表解讀收縮壓和舒張壓</strong>。</p>
 <p>小工具把各階段與壓力圖一同顯示。數值為示範數據。</p>`),
-      widget: "heart-cycle",
+      widget: "heart-beat",
       examTip: T(
         "When a data question gives pressure curves, a valve opens or closes at the point where two curves cross. Name the two chambers or vessels being compared and say which pressure is higher.",
         "データ問題で圧力曲線が出たら、弁は2つの曲線が交わる点で開閉します。比べている2つの部屋や血管の名前を挙げ、どちらの圧力が高いかを述べましょう。",
