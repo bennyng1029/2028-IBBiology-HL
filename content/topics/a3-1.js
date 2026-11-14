@@ -140,13 +140,13 @@
         heading: L("Chromosome numbers differ between species", "種による染色体数の違い (chromosome number)", "不同物種的染色體數目 (chromosome number)"),
         body: L(
           `<p>The number of chromosomes in a cell is different in different species. You only need to know that this <strong>diversity</strong> exists, plus one example: <strong>humans have 46 chromosomes</strong> and <strong>chimpanzees have 48</strong>. You do not need to remember numbers for other species.</p>
-<p>Body cells of most plants and animals are <strong>diploid</strong>: they have two sets of chromosomes, one set from each parent. Chromosomes therefore come in <strong>pairs</strong> (homologous pairs), so a diploid cell always has an <strong>even</strong> number of chromosomes.</p>
+<p>Body cells of most plants and animals are <strong>diploid</strong>: they have two sets of chromosomes, one set from each parent. Chromosomes therefore come in <strong>pairs</strong> (homologous pairs), so a diploid cell usually has an <strong>even</strong> number of chromosomes (exceptions include cells with an extra or missing chromosome, and males of some insects that have only one sex chromosome).</p>
 <div class="note">Different species can by chance have the same number of chromosomes, so chromosome number alone does not identify a species. But the same species always has the same number (apart from rare abnormalities).</div>`,
           `<p>細胞に含まれる染色体の数は、種によって異なります。覚えておくべきなのは、このような<strong>多様性</strong>があることと、一つの例、つまり<strong>ヒトは46本</strong>、<strong>チンパンジーは48本</strong>という点だけです。他の種の染色体数を覚える必要はありません。</p>
-<p>ほとんどの動植物の体細胞は<strong>二倍体 (diploid)</strong> で、両親から一組ずつ受け継いだ二組の染色体をもちます。そのため染色体は<strong>対</strong>（相同染色体の対）になっており、二倍体細胞の染色体数は必ず<strong>偶数</strong>です。</p>
+<p>ほとんどの動植物の体細胞は<strong>二倍体 (diploid)</strong> で、両親から一組ずつ受け継いだ二組の染色体をもちます。そのため染色体は<strong>対</strong>（相同染色体の対）になっており、二倍体細胞の染色体数はふつう<strong>偶数</strong>です（例外として、染色体が過剰または不足している細胞や、性染色体を1本しかもたない一部の昆虫の雄があります）。</p>
 <div class="note">異なる種でも偶然に染色体数が同じになることがあるので、染色体数だけでは種を特定できません。ただし、同じ種は（まれな異常を除いて）いつも同じ数をもちます。</div>`,
           `<p>不同物種的細胞內染色體數目不同。你只需知道存在這種<strong>多樣性</strong>，並記住一個例子：<strong>人類有 46 條染色體</strong>，<strong>黑猩猩有 48 條</strong>。其他物種的染色體數目不需要記憶。</p>
-<p>大多數動植物的體細胞是<strong>二倍體 (diploid)</strong>：有兩套染色體，分別來自父母。因此染色體成<strong>對</strong>出現（同源染色體對），二倍體細胞的染色體數目必定是<strong>偶數</strong>。</p>
+<p>大多數動植物的體細胞是<strong>二倍體 (diploid)</strong>：有兩套染色體，分別來自父母。因此染色體成<strong>對</strong>出現（同源染色體對），二倍體細胞的染色體數目通常是<strong>偶數</strong>（例外包括多出或缺少染色體的細胞，以及某些只有一條性染色體的昆蟲雄性個體）。</p>
 <div class="note">不同物種可能碰巧有相同的染色體數目，所以單靠染色體數目並不能確定物種。但同一物種的染色體數目總是相同（罕見的異常除外）。</div>`
         )
       },
@@ -515,10 +515,10 @@
       },
       {
         id: "a3-1-q03", type: "mcq", ahl: false, difficulty: 2, ref: "A3.1.6", paper: "1A",
-        stem: L("A biologist counts the chromosomes in a normal diploid body cell (no extra or missing chromosomes) of a newly discovered animal. Which count is impossible?", "新しく発見された動物の正常な二倍体の体細胞（染色体の過不足がない）で染色体を数えた。あり得ない数はどれか。", "生物學家數算一種新發現動物的正常二倍體體細胞（沒有多出或缺少染色體）中的染色體。以下哪個數目是不可能的？"),
+        stem: L("A biologist counts the chromosomes in a normal diploid body cell (no extra or missing chromosomes, and the sex chromosomes form a pair) of a newly discovered animal. Which count is impossible?", "新しく発見された動物の正常な二倍体の体細胞（染色体の過不足がなく、性染色体も対になっている）で染色体を数えた。あり得ない数はどれか。", "生物學家數算一種新發現動物的正常二倍體體細胞（沒有多出或缺少染色體，性染色體亦成對）中的染色體。以下哪個數目是不可能的？"),
         options: [L("38", "38", "38"), L("46", "46", "46"), L("47", "47", "47"), L("48", "48", "48")],
         answer: 2,
-        explanation: L("Diploid cells have chromosomes in homologous pairs, so the number must be even. 47 is odd. Remember that 46 and 48 are the human and chimpanzee numbers, but different species can have any even number. (An odd number can occur only when a chromosome is extra or missing, for example 47 in Down syndrome; this question says the cell is normal.)", "二倍体細胞の染色体は相同染色体の対になっているので、偶数でなければなりません。47は奇数です。46と48はヒトとチンパンジーの数ですが、種によって偶数であればどんな数にもなり得ます。（奇数になるのは、ダウン症候群の47のように染色体が過剰または不足している場合だけです。この問題では細胞は正常です。）", "二倍體細胞的染色體成同源對，所以數目必須是偶數。47 是奇數。46 和 48 分別是人類和黑猩猩的數目，但不同物種可以有任何偶數。（只有在多出或缺少染色體時才會出現奇數，例如唐氏綜合症的 47 條；本題說明細胞是正常的。）")
+        explanation: L("Diploid cells have chromosomes in homologous pairs, so the number must be even. 47 is odd. Remember that 46 and 48 are the human and chimpanzee numbers, but different species can have any even number. (An odd number can occur when a chromosome is extra or missing, for example 47 in Down syndrome, or in males of some insects that have only one sex chromosome; this question rules both out.)", "二倍体細胞の染色体は相同染色体の対になっているので、偶数でなければなりません。47は奇数です。46と48はヒトとチンパンジーの数ですが、種によって偶数であればどんな数にもなり得ます。（奇数になるのは、ダウン症候群の47のように染色体が過剰または不足している場合や、性染色体を1本しかもたない一部の昆虫の雄の場合です。この問題ではどちらも除外されています。）", "二倍體細胞的染色體成同源對，所以數目必須是偶數。47 是奇數。46 和 48 分別是人類和黑猩猩的數目，但不同物種可以有任何偶數。（在多出或缺少染色體時會出現奇數，例如唐氏綜合症的 47 條；某些只有一條性染色體的昆蟲雄性個體也是奇數。本題已排除這兩種情況。）")
       },
       {
         id: "a3-1-q04", type: "multi", ahl: false, difficulty: 2, ref: "A3.1.4", paper: "1A",

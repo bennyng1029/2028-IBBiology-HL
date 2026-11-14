@@ -759,17 +759,17 @@ IB.registerTopic({
   misconceptions: [
     { wrong: { en: "Denaturation breaks the peptide bonds, so the protein is cut into pieces.", ja: "変性でペプチド結合が切れ、タンパク質が断片になる。", zh: "變性會破壞肽鍵，把蛋白質切成碎片。" },
       right: { en: "Denaturation breaks the weak bonds and interactions (hydrogen bonds, ionic bonds, hydrophobic interactions). Peptide bonds survive, so the primary structure is unchanged. The chain unfolds but is not cut.", ja: "変性で乱れるのは弱い結合や相互作用（水素結合、イオン結合、疎水性相互作用）です。ペプチド結合は残るので、一次構造は変わりません。鎖はほどけますが切断はされません。", zh: "變性破壞的是弱鍵和相互作用（氫鍵、離子鍵、疏水相互作用）。肽鍵不受影響，所以一級結構不變。長鏈展開，但沒有被切斷。" } },
-    { wrong: { en: "The hydrogen bonds in secondary and tertiary structure are the same thing.", ja: "二次構造と三次構造の水素結合は同じものだ。", zh: "二級和三級結構的氫鍵是同一回事。" },
+    { ahl: true, wrong: { en: "The hydrogen bonds in secondary and tertiary structure are the same thing.", ja: "二次構造と三次構造の水素結合は同じものだ。", zh: "二級和三級結構的氫鍵是同一回事。" },
       right: { en: "Secondary: hydrogen bonds between the backbone C=O and N–H groups, in a regular pattern. Tertiary: hydrogen bonds between polar R-groups, irregular, along with ionic, disulfide and hydrophobic interactions.", ja: "二次構造は、骨格のC=OとN–Hの間の規則的な水素結合です。三次構造は、極性のR基の間の不規則な水素結合で、イオン結合、ジスルフィド結合、疎水性相互作用も加わります。", zh: "二級結構：骨架上 C=O 與 N–H 之間有規律的氫鍵。三級結構：極性 R 基之間不規則的氫鍵，另外還有離子鍵、二硫鍵和疏水相互作用。" } },
-    { wrong: { en: "A disulfide bond is just another name for a peptide bond.", ja: "ジスルフィド結合はペプチド結合の別名だ。", zh: "二硫鍵只是肽鍵的另一個名稱。" },
+    { ahl: true, wrong: { en: "A disulfide bond is just another name for a peptide bond.", ja: "ジスルフィド結合はペプチド結合の別名だ。", zh: "二硫鍵只是肽鍵的另一個名稱。" },
       right: { en: "A peptide bond (C–N) joins neighbouring amino acids in the backbone. A disulfide bond (S–S) joins the R-groups of two cysteines, which can be far apart. Both are covalent, but they are different bonds at different levels.", ja: "ペプチド結合 (C–N) は骨格でとなり合うアミノ酸を結びます。ジスルフィド結合 (S–S) は2つのシステインのR基を結び、それらは離れていてもかまいません。どちらも共有結合ですが、別の結合で、働く段階も違います。", zh: "肽鍵 (C–N) 連接骨架上相鄰的氨基酸。二硫鍵 (S–S) 連接兩個半胱氨酸的 R 基，它們可以相隔很遠。兩者都是共價鍵，但是不同的鍵，作用於不同的結構層次。" } },
-    { wrong: { en: "A conjugated protein is one with more than one polypeptide chain.", ja: "複合タンパク質とは、ポリペプチド鎖が複数あるタンパク質のことだ。", zh: "綴合蛋白質就是有多於一條多肽鏈的蛋白質。" },
+    { ahl: true, wrong: { en: "A conjugated protein is one with more than one polypeptide chain.", ja: "複合タンパク質とは、ポリペプチド鎖が複数あるタンパク質のことだ。", zh: "綴合蛋白質就是有多於一條多肽鏈的蛋白質。" },
       right: { en: "More than one chain is quaternary structure. Conjugated means a non-polypeptide (prosthetic) group is attached, such as haem in haemoglobin. Insulin and collagen have several chains but are non-conjugated.", ja: "複数の鎖は四次構造のことです。複合とは、ヘモグロビンのヘムのように、ポリペプチド以外（補欠分子族）の基がついていることです。インスリンとコラーゲンは複数の鎖をもちますが非複合です。", zh: "多於一條鏈是四級結構。綴合是指連有非多肽（輔）基團，例如血紅蛋白中的血紅素。胰島素和膠原蛋白有多條鏈，但屬非綴合蛋白質。" } },
-    { wrong: { en: "Every protein has a quaternary structure.", ja: "すべてのタンパク質に四次構造がある。", zh: "每種蛋白質都有四級結構。" },
+    { ahl: true, wrong: { en: "Every protein has a quaternary structure.", ja: "すべてのタンパク質に四次構造がある。", zh: "每種蛋白質都有四級結構。" },
       right: { en: "Quaternary structure needs at least two polypeptides. A protein made of one chain stops at tertiary structure.", ja: "四次構造には少なくとも2本のポリペプチドが必要です。1本の鎖でできたタンパク質は三次構造で終わりです。", zh: "四級結構需要至少兩條多肽。只由一條鏈組成的蛋白質，結構只到三級。" } },
-    { wrong: { en: "Hydrophobic R-groups are always inside a protein.", ja: "疎水性のR基は、いつもタンパク質の内側にある。", zh: "疏水性 R 基永遠在蛋白質內部。" },
+    { ahl: true, wrong: { en: "Hydrophobic R-groups are always inside a protein.", ja: "疎水性のR基は、いつもタンパク質の内側にある。", zh: "疏水性 R 基永遠在蛋白質內部。" },
       right: { en: "In a water-soluble globular protein they are in the core. In an integral membrane protein, the region within the membrane has them on the outside, next to the fatty-acid tails.", ja: "水溶性の球状タンパク質では芯にあります。膜の内在性タンパク質では、膜の中の領域で外側にあり、脂肪酸の尾と接しています。", zh: "在水溶性的球狀蛋白質中，它們在核心。在膜的整合蛋白質中，膜內的區域則把它們放在外面，緊貼脂肪酸尾部。" } },
-    { wrong: { en: "The protein's shape is decided by chance when it folds.", ja: "タンパク質の形は、折りたたまれるときに偶然決まる。", zh: "蛋白質摺疊時的形狀是隨機決定的。" },
+    { ahl: true, wrong: { en: "The protein's shape is decided by chance when it folds.", ja: "タンパク質の形は、折りたたまれるときに偶然決まる。", zh: "蛋白質摺疊時的形狀是隨機決定的。" },
       right: { en: "The amino acid sequence, set by the gene, determines the R-groups and so the folding. The same sequence gives the same shape each time.", ja: "遺伝子が決めるアミノ酸配列がR基を決め、折りたたみを決めます。同じ配列ならいつも同じ形になります。", zh: "由基因決定的氨基酸序列決定 R 基，從而決定摺疊。相同的序列每次都產生相同的形狀。" } }
   ],
 

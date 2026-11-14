@@ -74,7 +74,7 @@ IB.registerTopic({
     }
   ],
   keyTerms: [ { term: { en: "peptide bond", ja: "ペプチド結合", zh: "肽鍵" }, def: { en, ja, zh }, ahl: false } ],
-  misconceptions: [ { wrong: { en, ja, zh }, right: { en, ja, zh } } ],
+  misconceptions: [ { wrong: { en, ja, zh }, right: { en, ja, zh }, ahl: false } ],   // ahl:true = hidden in SL mode, AHL badge in HL
   beyondSyllabus: [ { en, ja, zh } ],       // "Not required by IB: …" — important for students using AI tools
   links: [ { to: "B2.1", why: { en, ja, zh } } ],   // linking questions / connections
   natureOfScience: [ { en, ja, zh } ],      // optional NOS notes from the guide

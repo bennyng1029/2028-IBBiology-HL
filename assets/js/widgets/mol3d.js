@@ -201,7 +201,7 @@
     none: L("None", "なし", "無", "없음"),
     backbone: L("Sugar–phosphate backbone", "糖–リン酸骨格 (backbone)", "糖–磷酸骨架 (backbone)", "당-인산 골격"),
     pairs: L("Complementary base pairs", "相補的塩基対 (base pairs)", "互補鹼基對 (base pairs)", "상보적 염기쌍"),
-    direction: L("Antiparallel (5′ to 3′)", "逆平行 (5′→3′)", "反平行 (5′→3′)", "역평행 (5′ → 3′)")
+    direction: L("Antiparallel (5′ to 3′, AHL)", "逆平行 (5′→3′、AHL)", "反平行 (5′→3′，AHL)", "역평행 (5′ → 3′, AHL)")
   };
 
   /* ---------- presets ---------- */
@@ -284,9 +284,9 @@
       cap: L("A real 12-base-pair piece of B-DNA (CGCGAATTCGCG), about 4 nm long. Two antiparallel strands are joined by hydrogen bonds between complementary base pairs.",
         "実際の12塩基対のB型DNA (CGCGAATTCGCG)、長さ約4 nm。逆平行 (antiparallel) の2本の鎖が、相補的塩基対 (complementary base pairs) の水素結合でつながっています。",
         "真實的12個鹼基對B型DNA (CGCGAATTCGCG)，長約4 nm。兩條反平行 (antiparallel) 的鏈由互補鹼基對 (complementary base pairs) 之間的氫鍵相連。", "실제 B-DNA의 12염기쌍 조각(CGCGAATTCGCG)으로, 길이는 약 4 nm이다. 역평행인 두 가닥이 상보적 염기쌍 사이의 수소 결합으로 연결되어 있다."),
-      look: L("Each strand has a sugar–phosphate backbone, a continuous chain of covalent bonds. The bases point inward: A pairs with T and G pairs with C by hydrogen bonds. The strands run in opposite directions, 5′ to 3′ on one and 3′ to 5′ on the other.",
-        "各鎖には、共有結合が連続した糖–リン酸骨格 (sugar–phosphate backbone) があります。塩基は内側を向き、AはT、GはCと水素結合で対になります。2本の鎖は逆向きに走り、一方が5′→3′、もう一方が3′→5′です。",
-        "每條鏈都有由共價鍵連續相連的糖–磷酸骨架 (sugar–phosphate backbone)。鹼基朝向內側：A與T、G與C以氫鍵配對。兩條鏈方向相反，一條是5′→3′，另一條是3′→5′。", "각 가닥에는 공유 결합이 이어진 사슬인 당-인산 골격이 있다. 염기는 안쪽을 향하며, A는 T와, G는 C와 수소 결합으로 짝을 이룬다. 두 가닥은 서로 반대 방향으로 달리며, 한 가닥은 5′에서 3′ 방향, 다른 가닥은 3′에서 5′ 방향이다."),
+      look: L("Each strand has a sugar–phosphate backbone, a continuous chain of covalent bonds. The bases point inward: A pairs with T and G pairs with C by hydrogen bonds. The strands run in opposite directions (antiparallel). AHL: one strand runs 5′ to 3′ and the other 3′ to 5′.",
+        "各鎖には、共有結合が連続した糖–リン酸骨格 (sugar–phosphate backbone) があります。塩基は内側を向き、AはT、GはCと水素結合で対になります。2本の鎖は逆向きに走ります（逆平行）。AHL：一方の鎖は5′→3′、もう一方は3′→5′です。",
+        "每條鏈都有由共價鍵連續相連的糖–磷酸骨架 (sugar–phosphate backbone)。鹼基朝向內側：A與T、G與C以氫鍵配對。兩條鏈方向相反（反平行）。AHL：一條是5′→3′，另一條是3′→5′。", "각 가닥에는 공유 결합이 이어진 사슬인 당-인산 골격이 있다. 염기는 안쪽을 향하며, A는 T와, G는 C와 수소 결합으로 짝을 이룬다. 두 가닥은 서로 반대 방향으로 달린다(역평행). AHL: 한 가닥은 5′에서 3′ 방향, 다른 가닥은 3′에서 5′ 방향이다."),
       exam: L("DNA: two antiparallel strands; sugar–phosphate backbones outside; A–T and G–C complementary base pairs joined by hydrogen bonds inside.",
         "DNA：逆平行の2本鎖。糖–リン酸骨格が外側、内側にA–TとG–Cの相補的塩基対 (水素結合)。",
         "DNA：兩條反平行的鏈；糖–磷酸骨架在外，A–T與G–C互補鹼基對在內，以氫鍵相連。", "DNA: 역평행인 두 가닥. 당-인산 골격은 바깥쪽에, 수소 결합으로 연결된 A–T, G–C 상보적 염기쌍은 안쪽에 있다.") }

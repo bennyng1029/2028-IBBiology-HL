@@ -448,7 +448,7 @@ ${fmFigure("zh")}
         right: L("Water moves randomly both ways. The net movement is towards the higher solute concentration because the membrane stops the solute and fewer water molecules reach the membrane from that side.", "水はランダムに両方向へ動く。膜が溶質を通さず、溶質濃度の高い側から膜に達する水分子が少ないため、正味は高濃度側へ動く。", "水向兩個方向隨機移動。由於膜不讓溶質通過，且溶質濃度較高一側到達膜的水分子較少，所以淨移動是朝向高溶質濃度。") },
       { wrong: L("Active transport always moves substances out of cells.", "能動輸送は常に物質を細胞外へ出す。", "主動運輸總是把物質運出細胞。"),
         right: L("Active transport can go in either direction. It is defined by using ATP (directly or indirectly) and being able to move particles against their gradient.", "能動輸送はどちら向きにもなる。ATP を (直接または間接に) 使い、勾配に逆らえることが特徴である。", "主動運輸可朝任一方向進行；其特點是 (直接或間接) 使用能量，並能逆梯度運送粒子。") },
-      { wrong: L("Cholesterol makes membranes more fluid.", "コレステロールは膜をより流動的にする。", "膽固醇令膜更流動。"),
+      { ahl: true, wrong: L("Cholesterol makes membranes more fluid.", "コレステロールは膜をより流動的にする。", "膽固醇令膜更流動。"),
         right: L("Cholesterol is a modulator: it reduces fluidity at high temperature and prevents stiffening at low temperature.", "コレステロールは調節因子で、高温では流動性を下げ、低温では硬くなるのを防ぐ。", "膽固醇是調節者：高溫時降低流動性，低溫時防止變硬。") }
     ],
     beyondSyllabus: [

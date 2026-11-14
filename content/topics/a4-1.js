@@ -396,7 +396,7 @@
         right: L("The mule is sterile, so the two are different species; sterile hybrids keep the gene pools separate.", "ラバは不妊なので別の種であり、不妊の雑種は遺伝子プールを分けておきます。", "騾不育，所以兩者是不同物種；不育的雜種使基因庫保持分隔。")
       },
       {
-        wrong: L("Speciation always needs a physical barrier.", "種分化にはいつも物理的な障壁が必要である。", "物種形成總是需要物理屏障。"),
+        ahl: true, wrong: L("Speciation always needs a physical barrier.", "種分化にはいつも物理的な障壁が必要である。", "物種形成總是需要物理屏障。"),
         right: L("Allopatric speciation does, but sympatric speciation happens in the same area through behavioural or temporal isolation or polyploidy.", "異所的種分化では必要ですが、同所的種分化は同じ地域で、行動的・時間的な隔離や倍数性によって起こります。", "異域物種形成需要，但同域物種形成在同一地區，透過行為或時間隔離或多倍體而發生。")
       }
     ],
