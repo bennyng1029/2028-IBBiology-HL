@@ -68,6 +68,10 @@
       b.addEventListener("click", function () { onSel(i); });
       bar.appendChild(b);
     });
+    setTimeout(function () {
+      var sb = bar.querySelector("[aria-selected=true]");
+      if (sb && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = Math.max(0, sb.getBoundingClientRect().left - bar.getBoundingClientRect().left + bar.scrollLeft - 12);
+    }, 0);
     return bar;
   }
   var CSS =

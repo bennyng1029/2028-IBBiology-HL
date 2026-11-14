@@ -68,10 +68,15 @@
       b.addEventListener("click", function () { onSel(i); });
       bar.appendChild(b);
     });
+    setTimeout(function () {
+      var sb = bar.querySelector("[aria-selected=true]");
+      if (sb && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = Math.max(0, sb.getBoundingClientRect().left - bar.getBoundingClientRect().left + bar.scrollLeft - 12);
+    }, 0);
     return bar;
   }
   var CSS =
-    ".W .tw{overflow-x:auto}.W table.cmp{border-collapse:collapse;width:100%;font-size:13px;line-height:1.35}.W table.cmp th,.W table.cmp td{border:1px solid var(--k-line);padding:6px 8px;text-align:left;vertical-align:top}.W table.cmp thead th{background:var(--k-bg)}.W table.cmp tbody th{background:var(--k-bg);white-space:nowrap;font-size:12px}" +
+    ".W .tw{overflow-x:auto}.W table.cmp{border-collapse:collapse;width:100%;font-size:13px;line-height:1.35}.W table.cmp th,.W table.cmp td{border:1px solid var(--k-line);padding:6px 8px;text-align:left;vertical-align:top}.W table.cmp thead th{background:var(--k-bg)}.W table.cmp tbody th{background:var(--k-bg);font-size:12px;width:19%}" +
+    "@media (max-width:639px){.W table.cmp{table-layout:fixed;font-size:12px;line-height:1.25}.W table.cmp th,.W table.cmp td{padding:4px 5px;overflow-wrap:anywhere}.W table.cmp tbody th{width:20%;font-size:11.5px}}" +
     ".W .fx{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px;margin:8px 0 0}" +
     ".W .fx dt{color:var(--k-mut);font-weight:600}.W .fx dd{margin:0}" +
     ".W .q{margin:8px 0}.W .q .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0}" +
@@ -149,9 +154,8 @@
       css("protein-compare", CSS);
       root.classList.add("W");
       var T = mkT(ctx);
-      var tab = optTab(ctx, 4), quiz = false, shapeOK = {}, conjOK = {};
-      var TABS = PROT.map(function (p) { return { n: p.name, a: true }; }).concat([{ n: ["Compare and key terms", "比較と用語", "比較與關鍵詞"] }]);
-      TABS.forEach(function (t) { if (t.a) t.a = false; });
+      var NAR = window.innerWidth < 640, tab = optTab(ctx, 4), quiz = false, shapeOK = {}, conjOK = {};
+      var TABS = PROT.map(function (p) { return { n: p.name.map(function (x) { return x.replace(/ ?\(.*\)$/, ""); }), a: true }; }).concat([{ n: ["Compare and key terms", "比較と用語", "比較與關鍵詞"], a: true }]);
       var EXAMTXT = [
         "Insulin: globular, non-conjugated, 2 polypeptides (disulfide-linked), soluble hormone. Collagen: fibrous, non-conjugated, 3 polypeptides in a triple helix, insoluble, high tensile strength. Haemoglobin: globular, conjugated, 4 polypeptides each with a haem (iron) group, carries oxygen.",
         "インスリン: 球状・非複合・2本のポリペプチド (ジスルフィド結合)・水溶性のホルモン。コラーゲン: 繊維状・非複合・3本が三重らせん・不溶性・引っ張り強度が高い。ヘモグロビン: 球状・複合・4本のポリペプチドそれぞれにヘム (鉄) をもち酸素を運ぶ。",
@@ -220,18 +224,19 @@
         return {
           stage: [el("div", { class: "tw" }, [tbl])],
           panel: [
-            el("dl", { class: "defs" }, [
-              el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。"]) }),
-              el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。"]) }),
-              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。"]) }),
-              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。"]) })
-            ]),
-            more(T, [
+            NAR ? null : defs(),
+            more(T, [NAR ? defs() : null,
               el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。"]) }),
               el("p", { class: "small", text: T(["Cryo-electron microscopy (cryo-EM) can image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) は、肉眼では見えない1分子のタンパク質を画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 能為單一蛋白質分子造影，這是肉眼無法觀察到的。"]) })
             ])
           ]
         };
+        function defs() { return el("dl", { class: "defs" }, [
+              el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。"]) }),
+              el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。"]) }),
+              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。"]) }),
+              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。"]) })
+        ]); }
       }
     }
   });

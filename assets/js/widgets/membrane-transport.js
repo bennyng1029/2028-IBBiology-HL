@@ -169,7 +169,7 @@
     ".W details summary{cursor:pointer;font-weight:700;font-size:14px;min-height:36px;display:flex;align-items:center}" +
     ".W details .desc{margin:2px 0 4px;font-size:13.5px}" +
     ".W svg{width:100%;height:auto;display:block;background:var(--surface,#fff);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px);touch-action:manipulation}" +
-    ".W svg text{fill:var(--ink,#101826);font:12.5px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;paint-order:stroke;stroke:var(--surface,#fff);stroke-width:3px;stroke-linejoin:round}" +
+    ".W svg text{fill:var(--ink,#101826);font:12px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;paint-order:stroke;stroke:var(--surface,#fff);stroke-width:3px;stroke-linejoin:round}" +
     ".W .sl{margin:0}.W .sl label{display:flex;justify-content:space-between;gap:6px;font-weight:600;font-size:13px;line-height:1.25}" +
     ".W input[type=range]{width:100%;min-height:34px;margin:0;accent-color:var(--accent,#0A6C7D)}" +
     ".W .panel{background:var(--surface-2,#EDF1F6);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px);padding:6px 10px;margin:0;font-size:13.5px;line-height:1.4}" +
@@ -189,7 +189,7 @@
   }
 
   /* ---------- geometry ---------- */
-  var VW = 360, VH = 300, YO = 114, YI = 176, MID = 145;
+  var VW = 360, VH = 280, YO = 114, YI = 176, MID = 145;
   var KS = { np: 4, ion: 5.5, sol: 4.5, w: 3, na: 5.5, k: 6, g: 5.5 };
   var SPD = { np: 2.0, ion: 1.6, sol: 1.2, w: 2.3, na: 1.6, k: 1.6, g: 1.3 };
   function shapeFor(k) {
@@ -536,6 +536,10 @@
         W_.appendChild(tabs);
         var wl = el("div", { class: "wl" }), stageCol = el("div", { class: "wl-stage" }), panel = el("div", { class: "wl-panel" });
         wl.appendChild(stageCol); wl.appendChild(panel); W_.appendChild(wl);
+        try {
+          var selTab = tabs.querySelector("[aria-selected=true]");
+          if (selTab) tabs.scrollLeft = selTab.getBoundingClientRect().left - tabs.getBoundingClientRect().left + tabs.scrollLeft - 12;
+        } catch (e) {}
         // options row
         var opts = el("div", { class: "row opts" });
         var m = st.mode;

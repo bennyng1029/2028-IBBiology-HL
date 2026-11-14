@@ -12,9 +12,9 @@ IB.registerLab({
     "zh": "蛋白質實驗室"
   },
   "intro": {
-    "en": "Six steps, from one amino acid to a working protein. Work through them in order, and try every interactive. This is subtopic B1.2.",
-    "ja": "1つのアミノ酸から働くタンパク質まで、6つのステップで学びます。順番に進め、インタラクティブをすべて試しましょう。サブトピックB1.2です。",
-    "zh": "六個步驟，由單一個氨基酸到有功能的蛋白質。請依次完成，並試玩每個互動內容。這是子課題 B1.2。"
+    "en": "Ten steps, from one amino acid to a working protein, including real 3D structures. Work through them in order, and try every interactive. This is subtopic B1.2.",
+    "ja": "1つのアミノ酸から働くタンパク質まで、実際の3D構造も使って10のステップで学びます。順番に進め、インタラクティブをすべて試しましょう。サブトピックB1.2です。",
+    "zh": "由單一個氨基酸到有功能的蛋白質，共十個步驟，並包括真實的3D結構。請依次完成，並試玩每個互動內容。這是子課題 B1.2。"
   },
   "steps": [
     {
@@ -92,6 +92,31 @@ IB.registerLab({
     },
     {
       "title": {
+        "en": "Secondary structure in 3D",
+        "ja": "二次構造を3Dで見る",
+        "zh": "立體觀察二級結構"
+      },
+      "ahl": true,
+      "refs": [
+        "B1.2.8"
+      ],
+      "intro": {
+        "en": "<p>This is a real protein, ubiquitin (76 amino acids), drawn from experimental data. Its backbone folds into an &alpha;-helix (a coil) and a &beta;-pleated sheet (strands side by side). These are secondary structure. Hydrogen bonds form between backbone C=O and N–H groups at regular intervals, not between R-groups. Drag the model to rotate it.</p>",
+        "ja": "<p>実験データから描いた本物のタンパク質、ユビキチン (ubiquitin、76アミノ酸) です。主鎖は&alpha;ヘリックス (&alpha;-helix、コイル) と&beta;シート (&beta;-pleated sheet、鎖が並んだ構造) に折りたたまれています。これが二次構造 (secondary structure) です。水素結合は、R基どうしではなく、主鎖のC=OとN–Hの間に規則的にできます。モデルをドラッグして回してみましょう。</p>",
+        "zh": "<p>這是根據實驗數據繪出的真實蛋白質：泛素 (ubiquitin，76 個氨基酸)。它的主鏈摺疊成 &alpha; 螺旋 (&alpha;-helix，盤繞) 和 &beta; 摺板 (&beta;-pleated sheet，多股並排)，這就是二級結構 (secondary structure)。氫鍵在主鏈的 C=O 與 N–H 之間按規律位置形成，並非形成於 R 基之間。請拖曳模型使它旋轉。</p>"
+      },
+      "widget": "mol3d-protein",
+      "options": {
+        "preset": "helix-sheet"
+      },
+      "task": {
+        "en": "Colour by Helix / sheet and rotate the model. Find the &alpha;-helix and the &beta;-pleated sheet. State which groups form the hydrogen bonds that hold both shapes.",
+        "ja": "色分けを「ヘリックス／シート」にしてモデルを回しましょう。&alpha;ヘリックスと&beta;シートを見つけ、どちらの形も保つ水素結合をつくるのはどの基か答えましょう。",
+        "zh": "把顏色設為「螺旋／摺板」並旋轉模型。找出 &alpha; 螺旋和 &beta; 摺板，並說出是哪些基團形成維持這兩種形狀的氫鍵。"
+      }
+    },
+    {
+      "title": {
         "en": "What holds the tertiary structure together",
         "ja": "三次構造を保つもの",
         "zh": "維持三級結構的作用力"
@@ -112,6 +137,57 @@ IB.registerLab({
         "en": "Switch the four bond types on one at a time. Which one is covalent?",
         "ja": "4種類の結合を1つずつオンにしましょう。共有結合なのはどれでしょう。",
         "zh": "逐一開啟四種作用力。哪一種是共價鍵？"
+      }
+    },
+    {
+      "title": {
+        "en": "The hydrophobic core in 3D",
+        "ja": "疎水性のコアを3Dで見る",
+        "zh": "立體觀察疏水核心"
+      },
+      "ahl": true,
+      "refs": [
+        "B1.2.10"
+      ],
+      "intro": {
+        "en": "<p>Myoglobin is a water-soluble globular protein. In water, hydrophobic R-groups are pushed together into the core, away from water. Polar and charged R-groups mostly lie on the surface, where they interact with water. This hydrophobic interaction helps to hold the tertiary structure. Integral membrane proteins have hydrophobic regions where they sit in the membrane.</p>",
+        "ja": "<p>ミオグロビン (myoglobin) は水に溶ける球状タンパク質です。水中では、疎水性 (hydrophobic) のR基が水を避けて内部のコアに集まります。極性や電荷をもつR基は、水と相互作用できる表面に多くあります。この疎水性相互作用 (hydrophobic interaction) が三次構造を保つ助けになります。膜内在性タンパク質では、膜の中にある部分が疎水性です。</p>",
+        "zh": "<p>肌紅蛋白 (myoglobin) 是水溶性球狀蛋白質。在水中，疏水 (hydrophobic) R 基被擠到核心，遠離水；極性和帶電的 R 基則大多在表面，與水相互作用。這種疏水相互作用 (hydrophobic interaction) 有助維持三級結構。內在膜蛋白位於膜內的部分則帶有疏水區域。</p>"
+      },
+      "widget": "mol3d-protein",
+      "options": {
+        "preset": "hydrophobic"
+      },
+      "task": {
+        "en": "Predict first: which kind of R-group is inside and which is outside? Colour by Hydrophobic / hydrophilic, choose Surface, then slide the slice into the protein to check.",
+        "ja": "まず予想しましょう。内側にあるのはどんなR基で、外側はどんなR基でしょう。色分けを「疎水性／親水性」にして「表面」を選び、スライスを内部に動かして確かめましょう。",
+        "zh": "先作預測：哪類 R 基在內部，哪類在外面？把顏色設為「疏水／親水」，選「表面」，再把切片滑桿移入蛋白質內部驗證。"
+      }
+    },
+    {
+      "title": {
+        "en": "Insulin in 3D: two chains, disulfide bonds",
+        "ja": "インスリンを3Dで見る：2本の鎖とジスルフィド結合",
+        "zh": "立體觀察胰島素：兩條鏈與二硫鍵"
+      },
+      "ahl": true,
+      "refs": [
+        "B1.2.9",
+        "B1.2.11"
+      ],
+      "intro": {
+        "en": "<p>Human insulin is a globular protein made of two polypeptides, the A chain (21 amino acids) and the B chain (30 amino acids). Disulfide bridges join the two chains. A disulfide bridge is a covalent bond between the sulfur atoms of two cysteine R-groups. A third bridge lies inside the A chain. Insulin has no non-protein part, so it is non-conjugated.</p>",
+        "ja": "<p>ヒトインスリン (insulin) は、A鎖 (21アミノ酸) とB鎖 (30アミノ酸) の2本のポリペプチドからなる球状タンパク質です。2本の鎖はジスルフィド結合 (disulfide bridge) でつながっています。ジスルフィド結合は、2つのシステイン (cysteine) のR基の硫黄原子どうしの共有結合です。3本目の結合はA鎖の内部にあります。インスリンにはタンパク質以外の部分がないので、非複合タンパク質 (non-conjugated protein) です。</p>",
+        "zh": "<p>人類胰島素 (insulin) 是球狀蛋白質，由 A 鏈 (21 個氨基酸) 和 B 鏈 (30 個氨基酸) 兩條多肽組成。兩條鏈由二硫鍵 (disulfide bridge) 連接。二硫鍵是兩個半胱氨酸 (cysteine) R 基的硫原子之間的共價鍵。第三個二硫鍵位於 A 鏈內部。胰島素沒有非蛋白質部分，所以屬非綴合蛋白質 (non-conjugated protein)。</p>"
+      },
+      "widget": "mol3d-protein",
+      "options": {
+        "preset": "insulin"
+      },
+      "task": {
+        "en": "Colour by Chain and tick Show disulfide bonds. How many S–S bonds join the A chain to the B chain? Which amino acid supplies the sulfur atoms?",
+        "ja": "色分けを「鎖」にして「ジスルフィド結合を表示」をオンにしましょう。A鎖とB鎖をつなぐS–S結合は何本でしょう。硫黄原子を出すのはどのアミノ酸でしょう。",
+        "zh": "把顏色設為「鏈」並開啟「顯示二硫鍵」。有多少個 S–S 鍵連接 A 鏈與 B 鏈？硫原子來自哪種氨基酸？"
       }
     },
     {
@@ -159,6 +235,32 @@ IB.registerLab({
         "en": "Compare insulin, collagen and haemoglobin. Which is fibrous, and which is conjugated?",
         "ja": "インスリン、コラーゲン、ヘモグロビンを比べましょう。繊維状はどれで、複合タンパク質はどれでしょう。",
         "zh": "比較胰島素、膠原蛋白和血紅蛋白。哪一種是纖維狀？哪一種是綴合蛋白質？"
+      }
+    },
+    {
+      "title": {
+        "en": "Haemoglobin and collagen in 3D",
+        "ja": "ヘモグロビンとコラーゲンを3Dで見る",
+        "zh": "立體觀察血紅蛋白與膠原蛋白"
+      },
+      "ahl": true,
+      "refs": [
+        "B1.2.11",
+        "B1.2.12"
+      ],
+      "intro": {
+        "en": "<p>Haemoglobin is a globular, conjugated protein. It has four polypeptides, and each carries a haem group (a non-protein part) with an iron atom that binds oxygen. Collagen is a fibrous, non-conjugated protein. Three polypeptides twist into a rope-like triple helix with high tensile strength. In both, the shape suits the function.</p>",
+        "ja": "<p>ヘモグロビン (haemoglobin) は球状の複合タンパク質です。4本のポリペプチドからなり、それぞれがタンパク質以外の部分であるヘム基 (haem group) をもち、その鉄原子が酸素と結合します。コラーゲン (collagen) は繊維状の非複合タンパク質で、3本のポリペプチドがよりあって縄状の三重らせんとなり、高い引っ張り強度をもちます。どちらも、形が働きに合っています。</p>",
+        "zh": "<p>血紅蛋白 (haemoglobin) 是球狀的綴合蛋白質 (conjugated protein)，由四條多肽組成，每條都帶有血紅素基團 (haem group，非蛋白質部分)，其鐵原子可結合氧。膠原蛋白 (collagen) 是纖維狀的非綴合蛋白質，三條多肽扭合成似繩的三螺旋，抗拉強度很高。兩者的形狀都配合它們的功能。</p>"
+      },
+      "widget": "mol3d-protein",
+      "options": {
+        "preset": "haemoglobin"
+      },
+      "task": {
+        "en": "In haemoglobin, tick Show Haem + Fe and count the haem groups. Then open the Collagen tab: how does its shape differ from a globular protein, and why does that suit its job?",
+        "ja": "ヘモグロビンで「ヘムと鉄を表示」をオンにし、ヘム基の数を数えましょう。次に「コラーゲン」のタブを開き、球状タンパク質と形がどう違うか、その形がなぜ働きに合っているか答えましょう。",
+        "zh": "在血紅蛋白中開啟「顯示血紅素和鐵」，數一數血紅素基團的數目。然後打開「膠原蛋白」分頁：它的形狀與球狀蛋白質有何不同？為何適合它的功能？"
       }
     }
   ]
