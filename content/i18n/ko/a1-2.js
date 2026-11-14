@@ -142,7 +142,7 @@ IB.addKo({
 "T A A G C T": "T A A G C T",
 "A T T G C A": "A T T G C A",
 "A pairs with T and G pairs with C, giving T A A C G T. B uses uracil, which is not in DNA. C pairs G with G or C with C in places. D is a copy, not the complement.": "A는 T와, G는 C와 쌍을 이루므로 T A A C G T가 된다. B는 DNA에 없는 유라실을 사용했다. C는 군데군데 G를 G와, C를 C와 짝지었다. D는 상보 가닥이 아니라 복사본이다.",
-"Outline how a polymer of RNA is formed from nucleotides.": "뉴클레오타이드로부터 RNA 중합체가 만들어지는 과정을 간략히 서술하시오(Outline).",
+"Outline how a polymer of RNA is formed from nucleotides.": "뉴클레오타이드로부터 RNA 중합체가 만들어지는 과정의 개요를 서술하시오(Outline).",
 "Nucleotides are joined by condensation reactions": "뉴클레오타이드는 축합 반응으로 연결된다",
 "The phosphate of one nucleotide bonds to the sugar of the next [accept covalent bond]": "한 뉴클레오타이드의 인산이 다음 뉴클레오타이드의 당과 결합한다 [공유 결합 인정]",
 "A molecule of water is released at each bond, and repeating this builds the sugar–phosphate backbone": "결합마다 물 분자 하나가 방출되며, 이것이 반복되어 당-인산 골격이 만들어진다",
