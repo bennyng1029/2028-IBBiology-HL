@@ -81,9 +81,9 @@
           "<p>下方的互動工具還有內聚力、附著力、溶劑性質和水與空氣比較的分頁，學習 A1.1.3 至 A1.1.6 時可以回來使用。</p>"),
         widget: "water-hbond",
         examTip: L(
-          "A hydrogen bond is between molecules, from δ+ H to δ− O. The O–H bond inside a molecule is covalent. Do not mix them up, and do not write \"hydrogen bonds break when water boils\" as if the molecule splits: only the attractions between molecules are overcome.",
-          "水素結合は分子と分子の間にあり、δ+ の H から δ− の O へ向かいます。分子内の O–H 結合は共有結合です。混同しないこと。また、水が沸騰するとき分子そのものが分解するのではなく、分子間の引力が打ち勝たれるだけです。",
-          "氫鍵存在於分子之間，由 δ+ 的 H 指向 δ− 的 O。分子內的 O–H 鍵是共價鍵，切勿混淆。另外，水沸騰時分子本身不會分解，只是分子之間的吸引力被克服。")
+          "A hydrogen bond is between molecules, from δ+ H to δ− O. The O–H bond inside a molecule is covalent. Do not mix them up. When water boils, the molecules do not split into hydrogen and oxygen: only the hydrogen bonds between molecules are overcome.",
+          "水素結合は分子と分子の間にあり、δ+ の H から δ− の O へ向かいます。分子内の O–H 結合は共有結合です。混同しないこと。水が沸騰するとき、分子が水素と酸素に分解するのではなく、切れるのは分子間の水素結合だけです。",
+          "氫鍵存在於分子之間，由 δ+ 的 H 指向 δ− 的 O。分子內的 O–H 鍵是共價鍵，切勿混淆。水沸騰時，分子不會分解成氫和氧，被克服的只是分子之間的氫鍵。")
       },
       {
         ref: "A1.1.3",

@@ -515,10 +515,10 @@
       },
       {
         id: "a3-1-q03", type: "mcq", ahl: false, difficulty: 2, ref: "A3.1.6", paper: "1A",
-        stem: L("A biologist counts the chromosomes in a diploid body cell of a newly discovered animal. Which count is impossible?", "新しく発見された動物の二倍体の体細胞で染色体を数えた。あり得ない数はどれか。", "生物學家數算一種新發現動物的二倍體體細胞中的染色體。以下哪個數目是不可能的？"),
+        stem: L("A biologist counts the chromosomes in a normal diploid body cell (no extra or missing chromosomes) of a newly discovered animal. Which count is impossible?", "新しく発見された動物の正常な二倍体の体細胞（染色体の過不足がない）で染色体を数えた。あり得ない数はどれか。", "生物學家數算一種新發現動物的正常二倍體體細胞（沒有多出或缺少染色體）中的染色體。以下哪個數目是不可能的？"),
         options: [L("38", "38", "38"), L("46", "46", "46"), L("47", "47", "47"), L("48", "48", "48")],
         answer: 2,
-        explanation: L("Diploid cells have chromosomes in homologous pairs, so the number must be even. 47 is odd. Remember that 46 and 48 are the human and chimpanzee numbers, but different species can have any even number.", "二倍体細胞の染色体は相同染色体の対になっているので、偶数でなければなりません。47は奇数です。46と48はヒトとチンパンジーの数ですが、種によって偶数であればどんな数にもなり得ます。", "二倍體細胞的染色體成同源對，所以數目必須是偶數。47 是奇數。46 和 48 分別是人類和黑猩猩的數目，但不同物種可以有任何偶數。")
+        explanation: L("Diploid cells have chromosomes in homologous pairs, so the number must be even. 47 is odd. Remember that 46 and 48 are the human and chimpanzee numbers, but different species can have any even number. (An odd number can occur only when a chromosome is extra or missing, for example 47 in Down syndrome; this question says the cell is normal.)", "二倍体細胞の染色体は相同染色体の対になっているので、偶数でなければなりません。47は奇数です。46と48はヒトとチンパンジーの数ですが、種によって偶数であればどんな数にもなり得ます。（奇数になるのは、ダウン症候群の47のように染色体が過剰または不足している場合だけです。この問題では細胞は正常です。）", "二倍體細胞的染色體成同源對，所以數目必須是偶數。47 是奇數。46 和 48 分別是人類和黑猩猩的數目，但不同物種可以有任何偶數。（只有在多出或缺少染色體時才會出現奇數，例如唐氏綜合症的 47 條；本題說明細胞是正常的。）")
       },
       {
         id: "a3-1-q04", type: "multi", ahl: false, difficulty: 2, ref: "A3.1.4", paper: "1A",

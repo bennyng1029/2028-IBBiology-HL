@@ -638,26 +638,26 @@ IB.registerTopic({
 <li><strong>非綴合蛋白質 (non-conjugated proteins)</strong>只由多肽鏈組成。</li>
 <li><strong>綴合蛋白質 (conjugated proteins)</strong>還含有<strong>非多肽部分</strong>，稱為<strong>輔基 (prosthetic group)</strong>（例如<strong>血紅素 (haem)</strong>）。</li>
 </ul>
-<p><strong>典型的混淆：</strong>「結合 (conjugated)」並<strong>不是</strong>「多於一條鏈」的意思，那是四級結構。結合是指「連有非蛋白質的基團」。蛋白質可以有四級結構但非結合（胰島素、膠原蛋白），也可以是結合的（血紅蛋白）。這是兩條獨立的問題：有多少條鏈？有沒有非蛋白質部分？</p>
+<p><strong>典型的混淆：</strong>「綴合 (conjugated)」並<strong>不是</strong>「多於一條鏈」的意思，那是四級結構。綴合是指「連有非蛋白質的基團」。蛋白質可以有四級結構但非結合（胰島素、膠原蛋白），也可以是綴合的（血紅蛋白）。這是兩條獨立的問題：有多少條鏈？有沒有非蛋白質部分？</p>
 <p>指引中的三個例子：</p>
 <ul>
-<li><strong>胰島素 (insulin)</strong>（非結合）：兩條多肽鏈（A 鏈有 21 個氨基酸，B 鏈有 30 個），由二硫鍵連接。</li>
-<li><strong>膠原蛋白 (collagen)</strong>（非結合）：三條多肽鏈纏繞成<strong>三股螺旋 (triple helix)</strong>，像三股線搓成一條繩。</li>
-<li><strong>血紅蛋白 (haemoglobin)</strong>（結合）：四條多肽鏈，即兩條 α 鏈和兩條 β 鏈。每條鏈都有一個<strong>血紅素基團 (haem group)</strong>，是含鐵離子 (Fe<sup>2+</sup>) 的非蛋白質基團，可以結合一個氧分子。</li>
+<li><strong>胰島素 (insulin)</strong>（非綴合）：兩條多肽鏈（A 鏈有 21 個氨基酸，B 鏈有 30 個），由二硫鍵連接。</li>
+<li><strong>膠原蛋白 (collagen)</strong>（非綴合）：三條多肽鏈纏繞成<strong>三股螺旋 (triple helix)</strong>，像三股線搓成一條繩。</li>
+<li><strong>血紅蛋白 (haemoglobin)</strong>（綴合）：四條多肽鏈，即兩條 α 鏈和兩條 β 鏈。每條鏈都有一個<strong>血紅素基團 (haem group)</strong>，是含鐵離子 (Fe<sup>2+</sup>) 的非蛋白質基團，可以結合一個氧分子。</li>
 </ul>
 <table>
 <tr><th>蛋白質</th><th>多肽鏈</th><th>有非多肽部分嗎？</th><th>類別</th></tr>
-<tr><td>胰島素</td><td>2 條（由二硫鍵連接）</td><td>沒有</td><td>非結合</td></tr>
-<tr><td>膠原蛋白</td><td>3 條（三股螺旋）</td><td>沒有</td><td>非結合</td></tr>
-<tr><td>血紅蛋白</td><td>4 條（2α + 2β）</td><td>有：每條鏈有血紅素（含 Fe<sup>2+</sup>）</td><td>結合</td></tr>
+<tr><td>胰島素</td><td>2 條（由二硫鍵連接）</td><td>沒有</td><td>非綴合</td></tr>
+<tr><td>膠原蛋白</td><td>3 條（三股螺旋）</td><td>沒有</td><td>非綴合</td></tr>
+<tr><td>血紅蛋白</td><td>4 條（2α + 2β）</td><td>有：每條鏈有血紅素（含 Fe<sup>2+</sup>）</td><td>綴合</td></tr>
 </table>
-<p><em>比喻：</em>四級結構 = 一隊球員（多條鏈）。結合 = 球隊再加上一件不是球員的裝備（輔基），例如守門員的手套。</p>
+<p><em>比喻：</em>四級結構 = 一隊球員（多條鏈）。綴合 = 球隊再加上一件不是球員的裝備（輔基），例如守門員的手套。</p>
 <p><strong>科學的本質 (Nature of science)。</strong>冷凍電子顯微術 (cryo-EM) 令科學家可以拍攝單一蛋白質分子，以及它與其他分子相互作用的影像。這些結構小得無法用人的感官直接觀察，所以技術擴闊了我們能觀察的範圍。</p>`
       },
       examTip: {
         en: "Quaternary needs at least two polypeptide chains. 'Conjugated' means a non-polypeptide (prosthetic) group such as haem. Keep these two ideas separate.",
         ja: "四次構造には少なくとも2本のポリペプチド鎖が必要です。「複合」はヘムのようなポリペプチド以外（補欠分子族）の基があることです。この2つを混同しないでください。",
-        zh: "四級結構需要至少兩條多肽鏈。「結合」是指有如血紅素的非多肽（輔基）基團。這兩個概念要分開。"
+        zh: "四級結構需要至少兩條多肽鏈。「綴合」是指有如血紅素的非多肽（輔基）基團。這兩個概念要分開。"
       }
     },
 
@@ -764,7 +764,7 @@ IB.registerTopic({
     { wrong: { en: "A disulfide bond is just another name for a peptide bond.", ja: "ジスルフィド結合はペプチド結合の別名だ。", zh: "二硫鍵只是肽鍵的另一個名稱。" },
       right: { en: "A peptide bond (C–N) joins neighbouring amino acids in the backbone. A disulfide bond (S–S) joins the R-groups of two cysteines, which can be far apart. Both are covalent, but they are different bonds at different levels.", ja: "ペプチド結合 (C–N) は骨格でとなり合うアミノ酸を結びます。ジスルフィド結合 (S–S) は2つのシステインのR基を結び、それらは離れていてもかまいません。どちらも共有結合ですが、別の結合で、働く段階も違います。", zh: "肽鍵 (C–N) 連接骨架上相鄰的氨基酸。二硫鍵 (S–S) 連接兩個半胱氨酸的 R 基，它們可以相隔很遠。兩者都是共價鍵，但是不同的鍵，作用於不同的結構層次。" } },
     { wrong: { en: "A conjugated protein is one with more than one polypeptide chain.", ja: "複合タンパク質とは、ポリペプチド鎖が複数あるタンパク質のことだ。", zh: "綴合蛋白質就是有多於一條多肽鏈的蛋白質。" },
-      right: { en: "More than one chain is quaternary structure. Conjugated means a non-polypeptide (prosthetic) group is attached, such as haem in haemoglobin. Insulin and collagen have several chains but are non-conjugated.", ja: "複数の鎖は四次構造のことです。複合とは、ヘモグロビンのヘムのように、ポリペプチド以外（補欠分子族）の基がついていることです。インスリンとコラーゲンは複数の鎖をもちますが非複合です。", zh: "多於一條鏈是四級結構。結合是指連有非多肽（輔）基團，例如血紅蛋白中的血紅素。胰島素和膠原蛋白有多條鏈，但屬非綴合蛋白質。" } },
+      right: { en: "More than one chain is quaternary structure. Conjugated means a non-polypeptide (prosthetic) group is attached, such as haem in haemoglobin. Insulin and collagen have several chains but are non-conjugated.", ja: "複数の鎖は四次構造のことです。複合とは、ヘモグロビンのヘムのように、ポリペプチド以外（補欠分子族）の基がついていることです。インスリンとコラーゲンは複数の鎖をもちますが非複合です。", zh: "多於一條鏈是四級結構。綴合是指連有非多肽（輔）基團，例如血紅蛋白中的血紅素。胰島素和膠原蛋白有多條鏈，但屬非綴合蛋白質。" } },
     { wrong: { en: "Every protein has a quaternary structure.", ja: "すべてのタンパク質に四次構造がある。", zh: "每種蛋白質都有四級結構。" },
       right: { en: "Quaternary structure needs at least two polypeptides. A protein made of one chain stops at tertiary structure.", ja: "四次構造には少なくとも2本のポリペプチドが必要です。1本の鎖でできたタンパク質は三次構造で終わりです。", zh: "四級結構需要至少兩條多肽。只由一條鏈組成的蛋白質，結構只到三級。" } },
     { wrong: { en: "Hydrophobic R-groups are always inside a protein.", ja: "疎水性のR基は、いつもタンパク質の内側にある。", zh: "疏水性 R 基永遠在蛋白質內部。" },
@@ -1061,7 +1061,7 @@ IB.registerTopic({
     { id: "b1-2-q19", type: "short", ahl: true, difficulty: 2, ref: "B1.2.12", paper: "2", commandTerm: "Compare and contrast", marks: 4,
       stem: { en: "Compare and contrast a globular protein and a fibrous protein, using insulin and collagen as examples.", ja: "インスリンとコラーゲンを例に、球状タンパク質と繊維状タンパク質を比較し、違いを述べよ。", zh: "以胰島素和膠原蛋白為例，比較並對照球狀蛋白質和纖維狀蛋白質。" },
       markscheme: [
-        { en: "similarity: both are proteins made of polypeptide chains with more than one chain (quaternary) / both non-conjugated / both have shapes that suit their function", ja: "共通点：どちらもポリペプチド鎖でできたタンパク質で、複数の鎖をもつ（四次）／どちらも非複合／どちらも形が働きに適している", zh: "相同點：兩者都是由多肽鏈組成的蛋白質，都有多於一條鏈（四級）／都屬非結合／形狀都配合其功能" },
+        { en: "similarity: both are proteins made of polypeptide chains with more than one chain (quaternary) / both non-conjugated / both have shapes that suit their function", ja: "共通点：どちらもポリペプチド鎖でできたタンパク質で、複数の鎖をもつ（四次）／どちらも非複合／どちらも形が働きに適している", zh: "相同點：兩者都是由多肽鏈組成的蛋白質，都有多於一條鏈（四級）／都屬非綴合／形狀都配合其功能" },
         { en: "shape: insulin is compact and rounded; collagen is long and rope-like (triple helix)", ja: "形：インスリンはコンパクトで丸い。コラーゲンは長いロープ状（三重らせん）", zh: "形狀：胰島素緊密而圓；膠原蛋白長而像繩（三股螺旋）" },
         { en: "solubility: insulin is soluble in water (hydrophilic outside), so can travel in blood plasma; collagen is insoluble", ja: "溶けやすさ：インスリンは水に溶け（外側が親水性）、血しょう中を運ばれる。コラーゲンは水に溶けない", zh: "溶解度：胰島素可溶於水（外面親水），所以能在血漿中運行；膠原蛋白不溶於水" },
         { en: "function: insulin has a specific shape that binds to a receptor (hormone signalling); collagen provides strength and support (e.g. in skin, tendons)", ja: "働き：インスリンは特定の形で受容体に結合する（ホルモンの情報伝達）。コラーゲンは強さと支えを与える（例：皮膚、腱）", zh: "功能：胰島素的特定形狀可結合受體（激素信號傳遞）；膠原蛋白提供強度和支撐（例如皮膚、肌腱）" }

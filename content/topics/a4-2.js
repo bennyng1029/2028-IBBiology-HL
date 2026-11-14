@@ -343,7 +343,7 @@
       },
       {
         id: "a4-2-q05", type: "short", ahl: false, difficulty: 2, ref: "A4.2.3", paper: "2", commandTerm: "Outline", marks: 4,
-        stem: L("Outline the causes of the extinction of (a) the North Island giant moa and (b) the Caribbean monk seal.", "(a) ニュージーランド北島のジャイアントモアと、(b) カリブモンクアザラシの絶滅の原因を説明せよ (Outline)。", "概述 (Outline) (a) 北島巨型恐鳥和 (b) 加勒比僧海豹滅絕的原因。"),
+        stem: L("Outline the causes of the extinction of (a) the North Island giant moa and (b) the Caribbean monk seal.", "(a) ニュージーランド北島のジャイアントモアと、(b) カリブモンクアザラシの絶滅の原因を概述せよ (Outline)。", "概述 (Outline) (a) 北島巨型恐鳥和 (b) 加勒比僧海豹滅絕的原因。"),
         markscheme: [
           L("(a) Hunted by humans for meat (and eggs taken)", "(a) 人間に肉のために狩られた（卵も採られた）", "(a) 被人類獵殺取肉（蛋亦被取走）"),
           L("(a) Habitat loss from burning/clearing of forest and scrub; slow reproduction made them vulnerable", "(a) 森や低木林の焼き払い・開墾による生息地の消失。繁殖が遅く絶滅しやすかった", "(a) 因焚燒／清除森林和灌叢而喪失生境；繁殖緩慢令牠們易受影響"),

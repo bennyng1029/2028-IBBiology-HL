@@ -155,7 +155,7 @@
 ${RING_SVG}
 <p><strong>Glucose: link between properties and use</strong></p>
 <ul><li><strong>Soluble</strong>: it has many polar –OH groups that form hydrogen bonds with water, so it dissolves in cytoplasm and blood plasma.</li>
-<li><strong>Transportable</strong>: because it is soluble, it can be carried in blood (animals) and phloem sap (plants).</li>
+<li><strong>Transportable</strong>: because it is soluble, it can be carried dissolved in the blood of animals.</li>
 <li><strong>Chemically stable</strong>: it does not react easily, so it can be moved around without being changed on the way.</li>
 <li><strong>Yields energy when oxidized</strong>: it has many C–H bonds. Oxidation in cell respiration releases energy that is used to make ATP.</li></ul>`,
           `<p><span class="term">単糖類 (monosaccharide)</span> は糖の最小単位である。炭素数で呼び分け、炭素5個は<strong>五炭糖 (pentose)</strong> (例 リボース)、炭素6個は<strong>六炭糖 (hexose)</strong> (例 グルコース) という。</p>
@@ -163,7 +163,7 @@ ${RING_SVG}
 ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners that are not O) and add the carbon in CH₂OH. Other –OH groups are left out to keep the drawing clear.', '簡略化した環状構造。環の炭素 (O以外の頂点) を数え、CH₂OH の炭素を足す。見やすくするため、他の –OH は省略している。').replace('Simplified ring diagrams. Count the ring carbons (corners that are not O) and add the carbon in CH₂OH. Other –OH groups are left out to keep the drawing clear.', '簡略化した環状構造。環の炭素 (O以外の頂点) を数え、CH₂OH の炭素を足す。見やすくするため、他の –OH は省略している。')}
 <p><strong>グルコース: 性質と利用のつながり</strong></p>
 <ul><li><strong>水に溶ける (soluble)</strong>: 極性のある –OH 基が多く、水と水素結合をつくるので、細胞質や血漿に溶ける。</li>
-<li><strong>運搬しやすい (transportable)</strong>: 溶けるため、血液 (動物) や師管液 (植物) で運ばれる。</li>
+<li><strong>運搬しやすい (transportable)</strong>: 溶けるため、動物の血液に溶けて運ばれる。</li>
 <li><strong>化学的に安定 (chemically stable)</strong>: 反応しにくいので、運ぶ途中で変化しない。</li>
 <li><strong>酸化するとエネルギーを出す (energy yield from oxidation)</strong>: C–H 結合が多く、細胞呼吸での酸化によりエネルギーが放出され、ATP の合成に使われる。</li></ul>`,
           `<p><span class="term">單糖 (monosaccharide)</span> 是單一的糖單位，按碳原子數目命名：<strong>戊糖 (pentose)</strong> 有5個碳 (例如核糖)，<strong>己糖 (hexose)</strong> 有6個碳 (例如葡萄糖)。</p>
@@ -171,7 +171,7 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
 ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners that are not O) and add the carbon in CH₂OH. Other –OH groups are left out to keep the drawing clear.', '簡化的環狀結構圖。數算環上的碳 (不是 O 的頂點)，再加 CH₂OH 中的碳。為求清晰，其他 –OH 基沒有繪出。')}
 <p><strong>葡萄糖：性質與用途的關係</strong></p>
 <ul><li><strong>可溶於水 (soluble)</strong>：有很多極性的 –OH 基，能與水形成氫鍵，所以能溶於細胞質和血漿。</li>
-<li><strong>易於運輸 (transportable)</strong>：由於可溶，能經血液 (動物) 和韌皮部汁液 (植物) 運送。</li>
+<li><strong>易於運輸 (transportable)</strong>：由於可溶，能溶在動物的血液中運送。</li>
 <li><strong>化學性質穩定 (chemically stable)</strong>：不易起反應，運送途中不會被改變。</li>
 <li><strong>氧化時釋出能量 (energy yield from oxidation)</strong>：含有很多 C–H 鍵，在細胞呼吸中氧化會釋出能量，用來製造 ATP。</li></ul>`),
         examTip: L("Don’t just list the four properties. Link each one to the use: soluble → carried in blood; stable → not altered in transit; energy-rich → respiration.",
@@ -258,13 +258,13 @@ ${RING_SVG.replace('Simplified ring diagrams. Count the ring carbons (corners th
         ref: "B1.1.8", ahl: false,
         heading: L("Lipids and their hydrophobic properties", "脂質の疎水性", "脂質的疏水性"),
         body: L(
-          `<p><span class="term">Lipids</span> are substances in living organisms that <strong>dissolve in non-polar solvents</strong> (such as ethanol or propanone) but are <strong>only sparingly soluble in water</strong>. They are defined by this solubility, not by one shared structure.</p>
+          `<p><span class="term">Lipids</span> are substances in living organisms that <strong>dissolve in non-polar solvents</strong> (such as hexane) but are <strong>only sparingly soluble in water</strong>. They are defined by this solubility, not by one shared structure.</p>
 <p>Lipids include <strong>fats</strong> (solid at room temperature), <strong>oils</strong> (liquid at room temperature), <strong>waxes</strong> and <strong>steroids</strong>.</p>
 <p>Why are they hydrophobic (“water-fearing”)? Much of a lipid is made of hydrocarbon chains or rings: many C–H and C–C bonds. These bonds are non-polar, so lipids cannot form hydrogen bonds with water and do not mix with it.</p>`,
-          `<p><span class="term">脂質 (lipid)</span> は、生物がもつ物質のうち<strong>無極性溶媒に溶け</strong> (エタノールやプロパノンなど)、<strong>水にはわずかしか溶けない</strong>ものをいう。共通の構造ではなく、この溶解性で定義される。</p>
+          `<p><span class="term">脂質 (lipid)</span> は、生物がもつ物質のうち<strong>無極性溶媒に溶け</strong> (ヘキサンなど)、<strong>水にはわずかしか溶けない</strong>ものをいう。共通の構造ではなく、この溶解性で定義される。</p>
 <p>脂質には<strong>脂肪 (fat)</strong> (室温で固体)、<strong>油 (oil)</strong> (室温で液体)、<strong>ワックス (wax)</strong>、<strong>ステロイド (steroid)</strong> が含まれる。</p>
 <p>なぜ疎水性 (hydrophobic、「水を嫌う」) なのか。脂質の大部分は炭化水素の鎖や環でできており、C–H 結合や C–C 結合が多い。これらの結合は無極性なので、水と水素結合をつくれず、水と混ざらない。</p>`,
-          `<p><span class="term">脂質 (lipid)</span> 是生物體內<strong>可溶於非極性溶劑</strong> (如乙醇、丙酮) 而<strong>只微溶於水</strong>的物質。脂質是以這種溶解性定義，而不是以共同結構定義。</p>
+          `<p><span class="term">脂質 (lipid)</span> 是生物體內<strong>可溶於非極性溶劑</strong> (如己烷) 而<strong>只微溶於水</strong>的物質。脂質是以這種溶解性定義，而不是以共同結構定義。</p>
 <p>脂質包括<strong>脂肪 (fat)</strong> (室溫下為固體)、<strong>油 (oil)</strong> (室溫下為液體)、<strong>蠟 (wax)</strong> 和<strong>類固醇 (steroid)</strong>。</p>
 <p>為何脂質是疏水 (hydrophobic，「怕水」) 的？脂質大部分由烴鏈或環組成，含大量 C–H 和 C–C 鍵。這些鍵是非極性的，所以不能與水形成氫鍵，也不與水混合。</p>`),
         examTip: L("Define lipids by solubility. Not “lipids are fatty acids and glycerol”: steroids are lipids but contain neither.",
@@ -552,7 +552,7 @@ ${STEROID_SVG.replace('The steroid skeleton: three six-sided rings (A, B, C) and
       {
         id: "b1-1-q09", type: "short", ahl: false, difficulty: 2, ref: "B1.1.6", paper: "2",
         commandTerm: "Distinguish", marks: 3,
-        stem: L("Distinguish between the structure and function of starch and cellulose.", "デンプンとセルロースの構造と機能の違いを明確にせよ。", "分辨澱粉與纖維素在結構和功能上的差異。"),
+        stem: L("Distinguish between the structure and function of starch and cellulose.", "デンプンとセルロースの構造と機能を区別せよ。", "分辨澱粉與纖維素在結構和功能上的差異。"),
         markscheme: [
           L("Starch is made of α-glucose; cellulose is made of β-glucose.", "デンプンはα-グルコース、セルロースはβ-グルコースからできている。", "澱粉由 α-葡萄糖組成；纖維素由 β-葡萄糖組成。"),
           L("Starch is coiled (and branched); cellulose forms straight, unbranched chains (alternating orientation of monomers) that are cross-linked by hydrogen bonds into bundles.", "デンプンはらせん状 (枝分かれあり)、セルロースはまっすぐで枝分かれのない鎖 (単量体の向きが交互) で、水素結合で束になる。", "澱粉呈螺旋 (有分支)；纖維素形成筆直無分支的鏈 (單體方向交替)，以氫鍵連成束。"),

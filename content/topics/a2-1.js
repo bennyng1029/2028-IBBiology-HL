@@ -231,7 +231,7 @@
 <li><strong>化石和岩石化學。</strong>含有細胞化石或生命化學痕跡的最古老岩石，其年齡可用<strong>放射性定年法</strong> (radiometric dating) 求得（利用岩石中放射性同位素的穩定衰變）。</li>
 <li><strong>分子鐘</strong> (molecular clock)：現存物種的 DNA 或蛋白質序列差異以大致穩定的速率累積。數算差異，再用由化石校準的速率，就可估計兩個譜系何時分開。把方法用於生命樹最古老的分支，便得出 LUCA 的年代。</li>
 </ul>
-<p>對最初活細胞和 LUCA 的估計，大多落在約 <strong>35 億至 43 億年前</strong>之間，確實數值視乎方法而定，亦有爭議。地球本身約有 45 億年歷史。自生命出現以來，超過一半的時間裏所有生物都是單細胞的，而人類只存在於最後極短的一段。</p>
+<p>對最初活細胞和 LUCA 的估計，大多落在約 <strong>35 億至 43 億年前</strong>之間，確切數值視乎方法而定，亦有爭議。地球本身約有 45 億年歷史。自生命出現以來，超過一半的時間裏所有生物都是單細胞的，而人類只存在於最後極短的一段。</p>
 <p>目的是讓你體會生命演化所經歷的<strong>極其漫長的時間</strong>。</p>`),
       examTip: T("You do not need to memorize exact dates. Know the two approaches and that the timescale is billions of years.",
         "正確な年代を暗記する必要はありません。2つの方法と、時間が数十億年規模であることを理解しましょう。",
@@ -537,7 +537,7 @@
       { wrong: T("LUCA was the first living thing on Earth.", "LUCAは地球で最初の生き物だった。", "LUCA 是地球上最早的生物。"),
         right: T("LUCA is the most recent common ancestor of all life today. Other forms of life may have existed earlier or at the same time but became extinct.", "LUCAは現在の全生物の最も新しい共通祖先です。ほかの生命がより早く、または同時に存在し、絶滅した可能性があります。", "LUCA 是現存所有生物最近的共同祖先。其他生命形式可能更早或同時存在過，但已絕種。") },
       { wrong: T("Viruses are non-living because they are very small.", "ウイルスは小さいから非生物である。", "病毒因為很細小，所以是非生物。"),
-        right: T("Size is not the reason. Viruses are classed as non-living because they have no cytoplasm, almost no enzymes and no metabolism, and can only be copied inside a host cell.", "大きさは理由ではありません。細胞質がなく酵素もほとんどなく代謝がなく、宿主細胞内でしか複製されないためです。", "大小不是原因。病毒被歸為非生物，是因為沒有細胞質、幾乎沒有酶、沒有新陳代謝，只能在宿主細胞內被複製。") },
+        right: T("Size is not the reason. Viruses are classed as non-living because they have no cytoplasm, almost no enzymes and no metabolism, and can only be copied inside a host cell.", "大きさは理由ではありません。細胞質がなく、酵素もほとんどなく、代謝も行わず、宿主細胞内でしか複製されないためです。", "大小不是原因。病毒被歸為非生物，是因為沒有細胞質、幾乎沒有酶、沒有新陳代謝，只能在宿主細胞內被複製。") },
       { wrong: T("Spontaneous formation of carbon compounds on early Earth means life appears spontaneously today.", "原始地球で炭素化合物が自然にできたのだから、今でも生命は自然に生じる。", "早期地球上含碳化合物自發形成，所以現在生命也會自發出現。"),
         right: T("Early Earth conditions (no free oxygen, UV and lightning energy, no organisms eating the compounds) no longer exist. Today cells come only from existing cells.", "初期地球の条件（遊離酸素なし、紫外線や雷のエネルギー、化合物を食べる生物がいない）はもうありません。現在、細胞は既存の細胞からのみ生じます。", "早期地球的條件（沒有游離氧、有紫外線和閃電的能量、沒有生物吃這些化合物）已不存在。現在細胞只由已存在的細胞產生。") }
     ],
