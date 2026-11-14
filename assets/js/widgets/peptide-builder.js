@@ -263,7 +263,7 @@
           lbl.textContent = "n = " + k;
           beadsHost.innerHTML = ""; beadsHost.appendChild(beads(k));
           big.textContent = "20" + sup(k) + " = " + fmt(v);
-          sci.textContent = T(["Scientific notation: ", "科学的記数法: ", "科學記數法：", "과학적 표기법: "]) + sciOf(v) + (k === 1 ? "" : "  (" + T(["different sequences", "通りの配列", "種序列", "서로 다른 서열"]) + ")");
+          sci.textContent = T(["Scientific notation: ", "科学的記数法: ", "科學記數法：", "과학적 표기법: "]) + sciOf(v) + (k === 1 ? "" : "  (" + T(["different sequences", "異なる配列", "不同序列", "서로 다른 서열"]) + ")");
         }
         sl.addEventListener("input", upd);
         var h = BigInt(20) ** 100n, hs = h.toString();

@@ -117,7 +117,7 @@
     { id: "ins", icon: iconInsulin, name: ["Insulin", "インスリン (insulin)", "胰島素 (insulin)", "인슐린"], shape: "glob", conj: false,
       facts: [
         [["Shape", "形", "形狀", "모양"], ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]],
-        [["Type", "種類", "類型", "종류"], ["Non-conjugated (polypeptides only)", "非複合 (non-conjugated)：ポリペプチドのみ", "非結合 (non-conjugated)：只有多肽", "비복합 단백질(폴리펩타이드만)"]],
+        [["Type", "種類", "類型", "종류"], ["Non-conjugated (polypeptides only)", "非複合 (non-conjugated)：ポリペプチドのみ", "非綴合 (non-conjugated)：只有多肽", "비복합 단백질(폴리펩타이드만)"]],
         [["Quaternary", "四次構造", "四級結構", "4차 구조"], ["2 polypeptides (A chain, 21 amino acids; B chain, 30) linked by disulfide bonds", "2本のポリペプチド (A鎖 21個、B鎖 30個のアミノ酸) がジスルフィド結合でつながる", "2 條多肽（A 鏈 21 個、B 鏈 30 個氨基酸），以二硫鍵連接", "이황화 결합으로 연결된 폴리펩타이드 2개(A 사슬: 아미노산 21개, B 사슬: 30개)"]],
         [["Function", "はたらき", "功能", "기능"], ["Hormone: a chemical messenger carried in the blood (lowers blood glucose)", "ホルモン (hormone)：血液で運ばれる化学的な伝達物質（血糖値を下げる）", "激素 (hormone)：由血液運送的化學信使（降低血糖）", "호르몬: 혈액을 타고 운반되는 화학 신호 물질(혈당을 낮춤)"]],
         [["Solubility", "溶解性", "溶解性", "용해성"], ["Soluble in water, so it can travel in the blood", "水に溶けるので血液で運ばれる", "可溶於水，所以能在血液中運送", "물에 녹으므로 혈액을 타고 이동할 수 있음"]]
@@ -125,7 +125,7 @@
     { id: "col", icon: iconCollagen, name: ["Collagen", "コラーゲン (collagen)", "膠原蛋白 (collagen)", "콜라젠"], shape: "fib", conj: false,
       facts: [
         [["Shape", "形", "形狀", "모양"], ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]],
-        [["Type", "種類", "類型", "종류"], ["Non-conjugated (polypeptides only)", "非複合 (non-conjugated)：ポリペプチドのみ", "非結合 (non-conjugated)：只有多肽", "비복합 단백질(폴리펩타이드만)"]],
+        [["Type", "種類", "類型", "종류"], ["Non-conjugated (polypeptides only)", "非複合 (non-conjugated)：ポリペプチドのみ", "非綴合 (non-conjugated)：只有多肽", "비복합 단백질(폴리펩타이드만)"]],
         [["Quaternary", "四次構造", "四級結構", "4차 구조"], ["3 polypeptides wound together into a triple helix", "3本のポリペプチドが巻きあって三重らせん (triple helix) になる", "3 條多肽纏繞成三股螺旋 (triple helix)", "3중 나선으로 서로 감긴 폴리펩타이드 3개"]],
         [["Function", "はたらき", "功能", "기능"], ["Structural: high tensile strength (resists being pulled), e.g. in skin and tendons", "構造をつくる: 引っぱりに強い (高い引っ張り強度)。例: 皮膚や腱", "結構功能：抗拉強度高（不易被拉斷），例如皮膚和肌腱", "구조 형성: 인장 강도가 높음(당겨져도 견딤). 예: 피부와 힘줄"]],
         [["Solubility", "溶解性", "溶解性", "용해성"], ["Insoluble in water", "水に溶けない", "不溶於水", "물에 녹지 않음"]]
@@ -133,7 +133,7 @@
     { id: "hb", icon: iconHb, name: ["Haemoglobin", "ヘモグロビン (haemoglobin)", "血紅蛋白 (haemoglobin)", "헤모글로빈"], shape: "glob", conj: true,
       facts: [
         [["Shape", "形", "形狀", "모양"], ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]],
-        [["Type", "種類", "類型", "종류"], ["Conjugated: has a non-polypeptide prosthetic group", "複合 (conjugated)：ポリペプチド以外の補欠分子族 (prosthetic group) をもつ", "結合 (conjugated)：含有非多肽的輔基 (prosthetic group)", "복합 단백질: 폴리펩타이드가 아닌 보결 분자단(prosthetic group)이 있음"]],
+        [["Type", "種類", "類型", "종류"], ["Conjugated: has a non-polypeptide prosthetic group", "複合 (conjugated)：ポリペプチド以外の補欠分子族 (prosthetic group) をもつ", "綴合 (conjugated)：含有非多肽的輔基 (prosthetic group)", "복합 단백질: 폴리펩타이드가 아닌 보결 분자단(prosthetic group)이 있음"]],
         [["Quaternary", "四次構造", "四級結構", "4차 구조"], ["4 polypeptides (in adults: 2 α-globin + 2 β-globin), each with a haem group containing an iron ion (Fe²⁺)", "4本のポリペプチド (成人: α鎖2本 + β鎖2本)。それぞれ鉄イオン (Fe²⁺) を含むヘム (haem) をもつ", "4 條多肽（成人：2 條 α + 2 條 β），每條各有一個含鐵離子 (Fe²⁺) 的血紅素 (haem)", "폴리펩타이드 4개(성인의 경우 α 글로빈 2개 + β 글로빈 2개). 각각 철 이온(Fe²⁺)이 든 헴(haem) 기를 가짐"]],
         [["Function", "はたらき", "功能", "기능"], ["Carries oxygen in red blood cells: each haem binds one O₂", "赤血球で酸素を運ぶ: 各ヘムが O₂ を1分子結合", "在紅血球中運載氧：每個血紅素結合一個 O₂", "적혈구에서 산소를 운반함: 헴 하나가 O₂ 한 분자와 결합"]],
         [["Solubility", "溶解性", "溶解性", "용해성"], ["Soluble in water", "水に溶ける", "可溶於水", "물에 녹음"]]
@@ -142,7 +142,7 @@
 
   var CMP = [
     [["Shape", "形", "形狀", "모양"], [["Globular", "球状 (globular)", "球狀 (globular)", "구형"], ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"], ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]]],
-    [["Type", "種類", "類型", "종류"], [["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"], ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"], ["Conjugated: haem (Fe²⁺)", "複合 (conjugated): ヘム (Fe²⁺)", "結合 (conjugated)：血紅素 (Fe²⁺)", "복합 단백질: 헴(Fe²⁺)"]]],
+    [["Type", "種類", "類型", "종류"], [["Non-conjugated", "非複合 (non-conjugated)", "非綴合 (non-conjugated)", "비복합 단백질"], ["Non-conjugated", "非複合 (non-conjugated)", "非綴合 (non-conjugated)", "비복합 단백질"], ["Conjugated: haem (Fe²⁺)", "複合 (conjugated): ヘム (Fe²⁺)", "綴合 (conjugated)：血紅素 (Fe²⁺)", "복합 단백질: 헴(Fe²⁺)"]]],
     [["Polypeptides", "ポリペプチド", "多肽", "폴리펩타이드"], [["2 (A chain, 21 amino acids; B chain, 30), disulfide-linked", "2本 (A鎖 21個、B鎖 30個のアミノ酸)、ジスルフィド結合", "2 條（A 鏈 21 個、B 鏈 30 個氨基酸），以二硫鍵連接", "2개(A 사슬: 아미노산 21개, B 사슬: 30개), 이황화 결합으로 연결"], ["3, wound into a triple helix", "3本、三重らせん (triple helix)", "3 條，纏繞成三股螺旋 (triple helix)", "3개, 3중 나선으로 감김"], ["4 (2 α + 2 β)", "4本 (α鎖2本 + β鎖2本)", "4 條（2 條 α + 2 條 β）", "4개 (α 2개 + β 2개)"]]],
     [["Function", "はたらき", "功能", "기능"], [["Hormone (lowers blood glucose)", "ホルモン (血糖値を下げる)", "激素（降低血糖）", "호르몬(혈당을 낮춤)"], ["Structural: high tensile strength", "構造: 高い引っ張り強度", "結構功能：抗拉強度高", "구조 형성: 인장 강도가 높음"], ["Carries oxygen in red blood cells", "赤血球で酸素を運ぶ", "在紅血球中運載氧", "적혈구에서 산소를 운반함"]]],
     [["Solubility", "溶解性", "溶解性", "용해성"], [["Soluble in water", "水に溶ける", "可溶於水", "물에 녹음"], ["Insoluble in water", "水に溶けない", "不溶於水", "물에 녹지 않음"], ["Soluble in water", "水に溶ける", "可溶於水", "물에 녹음"]]]
@@ -159,7 +159,7 @@
       var EXAMTXT = [
         "Insulin: globular, non-conjugated, 2 polypeptides (disulfide-linked), soluble hormone. Collagen: fibrous, non-conjugated, 3 polypeptides in a triple helix, insoluble, high tensile strength. Haemoglobin: globular, conjugated, 4 polypeptides each with a haem (iron) group, carries oxygen.",
         "インスリン: 球状・非複合・2本のポリペプチド (ジスルフィド結合)・水溶性のホルモン。コラーゲン: 繊維状・非複合・3本が三重らせん・不溶性・引っ張り強度が高い。ヘモグロビン: 球状・複合・4本のポリペプチドそれぞれにヘム (鉄) をもち酸素を運ぶ。",
-        "胰島素：球狀、非結合、2 條多肽（以二硫鍵連接）、可溶的激素。膠原蛋白：纖維狀、非結合、3 條多肽組成三股螺旋、不溶、抗拉強度高。血紅蛋白：球狀、結合、4 條多肽各有一個血紅素（含鐵）、運載氧。", "인슐린: 구형, 비복합 단백질, 폴리펩타이드 2개(이황화 결합으로 연결), 물에 녹는 호르몬. 콜라젠: 섬유형, 비복합 단백질, 3중 나선을 이룬 폴리펩타이드 3개, 물에 녹지 않음, 인장 강도가 높음. 헤모글로빈: 구형, 복합 단백질, 폴리펩타이드 4개가 각각 헴(철) 기를 가짐, 산소를 운반함."];
+        "胰島素：球狀、非綴合、2 條多肽（以二硫鍵連接）、可溶的激素。膠原蛋白：纖維狀、非綴合、3 條多肽組成三股螺旋、不溶、抗拉強度高。血紅蛋白：球狀、綴合、4 條多肽各有一個血紅素（含鐵）、運載氧。", "인슐린: 구형, 비복합 단백질, 폴리펩타이드 2개(이황화 결합으로 연결), 물에 녹는 호르몬. 콜라젠: 섬유형, 비복합 단백질, 3중 나선을 이룬 폴리펩타이드 3개, 물에 녹지 않음, 인장 강도가 높음. 헤모글로빈: 구형, 복합 단백질, 폴리펩타이드 4개가 각각 헴(철) 기를 가짐, 산소를 운반함."];
       var view = el("div");
       root.appendChild(view);
       render();
@@ -207,8 +207,8 @@
         } else {
           if (shapeOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(["Shape: ", "形: ", "形狀：", "모양: "]) + T(p.shape === "glob" ? ["globular", "球状 (globular)", "球狀 (globular)", "구형(globular)"] : ["fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형(fibrous)"]) }));
           else body.push(pair(p, ["Is it globular or fibrous?", "球状か繊維状か?", "是球狀還是纖維狀？", "구형인가, 섬유형인가?"], ["glob", ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]], ["fib", ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]], p.shape, shapeOK));
-          if (conjOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(p.conj ? ["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"] : ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]) }));
-          else body.push(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是結合還是非結合？", "복합 단백질인가, 비복합 단백질인가?"], [true, ["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]], p.conj, conjOK));
+          if (conjOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(p.conj ? ["Conjugated", "複合 (conjugated)", "綴合 (conjugated)", "복합 단백질(conjugated)"] : ["Non-conjugated", "非複合 (non-conjugated)", "非綴合 (non-conjugated)", "비복합 단백질"]) }));
+          else body.push(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是綴合還是非綴合？", "복합 단백질인가, 비복합 단백질인가?"], [true, ["Conjugated", "複合 (conjugated)", "綴合 (conjugated)", "복합 단백질(conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非綴合 (non-conjugated)", "비복합 단백질"]], p.conj, conjOK));
         }
         return {
           stage: [svg, el("p", { class: "small", style: "text-align:center", text: T(["Schematic diagram", "模式図", "示意圖", "모식도"]) })],
@@ -234,8 +234,8 @@
         function defs() { return el("dl", { class: "defs" }, [
               el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)", "구형"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。", "작고 둥근 모양으로 접혀 있고, 대개 물에 녹으며, 호르몬·운반·효소처럼 화학적인 일을 하는 경우가 많다."]) }),
               el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。", "길쭉한 가닥이나 밧줄 모양이고, 대개 물에 녹지 않으며, 강도를 주는(구조 형성) 경우가 많다."]) }),
-              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。", "폴리펩타이드 사슬로만 이루어져 있다."]) }),
-              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。", "폴리펩타이드가 아닌 부분인 보결 분자단(예: 헴)도 들어 있다."]) })
+              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非綴合 (non-conjugated)", "비복합 단백질"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。", "폴리펩타이드 사슬로만 이루어져 있다."]) }),
+              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "綴合 (conjugated)", "복합 단백질(conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。", "폴리펩타이드가 아닌 부분인 보결 분자단(예: 헴)도 들어 있다."]) })
         ]); }
       }
     }

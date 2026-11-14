@@ -18,6 +18,7 @@
     ".gx-root .wl-panel{gap:.5rem}",
     "@media(max-width:899px){.gx-chips,.gx-tog{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.2rem}.gx-chip,.gx-tog .gx-b{flex:none}.gx-tog .gx-b{min-height:2.25rem;font-size:.85rem;padding:.2rem .6rem}}",
     ".gx-root .oc-svg .tm,.gx-root .oc-svg .tx{font-size:14px}",
+    "@media(max-width:899px){.gx-root .oc-info{max-height:8.5rem;overflow-y:auto}.gx-root .gx-read{font-size:.82rem}}",
     ".gx-b{font:inherit;font-weight:600;min-height:2.5rem;padding:.35rem .8rem;border-radius:var(--radius,6px);border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".gx-b:hover{background:var(--surface-2,#e3eaee)}",
     ".gx-b[aria-pressed=true],.gx-b[aria-selected=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
@@ -406,9 +407,9 @@
   /* ------------------------------------------------------------- o2-curve */
   var OC = {
     title: { en: "Oxygen dissociation curves (AHL)", ja: "酸素解離曲線（AHL）", zh: "氧解離曲線（AHL）", ko: "산소 해리 곡선 (AHL)" },
-    adult: { en: "Adult haemoglobin", ja: "成人型ヘモグロビン", zh: "成人血紅蛋白", ko: "성인 헤모글로빈(adult haemoglobin)" },
-    foetal: { en: "Foetal haemoglobin", ja: "胎児型ヘモグロビン", zh: "胎兒血紅蛋白", ko: "태아 헤모글로빈(foetal haemoglobin)" },
-    bohr: { en: "Adult, more CO₂ (Bohr shift)", ja: "成人型、CO₂が多い（ボーア効果）", zh: "成人，較多CO₂（玻爾效應）", ko: "성인, CO₂ 많음 (보어 효과, Bohr shift)" },
+    adult: { en: "Adult haemoglobin", ja: "成人型ヘモグロビン", zh: "成人血紅蛋白", ko: "성인 헤모글로빈" },
+    foetal: { en: "Foetal haemoglobin", ja: "胎児型ヘモグロビン", zh: "胎兒血紅蛋白", ko: "태아 헤모글로빈" },
+    bohr: { en: "Adult, more CO₂ (Bohr shift)", ja: "成人型、CO₂が多い（ボーア効果）", zh: "成人，較多CO₂（玻爾效應）", ko: "성인, CO₂ 많음 (보어 효과)" },
     x: { en: "Oxygen partial pressure (kPa)", ja: "酸素分圧 (kPa)", zh: "氧分壓 (kPa)", ko: "산소 분압 (kPa)" },
     y: { en: "Haemoglobin saturation (%)", ja: "ヘモグロビンの飽和度 (%)", zh: "血紅蛋白飽和度 (%)", ko: "헤모글로빈 포화도 (%)" },
     slider: { en: "Oxygen partial pressure", ja: "酸素分圧", zh: "氧分壓", ko: "산소 분압" },
@@ -419,13 +420,13 @@
     z1: { en: "1 slow start", ja: "1 ゆるやかな立ち上がり", zh: "1 起初緩慢", ko: "1 느린 시작" },
     z2: { en: "2 steep", ja: "2 急な部分", zh: "2 陡峭", ko: "2 가파름" },
     z3: { en: "3 levels off", ja: "3 平らになる", zh: "3 趨平", ko: "3 평평해짐" },
-    sites: { en: "Average number of haem groups carrying O₂ per adult haemoglobin (out of 4):", ja: "成人型ヘモグロビン1分子あたり、O₂を結合しているヘム基の平均数（4つのうち）：", zh: "每個成人血紅蛋白中載有O₂的血紅素基團平均數目（共4個）：", ko: "성인 헤모글로빈 1분자당 O₂를 운반하는 헴 기(haem group)의 평균 수(4개 중):" },
+    sites: { en: "Average number of haem groups carrying O₂ per adult haemoglobin (out of 4):", ja: "成人型ヘモグロビン1分子あたり、O₂を結合しているヘム基の平均数（4つのうち）：", zh: "每個成人血紅蛋白中載有O₂的血紅素基團平均數目（共4個）：", ko: "성인 헤모글로빈 1분자당 O₂와 결합한 헴 기의 평균 수(4개 중):" },
     ill: { en: "Illustrative values. Real curves differ a little between sources. The positions of 'lungs' and 'tissue' are approximate.", ja: "イラスト用の値です。実際の曲線は資料によって少し異なります。「肺」「組織」の位置はおおよそです。", zh: "示範數值。實際曲線在不同資料中略有差異。「肺」和「組織」的位置只是大約。", ko: "예시 값이다. 실제 곡선은 자료에 따라 조금씩 다르다. '폐'와 '조직'의 위치는 대략적이다." },
     more: { en: "Explanation", ja: "説明", zh: "解說", ko: "설명" },
     sat: { en: "saturation", ja: "飽和度", zh: "飽和度", ko: "포화도" },
     expl: {
       s1: { en: "1. At low O₂ the first O₂ binds slowly, so the curve is shallow.", ja: "1. 酸素が少ないと最初のO₂はゆっくり結合するので、曲線はなだらかです。", zh: "1. 氧氣少時，第一個O₂結合緩慢，所以曲線平緩。", ko: "1. O₂가 낮을 때는 첫 번째 O₂가 천천히 결합하므로 곡선이 완만하다." },
-      s2: { en: "2. Once one O₂ has bound, the shape changes and the next ones bind more easily (cooperative binding), so the curve is steep.", ja: "2. 1つのO₂が結合すると形が変わり、次のO₂が結合しやすくなる（協同的結合）ので、曲線は急になります。", zh: "2. 一個O₂結合後，形狀改變，其後的O₂更容易結合（協同結合），所以曲線陡峭。", ko: "2. O₂ 하나가 결합하면 모양이 변하여 다음 O₂들이 더 쉽게 결합하므로(협동적 결합, cooperative binding) 곡선이 가파르다." },
+      s2: { en: "2. Once one O₂ has bound, the shape changes and the next ones bind more easily (cooperative binding), so the curve is steep.", ja: "2. 1つのO₂が結合すると形が変わり、次のO₂が結合しやすくなる（協同的結合）ので、曲線は急になります。", zh: "2. 一個O₂結合後，形狀改變，其後的O₂更容易結合（協同結合），所以曲線陡峭。", ko: "2. O₂ 하나가 결합하면 모양이 변하여 다음 O₂들이 더 쉽게 결합한다(협동적 결합, cooperative binding). 그래서 곡선이 가파르다." },
       s3: { en: "3. At high O₂ nearly all sites are full, so there are few free sites and the curve levels off.", ja: "3. 酸素が多いとほとんどの部位が埋まっており、空きが少ないので曲線は平らになります。", zh: "3. 氧氣多時，差不多所有位點都已佔滿，空位少，所以曲線趨平。", ko: "3. O₂가 높을 때는 거의 모든 부위가 차 있어 빈 부위가 거의 없으므로 곡선이 평평해진다." },
       fo: { en: "The foetal curve is to the left of the adult curve: higher saturation at the same O₂ pressure, so foetal haemoglobin has a higher affinity and can take O₂ from the mother's blood at the placenta.", ja: "胎児型の曲線は成人型の左にあります。同じ酸素分圧で飽和度が高いので、親和性が高く、胎盤で母親の血液から酸素を受け取れます。", zh: "胎兒曲線在成人曲線的左方：在相同氧分壓下飽和度較高，所以親和力較高，能在胎盤從母親血液取得氧氣。", ko: "태아 곡선은 성인 곡선의 왼쪽에 있다. 같은 O₂ 압력에서 포화도가 더 높으므로, 태아 헤모글로빈은 친화도(affinity)가 더 높아 태반에서 어머니의 혈액으로부터 O₂를 가져올 수 있다." },
       bo: { en: "More CO₂ shifts the curve to the right: lower saturation at the same O₂ pressure, so more O₂ is released. This helps actively respiring tissues, which make a lot of CO₂.", ja: "CO₂が多いと曲線は右へずれます。同じ酸素分圧で飽和度が低いので、より多くのO₂が放出されます。CO₂を多くつくる活発に呼吸している組織に役立ちます。", zh: "較多CO₂令曲線向右移：在相同氧分壓下飽和度較低，所以釋出更多O₂，有助產生大量CO₂的活躍呼吸組織。", ko: "CO₂가 많아지면 곡선이 오른쪽으로 이동한다. 같은 O₂ 압력에서 포화도가 낮으므로 더 많은 O₂가 방출된다. 이는 CO₂를 많이 만드는 활발히 호흡하는 조직에 도움이 된다." }
@@ -460,7 +461,7 @@
         '<div><label for="' + uid + '"><strong>' + t(OC.slider) + ': <span class="oc-pv"></span> kPa</strong></label>' +
         '<input id="' + uid + '" type="range" min="0" max="14" step="0.5" value="' + p + '"></div>' +
         '<div class="gx-read oc-read" aria-live="polite"></div>' +
-        '<details class="oc-det"><summary>' + t(OC.more) + '</summary><div class="gx-info oc-info"></div><p class="gx-note">' + t(OC.ill) + '</p></details>' +
+        '<details class="oc-det"><summary>' + t(OC.more) + '</summary><div class="gx-info oc-info" tabindex="0"></div><p class="gx-note">' + t(OC.ill) + '</p></details>' +
         '</div></div>';
 
       var svg = root.querySelector(".oc-svg");

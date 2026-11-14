@@ -195,7 +195,7 @@
       ];
       var EXAMTXT = [
         "Primary = order of amino acids (peptide bonds). Secondary = α-helix / β-pleated sheet held by hydrogen bonds between backbone C=O and N–H (AHL). Tertiary = whole-chain 3-D shape from R-group interactions (AHL). Quaternary = 2 or more polypeptides (AHL). The sequence determines the shape.",
-        "一次 = アミノ酸の並び順（ペプチド結合）。二次 = 骨格の C=O と N–H の間の水素結合で保たれる α-ヘリックス／βシート (AHL)。三次 = R基 の相互作用による鎖全体の立体構造 (AHL)。四次 = 2本以上のポリペプチド (AHL)。配列が形を決める。",
+        "一次 = アミノ酸の並び順（ペプチド結合）。二次 = 骨格の C=O と N–H の間の水素結合で保たれる αヘリックス／βシート (AHL)。三次 = R基 の相互作用による鎖全体の立体構造 (AHL)。四次 = 2本以上のポリペプチド (AHL)。配列が形を決める。",
         "一級 = 氨基酸的排列次序（肽鍵）。二級 = 由骨架 C=O 與 N–H 之間氫鍵維持的 α 螺旋／β 摺板 (AHL)。三級 = 由 R 基相互作用形成的整條鏈的立體形狀 (AHL)。四級 = 兩條或以上多肽 (AHL)。序列決定形狀。", "1차 구조 = 아미노산의 배열 순서(펩타이드 결합). 2차 구조 = 뼈대의 C=O와 N–H 사이의 수소 결합으로 유지되는 α 나선/β 병풍 구조(AHL). 3차 구조 = R기 상호 작용으로 만들어지는 사슬 전체의 3차원 모양(AHL). 4차 구조 = 2개 이상의 폴리펩타이드(AHL). 서열이 모양을 결정한다."];
       var NAR = window.innerWidth < 640;
       var view = el("div");
@@ -286,10 +286,10 @@
       }
 
       function secondary() {
-        var svg = sv("svg", { viewBox: "0 0 360 " + (sub === "helix" ? 170 : 215), role: "img", "aria-label": T(sub === "helix" ? ["α-helix", "α-ヘリックス", "α 螺旋", "α 나선"] : ["β-pleated sheet", "βシート", "β 摺板", "β 병풍 구조"]) });
+        var svg = sv("svg", { viewBox: "0 0 360 " + (sub === "helix" ? 170 : 215), role: "img", "aria-label": T(sub === "helix" ? ["α-helix", "αヘリックス", "α 螺旋", "α 나선"] : ["β-pleated sheet", "βシート", "β 摺板", "β 병풍 구조"]) });
         if (sub === "helix") drawHelix(svg); else drawSheet(svg);
         var bs = ["helix", "sheet"].map(function (k) {
-          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "α-ヘリックス (coiling)", "α 螺旋 (coiling)", "α 나선(꼬임)"]) : T(["β-pleated sheet (pleating)", "βシート (pleating)", "β 摺板 (pleating)", "β 병풍 구조(주름)"]) });
+          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "αヘリックス (coiling)", "α 螺旋 (coiling)", "α 나선(꼬임)"]) : T(["β-pleated sheet (pleating)", "βシート (pleating)", "β 摺板 (pleating)", "β 병풍 구조(주름)"]) });
           b.addEventListener("click", function () { sub = k; render(); }); return b;
         });
         return {
@@ -299,7 +299,7 @@
           ])],
           panel: [
             P(["Parts of the chain coil into an α-helix or pleat into a β-pleated sheet. Both are held in shape by hydrogen bonds between the C=O of one peptide link and the N–H of another, at regular positions along the backbone. The R-groups are not involved.",
-              "鎖の一部は α-ヘリックス (alpha helix) にコイル状に巻くか、βシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が骨格に沿って規則的な位置に生じて保たれます。R基は関与しません。",
+              "鎖の一部は αヘリックス (alpha helix) にコイル状に巻くか、βシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が骨格に沿って規則的な位置に生じて保たれます。R基は関与しません。",
               "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。", "사슬의 일부는 α 나선(α-helix)으로 꼬이거나 β 병풍 구조(β-pleated sheet)로 주름진다. 두 구조 모두 한 펩타이드 결합의 C=O와 다른 펩타이드 결합의 N–H 사이에서 뼈대를 따라 일정한 간격으로 생기는 수소 결합으로 모양이 유지된다. R기는 관여하지 않는다."]),
             el("div", { class: "bar", style: "margin:0" }, bs),
             PS(sub === "helix" ?

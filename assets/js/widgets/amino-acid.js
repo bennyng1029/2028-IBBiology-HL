@@ -248,7 +248,7 @@
         var fb = el("div", { class: "fb", "aria-live": "polite" });
         var scoreEl = el("p", { class: "score", text: T(["Sorted correctly: ", "正しく分類: ", "已正確分類：", "바르게 분류한 수: "]) + nDone + " / " + CARDS.length });
         var chips = el("div", { class: "chips" }, CARDS.map(function (_, i) {
-          var b = el("button", { type: "button", class: (i === cur ? "cur " : "") + (done[i] ? "ok" : ""), "aria-label": (ctx.lang === "ko" ? "R기 " : "R-group ") + (i + 1), "aria-current": i === cur ? "true" : null, text: done[i] ? "✔" : String(i + 1) });
+          var b = el("button", { type: "button", class: (i === cur ? "cur " : "") + (done[i] ? "ok" : ""), "aria-label": T(["R-group ", "R基 ", "R 基 ", "R기 "]) + (i + 1), "aria-current": i === cur ? "true" : null, text: done[i] ? "✔" : String(i + 1) });
           b.addEventListener("click", function () { cur = i; render(); });
           return b;
         }));
@@ -275,7 +275,7 @@
         var rb = el("button", { type: "button", text: T(["Reset", "リセット", "重設", "다시 시작"]) });
         rb.addEventListener("click", function () { done = {}; cur = 0; render(); });
         function mkTree(cls) { return el("div", { class: "tree panel " + cls }, [
-          el("b", { text: ctx.lang === "ko" ? "R기" : "R-group" }), "→",
+          el("b", { text: T(["R-group", "R基", "R 基", "R기"]) }), "→",
           el("b", { style: "border-color:var(--k-np)", text: T(["Hydrophobic = non-polar", "疎水性 (hydrophobic) = 非極性", "疏水 (hydrophobic) = 非極性", "소수성(hydrophobic) = 비극성"]) }), T(["or", "または", "或", "또는"]),
           el("b", { text: T(["Hydrophilic", "親水性 (hydrophilic)", "親水 (hydrophilic)", "친수성(hydrophilic)"]) }), "→",
           el("b", { style: "border-color:var(--k-pol)", text: T(["Polar", "極性 (polar)", "極性 (polar)", "극성"]) }), T(["or", "または", "或", "또는"]),
@@ -292,7 +292,7 @@
           el("p", { class: "small", text: T([
             "Cysteine: its R-group is –CH₂–SH. It is the one amino acid you need to name (AHL, B1.2.9). Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). It is not one of the cards here.",
             "システイン (cysteine)：R基は –CH₂–SH で、名前を覚える必要がある唯一のアミノ酸です（AHL, B1.2.9）。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。ここのカードには含まれません。",
-            "半胱氨酸 (cysteine)：R 基為 –CH₂–SH，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏的卡片不包括它。", "시스테인(cysteine): R기는 –CH₂–SH이다. 이름을 알아야 하는 유일한 아미노산이다(AHL, B1.2.9). 시스테인 2개는 공유 결합인 이황화 결합(disulfide bond, S–S)을 이룰 수 있으며, 이는 단백질의 모양을 유지하는 데 도움이 된다(단백질 접힘 위젯 참조). 여기 카드에는 들어 있지 않는다."]) })
+            "半胱氨酸 (cysteine)：R 基為 –CH₂–SH，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏的卡片不包括它。", "시스테인(cysteine): R기는 –CH₂–SH이다. 이름을 알아야 하는 유일한 아미노산이다(AHL, B1.2.9). 시스테인 2개는 공유 결합인 이황화 결합(disulfide bond, S–S)을 이룰 수 있으며, 이는 단백질의 모양을 유지하는 데 도움이 된다(단백질 접힘 위젯 참조). 여기 카드에는 들어 있지 않다."]) })
         ]);
         view.appendChild(el("div", { class: "wl" }, [
           el("div", { class: "wl-stage" }, [chips, card, mkTree("tree-desk")]),
