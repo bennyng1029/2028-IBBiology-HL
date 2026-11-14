@@ -1,6 +1,6 @@
 /* Korean (ko) translations for topics/b1-2.js — English source string -> Korean. Generated; edit the JSON source and rebuild. */
 IB.addKo({
-"Proteins": "단백질",
+"Proteins": "단백질(Proteins)",
 "What is the relationship between amino acid sequence and the diversity in form and function of proteins?": "아미노산 서열과 단백질의 형태 및 기능의 다양성 사이에는 어떤 관계가 있는가?",
 "How are protein molecules affected by their chemical and physical environments?": "단백질 분자는 화학적·물리적 환경의 영향을 어떻게 받는가?",
 "A protein is a chain of amino acids. Every amino acid has the same backbone but a different R-group, and the order of R-groups decides how the chain folds. Think of it as a staircase: amino acid, then peptide bond, then primary, secondary, tertiary and quaternary structure. Each step has its own bonds, and shape decides function. Heat and pH can wreck the shape (denaturation) without breaking the chain itself.": "단백질(protein)은 아미노산(amino acid)이 사슬처럼 이어진 것이다. 모든 아미노산은 골격이 같지만 R기(R-group)가 다르며, R기의 배열 순서가 사슬이 어떻게 접히는지를 결정한다. 이를 계단으로 생각해 보자. 아미노산, 펩타이드 결합(peptide bond), 그리고 1차, 2차, 3차, 4차 구조 순서이다. 각 단계에는 저마다의 결합이 있고, 모양이 기능을 결정한다. 열과 pH는 사슬 자체를 끊지 않고도 모양을 망가뜨릴 수 있다(변성, denaturation).",
