@@ -31,13 +31,13 @@
     inside: ["Inside the cell", "細胞内 (inside)", "細胞內 (inside)", "세포 안 (inside)"],
     more: ["Explanation", "説明", "解說", "설명"],
     modeTitle: ["Choose a mechanism", "しくみを選ぶ", "選擇機制", "기작 고르기"],
-    m_diff: ["Simple diffusion", "単純拡散 (simple diffusion)", "簡單擴散 (simple diffusion)", "단순 확산(simple diffusion)"],
-    m_chan: ["Facilitated diffusion (channel)", "促進拡散 (facilitated diffusion)：チャネル", "易化擴散 (facilitated diffusion)：通道", "촉진 확산(facilitated diffusion): 통로"],
-    m_osm: ["Osmosis", "浸透 (osmosis)", "滲透 (osmosis)", "삼투(osmosis)"],
-    m_act: ["Active transport (pump)", "能動輸送 (active transport)：ポンプ", "主動運輸 (active transport)：泵", "능동 수송(active transport): 펌프"],
-    m_gate: ["Gated channel", "ゲート付きチャネル (gated channel)", "門控通道 (gated channel)", "개폐성 통로(gated channel)"],
+    m_diff: ["Simple diffusion", "単純拡散 (simple diffusion)", "簡單擴散 (simple diffusion)", "단순 확산"],
+    m_chan: ["Facilitated diffusion (channel)", "促進拡散 (facilitated diffusion)：チャネル", "易化擴散 (facilitated diffusion)：通道", "촉진 확산: 통로"],
+    m_osm: ["Osmosis", "浸透 (osmosis)", "滲透 (osmosis)", "삼투"],
+    m_act: ["Active transport (pump)", "能動輸送 (active transport)：ポンプ", "主動運輸 (active transport)：泵", "능동 수송: 펌프"],
+    m_gate: ["Gated channel", "ゲート付きチャネル (gated channel)", "門控通道 (gated channel)", "개폐성 통로"],
     m_nak: ["Na⁺/K⁺ pump", "Na⁺/K⁺ ポンプ (sodium–potassium pump)", "鈉鉀泵 (sodium–potassium pump)", "Na⁺/K⁺ 펌프"],
-    m_sglt: ["Na⁺–glucose cotransporter", "Na⁺・グルコース共輸送体 (cotransporter)", "鈉–葡萄糖協同運輸體 (cotransporter)", "Na⁺–포도당 공동 수송체(cotransporter)"],
+    m_sglt: ["Na⁺–glucose cotransporter", "Na⁺・グルコース共輸送体 (cotransporter)", "鈉–葡萄糖協同運輸體 (cotransporter)", "Na⁺–포도당 공동 수송체"],
     m_vesc: ["Endo- / exocytosis", "エンド／エキソサイトーシス", "胞吞／胞吐 (endo- / exocytosis)", "세포 내 섭취 / 세포 외 배출"],
     ptype: ["Particle:", "粒子:", "粒子：", "입자:"],
     p_np: ["O₂ / CO₂ (small, non-polar)", "O₂ / CO₂ (小さく無極性)", "O₂ / CO₂ (細小、非極性)", "O₂ / CO₂ (작고 비극성)"],
@@ -99,12 +99,13 @@
     pr_osm_out: ["More solute outside: net movement of water is out of the cell (towards the higher solute concentration).", "細胞外の溶質が多い: 水は溶質濃度の高い細胞外へ正味で移動する。", "細胞外溶質較多：水淨移出細胞 (朝向溶質濃度較高處)。", "세포 밖에 용질이 더 많다: 물의 알짜 이동은 세포 밖으로 일어난다(용질 농도가 더 높은 쪽으로)."],
     pr_osm_eq: ["Equal solute concentrations: no net movement of water.", "溶質濃度が等しい: 水の正味の移動はない。", "溶質濃度相等：水沒有淨移動。", "용질 농도가 같다: 물의 알짜 이동이 없다."],
     pr_act_on_with: ["The pump uses ATP to move particles into the cell. Here that is down the gradient, but a pump could do it either way.", "ポンプは ATP を使って粒子を細胞内へ運ぶ。ここでは勾配に従う向きだが、ポンプは勾配に関係なく運べる。", "泵利用 ATP 把粒子運入細胞。這裏是順梯度，但泵順逆梯度均可運送。", "펌프는 ATP를 사용하여 입자를 세포 안으로 옮긴다. 여기서는 기울기를 따르는 방향이지만, 펌프는 어느 방향으로든 옮길 수 있다."],
+    pr_act_on_eq: ["The pump uses ATP to move particles into the cell even though the concentrations are equal. A pump keeps going and builds up a gradient: more inside than outside.", "濃度が等しくても、ポンプは ATP を使って粒子を細胞内へ運ぶ。ポンプは働き続け、細胞内が外より高くなる勾配をつくる。", "即使濃度相等，泵仍利用 ATP 把粒子運入細胞。泵會持續運作，建立內高外低的梯度。", "농도가 같아도 펌프는 ATP를 사용하여 입자를 세포 안으로 옮긴다. 펌프는 계속 작동하여 안이 밖보다 높은 기울기를 만든다."],
     pr_act_on_against: ["The pump uses ATP to move particles into the cell AGAINST the gradient (from low to high concentration).", "ポンプは ATP を使い、粒子を濃度勾配に逆らって (低濃度から高濃度へ) 細胞内へ運ぶ。", "泵利用 ATP 把粒子逆梯度 (由低濃度往高濃度) 運入細胞。", "펌프는 ATP를 사용하여 입자를 기울기에 거슬러(낮은 농도에서 높은 농도로) 세포 안으로 옮긴다."],
     pr_act_off: ["No ATP, no pumping: this ion cannot cross the bilayer, so nothing moves.", "ATP がなければポンプは働かない: このイオンは二重層を通れないので、何も動かない。", "沒有 ATP，泵不運作：此離子不能穿過雙層，所以沒有任何移動。", "ATP가 없으면 펌프질도 없다: 이 이온은 2중층을 통과할 수 없으므로 아무것도 움직이지 않는다."],
     pr_gate_closed: ["The gate is closed: no ions can pass, even though there is a gradient.", "ゲートが閉じている: 勾配があってもイオンは通れない。", "門是關閉的：即使有梯度，離子也不能通過。", "문이 닫혀 있다: 기울기가 있어도 이온이 지나갈 수 없다."],
     pr_gate_open_in: ["Gate open: ions diffuse in down the gradient (no ATP).", "ゲートが開いている: イオンは ATP なしで勾配に従い細胞内へ拡散する。", "門已開啟：離子順梯度擴散進入 (不需 ATP)。", "문이 열려 있다: 이온은 ATP 없이 기울기를 따라 세포 안으로 확산한다."],
     pr_gate_open_out: ["Gate open: ions diffuse out down the gradient (no ATP).", "ゲートが開いている: イオンは ATP なしで勾配に従い細胞外へ拡散する。", "門已開啟：離子順梯度擴散離開 (不需 ATP)。", "문이 열려 있다: 이온은 ATP 없이 기울기를 따라 세포 밖으로 확산한다."],
-    pr_nak_on: ["Each cycle: 3 Na⁺ out and 2 K⁺ in, both against their gradients, using 1 ATP. Watch Na⁺ build up outside and K⁺ inside.", "1サイクルで ATP を1個使い、Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ (どちらも勾配に逆らう)。Na⁺ が外に、K⁺ が内に増えていく。", "每個循環用 1 個 ATP，把 3 個 Na⁺ 運出、2 個 K⁺ 運入 (都逆梯度)。留意 Na⁺ 在外積聚、K⁺ 在內積聚。", "1회 순환마다 ATP 1개를 사용하여 Na⁺ 3개를 밖으로, K⁺ 2개를 안으로 옮긴다(둘 다 기울기에 거슬러). 밖에는 Na⁺가, 안에는 K⁺가 쌓이는 것을 관찰해 보자."],
+    pr_nak_on: ["Each cycle: 3 Na⁺ out and 2 K⁺ in, both against their gradients, using 1 ATP. Watch Na⁺ build up outside and K⁺ inside.", "1サイクルで ATP を1個使い、Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ (どちらも勾配に逆らう)。Na⁺ が外に、K⁺ が内に増えていく。", "每個循環用 1 個 ATP，把 3 個 Na⁺ 運出、2 個 K⁺ 運入 (都逆梯度)。留意 Na⁺ 在外積聚、K⁺ 在內積聚。", "1회 순환마다 ATP 1개를 사용하여 Na⁺ 3개를 밖으로, K⁺ 2개를 안으로 옮긴다(둘 다 기울기에 거슬러). 밖에는 Na⁺가, 안에는 K⁺가 쌓이는 것을 관찰하시오."],
     pr_nak_off: ["No ATP: the pump stops and the gradients are not built.", "ATP がなければポンプは止まり、勾配はできない。", "沒有 ATP：泵停止，梯度不會建立。", "ATP가 없다: 펌프가 멈추고 기울기가 만들어지지 않는다."],
     pr_sglt_ok: ["Na⁺ moves in down its gradient and carries glucose with it, even against the glucose gradient. The cotransporter itself uses no ATP.", "Na⁺ は勾配に従って入り、グルコースを一緒に運ぶ (グルコースの勾配に逆らってもよい)。共輸送体自身は ATP を使わない。", "Na⁺ 順梯度進入，並帶着葡萄糖一同進入 (即使逆葡萄糖的梯度)。協同運輸體本身不用 ATP。", "Na⁺는 기울기를 따라 안으로 들어오면서 포도당을 함께 운반한다. 포도당의 기울기에 거슬러서도 가능하다. 공동 수송체 자체는 ATP를 사용하지 않는다."],
     pr_sglt_stop: ["The Na⁺ gradient has run down (more Na⁺ inside than outside), so the cotransporter stops. Turn ATP back on to restore it.", "Na⁺ の勾配が失われた (細胞内の Na⁺ が外より多い) ので、共輸送体は止まる。ATP をオンに戻すと回復する。", "Na⁺ 梯度已消失 (細胞內 Na⁺ 多於細胞外)，協同運輸體停止。把 ATP 重新開啟便可恢復。", "Na⁺ 기울기가 사라졌다(세포 안의 Na⁺가 밖보다 많다). 그래서 공동 수송체가 멈춘다. ATP를 다시 켜면 기울기가 회복된다."],
@@ -123,7 +124,7 @@
       "泵蛋白利用 ATP 的能量把特定粒子運過膜。由於耗用能量，泵可以把粒子逆濃度梯度由低濃度運往高濃度。離子本身不能穿過雙層。關閉 ATP 後，泵便停止運作。", "펌프 단백질은 ATP의 에너지를 사용하여 특정 입자를 막 건너편으로 운반한다. 에너지를 사용하므로 펌프는 입자를 농도 기울기에 거슬러, 즉 낮은 농도에서 높은 농도로 옮길 수 있다. 이온은 스스로는 2중층을 통과할 수 없다. ATP를 끄면 펌프질이 멈춘다."],
     d_gate: ["Many channels in neurons have a gate. The gate is closed until a signal opens it. A neurotransmitter-gated channel (for example the nicotinic acetylcholine receptor) opens when the neurotransmitter binds. A voltage-gated channel (for example a sodium channel) opens at a particular membrane voltage. When open, ions diffuse down their gradient (facilitated diffusion, no ATP).",
       "ニューロンの多くのチャネルにはゲートがあり、信号で開くまで閉じている。神経伝達物質依存性チャネル (例: ニコチン性アセチルコリン受容体) は神経伝達物質が結合すると開く。電位依存性チャネル (例: ナトリウムチャネル) は特定の膜電位で開く。開くとイオンは勾配に従って拡散する (促進拡散、ATP は不要)。",
-      "神經元的很多通道有「門」，在訊號令它開啟前一直關閉。神經遞質門控通道 (例如菸鹼型乙酰膽鹼受體) 在神經遞質結合時打開；電壓門控通道 (例如鈉通道) 在特定膜電壓下打開。開啟後離子順梯度擴散 (易化擴散，不需 ATP)。", "뉴런의 많은 통로에는 문이 있다. 문은 신호가 열어 줄 때까지 닫혀 있다. 신경 전달 물질 개폐성 통로(예: 니코틴성 아세틸콜린 수용체)는 신경 전달 물질이 결합하면 열린다. 전압 개폐성 통로(예: 나트륨 통로)는 특정한 막 전압에서 열린다. 열리면 이온은 기울기를 따라 확산한다(촉진 확산, ATP 불필요)."],
+      "神經元的很多通道有「門」，在訊號令它開啟前一直關閉。神經遞質門控通道 (例如煙鹼型乙酰膽鹼受體) 在神經遞質結合時打開；電壓門控通道 (例如鈉通道) 在特定膜電壓下打開。開啟後離子順梯度擴散 (易化擴散，不需 ATP)。", "뉴런의 많은 통로에는 문이 있다. 문은 신호가 열어 줄 때까지 닫혀 있다. 신경 전달 물질 개폐성 통로(예: 니코틴성 아세틸콜린 수용체)는 신경 전달 물질이 결합하면 열린다. 전압 개폐성 통로(예: 나트륨 통로)는 특정한 막 전압에서 열린다. 열리면 이온은 기울기를 따라 확산한다(촉진 확산, ATP 불필요)."],
     d_nak: ["The sodium–potassium pump is an exchange transporter. Each cycle uses one ATP to move 3 Na⁺ out and 2 K⁺ in. It makes Na⁺ high outside and K⁺ high inside, and it moves more positive charge out than in. Together with K⁺ leaking back out through open potassium channels, this makes the inside negative: the pump helps to set up the membrane potential.",
       "ナトリウム・カリウムポンプは交換輸送体である。1サイクルで ATP を1個使い、Na⁺ 3個を外へ、K⁺ 2個を内へ運ぶ。Na⁺ は外側で、K⁺ は内側で高くなり、出る正電荷が入る正電荷より多い。K⁺ が開いたカリウムチャネルから外へ漏れ出ることと合わせて内側が負になり、ポンプは膜電位をつくるのに役立つ。",
       "鈉鉀泵是交換運輸體。每個循環用 1 個 ATP，把 3 個 Na⁺ 運出、2 個 K⁺ 運入。它令 Na⁺ 外高、K⁺ 內高，並運出較運入更多的正電荷；加上 K⁺ 經開啟的鉀通道漏出，令內部變負，所以泵有助建立膜電位。", "나트륨-칼륨 펌프(sodium–potassium pump)는 교환 수송체이다. 1회 순환마다 ATP 1개를 사용하여 Na⁺ 3개를 밖으로, K⁺ 2개를 안으로 옮긴다. 이 펌프는 밖에서는 Na⁺를, 안에서는 K⁺를 높게 만들고, 들어오는 것보다 더 많은 양전하를 내보낸다. K⁺가 열린 칼륨 통로를 통해 밖으로 다시 새어 나가는 것과 함께 세포 안쪽이 음전하를 띠게 된다. 즉 이 펌프는 막전위를 만드는 데 도움을 준다."],
@@ -132,16 +133,16 @@
       "鈉依賴性葡萄糖協同運輸體是間接主動運輸的例子。Na⁺/K⁺ 泵 (使用 ATP) 令細胞內 Na⁺ 保持低濃度。Na⁺ 經協同運輸體流入，但只有葡萄糖也結合時才可，所以葡萄糖即使逆它本身的梯度也被帶入。協同運輸體本身不直接使用 ATP。小腸細胞吸收葡萄糖及腎單位細胞重吸收葡萄糖，便是靠這個機制。", "나트륨 의존성 포도당 공동 수송체는 간접 능동 수송(indirect active transport)의 예이다. Na⁺/K⁺ 펌프(ATP 사용)가 세포 안의 Na⁺를 낮게 유지한다. Na⁺는 공동 수송체를 통해 들어오지만 포도당도 함께 결합해야만 가능하므로, 포도당은 자신의 기울기에 거슬러서도 운반된다. 공동 수송체 자체는 ATP를 직접 사용하지 않는다. 소장 세포가 포도당을 흡수하고 네프론의 세포가 포도당을 재흡수하는 방식이 이것이다."],
     d_vesc: ["Because the membrane is fluid, a piece of it can bend, pinch off and fuse. Endocytosis takes material into the cell inside a vesicle made from the plasma membrane (for example a white blood cell engulfing a bacterium). Exocytosis releases material when a vesicle fuses with the plasma membrane (for example insulin secretion or neurotransmitter release).",
       "膜は流動的なので、一部が曲がり、くびれ切れ、融合できる。エンドサイトーシスは、細胞膜からできた小胞に包んで物質を細胞内へ取り込む (例: 白血球が細菌を取り込む)。エキソサイトーシスは、小胞が細胞膜と融合して物質を放出する (例: インスリンの分泌、神経伝達物質の放出)。",
-      "由於膜具流動性，一片膜可以彎曲、脫離和融合。胞吞作用把物質包在由質膜形成的囊泡內帶入細胞 (例如白血球吞入細菌)；胞吐作用則在囊泡與質膜融合時釋出物質 (例如分泌胰島素、釋出神經遞質)。", "막은 유동적이므로 막의 일부가 휘어지고, 떨어져 나가고, 융합할 수 있다. 세포 내 섭취는 원형질막으로 만든 소낭 안에 물질을 담아 세포 안으로 들여온다(예: 백혈구가 세균을 삼킴). 세포 외 배출은 소낭이 원형질막과 융합하면서 물질을 내보낸다(예: 인슐린 분비, 신경 전달 물질 방출)."],
+      "由於膜具流動性，一片膜可以彎曲、脫離和融合。胞吞作用把物質包在由質膜形成的囊泡內帶入細胞 (例如白血球吞入細菌)；胞吐作用則在囊泡與質膜融合時釋出物質 (例如分泌胰島素、釋出神經遞質)。", "막은 유동적이므로 막의 일부가 휘어지고, 떨어져 나가고, 융합할 수 있다. 세포 내 섭취는 세포막으로 만든 소낭 안에 물질을 담아 세포 안으로 들여온다(예: 백혈구가 세균을 삼킴). 세포 외 배출은 소낭이 세포막과 융합하면서 물질을 내보낸다(예: 인슐린 분비, 신경 전달 물질 방출)."],
     /* vesicle stages */
-    e0: ["1. Material outside the cell lies next to the plasma membrane.", "1. 細胞外の物質が細胞膜のそばにある。", "1. 細胞外的物質靠近質膜。", "1. 세포 밖의 물질이 원형질막 옆에 놓여 있다."],
+    e0: ["1. Material outside the cell lies next to the plasma membrane.", "1. 細胞外の物質が細胞膜のそばにある。", "1. 細胞外的物質靠近質膜。", "1. 세포 밖의 물질이 세포막 옆에 놓여 있다."],
     e1: ["2. The fluid membrane bends inwards and begins to surround the material.", "2. 流動的な膜が内側へ曲がり、物質を囲み始める。", "2. 流動的膜向內彎曲，開始包圍物質。", "2. 유동적인 막이 안쪽으로 휘어 물질을 둘러싸기 시작한다."],
     e2: ["3. The edges of the membrane meet and are about to fuse.", "3. 膜の縁が近づき、融合しようとしている。", "3. 膜的邊緣靠近，快要融合。", "3. 막의 가장자리가 만나 곧 융합하려 한다."],
     e3: ["4. The membrane fuses and the vesicle, holding the material, pinches off into the cytoplasm.", "4. 膜が融合し、物質を含む小胞が細胞質へくびれ切れる。", "4. 膜融合，載有物質的囊泡脫離，進入細胞質。", "4. 막이 융합하고, 물질을 담은 소낭이 떨어져 나가 세포질로 들어간다."],
     x0: ["1. A vesicle containing material is inside the cell.", "1. 物質を含む小胞が細胞内にある。", "1. 載有物質的囊泡在細胞內。", "1. 물질을 담은 소낭이 세포 안에 있다."],
-    x1: ["2. The vesicle moves to the plasma membrane and touches it.", "2. 小胞が細胞膜へ移動し、接触する。", "2. 囊泡移向質膜並與之接觸。", "2. 소낭이 원형질막으로 이동하여 닿는다."],
-    x2: ["3. The vesicle membrane fuses with the plasma membrane and opens to the outside.", "3. 小胞の膜が細胞膜と融合し、外側へ開く。", "3. 囊泡膜與質膜融合，向外側開口。", "3. 소낭의 막이 원형질막과 융합하여 바깥쪽으로 열린다."],
-    x3: ["4. The contents are released outside. The vesicle membrane is now part of the plasma membrane.", "4. 内容物が細胞外へ放出される。小胞の膜は細胞膜の一部になった。", "4. 內容物釋出細胞外，囊泡膜成為質膜的一部分。", "4. 내용물이 세포 밖으로 방출된다. 소낭의 막은 이제 원형질막의 일부이다."]
+    x1: ["2. The vesicle moves to the plasma membrane and touches it.", "2. 小胞が細胞膜へ移動し、接触する。", "2. 囊泡移向質膜並與之接觸。", "2. 소낭이 세포막으로 이동하여 닿는다."],
+    x2: ["3. The vesicle membrane fuses with the plasma membrane and opens to the outside.", "3. 小胞の膜が細胞膜と融合し、外側へ開く。", "3. 囊泡膜與質膜融合，向外側開口。", "3. 소낭의 막이 세포막과 융합하여 바깥쪽으로 열린다."],
+    x3: ["4. The contents are released outside. The vesicle membrane is now part of the plasma membrane.", "4. 内容物が細胞外へ放出される。小胞の膜は細胞膜の一部になった。", "4. 內容物釋出細胞外，囊泡膜成為質膜的一部分。", "4. 내용물이 세포 밖으로 방출된다. 소낭의 막은 이제 세포막의 일부이다."]
   };
   var MODES = [
     { id: "diff", ahl: false }, { id: "chan", ahl: false }, { id: "osm", ahl: false }, { id: "act", ahl: false },
@@ -204,7 +205,7 @@
   }
 
   var W = {
-    title: { en: "Membrane transport lab", ja: "膜輸送ラボ (membrane transport lab)", zh: "膜運輸實驗室 (membrane transport lab)", ko: "막 수송 실험실(membrane transport lab)" },
+    title: { en: "Membrane transport lab", ja: "膜輸送ラボ (membrane transport lab)", zh: "膜運輸實驗室 (membrane transport lab)", ko: "막 수송 실험실" },
     mount: function (root, ctx) {
       css();
       var T = function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2], ko: a[3] }); };
@@ -390,7 +391,7 @@
         if (m === "chan") return o > i ? S.pr_ch_in : o < i ? S.pr_ch_out : S.pr_eq;
         if (m === "gate") { if (!st.gateOpen) return S.pr_gate_closed; return o > i ? S.pr_gate_open_in : o < i ? S.pr_gate_open_out : S.pr_eq; }
         if (m === "osm") return i > o ? S.pr_osm_in : i < o ? S.pr_osm_out : S.pr_osm_eq;
-        if (m === "act") { if (!st.atp) return S.pr_act_off; return o >= i ? S.pr_act_on_with : S.pr_act_on_against; }
+        if (m === "act") { if (!st.atp) return S.pr_act_off; return o > i ? S.pr_act_on_with : o === i ? S.pr_act_on_eq : S.pr_act_on_against; }
         if (m === "nak") return st.atp ? S.pr_nak_on : S.pr_nak_off;
         if (m === "sglt") return count("na", 1) > count("na", -1) ? S.pr_sglt_ok : S.pr_sglt_stop;
         return S.pr_eq;

@@ -49,7 +49,7 @@
   ].join("\n");
 
   var S = {
-    title: { en: "Cube model: surface area-to-volume ratio", ja: "立方体モデル：表面積と体積の比 (SA:V)", zh: "立方體模型：表面面積與體積比 (SA:V)", ko: "정육면체 모형: 표면적 대 부피 비(surface area-to-volume ratio)" },
+    title: { en: "Cube model: surface area-to-volume ratio", ja: "立方体モデル：表面積と体積の比 (SA:V)", zh: "立方體模型：表面面積與體積比 (SA:V)", ko: "정육면체 모형: 표면적 대 부피 비" },
     side: { en: "Side length (l)", ja: "辺の長さ (l)", zh: "邊長 (l)", ko: "한 변의 길이 (l)" },
     unit: "µm",
     dbl: { en: "Double the side", ja: "辺を2倍にする", zh: "邊長加倍", ko: "한 변을 2배로" },

@@ -100,7 +100,7 @@
     anc: L("common ancestor", "共通祖先", "共同祖先", "공통 조상"),
     present: L("has the structure", "構造をもつ", "具有該結構", "구조가 있음"), absent: L("lacks the structure", "構造をもたない", "沒有該結構", "구조가 없음"),
     inh: L("inherited", "受け継ぐ", "遺傳", "물려받음"), sep: L("evolved separately", "別々に進化", "各自進化", "따로 진화함"),
-    ex1: L("Homologous: same origin, often different function. Analogous: same function, different origin (convergent evolution).", "相同構造 (homologous): 起源が同じで働きは異なることが多い。相似 (analogous): 働きが同じで起源は異なる（収斂進化 (convergent evolution)）。", "同源結構 (homologous)：來源相同，功能往往不同。同功結構 (analogous)：功能相同，來源不同（趨同進化 (convergent evolution)）。", "상동: 기원이 같고 기능은 대개 다르다. 상사: 기능은 같고 기원이 다르다(수렴 진화)."),
+    ex1: L("Homologous: same origin, often different function. Analogous: same function, different origin (convergent evolution).", "相同構造 (homologous): 起源が同じで働きは異なることが多い。相似構造 (analogous): 働きが同じで起源は異なる（収斂進化 (convergent evolution)）。", "同源結構 (homologous)：來源相同，功能往往不同。同功結構 (analogous)：功能相同，來源不同（趨同進化 (convergent evolution)）。", "상동: 기원이 같고 기능은 대개 다르다. 상사: 기능은 같고 기원이 다르다(수렴 진화)."),
     ref1: L("Syllabus A4.1.4–5", "シラバス A4.1.4–5", "課程大綱 A4.1.4–5", "교육과정 A4.1.4–5"),
     wild: L("Wild cabbage", "野生のキャベツ", "野生甘藍", "야생 양배추"), wildS: L("Brassica oleracea", "Brassica oleracea", "Brassica oleracea", "Brassica oleracea"),
     m2: L("All these vegetables were bred from <b>one wild species</b>. Tap a vegetable to see which part people kept choosing.", "これらの野菜はすべて<b>1つの野生種</b>から育種されました。野菜をタップして、人がどの部分を選び続けたかを見ましょう。", "這些蔬菜全部由<b>同一個野生物種</b>培育而成。點選蔬菜，看看人們一直選擇哪個部分。", "이 채소들은 모두 <b>한 야생 종</b>에서 길러 냈다. 채소를 눌러 사람들이 어느 부분을 계속 골랐는지 확인하시오."),

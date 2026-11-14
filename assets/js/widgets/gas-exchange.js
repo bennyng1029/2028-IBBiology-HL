@@ -114,7 +114,7 @@
     air: { en: "air", ja: "空気", zh: "空氣", ko: "공기" },
     score: { en: "Score", ja: "得点", zh: "得分", ko: "점수" },
     done: { en: "Finished. Press Quiz me to try again.", ja: "終了です。もう一度挑戦するには「クイズ」を押してください。", zh: "完成了。按「自我測驗」可再試一次。", ko: "끝났습니다. 다시 하려면 퀴즈를 누르시오." },
-    lung: { en: "Alveolus (lung)", ja: "肺胞（肺）", zh: "肺泡（肺）", ko: "폐포(alveolus)" },
+    lung: { en: "Alveolus (lung)", ja: "肺胞（肺）", zh: "肺泡（肺）", ko: "폐포" },
     leaf: { en: "Leaf", ja: "葉", zh: "葉", ko: "잎" },
     leafNote: { en: "This is an illustration with cells drawn. In your own plan diagram, draw only the outlines of tissues and no individual cells.", ja: "これは細胞を描いたイラストです。自分で平面図を描くときは、組織の輪郭だけを描き、個々の細胞は描きません。", zh: "這是繪有細胞的示意圖。自己畫平面圖時，只畫組織的輪廓，不畫個別細胞。", ko: "세포를 그려 넣은 그림이다. 직접 그리는 평면도(plan diagram)에는 조직의 윤곽만 그리고 개별 세포는 그리지 않는다." },
     lungNote: { en: "Schematic, not to scale. Red tint = capillaries (blood).", ja: "模式図で、縮尺は正確ではありません。赤みがかった部分は毛細血管（血液）です。", zh: "示意圖，並非按比例。紅色部分為微血管（血液）。", ko: "개략도이며 축척은 맞지 않는다. 붉은 색조 = 모세 혈관(혈액)." },
@@ -405,7 +405,7 @@
 
   /* ------------------------------------------------------------- o2-curve */
   var OC = {
-    title: { en: "Oxygen dissociation curves (AHL)", ja: "酸素解離曲線（AHL）", zh: "氧解離曲線（AHL）", ko: "산소 해리 곡선(oxygen dissociation curves) (AHL)" },
+    title: { en: "Oxygen dissociation curves (AHL)", ja: "酸素解離曲線（AHL）", zh: "氧解離曲線（AHL）", ko: "산소 해리 곡선 (AHL)" },
     adult: { en: "Adult haemoglobin", ja: "成人型ヘモグロビン", zh: "成人血紅蛋白", ko: "성인 헤모글로빈(adult haemoglobin)" },
     foetal: { en: "Foetal haemoglobin", ja: "胎児型ヘモグロビン", zh: "胎兒血紅蛋白", ko: "태아 헤모글로빈(foetal haemoglobin)" },
     bohr: { en: "Adult, more CO₂ (Bohr shift)", ja: "成人型、CO₂が多い（ボーア効果）", zh: "成人，較多CO₂（玻爾效應）", ko: "성인, CO₂ 많음 (보어 효과, Bohr shift)" },
@@ -413,7 +413,7 @@
     y: { en: "Haemoglobin saturation (%)", ja: "ヘモグロビンの飽和度 (%)", zh: "血紅蛋白飽和度 (%)", ko: "헤모글로빈 포화도 (%)" },
     slider: { en: "Oxygen partial pressure", ja: "酸素分圧", zh: "氧分壓", ko: "산소 분압" },
     lungs: { en: "lungs", ja: "肺", zh: "肺", ko: "폐" },
-    rest: { en: "resting tissue", ja: "安静時の組織", zh: "靜止的組織", ko: "휴지 조직" },
+    rest: { en: "resting tissue", ja: "安静時の組織", zh: "靜止的組織", ko: "안정 시 조직" },
     active: { en: "active muscle", ja: "活動中の筋肉", zh: "活躍的肌肉", ko: "활동 근육" },
     s: { en: "Show the three parts of the S-shape", ja: "S字形の3つの部分を表示", zh: "顯示S形的三個部分", ko: "S자 곡선의 세 부분 보기" },
     z1: { en: "1 slow start", ja: "1 ゆるやかな立ち上がり", zh: "1 起初緩慢", ko: "1 느린 시작" },
@@ -449,7 +449,7 @@
 
       root.innerHTML =
         '<div class="wl"><div class="wl-stage">' +
-        '<div class="gx-art"><svg class="oc-svg" viewBox="0 0 420 262" role="img" aria-label="' + t(OC.title) + '"></svg></div>' +
+        '<div class="gx-art"><svg class="oc-svg" viewBox="0 0 420 248" role="img" aria-label="' + t(OC.title) + '"></svg></div>' +
         '</div>' +
         '<div class="wl-panel">' +
         '<div class="gx-tog"><span class="gx-al" style="margin:0 .2rem 0 0;align-self:center">AHL</span>' +
@@ -502,7 +502,7 @@
         g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 3.5)) + '" r="5" style="fill:var(--accent,#2547c7);stroke:var(--surface,#fff);stroke-width:2"/>';
         if (show.fo) g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 2.5)) + '" r="5" style="fill:var(--theme-b,#b82a56);stroke:var(--surface,#fff);stroke-width:2"/>';
         if (show.bo) g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 4.7)) + '" r="5" style="fill:var(--theme-a,#07756f);stroke:var(--surface,#fff);stroke-width:2"/>';
-        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="256" text-anchor="middle">' + t(OC.x) + '</text>';
+        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="243" text-anchor="middle">' + t(OC.x) + '</text>';
         g += '<text class="tx" x="13" y="' + ((T + B) / 2) + '" text-anchor="middle" transform="rotate(-90 13 ' + ((T + B) / 2) + ')">' + t(OC.y) + '</text>';
         svg.innerHTML = g;
 

@@ -50,7 +50,7 @@
   ].join("\n");
 
   var T = {
-    tab0: L("Triglyceride", "トリグリセリド", "甘油三酯", "트라이글리세리드"),
+    tab0: L("Triglyceride", "トリグリセリド", "甘油三酯", "트라이글리세라이드"),
     tab1: L("Fatty acids", "脂肪酸", "脂肪酸", "지방산"),
     tab2: L("Phospholipids", "リン脂質", "磷脂", "인지질"),
     add: L("Add fatty acid", "脂肪酸を付ける", "加入脂肪酸", "지방산 붙이기"),
@@ -61,8 +61,8 @@
     es: L("ester bond", "エステル結合", "酯鍵", "에스터 결합(ester bond)"),
     m0: L("<b>Glycerol</b> has three –OH groups. Each <b>fatty acid</b> has a –COOH group and a long hydrocarbon chain. Press Add fatty acid.", "<b>グリセロール (glycerol)</b>には–OH基が3つあります。<b>脂肪酸 (fatty acid)</b>は–COOH基と長い炭化水素鎖を持ちます。「脂肪酸を付ける」を押しましょう。", "<b>甘油 (glycerol)</b>有三個–OH基。每個<b>脂肪酸 (fatty acid)</b>有一個–COOH基和長長的烴鏈。按「加入脂肪酸」。", "<b>글리세롤(glycerol)</b>에는 –OH기가 3개 있다. 각 <b>지방산(fatty acid)</b>에는 –COOH기와 긴 탄화수소 사슬이 있다. '지방산 붙이기'를 누르시오."),
     m0n: L("<b>Condensation</b>: –OH from the fatty acid and –H from the glycerol leave as <b>water</b>, and an <b>ester bond</b> forms. Fatty acids joined: %n of 3.", "<b>縮合 (condensation)</b>: 脂肪酸の–OHとグリセロールの–Hが<b>水</b>として取れ、<b>エステル結合</b>ができます。結合した脂肪酸: %n / 3。", "<b>縮合 (condensation)</b>：脂肪酸的–OH和甘油的–H脫去成為<b>水</b>，形成<b>酯鍵</b>。已連接的脂肪酸：%n / 3。", "<b>축합(condensation)</b>: 지방산의 –OH와 글리세롤의 –H가 <b>물</b>로 떨어져 나가고 <b>에스터 결합</b>이 생긴다. 연결된 지방산: 3개 중 %n개."),
-    m03: L("<b>Triglyceride</b>: one glycerol + three fatty acids, three ester bonds, three water molecules released. Triglycerides store energy and give thermal insulation in adipose tissue.", "<b>トリグリセリド (triglyceride)</b>: グリセロール1分子＋脂肪酸3分子、エステル結合3つ、水3分子が放出されます。脂肪組織でエネルギーを貯蔵し、断熱にも働きます。", "<b>甘油三酯 (triglyceride)</b>：1個甘油＋3個脂肪酸，3個酯鍵，釋出3個水分子。在脂肪組織中儲存能量並提供隔熱。", "<b>트라이글리세리드(triglyceride)</b>: 글리세롤 1분자 + 지방산 3분자, 에스터 결합 3개, 방출된 물 분자 3개. 트라이글리세리드는 지방 조직(adipose tissue)에서 에너지를 저장하고 열을 차단한다."),
-    ex0: L("Triglyceride = glycerol + 3 fatty acids, made by 3 condensation reactions (3 H₂O released).", "トリグリセリド (triglyceride) ＝ グリセロール＋脂肪酸3つ。縮合 (condensation) が3回起こり、水が3分子できる。", "甘油三酯 (triglyceride) ＝ 甘油＋3個脂肪酸，經3次縮合 (condensation)，釋出3個水。", "트라이글리세리드 = 글리세롤 + 지방산 3분자. 축합 반응 3번으로 만들어진다(H₂O 3분자 방출)."),
+    m03: L("<b>Triglyceride</b>: one glycerol + three fatty acids, three ester bonds, three water molecules released. Triglycerides store energy and give thermal insulation in adipose tissue.", "<b>トリグリセリド (triglyceride)</b>: グリセロール1分子＋脂肪酸3分子、エステル結合3つ、水3分子が放出されます。脂肪組織でエネルギーを貯蔵し、断熱にも働きます。", "<b>甘油三酯 (triglyceride)</b>：1個甘油＋3個脂肪酸，3個酯鍵，釋出3個水分子。在脂肪組織中儲存能量並提供隔熱。", "<b>트라이글리세라이드(triglyceride)</b>: 글리세롤 1분자 + 지방산 3분자, 에스터 결합 3개, 방출된 물 분자 3개. 트라이글리세라이드는 지방 조직(adipose tissue)에서 에너지를 저장하고 열을 차단한다."),
+    ex0: L("Triglyceride = glycerol + 3 fatty acids, made by 3 condensation reactions (3 H₂O released).", "トリグリセリド (triglyceride) ＝ グリセロール＋脂肪酸3つ。縮合 (condensation) が3回起こり、水が3分子できる。", "甘油三酯 (triglyceride) ＝ 甘油＋3個脂肪酸，經3次縮合 (condensation)，釋出3個水。", "트라이글리세라이드 = 글리세롤 + 지방산 3분자. 축합 반응 3번으로 만들어진다(H₂O 3분자 방출)."),
     ref0: L("Syllabus B1.1.9", "シラバス B1.1.9", "課程大綱 B1.1.9", "교육과정 B1.1.9"),
     sat: L("Saturated", "飽和 (saturated)", "飽和 (saturated)", "포화(saturated)"),
     mono: L("Monounsaturated", "一価不飽和 (mono-unsaturated)", "單元不飽和 (monounsaturated)", "단일 불포화(mono-unsaturated)"),
@@ -87,7 +87,7 @@
     core: L("hydrophobic core", "疎水性の内部", "疏水內部", "소수성 중심부"),
     m2: L("Each <b>phospholipid</b> is <b>amphipathic</b>: a hydrophilic phosphate head and two hydrophobic fatty acid tails. Press Self-assemble.", "<b>リン脂質 (phospholipid)</b>は<b>両親媒性 (amphipathic)</b>で、親水性のリン酸の頭部と、2本の疎水性の脂肪酸の尾部を持ちます。「自己集合」を押しましょう。", "<b>磷脂 (phospholipid)</b>是<b>雙親性 (amphipathic)</b>的：有親水的磷酸頭部和兩條疏水的脂肪酸尾部。按「自行組合」。", "각 <b>인지질(phospholipid)</b>은 <b>양친매성(amphipathic)</b>이다. 친수성인 인산 머리와 소수성인 지방산 꼬리 2개를 가진다. '스스로 모이기'를 누르시오."),
     m2b: L("In water the heads face the water and the tails face each other, away from water. A <b>phospholipid bilayer</b> forms: the basis of cell membranes (B2.1).", "水中では頭部が水に向き、尾部は水から離れて向かい合います。<b>リン脂質二重層 (phospholipid bilayer)</b>ができ、これが細胞膜の基本です (B2.1)。", "在水中，頭部朝向水，尾部互相面對、遠離水。形成<b>磷脂雙層 (phospholipid bilayer)</b>，是細胞膜的基礎 (B2.1)。", "물속에서는 머리가 물을 향하고, 꼬리는 물에서 멀어져 서로를 향한다. <b>인지질 2중층(phospholipid bilayer)</b>이 만들어지며, 이것이 세포막의 바탕이다(B2.1)."),
-    md2: L("A phospholipid is made by condensation reactions: one glycerol links two fatty acids and one phosphate group. A triglyceride has three fatty acids instead.", "リン脂質も縮合で作られます。グリセロール1分子に脂肪酸2分子とリン酸基1つがつながります。トリグリセリドは脂肪酸が3つです。", "磷脂也經縮合形成：1個甘油連接兩個脂肪酸和一個磷酸基。甘油三酯則連接三個脂肪酸。", "인지질도 축합 반응으로 만들어진다. 글리세롤 1분자가 지방산 2분자와 인산기 1개를 연결한다. 트라이글리세리드는 그 대신 지방산이 3개이다."),
+    md2: L("A phospholipid is made by condensation reactions: one glycerol links two fatty acids and one phosphate group. A triglyceride has three fatty acids instead.", "リン脂質も縮合で作られます。グリセロール1分子に脂肪酸2分子とリン酸基1つがつながります。トリグリセリドは脂肪酸が3つです。", "磷脂也經縮合形成：1個甘油連接兩個脂肪酸和一個磷酸基。甘油三酯則連接三個脂肪酸。", "인지질도 축합 반응으로 만들어진다. 글리세롤 1분자가 지방산 2분자와 인산기 1개를 연결한다. 트라이글리세라이드는 그 대신 지방산이 3개이다."),
     ex2: L("Phospholipid: hydrophilic head + 2 hydrophobic tails (amphipathic). In water they form a bilayer.", "リン脂質 (phospholipid): 親水性の頭部＋疎水性の尾部2本（両親媒性 (amphipathic)）。水中で二重層をつくる。", "磷脂 (phospholipid)：親水頭部＋2條疏水尾部（雙親性 (amphipathic)）。在水中形成雙層。", "인지질(phospholipid): 친수성 머리 + 소수성 꼬리 2개(양친매성). 물속에서는 2중층을 이룬다."),
     ref2: L("Syllabus B1.1.9, B1.1.12 (→ B2.1.1)", "シラバス B1.1.9、B1.1.12（→ B2.1.1）", "課程大綱 B1.1.9、B1.1.12（→ B2.1.1）", "교육과정 B1.1.9, B1.1.12 (→ B2.1.1)"),
     more: L("More detail", "くわしく", "更多資料", "자세히 보기"),

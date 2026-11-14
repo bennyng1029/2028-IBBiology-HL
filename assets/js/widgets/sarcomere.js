@@ -211,7 +211,7 @@
   }
 
   IB.registerWidget("sarcomere", {
-    title: L("Sliding filament model: how a sarcomere contracts", "滑り説: サルコメアはどのように収縮するか", "滑動肌絲模型：肌節如何收縮", "근필라멘트 활주설(sliding filament model): 근육 원섬유 마디는 어떻게 수축할까"),
+    title: L("Sliding filament model: how a sarcomere contracts", "滑り説: サルコメアはどのように収縮するか", "滑動肌絲模型：肌節如何收縮", "근필라멘트 활주설: 근육 원섬유 마디는 어떻게 수축할까"),
     mount: mount
   });
 })();

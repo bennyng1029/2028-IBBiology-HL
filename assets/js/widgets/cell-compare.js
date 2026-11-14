@@ -170,7 +170,7 @@
       T("Membrane-bound sacs of varying size. They store substances and can break materials down.", "大きさはさまざまな膜で囲まれた袋。物質を貯蔵し、物質を分解することもあります。", "大小不一的膜囊。儲存物質，也能分解物質。", "크기가 다양한 막 주머니이다. 물질을 저장하며 물질을 분해할 수도 있다.")],
     chlo: [T("Chloroplast", "葉緑体 (chloroplast)", "葉綠體 (chloroplast)", "엽록체 (chloroplast)"),
       T("Double membrane; contains stacks of flattened membranes with chlorophyll. Site of photosynthesis, making sugars using light energy.", "二重膜で、クロロフィルをもつ平たい膜の重なりを含みます。光合成の場で、光エネルギーを使って糖を合成します。", "雙層膜；內含有葉綠素的成疊扁平膜。光合作用的場所，利用光能製造糖。", "2중막이며, 엽록소가 있는 납작한 막이 쌓인 구조가 들어 있다. 빛에너지를 이용해 당을 만드는 광합성(photosynthesis)이 일어나는 곳이다.")],
-    plastid: [T("Other plastid: amyloplast", "ほかの色素体：アミロプラスト (amyloplast)", "其他質體：澱粉體 (amyloplast)", "그 밖의 색소체: 아밀로플라스트(amyloplast)"),
+    plastid: [T("Other plastid: amyloplast", "ほかの色素体：アミロプラスト (amyloplast)", "其他質體：澱粉體 (amyloplast)", "그 밖의 색소체: 전분체(amyloplast)"),
       T("A plastid that stores starch (the white grains), found in cells that do not photosynthesize, e.g. in roots and storage tissue.", "デンプン（白い粒）を貯蔵する色素体。根や貯蔵組織など、光合成をしない細胞にあります。", "儲存澱粉（白色顆粒）的質體，見於不進行光合作用的細胞，如根和儲存組織。", "녹말(흰 알갱이)을 저장하는 색소체로, 뿌리와 저장 조직처럼 광합성을 하지 않는 세포에서 발견된다.")]
   };
 

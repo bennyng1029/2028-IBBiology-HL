@@ -125,9 +125,9 @@ IB.registerLab({
       widget: "carb-builder",
       options: { tab: 2 },
       task: {
-        en: "Compare Amylose, Amylopectin, Glycogen and Cellulose. Which are made of &alpha;-glucose, and which are branched? Use the + glucose and − glucose buttons to see how an energy store is built up or mobilised.",
-        ja: "アミロース、アミロペクチン、グリコーゲン、セルロースを比べましょう。&alpha;-グルコースでできているのはどれで、枝分かれしているのはどれでしょう。「+ グルコース」「− グルコース」で、エネルギー貯蔵がどう増え、どう動員されるか見てみましょう。",
-        zh: "比較直鏈澱粉、支鏈澱粉、糖原和纖維素：哪些由 &alpha;-葡萄糖組成？哪些有分支？用「+ 葡萄糖」和「− 葡萄糖」按鈕，看看能量貯存如何增加或動用。"
+        en: "Compare unbranched starch, branched starch, glycogen and cellulose. Which are made of &alpha;-glucose, and which are branched? Use the + glucose and − glucose buttons to see how an energy store is built up or mobilised. (The names amylose and amylopectin are not required by the guide.)",
+        ja: "枝分かれのないデンプン、枝分かれしたデンプン、グリコーゲン、セルロースを比べましょう。&alpha;-グルコースでできているのはどれで、枝分かれしているのはどれでしょう。「+ グルコース」「− グルコース」で、エネルギー貯蔵がどう増え、どう動員されるか見てみましょう。（アミロース・アミロペクチンという名前はガイドでは求められていません。）",
+        zh: "比較無分支澱粉、有分支澱粉、糖原和纖維素：哪些由 &alpha;-葡萄糖組成？哪些有分支？用「+ 葡萄糖」和「− 葡萄糖」按鈕，看看能量貯存如何增加或動用。（指引不要求記住「直鏈澱粉」和「支鏈澱粉」這兩個名稱。）"
       }
     },
     {

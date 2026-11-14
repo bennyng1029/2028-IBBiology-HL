@@ -56,22 +56,22 @@
     play: L("Play", "再生", "播放", "재생"), pause: L("Pause", "停止", "暫停", "일시 정지"),
     dia: L("Diaphragm", "横隔膜 (diaphragm)", "橫膈膜 (diaphragm)", "가로막(diaphragm)"),
     ext: L("External intercostals", "外肋間筋 (external intercostals)", "外肋間肌 (external intercostals)", "바깥갈비사이근(external intercostals)"),
-    int: L("Internal intercostals", "内肋間筋 (internal intercostals)", "內肋間肌 (internal intercostals)", "안쪽갈비사이근(internal intercostals)"),
-    abd: L("Abdominal muscles", "腹筋 (abdominal muscles)", "腹肌 (abdominal muscles)", "복부 근육(abdominal muscles)"),
+    int: L("Internal intercostals", "内肋間筋 (internal intercostals)", "內肋間肌 (internal intercostals)", "속갈비사이근(internal intercostals)"),
+    abd: L("Abdominal muscles", "腹筋 (abdominal muscles)", "腹肌 (abdominal muscles)", "배근육(abdominal muscles)"),
     contr: L("contracted", "収縮", "收縮", "수축"), rel: L("relaxed", "弛緩", "放鬆", "이완"),
     ribs: L("Ribs", "肋骨 (ribs)", "肋骨 (ribs)", "갈비뼈(ribs)"), stern: L("Sternum", "胸骨 (sternum)", "胸骨 (sternum)", "복장뼈(sternum)"),
-    spine: L("Spine", "脊柱 (spine)", "脊柱 (spine)", "척주(spine)"), lung: L("Lung", "肺 (lung)", "肺 (lung)", "폐(lung)"),
+    spine: L("Spine", "脊柱 (spine)", "脊柱 (spine)", "척추(spine)"), lung: L("Lung", "肺 (lung)", "肺 (lung)", "폐(lung)"),
     trach: L("Trachea", "気管 (trachea)", "氣管 (trachea)", "기관(trachea)"), abdw: L("Abdominal wall", "腹壁", "腹壁", "복벽"),
     air: L("air", "空気", "空氣", "공기"),
     mI: L("<b>Inspiration</b>: diaphragm contracts and flattens; external intercostals raise the ribs up and out. Volume ↑, pressure falls below atmospheric: air flows in.", "<b>吸気 (inspiration)</b>: 横隔膜が収縮して平らになり、外肋間筋が収縮して肋骨を上外へ引き上げます。体積↑、圧力が大気圧より低くなり、空気が入ります。", "<b>吸氣 (inspiration)</b>：橫膈膜收縮並變平；外肋間肌收縮，把肋骨向上向外提起。體積↑，壓力降至低於大氣壓，空氣流入。", "<b>들숨</b>: 가로막이 수축하여 평평해지고, 바깥갈비사이근이 갈비뼈를 위쪽 바깥으로 들어 올린다. 부피 ↑, 압력이 대기압보다 낮아진다: 공기가 들어온다."),
     mE: L("<b>Expiration</b>: diaphragm and external intercostals relax; ribs move down and in, diaphragm domes up. In quiet breathing this is passive (no muscle contracts). Volume ↓, pressure rises above atmospheric: air flows out.", "<b>呼気 (expiration)</b>: 横隔膜と外肋間筋が弛緩します。肋骨は下内へ動き、横隔膜は上に盛り上がります。安静時の呼気は受動的です（筋は収縮しません）。体積↓、圧力が大気圧より高くなり、空気が出ます。", "<b>呼氣 (expiration)</b>：橫膈膜和外肋間肌放鬆。肋骨向下向內移，橫膈膜向上拱起。平靜呼氣是被動的（沒有肌肉收縮）。體積↓，壓力升至高於大氣壓，空氣流出。", "<b>날숨</b>: 가로막과 바깥갈비사이근이 이완한다. 갈비뼈가 아래쪽 안으로 움직이고 가로막이 위로 솟는다. 편안한 호흡에서는 수동적이다(수축하는 근육이 없다). 부피 ↓, 압력이 대기압보다 높아진다: 공기가 나간다."),
-    mFI: L("<b>Forced inspiration</b>: the same muscles contract harder, so the volume rises further and more air flows in.", "<b>強い吸気 (forced inspiration)</b>: 同じ筋肉がより強く収縮し、体積がさらに増えて多くの空気が入ります。", "<b>用力吸氣 (forced inspiration)</b>：同樣的肌肉更用力收縮，體積增加更多，吸入更多空氣。", "<b>강한 들숨</b>: 같은 근육이 더 세게 수축하므로 부피가 더 늘어나고 더 많은 공기가 들어온다."),
-    mFE: L("<b>Forced expiration</b>: internal intercostals pull the ribs down and in; abdominal muscles push the diaphragm up. Volume falls further and pressure rises well above atmospheric.", "<b>強い呼気 (forced expiration)</b>: 内肋間筋が肋骨を下内へ引き、腹筋が横隔膜を押し上げます。体積が大きく減り、圧力は大気圧を大きく上回ります。", "<b>用力呼氣 (forced expiration)</b>：內肋間肌把肋骨向下向內拉，腹肌把橫膈膜向上推。體積大幅減少，壓力遠高於大氣壓。", "<b>강한 날숨</b>: 안쪽갈비사이근이 갈비뼈를 아래쪽 안으로 당기고, 복부 근육이 가로막을 위로 민다. 부피가 더 줄어들고 압력은 대기압보다 훨씬 높아진다."),
+    mFI: L("<b>Forced inspiration</b>: the same muscles contract harder, so the volume rises further and more air flows in.", "<b>強い吸気 (forced inspiration)</b>: 同じ筋肉がより強く収縮し、体積がさらに増えて多くの空気が入ります。", "<b>用力吸氣 (forced inspiration)</b>：同樣的肌肉更用力收縮，體積增加更多，吸入更多空氣。", "<b>강제 들숨</b>: 같은 근육이 더 세게 수축하므로 부피가 더 늘어나고 더 많은 공기가 들어온다."),
+    mFE: L("<b>Forced expiration</b>: internal intercostals pull the ribs down and in; abdominal muscles push the diaphragm up. Volume falls further and pressure rises well above atmospheric.", "<b>強い呼気 (forced expiration)</b>: 内肋間筋が肋骨を下内へ引き、腹筋が横隔膜を押し上げます。体積が大きく減り、圧力は大気圧を大きく上回ります。", "<b>用力呼氣 (forced expiration)</b>：內肋間肌把肋骨向下向內拉，腹肌把橫膈膜向上推。體積大幅減少，壓力遠高於大氣壓。", "<b>강제 날숨</b>: 속갈비사이근이 갈비뼈를 아래쪽 안으로 당기고, 배근육이 가로막을 위로 민다. 부피가 더 줄어들고 압력은 대기압보다 훨씬 높아진다."),
     ex: L("In: muscles contract, volume ↑, pressure ↓, air in. Out: muscles relax, volume ↓, pressure ↑, air out.", "吸気: 筋が収縮、体積↑、圧力↓、空気が入る。呼気: 弛緩、体積↓、圧力↑、空気が出る。", "吸氣：肌肉收縮，體積↑，壓力↓，空氣流入。呼氣：肌肉放鬆，體積↓，壓力↑，空氣流出。", "들숨: 근육 수축, 부피 ↑, 압력 ↓, 공기 유입. 날숨: 근육 이완, 부피 ↓, 압력 ↑, 공기 유출."),
     exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住", "시험을 위해 기억할 것"),
     more: L("More detail", "くわしく", "更多資料", "더 자세히"),
-    md: L("Air always moves from higher to lower pressure. Naming <em>external</em> and <em>internal</em> intercostal muscles as an antagonistic pair is AHL (B3.3.8): when one layer contracts it stretches the other. For SL, \"intercostal muscles\" is enough. Forced expiration is the case where expiration needs muscles; abdominal muscles are named in B3.1.5. Graphs are illustrative (no units).", "空気は常に高圧側から低圧側へ動きます。外肋間筋と内肋間筋を拮抗筋として区別するのはAHL (B3.3.8) の内容です（一方が収縮すると他方が引き伸ばされます）。SLでは「肋間筋 (intercostal muscles)」で十分です。強い呼気では筋肉が呼気に働き、腹筋はB3.1.5に挙げられています。グラフは説明用です（単位なし）。", "空氣總是由高壓流向低壓。把外肋間肌和內肋間肌視為拮抗肌是AHL內容 (B3.3.8)：一層收縮時會拉伸另一層。SL只需知道「肋間肌 (intercostal muscles)」。用力呼氣時呼氣需要肌肉參與；腹肌見B3.1.5。圖表只作示意（沒有單位）。", "공기는 항상 압력이 높은 곳에서 낮은 곳으로 이동한다. <em>바깥</em>갈비사이근과 <em>안쪽</em>갈비사이근을 길항 쌍으로 명명하는 것은 AHL(B3.3.8)이다. 한 층이 수축하면 다른 층이 늘어난다. SL에서는 \"갈비사이근\"이면 충분하다. 강한 날숨은 날숨에 근육이 필요한 경우이며, 복부 근육은 B3.1.5에 나온다. 그래프는 예시이다(단위 없음)."),
-    ref: L("Syllabus B3.1.5 · external / internal intercostals: B3.3.8 (AHL)", "シラバス B3.1.5 · 外/内肋間筋: B3.3.8 (AHL)", "課程大綱 B3.1.5 · 外/內肋間肌：B3.3.8 (AHL)", "교육과정 B3.1.5 · 바깥/안쪽갈비사이근: B3.3.8 (AHL)"),
+    md: L("Air always moves from higher to lower pressure. Naming <em>external</em> and <em>internal</em> intercostal muscles as an antagonistic pair is AHL (B3.3.8): when one layer contracts it stretches the other. For SL, \"intercostal muscles\" is enough. Forced expiration is the case where expiration needs muscles; abdominal muscles are named in B3.1.5. Graphs are illustrative (no units).", "空気は常に高圧側から低圧側へ動きます。外肋間筋と内肋間筋を拮抗筋として区別するのはAHL (B3.3.8) の内容です（一方が収縮すると他方が引き伸ばされます）。SLでは「肋間筋 (intercostal muscles)」で十分です。強い呼気では筋肉が呼気に働き、腹筋はB3.1.5に挙げられています。グラフは説明用です（単位なし）。", "空氣總是由高壓流向低壓。把外肋間肌和內肋間肌視為拮抗肌是AHL內容 (B3.3.8)：一層收縮時會拉伸另一層。SL只需知道「肋間肌 (intercostal muscles)」。用力呼氣時呼氣需要肌肉參與；腹肌見B3.1.5。圖表只作示意（沒有單位）。", "공기는 항상 압력이 높은 곳에서 낮은 곳으로 이동한다. <em>바깥</em>갈비사이근과 <em>안쪽</em>갈비사이근을 길항 쌍으로 명명하는 것은 AHL(B3.3.8)이다. 한 층이 수축하면 다른 층이 늘어난다. SL에서는 \"갈비사이근\"이면 충분하다. 강제 날숨은 날숨에 근육이 필요한 경우이며, 배근육은 B3.1.5에 나온다. 그래프는 예시이다(단위 없음)."),
+    ref: L("Syllabus B3.1.5 · external / internal intercostals: B3.3.8 (AHL)", "シラバス B3.1.5 · 外/内肋間筋: B3.3.8 (AHL)", "課程大綱 B3.1.5 · 外/內肋間肌：B3.3.8 (AHL)", "교육과정 B3.1.5 · 바깥/속갈비사이근: B3.3.8 (AHL)"),
     gV: L("Lung volume", "肺の体積", "肺容量", "폐 부피"), gP: L("Lung pressure vs atmospheric", "肺内の圧力（大気圧との比較）", "肺內壓力（與大氣壓比較）", "폐 압력과 대기압 비교"),
     atm: L("atmospheric pressure", "大気圧", "大氣壓", "대기압"), quiet: L("end of quiet breath out", "安静呼気の終わり", "平靜呼氣末", "편안한 날숨의 끝"),
     hi: L("higher", "高", "高", "더 높음"), lo: L("lower", "低", "低", "더 낮음"), tm: L("time →", "時間 →", "時間 →", "시간 →"),
@@ -185,7 +185,7 @@
   }
 
   IB.registerWidget("ventilation", {
-    title: L("Breathing: ventilation of the lungs", "呼吸: 肺の換気", "呼吸：肺的通氣", "호흡: 폐의 환기(ventilation)"),
+    title: L("Breathing: ventilation of the lungs", "呼吸: 肺の換気", "呼吸：肺的通氣", "호흡: 폐의 환기"),
     mount: function (el, ctx) {
       if (!document.getElementById(ID)) { var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st); }
       var t = ctx.t, opt = ctx.options || {};
