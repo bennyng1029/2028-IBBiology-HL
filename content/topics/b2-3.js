@@ -160,8 +160,8 @@ IB.registerTopic({
 <tr><th>細胞</th><th>大約大小</th><th>大小為何配合其工作</th></tr>
 <tr><td>卵 (egg)（雌配子）</td><td>直徑約0.1 mm；人體最大的細胞之一</td><td>大量細胞質可儲存營養物質及早期發育所需的分子</td></tr>
 <tr><td>精子 (sperm)（雄配子）</td><td>頭部約5 µm；整個細胞長約50 µm</td><td>細小而呈流線型，利於游動</td></tr>
-<tr><td>紅血球 (red blood cell)</td><td>直徑約7 µm</td><td>細小而扁平，可通過最窄的微血管</td></tr>
-<tr><td>白血球 (white blood cell)</td><td>直徑約10–15 µm</td><td>大得足以吞噬病原體，並能擠出微血管</td></tr>
+<tr><td>紅血球 (red blood cell)</td><td>直徑約7 µm</td><td>細小而扁平，可通過最窄的微絲血管</td></tr>
+<tr><td>白血球 (white blood cell)</td><td>直徑約10–15 µm</td><td>大得足以吞噬病原體，並能擠出微絲血管</td></tr>
 <tr><td>神經元 (neuron)</td><td>細胞體約10–50 µm；長的纖維（軸突）可長達約1 m</td><td>又長又幼的纖維可把信號傳送到遠處</td></tr>
 <tr><td>橫紋肌纖維 (striated muscle fibre)</td><td>闊約10–100 µm，但長度可達數厘米</td><td>長纖維沿肌肉的長度方向產生強勁拉力</td></tr>
 </table>
@@ -247,7 +247,7 @@ IB.registerTopic({
       ahl: true,
       heading: T("Adaptations that raise the surface area-to-volume ratio", "表面積と体積の比を高める適応", "提高表面面積與體積比的適應特徵"),
       body: T(
-        `<p>Some cells need a fast rate of exchange. Their cells increase the SA:V in three ways. The guide asks you to include all three.</p>
+        `<p>Some cells need a fast rate of exchange. These cells increase the SA:V in three ways. The guide asks you to include all three.</p>
 <ul>
 <li><strong>Flattening.</strong> A flat cell has a large surface compared with its small volume, and the distance from the surface to the middle is short.</li>
 <li><strong>Microvilli.</strong> These are tiny finger-like projections of the cell surface membrane. They add a large amount of membrane without adding much volume.</li>
@@ -360,7 +360,7 @@ IB.registerTopic({
 </ul>
 <p><strong>討論：橫紋肌纖維是否一個細胞？</strong></p>
 <ul>
-<li><em>是：</em>它被單一的細胞表面膜包圍，含有細胞質和胞器，是肌肉的基本活單位。</li>
+<li><em>是：</em>它被單一的細胞表面膜包圍，含有細胞質和細胞器，是肌肉的基本活單位。</li>
 <li><em>否（或不典型）：</em>它有許多細胞核，而典型的細胞只有一個。它由許多細胞融合而成。它也比大多數細胞長得多，似乎違反細胞大小的一般限制。</li>
 </ul>
 <p>好的答案兩方面都列出論點，亦可總結「細胞」的定義未必完全適用於每一種生物結構。</p>`),
@@ -482,7 +482,7 @@ IB.registerTopic({
         T("They are fully specialized and cannot change.", "完全に特殊化していて変化できない。", "完全特化，不能改變。")
       ],
       answer: 0,
-      explanation: T("Endless division and the ability to differentiate along different pathways are the two properties the guide asks for. B and D describe specialized cells. C is wrong because stem cells must divide: that is how they renew themselves.", "無限の分裂と、異なる経路への分化がガイドの求める2つの性質です。BとDは特殊化した細胞の説明です。Cは誤りで、幹細胞は分裂して自己複製します。", "無限分裂及向不同路徑分化，是課程指引要求的兩項特性。B和D描述的是特化細胞。C錯誤，因為幹細胞必須分裂，這正是它們自我更新的方式。") },
+      explanation: T("Endless division and the ability to differentiate along different pathways are the two properties the guide asks for. B and D describe cells that have lost stem-cell properties. C is wrong because stem cells must divide: that is how they renew themselves.", "無限の分裂と、異なる経路への分化がガイドの求める2つの性質です。BとDは、幹細胞の性質を失った細胞の説明です。Cは誤りで、幹細胞は分裂して自己複製します。", "無限分裂及向不同路徑分化，是課程指引要求的兩項特性。B和D描述的是已失去幹細胞特性的細胞。C錯誤，因為幹細胞必須分裂，這正是它們自我更新的方式。") },
     { id: "b2-3-q02", type: "mcq", ahl: false, difficulty: 2, ref: "B2.3.4", paper: "1A",
       stem: T("Stem cells in the bone marrow of an adult can produce red and white blood cells but not nerve cells. What type of stem cell are they?", "成人の骨髄の幹細胞は、赤血球や白血球をつくれるが神経細胞はつくれない。これはどの種類の幹細胞か。", "成年人骨髓中的幹細胞能產生紅血球和白血球，但不能產生神經細胞。它們屬於哪種幹細胞？"),
       options: [
@@ -579,7 +579,7 @@ IB.registerTopic({
         T("700 µm", "700 µm", "700 µm")
       ],
       answer: 1,
-      explanation: T("A red blood cell is about 7 µm across. 0.7 µm is the size of a small bacterium or large organelle. 70 µm is too large and nearer to a human egg (about 100 µm). 700 µm (0.7 mm) is far too big: it is bigger than a human egg.", "赤血球は直径約7 µmです。0.7 µmは小さな細菌や大きな細胞小器官の大きさです。70 µmは大きすぎ、卵（約100 µm）に近い値です。700 µm (0.7 mm) ははるかに大きすぎ、ヒトの卵よりも大きくなります。", "紅血球直徑約7 µm。0.7 µm是細小細菌或大型胞器的大小。70 µm太大，較接近人類卵（約100 µm）。700 µm (0.7 mm) 遠遠太大，比人類卵還要大。") },
+      explanation: T("A red blood cell is about 7 µm across. 0.7 µm is the size of a small bacterium or large organelle. 70 µm is too large and nearer to a human egg (about 100 µm). 700 µm (0.7 mm) is far too big: it is bigger than a human egg.", "赤血球は直径約7 µmです。0.7 µmは小さな細菌や大きな細胞小器官の大きさです。70 µmは大きすぎ、卵（約100 µm）に近い値です。700 µm (0.7 mm) ははるかに大きすぎ、ヒトの卵よりも大きくなります。", "紅血球直徑約7 µm。0.7 µm是細小細菌或大型細胞器的大小。70 µm太大，較接近人類卵（約100 µm）。700 µm (0.7 mm) 遠遠太大，比人類卵還要大。") },
     { id: "b2-3-q12", type: "multi", ahl: true, difficulty: 2, ref: "B2.3.7", paper: "1A",
       stem: T("Which features increase the surface area-to-volume ratio of a cell? Select all that apply.", "細胞の表面積と体積の比を高める特徴はどれか。当てはまるものをすべて選びなさい。", "哪些特徵提高細胞的表面面積與體積比？選出所有適用者。"),
       options: [
@@ -622,13 +622,13 @@ IB.registerTopic({
       stem: T("Discuss whether a striated muscle fibre should be considered a single cell.", "横紋筋線維を1つの細胞とみなすべきかどうか論じなさい。", "討論橫紋肌纖維是否應視為單一細胞。"),
       markscheme: [
         T("For: surrounded by one cell surface membrane", "賛成：1枚の細胞膜に囲まれている", "贊成：被單一細胞表面膜包圍"),
-        T("For: contains cytoplasm, organelles and is the basic living unit of the muscle", "賛成：細胞質と細胞小器官を含み、筋肉の基本的な生きた単位である", "贊成：含細胞質和胞器，是肌肉的基本活單位"),
+        T("For: contains cytoplasm, organelles and is the basic living unit of the muscle", "賛成：細胞質と細胞小器官を含み、筋肉の基本的な生きた単位である", "贊成：含細胞質和細胞器，是肌肉的基本活單位"),
         T("Against: many nuclei, whereas typical cells have one", "反対：典型的な細胞は核が1個だが、多数の核を持つ", "反對：有許多細胞核，而典型細胞只有一個"),
         T("Against: formed by fusion of many cells", "反対：多数の細胞の融合でできる", "反對：由許多細胞融合而成"),
         T("Against: far longer than most cells (up to centimetres), so does not fit the usual size limit", "反対：ほとんどの細胞よりはるかに長く（数cm）、通常の大きさの限界に合わない", "反對：比大多數細胞長得多（可達數厘米），不符合一般大小限制"),
         T("A reasoned conclusion", "理由づけられた結論", "有理據的結論")
       ],
-      modelAnswer: T("It can be seen as a cell because it has one surface membrane, cytoplasm and organelles, and is the working unit of the muscle. However, it has many nuclei, it is formed when many cells fuse, and it is much longer than usual cells, so it does not fit the usual size limit. Overall it is best described as a specialized, unusual cell, because it does most things a cell does even though it is multinucleate.", "1枚の細胞膜、細胞質、細胞小器官を持ち、筋肉の働きの単位なので細胞とみなせる。しかし多数の核を持ち、多数の細胞が融合してできており、ふつうの細胞よりはるかに長いので、通常の大きさの限界に合わない。全体としては、多核であっても細胞の行うことの大部分を行うので、特殊化した変わった細胞と言うのがよい。", "它可視為細胞，因為它有一層表面膜、細胞質和胞器，是肌肉的工作單位。但它有許多細胞核，由許多細胞融合而成，並且比一般細胞長得多，不符合一般大小限制。總括而言，雖然是多核，它仍執行細胞的大部分功能，最好描述為一種特化而特殊的細胞。") },
+      modelAnswer: T("It can be seen as a cell because it has one surface membrane, cytoplasm and organelles, and is the working unit of the muscle. However, it has many nuclei, it is formed when many cells fuse, and it is much longer than usual cells, so it does not fit the usual size limit. Overall it is best described as a specialized, unusual cell, because it does most things a cell does even though it is multinucleate.", "1枚の細胞膜、細胞質、細胞小器官を持ち、筋肉の働きの単位なので細胞とみなせる。しかし多数の核を持ち、多数の細胞が融合してできており、ふつうの細胞よりはるかに長いので、通常の大きさの限界に合わない。全体としては、多核であっても細胞の行うことの大部分を行うので、特殊化した変わった細胞と言うのがよい。", "它可視為細胞，因為它有一層表面膜、細胞質和細胞器，是肌肉的工作單位。但它有許多細胞核，由許多細胞融合而成，並且比一般細胞長得多，不符合一般大小限制。總括而言，雖然是多核，它仍執行細胞的大部分功能，最好描述為一種特化而特殊的細胞。") },
     { id: "b2-3-q17", type: "short", ahl: true, difficulty: 2, ref: "B2.3.9", paper: "2", commandTerm: "Compare and contrast", marks: 4,
       stem: T("Compare and contrast cardiac muscle cells and striated muscle fibres.", "心筋細胞と横紋筋線維を比較し、対比しなさい。", "比較並對比心肌細胞與橫紋肌纖維。"),
       markscheme: [
@@ -658,7 +658,7 @@ IB.registerTopic({
         T("It makes the egg larger to store more food.", "卵を大きくして、より多くの栄養を蓄える。", "使卵變大以儲存更多營養物質。")
       ],
       answer: 2,
-      explanation: T("The contents change the layer around the egg, which blocks entry of further sperm and so prevents more than one sperm fertilizing the egg. The other options describe functions that do not match what cortical granules do. A is tempting because eggs do provide resources, but that is the role of the cytoplasm, not these granules.", "内容物が卵を囲む層を変化させ、さらなる精子の侵入を防ぎ、複数の精子による受精を防ぎます。ほかの選択肢は表層粒の働きと合いません。Aは、卵が資源を供給するので紛らわしいですが、それは細胞質の役割で、表層粒の役割ではありません。", "內容物改變卵周圍的層，阻止更多精子進入，從而防止多於一個精子使卵受精。其他選項描述的功能與皮質顆粒的作用不符。A選項容易混淆，因為卵確實提供資源，但那是細胞質的作用，不是這些顆粒的作用。") },
+      explanation: T("The contents change the layer around the egg, which blocks entry of further sperm and so prevents more than one sperm fertilizing the egg. The other options describe functions that do not match what cortical granules do. D is tempting because eggs do store food, but that is the role of the cytoplasm, not these granules.", "内容物が卵を囲む層を変化させ、さらなる精子の侵入を防ぎ、複数の精子による受精を防ぎます。ほかの選択肢は表層粒の働きと合いません。Dは、卵が栄養を蓄えるので紛らわしいですが、それは細胞質の役割で、表層粒の役割ではありません。", "內容物改變卵周圍的層，阻止更多精子進入，從而防止多於一個精子使卵受精。其他選項描述的功能與皮質顆粒的作用不符。D選項容易混淆，因為卵確實儲存營養物質，但那是細胞質的作用，不是這些顆粒的作用。") },
     { id: "b2-3-q20", type: "mcq", ahl: false, difficulty: 3, ref: "B2.3.1", paper: "1A",
       stem: T("In an early embryo a signalling chemical is highly concentrated at one end and falls to a low concentration at the other end. Cells at the high-concentration end switch on gene X, but cells at the low-concentration end do not. Which conclusion is best supported?", "初期胚で、シグナル化学物質が一端で高濃度、もう一端で低濃度になっている。高濃度側の細胞は遺伝子Xを発現するが、低濃度側の細胞は発現しない。最も支持される結論はどれか。", "在早期胚胎中，一種信號化學物質在一端濃度高，向另一端遞減至低濃度。高濃度一端的細胞開啟基因X，低濃度一端的細胞則不開啟。哪項結論最有證據支持？"),
       options: [

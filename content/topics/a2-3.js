@@ -32,7 +32,7 @@
 <li><strong>沒有細胞質</strong>。</li>
 <li><strong>幾乎沒有或完全沒有酶</strong>，所以不能自行進行新陳代謝。</li>
 </ul>
-<p>病毒沒有自己的質膜、核糖體或胞器。這是病毒被視為非生物的原因之一（見 A2.1.2）。</p>`)
+<p>病毒沒有自己的質膜、核糖體或細胞器。這是病毒被視為非生物的原因之一（見 A2.1.2）。</p>`)
     },
     {
       ref: "A2.3.2", ahl: true,
@@ -397,11 +397,11 @@
         T("Each drug is weaker, so several are needed to kill the same number of viruses.", "1つ1つの薬は弱く、同じ数のウイルスを殺すには複数が必要だから。", "每種藥較弱，需要多種才能殺死同樣數量的病毒。"),
         T("A single virus is very unlikely to have mutations giving resistance to all the drugs at once.", "1つのウイルスがすべての薬に同時に耐性をもつ変異をもつ可能性は非常に低いから。", "單一病毒不大可能同時有針對所有藥物的抗藥突變。"),
         T("Drugs change the virus's genetic code so it cannot mutate.", "薬がウイルスの遺伝暗号を変え、変異できなくするから。", "藥物改變病毒的遺傳密碼，使它不能突變。"),
-        T("HIV is a bacterium, so each drug acts on a different organelle.", "HIVは細菌なので、薬ごとに違う細胞小器官に働くから。", "HIV 是細菌，所以每種藥作用於不同的胞器。")],
+        T("HIV is a bacterium, so each drug acts on a different organelle.", "HIVは細菌なので、薬ごとに違う細胞小器官に働くから。", "HIV 是細菌，所以每種藥作用於不同的細胞器。")],
       answer: 1,
       explanation: T("Because mutations are random and fairly rare at any one site, the chance that one virus carries several resistance mutations together is far smaller than the chance for one. A is not the reason. C is false because the drugs do not stop mutation. D is false: HIV is a virus, not a bacterium, and has no organelles.",
         "変異はランダムで、特定の部位では比較的まれなので、1つのウイルスが複数の耐性変異を同時にもつ確率は、1つだけの場合よりはるかに小さくなります。Aは理由ではなく、Cは薬が変異を止めるわけではないので誤り、DはHIVが細菌ではなくウイルスで、細胞小器官ももたないので誤りです。",
-        "突變是隨機的，在某一位點上相當罕見，所以一個病毒同時帶有多個抗藥突變的機會，遠比只帶一個的機會小。A 不是原因。C 錯誤，藥物並不能阻止突變。D 錯誤：HIV 是病毒，不是細菌，也沒有胞器。") },
+        "突變是隨機的，在某一位點上相當罕見，所以一個病毒同時帶有多個抗藥突變的機會，遠比只帶一個的機會小。A 不是原因。C 錯誤，藥物並不能阻止突變。D 錯誤：HIV 是病毒，不是細菌，也沒有細胞器。") },
 
   ];
     IB.registerTopic({

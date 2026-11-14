@@ -328,21 +328,21 @@
 <li><strong>Archaea</strong></li>
 <li><strong>Eukaryota</strong> (also called Eukarya), the organisms whose cells have a nucleus: animals, plants, fungi and protists</li>
 </ul>
-<p><strong>The evidence:</strong> comparison of the <strong>base sequences of ribosomal RNA (rRNA)</strong>. All cells have ribosomes, so all have rRNA, which makes it ideal for comparing very different organisms. The rRNA sequences showed that Archaea are a separate lineage, as different from Bacteria as from Eukaryota. Before this, Archaea and Bacteria were both grouped together as prokaryotes.</p>`,
+<p><strong>The evidence:</strong> comparison of the <strong>base sequences of ribosomal RNA (rRNA)</strong>. All cells have ribosomes, so all have rRNA, which makes it ideal for comparing very different organisms. The rRNA sequences showed that Archaea are a separate lineage, distinct from both Bacteria and Eukaryota. Before this, Archaea and Bacteria were both grouped together as prokaryotes.</p>`,
           `<p>1977年に革新的な再分類が提案されました。<strong>界の上に新しい分類段階</strong>として<strong>ドメイン (domain)</strong> を設け、すべての生物を<strong>三つのドメイン</strong>に分けました。</p>
 <ul>
 <li><strong>細菌 (Bacteria)</strong></li>
 <li><strong>古細菌 (Archaea)</strong></li>
 <li><strong>真核生物 (Eukaryota、Eukarya ともいう)</strong>：細胞に核がある生物（動物、植物、菌類、原生生物）</li>
 </ul>
-<p><strong>証拠：</strong><strong>リボソーム RNA (rRNA) の塩基配列</strong>の比較です。すべての細胞にリボソームがあるので rRNA もあり、まったく異なる生物どうしを比べるのに最適です。rRNA の配列から、古細菌は独立した系統であり、細菌とも真核生物とも同じくらい異なることが分かりました。それまで古細菌と細菌は、どちらも原核生物としてまとめられていました。</p>`,
+<p><strong>証拠：</strong><strong>リボソーム RNA (rRNA) の塩基配列</strong>の比較です。すべての細胞にリボソームがあるので rRNA もあり、まったく異なる生物どうしを比べるのに最適です。rRNA の配列から、古細菌は独立した系統であり、細菌とも真核生物とも異なることが分かりました。それまで古細菌と細菌は、どちらも原核生物としてまとめられていました。</p>`,
           `<p>1977 年有人提出了一項革命性的重新分類。它在<strong>界之上加入新的分類層級</strong>，稱為<strong>域 (domain)</strong>，並把所有生物分成<strong>三個域</strong>：</p>
 <ul>
 <li><strong>細菌域 (Bacteria)</strong></li>
 <li><strong>古菌域 (Archaea)</strong></li>
 <li><strong>真核生物域 (Eukaryota，又稱 Eukarya)</strong>：細胞有細胞核的生物，包括動物、植物、真菌和原生生物</li>
 </ul>
-<p><strong>證據：</strong>比較<strong>核糖體 RNA (rRNA) 的鹼基序列</strong>。所有細胞都有核糖體，所以都有 rRNA，非常適合用來比較差異很大的生物。rRNA 序列顯示古菌是一個獨立的譜系，與細菌和真核生物的差異同樣大。在此之前，古菌和細菌都被歸為原核生物。</p>`
+<p><strong>證據：</strong>比較<strong>核糖體 RNA (rRNA) 的鹼基序列</strong>。所有細胞都有核糖體，所以都有 rRNA，非常適合用來比較差異很大的生物。rRNA 序列顯示古菌是一個獨立的譜系，既不同於細菌，也不同於真核生物。在此之前，古菌和細菌都被歸為原核生物。</p>`
         ),
         examTip: L("The evidence is rRNA base sequences. The three domains are Bacteria, Archaea and Eukaryota.", "証拠は rRNA の塩基配列です。三ドメインは細菌、古細菌、真核生物です。", "證據是 rRNA 鹼基序列。三個域是細菌域、古菌域和真核生物域。")
       }
@@ -437,7 +437,7 @@
         data: L(`<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`, `<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`, `<figure>${treeSvg([["P","Q"],["R",["S","T"]]])}</figure>`),
         options: [L("P", "P", "P"), L("Q", "Q", "Q"), L("R", "R", "R"), L("S", "S", "S")],
         answer: 3,
-        explanation: L("S and T meet at the nearest node, so they share the most recent common ancestor. R is the next closest because it joins the S and T branch at the next node. The tempting wrong answer is R, which is drawn next to T, but only the node position matters.", "SとTは最も近い節で出会うので、最も新しい共通祖先を共有します。Rは次の節でSとTの枝につながるので次に近い関係です。誤って選びがちなのはTの隣に描かれたRですが、重要なのは節の位置だけです。", "S 和 T 在最近的節點相遇，所以牠們共有最近的共同祖先。R 在下一個節點才連上 S 和 T 的分支，所以其次最近。容易誤選的是畫在 T 旁邊的 R，但關鍵只在節點的位置。")
+        explanation: L("S and T meet at the nearest node, so they share the most recent common ancestor. R is the next closest because it joins the S and T branch at the next node. The tempting wrong answer is R, but closeness is decided only by node position, not by how near names are drawn on the page.", "SとTは最も近い節で出会うので、最も新しい共通祖先を共有します。Rは次の節でSとTの枝につながるので次に近い関係です。誤って選びがちなのはRですが、近縁かどうかは紙面で名前がどれだけ近くに描かれているかではなく、節の位置だけで決まります。", "S 和 T 在最近的節點相遇，所以牠們共有最近的共同祖先。R 在下一個節點才連上 S 和 T 的分支，所以其次最近。容易誤選的是 R，但親緣遠近只取決於節點的位置，而不是名稱在圖上畫得有多近。")
       },
       {
         id: "a3-2-q07", type: "short", ahl: true, difficulty: 2, ref: "A3.2.7", paper: "1B", commandTerm: "Deduce", marks: 4,

@@ -272,7 +272,7 @@
 <tr><td>果蠅</td><td>昆蟲</td><td>140</td></tr>
 <tr><td>人類</td><td>哺乳動物</td><td>3 100</td></tr>
 <tr><td>普通小麥</td><td>開花植物</td><td>16 000</td></tr>
-<tr><td><em>Paris japonica</em>（日本重樓類）</td><td>開花植物</td><td>約 150 000</td></tr>
+<tr><td><em>Paris japonica</em>（日本重樓）</td><td>開花植物</td><td>約 150 000</td></tr>
 </table>
 <p><strong>從這類數據得出的結論：</strong><strong>基因組大小與生物的複雜程度之間沒有簡單的關係。</strong>某些植物的基因組可比人類大 50 倍。較大的基因組可部分歸因於大量不編碼蛋白質的 DNA，以及某些植物有額外的染色體組（細節無須掌握）。簡單的生物傾向於比最大的動物有較小的基因組，但例外很多。</p>`
         ),
@@ -597,8 +597,8 @@
         stem: L("Use the key. Which sequence of statements identifies the leech?", "検索表を使え。ヒル (leech) を同定する記述の順序はどれか。", "使用檢索表。哪一個陳述次序可以鑑定出水蛭 (leech)？"),
         data: L(
           `<table><tr><td>1a</td><td>Body inside a shell</td><td>go to 2</td></tr><tr><td>1b</td><td>Body not inside a shell</td><td>go to 3</td></tr><tr><td>2a</td><td>Shell in one coiled piece</td><td>Pond snail</td></tr><tr><td>2b</td><td>Shell in two hinged halves</td><td>Mussel</td></tr><tr><td>3a</td><td>Jointed legs present</td><td>go to 4</td></tr><tr><td>3b</td><td>No legs</td><td>Leech</td></tr><tr><td>4a</td><td>Ten legs</td><td>Crayfish</td></tr><tr><td>4b</td><td>Six legs</td><td>Water beetle</td></tr></table>`,
-          `<table><tr><td>1a</td><td>体が殻の中にある</td><td>2へ</td></tr><tr><td>1b</td><td>体が殻の中にない</td><td>3へ</td></tr><tr><td>2a</td><td>殻が一つで巻いている</td><td>タニシ類（pond snail）</td></tr><tr><td>2b</td><td>殻が二枚でちょうつがい状</td><td>イガイ類（mussel）</td></tr><tr><td>3a</td><td>関節のある脚がある</td><td>4へ</td></tr><tr><td>3b</td><td>脚がない</td><td>ヒル（leech）</td></tr><tr><td>4a</td><td>脚が10本</td><td>ザリガニ（crayfish）</td></tr><tr><td>4b</td><td>脚が6本</td><td>ゲンゴロウ類（water beetle）</td></tr></table>`,
-          `<table><tr><td>1a</td><td>身體在殼內</td><td>前往 2</td></tr><tr><td>1b</td><td>身體不在殼內</td><td>前往 3</td></tr><tr><td>2a</td><td>殼為一片、盤旋狀</td><td>池螺 (pond snail)</td></tr><tr><td>2b</td><td>殼為兩片、以鉸合連接</td><td>貽貝 (mussel)</td></tr><tr><td>3a</td><td>有分節的腳</td><td>前往 4</td></tr><tr><td>3b</td><td>沒有腳</td><td>水蛭 (leech)</td></tr><tr><td>4a</td><td>十隻腳</td><td>螯蝦 (crayfish)</td></tr><tr><td>4b</td><td>六隻腳</td><td>水甲蟲 (water beetle)</td></tr></table>`
+          `<table><tr><td>1a</td><td>体が殻の中にある</td><td>2へ</td></tr><tr><td>1b</td><td>体が殻の中にない</td><td>3へ</td></tr><tr><td>2a</td><td>殻が一つで巻いている</td><td>モノアラガイ類（pond snail）</td></tr><tr><td>2b</td><td>殻が二枚でちょうつがい状</td><td>イシガイ類（mussel）</td></tr><tr><td>3a</td><td>関節のある脚がある</td><td>4へ</td></tr><tr><td>3b</td><td>脚がない</td><td>ヒル（leech）</td></tr><tr><td>4a</td><td>脚が10本</td><td>ザリガニ（crayfish）</td></tr><tr><td>4b</td><td>脚が6本</td><td>ゲンゴロウ類（water beetle）</td></tr></table>`,
+          `<table><tr><td>1a</td><td>身體在殼內</td><td>前往 2</td></tr><tr><td>1b</td><td>身體不在殼內</td><td>前往 3</td></tr><tr><td>2a</td><td>殼為一片、盤旋狀</td><td>池螺 (pond snail)</td></tr><tr><td>2b</td><td>殼為兩片、以鉸合連接</td><td>河蚌 (mussel)</td></tr><tr><td>3a</td><td>有分節的腳</td><td>前往 4</td></tr><tr><td>3b</td><td>沒有腳</td><td>水蛭 (leech)</td></tr><tr><td>4a</td><td>十隻腳</td><td>螯蝦 (crayfish)</td></tr><tr><td>4b</td><td>六隻腳</td><td>水甲蟲 (water beetle)</td></tr></table>`
         ),
         options: [L("1a, 2a", "1a、2a", "1a、2a"), L("1b, 3a, 4b", "1b、3a、4b", "1b、3a、4b"), L("1b, 3b", "1b、3b", "1b、3b"), L("1a, 3b", "1a、3b", "1a、3b")],
         answer: 2,

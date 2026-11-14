@@ -82,7 +82,7 @@
 <li><strong>互いに両立しない過程の分離。</strong> 互いに邪魔し合ったり、細胞を傷つけたりする過程を、別々の場所で同時に行える。区画ごとに異なる条件 (例えば pH) にもできる。</li></ul>
 <p><strong>例:</strong></p>
 <ul><li><span class="term">リソソーム (lysosome)</span> は、消化 (加水分解) 酵素を膜の中に閉じ込めている。これらの酵素が細胞質中に自由にあると、細胞自身のタンパク質などを壊してしまう。リソソームの内部に保たれた酸性の条件でよく働く。</li>
-<li><span class="term">食作用胞 (phagocytic vacuole)</span> は、細胞が細菌などの粒子をエンドサイトーシスで取り込んでできる小胞である。リソソームが融合して中に酵素を放出するので、取り込んだ物質は細胞の他の部分から離れて安全に消化される。</li></ul>`,
+<li><span class="term">食胞 (phagocytic vacuole)</span> は、細胞が細菌などの粒子をエンドサイトーシスで取り込んでできる小胞である。リソソームが融合して中に酵素を放出するので、取り込んだ物質は細胞の他の部分から離れて安全に消化される。</li></ul>`,
           `<p><span class="term">區室化 (compartmentalization)</span> 指把細胞質分成多個由膜包圍的獨立空間。好處：</p>
 <ul><li><strong>濃縮代謝物和酶。</strong>底物和酶集中在細小體積內，更常相遇，反應更快。</li>
 <li><strong>分隔互不相容的過程。</strong>會互相干擾或傷害細胞的過程可在不同地方同時進行，每個區室亦可有不同的條件 (例如不同的 pH)。</li></ul>
@@ -227,7 +227,7 @@
       { term: L("cell fractionation", "細胞分画法", "細胞分離法"), def: L("Breaking open cells and separating organelles (using an ultracentrifuge) so that each can be studied.", "細胞を壊して (超遠心機で) 細胞小器官を分け、それぞれを調べる方法。", "把細胞破開，並 (用超速離心機) 分離細胞器，以便逐一研究。"), ahl: false },
       { term: L("compartmentalization", "区画化", "區室化"), def: L("Dividing the cytoplasm into membrane-bound spaces with different conditions and functions.", "細胞質を、異なる条件と機能をもつ膜で囲まれた空間に分けること。", "把細胞質分成條件及功能各異、由膜包圍的空間。"), ahl: false },
       { term: L("lysosome", "リソソーム", "溶酶體"), def: L("A membrane-bound organelle containing digestive enzymes, kept apart from the rest of the cell.", "消化酵素を含み、細胞の他の部分から隔てられた膜で囲まれた細胞小器官。", "含有消化酶、與細胞其餘部分隔開、由膜包圍的細胞器。"), ahl: false },
-      { term: L("phagocytic vacuole", "食作用胞", "吞噬泡"), def: L("A vesicle formed by endocytosis of particles such as bacteria, into which lysosomal enzymes are released.", "細菌などの粒子をエンドサイトーシスで取り込んでできた小胞。リソソームの酵素が放出される。", "細胞以胞吞作用吞入細菌等顆粒而形成的囊泡，溶酶體酶會釋放其中。"), ahl: false },
+      { term: L("phagocytic vacuole", "食胞", "吞噬泡"), def: L("A vesicle formed by endocytosis of particles such as bacteria, into which lysosomal enzymes are released.", "細菌などの粒子をエンドサイトーシスで取り込んでできた小胞。リソソームの酵素が放出される。", "細胞以胞吞作用吞入細菌等顆粒而形成的囊泡，溶酶體酶會釋放其中。"), ahl: false },
       { term: L("cristae", "クリステ", "嵴"), def: L("Folds of the inner mitochondrial membrane giving a large surface area for ATP production.", "ミトコンドリアの内膜のひだ。ATP 産生のための大きな表面積を与える。", "線粒體內膜的褶疊，為製造 ATP 提供大表面積。"), ahl: true },
       { term: L("matrix (mitochondrion)", "マトリックス (ミトコンドリア)", "基質 (線粒體)"), def: L("The fluid inside the inner mitochondrial membrane, containing Krebs cycle enzymes and substrates.", "ミトコンドリアの内膜の内側の液体。クレブス回路の酵素と基質を含む。", "線粒體內膜以內的液體，含有克雷布斯循環的酶和底物。"), ahl: true },
       { term: L("thylakoid", "チラコイド", "類囊體"), def: L("Flattened sac of the chloroplast whose membrane carries photosystems; stacks are called grana.", "葉緑体の平たい袋。膜に光化学系をもつ。積み重なったものをグラナという。", "葉綠體的扁平囊，膜上有光系統；堆疊的稱為基粒。"), ahl: true },
@@ -332,12 +332,12 @@
         commandTerm: "Explain", marks: 4,
         stem: L("A white blood cell engulfs a bacterium. Explain how the cell digests the bacterium without damaging itself.", "白血球が細菌を取り込む。白血球が自分を傷つけずに細菌を消化するしくみを説明せよ。", "一個白血球吞入一個細菌。解釋該細胞如何在不損害自身的情況下消化該細菌。"),
         markscheme: [
-          L("The bacterium is engulfed by endocytosis, forming a phagocytic vacuole (vesicle) bounded by membrane.", "細菌はエンドサイトーシスで取り込まれ、膜で囲まれた食作用胞 (小胞) ができる。", "細菌經胞吞作用被吞入，形成由膜包圍的吞噬泡 (囊泡)。"),
-          L("A lysosome fuses with the vacuole and releases its digestive (hydrolytic) enzymes into it.", "リソソームが食作用胞と融合し、消化 (加水分解) 酵素を中に放出する。", "溶酶體與吞噬泡融合，把消化 (水解) 酶釋放到泡內。"),
-          L("The enzymes digest the bacterium inside the vacuole.", "酵素が食作用胞の中で細菌を消化する。", "酶在吞噬泡內消化細菌。"),
+          L("The bacterium is engulfed by endocytosis, forming a phagocytic vacuole (vesicle) bounded by membrane.", "細菌はエンドサイトーシスで取り込まれ、膜で囲まれた食胞 (小胞) ができる。", "細菌經胞吞作用被吞入，形成由膜包圍的吞噬泡 (囊泡)。"),
+          L("A lysosome fuses with the vacuole and releases its digestive (hydrolytic) enzymes into it.", "リソソームが食胞と融合し、消化 (加水分解) 酵素を中に放出する。", "溶酶體與吞噬泡融合，把消化 (水解) 酶釋放到泡內。"),
+          L("The enzymes digest the bacterium inside the vacuole.", "酵素が食胞の中で細菌を消化する。", "酶在吞噬泡內消化細菌。"),
           L("The membrane keeps the enzymes separate from the cytoplasm, so the cell’s own proteins and molecules are not digested (compartmentalization).", "膜が酵素を細胞質から隔てるので、細胞自身のタンパク質などは消化されない (区画化)。", "膜令酶與細胞質隔開，所以細胞自身的蛋白質和分子不會被消化 (區室化)。")
         ],
-        modelAnswer: L("The cell engulfs the bacterium into a phagocytic vacuole. A lysosome fuses with it and releases digestive enzymes, which break down the bacterium. Because the enzymes stay inside membrane-bound compartments, they cannot digest the rest of the cell.", "細胞は細菌を食作用胞に取り込む。リソソームが融合して消化酵素を放出し、細菌を分解する。酵素は膜で囲まれた区画内にとどまるので、細胞の他の部分を消化できない。", "細胞把細菌吞入吞噬泡，溶酶體與之融合並釋出消化酶，分解細菌。由於酶一直留在由膜包圍的區室內，所以不會消化細胞其餘部分。")
+        modelAnswer: L("The cell engulfs the bacterium into a phagocytic vacuole. A lysosome fuses with it and releases digestive enzymes, which break down the bacterium. Because the enzymes stay inside membrane-bound compartments, they cannot digest the rest of the cell.", "細胞は細菌を食胞に取り込む。リソソームが融合して消化酵素を放出し、細菌を分解する。酵素は膜で囲まれた区画内にとどまるので、細胞の他の部分を消化できない。", "細胞把細菌吞入吞噬泡，溶酶體與之融合並釋出消化酶，分解細菌。由於酶一直留在由膜包圍的區室內，所以不會消化細胞其餘部分。")
       },
       {
         id: "b2-2-q07", type: "match", ahl: true, difficulty: 1, ref: "B2.2.4", paper: "1A",
