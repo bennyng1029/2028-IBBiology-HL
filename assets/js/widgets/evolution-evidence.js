@@ -104,7 +104,7 @@
     ref1: L("Syllabus A4.1.4–5", "シラバス A4.1.4–5", "課程大綱 A4.1.4–5", "교육과정 A4.1.4–5"),
     wild: L("Wild cabbage", "野生のキャベツ", "野生甘藍", "야생 양배추"), wildS: L("Brassica oleracea", "Brassica oleracea", "Brassica oleracea", "Brassica oleracea"),
     m2: L("All these vegetables were bred from <b>one wild species</b>. Tap a vegetable to see which part people kept choosing.", "これらの野菜はすべて<b>1つの野生種</b>から育種されました。野菜をタップして、人がどの部分を選び続けたかを見ましょう。", "這些蔬菜全部由<b>同一個野生物種</b>培育而成。點選蔬菜，看看人們一直選擇哪個部分。", "이 채소들은 모두 <b>한 야생 종</b>에서 길러 냈다. 채소를 눌러 사람들이 어느 부분을 계속 골랐는지 확인하시오."),
-    m2s: L("<b>%n</b>: people kept breeding from plants with the largest %p, over many generations.", "<b>%n</b>: 人は何世代にもわたり、%pが最も大きい個体を選んで交配させ続けました。", "<b>%n</b>：人們世世代代都挑選%p最大的植株來繁殖。", "<b>%n</b>: 사람들은 여러 세대에 걸쳐 가장 큰 %p을(를) 가진 식물을 골라 계속 교배했다."),
+    m2s: L("<b>%n</b>: people kept breeding from plants with the largest %p, over many generations.", "<b>%n</b>: 人は何世代にもわたり、%pが最も大きい個体を選んで交配させ続けました。", "<b>%n</b>：人們世世代代都挑選%p最大的植株來繁殖。", "<b>%n</b>: 사람들은 여러 세대에 걸쳐 다음 부분이 가장 큰 식물을 골라 계속 교배했다: %p."),
     m2c: L("Selective breeding makes large changes in a short time, so it shows how rapidly heritable change can happen.", "選択的育種は短い期間で大きな変化を生むので、遺伝する変化が速く起こりうることを示します。", "選擇性育種在短時間內造成很大變化，顯示可遺傳的改變可以多麼迅速。", "선택적 교배(selective breeding)는 짧은 시간에 큰 변화를 일으키므로 유전되는 변화가 얼마나 빠르게 일어날 수 있는지 보여 준다."),
     ex2: L("Selective breeding of domesticated species shows how rapidly heritable change can occur: evidence for evolution.", "家畜・栽培植物の選択的育種 (selective breeding) は、遺伝的な変化が速く起こることを示す進化の証拠。", "馴化動植物的選擇性育種 (selective breeding) 顯示可遺傳的改變可以很迅速：演化的證據。", "가축화된 종의 선택적 교배는 유전되는 변화가 얼마나 빠르게 일어날 수 있는지 보여 준다: 진화의 증거이다."),
     ref2: L("Syllabus A4.1.3", "シラバス A4.1.3", "課程大綱 A4.1.3", "교육과정 A4.1.3"),

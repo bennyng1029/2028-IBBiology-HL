@@ -230,7 +230,15 @@
   ];
 
   /* ---------------- widget ---------------- */
-  function sub(s, d) { return s.replace(/\{(\w+)\}/g, function (m, k) { return d[k] === undefined ? m : d[k]; }); }
+  function sub(s, d) {
+    s = s.replace(/\{(\w+)\}/g, function (m, k) { return d[k] === undefined ? m : d[k]; });
+    /* Korean particles: pick the form that matches the final syllable of the word before it */
+    return s.replace(/([\uac00-\ud7a3])((?:<\/\w+>)?)(와\(과\)|은\(는\)|이\(가\)|을\(를\)|\(으\)로)/g, function (m, ch, tag, p) {
+      var code = ch.charCodeAt(0) - 0xac00, fin = code % 28, has = fin !== 0;
+      var r = p === "와(과)" ? (has ? "과" : "와") : p === "은(는)" ? (has ? "은" : "는") : p === "이(가)" ? (has ? "이" : "가") : p === "을(를)" ? (has ? "을" : "를") : (has && fin !== 8 ? "으로" : "로");
+      return ch + tag + r;
+    });
+  }
 
   function mount(el, ctx, which) {
     if (!document.getElementById(CSS_ID)) { var st = document.createElement("style"); st.id = CSS_ID; st.textContent = CSS; document.head.appendChild(st); }

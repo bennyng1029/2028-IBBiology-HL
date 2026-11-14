@@ -253,7 +253,7 @@
         // SA node flash
         var fl = tt < 0.06 ? 1 - tt / 0.06 : 0;
         s += '<circle cx="148" cy="86" r="' + f1(5 + 9 * fl) + '" fill="var(--c-sulfur)" fill-opacity="' + f1(0.25 + 0.5 * fl) + '" stroke="var(--c-sulfur)"/><circle cx="148" cy="86" r="4.5" fill="var(--c-sulfur)" stroke="var(--ink)" stroke-width="1"/>';
-        s += '<text x="148" y="106" text-anchor="middle" style="font-size:11px;fill:var(--ink-2)">' + t(T.sa) + '</text>';
+        s += '<text x="' + (ctx.lang === "ko" ? 138 : 148) + '" y="106" text-anchor="middle" style="font-size:11px;fill:var(--ink-2)">' + t(T.sa) + '</text>';
         // labels
         function nm(x, y, lab, en) { return t(lab) === lab.en ? '<text x="' + x + '" y="' + y + '" text-anchor="middle" style="font-weight:700">' + lab.en + '</text>' : '<text x="' + x + '" y="' + (y - 6) + '" text-anchor="middle" style="font-weight:700">' + t(lab) + '</text><text x="' + x + '" y="' + (y + 8) + '" text-anchor="middle" style="font-size:11px">(' + en + ')</text>'; }
         s += nm(112, 128, T.ra, T.raE) + nm(288, 128, T.la, T.laE) + nm(127, 248, T.rv, T.rvE) + nm(273, 248, T.lv, T.lvE);

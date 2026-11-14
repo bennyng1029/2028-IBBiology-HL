@@ -318,7 +318,7 @@
       qi++;
       var nb = document.createElement("button");
       nb.type = "button"; nb.className = "gx-b"; nb.textContent = (qi >= order.length ? "✓" : "→");
-      nb.setAttribute("aria-label", qi >= order.length ? t(UI.score) : "next");
+      nb.setAttribute("aria-label", qi >= order.length ? t(UI.score) : (ctx.lang === "ko" ? "다음" : "next"));
       nb.addEventListener("click", nextQ);
       info.appendChild(nb); nb.focus();
     }
@@ -413,8 +413,8 @@
     y: { en: "Haemoglobin saturation (%)", ja: "ヘモグロビンの飽和度 (%)", zh: "血紅蛋白飽和度 (%)", ko: "헤모글로빈 포화도 (%)" },
     slider: { en: "Oxygen partial pressure", ja: "酸素分圧", zh: "氧分壓", ko: "산소 분압" },
     lungs: { en: "lungs", ja: "肺", zh: "肺", ko: "폐" },
-    rest: { en: "resting tissue", ja: "安静時の組織", zh: "靜止的組織", ko: "휴지 중인 조직" },
-    active: { en: "active muscle", ja: "活動中の筋肉", zh: "活躍的肌肉", ko: "활동 중인 근육" },
+    rest: { en: "resting tissue", ja: "安静時の組織", zh: "靜止的組織", ko: "휴지 조직" },
+    active: { en: "active muscle", ja: "活動中の筋肉", zh: "活躍的肌肉", ko: "활동 근육" },
     s: { en: "Show the three parts of the S-shape", ja: "S字形の3つの部分を表示", zh: "顯示S形的三個部分", ko: "S자 곡선의 세 부분 보기" },
     z1: { en: "1 slow start", ja: "1 ゆるやかな立ち上がり", zh: "1 起初緩慢", ko: "1 느린 시작" },
     z2: { en: "2 steep", ja: "2 急な部分", zh: "2 陡峭", ko: "2 가파름" },

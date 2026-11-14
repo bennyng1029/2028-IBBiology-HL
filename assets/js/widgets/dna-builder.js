@@ -122,7 +122,7 @@
   }
   function wrapLines(str, maxEm) {
     function w(t) { var n = 0; for (var i = 0; i < t.length; i++) n += t.charCodeAt(i) >= 0x3000 ? 1 : 0.56; return n; }
-    var raw = str.match(/\([^)]*\)|[A-Za-z0-9\u2032'.,:;\-\u2013\u2212\/+]+|\s|[^\s]/g) || [], toks = [], lines = [], cur = "";
+    var raw = str.match(/\([^)]*\)|[A-Za-z0-9\u2032'.,:;\-\u2013\u2212\/+]+|[\uac00-\ud7af]+|\s|[^\s]/g) || [], toks = [], lines = [], cur = "";
     raw.forEach(function (t) { if (t.charAt(0) === "(" && w(t) > maxEm) { t.split(/(\s)/).forEach(function (u) { if (u) toks.push(u); }); } else toks.push(t); });
     toks.forEach(function (t) {
       if (/^\s$/.test(t) && !cur) return;
