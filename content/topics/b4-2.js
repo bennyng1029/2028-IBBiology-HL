@@ -207,7 +207,7 @@ IB.registerTopic({
       stem: L("Select ALL the groups in which photosynthesis is a mode of nutrition.", "光合成が栄養様式であるグループをすべて選べ。", "選出以光合作用作為營養方式的所有類別。"),
       options: [L("Plants", "植物", "植物"), L("Algae", "藻類", "藻類"), L("Cyanobacteria (photosynthetic prokaryotes)", "シアノバクテリア（光合成をする原核生物）", "藍菌（進行光合作用的原核生物）"), L("Fungi", "菌類", "真菌"), L("Animals", "動物", "動物")],
       answer: [0, 1, 2],
-      explanation: L("Plants, algae and photosynthetic prokaryotes photosynthesise. Fungi are heterotrophs, often saprotrophs, and animals are holozoic heterotrophs.", "植物、藻類、光合成をする原核生物は光合成を行います。菌類は従属栄養生物（多くは腐生）、動物は摂食型の従属栄養生物です。", "植物、藻類和進行光合作用的原核生物進行光合作用。真菌是異養生物（多為腐生），動物是攝食式異養生物。") },
+      explanation: L("Plants, algae and photosynthetic prokaryotes photosynthesise. Fungi are heterotrophs, often saprotrophs, and animals are holozoic heterotrophs.", "植物、藻類、光合成をする原核生物は光合成を行います。菌類は従属栄養生物（多くは腐生）、動物は摂食型の従属栄養生物です。", "植物、藻類和能進行光合作用的原核生物都會進行光合作用。真菌是異養生物（多為腐生），動物是攝食式異養生物。") },
     { id: "b4-2-q07", type: "short", ahl: false, difficulty: 2, ref: "B4.2.5", paper: "2", commandTerm: "Distinguish", marks: 2,
       stem: L("Distinguish between an obligate mixotroph and a facultative mixotroph.", "偏性混合栄養生物と通性混合栄養生物を区別せよ。", "區別專性混合營養生物與兼性混合營養生物。"),
       markscheme: [L("Obligate mixotroph needs both autotrophic and heterotrophic nutrition to survive", "偏性混合栄養生物は生存に独立栄養と従属栄養の両方が必要", "專性混合營養生物需要自養和異養兩種方式才能生存"), L("Facultative mixotroph can survive using only one mode (autotrophic or heterotrophic), and uses the other when it is useful", "通性混合栄養生物は一方の様式だけでも生存でき、役立つときに他方も使う", "兼性混合營養生物只用其中一種方式（自養或異養）也能生存，有用時才使用另一種")],
