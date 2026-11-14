@@ -1,7 +1,7 @@
 /* Widget: osmosis-anim — B2.1.5 movement of water by osmosis and the role of aquaporins (SL).
    Particle model: water molecules move randomly; solute particles cannot cross the partially permeable membrane;
-   water crosses only through aquaporins (or very slowly without them). The membrane is free to slide, so the side with
-   more solute swells until the solute concentrations are equal. Net movement of water is toward higher solute concentration.
+   water crosses only through aquaporins (or very slowly without them). The membrane is free to slide (modelling a stretchy container), so the side
+   with more solute swells until the solute concentrations are equal; the More detail text explains real cells differ. Net movement of water is toward higher solute concentration.
    Each side starts with the same number of particles (water + solute) so the volumes start equal.
    Uses "solute concentration" language only (no water potential / tonicity terms). Illustrative model. */
 (function () {
@@ -66,7 +66,7 @@
     ex: L("Osmosis: net movement of water across a partially permeable membrane towards the higher solute concentration. Solutes cannot cross; water uses aquaporins.", "浸透 (osmosis): 水が半透膜を通って溶質濃度の高い方へ正味で移動すること。溶質は通れず、水はアクアポリン (aquaporin) を通る。", "滲透 (osmosis)：水穿過半透膜，淨移動至溶質濃度較高的一側。溶質不能穿過；水經水通道蛋白 (aquaporin)。"),
     exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住"),
     more: L("More detail", "くわしく", "更多資料"),
-    md: L("Why? Water molecules move randomly. On the side with more solute particles there are fewer water molecules for the same volume, so fewer hit the aquaporins each second. More water crosses from the other side, until the concentrations match. The membrane slides here so you can see the volumes change. Illustrative model, not to scale.", "なぜか: 水分子は不規則に動きます。溶質が多い側は同じ体積に含まれる水分子が少ないので、1秒間にアクアポリンに当たる水分子も少なくなります。反対側からより多くの水が通り、濃度がそろうまで続きます。ここでは膜が動くので体積の変化が見えます。説明用のモデルで、縮尺は不同です。", "為什麼？水分子隨機運動。溶質較多的一側，同樣體積內水分子較少，每秒撞到水通道蛋白的水分子也較少。因此從另一側穿過的水較多，直到濃度相等。這裏的膜可以滑動，讓你看到體積變化。示意模型，並非按比例。"),
+    md: L("Why? Water molecules move randomly. On the side with more solute particles there are fewer water molecules for the same volume, so fewer hit the aquaporins each second. More water crosses from the other side. In this model the membrane is free to move, like the wall of a stretchy bag, so you can see the volume of the side gaining water increase until the concentrations match. In real cells the volume change is limited (for example, a cell wall builds up turgor pressure, D2.3.6), so net movement can stop before concentrations are equal, or an animal cell can burst (D2.3.5). Illustrative model, not to scale.", "なぜか: 水分子は不規則に動きます。溶質が多い側は同じ体積に含まれる水分子が少ないので、1秒間にアクアポリンに当たる水分子も少なくなります。反対側からより多くの水が通ります。このモデルでは膜が伸び縮みする袋の壁のように自由に動くので、水が入る側の体積が濃度がそろうまで増えるのが見えます。実際の細胞では体積の変化に限りがあり（例: 細胞壁が膨圧 (turgor pressure) を生じる、D2.3.6）、濃度が等しくなる前に正味の移動が止まったり、動物細胞が破裂したり (D2.3.5) します。説明用のモデルで、縮尺は不同です。", "為什麼？水分子隨機運動。溶質較多的一側，同樣體積內水分子較少，每秒撞到水通道蛋白的水分子也較少。因此從另一側穿過的水較多。在這模型中，膜像有彈性的袋壁一樣可以自由移動，讓你看到得到水的一側體積增加，直到濃度相等。在真實細胞中體積變化有限（例如細胞壁會產生膨壓 (turgor pressure)，D2.3.6），所以淨移動可能在濃度相等前停止，或動物細胞會脹破 (D2.3.5)。示意模型，並非按比例。"),
     ref: L("Syllabus B2.1.5 (links to B2.1.1–2)", "シラバス B2.1.5（B2.1.1–2 と関連）", "課程大綱 B2.1.5（與B2.1.1–2 有關）"),
     aria: L("Particle model of osmosis across a membrane with aquaporins", "アクアポリンのある膜での浸透の粒子モデル", "經水通道蛋白的滲透粒子模型")
   };

@@ -52,8 +52,8 @@
     P: L("Phalanges", "指骨 (phalanges)", "指骨 (phalanges)")
   };
   var GI = {
-    H: L("<b>Humerus</b>: the single upper-limb bone, joined to the shoulder. Long in the human arm and cat leg, short and thick in the whale flipper.", "<b>上腕骨 (humerus)</b>: 肩につながる1本の骨。ヒトの腕とネコの前肢では長く、クジラの胸びれでは短く太くなっています。", "<b>肱骨 (humerus)</b>：連接肩部的單一骨。人類手臂和貓前肢中較長，鯨鰭肢中短而粗。"),
-    RU: L("<b>Radius and ulna</b>: two lower-limb bones in every case. The bat's radius is very long; in the whale flipper both are short and flat.", "<b>橈骨と尺骨 (radius, ulna)</b>: どの動物にも2本あります。コウモリでは橈骨が非常に長く、クジラの胸びれでは2本とも短く平たくなっています。", "<b>橈骨和尺骨 (radius, ulna)</b>：每種動物都有兩條。蝙蝠的橈骨很長；鯨鰭肢中兩條都短而扁。"),
+    H: L("<b>Humerus</b>: the single bone of the upper arm (upper forelimb), joined to the shoulder. Long in the human arm and cat leg, short and thick in the whale flipper.", "<b>上腕骨 (humerus)</b>: 上腕（前肢の付け根側）の1本の骨で、肩につながります。ヒトの腕とネコの前肢では長く、クジラの胸びれでは短く太くなっています。", "<b>肱骨 (humerus)</b>：上臂（前肢近端）的單一骨，連接肩部。人類手臂和貓前肢中較長，鯨鰭肢中短而粗。"),
+    RU: L("<b>Radius and ulna</b>: the two bones of the forearm (lower forelimb) in every case. The bat's radius is very long; in the whale flipper both are short and flat.", "<b>橈骨と尺骨 (radius, ulna)</b>: 前腕（前肢の先側）の2本の骨で、どの動物にもあります。コウモリでは橈骨が非常に長く、クジラの胸びれでは2本とも短く平たくなっています。", "<b>橈骨和尺骨 (radius, ulna)</b>：前臂（前肢遠端）的兩條骨，每種動物都有。蝙蝠的橈骨很長；鯨鰭肢中兩條都短而扁。"),
     C: L("<b>Carpals</b>: a group of small wrist bones, in the same position in all four limbs.", "<b>手根骨 (carpals)</b>: 手首の小さな骨の集まりで、4つとも同じ位置にあります。", "<b>腕骨 (carpals)</b>：腕部的一組小骨，在四種肢中位置相同。"),
     M: L("<b>Metacarpals</b>: the bones of the palm, one for each digit. Long in the bat wing, short in the whale flipper.", "<b>中手骨 (metacarpals)</b>: 手のひらの骨で、指ごとに1本あります。コウモリの翼では長く、クジラの胸びれでは短くなっています。", "<b>掌骨 (metacarpals)</b>：手掌的骨，每隻指一條。蝙蝠翼中很長，鯨鰭肢中很短。"),
     P: L("<b>Phalanges</b>: the finger bones. Short in the human hand, very long in the bat wing, and more numerous in some whale flipper digits.", "<b>指骨 (phalanges)</b>: 指の骨です。ヒトの手では短く、コウモリの翼では非常に長く、クジラの胸びれの指では数が多いものがあります。", "<b>指骨 (phalanges)</b>：指的骨。人類手中較短，蝙蝠翼中非常長，鯨鰭肢的某些指中數目較多。")
@@ -61,7 +61,7 @@
   var LIMBS = [
     { n: L("Human arm (grasping)", "ヒトの腕（つかむ）", "人類手臂（抓握）"), hl: 46, hw: 9, rl: 44, gap: 6, cr: 8, ml: 20, pl: 10, ph: [2, 3, 3, 3, 3], ang: [-36, -18, 0, 18, 36], ru: [5, 5] },
     { n: L("Cat foreleg (walking)", "ネコの前肢（歩く）", "貓前肢（行走）"), hl: 42, hw: 8, rl: 42, gap: 5, cr: 7, ml: 24, pl: 9, ph: [2, 3, 3, 3, 3], ang: [-26, -13, 0, 13, 26], ru: [5, 5] },
-    { n: L("Bat wing (flying)", "コウモリの翼（飛ぶ）", "蝙蝠翼（飛行）"), hl: 22, hw: 6, rl: 40, gap: 5, cr: 6, ml: 22, pl: 13, ph: [1, 2, 2, 2, 2], ang: [-62, -30, -10, 10, 30], ru: [4.5, 2], web: true, mls: [6, 22, 22, 20, 18] },
+    { n: L("Bat wing (flying)", "コウモリの翼（飛ぶ）", "蝙蝠翼（飛行）"), hl: 22, hw: 6, rl: 40, gap: 5, cr: 6, ml: 22, pl: 13, ph: [2, 2, 3, 2, 2], ang: [-62, -30, -10, 10, 30], ru: [4.5, 2], web: true, mls: [6, 22, 22, 20, 18] },
     { n: L("Whale flipper (swimming)", "クジラの胸びれ（泳ぐ）", "鯨鰭肢（游泳）"), hl: 22, hw: 13, rl: 26, gap: 6, cr: 8, ml: 11, pl: 8.5, ph: [2, 5, 5, 3, 2], ang: [-30, -15, 0, 15, 30], ru: [8, 8], web: true }
   ];
 
@@ -80,10 +80,10 @@
   var BR = [
     { n: L("Kale", "ケール", "羽衣甘藍"), p: L("leaves", "葉", "葉"), a: -90 },
     { n: L("Cabbage", "キャベツ", "椰菜"), p: L("terminal bud", "頂芽", "頂芽"), a: -30 },
-    { n: L("Brussels sprouts", "芽キャベツ", "抱子甘藍"), p: L("side buds", "側芽", "側芽"), a: 30 },
+    { n: L("Brussels sprouts", "芽キャベツ", "抱子甘藍"), p: L("side (lateral) buds", "側芽", "側芽"), a: 30 },
     { n: L("Kohlrabi", "コールラビ", "球莖甘藍"), p: L("stem", "茎", "莖"), a: 90 },
-    { n: L("Broccoli", "ブロッコリー", "西蘭花"), p: L("flower clusters", "花の集まり", "花序"), a: 150 },
-    { n: L("Cauliflower", "カリフラワー", "椰菜花"), p: L("flower clusters", "花の集まり", "花序"), a: 210 }
+    { n: L("Broccoli", "ブロッコリー", "西蘭花"), p: L("flower bud clusters", "花のつぼみの集まり", "花蕾簇"), a: 150 },
+    { n: L("Cauliflower", "カリフラワー", "椰菜花"), p: L("flower bud clusters", "花のつぼみの集まり", "花蕾簇"), a: 210 }
   ];
 
   var T = {
@@ -106,7 +106,7 @@
     m2: L("All these vegetables were bred from <b>one wild species</b>. Tap a vegetable to see which part people kept choosing.", "これらの野菜はすべて<b>1つの野生種</b>から育種されました。野菜をタップして、人がどの部分を選び続けたかを見ましょう。", "這些蔬菜全部由<b>同一個野生物種</b>培育而成。點選蔬菜，看看人們一直選擇哪個部分。"),
     m2s: L("<b>%n</b>: people kept breeding from plants with the largest %p, over many generations.", "<b>%n</b>: 人は何世代にもわたり、%pが最も大きい個体を選んで交配させ続けました。", "<b>%n</b>：人們世世代代都挑選%p最大的植株來繁殖。"),
     m2c: L("Selective breeding makes large changes in a short time, so it shows how rapidly heritable change can happen.", "選択的育種は短い期間で大きな変化を生むので、遺伝する変化が速く起こりうることを示します。", "選擇性育種在短時間內造成很大變化，顯示可遺傳的改變可以多麼迅速。"),
-    ex2: L("Selective breeding of domesticated species shows how rapidly heritable change can occur: evidence for evolution.", "家畜・栽培植物の選択的育種 (selective breeding) は、遺傳的な変化が速く起こることを示す進化の証拠。", "馴化動植物的選擇性育種 (selective breeding) 顯示可遺傳的改變可以很迅速：演化的證據。"),
+    ex2: L("Selective breeding of domesticated species shows how rapidly heritable change can occur: evidence for evolution.", "家畜・栽培植物の選択的育種 (selective breeding) は、遺伝的な変化が速く起こることを示す進化の証拠。", "馴化動植物的選擇性育種 (selective breeding) 顯示可遺傳的改變可以很迅速：演化的證據。"),
     ref2: L("Syllabus A4.1.3", "シラバス A4.1.3", "課程大綱 A4.1.3"),
     more: L("More detail", "くわしく", "更多資料"),
     md0: L("Pentadactyl means five digits. Some limbs have fewer digits or fused bones, but the same basic pattern can still be traced. How natural selection shapes such differences is covered in D4.1.", "pentadactylは「5本の指」の意味です。指が少ない、骨が融合しているなどの肢もありますが、同じ基本パターンをたどれます。自然選択がこうした違いをどう生むかはD4.1で学びます。", "pentadactyl指「五隻指」。有些肢的指較少或骨融合，但仍可追溯同一基本模式。自然選擇如何造成這些差異屬於D4.1。"),
