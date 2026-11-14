@@ -566,13 +566,13 @@
       p1.appendChild(h('dl', { class: 'terms' }, terms.map(function (k) { return termCard(k); })));
       toc.push({ id: 'terms', label: ui('keyTerms') });
     }
-    var mis = topic.misconceptions || [];
+    var mis = (topic.misconceptions || []).filter(function (x) { return !(IB.level === 'sl' && x.ahl); });
     if (mis.length) {
       var p2 = panel('mistakes');
       p2.appendChild(h('h2', { text: ui('misconceptions') }));
       p2.appendChild(h('div', { class: 'mistakes' }, mis.map(function (x) {
-        return h('div', { class: 'mistake' }, [
-          h('div', { class: 'mistake__wrong' }, [h('span', { class: 'mistake__lbl', text: ui('wrong') }), h('div', { html: t(x.wrong) })]),
+        return h('div', { class: 'mistake', 'data-level': x.ahl ? 'ahl' : null }, [
+          h('div', { class: 'mistake__wrong' }, [h('span', { class: 'mistake__lbl' }, [ui('wrong'), x.ahl ? ' ' : null, x.ahl ? ahlBadge() : null]), h('div', { html: t(x.wrong) })]),
           h('div', { class: 'mistake__right' }, [h('span', { class: 'mistake__lbl', text: ui('right') }), h('div', { html: t(x.right) })])
         ]);
       })));

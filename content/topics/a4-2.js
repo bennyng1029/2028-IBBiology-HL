@@ -470,10 +470,10 @@
       },
       {
         id: "a4-2-q17", type: "mcq", ahl: false, difficulty: 2, ref: "A4.2.8", paper: "1A",
-        stem: L("Each species below is critically endangered. Which one would the EDGE programme most likely give the highest priority?", "以下の種はいずれも深刻な絶滅の危機にある。EDGE 計画が最も高い優先順位を与える可能性が高いのはどれか。", "以下每個物種都是極危。EDGE 計劃最有可能給予哪一個最高優先？"),
+        stem: L("Species A, B and D below are critically endangered. Which one would the EDGE programme most likely give the highest priority?", "以下の種A、B、Dは深刻な絶滅の危機にある。EDGE 計画が最も高い優先順位を与える可能性が高いのはどれか。", "以下物種 A、B 和 D 都是極危。EDGE 計劃最有可能給予哪一個最高優先？"),
         options: [L("A species in a genus with 20 other similar species", "他に20種の似た種がいる属の一種", "屬內有另外 20 個相似物種的一個物種"), L("The only living species in its family, with no close relatives", "近縁種がなく、その科で唯一の現生種", "在其科中唯一現存、沒有近親的物種"), L("A common species that is not threatened", "絶滅の危機にない普通種", "不受威脅的常見物種"), L("A species with many close relatives that are also common", "近縁種が多く、それらも普通種である種", "有許多近親、而近親也很常見的物種")],
         answer: 1,
-        explanation: L("EDGE combines evolutionary distinctiveness and endangerment. B is both. A is endangered but has many relatives, so less evolutionary history would be lost; C and D are not threatened or distinct.", "EDGE は進化的な独自性と絶滅の危機を組み合わせます。Bは両方を満たします。Aは危機にあるものの近縁種が多く、失われる進化の歴史は少なくなります。CとDは危機にも独特でもありません。", "EDGE 結合進化獨特性和瀕危程度。B 兩者兼備。A 瀕危但有許多近親，所失去的進化歷史較少；C 和 D 既不受威脅也不獨特。")
+        explanation: L("EDGE combines evolutionary distinctiveness and endangerment. B is both. A and D are endangered but have many close relatives, so less evolutionary history would be lost. C is not threatened.", "EDGE は進化的な独自性と絶滅の危機を組み合わせます。Bは両方を満たします。AとDは危機にあるものの近縁種が多く、失われる進化の歴史は少なくなります。Cは危機にありません。", "EDGE 結合進化獨特性和瀕危程度。B 兩者兼備。A 和 D 瀕危但有許多近親，所失去的進化歷史較少；C 不受威脅。")
       },
       {
         id: "a4-2-q18", type: "short", ahl: false, difficulty: 3, ref: "A4.2.8", paper: "2", commandTerm: "Discuss", marks: 4,

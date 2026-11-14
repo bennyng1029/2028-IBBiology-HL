@@ -33,9 +33,9 @@ IB.registerLab({
       ahl: false,
       refs: ["B3.1.2", "B3.1.3", "B3.1.4"],
       intro: {
-        en: "<p>A gas exchange surface is permeable, thin, moist and has a large surface area. In a mammal's lungs, a branched network of bronchioles ends in alveoli. Surfactant keeps the inner surface moist and stops the walls sticking together. Dense capillary beds, continuous blood flow and ventilation keep the concentration gradients steep, so O<sub>2</sub> and CO<sub>2</sub> keep diffusing.</p>",
-        ja: "<p>ガス交換の面は、透過性があり、薄く、湿っていて、表面積が大きいという性質をもちます。哺乳類の肺では、枝分かれした細気管支 (bronchioles) が肺胞 (alveoli) に続きます。サーファクタント (surfactant) は内面を湿らせ、壁どうしがくっつくのを防ぎます。毛細血管網が密で、血液が流れ続け、換気が行われるので、濃度勾配が急に保たれ、O<sub>2</sub>とCO<sub>2</sub>が拡散し続けます。</p>",
-        zh: "<p>氣體交換表面具通透性、薄、濕潤，而且表面積大。哺乳動物的肺中，分支的細支氣管 (bronchioles) 通向肺泡 (alveoli)。表面活性物質 (surfactant) 使內壁保持濕潤，並防止肺泡壁黏在一起。密集的微血管網、不斷流動的血液和通氣，使濃度梯度保持陡峭，因此 O<sub>2</sub> 和 CO<sub>2</sub> 能持續擴散。</p>"
+        en: "<p>A gas exchange surface is permeable, thin, moist and has a large surface area. In a mammal's lungs, a branched network of bronchioles ends in alveoli. A thin film of moisture lines each alveolus. Surfactant reduces the surface tension of this film, which stops the walls sticking together. Dense capillary beds, continuous blood flow and ventilation keep the concentration gradients steep, so O<sub>2</sub> and CO<sub>2</sub> keep diffusing.</p>",
+        ja: "<p>ガス交換の面は、透過性があり、薄く、湿っていて、表面積が大きいという性質をもちます。哺乳類の肺では、枝分かれした細気管支 (bronchioles) が肺胞 (alveoli) に続きます。肺胞の内面は薄い水の膜でおおわれています。サーファクタント (surfactant) はこの膜の表面張力を下げ、壁どうしがくっつくのを防ぎます。毛細血管網が密で、血液が流れ続け、換気が行われるので、濃度勾配が急に保たれ、O<sub>2</sub>とCO<sub>2</sub>が拡散し続けます。</p>",
+        zh: "<p>氣體交換表面具通透性、薄、濕潤，而且表面積大。哺乳動物的肺中，分支的細支氣管 (bronchioles) 通向肺泡 (alveoli)。每個肺泡內壁都有一層薄水膜。表面活性物質 (surfactant) 降低這層水膜的表面張力，防止肺泡壁黏在一起。密集的微血管網、不斷流動的血液和通氣，使濃度梯度保持陡峭，因此 O<sub>2</sub> 和 CO<sub>2</sub> 能持續擴散。</p>"
       },
       widget: "gas-exchange",
       options: { tab: 0 },

@@ -322,21 +322,21 @@
         ref: "A3.2.9", ahl: true,
         heading: L("Three domains from rRNA evidence", "rRNA の証拠による三ドメイン (three domains)", "以 rRNA 證據劃分三域 (three domains)"),
         body: L(
-          `<p>In 1977 a revolutionary reclassification was proposed. It added a <strong>new taxonomic level above kingdoms</strong>, called the <strong>domain</strong>, and divided all organisms into <strong>three domains</strong>:</p>
+          `<p>In 1977, rRNA evidence showed that archaea are a separate lineage, and in 1990 a revolutionary reclassification was proposed. It added a <strong>new taxonomic level above kingdoms</strong>, called the <strong>domain</strong>, and divided all organisms into <strong>three domains</strong>:</p>
 <ul>
 <li><strong>Bacteria</strong></li>
 <li><strong>Archaea</strong></li>
 <li><strong>Eukaryota</strong> (also called Eukarya), the organisms whose cells have a nucleus: animals, plants, fungi and protists</li>
 </ul>
 <p><strong>The evidence:</strong> comparison of the <strong>base sequences of ribosomal RNA (rRNA)</strong>. All cells have ribosomes, so all have rRNA, which makes it ideal for comparing very different organisms. The rRNA sequences showed that Archaea are a separate lineage, distinct from both Bacteria and Eukaryota. Before this, Archaea and Bacteria were both grouped together as prokaryotes.</p>`,
-          `<p>1977年に革新的な再分類が提案されました。<strong>界の上に新しい分類段階</strong>として<strong>ドメイン (domain)</strong> を設け、すべての生物を<strong>三つのドメイン</strong>に分けました。</p>
+          `<p>1977年に rRNA の証拠から古細菌が独立した系統であることが示され、1990年に革新的な再分類が提案されました。<strong>界の上に新しい分類段階</strong>として<strong>ドメイン (domain)</strong> を設け、すべての生物を<strong>三つのドメイン</strong>に分けました。</p>
 <ul>
 <li><strong>細菌 (Bacteria)</strong></li>
 <li><strong>古細菌 (Archaea)</strong></li>
 <li><strong>真核生物 (Eukaryota、Eukarya ともいう)</strong>：細胞に核がある生物（動物、植物、菌類、原生生物）</li>
 </ul>
 <p><strong>証拠：</strong><strong>リボソーム RNA (rRNA) の塩基配列</strong>の比較です。すべての細胞にリボソームがあるので rRNA もあり、まったく異なる生物どうしを比べるのに最適です。rRNA の配列から、古細菌は独立した系統であり、細菌とも真核生物とも異なることが分かりました。それまで古細菌と細菌は、どちらも原核生物としてまとめられていました。</p>`,
-          `<p>1977 年有人提出了一項革命性的重新分類。它在<strong>界之上加入新的分類層級</strong>，稱為<strong>域 (domain)</strong>，並把所有生物分成<strong>三個域</strong>：</p>
+          `<p>1977 年，rRNA 證據顯示古菌是一個獨立的譜系；1990 年有人提出了一項革命性的重新分類。它在<strong>界之上加入新的分類層級</strong>，稱為<strong>域 (domain)</strong>，並把所有生物分成<strong>三個域</strong>：</p>
 <ul>
 <li><strong>細菌域 (Bacteria)</strong></li>
 <li><strong>古菌域 (Archaea)</strong></li>

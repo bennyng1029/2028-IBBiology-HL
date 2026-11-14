@@ -579,12 +579,6 @@ ${STEROID_SVG.replace('The steroid skeleton: three six-sided rings (A, B, C) and
         explanation: L("Steroids are lipids with a four-ring skeleton and no fatty acids. Triglycerides, phospholipids and adipose fat all contain fatty acids. Lipids are defined by their solubility, not by a shared structure.", "ステロイドは4環の骨格をもち脂肪酸を含まない脂質である。他はすべて脂肪酸を含む。脂質は共通の構造ではなく溶解性で定義される。", "類固醇是有四環骨架、不含脂肪酸的脂質；其餘選項都含脂肪酸。脂質是按溶解性定義，而非共同結構。")
       },
       {
-        id: "b1-1-q12", type: "order", ahl: false, difficulty: 1, ref: "B1.1.1", paper: "1A",
-        stem: L("Put these SI prefixes in order from the smallest to the largest value.", "次のSI接頭語を値の小さいものから大きいものへ並べよ。", "把以下 SI 詞頭由最小至最大排列。"),
-        items: [L("nano (10⁻⁹)", "ナノ (10⁻⁹)", "納 (10⁻⁹)"), L("micro (10⁻⁶)", "マイクロ (10⁻⁶)", "微 (10⁻⁶)"), L("milli (10⁻³)", "ミリ (10⁻³)", "毫 (10⁻³)"), L("centi (10⁻²)", "センチ (10⁻²)", "厘 (10⁻²)"), L("kilo (10³)", "キロ (10³)", "千 (10³)")],
-        explanation: L("10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³. Milli and centi are easy to swap: a millimetre is smaller than a centimetre.", "10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³。ミリとセンチは取り違えやすいが、1ミリメートルは1センチメートルより小さい。", "10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³。毫和厘容易弄錯：1毫米比1厘米小。")
-      },
-      {
         id: "b1-1-q13", type: "mcq", ahl: false, difficulty: 2, ref: "B1.1.9", paper: "1A",
         stem: L("How many molecules of water are released when one triglyceride is formed from glycerol and fatty acids?", "グリセロールと脂肪酸から1分子のトリグリセリドができるとき、放出される水は何分子か。", "由甘油和脂肪酸形成一個甘油三酯時，會釋出多少個水分子？"),
         options: [L("1", "1", "1"), L("2", "2", "2"), L("3", "3", "3"), L("4", "4", "4")],
