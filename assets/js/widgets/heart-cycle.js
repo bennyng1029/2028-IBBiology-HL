@@ -513,7 +513,8 @@
         if (st !== 1) s += '<path class="arr" d="M10,48 H34"/><polygon class="arrf" points="44,48 34,43 34,53"/>';
         if (st === 1) s += '<text class="tx" x="100" y="12" text-anchor="middle" style="font-weight:700">\u26A1 ' + t(HC.sa) + '</text>';
         // labels
-        s += '<text class="tm" x="6" y="30">' + t(HC.pv) + '</text>';
+        var pvw = t(HC.pv).split(" ");
+        s += pvw.length > 1 ? '<text class="tm" x="6" y="20">' + pvw[0] + '</text><text class="tm" x="6" y="33">' + pvw.slice(1).join(" ") + '</text>' : '<text class="tm" x="6" y="30">' + pvw[0] + '</text>';
         s += '<text class="tx" x="100" y="46" text-anchor="middle">' + t(HC.la) + '</text><text class="tm" x="100" y="58" text-anchor="middle">' + Math.round(pLA) + ' mmHg</text>';
         s += '<text class="tx" x="' + cx + '" y="' + (cy + 4).toFixed(1) + '" text-anchor="middle">' + t(HC.lv) + '</text><text class="tm" x="' + cx + '" y="' + (cy + 17).toFixed(1) + '" text-anchor="middle">' + Math.round(pLV) + ' mmHg</text>';
         s += '<text class="tx" x="270" y="18" text-anchor="middle">' + t(HC.ao) + ' ' + Math.round(pAo) + ' mmHg</text>';
