@@ -649,7 +649,7 @@
       function compareView() {
         host.innerHTML = "";
         var kinds = [["artery", VC.art], ["capillary", VC.cap], ["vein", VC.vein]];
-        var svg = '<svg viewBox="0 0 400 176" role="img" aria-label="' + t(VC.title) + '">';
+        var svg = '<svg viewBox="0 0 406 176" role="img" aria-label="' + t(VC.title) + '">';
         var xs = { artery: 62, capillary: 198, vein: 334 };
         kinds.forEach(function (k) {
           var sel = k[0] === cur;

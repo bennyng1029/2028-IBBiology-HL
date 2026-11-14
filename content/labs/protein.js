@@ -12,9 +12,9 @@ IB.registerLab({
     "zh": "蛋白質實驗室"
   },
   "intro": {
-    "en": "Ten steps, from one amino acid to a working protein, including real 3D structures. Work through them in order, and try every interactive. This is subtopic B1.2.",
-    "ja": "1つのアミノ酸から働くタンパク質まで、実際の3D構造も使って10のステップで学びます。順番に進め、インタラクティブをすべて試しましょう。サブトピックB1.2です。",
-    "zh": "由單一個氨基酸到有功能的蛋白質，共十個步驟，並包括真實的3D結構。請依次完成，並試玩每個互動內容。這是子課題 B1.2。"
+    "en": "Ten steps, from one amino acid to a working protein, including real 3D structures. Work through them in order, and try every interactive. Steps marked AHL are for HL students only. This is subtopic B1.2.",
+    "ja": "1つのアミノ酸から働くタンパク質まで、実際の3D構造も使って10のステップで学びます。順番に進め、インタラクティブをすべて試しましょう。AHLの印があるステップはHLの生徒向けです。サブトピックB1.2です。",
+    "zh": "由單一個氨基酸到有功能的蛋白質，共十個步驟，並包括真實的3D結構。請依次完成，並試玩每個互動內容。標有 AHL 的步驟只適用於 HL 學生。這是子課題 B1.2。"
   },
   "steps": [
     {
@@ -78,9 +78,9 @@ IB.registerLab({
         "B1.2.11"
       ],
       "intro": {
-        "en": "<p>Protein structure is described at four levels. <strong>Primary</strong>: the sequence of amino acids. <strong>Secondary</strong>: regular shapes such as the &alpha;-helix and &beta;-pleated sheet, held by hydrogen bonds between backbone C=O and N–H groups. <strong>Tertiary</strong>: the overall 3D shape of one polypeptide. <strong>Quaternary</strong>: two or more polypeptides together. The idea that amino acids can be joined in any order is core (B1.2.4). The named levels, and how the sequence decides the 3D shape (B1.2.7), are AHL.</p>",
-        "ja": "<p>タンパク質の構造は4つの階層で表します。<strong>一次構造 (primary)</strong>：アミノ酸の配列。<strong>二次構造 (secondary)</strong>：骨格のC=OとN–Hの間の水素結合で保たれる、&alpha;ヘリックスや&beta;シートのような規則的な形。<strong>三次構造 (tertiary)</strong>：1本のポリペプチド全体の立体構造。<strong>四次構造 (quaternary)</strong>：2本以上のポリペプチドの組み合わせ。アミノ酸がどんな順序でもつながるという考えは共通 (B1.2.4) です。構造の各段階の名前と、配列が立体構造を決めるしくみ (B1.2.7) はAHLです。</p>",
-        "zh": "<p>蛋白質結構分為四個層次。<strong>一級結構 (primary)</strong>：氨基酸的序列。<strong>二級結構 (secondary)</strong>：由骨架上 C=O 與 N–H 之間的氫鍵維持的規則形狀，例如 &alpha; 螺旋和 &beta; 摺板。<strong>三級結構 (tertiary)</strong>：單條多肽的整體三維形狀。<strong>四級結構 (quaternary)</strong>：兩條或以上多肽結合在一起。氨基酸可按任何次序連接，這屬核心內容 (B1.2.4)。各級結構的名稱，以及序列如何決定三維形狀 (B1.2.7)，屬於 AHL。</p>"
+        "en": "<p>Protein structure has four levels. <strong>Primary</strong>: the sequence of amino acids. This sequence decides how the chain folds, and so its 3D shape. <strong>Secondary</strong>: regular &alpha;-helices and &beta;-pleated sheets, held by hydrogen bonds between backbone C=O and N–H groups. <strong>Tertiary</strong>: the overall 3D shape of one polypeptide. <strong>Quaternary</strong>: two or more polypeptides together.</p>",
+        "ja": "<p>タンパク質の構造には4つの階層があります。<strong>一次構造 (primary)</strong>：アミノ酸の配列。この配列が鎖の折りたたみ方、つまり立体構造を決めます。<strong>二次構造 (secondary)</strong>：骨格のC=OとN–Hの間の水素結合で保たれる、規則的な&alpha;ヘリックスと&beta;シート。<strong>三次構造 (tertiary)</strong>：1本のポリペプチド全体の立体構造。<strong>四次構造 (quaternary)</strong>：2本以上のポリペプチドの組み合わせ。</p>",
+        "zh": "<p>蛋白質結構分為四個層次。<strong>一級結構 (primary)</strong>：氨基酸的序列。這個序列決定肽鏈如何摺疊，因而決定其三維形狀。<strong>二級結構 (secondary)</strong>：規則的 &alpha; 螺旋和 &beta; 摺板，由骨架上 C=O 與 N–H 之間的氫鍵維持。<strong>三級結構 (tertiary)</strong>：單條多肽的整體三維形狀。<strong>四級結構 (quaternary)</strong>：兩條或以上多肽結合在一起。</p>"
       },
       "widget": "protein-levels",
       "options": {},
@@ -201,9 +201,9 @@ IB.registerLab({
         "B1.2.5"
       ],
       "intro": {
-        "en": "<p>Denaturation is a change in the 3D shape of a protein, so it usually loses its biological function. Heat makes the molecule vibrate more and breaks the weak bonds that hold its shape. An extreme pH changes the charges on R-groups and disrupts the bonds between them. The peptide bonds are not broken, so the amino acid sequence stays the same. Denaturation is usually permanent. The three model proteins are illustrative, not real measurements. Use the sliders to see the effect.</p>",
-        "ja": "<p>変性 (denaturation) とは、タンパク質の立体構造が変わることで、ふつう生物としての働きを失います。熱は分子の振動を激しくして、形を保っている弱い結合を切ります。極端なpHはR基の電荷を変え、R基どうしの結合を乱します。ペプチド結合は切れないので、アミノ酸の配列は変わりません。変性はふつう元に戻りません。3つのモデルタンパク質は説明用で、実際の測定値ではありません。スライダーで影響を確かめましょう。</p>",
-        "zh": "<p>變性 (denaturation) 是指蛋白質的三維形狀改變，通常令它失去生物功能。高溫使分子振動加劇，破壞維持形狀的較弱鍵。極端的 pH 會改變 R 基上的電荷，擾亂 R 基之間的鍵。肽鍵不會斷開，所以氨基酸序列不變。變性通常是永久的。三個模型蛋白質只作示意，並非真實量度數據。請用滑桿觀察影響。</p>"
+        "en": "<p>Denaturation is a change in the 3D shape of a protein, so it usually loses its biological function. Heat makes the molecule vibrate more and breaks the weak bonds that hold its shape. An extreme pH changes the charges on R-groups and disrupts the bonds between them. Peptide bonds are not broken, so the amino acid sequence stays the same. Denaturation is usually permanent.</p>",
+        "ja": "<p>変性 (denaturation) とは、タンパク質の立体構造が変わることで、ふつう生物としての働きを失います。熱は分子の振動を激しくして、形を保っている弱い結合を切ります。極端なpHはR基の電荷を変え、R基どうしの結合を乱します。ペプチド結合は切れないので、アミノ酸の配列は変わりません。変性はふつう元に戻りません。</p>",
+        "zh": "<p>變性 (denaturation) 是指蛋白質的三維形狀改變，通常令它失去生物功能。高溫使分子振動加劇，破壞維持形狀的較弱鍵。極端的 pH 會改變 R 基上的電荷，擾亂 R 基之間的鍵。肽鍵不會斷開，所以氨基酸序列不變。變性通常是永久的。</p>"
       },
       "widget": "denaturation",
       "options": {},

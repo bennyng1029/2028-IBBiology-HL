@@ -177,7 +177,7 @@
   var BL = 34, RH = 8.5, RO = 14;
 
   function svgOpen(w, h, label) {
-    return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + label.replace(/"/g, "&quot;") + '" xmlns="http://www.w3.org/2000/svg">';
+    return '<svg viewBox="-6 0 ' + (w + 6) + ' ' + h + '" role="img" aria-label="' + label.replace(/"/g, "&quot;") + '" xmlns="http://www.w3.org/2000/svg">';
   }
 
   function polar(x, y, ang, d) { return [x + d * Math.cos(ang * RAD), y + d * Math.sin(ang * RAD)]; }

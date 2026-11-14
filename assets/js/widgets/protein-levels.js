@@ -173,8 +173,8 @@
       g.appendChild(c);
     });
     if (!opt.plain) {
-      g.appendChild(sv("text", { x: P[0][0] - 2, y: P[0][1] - 13, "text-anchor": "middle", style: "font-size:11px", text: "N" }));
-      g.appendChild(sv("text", { x: P[P.length - 1][0] + 2, y: P[P.length - 1][1] - 13, "text-anchor": "middle", style: "font-size:11px", text: "C" }));
+      g.appendChild(sv("text", { x: P[0][0] - 2, y: Math.max(11, P[0][1] - 13), "text-anchor": "middle", style: "font-size:11px", text: "N" }));
+      g.appendChild(sv("text", { x: P[P.length - 1][0] + 2, y: Math.max(11, P[P.length - 1][1] - 13), "text-anchor": "middle", style: "font-size:11px", text: "C" }));
     }
     g._pts = P;
     return g;

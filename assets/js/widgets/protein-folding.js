@@ -141,7 +141,7 @@
         ]));
       }
       function globular() {
-        var svg = sv("svg", { viewBox: "0 0 360 262", role: "img", "aria-label": T(["Folded polypeptide with bonds", "結合を示す折りたたまれたポリペプチド", "顯示各種鍵的摺疊多肽"]) });
+        var svg = sv("svg", { viewBox: "0 0 360 268", role: "img", "aria-label": T(["Folded polypeptide with bonds", "結合を示す折りたたまれたポリペプチド", "顯示各種鍵的摺疊多肽"]) });
         [[15, 15], [335, 20], [350, 160], [20, 120], [190, 20], [190, 250], [345, 240], [10, 255]].forEach(function (p) {
           svg.appendChild(sv("text", { x: p[0], y: p[1] + 4, "text-anchor": "middle", style: "font-size:12px;fill:var(--k-hb);opacity:.7", text: "H₂O" }));
         });

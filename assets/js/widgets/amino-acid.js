@@ -200,7 +200,7 @@
       function structure() {
         groups = {};
         // landscape viewBox: the molecule is drawn left to right
-        var svg = sv("svg", { viewBox: "30 14 330 226", role: "img", "aria-label": T(["Generalized amino acid", "一般的なアミノ酸", "通式氨基酸"]) });
+        var svg = sv("svg", { viewBox: "24 14 352 226", role: "img", "aria-label": T(["Generalized amino acid", "一般的なアミノ酸", "通式氨基酸"]) });
         svg.appendChild(bond(112, 112, 190, 112));
         svg.appendChild(bond(190, 112, 268, 112));
         svg.appendChild(bond(190, 112, 190, 62));
