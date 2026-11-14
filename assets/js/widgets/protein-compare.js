@@ -71,11 +71,7 @@
     return bar;
   }
   var CSS =
-    ".W .cards{display:grid;grid-template-columns:1fr;gap:10px}" +
-    "@media (min-width:760px){.W .cards{grid-template-columns:repeat(3,1fr)}}" +
-    ".W .pc{border:1.5px solid var(--k-line);border-radius:14px;padding:10px 12px;background:var(--k-sf)}" +
-    ".W .pc h5{margin:0 0 4px;font-size:17px}" +
-    ".W .pc svg{background:var(--k-bg);border-radius:10px}" +
+    ".W .tw{overflow-x:auto}.W table.cmp{border-collapse:collapse;width:100%;font-size:13px;line-height:1.35}.W table.cmp th,.W table.cmp td{border:1px solid var(--k-line);padding:6px 8px;text-align:left;vertical-align:top}.W table.cmp thead th{background:var(--k-bg)}.W table.cmp tbody th{background:var(--k-bg);white-space:nowrap;font-size:12px}" +
     ".W .fx{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px;margin:8px 0 0}" +
     ".W .fx dt{color:var(--k-mut);font-weight:600}.W .fx dd{margin:0}" +
     ".W .q{margin:8px 0}.W .q .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0}" +
@@ -88,9 +84,9 @@
     s.appendChild(sv("path", { d: "M30 70C40 30 70 20 95 35S115 20 128 28", fill: "none", stroke: "var(--k-acc)", "stroke-width": 6, "stroke-linecap": "round" }));
     s.appendChild(sv("path", { d: "M25 55C35 85 70 90 95 72S125 80 135 66", fill: "none", stroke: "var(--k-pol)", "stroke-width": 6, "stroke-linecap": "round" }));
     [[58, 33, 80], [98, 36, 70]].forEach(function (b) { s.appendChild(sv("line", { x1: b[0], y1: b[1] + 2, x2: b[0], y2: b[2] - 2, stroke: "var(--k-ds)", "stroke-width": 5, "stroke-linecap": "round" })); });
-    s.appendChild(sv("text", { x: 12, y: 24, style: "font-size:11px;font-weight:700;fill:var(--k-acc)", text: T(["A chain", "A鎖", "A 鏈"]) }));
-    s.appendChild(sv("text", { x: 12, y: 96, style: "font-size:11px;font-weight:700;fill:var(--k-pol)", text: T(["B chain", "B鎖", "B 鏈"]) }));
-    s.appendChild(sv("text", { x: 78, y: 58, "text-anchor": "start", style: "font-size:10px;fill:var(--k-ds);font-weight:700", text: "S–S" }));
+    s.appendChild(sv("text", { x: 12, y: 24, style: "font-size:6.5px;font-weight:700;fill:var(--k-acc)", text: T(["A chain", "A鎖", "A 鏈"]) }));
+    s.appendChild(sv("text", { x: 12, y: 96, style: "font-size:6.5px;font-weight:700;fill:var(--k-pol)", text: T(["B chain", "B鎖", "B 鏈"]) }));
+    s.appendChild(sv("text", { x: 78, y: 58, "text-anchor": "start", style: "font-size:6px;fill:var(--k-ds);font-weight:700", text: "S–S" }));
     return s;
   }
   function iconCollagen() {
@@ -106,9 +102,9 @@
     var s = sv("svg", { viewBox: "0 0 160 100", role: "img", "aria-label": "haemoglobin" });
     [[48, 27, "--k-acc", "α"], [112, 27, "--k-pol", "β"], [48, 73, "--k-pol", "β"], [112, 73, "--k-acc", "α"]].forEach(function (q) {
       s.appendChild(sv("circle", { cx: q[0], cy: q[1], r: 21, fill: "var(" + q[2] + ")", opacity: .35, stroke: "var(" + q[2] + ")", "stroke-width": 3 }));
-      s.appendChild(sv("text", { x: q[0] - 14, y: q[1] - 12, style: "font-size:12px;font-weight:700", text: q[3] }));
+      s.appendChild(sv("text", { x: q[0] - 14, y: q[1] - 12, style: "font-size:6.5px;font-weight:700", text: q[3] }));
       s.appendChild(sv("rect", { x: q[0] - 8, y: q[1] - 8, width: 16, height: 16, rx: 3, fill: "var(--k-ac)" }));
-      s.appendChild(sv("text", { x: q[0], y: q[1] + 4, "text-anchor": "middle", style: "font-size:9px;font-weight:700;fill:var(--k-sf)", text: "Fe" }));
+      s.appendChild(sv("text", { x: q[0], y: q[1] + 4, "text-anchor": "middle", style: "font-size:5.5px;font-weight:700;fill:var(--k-sf)", text: "Fe" }));
     });
     return s;
   }
@@ -139,36 +135,30 @@
       ] }
   ];
 
+  var CMP = [
+    [["Shape", "形", "形狀"], [["Globular", "球状 (globular)", "球狀 (globular)"], ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"], ["Globular", "球状 (globular)", "球狀 (globular)"]]],
+    [["Type", "種類", "類型"], [["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"], ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"], ["Conjugated: haem (Fe²⁺)", "複合 (conjugated): ヘム (Fe²⁺)", "結合 (conjugated)：血紅素 (Fe²⁺)"]]],
+    [["Polypeptides", "ポリペプチド", "多肽"], [["2 (A chain, 21 amino acids; B chain, 30), disulfide-linked", "2本 (A鎖 21個、B鎖 30個のアミノ酸)、ジスルフィド結合", "2 條（A 鏈 21 個、B 鏈 30 個氨基酸），以二硫鍵連接"], ["3, wound into a triple helix", "3本、三重らせん (triple helix)", "3 條，纏繞成三股螺旋 (triple helix)"], ["4 (2 α + 2 β)", "4本 (α鎖2本 + β鎖2本)", "4 條（2 條 α + 2 條 β）"]]],
+    [["Function", "はたらき", "功能"], [["Hormone (lowers blood glucose)", "ホルモン (血糖値を下げる)", "激素（降低血糖）"], ["Structural: high tensile strength", "構造: 高い引っ張り強度", "結構功能：抗拉強度高"], ["Carries oxygen in red blood cells", "赤血球で酸素を運ぶ", "在紅血球中運載氧"]]],
+    [["Solubility", "溶解性", "溶解性"], [["Soluble in water", "水に溶ける", "可溶於水"], ["Insoluble in water", "水に溶けない", "不溶於水"], ["Soluble in water", "水に溶ける", "可溶於水"]]]
+  ];
+
   IB.registerWidget("protein-compare", {
     title: { en: "Insulin, collagen and haemoglobin", ja: "インスリン・コラーゲン・ヘモグロビン", zh: "胰島素、膠原蛋白與血紅蛋白" },
     mount: function (root, ctx) {
       css("protein-compare", CSS);
       root.classList.add("W");
       var T = mkT(ctx);
-      var quiz = false, solved = {}, shapeOK = {}, conjOK = {};
-      var cards = el("div", { class: "cards" });
-      var sc = el("p", { class: "small", "aria-live": "polite" });
-      root.appendChild(el("h4", {}, [T(["Compare three proteins", "3つのタンパク質を比べる", "比較三種蛋白質"]), ahl()]));
-      var modeBtns = [false, true].map(function (q) {
-        var b = el("button", { type: "button", "aria-pressed": quiz === q ? "true" : "false", text: q ? T(["Quiz me", "クイズ", "小測驗"]) : T(["Explore", "見てみる", "瀏覽"]) });
-        b.addEventListener("click", function () { quiz = q; modeBtns.forEach(function (x, i) { x.setAttribute("aria-pressed", (i === 1) === quiz ? "true" : "false"); }); render(); });
-        return b;
-      });
-      root.appendChild(el("div", { class: "bar" }, modeBtns));
-      root.appendChild(cards); root.appendChild(sc);
-      root.appendChild(el("h4", { text: T(["Key terms", "用語", "關鍵詞"]) }));
-      root.appendChild(el("div", { class: "panel" }, [el("dl", { class: "defs" }, [
-        el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。"]) }),
-        el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。"]) }),
-        el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。"]) }),
-        el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。"]) })
-      ])]));
-      root.appendChild(el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。"]) }));
-      root.appendChild(el("p", { class: "small", text: T(["Cryo-electron microscopy (cryo-EM) can image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) は、肉眼では見えない1分子のタンパク質を画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 能為單一蛋白質分子造影，這是肉眼無法觀察到的。"]) }));
-      root.appendChild(exam(T, [
+      var tab = optTab(ctx, 4), quiz = false, shapeOK = {}, conjOK = {};
+      var TABS = PROT.map(function (p) { return { n: p.name, a: true }; }).concat([{ n: ["Compare and key terms", "比較と用語", "比較與關鍵詞"] }]);
+      TABS.forEach(function (t) { if (t.a) t.a = false; });
+      var EXAMTXT = [
         "Insulin: globular, non-conjugated, 2 polypeptides (disulfide-linked), soluble hormone. Collagen: fibrous, non-conjugated, 3 polypeptides in a triple helix, insoluble, high tensile strength. Haemoglobin: globular, conjugated, 4 polypeptides each with a haem (iron) group, carries oxygen.",
         "インスリン: 球状・非複合・2本のポリペプチド (ジスルフィド結合)・水溶性のホルモン。コラーゲン: 繊維状・非複合・3本が三重らせん・不溶性・引っ張り強度が高い。ヘモグロビン: 球状・複合・4本のポリペプチドそれぞれにヘム (鉄) をもち酸素を運ぶ。",
-        "胰島素：球狀、非結合、2 條多肽（以二硫鍵連接）、可溶的激素。膠原蛋白：纖維狀、非結合、3 條多肽組成三股螺旋、不溶、抗拉強度高。血紅蛋白：球狀、結合、4 條多肽各有一個血紅素（含鐵）、運載氧。"]));
+        "胰島素：球狀、非結合、2 條多肽（以二硫鍵連接）、可溶的激素。膠原蛋白：纖維狀、非結合、3 條多肽組成三股螺旋、不溶、抗拉強度高。血紅蛋白：球狀、結合、4 條多肽各有一個血紅素（含鐵）、運載氧。"];
+      var view = el("div");
+      root.appendChild(view);
+      render();
 
       function factsOf(p) {
         var dl = el("dl", { class: "fx" });
@@ -180,36 +170,69 @@
         var bs = [a, b].map(function (o) {
           var bt = el("button", { type: "button", text: T(o[1]) });
           bt.addEventListener("click", function () {
-            if (o[0] === correct) {
-              store[p.id] = 1; fb.className = "fb good"; fb.textContent = "✔ " + T(["Correct", "正解", "正確"]);
-              render();
-            } else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite: think about its structure and job.", "惜しい。構造とはたらきを考えてみましょう。", "不太對：想想它的結構和功能。"]); }
+            if (o[0] === correct) { store[p.id] = 1; render(); }
+            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite: think about its structure and job.", "惜しい。構造とはたらきを考えてみましょう。", "不太對：想想它的結構和功能。"]); }
           });
           return bt;
         });
         return el("div", { class: "q" }, [el("strong", { text: T(label) }), el("div", { class: "opts" }, bs), fb]);
       }
       function render() {
-        cards.innerHTML = "";
-        var n = 0;
-        PROT.forEach(function (p) {
-          var done = shapeOK[p.id] && conjOK[p.id];
-          if (done) n++;
-          var c = el("div", { class: "pc" }, [el("h5", { text: T(p.name) }), p.icon(T)]);
-          if (!quiz || done) {
-            if (quiz) c.appendChild(el("p", { class: "fb good", text: "✔ " + T(["Both correct. Here are the facts:", "両方正解。詳しい情報:", "兩項皆正確。以下是資料："]) }));
-            c.appendChild(factsOf(p));
-          } else {
-            if (shapeOK[p.id]) c.appendChild(el("p", { class: "fb good", text: "✔ " + T(["Shape: ", "形: ", "形狀："]) + T(p.shape === "glob" ? ["globular", "球状 (globular)", "球狀 (globular)"] : ["fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }));
-            else c.appendChild(pair(p, ["Is it globular or fibrous?", "球状か繊維状か?", "是球狀還是纖維狀？"], ["glob", ["Globular", "球状 (globular)", "球狀 (globular)"]], ["fib", ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]], p.shape, shapeOK));
-            if (conjOK[p.id]) c.appendChild(el("p", { class: "fb good", text: "✔ " + T(p.conj ? ["Conjugated", "複合 (conjugated)", "結合 (conjugated)"] : ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }));
-            else c.appendChild(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是結合還是非結合？"], [true, ["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]], p.conj, conjOK));
-          }
-          cards.appendChild(c);
-        });
-        sc.textContent = quiz ? T(["Proteins classified correctly: ", "正しく分類できたタンパク質: ", "已正確分類的蛋白質："]) + n + " / 3" : "";
+        view.innerHTML = "";
+        view.appendChild(tabsBar(T, TABS, tab, function (i) { tab = i; render(); }));
+        var parts = tab < 3 ? protein(PROT[tab]) : compare();
+        view.appendChild(el("div", { class: "wl" }, [
+          el("div", { class: "wl-stage" }, parts.stage),
+          el("div", { class: "wl-panel" }, parts.panel.concat([exam(T, EXAMTXT)]))
+        ]));
       }
-      render();
+      function protein(p) {
+        var svg = p.icon(T);
+        svg.setAttribute("style", "max-width:440px");
+        var n = 0; PROT.forEach(function (q) { if (shapeOK[q.id] && conjOK[q.id]) n++; });
+        var modeBtns = [false, true].map(function (q) {
+          var b = el("button", { type: "button", "aria-pressed": quiz === q ? "true" : "false", text: q ? T(["Quiz me", "クイズ", "小測驗"]) : T(["Explore", "見てみる", "瀏覽"]) });
+          b.addEventListener("click", function () { quiz = q; render(); });
+          return b;
+        });
+        var done = shapeOK[p.id] && conjOK[p.id];
+        var body = [];
+        if (!quiz || done) {
+          if (quiz) body.push(el("p", { class: "fb good", text: "✔ " + T(["Both correct. Here are the facts:", "両方正解。詳しい情報:", "兩項皆正確。以下是資料："]) }));
+          body.push(factsOf(p));
+        } else {
+          if (shapeOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(["Shape: ", "形: ", "形狀："]) + T(p.shape === "glob" ? ["globular", "球状 (globular)", "球狀 (globular)"] : ["fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }));
+          else body.push(pair(p, ["Is it globular or fibrous?", "球状か繊維状か?", "是球狀還是纖維狀？"], ["glob", ["Globular", "球状 (globular)", "球狀 (globular)"]], ["fib", ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]], p.shape, shapeOK));
+          if (conjOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(p.conj ? ["Conjugated", "複合 (conjugated)", "結合 (conjugated)"] : ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }));
+          else body.push(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是結合還是非結合？"], [true, ["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]], p.conj, conjOK));
+        }
+        return {
+          stage: [svg, el("p", { class: "small", style: "text-align:center", text: T(["Schematic diagram", "模式図", "示意圖"]) })],
+          panel: [el("div", { class: "bar", style: "margin:0" }, modeBtns)].concat(body, quiz ? [el("p", { class: "small", "aria-live": "polite", text: T(["Proteins classified correctly: ", "正しく分類できたタンパク質: ", "已正確分類的蛋白質："]) + n + " / 3" })] : [])
+        };
+      }
+      function compare() {
+        var tbl = el("table", { class: "cmp" });
+        tbl.appendChild(el("thead", {}, [el("tr", {}, [el("th", { text: "" })].concat(PROT.map(function (p) { return el("th", { scope: "col", text: T(p.name) }); })))]));
+        tbl.appendChild(el("tbody", {}, CMP.map(function (r) {
+          return el("tr", {}, [el("th", { scope: "row", text: T(r[0]) })].concat(r[1].map(function (c) { return el("td", { text: T(c) }); })));
+        })));
+        return {
+          stage: [el("div", { class: "tw" }, [tbl])],
+          panel: [
+            el("dl", { class: "defs" }, [
+              el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。"]) }),
+              el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。"]) }),
+              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。"]) }),
+              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。"]) })
+            ]),
+            more(T, [
+              el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。"]) }),
+              el("p", { class: "small", text: T(["Cryo-electron microscopy (cryo-EM) can image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) は、肉眼では見えない1分子のタンパク質を画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 能為單一蛋白質分子造影，這是肉眼無法觀察到的。"]) })
+            ])
+          ]
+        };
+      }
     }
   });
 })();
