@@ -111,7 +111,7 @@
       var NAR = window.innerWidth < 640;
       var m = MODELS[0], temp = 37, ph = 7, lock = 1, shown = 1, timer, tick = 0, reduced = REDUCED();
 
-      var intro = el("p", { class: "small", text: T(["These three models are illustrative, not measured data for real proteins. Different proteins have different optimum conditions: choose a model, then move the sliders.", "この3つは説明用のモデルで、実在のタンパク質の測定値ではありません。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這三個都是示意模型，並非真實蛋白質的量度數據。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。", "이 세 모델은 설명을 위한 것이며, 실제 단백질의 측정 자료가 아닙니다. 단백질마다 최적 조건이 다릅니다. 모델을 고른 다음 슬라이더를 움직여 보세요."]) });
+      var intro = el("p", { class: "small", text: T(["These three models are illustrative, not measured data for real proteins. Different proteins have different optimum conditions: choose a model, then move the sliders.", "この3つは説明用のモデルで、実在のタンパク質の測定値ではありません。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這三個都是示意模型，並非真實蛋白質的量度數據。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。", "이 세 모델은 설명을 위한 것이며, 실제 단백질의 측정 자료가 아니다. 단백질마다 최적 조건이 다르다. 모델을 고른 다음 슬라이더를 움직여 보시오."]) });
       var mb = MODELS.map(function (md, i) {
         var b = el("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", title: T(md.n), text: T(SHORT[i]) });
         b.addEventListener("click", function () { setModel(i); });
@@ -153,8 +153,8 @@
       rb.addEventListener("click", function () { lock = 1; temp = m.To; ph = m.pH; tI.value = temp; pI.value = ph; update(); });
       var why = el("div", { class: "panel", "aria-live": "polite", style: NAR ? "" : "min-height:5em" });
       var defn = el("div", { class: "panel" }, [
-        el("p", {}, [el("strong", { text: T(["Denaturation ", "変性 (denaturation) ", "變性 (denaturation) ", "변성(denaturation)"]) }), T(["is a change in the 3-D shape (conformation) of a protein, so it can no longer do its job.", "とは、タンパク質の立体的な形 (conformation) が変わり、はたらきを果たせなくなることです。", "是蛋白質立體形狀 (conformation) 的改變，令它不能再發揮功能。", "은 단백질의 3차원 모양(conformation)이 바뀌어 더는 제 기능을 할 수 없게 되는 것입니다."])]),
-        el("p", { text: T(["The peptide bonds are NOT broken: the amino acid sequence (primary structure) stays the same. Denaturation is usually permanent.", "ペプチド結合は切れません。アミノ酸配列（一次構造）は変わりません。変性はふつう元に戻りません。", "肽鍵「不會」斷開：氨基酸序列（一級結構）不變。變性通常是永久的。", "펩타이드 결합은 끊어지지 않습니다. 아미노산 서열(1차 구조)은 그대로입니다. 변성은 대개 되돌릴 수 없습니다."]) })
+        el("p", {}, [el("strong", { text: T(["Denaturation ", "変性 (denaturation) ", "變性 (denaturation) ", "변성(denaturation)"]) }), T(["is a change in the 3-D shape (conformation) of a protein, so it can no longer do its job.", "とは、タンパク質の立体的な形 (conformation) が変わり、はたらきを果たせなくなることです。", "是蛋白質立體形狀 (conformation) 的改變，令它不能再發揮功能。", "은 단백질의 3차원 모양(conformation)이 바뀌어 더는 제 기능을 할 수 없게 되는 것이다."])]),
+        el("p", { text: T(["The peptide bonds are NOT broken: the amino acid sequence (primary structure) stays the same. Denaturation is usually permanent.", "ペプチド結合は切れません。アミノ酸配列（一次構造）は変わりません。変性はふつう元に戻りません。", "肽鍵「不會」斷開：氨基酸序列（一級結構）不變。變性通常是永久的。", "펩타이드 결합은 끊어지지 않는다. 아미노산 서열(1차 구조)은 그대로이다. 변성은 대개 되돌릴 수 없다."]) })
       ]);
       var EXAMTXT = [
         "Denaturation = loss of 3-D shape (conformation) and so of function. Heat increases vibration and breaks weak bonds; extreme pH changes R-group charges (H⁺ gained or lost), breaking ionic and hydrogen bonds. Peptide bonds stay intact. Usually permanent.",
@@ -189,7 +189,7 @@
         cur = target();
         if (cur.f < 0.5) lock = Math.min(lock, cur.f);
         tI._v.textContent = temp + " °C"; pI._v.textContent = "pH " + ph;
-        optNote.textContent = T(m.n) + ". " + T(["Illustrative optimum for this model: about " + m.To + " °C and pH " + m.pH + ". Other proteins differ.", "このモデルの最適条件(例): 約 " + m.To + " °C、pH " + m.pH + "。他のタンパク質では異なります。", "此模型的示例最適條件：約 " + m.To + " °C、pH " + m.pH + "。其他蛋白質並不相同。", "이 모델의 예시 최적 조건: 약 " + m.To + " °C, pH " + m.pH + ". 다른 단백질은 다릅니다."]);
+        optNote.textContent = T(m.n) + ". " + T(["Illustrative optimum for this model: about " + m.To + " °C and pH " + m.pH + ". Other proteins differ.", "このモデルの最適条件(例): 約 " + m.To + " °C、pH " + m.pH + "。他のタンパク質では異なります。", "此模型的示例最適條件：約 " + m.To + " °C、pH " + m.pH + "。其他蛋白質並不相同。", "이 모델의 예시 최적 조건: 약 " + m.To + " °C, pH " + m.pH + ". 다른 단백질은 다르다."]);
         var f = Math.min(cur.f, lock);
         var cls = f > 0.8 ? "good" : f > 0.4 ? "mid" : "bad";
         var txt = f > 0.8 ? T(["Folded, functional", "折りたたまれ、機能する", "已摺疊，有功能", "접힘, 기능함"]) : f > 0.4 ? T(["Partly unfolded, function reduced", "一部ほどけ、機能低下", "部分解開，功能下降", "일부 풀림, 기능 저하"]) : T(["Denatured: shape and function lost", "変性: 形もはたらきも失われた", "已變性：失去形狀和功能", "변성됨: 모양과 기능을 잃음"]);
@@ -200,11 +200,11 @@
         st.appendChild(el("span", { text: T(["Peptide bonds intact ✔", "ペプチド結合は無傷 ✔", "肽鍵完整 ✔", "펩타이드 결합은 온전함 ✔"]) }));
         meter.firstChild.style.width = Math.round(f * 100) + "%";
         meter.firstChild.style.background = "var(" + (f > .8 ? "--k-good" : f > .4 ? "--k-ds" : "--k-bad") + ")";
-        lockEl.textContent = (lock < 0.5 && cur.f > lock + 0.15) ? T(["The protein stays denatured even though conditions are back to normal: denaturation is usually permanent.", "条件が元に戻っても変性したままです。変性はふつう不可逆です。", "即使條件回復正常，蛋白質仍保持變性狀態：變性通常是永久的。", "조건이 정상으로 돌아와도 단백질은 변성된 상태로 남아 있습니다. 변성은 대개 되돌릴 수 없습니다."]) : "";
+        lockEl.textContent = (lock < 0.5 && cur.f > lock + 0.15) ? T(["The protein stays denatured even though conditions are back to normal: denaturation is usually permanent.", "条件が元に戻っても変性したままです。変性はふつう不可逆です。", "即使條件回復正常，蛋白質仍保持變性狀態：變性通常是永久的。", "조건이 정상으로 돌아와도 단백질은 변성된 상태로 남아 있다. 변성은 대개 되돌릴 수 없다."]) : "";
         var ps = [];
-        if (cur.fT < 0.85) ps.push(T(["High temperature makes the molecule vibrate more. This breaks the weak bonds (hydrogen bonds, ionic bonds, hydrophobic interactions), so the shape changes.", "高温では分子の振動が激しくなり、弱い結合（水素結合、イオン結合、疎水性相互作用）が切れて形が変わります。", "高溫令分子振動加劇，弱鍵（氫鍵、離子鍵、疏水相互作用）斷開，形狀因而改變。", "높은 온도에서는 분자가 더 많이 진동합니다. 이 때문에 약한 결합(수소 결합, 이온 결합, 소수성 상호 작용)이 끊어져 모양이 바뀝니다."]));
-        if (cur.fP < 0.85) ps.push(T(["pH far from the optimum changes the charges on R-groups (they gain or lose H⁺). Ionic bonds and hydrogen bonds are disrupted, so the shape changes.", "最適から大きく離れた pH は R基の電荷 (H⁺ の授受) を変えます。イオン結合と水素結合が乱され、形が変わります。", "遠離最適值的 pH 會改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵，形狀因而改變。", "최적 pH에서 멀리 벗어나면 R기의 전하가 달라집니다(H⁺를 얻거나 잃음). 이온 결합과 수소 결합이 깨져 모양이 바뀝니다."]));
-        if (!ps.length) ps.push(temp < m.To - 20 ? T(["Cold: the molecules move slowly, but the shape is not denatured.", "低温: 分子の動きは遅くなりますが、変性はしません。", "低溫：分子移動緩慢，但並沒有變性。", "낮은 온도: 분자의 움직임은 느려지지만 모양은 변성되지 않습니다."]) : T(["Conditions are near this protein's optimum, so the weak bonds hold the shape.", "条件がこのタンパク質の最適に近いので、弱い結合が形を保ちます。", "條件接近此蛋白質的最適值，弱鍵能維持形狀。", "조건이 이 단백질의 최적 조건에 가까워서 약한 결합이 모양을 유지합니다."]));
+        if (cur.fT < 0.85) ps.push(T(["High temperature makes the molecule vibrate more. This breaks the weak bonds (hydrogen bonds, ionic bonds, hydrophobic interactions), so the shape changes.", "高温では分子の振動が激しくなり、弱い結合（水素結合、イオン結合、疎水性相互作用）が切れて形が変わります。", "高溫令分子振動加劇，弱鍵（氫鍵、離子鍵、疏水相互作用）斷開，形狀因而改變。", "높은 온도에서는 분자가 더 많이 진동한다. 이 때문에 약한 결합(수소 결합, 이온 결합, 소수성 상호 작용)이 끊어져 모양이 바뀐다."]));
+        if (cur.fP < 0.85) ps.push(T(["pH far from the optimum changes the charges on R-groups (they gain or lose H⁺). Ionic bonds and hydrogen bonds are disrupted, so the shape changes.", "最適から大きく離れた pH は R基の電荷 (H⁺ の授受) を変えます。イオン結合と水素結合が乱され、形が変わります。", "遠離最適值的 pH 會改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵，形狀因而改變。", "최적 pH에서 멀리 벗어나면 R기의 전하가 달라진다(H⁺를 얻거나 잃음). 이온 결합과 수소 결합이 깨져 모양이 바뀐다."]));
+        if (!ps.length) ps.push(temp < m.To - 20 ? T(["Cold: the molecules move slowly, but the shape is not denatured.", "低温: 分子の動きは遅くなりますが、変性はしません。", "低溫：分子移動緩慢，但並沒有變性。", "낮은 온도: 분자의 움직임은 느려지지만 모양은 변성되지 않는다."]) : T(["Conditions are near this protein's optimum, so the weak bonds hold the shape.", "条件がこのタンパク質の最適に近いので、弱い結合が形を保ちます。", "條件接近此蛋白質的最適值，弱鍵能維持形狀。", "조건이 이 단백질의 최적 조건에 가까워서 약한 결합이 모양을 유지한다."]));
         why.innerHTML = ""; ps.forEach(function (t) { why.appendChild(el("p", { text: t })); });
         if (reduced) { shown = f; draw(); } else if (!timer) loop();
       }

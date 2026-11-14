@@ -175,7 +175,7 @@
           var bt = el("button", { type: "button", text: T(o[1]) });
           bt.addEventListener("click", function () {
             if (o[0] === correct) { store[p.id] = 1; render(); }
-            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite: think about its structure and job.", "惜しい。構造とはたらきを考えてみましょう。", "不太對：想想它的結構和功能。", "아쉽네요. 구조와 하는 일을 생각해 보세요."]); }
+            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite: think about its structure and job.", "惜しい。構造とはたらきを考えてみましょう。", "不太對：想想它的結構和功能。", "아쉽다. 구조와 하는 일을 생각해 보시오."]); }
           });
           return bt;
         });
@@ -202,13 +202,13 @@
         var done = shapeOK[p.id] && conjOK[p.id];
         var body = [];
         if (!quiz || done) {
-          if (quiz) body.push(el("p", { class: "fb good", text: "✔ " + T(["Both correct. Here are the facts:", "両方正解。詳しい情報:", "兩項皆正確。以下是資料：", "둘 다 맞았습니다. 사실은 다음과 같습니다:"]) }));
+          if (quiz) body.push(el("p", { class: "fb good", text: "✔ " + T(["Both correct. Here are the facts:", "両方正解。詳しい情報:", "兩項皆正確。以下是資料：", "둘 다 맞았다. 사실은 다음과 같다:"]) }));
           body.push(factsOf(p));
         } else {
           if (shapeOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(["Shape: ", "形: ", "形狀：", "모양: "]) + T(p.shape === "glob" ? ["globular", "球状 (globular)", "球狀 (globular)", "구형(globular)"] : ["fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형(fibrous)"]) }));
-          else body.push(pair(p, ["Is it globular or fibrous?", "球状か繊維状か?", "是球狀還是纖維狀？", "구형일까요, 섬유형일까요?"], ["glob", ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]], ["fib", ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]], p.shape, shapeOK));
+          else body.push(pair(p, ["Is it globular or fibrous?", "球状か繊維状か?", "是球狀還是纖維狀？", "구형인가, 섬유형인가?"], ["glob", ["Globular", "球状 (globular)", "球狀 (globular)", "구형"]], ["fib", ["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]], p.shape, shapeOK));
           if (conjOK[p.id]) body.push(el("p", { class: "fb good", text: "✔ " + T(p.conj ? ["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"] : ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]) }));
-          else body.push(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是結合還是非結合？", "복합 단백질일까요, 비복합 단백질일까요?"], [true, ["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]], p.conj, conjOK));
+          else body.push(pair(p, ["Conjugated or non-conjugated?", "複合か非複合か?", "是結合還是非結合？", "복합 단백질인가, 비복합 단백질인가?"], [true, ["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]], [false, ["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]], p.conj, conjOK));
         }
         return {
           stage: [svg, el("p", { class: "small", style: "text-align:center", text: T(["Schematic diagram", "模式図", "示意圖", "모식도"]) })],
@@ -226,16 +226,16 @@
           panel: [
             NAR ? null : defs(),
             more(T, [NAR ? defs() : null,
-              el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。", "모양과 기능: 구형이어서 인슐린은 물에 녹아 혈액을 타고 이동할 수 있고, 콜라젠의 3중 나선은 높은 인장 강도를 주며 물에 녹지 않는 성질은 구조를 이루는 역할에 알맞습니다."]) }),
-              el("p", { class: "small", text: T(["Cryo-electron microscopy (cryo-EM) can image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) は、肉眼では見えない1分子のタンパク質を画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 能為單一蛋白質分子造影，這是肉眼無法觀察到的。", "극저온 전자 현미경(cryo-EM)을 사용하면 인간의 감각으로는 볼 수 없는 단백질 분자 하나하나를 영상으로 볼 수 있습니다."]) })
+              el("p", { class: "small", text: T(["Form and function: a globular shape lets insulin dissolve and travel in the blood; collagen's triple helix gives it high tensile strength and its insolubility suits a structural role.", "形とはたらき: 球状なのでインスリンは血液に溶けて運ばれる。コラーゲンは三重らせんで引っ張り強度が高く、水に溶けないので構造の役割に向く。", "形狀與功能：球狀令胰島素能溶解並在血液中運送；膠原蛋白的三股螺旋令它抗拉強度高，不溶於水則適合結構功能。", "모양과 기능: 구형이어서 인슐린은 물에 녹아 혈액을 타고 이동할 수 있고, 콜라젠의 3중 나선은 높은 인장 강도를 주며 물에 녹지 않는 성질은 구조를 이루는 역할에 알맞다."]) }),
+              el("p", { class: "small", text: T(["Cryo-electron microscopy (cryo-EM) can image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) は、肉眼では見えない1分子のタンパク質を画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 能為單一蛋白質分子造影，這是肉眼無法觀察到的。", "극저온 전자 현미경(cryo-EM)을 사용하면 인간의 감각으로는 볼 수 없는 단백질 분자 하나하나를 영상으로 볼 수 있다."]) })
             ])
           ]
         };
         function defs() { return el("dl", { class: "defs" }, [
-              el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)", "구형"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。", "작고 둥근 모양으로 접혀 있고, 대개 물에 녹으며, 호르몬·운반·효소처럼 화학적인 일을 하는 경우가 많습니다."]) }),
-              el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。", "길쭉한 가닥이나 밧줄 모양이고, 대개 물에 녹지 않으며, 강도를 주는(구조 형성) 경우가 많습니다."]) }),
-              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。", "폴리펩타이드 사슬로만 이루어져 있습니다."]) }),
-              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。", "폴리펩타이드가 아닌 부분인 보결 분자단(예: 헴)도 들어 있습니다."]) })
+              el("dt", { text: T(["Globular", "球状 (globular)", "球狀 (globular)", "구형"]) }), el("dd", { text: T(["Folded into a compact, roughly round shape; usually soluble in water; often has a chemical job (hormone, transport, enzyme).", "コンパクトでほぼ丸い形に折りたたまれる。ふつう水に溶ける。ホルモン、輸送、酵素など化学的なはたらきをすることが多い。", "摺疊成緊密、大致圓形的形狀；通常可溶於水；常執行化學功能（激素、運輸、酶）。", "작고 둥근 모양으로 접혀 있고, 대개 물에 녹으며, 호르몬·운반·효소처럼 화학적인 일을 하는 경우가 많다."]) }),
+              el("dt", { text: T(["Fibrous", "繊維状 (fibrous)", "纖維狀 (fibrous)", "섬유형"]) }), el("dd", { text: T(["Long strands or ropes; usually insoluble in water; often gives strength (structural).", "長いひも状やロープ状。ふつう水に溶けない。強度を与える（構造）ことが多い。", "長條或繩索狀；通常不溶於水；常提供強度（結構功能）。", "길쭉한 가닥이나 밧줄 모양이고, 대개 물에 녹지 않으며, 강도를 주는(구조 형성) 경우가 많다."]) }),
+              el("dt", { text: T(["Non-conjugated", "非複合 (non-conjugated)", "非結合 (non-conjugated)", "비복합 단백질"]) }), el("dd", { text: T(["Made of polypeptide chain(s) only.", "ポリペプチド鎖だけでできている。", "只由多肽鏈組成。", "폴리펩타이드 사슬로만 이루어져 있다."]) }),
+              el("dt", { text: T(["Conjugated", "複合 (conjugated)", "結合 (conjugated)", "복합 단백질(conjugated)"]) }), el("dd", { text: T(["Also contains a non-polypeptide part, a prosthetic group (e.g. haem).", "ポリペプチド以外の部分、補欠分子族 (prosthetic group：例 ヘム) ももつ。", "還含有非多肽部分，即輔基 (prosthetic group，例如血紅素)。", "폴리펩타이드가 아닌 부분인 보결 분자단(예: 헴)도 들어 있다."]) })
         ]); }
       }
     }

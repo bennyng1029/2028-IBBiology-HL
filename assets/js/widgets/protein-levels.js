@@ -256,7 +256,7 @@
           panel: [
             NAR ? null : P(["The order of amino acids in a polypeptide, joined by peptide bonds. Tap a bead, then change its R-group type to see what happens to the folded shape.",
               "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
-              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서입니다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보세요."]),
+              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서이다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보시오."]),
             el("strong", { text: T(["Bead #" + (sel + 1) + " is " + T(CN[seq[sel]]) + ". Change it to:", "#" + (sel + 1) + " 番は " + T(CN[seq[sel]]) + " です。次に変更:", "第 " + (sel + 1) + " 顆為 " + T(CN[seq[sel]]) + "。改為："]) }),
             el("div", { class: "opts" }, ["N", "P", "A", "B"].map(function (k) {
               var bt = el("button", { type: "button", "aria-pressed": seq[sel] === k ? "true" : "false", text: T(CS[k]) });
@@ -267,14 +267,14 @@
             more(T, [
               NAR ? P(["The order of amino acids in a polypeptide, joined by peptide bonds. Tap a bead, then change its R-group type to see what happens to the folded shape.",
               "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
-              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서입니다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보세요."]) : null,
-              PS(["Each bead is one amino acid, coloured by the type of its R-group.", "丸は1つのアミノ酸で、R基の種類で色分けしています。", "每顆珠代表一個氨基酸，按 R 基類型著色。", "구슬 하나가 아미노산 하나이며, R기의 유형에 따라 색이 다릅니다."]),
+              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서이다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보시오."]) : null,
+              PS(["Each bead is one amino acid, coloured by the type of its R-group.", "丸は1つのアミノ酸で、R基の種類で色分けしています。", "每顆珠代表一個氨基酸，按 R 基類型著色。", "구슬 하나가 아미노산 하나이며, R기의 유형에 따라 색이 다르다."]),
               PS(["Level check: that amino acids can be joined in any order is core for SL and HL (B1.2.4). The term primary structure and how the sequence decides the 3-D shape (B1.2.7) are AHL.",
                 "レベルの確認: アミノ酸がどんな順序でもつながることは SL・HL 共通です (B1.2.4)。一次構造という用語と、配列が立体構造を決めるしくみ (B1.2.7) は AHL です。",
-                "程度提示：氨基酸可按任何次序連接，屬 SL 和 HL 共同內容 (B1.2.4)。「一級結構」這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬 AHL。", "수준 확인: 아미노산이 어떤 순서로든 연결될 수 있다는 것은 SL과 HL 모두의 핵심 내용입니다(B1.2.4). 1차 구조(primary structure)라는 용어와, 서열이 3차원 모양을 결정하는 방식(B1.2.7)은 AHL입니다."]),
+                "程度提示：氨基酸可按任何次序連接，屬 SL 和 HL 共同內容 (B1.2.4)。「一級結構」這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬 AHL。", "수준 확인: 아미노산이 어떤 순서로든 연결될 수 있다는 것은 SL과 HL 모두의 핵심 내용이다(B1.2.4). 1차 구조(primary structure)라는 용어와, 서열이 3차원 모양을 결정하는 방식(B1.2.7)은 AHL이다."]),
               PS(["Simplified model: a 2-D lattice in which hydrophobic beads cluster together and + and − beads attract. Real proteins fold in 3-D and are far more complex. The key idea is real: the sequence of amino acids, and the position of each one, determines the 3-D shape, so a protein folds into the same precise shape every time.",
                 "簡略化したモデルです。2次元の格子上で、疎水性の丸が集まり、+ と − の丸が引きあいます。実際のタンパク質は3次元で折りたたまれ、はるかに複雑です。ただし要点は本物です。アミノ酸の配列と各アミノ酸の位置が3次元構造を決めるので、タンパク質は毎回同じ正確な形に折りたたまれます。",
-                "簡化模型：在二維格子中，疏水的珠會聚在一起，+ 和 − 的珠相互吸引。真正的蛋白質在三維空間摺疊，複雜得多。但核心概念是真實的：氨基酸的序列及每個氨基酸的位置決定三維形狀，所以蛋白質每次都摺疊成相同而精確的形狀。", "단순화한 모델: 소수성 구슬이 서로 모이고 + 구슬과 − 구슬이 서로 끌어당기는 2차원 격자입니다. 실제 단백질은 3차원으로 접히며 훨씬 복잡합니다. 핵심 개념은 실제와 같습니다. 아미노산의 서열과 각 아미노산의 위치가 3차원 모양을 결정하므로, 단백질은 매번 똑같은 정확한 모양으로 접힙니다."])
+                "簡化模型：在二維格子中，疏水的珠會聚在一起，+ 和 − 的珠相互吸引。真正的蛋白質在三維空間摺疊，複雜得多。但核心概念是真實的：氨基酸的序列及每個氨基酸的位置決定三維形狀，所以蛋白質每次都摺疊成相同而精確的形狀。", "단순화한 모델: 소수성 구슬이 서로 모이고 + 구슬과 − 구슬이 서로 끌어당기는 2차원 격자이다. 실제 단백질은 3차원으로 접히며 훨씬 복잡하다. 핵심 개념은 실제와 같다. 아미노산의 서열과 각 아미노산의 위치가 3차원 모양을 결정하므로, 단백질은 매번 똑같은 정확한 모양으로 접힌다."])
             ])
           ]
         };
@@ -300,11 +300,11 @@
           panel: [
             P(["Parts of the chain coil into an α-helix or pleat into a β-pleated sheet. Both are held in shape by hydrogen bonds between the C=O of one peptide link and the N–H of another, at regular positions along the backbone. The R-groups are not involved.",
               "鎖の一部は α-ヘリックス (alpha helix) にコイル状に巻くか、βシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が骨格に沿って規則的な位置に生じて保たれます。R基は関与しません。",
-              "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。", "사슬의 일부는 α 나선(α-helix)으로 꼬이거나 β 병풍 구조(β-pleated sheet)로 주름집니다. 두 구조 모두 한 펩타이드 결합의 C=O와 다른 펩타이드 결합의 N–H 사이에서 뼈대를 따라 일정한 간격으로 생기는 수소 결합으로 모양이 유지됩니다. R기는 관여하지 않습니다."]),
+              "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。", "사슬의 일부는 α 나선(α-helix)으로 꼬이거나 β 병풍 구조(β-pleated sheet)로 주름진다. 두 구조 모두 한 펩타이드 결합의 C=O와 다른 펩타이드 결합의 N–H 사이에서 뼈대를 따라 일정한 간격으로 생기는 수소 결합으로 모양이 유지된다. R기는 관여하지 않는다."]),
             el("div", { class: "bar", style: "margin:0" }, bs),
             PS(sub === "helix" ?
-              ["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 骨格がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：骨架盤繞，氫鍵有規律地連接相鄰的每一圈。", "모식적인 옆모습: 뼈대가 꼬여 있고, 수소 결합이 각 회전을 일정한 간격으로 다음 회전과 연결합니다."] :
-              ["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 骨格の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：骨架相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。", "모식도: 이웃한 뼈대 부분이 지그재그(주름) 모양으로 나란히 놓여 있고, 그 사이를 일정한 위치마다 수소 결합이 연결합니다."])
+              ["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 骨格がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：骨架盤繞，氫鍵有規律地連接相鄰的每一圈。", "모식적인 옆모습: 뼈대가 꼬여 있고, 수소 결합이 각 회전을 일정한 간격으로 다음 회전과 연결한다."] :
+              ["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 骨格の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：骨架相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。", "모식도: 이웃한 뼈대 부분이 지그재그(주름) 모양으로 나란히 놓여 있고, 그 사이를 일정한 위치마다 수소 결합이 연결한다."])
           ]
         };
       }
@@ -357,9 +357,9 @@
           panel: [
             P(["The overall 3-D shape of one whole polypeptide. The chain folds up because of interactions between R-groups: hydrogen bonds, ionic bonds, disulfide bonds and hydrophobic interactions (see the protein folding widget). In a water-soluble protein, hydrophobic R-groups end up clustered together in the core.",
               "1本のポリペプチド全体の立体的な形です。R基どうしの相互作用（水素結合、イオン結合、ジスルフィド結合、疎水性相互作用）で鎖が折りたたまれます（タンパク質の折りたたみの教材を参照）。水に溶けるタンパク質では、疎水性の R基は核に集まります。",
-              "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。在水溶性蛋白質中，疏水的 R 基會聚集在核心。", "폴리펩타이드 하나 전체의 3차원 모양입니다. 사슬은 R기 사이의 상호 작용, 즉 수소 결합, 이온 결합, 이황화 결합, 소수성 상호 작용 때문에 접힙니다(단백질 접힘 위젯 참조). 물에 녹는 단백질에서는 소수성 R기가 중심부에 모입니다."]),
-            PS(same() ? ["Showing the original sequence. Edit it in the Primary tab to see the shape change (simplified model).", "元の配列を表示中。一次構造のタブで編集すると形が変わります（簡略化モデル）。", "顯示原本序列。在「一級結構」分頁修改，形狀便會改變（簡化模型）。", "원래 서열을 보여 주고 있습니다. 1차 탭에서 서열을 수정하면 모양이 바뀌는 것을 볼 수 있습니다(단순화한 모델)."] :
-              ["Showing your edited sequence: a different sequence gives a different shape (simplified model).", "編集した配列を表示中。配列が違えば形も変わります（簡略化モデル）。", "顯示你修改後的序列：序列不同，形狀便不同（簡化模型）。", "수정한 서열을 보여 주고 있습니다. 서열이 다르면 모양도 달라집니다(단순화한 모델)."])
+              "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。在水溶性蛋白質中，疏水的 R 基會聚集在核心。", "폴리펩타이드 하나 전체의 3차원 모양이다. 사슬은 R기 사이의 상호 작용, 즉 수소 결합, 이온 결합, 이황화 결합, 소수성 상호 작용 때문에 접힌다(단백질 접힘 위젯 참조). 물에 녹는 단백질에서는 소수성 R기가 중심부에 모인다."]),
+            PS(same() ? ["Showing the original sequence. Edit it in the Primary tab to see the shape change (simplified model).", "元の配列を表示中。一次構造のタブで編集すると形が変わります（簡略化モデル）。", "顯示原本序列。在「一級結構」分頁修改，形狀便會改變（簡化模型）。", "원래 서열을 보여 주고 있다. 1차 탭에서 서열을 수정하면 모양이 바뀌는 것을 볼 수 있다(단순화한 모델)."] :
+              ["Showing your edited sequence: a different sequence gives a different shape (simplified model).", "編集した配列を表示中。配列が違えば形も変わります（簡略化モデル）。", "顯示你修改後的序列：序列不同，形狀便不同（簡化模型）。", "수정한 서열을 보여 주고 있다. 서열이 다르면 모양도 달라진다(단순화한 모델)."])
           ]
         };
       }
@@ -383,10 +383,10 @@
           panel: [
             P(["Some proteins are made of two or more polypeptides assembled into one functional protein. Examples: insulin (2), collagen (3) and haemoglobin (4: two α and two β chains). A conjugated protein also has a non-polypeptide part (a prosthetic group), such as the haem in haemoglobin.",
               "2本以上のポリペプチドが集まって1つの機能するタンパク質になっているものがあります。例: インスリン (2本)、コラーゲン (3本)、ヘモグロビン (4本: α鎖2本とβ鎖2本)。複合タンパク質 (conjugated protein) には、ヘモグロビンのヘムのようにポリペプチド以外の部分 (prosthetic group) もあります。",
-              "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。綴合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。", "어떤 단백질은 둘 이상의 폴리펩타이드가 모여 기능을 하는 하나의 단백질이 됩니다. 예: 인슐린(2개), 콜라젠(3개), 헤모글로빈(4개: α 사슬 2개와 β 사슬 2개). 복합 단백질(conjugated protein)은 폴리펩타이드가 아닌 부분(보결 분자단, prosthetic group)도 가지며, 헤모글로빈의 헴(haem)이 그 예입니다."]),
+              "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。綴合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。", "어떤 단백질은 둘 이상의 폴리펩타이드가 모여 기능을 하는 하나의 단백질이 된다. 예: 인슐린(2개), 콜라젠(3개), 헤모글로빈(4개: α 사슬 2개와 β 사슬 2개). 복합 단백질(conjugated protein)은 폴리펩타이드가 아닌 부분(보결 분자단, prosthetic group)도 가지며, 헤모글로빈의 헴(haem)이 그 예이다."]),
             el("div", { class: "bar", style: "margin:0" }, bs),
-            PS(["Each coloured chain is one folded polypeptide. Together they form the quaternary structure. (Schematic: real subunits are not identical in every protein.)", "色分けした各鎖が折りたたまれた1本のポリペプチドで、全体が四次構造です。（模式図: 実際にはすべてのサブユニットが同じとは限りません。）", "每條顏色的鏈是一條摺疊了的多肽，合起來就是四級結構。（示意圖：實際上並非所有亞基都相同。）", "색이 다른 각 사슬이 접힌 폴리펩타이드 하나입니다. 이들이 함께 4차 구조(quaternary structure)를 이룹니다. (모식도: 실제 소단위가 모든 단백질에서 똑같은 것은 아닙니다.)"]),
-            more(T, [PS(["Cryogenic electron microscopy (cryo-EM) lets scientists image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) により、肉眼では見えない1分子のタンパク質も画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 令科學家能為單一蛋白質分子造影，這是肉眼無法觀察到的。", "극저온 전자 현미경(cryo-EM)을 사용하면 인간의 감각으로는 볼 수 없는 단백질 분자 하나하나를 영상으로 볼 수 있습니다."])])
+            PS(["Each coloured chain is one folded polypeptide. Together they form the quaternary structure. (Schematic: real subunits are not identical in every protein.)", "色分けした各鎖が折りたたまれた1本のポリペプチドで、全体が四次構造です。（模式図: 実際にはすべてのサブユニットが同じとは限りません。）", "每條顏色的鏈是一條摺疊了的多肽，合起來就是四級結構。（示意圖：實際上並非所有亞基都相同。）", "색이 다른 각 사슬이 접힌 폴리펩타이드 하나이다. 이들이 함께 4차 구조(quaternary structure)를 이룬다. (모식도: 실제 소단위가 모든 단백질에서 똑같은 것은 아니다.)"]),
+            more(T, [PS(["Cryogenic electron microscopy (cryo-EM) lets scientists image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) により、肉眼では見えない1分子のタンパク質も画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 令科學家能為單一蛋白質分子造影，這是肉眼無法觀察到的。", "극저온 전자 현미경(cryo-EM)을 사용하면 인간의 감각으로는 볼 수 없는 단백질 분자 하나하나를 영상으로 볼 수 있다."])])
           ]
         };
       }

@@ -94,51 +94,51 @@
       n: ["Amine group (–NH₂)", "アミノ基 (amine group, –NH₂)", "氨基 (amine group, –NH₂)", "아미노기(amine group, –NH₂)"],
       d: ["A nitrogen atom with two hydrogen atoms. It is basic: it can gain H⁺ to become –NH₃⁺. When a peptide bond forms, one of its hydrogen atoms is removed.",
         "窒素原子に水素原子が2個結合した基です。塩基性で、H⁺ を受け取って –NH₃⁺ になることができます。ペプチド結合ができるとき、この水素原子の1つが取り除かれます。",
-        "一個氮原子連接兩個氫原子。具鹼性，可接受 H⁺ 而變成 –NH₃⁺。形成肽鍵時，會除去其中一個氫原子。", "수소 원자 2개가 결합한 질소 원자입니다. 염기성이며 H⁺를 받아 –NH₃⁺가 될 수 있습니다. 펩타이드 결합(peptide bond)이 만들어질 때 이 수소 원자 중 하나가 떨어져 나갑니다."]
+        "一個氮原子連接兩個氫原子。具鹼性，可接受 H⁺ 而變成 –NH₃⁺。形成肽鍵時，會除去其中一個氫原子。", "수소 원자 2개가 결합한 질소 원자이다. 염기성이며 H⁺를 받아 –NH₃⁺가 될 수 있다. 펩타이드 결합(peptide bond)이 만들어질 때 이 수소 원자 중 하나가 떨어져 나간다."]
     },
     carboxyl: {
       n: ["Carboxyl group (–COOH)", "カルボキシ基 (carboxyl group, –COOH)", "羧基 (carboxyl group, –COOH)", "카복실기(carboxyl group, –COOH)"],
       d: ["A carbon atom with a double-bonded oxygen (=O) and an –OH group. It is acidic: it can lose H⁺ to become –COO⁻. When a peptide bond forms, its –OH is removed.",
         "炭素原子に二重結合の酸素 (=O) と –OH が結合した基です。酸性で、H⁺ を放出して –COO⁻ になることができます。ペプチド結合ができるとき、この –OH が取り除かれます。",
-        "一個碳原子連接雙鍵氧 (=O) 和 –OH 基。具酸性，可釋出 H⁺ 而變成 –COO⁻。形成肽鍵時，會除去其 –OH。", "이중 결합한 산소(=O)와 –OH기가 결합한 탄소 원자입니다. 산성이며 H⁺를 내놓아 –COO⁻가 될 수 있습니다. 펩타이드 결합이 만들어질 때 이 –OH가 떨어져 나갑니다."]
+        "一個碳原子連接雙鍵氧 (=O) 和 –OH 基。具酸性，可釋出 H⁺ 而變成 –COO⁻。形成肽鍵時，會除去其 –OH。", "이중 결합한 산소(=O)와 –OH기가 결합한 탄소 원자이다. 산성이며 H⁺를 내놓아 –COO⁻가 될 수 있다. 펩타이드 결합이 만들어질 때 이 –OH가 떨어져 나간다."]
     },
     h: {
       n: ["Hydrogen atom (H)", "水素原子 (hydrogen atom, H)", "氫原子 (hydrogen atom, H)", "수소 원자(hydrogen atom, H)"],
       d: ["A single hydrogen atom bonded to the alpha carbon. Every amino acid has one.",
         "α炭素に結合した水素原子1個です。どのアミノ酸にもあります。",
-        "連接在 α 碳上的一個氫原子。每種氨基酸都有。", "α 탄소에 결합한 수소 원자 1개입니다. 모든 아미노산에 있습니다."]
+        "連接在 α 碳上的一個氫原子。每種氨基酸都有。", "α 탄소에 결합한 수소 원자 1개이다. 모든 아미노산에 있다."]
     },
     r: {
       n: ["R-group (side chain)", "R基 (R-group, 側鎖)", "R 基 (R-group, 側鏈)", "R기(R-group, 곁사슬)"],
       d: ["The variable part. The 20 amino acids used to build proteins differ only in their R-groups. The chemistry of the R-group (hydrophobic or hydrophilic, charged or not) decides how an amino acid behaves in a polypeptide.",
         "アミノ酸ごとに異なる部分です。タンパク質をつくる20種類のアミノ酸は R基 だけが違います。R基の化学的性質（疎水性か親水性か、電荷をもつか）が、ポリペプチド中でのふるまいを決めます。",
-        "各氨基酸不同的部分。構成蛋白質的 20 種氨基酸只有 R 基不同。R 基的化學性質（疏水或親水、是否帶電荷）決定氨基酸在多肽中的表現。", "아미노산마다 다른 부분입니다. 단백질을 만드는 20가지 아미노산은 R기만 서로 다릅니다. R기의 화학적 성질(소수성인지 친수성인지, 전하를 띠는지 아닌지)이 폴리펩타이드에서 아미노산이 어떻게 행동하는지를 결정합니다."]
+        "各氨基酸不同的部分。構成蛋白質的 20 種氨基酸只有 R 基不同。R 基的化學性質（疏水或親水、是否帶電荷）決定氨基酸在多肽中的表現。", "아미노산마다 다른 부분이다. 단백질을 만드는 20가지 아미노산은 R기만 서로 다르다. R기의 화학적 성질(소수성인지 친수성인지, 전하를 띠는지 아닌지)이 폴리펩타이드에서 아미노산이 어떻게 행동하는지를 결정한다."]
     },
     alpha: {
       n: ["Alpha carbon (α carbon)", "α炭素 (alpha carbon)", "α 碳 (alpha carbon)", "α 탄소(alpha carbon)"],
       d: ["The central carbon atom. The amine group, the carboxyl group, the hydrogen atom and the R-group are all bonded to it.",
         "中心にある炭素原子です。アミノ基、カルボキシ基、水素原子、R基 がすべてこの炭素に結合しています。",
-        "位於中心的碳原子。氨基、羧基、氫原子和 R 基都連接在它上面。", "중심에 있는 탄소 원자입니다. 아미노기, 카복실기, 수소 원자, R기가 모두 이 탄소에 결합해 있습니다."]
+        "位於中心的碳原子。氨基、羧基、氫原子和 R 基都連接在它上面。", "중심에 있는 탄소 원자이다. 아미노기, 카복실기, 수소 원자, R기가 모두 이 탄소에 결합해 있다."]
     }
   };
 
   var CARDS = [
-    { f: "–CH<sub>3</sub>", c: "np", hint: ["Contains only carbon and hydrogen.", "炭素と水素だけでできています。", "只含碳和氫。", "탄소와 수소만 들어 있습니다."] },
-    { f: "–CH<sub>2</sub>–CH(CH<sub>3</sub>)<sub>2</sub>", c: "np", hint: ["A hydrocarbon chain (only C and H).", "炭化水素の鎖（C と H だけ）です。", "烴鏈（只含 C 和 H）。", "탄화수소 사슬(C와 H만 있음)입니다."] },
-    { f: "–CH<sub>2</sub>–OH", c: "pol", hint: ["Contains an –OH group.", "–OH 基を含みます。", "含有 –OH 基。", "–OH기가 들어 있습니다."] },
-    { f: "–CH(OH)–CH<sub>3</sub>", c: "pol", hint: ["Contains an –OH group on a short carbon chain.", "短い炭素鎖に –OH 基がついています。", "短碳鏈上有一個 –OH 基。", "짧은 탄소 사슬에 –OH기가 붙어 있습니다."] },
-    { f: "–CH<sub>2</sub>–COOH", c: "ac", hint: ["Contains a carboxyl group (–COOH).", "カルボキシ基 (–COOH) を含みます。", "含有羧基 (–COOH)。", "카복실기(–COOH)가 들어 있습니다."] },
-    { f: "–(CH<sub>2</sub>)<sub>4</sub>–NH<sub>2</sub>", c: "ba", hint: ["Contains an amine group (–NH₂).", "アミノ基 (–NH₂) を含みます。", "含有氨基 (–NH₂)。", "아미노기(–NH₂)가 들어 있습니다."] }
+    { f: "–CH<sub>3</sub>", c: "np", hint: ["Contains only carbon and hydrogen.", "炭素と水素だけでできています。", "只含碳和氫。", "탄소와 수소만 들어 있다."] },
+    { f: "–CH<sub>2</sub>–CH(CH<sub>3</sub>)<sub>2</sub>", c: "np", hint: ["A hydrocarbon chain (only C and H).", "炭化水素の鎖（C と H だけ）です。", "烴鏈（只含 C 和 H）。", "탄화수소 사슬(C와 H만 있음)이다."] },
+    { f: "–CH<sub>2</sub>–OH", c: "pol", hint: ["Contains an –OH group.", "–OH 基を含みます。", "含有 –OH 基。", "–OH기가 들어 있다."] },
+    { f: "–CH(OH)–CH<sub>3</sub>", c: "pol", hint: ["Contains an –OH group on a short carbon chain.", "短い炭素鎖に –OH 基がついています。", "短碳鏈上有一個 –OH 基。", "짧은 탄소 사슬에 –OH기가 붙어 있다."] },
+    { f: "–CH<sub>2</sub>–COOH", c: "ac", hint: ["Contains a carboxyl group (–COOH).", "カルボキシ基 (–COOH) を含みます。", "含有羧基 (–COOH)。", "카복실기(–COOH)가 들어 있다."] },
+    { f: "–(CH<sub>2</sub>)<sub>4</sub>–NH<sub>2</sub>", c: "ba", hint: ["Contains an amine group (–NH₂).", "アミノ基 (–NH₂) を含みます。", "含有氨基 (–NH₂)。", "아미노기(–NH₂)가 들어 있다."] }
   ];
   var CAT = {
     np: { col: "--k-np", n: ["Non-polar", "非極性", "非極性", "비극성"],
-      fb: ["Only C–H bonds, which are non-polar, so it does not attract water: hydrophobic.", "C–H 結合だけで極性がなく、水とひきあいません。疎水性 (hydrophobic) です。", "只有 C–H 鍵，沒有極性，不會吸引水：疏水 (hydrophobic)。", "C–H 결합만 있어 극성이 없으므로 물을 끌어당기지 않습니다. 소수성(hydrophobic)입니다."] },
+      fb: ["Only C–H bonds, which are non-polar, so it does not attract water: hydrophobic.", "C–H 結合だけで極性がなく、水とひきあいません。疎水性 (hydrophobic) です。", "只有 C–H 鍵，沒有極性，不會吸引水：疏水 (hydrophobic)。", "C–H 결합만 있어 극성이 없으므로 물을 끌어당기지 않는다. 소수성(hydrophobic)이다."] },
     pol: { col: "--k-pol", n: ["Polar", "極性", "極性", "극성"],
-      fb: ["The –OH group is polar (partial charges) so it attracts water, but it carries no full charge: polar, hydrophilic.", "–OH 基は極性（部分電荷）をもち水とひきあいますが、完全な電荷はもちません。極性 (polar)・親水性 (hydrophilic) です。", "–OH 基有極性（部分電荷），會吸引水，但不帶完整電荷：極性 (polar)、親水 (hydrophilic)。", "–OH기는 극성(부분 전하)이 있어 물을 끌어당기지만, 완전한 전하는 띠지 않습니다. 극성(polar)이고 친수성(hydrophilic)입니다."] },
+      fb: ["The –OH group is polar (partial charges) so it attracts water, but it carries no full charge: polar, hydrophilic.", "–OH 基は極性（部分電荷）をもち水とひきあいますが、完全な電荷はもちません。極性 (polar)・親水性 (hydrophilic) です。", "–OH 基有極性（部分電荷），會吸引水，但不帶完整電荷：極性 (polar)、親水 (hydrophilic)。", "–OH기는 극성(부분 전하)이 있어 물을 끌어당기지만, 완전한 전하는 띠지 않는다. 극성(polar)이고 친수성(hydrophilic)이다."] },
     ac: { col: "--k-ac", n: ["Acidic (−)", "酸性 (−)", "酸性 (−)", "산성 (−)"],
-      fb: ["–COOH can lose H⁺ and become –COO⁻, so it is charged (negative): hydrophilic, acidic.", "–COOH は H⁺ を放出して –COO⁻ になるので、負に帯電します。親水性で酸性 (acidic) です。", "–COOH 可釋出 H⁺ 變成 –COO⁻，帶負電：親水，酸性 (acidic)。", "–COOH는 H⁺를 내놓아 –COO⁻가 될 수 있으므로 (−)전하를 띱니다. 친수성이고 산성(acidic)입니다."] },
+      fb: ["–COOH can lose H⁺ and become –COO⁻, so it is charged (negative): hydrophilic, acidic.", "–COOH は H⁺ を放出して –COO⁻ になるので、負に帯電します。親水性で酸性 (acidic) です。", "–COOH 可釋出 H⁺ 變成 –COO⁻，帶負電：親水，酸性 (acidic)。", "–COOH는 H⁺를 내놓아 –COO⁻가 될 수 있으므로 (−)전하를 띤다. 친수성이고 산성(acidic)이다."] },
     ba: { col: "--k-ba", n: ["Basic (+)", "塩基性 (+)", "鹼性 (+)", "염기성 (+)"],
-      fb: ["–NH₂ can gain H⁺ and become –NH₃⁺, so it is charged (positive): hydrophilic, basic.", "–NH₂ は H⁺ を受け取って –NH₃⁺ になるので、正に帯電します。親水性で塩基性 (basic) です。", "–NH₂ 可接受 H⁺ 變成 –NH₃⁺，帶正電：親水，鹼性 (basic)。", "–NH₂는 H⁺를 받아 –NH₃⁺가 될 수 있으므로 (+)전하를 띱니다. 친수성이고 염기성(basic)입니다."] }
+      fb: ["–NH₂ can gain H⁺ and become –NH₃⁺, so it is charged (positive): hydrophilic, basic.", "–NH₂ は H⁺ を受け取って –NH₃⁺ になるので、正に帯電します。親水性で塩基性 (basic) です。", "–NH₂ 可接受 H⁺ 變成 –NH₃⁺，帶正電：親水，鹼性 (basic)。", "–NH₂는 H⁺를 받아 –NH₃⁺가 될 수 있으므로 (+)전하를 띤다. 친수성이고 염기성(basic)이다."] }
   };
   var ORDER = ["np", "pol", "ac", "ba"];
 
@@ -231,13 +231,13 @@
             legendItem("i", "var(--k-H)", T(["hydrogen", "水素 (H)", "氫 (H)", "수소"]))
           ])]),
           el("div", { class: "wl-panel" }, [
-            el("p", { class: "small", text: T(["Tap each part of the molecule to see what it is.", "分子の各部分をタップして確認しましょう。", "點選分子的各部分，看看它是甚麼。", "분자의 각 부분을 눌러 무엇인지 확인해 보세요."]) }),
+            el("p", { class: "small", text: T(["Tap each part of the molecule to see what it is.", "分子の各部分をタップして確認しましょう。", "點選分子的各部分，看看它是甚麼。", "분자의 각 부분을 눌러 무엇인지 확인해 보시오."]) }),
             info,
             el("p", { class: "small", html: "H<sub>2</sub>N – C(H)(R) – COOH" }),
             exam(T, [
               "An amino acid has an amine group, a carboxyl group, a hydrogen atom and an R-group, all on the alpha carbon. The R-group is what differs: hydrophobic or hydrophilic (polar, or charged acidic/basic).",
               "アミノ酸は α炭素 にアミノ基、カルボキシ基、水素原子、R基 が結合した構造。違いは R基 だけで、疎水性か親水性（極性、または酸性・塩基性で電荷をもつ）に分けられる。",
-              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。", "아미노산은 α 탄소에 아미노기, 카복실기, 수소 원자, R기가 결합한 구조입니다. 다른 부분은 R기뿐이며, R기는 소수성이거나 친수성(극성이거나, 전하를 띠는 산성/염기성)입니다."])
+              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。", "아미노산은 α 탄소에 아미노기, 카복실기, 수소 원자, R기가 결합한 구조이다. 다른 부분은 R기뿐이며, R기는 소수성이거나 친수성(극성이거나, 전하를 띠는 산성/염기성)이다."])
           ])
         ]));
         pick(sel);
@@ -262,7 +262,7 @@
           b.addEventListener("click", function () {
             if (done[cur]) return;
             if (k === c.c) { done[cur] = 1; render(); }
-            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite. Hint: ", "惜しい。ヒント: ", "不太對。提示：", "아쉽네요. 힌트: "]) + T(c.hint); }
+            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite. Hint: ", "惜しい。ヒント: ", "不太對。提示：", "아쉽다. 힌트: "]) + T(c.hint); }
           });
           return b;
         });
@@ -287,24 +287,24 @@
           el("p", { text: T([
             "R-groups are either hydrophobic (they avoid water) or hydrophilic (they attract water). Hydrophilic R-groups are polar or charged, and charged R-groups are acidic (negative) or basic (positive).",
             "R基は、疎水性 (hydrophobic：水をはじく) か親水性 (hydrophilic：水とひきあう) のどちらかです。親水性の R基は極性 (polar) か、電荷をもつもの（酸性 acidic は負、塩基性 basic は正）です。",
-            "R 基不是疏水 (hydrophobic，不愛水)，便是親水 (hydrophilic，吸引水)。親水的 R 基是極性 (polar) 或帶電荷的；帶電荷的 R 基分酸性 (acidic，帶負電) 和鹼性 (basic，帶正電)。", "R기는 소수성(hydrophobic, 물을 피함)이거나 친수성(hydrophilic, 물을 끌어당김)입니다. 친수성 R기는 극성(polar)이거나 전하를 띠며, 전하를 띠는 R기는 산성(acidic, 음전하) 또는 염기성(basic, 양전하)입니다."]) }),
-          el("p", { class: "small", text: T(["You do not need to learn the names of particular R-groups: just learn to recognise the type from its chemistry.", "個々の R基の名前を覚える必要はありません。化学的な特徴から種類を見分けられればよいのです。", "不需要記住個別 R 基的名稱，只需從化學特徵辨認其類型。", "개별 R기의 이름을 외울 필요는 없습니다. 화학적 특징을 보고 유형을 알아보는 것만 익히면 됩니다."]) }),
+            "R 基不是疏水 (hydrophobic，不愛水)，便是親水 (hydrophilic，吸引水)。親水的 R 基是極性 (polar) 或帶電荷的；帶電荷的 R 基分酸性 (acidic，帶負電) 和鹼性 (basic，帶正電)。", "R기는 소수성(hydrophobic, 물을 피함)이거나 친수성(hydrophilic, 물을 끌어당김)이다. 친수성 R기는 극성(polar)이거나 전하를 띠며, 전하를 띠는 R기는 산성(acidic, 음전하) 또는 염기성(basic, 양전하)이다."]) }),
+          el("p", { class: "small", text: T(["You do not need to learn the names of particular R-groups: just learn to recognise the type from its chemistry.", "個々の R基の名前を覚える必要はありません。化学的な特徴から種類を見分けられればよいのです。", "不需要記住個別 R 基的名稱，只需從化學特徵辨認其類型。", "개별 R기의 이름을 외울 필요는 없다. 화학적 특징을 보고 유형을 알아보는 것만 익히면 된다."]) }),
           el("p", { class: "small", text: T([
             "Cysteine: its R-group is –CH₂–SH. It is the one amino acid you need to name (AHL, B1.2.9). Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). It is not one of the cards here.",
             "システイン (cysteine)：R基は –CH₂–SH で、名前を覚える必要がある唯一のアミノ酸です（AHL, B1.2.9）。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。ここのカードには含まれません。",
-            "半胱氨酸 (cysteine)：R 基為 –CH₂–SH，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏的卡片不包括它。", "시스테인(cysteine): R기는 –CH₂–SH입니다. 이름을 알아야 하는 유일한 아미노산입니다(AHL, B1.2.9). 시스테인 2개는 공유 결합인 이황화 결합(disulfide bond, S–S)을 이룰 수 있으며, 이는 단백질의 모양을 유지하는 데 도움이 됩니다(단백질 접힘 위젯 참조). 여기 카드에는 들어 있지 않습니다."]) })
+            "半胱氨酸 (cysteine)：R 基為 –CH₂–SH，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏的卡片不包括它。", "시스테인(cysteine): R기는 –CH₂–SH이다. 이름을 알아야 하는 유일한 아미노산이다(AHL, B1.2.9). 시스테인 2개는 공유 결합인 이황화 결합(disulfide bond, S–S)을 이룰 수 있으며, 이는 단백질의 모양을 유지하는 데 도움이 된다(단백질 접힘 위젯 참조). 여기 카드에는 들어 있지 않는다."]) })
         ]);
         view.appendChild(el("div", { class: "wl" }, [
           el("div", { class: "wl-stage" }, [chips, card, mkTree("tree-desk")]),
           el("div", { class: "wl-panel" }, [
-            el("p", { class: "small", text: T(["Which type of R-group is this? Choose one.", "この R基 はどの種類ですか。1つ選びましょう。", "這是哪一類 R 基？請選一項。", "이 R기는 어떤 유형인가요? 하나를 고르세요."]) }),
+            el("p", { class: "small", text: T(["Which type of R-group is this? Choose one.", "この R基 はどの種類ですか。1つ選びましょう。", "這是哪一類 R 基？請選一項。", "이 R기는 어떤 유형인가? 하나를 고르시오."]) }),
             el("div", { class: "opts" }, btns), fb,
             el("div", { class: "bar", style: "margin:0" }, [isDone ? nxt : null, rb]),
             scoreEl, side,
             exam(T, [
               "An amino acid has an amine group, a carboxyl group, a hydrogen atom and an R-group, all on the alpha carbon. The R-group is what differs: hydrophobic or hydrophilic (polar, or charged acidic/basic).",
               "アミノ酸は α炭素 にアミノ基、カルボキシ基、水素原子、R基 が結合した構造。違いは R基 だけで、疎水性か親水性（極性、または酸性・塩基性で電荷をもつ）に分けられる。",
-              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。", "아미노산은 α 탄소에 아미노기, 카복실기, 수소 원자, R기가 결합한 구조입니다. 다른 부분은 R기뿐이며, R기는 소수성이거나 친수성(극성이거나, 전하를 띠는 산성/염기성)입니다."])
+              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。", "아미노산은 α 탄소에 아미노기, 카복실기, 수소 원자, R기가 결합한 구조이다. 다른 부분은 R기뿐이며, R기는 소수성이거나 친수성(극성이거나, 전하를 띠는 산성/염기성)이다."])
           ])
         ]));
       }

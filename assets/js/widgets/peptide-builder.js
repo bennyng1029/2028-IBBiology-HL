@@ -192,14 +192,14 @@
             legendItem("l", "var(--k-acc)", T(["peptide bond", "ペプチド結合", "肽鍵", "펩타이드 결합"]))
           ])]),
           el("div", { class: "wl-panel" }, [
-            el("p", { class: "small", text: T(["Press Condense. The –OH from one carboxyl group and an H from the next amine group leave as water, and a peptide bond forms.", "「縮合」を押してください。一方のカルボキシ基の –OH と、もう一方のアミノ基の H が水として外れ、ペプチド結合ができます。", "按「縮合」。一個羧基的 –OH 與下一個氨基的 H 會以水的形式離開，並形成肽鍵。", "'축합'을 누르세요. 한 카복실기의 –OH와 다음 아미노기의 H가 물로 떨어져 나가고, 펩타이드 결합이 만들어집니다."]) }),
+            el("p", { class: "small", text: T(["Press Condense. The –OH from one carboxyl group and an H from the next amine group leave as water, and a peptide bond forms.", "「縮合」を押してください。一方のカルボキシ基の –OH と、もう一方のアミノ基の H が水として外れ、ペプチド結合ができます。", "按「縮合」。一個羧基的 –OH 與下一個氨基的 H 會以水的形式離開，並形成肽鍵。", "'축합'을 누르시오. 한 카복실기의 –OH와 다음 아미노기의 H가 물로 떨어져 나가고, 펩타이드 결합이 만들어진다."]) }),
             el("div", { class: "bar", style: "margin:0" }, [bCond, bAdd, bReset]),
             eq, status,
-            more(T, [el("p", { class: "small", text: T(["Each condensation makes one peptide bond and releases one water molecule. Real polypeptides have from a few to thousands of amino acids (this model shows up to " + MAXR + ").", "縮合のたびにペプチド結合が1つでき、水が1分子放出されます。実際のポリペプチドは数個から数千個のアミノ酸でできています（この図は最大" + MAXR + "個）。", "每次縮合形成一個肽鍵並釋出一個水分子。真正的多肽由數個至數千個氨基酸組成（此模型最多顯示 " + MAXR + " 個）。", "각 축합마다 펩타이드 결합 1개가 생기고 물 분자 1개가 방출됩니다. 실제 폴리펩타이드는 아미노산이 몇 개에서 수천 개까지 이어져 있습니다(이 모델은 최대 " + MAXR + "개까지 보여 줍니다)."]) })]),
+            more(T, [el("p", { class: "small", text: T(["Each condensation makes one peptide bond and releases one water molecule. Real polypeptides have from a few to thousands of amino acids (this model shows up to " + MAXR + ").", "縮合のたびにペプチド結合が1つでき、水が1分子放出されます。実際のポリペプチドは数個から数千個のアミノ酸でできています（この図は最大" + MAXR + "個）。", "每次縮合形成一個肽鍵並釋出一個水分子。真正的多肽由數個至數千個氨基酸組成（此模型最多顯示 " + MAXR + " 個）。", "각 축합마다 펩타이드 결합 1개가 생기고 물 분자 1개가 방출된다. 실제 폴리펩타이드는 아미노산이 몇 개에서 수천 개까지 이어져 있다(이 모델은 최대 " + MAXR + "개까지 보여 준다)."]) })]),
             exam(T, [
               "Amino acid + amino acid → dipeptide + water (condensation). The new bond is a peptide bond, C(=O)–N(H). With 20 amino acids in any order, a chain of n has 20ⁿ possible sequences.",
               "アミノ酸 + アミノ酸 → ジペプチド + 水 (縮合反応)。できる結合はペプチド結合 C(=O)–N(H)。20種類のアミノ酸が任意の順序で並ぶので、n 個の鎖は 20ⁿ 通り。",
-              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)입니다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능합니다."])
+              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)이다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능하다."])
           ])
         ]));
         bCond.addEventListener("click", condense);
@@ -270,14 +270,14 @@
         pane.appendChild(el("div", { class: "wl" }, [
           el("div", { class: "wl-stage" }, [beadsHost, big, sci]),
           el("div", { class: "wl-panel" }, [
-            el("p", { text: T(["20 different amino acids are coded for in the genetic code, and they can be joined in any order. A chain of n amino acids can therefore have 20ⁿ different sequences.", "遺伝暗号 (genetic code) は20種類のアミノ酸を指定しており、どんな順序でもつなぐことができます。したがって n 個のアミノ酸の鎖には 20ⁿ 通りの配列があります。", "遺傳密碼 (genetic code) 編碼 20 種氨基酸，它們可按任何次序連接。因此由 n 個氨基酸組成的鏈可有 20ⁿ 種序列。", "유전 암호(genetic code)는 20가지 아미노산을 지정하며, 이 아미노산들은 어떤 순서로든 연결될 수 있습니다. 따라서 n개의 아미노산으로 된 사슬은 20ⁿ가지의 서열을 가질 수 있습니다."]) }),
+            el("p", { text: T(["20 different amino acids are coded for in the genetic code, and they can be joined in any order. A chain of n amino acids can therefore have 20ⁿ different sequences.", "遺伝暗号 (genetic code) は20種類のアミノ酸を指定しており、どんな順序でもつなぐことができます。したがって n 個のアミノ酸の鎖には 20ⁿ 通りの配列があります。", "遺傳密碼 (genetic code) 編碼 20 種氨基酸，它們可按任何次序連接。因此由 n 個氨基酸組成的鏈可有 20ⁿ 種序列。", "유전 암호(genetic code)는 20가지 아미노산을 지정하며, 이 아미노산들은 어떤 순서로든 연결될 수 있다. 따라서 n개의 아미노산으로 된 사슬은 20ⁿ가지의 서열을 가질 수 있다."]) }),
             el("div", { class: "lab" }, [el("span", { text: T(["Chain length n:", "鎖の長さ n:", "鏈長 n：", "사슬 길이 n:"]) }), lbl]),
             sl,
-            more(T, [el("p", { class: "small", text: T(["For a chain of just 100 amino acids: 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " possible sequences. Polypeptides can be much longer, so the possible variety is effectively unlimited.", "アミノ酸100個の鎖でも 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 通りの配列があります。ポリペプチドはもっと長くなりうるので、可能な種類は事実上無限です。", "只是 100 個氨基酸的鏈，已有 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 種可能序列。多肽可以更長，所以可能的變化實際上是無限的。", "아미노산 100개로 된 사슬만 해도 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + "가지의 서열이 가능합니다. 폴리펩타이드는 훨씬 더 길 수도 있으므로, 가능한 다양성은 사실상 무한합니다."]) })]),
+            more(T, [el("p", { class: "small", text: T(["For a chain of just 100 amino acids: 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " possible sequences. Polypeptides can be much longer, so the possible variety is effectively unlimited.", "アミノ酸100個の鎖でも 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 通りの配列があります。ポリペプチドはもっと長くなりうるので、可能な種類は事実上無限です。", "只是 100 個氨基酸的鏈，已有 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 種可能序列。多肽可以更長，所以可能的變化實際上是無限的。", "아미노산 100개로 된 사슬만 해도 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + "가지의 서열이 가능하다. 폴리펩타이드는 훨씬 더 길 수도 있으므로, 가능한 다양성은 사실상 무한하다."]) })]),
             exam(T, [
               "Amino acid + amino acid → dipeptide + water (condensation). The new bond is a peptide bond, C(=O)–N(H). With 20 amino acids in any order, a chain of n has 20ⁿ possible sequences.",
               "アミノ酸 + アミノ酸 → ジペプチド + 水 (縮合反応)。できる結合はペプチド結合 C(=O)–N(H)。20種類のアミノ酸が任意の順序で並ぶので、n 個の鎖は 20ⁿ 通り。",
-              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)입니다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능합니다."])
+              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)이다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능하다."])
           ])
         ]));
         upd();

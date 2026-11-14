@@ -90,13 +90,13 @@
   var HB = [[7, 9], [0, 16]], IO = [[2, 15], [8, 10]], DS = [[3, 14]], CORE = [4, 5, 6, 11, 12, 13];
   var KINDS = {
     hb: { col: "--k-hb", n: ["Hydrogen bonds", "水素結合 (hydrogen bonds)", "氫鍵 (hydrogen bonds)", "수소 결합"],
-      d: ["Form between polar R-groups: a slightly positive H on one and a slightly negative O or N on the other. Each is weak, but there are many.", "極性の R基 の間にできます。一方のわずかに正の H と、他方のわずかに負の O や N がひきあいます。1つ1つは弱いですが、数が多いのです。", "在極性 R 基之間形成：一個帶微正電的 H 與另一個帶微負電的 O 或 N 相吸。每一個都很弱，但數量很多。", "극성 R기 사이에 생깁니다. 한쪽의 약한 (+)전하를 띤 H와 다른 쪽의 약한 (−)전하를 띤 O 또는 N 사이의 결합입니다. 하나하나는 약하지만 그 수가 많습니다."] },
+      d: ["Form between polar R-groups: a slightly positive H on one and a slightly negative O or N on the other. Each is weak, but there are many.", "極性の R基 の間にできます。一方のわずかに正の H と、他方のわずかに負の O や N がひきあいます。1つ1つは弱いですが、数が多いのです。", "在極性 R 基之間形成：一個帶微正電的 H 與另一個帶微負電的 O 或 N 相吸。每一個都很弱，但數量很多。", "극성 R기 사이에 생긴다. 한쪽의 약한 (+)전하를 띤 H와 다른 쪽의 약한 (−)전하를 띤 O 또는 N 사이의 결합이다. 하나하나는 약하지만 그 수가 많다."] },
     io: { col: "--k-io", n: ["Ionic bonds", "イオン結合 (ionic bonds)", "離子鍵 (ionic bonds)", "이온 결합"],
-      d: ["Between a negative R-group (–COO⁻, made when –COOH loses H⁺) and a positive R-group (–NH₃⁺, made when –NH₂ gains H⁺). Opposite charges attract. Changing pH changes these charges.", "負の R基 (–COO⁻：–COOH が H⁺ を失ってできる) と正の R基 (–NH₃⁺：–NH₂ が H⁺ を受け取ってできる) の間にできます。異符号の電荷がひきあいます。pH が変わるとこの電荷が変わります。", "在帶負電的 R 基 (–COO⁻，由 –COOH 失去 H⁺ 而成) 與帶正電的 R 基 (–NH₃⁺，由 –NH₂ 得到 H⁺ 而成) 之間形成。異性電荷相吸。pH 改變會改變這些電荷。", "(−)전하를 띤 R기(–COOH가 H⁺를 잃어 생긴 –COO⁻)와 (+)전하를 띤 R기(–NH₂가 H⁺를 얻어 생긴 –NH₃⁺) 사이에 생깁니다. 반대 전하끼리 끌어당깁니다. pH가 바뀌면 이 전하가 달라집니다."] },
+      d: ["Between a negative R-group (–COO⁻, made when –COOH loses H⁺) and a positive R-group (–NH₃⁺, made when –NH₂ gains H⁺). Opposite charges attract. Changing pH changes these charges.", "負の R基 (–COO⁻：–COOH が H⁺ を失ってできる) と正の R基 (–NH₃⁺：–NH₂ が H⁺ を受け取ってできる) の間にできます。異符号の電荷がひきあいます。pH が変わるとこの電荷が変わります。", "在帶負電的 R 基 (–COO⁻，由 –COOH 失去 H⁺ 而成) 與帶正電的 R 基 (–NH₃⁺，由 –NH₂ 得到 H⁺ 而成) 之間形成。異性電荷相吸。pH 改變會改變這些電荷。", "(−)전하를 띤 R기(–COOH가 H⁺를 잃어 생긴 –COO⁻)와 (+)전하를 띤 R기(–NH₂가 H⁺를 얻어 생긴 –NH₃⁺) 사이에 생긴다. 반대 전하끼리 끌어당긴다. pH가 바뀌면 이 전하가 달라진다."] },
     ds: { col: "--k-ds", n: ["Disulfide bonds", "ジスルフィド結合 (disulfide bonds)", "二硫鍵 (disulfide bonds)", "이황화 결합"],
-      d: ["A covalent bond between the sulfur atoms (–S–S–) of two cysteines. Being covalent, it is the strongest of the four.", "2つのシステイン (cysteine) の硫黄原子の間の共有結合 (–S–S–) です。共有結合なので、4つの中で最も強いものです。", "兩個半胱氨酸 (cysteine) 的硫原子之間的共價鍵 (–S–S–)。因為是共價鍵，是四者中最強的。", "두 시스테인의 황 원자(–S–S–) 사이의 공유 결합입니다. 공유 결합이므로 네 가지 중 가장 강합니다."] },
+      d: ["A covalent bond between the sulfur atoms (–S–S–) of two cysteines. Being covalent, it is the strongest of the four.", "2つのシステイン (cysteine) の硫黄原子の間の共有結合 (–S–S–) です。共有結合なので、4つの中で最も強いものです。", "兩個半胱氨酸 (cysteine) 的硫原子之間的共價鍵 (–S–S–)。因為是共價鍵，是四者中最強的。", "두 시스테인의 황 원자(–S–S–) 사이의 공유 결합이다. 공유 결합이므로 네 가지 중 가장 강하다."] },
     hp: { col: "--k-hp", n: ["Hydrophobic interactions", "疎水性相互作用 (hydrophobic interactions)", "疏水相互作用 (hydrophobic interactions)", "소수성 상호 작용"],
-      d: ["Non-polar R-groups cluster together in the core, away from the surrounding water. It is a clustering effect rather than a bond between the R-groups.", "非極性の R基 は、周りの水から離れて核に集まります。R基どうしの結合というより、集まる効果です。", "非極性 R 基聚集在核心，遠離周圍的水。這是一種聚集效應，而非 R 基之間的鍵。", "비극성 R기가 주변의 물에서 멀어지려고 중심부에 모입니다. R기 사이의 결합이라기보다 모이는 효과입니다."] }
+      d: ["Non-polar R-groups cluster together in the core, away from the surrounding water. It is a clustering effect rather than a bond between the R-groups.", "非極性の R基 は、周りの水から離れて核に集まります。R基どうしの結合というより、集まる効果です。", "非極性 R 基聚集在核心，遠離周圍的水。這是一種聚集效應，而非 R 基之間的鍵。", "비극성 R기가 주변의 물에서 멀어지려고 중심부에 모인다. R기 사이의 결합이라기보다 모이는 효과이다."] }
   };
   var KORDER = ["hb", "io", "ds", "hp"];
 
@@ -116,7 +116,7 @@
       var EXAMTXT = [
         "Tertiary structure is held by hydrogen bonds, ionic bonds, disulfide (covalent) bonds between cysteines, and hydrophobic interactions. In water-soluble globular proteins hydrophobic R-groups are in the core; integral membrane proteins have hydrophobic regions in the membrane.",
         "三次構造は、水素結合、イオン結合、システイン間のジスルフィド結合（共有結合）、疎水性相互作用で保たれる。水溶性の球状タンパク質では疎水性の R基 は核に、内在性膜タンパク質では疎水性の領域が膜の中にある。",
-        "三級結構由氫鍵、離子鍵、半胱氨酸之間的二硫鍵（共價鍵）和疏水相互作用維持。水溶性球狀蛋白質的疏水 R 基位於核心；整合膜蛋白質的疏水區域位於膜內。", "3차 구조는 수소 결합, 이온 결합, 시스테인 사이의 이황화(공유) 결합, 소수성 상호 작용으로 유지됩니다. 물에 녹는 구형 단백질(globular protein)에서는 소수성 R기가 중심부에 있고, 막 내재성 단백질(integral protein)은 소수성 부위가 막 속에 있습니다."];
+        "三級結構由氫鍵、離子鍵、半胱氨酸之間的二硫鍵（共價鍵）和疏水相互作用維持。水溶性球狀蛋白質的疏水 R 基位於核心；整合膜蛋白質的疏水區域位於膜內。", "3차 구조는 수소 결합, 이온 결합, 시스테인 사이의 이황화(공유) 결합, 소수성 상호 작용으로 유지된다. 물에 녹는 구형 단백질(globular protein)에서는 소수성 R기가 중심부에 있고, 막 내재성 단백질(integral protein)은 소수성 부위가 막 속에 있다."];
       var view = el("div");
       root.appendChild(view);
       render();
@@ -171,7 +171,7 @@
         function info() {
           inf.innerHTML = "";
           if (on[focus]) { inf.appendChild(el("p", {}, [el("b", { style: "border-color:var(" + KINDS[focus].col + ")", text: T(KINDS[focus].n) }), " " + T(KINDS[focus].d)])); }
-          else inf.appendChild(el("p", { class: "small", text: T(["Switch a bond type on to see it.", "結合の種類をオンにすると表示されます。", "開啟一種鍵的類型即可顯示。", "결합 유형을 켜서 확인해 보세요."]) }));
+          else inf.appendChild(el("p", { class: "small", text: T(["Switch a bond type on to see it.", "結合の種類をオンにすると表示されます。", "開啟一種鍵的類型即可顯示。", "결합 유형을 켜서 확인해 보시오."]) }));
           KORDER.forEach(function (k) { btns[k].classList.toggle("foc", on[k] && k === focus); });
         }
         var tg = el("div", { class: "tg" }, KORDER.map(function (k) {
@@ -189,11 +189,11 @@
         var swatches = ["N", "P", "A", "B"].map(function (k) {
           return legendItem("i", "var(" + COL[k] + ")", T({ N: ["non-polar", "非極性", "非極性", "비극성"], P: ["polar", "極性", "極性", "극성"], A: ["acidic (−)", "酸性 (−)", "酸性 (−)", "산성 (−)"], B: ["basic (+)", "塩基性 (+)", "鹼性 (+)", "염기성 (+)"] }[k]));
         }).concat([legendItem("i", "var(--k-S)", T(["cysteine (–SH)", "システイン (–SH)", "半胱氨酸 (–SH)", "시스테인 (–SH)"]))]);
-        var lead = el("p", { class: "small", text: T(["A polypeptide folds because of interactions between its R-groups. Switch each type on to see where it acts.", "ポリペプチドは R基どうしの相互作用で折りたたまれます。種類ごとにオンにして、どこで働くか見てみましょう。", "多肽因 R 基之間的相互作用而摺疊。逐一開啟各類型，看看它們在哪裏起作用。", "폴리펩타이드는 R기 사이의 상호 작용 때문에 접힙니다. 각 유형을 켜서 어디에서 작용하는지 확인해 보세요."]) });
+        var lead = el("p", { class: "small", text: T(["A polypeptide folds because of interactions between its R-groups. Switch each type on to see where it acts.", "ポリペプチドは R基どうしの相互作用で折りたたまれます。種類ごとにオンにして、どこで働くか見てみましょう。", "多肽因 R 基之間的相互作用而摺疊。逐一開啟各類型，看看它們在哪裏起作用。", "폴리펩타이드는 R기 사이의 상호 작용 때문에 접힌다. 각 유형을 켜서 어디에서 작용하는지 확인해 보시오."]) });
         var panel = [
           NAR ? null : lead,
           tg, inf,
-          more(T, [NAR ? lead : null, el("p", { class: "small", text: T(["Strength: disulfide bonds are covalent and the strongest. The other three are weak individually, but together they hold the shape. Only cysteine needs to be named for disulfide bonds; you do not need to name other amino acids.", "強さ: ジスルフィド結合は共有結合で最も強い結合です。他の3つは1つ1つは弱いですが、まとまって形を保ちます。名前を覚える必要があるのはジスルフィド結合をつくるシステインだけで、他のアミノ酸の名前は不要です。", "強度：二硫鍵是共價鍵，最強。其餘三種個別都較弱，但合起來維持形狀。只需記得形成二硫鍵的半胱氨酸，不需要記其他氨基酸的名稱。", "세기: 이황화 결합은 공유 결합이며 가장 강합니다. 나머지 세 가지는 하나하나는 약하지만, 함께 모양을 유지합니다. 이황화 결합과 관련하여 이름을 알아야 하는 것은 시스테인뿐이며, 다른 아미노산의 이름은 알 필요가 없습니다."]) })])
+          more(T, [NAR ? lead : null, el("p", { class: "small", text: T(["Strength: disulfide bonds are covalent and the strongest. The other three are weak individually, but together they hold the shape. Only cysteine needs to be named for disulfide bonds; you do not need to name other amino acids.", "強さ: ジスルフィド結合は共有結合で最も強い結合です。他の3つは1つ1つは弱いですが、まとまって形を保ちます。名前を覚える必要があるのはジスルフィド結合をつくるシステインだけで、他のアミノ酸の名前は不要です。", "強度：二硫鍵是共價鍵，最強。其餘三種個別都較弱，但合起來維持形狀。只需記得形成二硫鍵的半胱氨酸，不需要記其他氨基酸的名稱。", "세기: 이황화 결합은 공유 결합이며 가장 강하다. 나머지 세 가지는 하나하나는 약하지만, 함께 모양을 유지한다. 이황화 결합과 관련하여 이름을 알아야 하는 것은 시스테인뿐이며, 다른 아미노산의 이름은 알 필요가 없다."]) })])
         ];
         info();
         return { stage: [svg, el("div", { class: "legend wl-legend" }, swatches)], panel: panel };
@@ -223,8 +223,8 @@
         return {
           stage: [svg, el("div", { class: "legend wl-legend" }, swatches)],
           panel: [
-            el("p", { text: T(["Integral proteins have a region of hydrophobic (non-polar) amino acids. This region sits among the hydrophobic fatty-acid tails inside the membrane and helps embed the protein. Polar and charged R-groups stay at the surfaces, in contact with water.", "内在性タンパク質 (integral protein) には疎水性（非極性）のアミノ酸の領域があります。この領域は膜内部の疎水性の脂肪酸の尾部の間に位置し、タンパク質を膜に埋め込むのに役立ちます。極性や電荷をもつ R基 は、水に接する表面にあります。", "整合蛋白質 (integral protein) 有一段疏水（非極性）氨基酸的區域。這個區域位於膜內疏水的脂肪酸尾部之間，幫助蛋白質嵌入膜中。極性和帶電的 R 基則在與水接觸的表面。", "내재성 단백질에는 소수성(비극성) 아미노산으로 된 부위가 있습니다. 이 부위는 막 안쪽의 소수성 지방산 꼬리 사이에 자리하여 단백질이 막에 박혀 있도록 돕습니다. 극성 R기와 전하를 띤 R기는 물과 닿는 표면에 있습니다."]) }),
-            el("p", { class: "small", text: T(["Compare: in a soluble globular protein the hydrophobic R-groups are in the core, away from water. Here they face the membrane lipids instead.", "比較: 水溶性の球状タンパク質では、疎水性の R基 は水から離れた核にあります。ここでは膜の脂質に向いています。", "比較：水溶性球狀蛋白質的疏水 R 基在核心，遠離水；這裏則面向膜脂質。", "비교: 물에 녹는 구형 단백질에서는 소수성 R기가 물에서 먼 중심부에 있습니다. 여기서는 그 대신 막의 지질을 향하고 있습니다."]) })
+            el("p", { text: T(["Integral proteins have a region of hydrophobic (non-polar) amino acids. This region sits among the hydrophobic fatty-acid tails inside the membrane and helps embed the protein. Polar and charged R-groups stay at the surfaces, in contact with water.", "内在性タンパク質 (integral protein) には疎水性（非極性）のアミノ酸の領域があります。この領域は膜内部の疎水性の脂肪酸の尾部の間に位置し、タンパク質を膜に埋め込むのに役立ちます。極性や電荷をもつ R基 は、水に接する表面にあります。", "整合蛋白質 (integral protein) 有一段疏水（非極性）氨基酸的區域。這個區域位於膜內疏水的脂肪酸尾部之間，幫助蛋白質嵌入膜中。極性和帶電的 R 基則在與水接觸的表面。", "내재성 단백질에는 소수성(비극성) 아미노산으로 된 부위가 있다. 이 부위는 막 안쪽의 소수성 지방산 꼬리 사이에 자리하여 단백질이 막에 박혀 있도록 돕는다. 극성 R기와 전하를 띤 R기는 물과 닿는 표면에 있다."]) }),
+            el("p", { class: "small", text: T(["Compare: in a soluble globular protein the hydrophobic R-groups are in the core, away from water. Here they face the membrane lipids instead.", "比較: 水溶性の球状タンパク質では、疎水性の R基 は水から離れた核にあります。ここでは膜の脂質に向いています。", "比較：水溶性球狀蛋白質的疏水 R 基在核心，遠離水；這裏則面向膜脂質。", "비교: 물에 녹는 구형 단백질에서는 소수성 R기가 물에서 먼 중심부에 있다. 여기서는 그 대신 막의 지질을 향하고 있다."]) })
           ]
         };
       }
