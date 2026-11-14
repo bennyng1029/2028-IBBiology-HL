@@ -609,7 +609,7 @@
         function fitLook() {
           userLook = false;
           lookD.open = false;
-          if (window.innerWidth < 1100) return;
+          if (window.innerWidth < 1100 || window.innerHeight < 860) return;
           lookD.open = true;
           var chk = function () { if (!userLook && !destroyed && el.getBoundingClientRect().height > window.innerHeight - 64) lookD.open = false; };
           chk();
