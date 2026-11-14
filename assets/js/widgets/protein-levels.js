@@ -81,8 +81,8 @@
     ".W .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0}@media (max-width:639px){.W .opts{grid-template-columns:repeat(4,1fr);gap:4px}.W .opts button{padding:4px 2px;font-size:13px}}";
   var COL = { N: "--k-np", P: "--k-pol", A: "--k-ac", B: "--k-ba" };
   var CN = {
-    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)・疏水", "비극성(non-polar)·소수성"],
-    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)・親水", "극성(polar)·친수성"],
+    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)，疏水", "비극성(non-polar)·소수성"],
+    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)，親水", "극성(polar)·친수성"],
     A: ["acidic (−)", "酸性 (acidic, −)", "酸性 (acidic, −)", "산성(acidic, −)"],
     B: ["basic (+)", "塩基性 (basic, +)", "鹼性 (basic, +)", "염기성(basic, +)"]
   };

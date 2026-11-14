@@ -206,7 +206,7 @@
         if (cur.fP < 0.85) ps.push(T(["pH far from the optimum changes the charges on R-groups (they gain or lose H⁺). Ionic bonds and hydrogen bonds are disrupted, so the shape changes.", "最適から大きく離れた pH は R基の電荷 (H⁺ の授受) を変えます。イオン結合と水素結合が乱され、形が変わります。", "遠離最適值的 pH 會改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵，形狀因而改變。", "최적 pH에서 멀리 벗어나면 R기의 전하가 달라진다(H⁺를 얻거나 잃음). 이온 결합과 수소 결합이 깨져 모양이 바뀐다."]));
         if (!ps.length) ps.push(temp < m.To - 20 ? T(["Cold: the molecules move slowly, but the shape is not denatured.", "低温: 分子の動きは遅くなりますが、変性はしません。", "低溫：分子移動緩慢，但並沒有變性。", "낮은 온도: 분자의 움직임은 느려지지만 모양은 변성되지 않는다."]) : T(["Conditions are near this protein's optimum, so the weak bonds hold the shape.", "条件がこのタンパク質の最適に近いので、弱い結合が形を保ちます。", "條件接近此蛋白質的最適值，弱鍵能維持形狀。", "조건이 이 단백질의 최적 조건에 가까워서 약한 결합이 모양을 유지한다."]));
         why.innerHTML = ""; ps.forEach(function (t) { why.appendChild(el("p", { text: t })); });
-        if (reduced) { shown = f; draw(); } else if (!timer) loop();
+        if (reduced) { shown = f; draw(); } else if (!timer) { draw(); loop(); }
       }
       function draw() {
         var f = shown, amp = reduced ? 0 : (temp / 100) * 3.2;
