@@ -919,7 +919,7 @@ IB.registerTopic({
         { en: "the protein is denatured: the shape of the active site changes so the substrate no longer fits", ja: "タンパク質が変性し、活性部位の形が変わって基質が合わなくなる", zh: "蛋白質變性：活性位點的形狀改變，底物不能再配合" },
         { en: "peptide bonds are not broken / primary structure is unchanged (credit as additional precision)", ja: "ペプチド結合は切れない／一次構造は変わらない（正確さの加点）", zh: "肽鍵沒有被破壞／一級結構不變（作為額外的準確表述給分）" }
       ],
-      modelAnswer: { en: "Activity falls from 100% at 50 °C to 5% at 70 °C. At higher temperature the enzyme's molecules vibrate more, which breaks the hydrogen bonds and other weak interactions holding its tertiary structure. The enzyme is denatured, so the active site changes shape and the substrate no longer fits. The peptide bonds stay intact.", ja: "活性は50 °Cの100%から70 °Cの5%に低下する。高温では酵素分子がより激しく振動し、三次構造を保つ水素結合などの弱い相互作用が切れる。酵素は変性し、活性部位の形が変わって基質が合わなくなる。ペプチド結合は切れない。", zh: "活性由 50 °C 時的 100% 下降至 70 °C 時的 5%。溫度升高時，酶分子振動更劇烈，破壞維持其三級結構的氫鍵和其他弱相互作用。酶因而變性，活性位點改變形狀，底物不能再配合。肽鍵保持完整。" } },
+      modelAnswer: { en: "Activity falls from 100% at 50 °C to 5% at 70 °C. At higher temperature the enzyme's molecules vibrate more, which breaks the hydrogen bonds and other weak interactions holding its three-dimensional shape. The enzyme is denatured, so the active site changes shape and the substrate no longer fits. The peptide bonds stay intact.", ja: "活性は50 °Cの100%から70 °Cの5%に低下する。高温では酵素分子がより激しく振動し、立体構造を保つ水素結合などの弱い相互作用が切れる。酵素は変性し、活性部位の形が変わって基質が合わなくなる。ペプチド結合は切れない。", zh: "活性由 50 °C 時的 100% 下降至 70 °C 時的 5%。溫度升高時，酶分子振動更劇烈，破壞維持其三維形狀的氫鍵和其他弱相互作用。酶因而變性，活性位點改變形狀，底物不能再配合。肽鍵保持完整。" } },
 
     /* q09 */
     { id: "b1-2-q09", type: "mcq", ahl: false, difficulty: 2, ref: "B1.2.5", paper: "1A",
