@@ -269,7 +269,7 @@
       pdbTitle: "The stereochemistry of the protein myoglobin",
       cap: L("Sperm whale myoglobin, a water-soluble globular protein of 153 amino acids. Hydrophobic amino acids mostly cluster in the core; hydrophilic ones mostly face the water.",
         "マッコウクジラのミオグロビン (myoglobin)。153アミノ酸の水に溶ける球状タンパク質。疎水性アミノ酸は主に内部 (コア) に集まり、親水性アミノ酸は主に水に面しています。",
-        "抹香鯨肌紅蛋白 (myoglobin)，含153個氨基酸的水溶性球狀蛋白質。疏水氨基酸大多聚在核心，親水氨基酸大多朝向水。", "향유고래 미오글로빈(myoglobin)은 아미노산 153개로 된, 물에 녹는 구형 단백질이다. 소수성 아미노산은 대부분 중심부에 모여 있고, 친수성 아미노산은 대부분 물을 향해 있다."),
+        "抹香鯨肌紅蛋白 (myoglobin)，含153個氨基酸的水溶性球狀蛋白質。疏水氨基酸大多聚在核心，親水氨基酸大多朝向水。", "향유고래 마이오글로빈(myoglobin)은 아미노산 153개로 된, 물에 녹는 구형 단백질이다. 소수성 아미노산은 대부분 중심부에 모여 있고, 친수성 아미노산은 대부분 물을 향해 있다."),
       look: L("In a water-soluble globular protein, hydrophobic R-groups are tucked into the core, away from water, and polar or charged R-groups sit on the surface where they interact with water. Try Sticks or Surface, then slide the slice to cut into the protein.",
         "水に溶ける球状タンパク質 (globular protein) では、疎水性 (hydrophobic) のR基が水を避けて内部に入り、極性や電荷をもつR基は水と相互作用できる表面に出ます。スティックか表面にして、スライスで内部を見てみましょう。",
         "在水溶性球狀蛋白質 (globular protein) 中，疏水 (hydrophobic) R基藏在核心、遠離水，極性或帶電的R基位於表面與水作用。請選「棍狀」或「表面」，再拉動切片滑桿窺看內部。", "물에 녹는 구형 단백질에서는 소수성 R기가 물에서 먼 중심부에 들어 있고, 극성 R기와 전하를 띤 R기는 물과 상호 작용하는 표면에 있다. 스틱이나 표면을 선택한 다음 슬라이더를 움직여 단백질 속을 잘라 보시오."),

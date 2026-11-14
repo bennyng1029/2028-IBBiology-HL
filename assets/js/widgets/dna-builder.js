@@ -36,7 +36,7 @@
     title: L("DNA and RNA builder", "DNA・RNA ビルダー", "DNA 與 RNA 建構器", "DNA와 RNA 만들기"),
     tabs: {
       parts: L("Nucleotide parts", "ヌクレオチドの構成 (nucleotide)", "核苷酸組成 (nucleotide)", "뉴클레오타이드의 구성 (nucleotide)"),
-      build: L("Build a DNA strand", "DNA 鎖をつくる (complementary)", "建構 DNA 鏈 (complementary)", "DNA 가닥 만들기"),
+      build: L("Build a DNA strand", "DNA 鎖をつくる", "建構 DNA 鏈", "DNA 가닥 만들기"),
       compare: L("DNA vs RNA", "DNA と RNA", "DNA 與 RNA", "DNA와 RNA 비교")
     },
     dna: L("DNA", "DNA", "DNA", "DNA"), rna: L("RNA", "RNA", "RNA", "RNA"),

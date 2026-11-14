@@ -63,7 +63,7 @@
     m0n: L("<b>Condensation</b>: –OH from the fatty acid and –H from the glycerol leave as <b>water</b>, and an <b>ester bond</b> forms. Fatty acids joined: %n of 3.", "<b>縮合 (condensation)</b>: 脂肪酸の–OHとグリセロールの–Hが<b>水</b>として取れ、<b>エステル結合</b>ができます。結合した脂肪酸: %n / 3。", "<b>縮合 (condensation)</b>：脂肪酸的–OH和甘油的–H脫去成為<b>水</b>，形成<b>酯鍵</b>。已連接的脂肪酸：%n / 3。", "<b>축합(condensation)</b>: 지방산의 –OH와 글리세롤의 –H가 <b>물</b>로 떨어져 나가고 <b>에스터 결합</b>이 생긴다. 연결된 지방산: 3개 중 %n개."),
     m03: L("<b>Triglyceride</b>: one glycerol + three fatty acids, three ester bonds, three water molecules released. Triglycerides store energy and give thermal insulation in adipose tissue.", "<b>トリグリセリド (triglyceride)</b>: グリセロール1分子＋脂肪酸3分子、エステル結合3つ、水3分子が放出されます。脂肪組織でエネルギーを貯蔵し、断熱にも働きます。", "<b>甘油三酯 (triglyceride)</b>：1個甘油＋3個脂肪酸，3個酯鍵，釋出3個水分子。在脂肪組織中儲存能量並提供隔熱。", "<b>트라이글리세리드(triglyceride)</b>: 글리세롤 1분자 + 지방산 3분자, 에스터 결합 3개, 방출된 물 분자 3개. 트라이글리세리드는 지방 조직(adipose tissue)에서 에너지를 저장하고 열을 차단한다."),
     ex0: L("Triglyceride = glycerol + 3 fatty acids, made by 3 condensation reactions (3 H₂O released).", "トリグリセリド (triglyceride) ＝ グリセロール＋脂肪酸3つ。縮合 (condensation) が3回起こり、水が3分子できる。", "甘油三酯 (triglyceride) ＝ 甘油＋3個脂肪酸，經3次縮合 (condensation)，釋出3個水。", "트라이글리세리드 = 글리세롤 + 지방산 3분자. 축합 반응 3번으로 만들어진다(H₂O 3분자 방출)."),
-    ref0: L("Syllabus B1.1.8–9", "シラバス B1.1.8–9", "課程大綱 B1.1.8–9", "교육과정 B1.1.8–9"),
+    ref0: L("Syllabus B1.1.9", "シラバス B1.1.9", "課程大綱 B1.1.9", "교육과정 B1.1.9"),
     sat: L("Saturated", "飽和 (saturated)", "飽和 (saturated)", "포화(saturated)"),
     mono: L("Monounsaturated", "一価不飽和 (mono-unsaturated)", "單元不飽和 (monounsaturated)", "단일 불포화(mono-unsaturated)"),
     poly: L("Polyunsaturated", "多価不飽和 (poly-unsaturated)", "多元不飽和 (polyunsaturated)", "다중 불포화(poly-unsaturated)"),
