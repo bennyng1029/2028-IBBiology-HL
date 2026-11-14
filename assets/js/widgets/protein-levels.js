@@ -19,7 +19,7 @@
   }
   function el(tag, a, kids) { return fill(document.createElement(tag), a, kids); }
   function sv(tag, a, kids) { return fill(document.createElementNS(NS, tag), a, kids); }
-  var BASE = ".W{--k-ink:var(--ink,#1d2733);--k-sf:var(--surface,#fff);--k-bg:var(--bg,#f4f6f9);--k-mut:var(--muted,#5b6775);--k-line:var(--line,#c9d1da);--k-acc:var(--accent,#2f6fdb);--k-ahl:var(--ahl,#8e44ad);--k-good:var(--good,#1e8e4e);--k-bad:var(--bad,#d03b3b);--k-np:var(--r-nonpolar,#e8a317);--k-pol:var(--r-polar,#16a39a);--k-ac:var(--r-acidic,#d9483b);--k-ba:var(--r-basic,#3a6fd8);--k-hb:var(--hbond,#2a7de1);--k-io:var(--ionic,#d9483b);--k-ds:var(--disulfide,#b8860b);--k-hp:var(--hydrophobic,#e8a317);--k-C:var(--c-carbon,#6b7785);--k-O:var(--c-oxygen,#d9483b);--k-N:var(--c-nitrogen,#3a6fd8);--k-H:var(--c-hydrogen,#9aa5b1);--k-S:var(--c-sulfur,#c9a100);font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;color:var(--k-ink);max-width:100%;text-align:left}" +
+  var BASE = ".W{--k-ink:var(--ink,#1d2733);--k-sf:var(--surface,#fff);--k-bg:var(--bg,#f4f6f9);--k-mut:var(--muted,#5b6775);--k-line:var(--line,#c9d1da);--k-acc:var(--accent,#2f6fdb);--k-ahl:var(--ahl,#8e44ad);--k-good:var(--good,#1e8e4e);--k-bad:var(--bad,#d03b3b);--k-np:var(--r-nonpolar,#e8a317);--k-pol:var(--r-polar,#16a39a);--k-ac:var(--r-acidic,#d9483b);--k-ba:var(--r-basic,#3a6fd8);--k-hb:var(--hbond,#2a7de1);--k-io:var(--ionic,#d9483b);--k-ds:var(--disulfide,#b8860b);--k-hp:var(--hydrophobic,#e8a317);--k-C:var(--c-carbon,#6b7785);--k-O:var(--c-oxygen,#d9483b);--k-N:var(--c-nitrogen,#3a6fd8);--k-H:var(--c-hydrogen,#9aa5b1);--k-S:var(--c-sulfur,#c9a100);font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;color:var(--k-ink);max-width:100%;text-align:left}" +
     ".W *{box-sizing:border-box}" +
     ".W .wl-exam{margin:0}.W .wl-legend{margin:4px 0 0}" +
     ".W .bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}" +
@@ -29,7 +29,7 @@
     ".W button:not([role=tab]):disabled{opacity:.45;cursor:default}" +
     ".W button:focus-visible,.W [tabindex]:focus-visible,.W input:focus-visible{outline:3px solid var(--k-acc);outline-offset:2px}" +
     ".W svg{width:100%;height:auto;display:block;touch-action:manipulation}" +
-    ".W svg text{fill:var(--k-ink);font:13px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif}" +
+    ".W svg text{fill:var(--k-ink);font:13px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif}" +
     ".W .panel{background:var(--k-bg);border:1px solid var(--k-line);border-radius:12px;padding:10px 12px;margin:8px 0}" +
     ".W .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;margin:6px 0}" +
     ".W .legend .i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}" +
@@ -48,16 +48,16 @@
     s.textContent = (BASE + extra).split(".W").join(".w-" + name);
     document.head.appendChild(s);
   }
-  var EXAM = ["What to remember for the exam", "試験で覚えること (exam points)", "考試重點 (exam points)"];
+  var EXAM = ["What to remember for the exam", "試験で覚えること (exam points)", "考試重點 (exam points)", "시험 대비 핵심"];
   var REDUCED = function () { try { return window.matchMedia("(prefers-reduced-motion:reduce)").matches; } catch (e) { return false; } };
-  function mkT(ctx) { return function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2] }); }; }
+  function mkT(ctx) { return function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2], ko: a[3] }); }; }
   function exam(T, a) {
     if (window.innerWidth < 640) return el("details", { class: "exam wl-exam" }, [el("summary", { text: T(EXAM), style: "font-weight:700;cursor:pointer;min-height:36px;display:flex;align-items:center" }), el("div", { text: T(a) })]);
     return el("div", { class: "exam wl-exam" }, [el("strong", { text: T(EXAM) + ": " }), document.createTextNode(T(a))]);
   }
   function ahl() { return el("span", { class: "ahl", text: "AHL" }); }
   function legendItem(cls, color, label) { return el("span", {}, [el("span", { class: cls, style: (cls === "i" ? "background:" : "border-color:") + color }), label]); }
-  var MORE = ["More detail", "詳しく見る", "更多詳情"];
+  var MORE = ["More detail", "詳しく見る", "更多詳情", "자세히 보기"];
   function more(T, kids) { return el("details", { class: "more" }, [el("summary", { text: T(MORE) })].concat(kids)); }
   function optTab(ctx, n) { var t = parseInt(ctx && ctx.options && ctx.options.tab, 10); return t >= 0 && t < n ? t : 0; }
   function tabsBar(T, items, cur, onSel) {
@@ -81,13 +81,13 @@
     ".W .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0}@media (max-width:639px){.W .opts{grid-template-columns:repeat(4,1fr);gap:4px}.W .opts button{padding:4px 2px;font-size:13px}}";
   var COL = { N: "--k-np", P: "--k-pol", A: "--k-ac", B: "--k-ba" };
   var CN = {
-    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)・疏水"],
-    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)・親水"],
-    A: ["acidic (−)", "酸性 (acidic, −)", "酸性 (acidic, −)"],
-    B: ["basic (+)", "塩基性 (basic, +)", "鹼性 (basic, +)"]
+    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)・疏水", "비극성(소수성)"],
+    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)・親水", "극성(친수성)"],
+    A: ["acidic (−)", "酸性 (acidic, −)", "酸性 (acidic, −)", "산성 (−)"],
+    B: ["basic (+)", "塩基性 (basic, +)", "鹼性 (basic, +)", "염기성 (+)"]
   };
   var CS = {
-    N: ["non-polar", "非極性", "非極性"], P: ["polar", "極性", "極性"], A: ["acidic (−)", "酸性 (−)", "酸性 (−)"], B: ["basic (+)", "塩基性 (+)", "鹼性 (+)"]
+    N: ["non-polar", "非極性", "非極性", "비극성"], P: ["polar", "極性", "極性", "극성"], A: ["acidic (−)", "酸性 (−)", "酸性 (−)", "산성 (−)"], B: ["basic (+)", "塩基性 (+)", "鹼性 (+)", "염기성 (+)"]
   };
   var SEQ0 = "PBNNPNNANPNP".split("");
   var cache = {};
@@ -181,22 +181,22 @@
   }
 
   IB.registerWidget("protein-levels", {
-    title: { en: "Levels of protein structure", ja: "タンパク質の構造の段階", zh: "蛋白質結構的層次" },
+    title: { en: "Levels of protein structure", ja: "タンパク質の構造の段階", zh: "蛋白質結構的層次", ko: "단백질 구조의 단계" },
     mount: function (root, ctx) {
       css("protein-levels", CSS);
       root.classList.add("W");
       var T = mkT(ctx);
       var tab = optTab(ctx, 4), sub = "helix", sel = 6, seq = SEQ0.slice(), nq = 2;
       var TABS = [
-        { n: ["1 Primary", "1 一次構造", "1 一級結構"], a: true },
-        { n: ["2 Secondary", "2 二次構造", "2 二級結構"], a: true },
-        { n: ["3 Tertiary", "3 三次構造", "3 三級結構"], a: true },
-        { n: ["4 Quaternary", "4 四次構造", "4 四級結構"], a: true }
+        { n: ["1 Primary", "1 一次構造", "1 一級結構", "1 1차"], a: true },
+        { n: ["2 Secondary", "2 二次構造", "2 二級結構", "2 2차"], a: true },
+        { n: ["3 Tertiary", "3 三次構造", "3 三級結構", "3 3차"], a: true },
+        { n: ["4 Quaternary", "4 四次構造", "4 四級結構", "4 4차"], a: true }
       ];
       var EXAMTXT = [
         "Primary = order of amino acids (peptide bonds). Secondary = α-helix / β-pleated sheet held by hydrogen bonds between backbone C=O and N–H (AHL). Tertiary = whole-chain 3-D shape from R-group interactions (AHL). Quaternary = 2 or more polypeptides (AHL). The sequence determines the shape.",
         "一次 = アミノ酸の並び順（ペプチド結合）。二次 = 骨格の C=O と N–H の間の水素結合で保たれる α-ヘリックス／βシート (AHL)。三次 = R基 の相互作用による鎖全体の立体構造 (AHL)。四次 = 2本以上のポリペプチド (AHL)。配列が形を決める。",
-        "一級 = 氨基酸的排列次序（肽鍵）。二級 = 由骨架 C=O 與 N–H 之間氫鍵維持的 α 螺旋／β 摺板 (AHL)。三級 = 由 R 基相互作用形成的整條鏈的立體形狀 (AHL)。四級 = 兩條或以上多肽 (AHL)。序列決定形狀。"];
+        "一級 = 氨基酸的排列次序（肽鍵）。二級 = 由骨架 C=O 與 N–H 之間氫鍵維持的 α 螺旋／β 摺板 (AHL)。三級 = 由 R 基相互作用形成的整條鏈的立體形狀 (AHL)。四級 = 兩條或以上多肽 (AHL)。序列決定形狀。", "1차 구조 = 아미노산의 배열 순서(펩타이드 결합). 2차 구조 = 뼈대의 C=O와 N–H 사이의 수소 결합으로 유지되는 α 나선/β 병풍 구조(AHL). 3차 구조 = R기 상호 작용으로 만들어지는 사슬 전체의 3차원 모양(AHL). 4차 구조 = 2개 이상의 폴리펩타이드(AHL). 서열이 모양을 결정한다."];
       var NAR = window.innerWidth < 640;
       var view = el("div");
       root.appendChild(view);
@@ -204,8 +204,8 @@
 
       function legend() {
         return el("div", { class: "legend wl-legend" }, ["N", "P", "A", "B"].map(function (k) { return legendItem("i", "var(" + COL[k] + ")", T(NAR ? CS[k] : CN[k])); }).concat([
-          legendItem("i", "var(--k-hp)", T(["hydrophobic core (shaded)", "疎水性の核 (core, 影)", "疏水核心 (core，陰影)"])),
-          legendItem("l", "var(--k-io)", T(["+/− attraction", "+/− の引力", "+/− 吸引"]))
+          legendItem("i", "var(--k-hp)", T(["hydrophobic core (shaded)", "疎水性の核 (core, 影)", "疏水核心 (core，陰影)", "소수성 중심부(음영)"])),
+          legendItem("l", "var(--k-io)", T(["+/− attraction", "+/− の引力", "+/− 吸引", "+/− 인력"]))
         ]));
       }
       function render() {
@@ -222,7 +222,7 @@
       function PS(t) { return el("p", { class: "small", text: T(t) }); }
 
       function primary() {
-        var svg = sv("svg", { style: "max-height:min(30vh,230px)", viewBox: "0 0 360 150", role: "group", "aria-label": T(["Amino acid sequence", "アミノ酸配列", "氨基酸序列"]) });
+        var svg = sv("svg", { style: "max-height:min(30vh,230px)", viewBox: "0 0 360 150", role: "group", "aria-label": T(["Amino acid sequence", "アミノ酸配列", "氨基酸序列", "아미노산 서열"]) });
         var lineLayer = sv("g", {}); svg.appendChild(lineLayer);
         for (var i = 0; i < 12; i++) {
           (function (i) {
@@ -242,21 +242,21 @@
             svg.appendChild(g);
           })(i);
         }
-        svg.appendChild(sv("text", { x: 6, y: 12, style: "font-size:12px", text: "N-terminus" }));
-        svg.appendChild(sv("text", { x: 354, y: 12, "text-anchor": "end", style: "font-size:12px", text: "C-terminus" }));
-        var smod = T(["simplified model", "簡略化モデル", "簡化模型"]);
-        var a = el("div", { class: "pf" }, [el("strong", { text: T(["Original", "元の配列", "原本序列"]) }), drawFoldSvg(SEQ0, 200, 150)]);
-        var b = el("div", { class: "pf" }, [el("strong", { text: same() ? T(["Edited (no change yet)", "編集後 (変更なし)", "修改後（尚未更改）"]) : T(["Edited", "編集後", "修改後"]) }), drawFoldSvg(seq, 200, 150)]);
-        var demo = el("button", { type: "button", text: NAR ? T(["Demo: make bead #7 acidic", "デモ: #7 を酸性に", "示範：第 7 顆改為酸性"]) : T(["Demo: make bead #7 charged (hydrophobic → acidic)", "デモ: #7 を電荷をもつものに (疎水性 → 酸性)", "示範：把第 7 顆改為帶電荷 (疏水 → 酸性)"]) });
+        svg.appendChild(sv("text", { x: 6, y: 12, style: "font-size:12px", text: T(["N-terminus", "N末端", "N 端", "N 말단"]) }));
+        svg.appendChild(sv("text", { x: 354, y: 12, "text-anchor": "end", style: "font-size:12px", text: T(["C-terminus", "C末端", "C 端", "C 말단"]) }));
+        var smod = T(["simplified model", "簡略化モデル", "簡化模型", "단순화한 모델"]);
+        var a = el("div", { class: "pf" }, [el("strong", { text: T(["Original", "元の配列", "原本序列", "원래 서열"]) }), drawFoldSvg(SEQ0, 200, 150)]);
+        var b = el("div", { class: "pf" }, [el("strong", { text: same() ? T(["Edited (no change yet)", "編集後 (変更なし)", "修改後（尚未更改）", "수정됨 (아직 변화 없음)"]) : T(["Edited", "編集後", "修改後", "수정됨"]) }), drawFoldSvg(seq, 200, 150)]);
+        var demo = el("button", { type: "button", text: NAR ? T(["Demo: make bead #7 acidic", "デモ: #7 を酸性に", "示範：第 7 顆改為酸性", "시연: 7번 구슬을 산성으로 바꾸기"]) : T(["Demo: make bead #7 charged (hydrophobic → acidic)", "デモ: #7 を電荷をもつものに (疎水性 → 酸性)", "示範：把第 7 顆改為帶電荷 (疏水 → 酸性)", "시연: 7번 구슬을 전하를 띠게 바꾸기 (소수성 → 산성)"]) });
         demo.addEventListener("click", function () { seq = SEQ0.slice(); seq[6] = "A"; sel = 6; render(); });
-        var rst = el("button", { type: "button", text: NAR ? T(["Reset", "リセット", "重設"]) : T(["Restore original", "元に戻す", "還原"]) });
+        var rst = el("button", { type: "button", text: NAR ? T(["Reset", "リセット", "重設", "다시 시작"]) : T(["Restore original", "元に戻す", "還原", "원래대로 되돌리기"]) });
         rst.addEventListener("click", function () { seq = SEQ0.slice(); render(); });
         return {
           stage: [svg, el("div", { class: "two" }, [a, b]), el("p", { class: "small", style: "text-align:center", text: "(" + smod + ")" }), legend()],
           panel: [
             NAR ? null : P(["The order of amino acids in a polypeptide, joined by peptide bonds. Tap a bead, then change its R-group type to see what happens to the folded shape.",
               "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
-              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。"]),
+              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서입니다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보세요."]),
             el("strong", { text: T(["Bead #" + (sel + 1) + " is " + T(CN[seq[sel]]) + ". Change it to:", "#" + (sel + 1) + " 番は " + T(CN[seq[sel]]) + " です。次に変更:", "第 " + (sel + 1) + " 顆為 " + T(CN[seq[sel]]) + "。改為："]) }),
             el("div", { class: "opts" }, ["N", "P", "A", "B"].map(function (k) {
               var bt = el("button", { type: "button", "aria-pressed": seq[sel] === k ? "true" : "false", text: T(CS[k]) });
@@ -267,44 +267,44 @@
             more(T, [
               NAR ? P(["The order of amino acids in a polypeptide, joined by peptide bonds. Tap a bead, then change its R-group type to see what happens to the folded shape.",
               "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
-              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。"]) : null,
-              PS(["Each bead is one amino acid, coloured by the type of its R-group.", "丸は1つのアミノ酸で、R基の種類で色分けしています。", "每顆珠代表一個氨基酸，按 R 基類型著色。"]),
+              "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서입니다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보세요."]) : null,
+              PS(["Each bead is one amino acid, coloured by the type of its R-group.", "丸は1つのアミノ酸で、R基の種類で色分けしています。", "每顆珠代表一個氨基酸，按 R 基類型著色。", "구슬 하나가 아미노산 하나이며, R기의 유형에 따라 색이 다릅니다."]),
               PS(["Level check: that amino acids can be joined in any order is core for SL and HL (B1.2.4). The term primary structure and how the sequence decides the 3-D shape (B1.2.7) are AHL.",
                 "レベルの確認: アミノ酸がどんな順序でもつながることは SL・HL 共通です (B1.2.4)。一次構造という用語と、配列が立体構造を決めるしくみ (B1.2.7) は AHL です。",
-                "程度提示：氨基酸可按任何次序連接，屬 SL 和 HL 共同內容 (B1.2.4)。「一級結構」這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬 AHL。"]),
+                "程度提示：氨基酸可按任何次序連接，屬 SL 和 HL 共同內容 (B1.2.4)。「一級結構」這個名稱，以及序列如何決定三維形狀 (B1.2.7)，屬 AHL。", "수준 확인: 아미노산이 어떤 순서로든 연결될 수 있다는 것은 SL과 HL 모두의 핵심 내용입니다(B1.2.4). 1차 구조(primary structure)라는 용어와, 서열이 3차원 모양을 결정하는 방식(B1.2.7)은 AHL입니다."]),
               PS(["Simplified model: a 2-D lattice in which hydrophobic beads cluster together and + and − beads attract. Real proteins fold in 3-D and are far more complex. The key idea is real: the sequence of amino acids, and the position of each one, determines the 3-D shape, so a protein folds into the same precise shape every time.",
                 "簡略化したモデルです。2次元の格子上で、疎水性の丸が集まり、+ と − の丸が引きあいます。実際のタンパク質は3次元で折りたたまれ、はるかに複雑です。ただし要点は本物です。アミノ酸の配列と各アミノ酸の位置が3次元構造を決めるので、タンパク質は毎回同じ正確な形に折りたたまれます。",
-                "簡化模型：在二維格子中，疏水的珠會聚在一起，+ 和 − 的珠相互吸引。真正的蛋白質在三維空間摺疊，複雜得多。但核心概念是真實的：氨基酸的序列及每個氨基酸的位置決定三維形狀，所以蛋白質每次都摺疊成相同而精確的形狀。"])
+                "簡化模型：在二維格子中，疏水的珠會聚在一起，+ 和 − 的珠相互吸引。真正的蛋白質在三維空間摺疊，複雜得多。但核心概念是真實的：氨基酸的序列及每個氨基酸的位置決定三維形狀，所以蛋白質每次都摺疊成相同而精確的形狀。", "단순화한 모델: 소수성 구슬이 서로 모이고 + 구슬과 − 구슬이 서로 끌어당기는 2차원 격자입니다. 실제 단백질은 3차원으로 접히며 훨씬 복잡합니다. 핵심 개념은 실제와 같습니다. 아미노산의 서열과 각 아미노산의 위치가 3차원 모양을 결정하므로, 단백질은 매번 똑같은 정확한 모양으로 접힙니다."])
             ])
           ]
         };
       }
       function drawFoldSvg(s, W, H) {
-        var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": T(["Folded shape", "折りたたまれた形", "摺疊後的形狀"]) });
+        var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": T(["Folded shape", "折りたたまれた形", "摺疊後的形狀", "접힌 모양"]) });
         svg.appendChild(drawFold(s, W, H, { pad: 18, r: 8, max: 36 }));
         return svg;
       }
 
       function secondary() {
-        var svg = sv("svg", { viewBox: "0 0 360 " + (sub === "helix" ? 170 : 215), role: "img", "aria-label": sub });
+        var svg = sv("svg", { viewBox: "0 0 360 " + (sub === "helix" ? 170 : 215), role: "img", "aria-label": T(sub === "helix" ? ["α-helix", "α-ヘリックス", "α 螺旋", "α 나선"] : ["β-pleated sheet", "βシート", "β 摺板", "β 병풍 구조"]) });
         if (sub === "helix") drawHelix(svg); else drawSheet(svg);
         var bs = ["helix", "sheet"].map(function (k) {
-          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "α-ヘリックス (coiling)", "α 螺旋 (coiling)"]) : T(["β-pleated sheet (pleating)", "βシート (pleating)", "β 摺板 (pleating)"]) });
+          var b = el("button", { type: "button", "aria-pressed": sub === k ? "true" : "false", text: k === "helix" ? T(["α-helix (coiling)", "α-ヘリックス (coiling)", "α 螺旋 (coiling)", "α 나선(꼬임)"]) : T(["β-pleated sheet (pleating)", "βシート (pleating)", "β 摺板 (pleating)", "β 병풍 구조(주름)"]) });
           b.addEventListener("click", function () { sub = k; render(); }); return b;
         });
         return {
           stage: [svg, el("div", { class: "legend wl-legend" }, [
-            legendItem("l", "var(--k-hb)", T(["hydrogen bond (C=O ··· H–N)", "水素結合 (C=O ··· H–N)", "氫鍵 (C=O ··· H–N)"])),
-            legendItem("i", "var(--k-mut)", T(["polypeptide backbone", "ポリペプチドの骨格", "多肽骨架"]))
+            legendItem("l", "var(--k-hb)", T(["hydrogen bond (C=O ··· H–N)", "水素結合 (C=O ··· H–N)", "氫鍵 (C=O ··· H–N)", "수소 결합 (C=O ··· H–N)"])),
+            legendItem("i", "var(--k-mut)", T(["polypeptide backbone", "ポリペプチドの骨格", "多肽骨架", "폴리펩타이드 뼈대"]))
           ])],
           panel: [
             P(["Parts of the chain coil into an α-helix or pleat into a β-pleated sheet. Both are held in shape by hydrogen bonds between the C=O of one peptide link and the N–H of another, at regular positions along the backbone. The R-groups are not involved.",
               "鎖の一部は α-ヘリックス (alpha helix) にコイル状に巻くか、βシート (beta-pleated sheet) にひだ状に折れます。どちらも、あるペプチド結合の C=O と別のペプチド結合の N–H の間の水素結合 (hydrogen bond) が骨格に沿って規則的な位置に生じて保たれます。R基は関与しません。",
-              "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。"]),
+              "鏈的一部分會盤繞成 α 螺旋 (alpha helix)，或摺疊成 β 摺板 (beta-pleated sheet)。兩者都由一個肽鍵的 C=O 與另一個肽鍵的 N–H 之間的氫鍵 (hydrogen bond) 維持，氫鍵在骨架上的位置有規律。R 基並不參與。", "사슬의 일부는 α 나선(α-helix)으로 꼬이거나 β 병풍 구조(β-pleated sheet)로 주름집니다. 두 구조 모두 한 펩타이드 결합의 C=O와 다른 펩타이드 결합의 N–H 사이에서 뼈대를 따라 일정한 간격으로 생기는 수소 결합으로 모양이 유지됩니다. R기는 관여하지 않습니다."]),
             el("div", { class: "bar", style: "margin:0" }, bs),
             PS(sub === "helix" ?
-              ["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 骨格がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：骨架盤繞，氫鍵有規律地連接相鄰的每一圈。"] :
-              ["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 骨格の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：骨架相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。"])
+              ["Schematic side view: the backbone coils, and hydrogen bonds link each turn to the next at regular intervals.", "模式的な側面図: 骨格がらせん状に巻き、水素結合が各巻きを次の巻きと規則的につなぎます。", "示意側視圖：骨架盤繞，氫鍵有規律地連接相鄰的每一圈。", "모식적인 옆모습: 뼈대가 꼬여 있고, 수소 결합이 각 회전을 일정한 간격으로 다음 회전과 연결합니다."] :
+              ["Schematic: neighbouring stretches of backbone lie side by side in a zig-zag (pleated) pattern, with hydrogen bonds between them at regular positions.", "模式図: 骨格の隣りあう部分がジグザグ（ひだ状）に並び、その間に水素結合が規則的な位置にできます。", "示意圖：骨架相鄰的部分並排成鋸齒狀（摺疊），之間在有規律的位置形成氫鍵。", "모식도: 이웃한 뼈대 부분이 지그재그(주름) 모양으로 나란히 놓여 있고, 그 사이를 일정한 위치마다 수소 결합이 연결합니다."])
           ]
         };
       }
@@ -346,36 +346,36 @@
           }
         }
         bonds(0, 1, 1); bonds(1, 2, 2);
-        lab(svg, 180, 22, T(["C=O (O) ··· H–N (N) between strands", "C=O (O) ··· H–N (N) 鎖の間", "鏈之間 C=O (O) ··· H–N (N)"]), "var(--k-ink)");
+        lab(svg, 180, 22, T(["C=O (O) ··· H–N (N) between strands", "C=O (O) ··· H–N (N) 鎖の間", "鏈之間 C=O (O) ··· H–N (N)", "가닥 사이의 C=O (O) ··· H–N (N)"]), "var(--k-ink)");
       }
 
       function tertiary() {
-        var svg = sv("svg", { viewBox: "0 0 360 230", role: "img", "aria-label": T(["Folded polypeptide", "折りたたまれたポリペプチド", "摺疊的多肽"]) });
+        var svg = sv("svg", { viewBox: "0 0 360 230", role: "img", "aria-label": T(["Folded polypeptide", "折りたたまれたポリペプチド", "摺疊的多肽", "접힌 폴리펩타이드"]) });
         svg.appendChild(drawFold(seq, 360, 230, { pad: 34, r: 13, max: 62, w: 6 }));
         return {
           stage: [svg, legend()],
           panel: [
             P(["The overall 3-D shape of one whole polypeptide. The chain folds up because of interactions between R-groups: hydrogen bonds, ionic bonds, disulfide bonds and hydrophobic interactions (see the protein folding widget). In a water-soluble protein, hydrophobic R-groups end up clustered together in the core.",
               "1本のポリペプチド全体の立体的な形です。R基どうしの相互作用（水素結合、イオン結合、ジスルフィド結合、疎水性相互作用）で鎖が折りたたまれます（タンパク質の折りたたみの教材を参照）。水に溶けるタンパク質では、疎水性の R基は核に集まります。",
-              "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。在水溶性蛋白質中，疏水的 R 基會聚集在核心。"]),
-            PS(same() ? ["Showing the original sequence. Edit it in the Primary tab to see the shape change (simplified model).", "元の配列を表示中。一次構造のタブで編集すると形が変わります（簡略化モデル）。", "顯示原本序列。在「一級結構」分頁修改，形狀便會改變（簡化模型）。"] :
-              ["Showing your edited sequence: a different sequence gives a different shape (simplified model).", "編集した配列を表示中。配列が違えば形も変わります（簡略化モデル）。", "顯示你修改後的序列：序列不同，形狀便不同（簡化模型）。"])
+              "單一條多肽整體的三維形狀。鏈由於 R 基之間的相互作用（氫鍵、離子鍵、二硫鍵和疏水相互作用）而摺疊（見蛋白質摺疊教材）。在水溶性蛋白質中，疏水的 R 基會聚集在核心。", "폴리펩타이드 하나 전체의 3차원 모양입니다. 사슬은 R기 사이의 상호 작용, 즉 수소 결합, 이온 결합, 이황화 결합, 소수성 상호 작용 때문에 접힙니다(단백질 접힘 위젯 참조). 물에 녹는 단백질에서는 소수성 R기가 중심부에 모입니다."]),
+            PS(same() ? ["Showing the original sequence. Edit it in the Primary tab to see the shape change (simplified model).", "元の配列を表示中。一次構造のタブで編集すると形が変わります（簡略化モデル）。", "顯示原本序列。在「一級結構」分頁修改，形狀便會改變（簡化模型）。", "원래 서열을 보여 주고 있습니다. 1차 탭에서 서열을 수정하면 모양이 바뀌는 것을 볼 수 있습니다(단순화한 모델)."] :
+              ["Showing your edited sequence: a different sequence gives a different shape (simplified model).", "編集した配列を表示中。配列が違えば形も変わります（簡略化モデル）。", "顯示你修改後的序列：序列不同，形狀便不同（簡化模型）。", "수정한 서열을 보여 주고 있습니다. 서열이 다르면 모양도 달라집니다(단순화한 모델)."])
           ]
         };
       }
 
       function quaternary() {
-        var svg = sv("svg", { viewBox: "0 0 360 230", role: "img", "aria-label": T(["Quaternary structure", "四次構造", "四級結構"]) });
+        var svg = sv("svg", { viewBox: "0 0 360 230", role: "img", "aria-label": T(["Quaternary structure", "四次構造", "四級結構", "4차 구조"]) });
         var cols = ["var(--k-acc)", "var(--k-pol)", "var(--k-np)", "var(--k-ac)"];
         var cells = nq === 2 ? [[0, 24, 180, 200], [180, 24, 180, 200]] : [[0, 2, 180, 112], [180, 2, 180, 112], [0, 116, 180, 112], [180, 116, 180, 112]];
         cells.forEach(function (c, i) {
           var g = drawFold(seq, c[2], c[3], { plain: true, pad: 24, max: nq === 2 ? 46 : 32, color: cols[i], w: 9 });
           g.setAttribute("transform", "translate(" + c[0] + "," + c[1] + ")");
           svg.appendChild(g);
-          svg.appendChild(sv("text", { x: c[0] + c[2] / 2, y: c[1] + (nq === 2 ? -6 : 14), "text-anchor": "middle", style: "font-size:13px;font-weight:700;fill:" + cols[i], text: T(["polypeptide ", "ポリペプチド ", "多肽 "]) + (i + 1) }));
+          svg.appendChild(sv("text", { x: c[0] + c[2] / 2, y: c[1] + (nq === 2 ? -6 : 14), "text-anchor": "middle", style: "font-size:13px;font-weight:700;fill:" + cols[i], text: T(["polypeptide ", "ポリペプチド ", "多肽 ", "폴리펩타이드 "]) + (i + 1) }));
         });
         var bs = [2, 4].map(function (k) {
-          var b = el("button", { type: "button", "aria-pressed": nq === k ? "true" : "false", text: k + " " + T(["polypeptides", "本のポリペプチド", "條多肽"]) });
+          var b = el("button", { type: "button", "aria-pressed": nq === k ? "true" : "false", text: (ctx.lang === "ko" ? "폴리펩타이드 " + k + "개" : k + " " + T(["polypeptides", "本のポリペプチド", "條多肽", "폴리펩타이드"])) });
           b.addEventListener("click", function () { nq = k; render(); }); return b;
         });
         return {
@@ -383,10 +383,10 @@
           panel: [
             P(["Some proteins are made of two or more polypeptides assembled into one functional protein. Examples: insulin (2), collagen (3) and haemoglobin (4: two α and two β chains). A conjugated protein also has a non-polypeptide part (a prosthetic group), such as the haem in haemoglobin.",
               "2本以上のポリペプチドが集まって1つの機能するタンパク質になっているものがあります。例: インスリン (2本)、コラーゲン (3本)、ヘモグロビン (4本: α鎖2本とβ鎖2本)。複合タンパク質 (conjugated protein) には、ヘモグロビンのヘムのようにポリペプチド以外の部分 (prosthetic group) もあります。",
-              "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。綴合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。"]),
+              "有些蛋白質由兩條或以上的多肽組合成一個有功能的蛋白質。例子：胰島素 (2 條)、膠原蛋白 (3 條)、血紅蛋白 (4 條：兩條 α 鏈和兩條 β 鏈)。綴合蛋白質 (conjugated protein) 還含有非多肽部分（輔基 prosthetic group），例如血紅蛋白的血紅素 (haem)。", "어떤 단백질은 둘 이상의 폴리펩타이드가 모여 기능을 하는 하나의 단백질이 됩니다. 예: 인슐린(2개), 콜라젠(3개), 헤모글로빈(4개: α 사슬 2개와 β 사슬 2개). 복합 단백질(conjugated protein)은 폴리펩타이드가 아닌 부분(보결 분자단, prosthetic group)도 가지며, 헤모글로빈의 헴(haem)이 그 예입니다."]),
             el("div", { class: "bar", style: "margin:0" }, bs),
-            PS(["Each coloured chain is one folded polypeptide. Together they form the quaternary structure. (Schematic: real subunits are not identical in every protein.)", "色分けした各鎖が折りたたまれた1本のポリペプチドで、全体が四次構造です。（模式図: 実際にはすべてのサブユニットが同じとは限りません。）", "每條顏色的鏈是一條摺疊了的多肽，合起來就是四級結構。（示意圖：實際上並非所有亞基都相同。）"]),
-            more(T, [PS(["Cryogenic electron microscopy (cryo-EM) lets scientists image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) により、肉眼では見えない1分子のタンパク質も画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 令科學家能為單一蛋白質分子造影，這是肉眼無法觀察到的。"])])
+            PS(["Each coloured chain is one folded polypeptide. Together they form the quaternary structure. (Schematic: real subunits are not identical in every protein.)", "色分けした各鎖が折りたたまれた1本のポリペプチドで、全体が四次構造です。（模式図: 実際にはすべてのサブユニットが同じとは限りません。）", "每條顏色的鏈是一條摺疊了的多肽，合起來就是四級結構。（示意圖：實際上並非所有亞基都相同。）", "색이 다른 각 사슬이 접힌 폴리펩타이드 하나입니다. 이들이 함께 4차 구조(quaternary structure)를 이룹니다. (모식도: 실제 소단위가 모든 단백질에서 똑같은 것은 아닙니다.)"]),
+            more(T, [PS(["Cryogenic electron microscopy (cryo-EM) lets scientists image single protein molecules, which cannot be seen with the unaided senses.", "クライオ電子顕微鏡 (cryo-EM) により、肉眼では見えない1分子のタンパク質も画像化できます。", "冷凍電子顯微鏡 (cryo-EM) 令科學家能為單一蛋白質分子造影，這是肉眼無法觀察到的。", "극저온 전자 현미경(cryo-EM)을 사용하면 인간의 감각으로는 볼 수 없는 단백질 분자 하나하나를 영상으로 볼 수 있습니다."])])
           ]
         };
       }

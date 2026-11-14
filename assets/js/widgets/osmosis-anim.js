@@ -6,7 +6,7 @@
    Uses "solute concentration" language only (no water potential / tonicity terms). Illustrative model. */
 (function () {
   "use strict";
-  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
   var ID = "w-osmosis-anim-css";
   var KIT = [
     ":where(.wl){display:grid;gap:.75rem;--stage-max:min(42vh,320px)}",
@@ -46,29 +46,29 @@
   ].join("\n");
 
   var T = {
-    play: L("Play", "再生", "播放"), pause: L("Pause", "停止", "暫停"),
-    step: L("Step", "1ステップ", "逐步"), restart: L("Restart", "最初から", "重新開始"),
-    left: L("Left solute", "左の溶質", "左側溶質"), right: L("Right solute", "右の溶質", "右側溶質"),
-    aq: L("Aquaporins present", "アクアポリンあり", "有水通道蛋白"),
-    pEq: L("Equal", "同じ", "相同"), pR: L("Right higher", "右が高い", "右側較高"), pL: L("Left higher", "左が高い", "左側較高"),
-    cs: L("Solute conc.", "溶質濃度", "溶質濃度"),
-    cl: L("Left concentration", "左の濃度", "左側濃度"), cr: L("Right concentration", "右の濃度", "右側濃度"),
-    net: L("Net water movement", "水の正味の移動", "水的淨移動"),
-    none: L("none", "なし", "無"),
-    water: L("water molecule", "水分子 (water)", "水分子 (water)"),
-    solute: L("solute particle", "溶質粒子 (solute)", "溶質粒子 (solute)"),
-    aqL: L("aquaporin", "アクアポリン (aquaporin)", "水通道蛋白 (aquaporin)"),
-    mem: L("partially permeable membrane", "半透膜 (partially permeable membrane)", "半透膜 (partially permeable membrane)"),
-    mStart: L("Water molecules move randomly in all directions. Solute particles cannot cross the membrane. Press Play.", "水分子は不規則にあらゆる方向へ動きます。溶質粒子は膜を通れません。「再生」を押しましょう。", "水分子向各個方向隨機運動。溶質粒子不能穿過膜。按「播放」。"),
-    mMove: L("More water molecules reach the aquaporins from the side with <b>lower solute concentration</b>, so more cross that way. <b>Net movement of water is towards the higher solute concentration</b>.", "<b>溶質濃度が低い</b>側からアクアポリンに届く水分子の方が多いので、その向きに多く通ります。<b>水の正味の移動は溶質濃度の高い方へ</b>向かいます。", "從<b>溶質濃度較低</b>的一側到達水通道蛋白的水分子較多，所以較多水分子往這方向穿過。<b>水的淨移動方向是朝向溶質濃度較高的一側</b>。"),
-    mEq: L("The solute concentrations are equal. Water still crosses randomly in both directions, at the same rate, so there is <b>no net movement</b>.", "溶質濃度が等しくなりました。水は両方向にランダムに通り続けますが、速さは同じなので<b>正味の移動はありません</b>。", "溶質濃度相等。水分子仍隨機地雙向穿過，速率相同，所以<b>沒有淨移動</b>。"),
-    mNoAq: L("Without aquaporins water crosses the lipid bilayer only very slowly, so osmosis is much slower.", "アクアポリンがないと、水は脂質二重層をとてもゆっくりしか通れないので、浸透はずっと遅くなります。", "沒有水通道蛋白時，水只能非常緩慢地穿過脂質雙層，所以滲透慢得多。"),
-    ex: L("Osmosis: net movement of water across a partially permeable membrane towards the higher solute concentration. Solutes cannot cross; water uses aquaporins.", "浸透 (osmosis): 水が半透膜を通って溶質濃度の高い方へ正味で移動すること。溶質は通れず、水はアクアポリン (aquaporin) を通る。", "滲透 (osmosis)：水穿過半透膜，淨移動至溶質濃度較高的一側。溶質不能穿過；水經水通道蛋白 (aquaporin)。"),
-    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住"),
-    more: L("More detail", "くわしく", "更多資料"),
-    md: L("Why? Water molecules move randomly. On the side with more solute particles there are fewer water molecules for the same volume, so fewer hit the aquaporins each second. More water crosses from the other side. In this model the membrane is free to move, like the wall of a stretchy bag, so you can see the volume of the side gaining water increase until the concentrations match. In real cells the volume change is limited (for example, a cell wall builds up turgor pressure, D2.3.6), so net movement can stop before concentrations are equal, or an animal cell can burst (D2.3.5). Illustrative model, not to scale.", "なぜか: 水分子は不規則に動きます。溶質が多い側は同じ体積に含まれる水分子が少ないので、1秒間にアクアポリンに当たる水分子も少なくなります。反対側からより多くの水が通ります。このモデルでは膜が伸び縮みする袋の壁のように自由に動くので、水が入る側の体積が濃度がそろうまで増えるのが見えます。実際の細胞では体積の変化に限りがあり（例: 細胞壁が膨圧 (turgor pressure) を生じる、D2.3.6）、濃度が等しくなる前に正味の移動が止まったり、動物細胞が破裂したり (D2.3.5) します。説明用のモデルで、縮尺は不同です。", "為什麼？水分子隨機運動。溶質較多的一側，同樣體積內水分子較少，每秒撞到水通道蛋白的水分子也較少。因此從另一側穿過的水較多。在這模型中，膜像有彈性的袋壁一樣可以自由移動，讓你看到得到水的一側體積增加，直到濃度相等。在真實細胞中體積變化有限（例如細胞壁會產生膨壓 (turgor pressure)，D2.3.6），所以淨移動可能在濃度相等前停止，或動物細胞會脹破 (D2.3.5)。示意模型，並非按比例。"),
-    ref: L("Syllabus B2.1.5 (links to B2.1.1–2)", "シラバス B2.1.5（B2.1.1–2 と関連）", "課程大綱 B2.1.5（與B2.1.1–2 有關）"),
-    aria: L("Particle model of osmosis across a membrane with aquaporins", "アクアポリンのある膜での浸透の粒子モデル", "經水通道蛋白的滲透粒子模型")
+    play: L("Play", "再生", "播放", "재생"), pause: L("Pause", "停止", "暫停", "일시 정지"),
+    step: L("Step", "1ステップ", "逐步", "단계 이동"), restart: L("Restart", "最初から", "重新開始", "다시 시작"),
+    left: L("Left solute", "左の溶質", "左側溶質", "왼쪽 용질"), right: L("Right solute", "右の溶質", "右側溶質", "오른쪽 용질"),
+    aq: L("Aquaporins present", "アクアポリンあり", "有水通道蛋白", "아쿠아포린 있음"),
+    pEq: L("Equal", "同じ", "相同", "같음"), pR: L("Right higher", "右が高い", "右側較高", "오른쪽이 높음"), pL: L("Left higher", "左が高い", "左側較高", "왼쪽이 높음"),
+    cs: L("Solute conc.", "溶質濃度", "溶質濃度", "용질 농도"),
+    cl: L("Left concentration", "左の濃度", "左側濃度", "왼쪽 농도"), cr: L("Right concentration", "右の濃度", "右側濃度", "오른쪽 농도"),
+    net: L("Net water movement", "水の正味の移動", "水的淨移動", "물의 알짜 이동"),
+    none: L("none", "なし", "無", "없음"),
+    water: L("water molecule", "水分子 (water)", "水分子 (water)", "물 분자(water)"),
+    solute: L("solute particle", "溶質粒子 (solute)", "溶質粒子 (solute)", "용질 입자(solute)"),
+    aqL: L("aquaporin", "アクアポリン (aquaporin)", "水通道蛋白 (aquaporin)", "아쿠아포린(aquaporin)"),
+    mem: L("partially permeable membrane", "半透膜 (partially permeable membrane)", "半透膜 (partially permeable membrane)", "반투과성 막(partially permeable membrane)"),
+    mStart: L("Water molecules move randomly in all directions. Solute particles cannot cross the membrane. Press Play.", "水分子は不規則にあらゆる方向へ動きます。溶質粒子は膜を通れません。「再生」を押しましょう。", "水分子向各個方向隨機運動。溶質粒子不能穿過膜。按「播放」。", "물 분자는 모든 방향으로 무작위로 움직인다. 용질 입자는 막을 통과할 수 없다. 재생을 누른다."),
+    mMove: L("More water molecules reach the aquaporins from the side with <b>lower solute concentration</b>, so more cross that way. <b>Net movement of water is towards the higher solute concentration</b>.", "<b>溶質濃度が低い</b>側からアクアポリンに届く水分子の方が多いので、その向きに多く通ります。<b>水の正味の移動は溶質濃度の高い方へ</b>向かいます。", "從<b>溶質濃度較低</b>的一側到達水通道蛋白的水分子較多，所以較多水分子往這方向穿過。<b>水的淨移動方向是朝向溶質濃度較高的一側</b>。", "<b>용질 농도가 더 낮은</b> 쪽에서 아쿠아포린에 닿는 물 분자가 더 많으므로, 그쪽으로 더 많이 통과한다. <b>물의 알짜 이동은 용질 농도가 더 높은 쪽으로 일어난다</b>."),
+    mEq: L("The solute concentrations are equal. Water still crosses randomly in both directions, at the same rate, so there is <b>no net movement</b>.", "溶質濃度が等しくなりました。水は両方向にランダムに通り続けますが、速さは同じなので<b>正味の移動はありません</b>。", "溶質濃度相等。水分子仍隨機地雙向穿過，速率相同，所以<b>沒有淨移動</b>。", "용질 농도가 같다. 물은 여전히 양방향으로 무작위로 같은 속도로 통과하므로 <b>알짜 이동이 없다</b>."),
+    mNoAq: L("Without aquaporins water crosses the lipid bilayer only very slowly, so osmosis is much slower.", "アクアポリンがないと、水は脂質二重層をとてもゆっくりしか通れないので、浸透はずっと遅くなります。", "沒有水通道蛋白時，水只能非常緩慢地穿過脂質雙層，所以滲透慢得多。", "아쿠아포린이 없으면 물은 지질 2중층을 매우 느리게만 통과하므로 삼투가 훨씬 느리다."),
+    ex: L("Osmosis: net movement of water across a partially permeable membrane towards the higher solute concentration. Solutes cannot cross; water uses aquaporins.", "浸透 (osmosis): 水が半透膜を通って溶質濃度の高い方へ正味で移動すること。溶質は通れず、水はアクアポリン (aquaporin) を通る。", "滲透 (osmosis)：水穿過半透膜，淨移動至溶質濃度較高的一側。溶質不能穿過；水經水通道蛋白 (aquaporin)。", "삼투(osmosis): 반투과성 막을 가로질러 물이 용질 농도가 더 높은 쪽으로 알짜 이동하는 현상. 용질은 통과할 수 없고, 물은 아쿠아포린을 이용한다."),
+    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住", "시험을 위해 기억할 것"),
+    more: L("More detail", "くわしく", "更多資料", "더 자세히"),
+    md: L("Why? Water molecules move randomly. On the side with more solute particles there are fewer water molecules for the same volume, so fewer hit the aquaporins each second. More water crosses from the other side. In this model the membrane is free to move, like the wall of a stretchy bag, so you can see the volume of the side gaining water increase until the concentrations match. In real cells the volume change is limited (for example, a cell wall builds up turgor pressure, D2.3.6), so net movement can stop before concentrations are equal, or an animal cell can burst (D2.3.5). Illustrative model, not to scale.", "なぜか: 水分子は不規則に動きます。溶質が多い側は同じ体積に含まれる水分子が少ないので、1秒間にアクアポリンに当たる水分子も少なくなります。反対側からより多くの水が通ります。このモデルでは膜が伸び縮みする袋の壁のように自由に動くので、水が入る側の体積が濃度がそろうまで増えるのが見えます。実際の細胞では体積の変化に限りがあり（例: 細胞壁が膨圧 (turgor pressure) を生じる、D2.3.6）、濃度が等しくなる前に正味の移動が止まったり、動物細胞が破裂したり (D2.3.5) します。説明用のモデルで、縮尺は不同です。", "為什麼？水分子隨機運動。溶質較多的一側，同樣體積內水分子較少，每秒撞到水通道蛋白的水分子也較少。因此從另一側穿過的水較多。在這模型中，膜像有彈性的袋壁一樣可以自由移動，讓你看到得到水的一側體積增加，直到濃度相等。在真實細胞中體積變化有限（例如細胞壁會產生膨壓 (turgor pressure)，D2.3.6），所以淨移動可能在濃度相等前停止，或動物細胞會脹破 (D2.3.5)。示意模型，並非按比例。", "왜 그럴까? 물 분자는 무작위로 움직인다. 용질 입자가 더 많은 쪽에서는 같은 부피에 물 분자가 더 적으므로, 매초 아쿠아포린에 부딪히는 물 분자도 더 적다. 그러면 반대쪽에서 더 많은 물이 통과한다. 이 모형에서는 막이 늘어나는 주머니의 벽처럼 자유롭게 움직이므로, 물을 얻는 쪽의 부피가 농도가 같아질 때까지 커지는 것을 볼 수 있다. 실제 세포에서는 부피 변화가 제한된다(예: 세포벽이 팽압을 만든다, D2.3.6). 그래서 알짜 이동이 농도가 같아지기 전에 멈추거나, 동물 세포가 터질 수도 있다(D2.3.5). 예시 모형이며 축척은 맞지 않는다."),
+    ref: L("Syllabus B2.1.5 (links to B2.1.1–2)", "シラバス B2.1.5（B2.1.1–2 と関連）", "課程大綱 B2.1.5（與B2.1.1–2 有關）", "교육과정 B2.1.5 (B2.1.1–2와 연결)"),
+    aria: L("Particle model of osmosis across a membrane with aquaporins", "アクアポリンのある膜での浸透の粒子モデル", "經水通道蛋白的滲透粒子模型", "아쿠아포린이 있는 막을 가로지르는 삼투의 입자 모형")
   };
 
   function clamp(x, a, b) { return x < a ? a : (x > b ? b : x); }
@@ -80,7 +80,7 @@
   var X0 = 22, X1 = 338, Y0 = 30, Y1 = 190, MT = 14, NT = 40, PORES = [50, 88, 126, 164], PH = 9;
 
   IB.registerWidget("osmosis-anim", {
-    title: L("Osmosis and aquaporins", "浸透とアクアポリン", "滲透與水通道蛋白"),
+    title: L("Osmosis and aquaporins", "浸透とアクアポリン", "滲透與水通道蛋白", "삼투와 아쿠아포린"),
     mount: function (el, ctx) {
       if (!document.getElementById(ID)) { var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st); }
       var t = ctx.t, opt = ctx.options || {};

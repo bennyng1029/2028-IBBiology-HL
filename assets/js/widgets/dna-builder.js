@@ -3,7 +3,7 @@
    Shapes follow the guide: circle = phosphate, pentagon = pentose sugar, rectangle = base.
    The numbers of hydrogen bonds per base pair are deliberately NOT shown (not required by the guide). */
 (function () {
-  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko || en }; };
   var P5 = "5′", P3 = "3′";
 
   var CSS = [
@@ -33,81 +33,81 @@
   ].join("\n");
 
   var T = {
-    title: L("DNA and RNA builder", "DNA・RNA ビルダー", "DNA 與 RNA 建構器"),
+    title: L("DNA and RNA builder", "DNA・RNA ビルダー", "DNA 與 RNA 建構器", "DNA와 RNA 만들기"),
     tabs: {
-      parts: L("Nucleotide parts", "ヌクレオチドの構成 (nucleotide)", "核苷酸組成 (nucleotide)"),
-      build: L("Build a DNA strand", "DNA 鎖をつくる (complementary)", "建構 DNA 鏈 (complementary)"),
-      compare: L("DNA vs RNA", "DNA と RNA", "DNA 與 RNA")
+      parts: L("Nucleotide parts", "ヌクレオチドの構成 (nucleotide)", "核苷酸組成 (nucleotide)", "뉴클레오타이드의 구성 (nucleotide)"),
+      build: L("Build a DNA strand", "DNA 鎖をつくる (complementary)", "建構 DNA 鏈 (complementary)", "DNA 가닥 만들기"),
+      compare: L("DNA vs RNA", "DNA と RNA", "DNA 與 RNA", "DNA와 RNA 비교")
     },
-    dna: L("DNA", "DNA", "DNA"), rna: L("RNA", "RNA", "RNA"),
-    join: L("Join nucleotides (condensation)", "ヌクレオチドをつなぐ (縮合)", "連接核苷酸 (縮合)"),
-    split: L("Separate them", "もとに戻す", "分開它們"),
-    sh53: L("Show 5′ and 3′ ends", "5′・3′ 末端を表示 (5′ and 3′ ends)", "顯示 5′ 與 3′ 端 (5′ and 3′ ends)"),
-    shPP: L("Colour purines and pyrimidines", "プリン・ピリミジンを色分け (purine, pyrimidine)", "以顏色區分嘌呤與嘧啶 (purine, pyrimidine)"),
-    newSeq: L("New sequence", "新しい配列", "新序列"),
-    reset: L("Start again", "やり直す", "重新開始"),
-    ahl: L("AHL", "AHL", "AHL"),
-    names: { A: L("adenine", "アデニン (adenine)", "腺嘌呤 (adenine)"), T: L("thymine", "チミン (thymine)", "胸腺嘧啶 (thymine)"), G: L("guanine", "グアニン (guanine)", "鳥嘌呤 (guanine)"), C: L("cytosine", "シトシン (cytosine)", "胞嘧啶 (cytosine)"), U: L("uracil", "ウラシル (uracil)", "尿嘧啶 (uracil)") },
+    dna: L("DNA", "DNA", "DNA", "DNA"), rna: L("RNA", "RNA", "RNA", "RNA"),
+    join: L("Join nucleotides (condensation)", "ヌクレオチドをつなぐ (縮合)", "連接核苷酸 (縮合)", "뉴클레오타이드 연결하기 (축합 반응, condensation)"),
+    split: L("Separate them", "もとに戻す", "分開它們", "분리하기"),
+    sh53: L("Show 5′ and 3′ ends", "5′・3′ 末端を表示 (5′ and 3′ ends)", "顯示 5′ 與 3′ 端 (5′ and 3′ ends)", "5′ 말단과 3′ 말단 표시"),
+    shPP: L("Colour purines and pyrimidines", "プリン・ピリミジンを色分け (purine, pyrimidine)", "以顏色區分嘌呤與嘧啶 (purine, pyrimidine)", "퓨린과 피리미딘 색 구분"),
+    newSeq: L("New sequence", "新しい配列", "新序列", "새 염기 서열"),
+    reset: L("Start again", "やり直す", "重新開始", "다시 시작"),
+    ahl: L("AHL", "AHL", "AHL", "AHL"),
+    names: { A: L("adenine", "アデニン (adenine)", "腺嘌呤 (adenine)", "아데닌"), T: L("thymine", "チミン (thymine)", "胸腺嘧啶 (thymine)", "타이민"), G: L("guanine", "グアニン (guanine)", "鳥嘌呤 (guanine)", "구아닌"), C: L("cytosine", "シトシン (cytosine)", "胞嘧啶 (cytosine)", "사이토신"), U: L("uracil", "ウラシル (uracil)", "尿嘧啶 (uracil)", "유라실") },
     lab: {
-      phosphate: L("phosphate", "リン酸 (phosphate)", "磷酸 (phosphate)"),
-      sugar: L("pentose sugar", "五炭糖 (pentose sugar)", "戊糖 (pentose sugar)"),
-      deoxy: L("deoxyribose", "デオキシリボース", "脫氧核糖"),
-      ribose: L("ribose", "リボース", "核糖"),
-      base: L("nitrogenous base", "窒素を含む塩基 (nitrogenous base)", "含氮鹼基 (nitrogenous base)"),
-      monomers: L("3 separate nucleotides", "3つの別々のヌクレオチド", "3 個分開的核苷酸"),
-      polymer: L("one strand (polymer)", "1本の鎖 (polymer)", "一條鏈 (polymer)"),
-      backbone: L("sugar–phosphate backbone", "糖−リン酸骨格 (sugar–phosphate backbone)", "糖−磷酸骨架 (sugar–phosphate backbone)"),
-      water: L("water released", "水が放出される", "釋出水"),
-      pair: L("complementary base pair", "相補的塩基対", "互補鹼基對"),
-      legP: L("circle = phosphate", "円 = リン酸 (phosphate)", "圓形 = 磷酸 (phosphate)"),
-      legS: L("pentagon = pentose sugar", "五角形 = 五炭糖 (pentose sugar)", "五邊形 = 戊糖 (pentose sugar)"),
-      legB: L("rectangle = base", "長方形 = 塩基 (base)", "長方形 = 鹼基 (base)"),
-      legH: L("dashed = hydrogen bonds", "破線 = 水素結合 (hydrogen bonds)", "虛線 = 氫鍵 (hydrogen bonds)"),
-      legC: L("solid line = covalent bond", "実線 = 共有結合", "實線 = 共價鍵"),
-      purine: L("purine (A, G): double ring, long", "プリン (purine)：A、G。二重環で長い", "嘌呤 (purine)：A、G。雙環，較長"),
-      pyrimidine: L("pyrimidine (C, T): single ring, short", "ピリミジン (pyrimidine)：C、T。単一環で短い", "嘧啶 (pyrimidine)：C、T。單環，較短"),
-      sameWidth: L("every pair is one purine + one pyrimidine: same width", "どの対もプリン1つ + ピリミジン1つ：同じ幅", "每個鹼基對都是一個嘌呤 + 一個嘧啶：寬度相同"),
-      dirs: L("antiparallel: strands run in opposite directions", "逆平行 (antiparallel)：2本の鎖は逆向き", "反向平行 (antiparallel)：兩條鏈走向相反"),
-      strands2: L("two strands", "2本鎖 (two strands)", "兩條鏈 (two strands)"),
-      strand1: L("one strand", "1本鎖 (one strand)", "一條鏈 (one strand)"),
-      ribose2: L("ribose", "リボース (ribose)", "核糖 (ribose)"),
-      deoxy2: L("deoxyribose", "デオキシリボース (deoxyribose)", "脫氧核糖 (deoxyribose)"),
-      base1: L("base", "塩基", "鹼基"),
-      slot: L("?", "?", "?")
+      phosphate: L("phosphate", "リン酸 (phosphate)", "磷酸 (phosphate)", "인산"),
+      sugar: L("pentose sugar", "五炭糖 (pentose sugar)", "戊糖 (pentose sugar)", "5탄당 (pentose)"),
+      deoxy: L("deoxyribose", "デオキシリボース", "脫氧核糖", "디옥시리보스"),
+      ribose: L("ribose", "リボース", "核糖", "리보스"),
+      base: L("nitrogenous base", "窒素を含む塩基 (nitrogenous base)", "含氮鹼基 (nitrogenous base)", "염기"),
+      monomers: L("3 separate nucleotides", "3つの別々のヌクレオチド", "3 個分開的核苷酸", "분리된 뉴클레오타이드 3개"),
+      polymer: L("one strand (polymer)", "1本の鎖 (polymer)", "一條鏈 (polymer)", "가닥 1개 (중합체)"),
+      backbone: L("sugar–phosphate backbone", "糖−リン酸骨格 (sugar–phosphate backbone)", "糖−磷酸骨架 (sugar–phosphate backbone)", "당-인산 골격"),
+      water: L("water released", "水が放出される", "釋出水", "방출된 물"),
+      pair: L("complementary base pair", "相補的塩基対", "互補鹼基對", "상보적 염기쌍"),
+      legP: L("circle = phosphate", "円 = リン酸 (phosphate)", "圓形 = 磷酸 (phosphate)", "원 = 인산"),
+      legS: L("pentagon = pentose sugar", "五角形 = 五炭糖 (pentose sugar)", "五邊形 = 戊糖 (pentose sugar)", "오각형 = 5탄당"),
+      legB: L("rectangle = base", "長方形 = 塩基 (base)", "長方形 = 鹼基 (base)", "직사각형 = 염기"),
+      legH: L("dashed = hydrogen bonds", "破線 = 水素結合 (hydrogen bonds)", "虛線 = 氫鍵 (hydrogen bonds)", "점선 = 수소 결합"),
+      legC: L("solid line = covalent bond", "実線 = 共有結合", "實線 = 共價鍵", "실선 = 공유 결합"),
+      purine: L("purine (A, G): double ring, long", "プリン (purine)：A、G。二重環で長い", "嘌呤 (purine)：A、G。雙環，較長", "퓨린(A, G): 2중 고리, 긺"),
+      pyrimidine: L("pyrimidine (C, T): single ring, short", "ピリミジン (pyrimidine)：C、T。単一環で短い", "嘧啶 (pyrimidine)：C、T。單環，較短", "피리미딘(C, T): 1중 고리, 짧음"),
+      sameWidth: L("every pair is one purine + one pyrimidine: same width", "どの対もプリン1つ + ピリミジン1つ：同じ幅", "每個鹼基對都是一個嘌呤 + 一個嘧啶：寬度相同", "모든 염기쌍은 퓨린 1개 + 피리미딘 1개: 너비가 같다"),
+      dirs: L("antiparallel: strands run in opposite directions", "逆平行 (antiparallel)：2本の鎖は逆向き", "反向平行 (antiparallel)：兩條鏈走向相反", "역평행: 두 가닥은 서로 반대 방향으로 뻗는다"),
+      strands2: L("two strands", "2本鎖 (two strands)", "兩條鏈 (two strands)", "가닥 2개"),
+      strand1: L("one strand", "1本鎖 (one strand)", "一條鏈 (one strand)", "가닥 1개"),
+      ribose2: L("ribose", "リボース (ribose)", "核糖 (ribose)", "리보스"),
+      deoxy2: L("deoxyribose", "デオキシリボース (deoxyribose)", "脫氧核糖 (deoxyribose)", "디옥시리보스"),
+      base1: L("base", "塩基", "鹼基", "염기"),
+      slot: L("?", "?", "?", "?")
     },
     parts: {
-      phosphate: L("<strong>Phosphate</strong> (circle). It joins to the sugar of the next nucleotide, forming the backbone.", "<strong>リン酸</strong> (円)。次のヌクレオチドの糖とつながり、骨格をつくります。", "<strong>磷酸</strong> (圓形)。它與下一個核苷酸的糖連接，形成骨架。"),
-      sugarDNA: L("<strong>Deoxyribose</strong> (pentagon): the pentose (five-carbon) sugar of DNA. The phosphate and the base are both attached to it.", "<strong>デオキシリボース</strong> (五角形)：DNA の五炭糖 (炭素5個の糖)。リン酸と塩基の両方が結合しています。", "<strong>脫氧核糖</strong> (五邊形)：DNA 的戊糖 (五碳糖)。磷酸和鹼基都連接在它上面。"),
-      sugarRNA: L("<strong>Ribose</strong> (pentagon): the pentose (five-carbon) sugar of RNA. The phosphate and the base are both attached to it.", "<strong>リボース</strong> (五角形)：RNA の五炭糖 (炭素5個の糖)。リン酸と塩基の両方が結合しています。", "<strong>核糖</strong> (五邊形)：RNA 的戊糖 (五碳糖)。磷酸和鹼基都連接在它上面。"),
-      base: L("<strong>Nitrogenous base</strong> (rectangle). The order of bases along the strand is the genetic code.", "<strong>窒素を含む塩基</strong> (長方形)。鎖に沿った塩基の並び順が遺伝暗号です。", "<strong>含氮鹼基</strong> (長方形)。沿鏈的鹼基排列次序就是遺傳密碼。"),
-      hint: L("Tap a shape to see what it is.", "図形をタップすると、何かがわかります。", "點按圖形查看它是什麼。")
+      phosphate: L("<strong>Phosphate</strong> (circle). It joins to the sugar of the next nucleotide, forming the backbone.", "<strong>リン酸</strong> (円)。次のヌクレオチドの糖とつながり、骨格をつくります。", "<strong>磷酸</strong> (圓形)。它與下一個核苷酸的糖連接，形成骨架。", "<strong>인산(phosphate)</strong> (원). 다음 뉴클레오타이드의 당과 결합하여 골격을 이룬다."),
+      sugarDNA: L("<strong>Deoxyribose</strong> (pentagon): the pentose (five-carbon) sugar of DNA. The phosphate and the base are both attached to it.", "<strong>デオキシリボース</strong> (五角形)：DNA の五炭糖 (炭素5個の糖)。リン酸と塩基の両方が結合しています。", "<strong>脫氧核糖</strong> (五邊形)：DNA 的戊糖 (五碳糖)。磷酸和鹼基都連接在它上面。", "<strong>디옥시리보스(deoxyribose)</strong> (오각형): DNA의 5탄당(탄소 5개로 된 당). 인산과 염기가 모두 여기에 붙어 있다."),
+      sugarRNA: L("<strong>Ribose</strong> (pentagon): the pentose (five-carbon) sugar of RNA. The phosphate and the base are both attached to it.", "<strong>リボース</strong> (五角形)：RNA の五炭糖 (炭素5個の糖)。リン酸と塩基の両方が結合しています。", "<strong>核糖</strong> (五邊形)：RNA 的戊糖 (五碳糖)。磷酸和鹼基都連接在它上面。", "<strong>리보스(ribose)</strong> (오각형): RNA의 5탄당(탄소 5개로 된 당). 인산과 염기가 모두 여기에 붙어 있다."),
+      base: L("<strong>Nitrogenous base</strong> (rectangle). The order of bases along the strand is the genetic code.", "<strong>窒素を含む塩基</strong> (長方形)。鎖に沿った塩基の並び順が遺伝暗号です。", "<strong>含氮鹼基</strong> (長方形)。沿鏈的鹼基排列次序就是遺傳密碼。", "<strong>염기(nitrogenous base)</strong> (직사각형). 가닥을 따라 늘어선 염기의 순서가 유전 암호이다."),
+      hint: L("Tap a shape to see what it is.", "図形をタップすると、何かがわかります。", "點按圖形查看它是什麼。", "도형을 눌러 무엇인지 확인하시오.")
     },
     capParts: {
-      separate: L("Each nucleotide has a phosphate, a pentose sugar and a base.", "各ヌクレオチドは、リン酸・五炭糖・塩基をもちます。", "每個核苷酸都有一個磷酸、一個戊糖和一個鹼基。"),
-      joined: L("<strong>Condensation:</strong> the phosphate of one nucleotide bonds to the sugar of the next and a molecule of water is released each time. The covalent sugar–phosphate bonds make a strong backbone, and the bases stick out sideways.", "<strong>縮合：</strong>あるヌクレオチドのリン酸が次のヌクレオチドの糖と結合し、そのたびに水の分子が1つ放出されます。共有結合した糖−リン酸の結合が強い骨格をつくり、塩基は横に突き出します。", "<strong>縮合：</strong>一個核苷酸的磷酸與下一個的糖結合，每次釋出一分子水。共價的糖−磷酸鍵形成堅固的骨架，鹼基則向側面伸出。")
+      separate: L("Each nucleotide has a phosphate, a pentose sugar and a base.", "各ヌクレオチドは、リン酸・五炭糖・塩基をもちます。", "每個核苷酸都有一個磷酸、一個戊糖和一個鹼基。", "각 뉴클레오타이드는 인산, 5탄당, 염기를 하나씩 가진다."),
+      joined: L("<strong>Condensation:</strong> the phosphate of one nucleotide bonds to the sugar of the next and a molecule of water is released each time. The covalent sugar–phosphate bonds make a strong backbone, and the bases stick out sideways.", "<strong>縮合：</strong>あるヌクレオチドのリン酸が次のヌクレオチドの糖と結合し、そのたびに水の分子が1つ放出されます。共有結合した糖−リン酸の結合が強い骨格をつくり、塩基は横に突き出します。", "<strong>縮合：</strong>一個核苷酸的磷酸與下一個的糖結合，每次釋出一分子水。共價的糖−磷酸鍵形成堅固的骨架，鹼基則向側面伸出。", "<strong>축합 반응(condensation):</strong> 한 뉴클레오타이드의 인산이 다음 뉴클레오타이드의 당과 결합하며, 그때마다 물 분자 1개가 방출된다. 공유 결합인 당-인산 결합이 튼튼한 골격(backbone)을 만들고, 염기는 옆으로 튀어나온다.")
     },
     build: {
-      start: L("Tap the base that pairs with the highlighted base on the left strand.", "左の鎖の強調された塩基と対をつくる塩基をタップしてください。", "請點按能與左鏈高亮鹼基配對的鹼基。"),
-      wrong: L("Not quite. <strong>A pairs with T, and G pairs with C</strong> (hydrogen bonds between complementary bases). Try again.", "惜しい。<strong>A は T と、G は C と対をつくります</strong> (相補的な塩基どうしの水素結合)。もう一度。", "不完全正確。<strong>A 與 T 配對，G 與 C 配對</strong> (互補鹼基之間的氫鍵)。請再試一次。"),
-      right: L("Correct! Each base pairs with its complement through hydrogen bonds.", "正解！各塩基は、水素結合によって相補的な塩基と対をつくります。", "正確！每個鹼基都透過氫鍵與其互補鹼基配對。"),
-      done: L("Complete. The new strand is complementary to the template. Notice the two backbones run in opposite directions (antiparallel).", "完成です。新しい鎖は鋳型に相補的です。2本の骨格が逆向き (逆平行) に走っていることに注目しましょう。", "完成。新鏈與模板互補。請留意兩條骨架走向相反 (反向平行)。"),
-      mistakes: L("Mistakes", "間違い", "錯誤次數"),
-      template: L("template strand", "鋳型鎖 (template)", "模板鏈 (template)"),
-      newStrand: L("new strand", "新しい鎖 (new)", "新鏈 (new)")
+      start: L("Tap the base that pairs with the highlighted base on the left strand.", "左の鎖の強調された塩基と対をつくる塩基をタップしてください。", "請點按能與左鏈高亮鹼基配對的鹼基。", "왼쪽 가닥에서 강조 표시된 염기와 쌍을 이루는 염기를 누르시오."),
+      wrong: L("Not quite. <strong>A pairs with T, and G pairs with C</strong> (hydrogen bonds between complementary bases). Try again.", "惜しい。<strong>A は T と、G は C と対をつくります</strong> (相補的な塩基どうしの水素結合)。もう一度。", "不完全正確。<strong>A 與 T 配對，G 與 C 配對</strong> (互補鹼基之間的氫鍵)。請再試一次。", "틀렸다. <strong>A는 T와, G는 C와 쌍을 이룬다</strong>(상보적 염기 사이의 수소 결합). 다시 해 보시오."),
+      right: L("Correct! Each base pairs with its complement through hydrogen bonds.", "正解！各塩基は、水素結合によって相補的な塩基と対をつくります。", "正確！每個鹼基都透過氫鍵與其互補鹼基配對。", "정답이다! 각 염기는 수소 결합으로 자신의 상보적 염기와 쌍을 이룬다."),
+      done: L("Complete. The new strand is complementary to the template. Notice the two backbones run in opposite directions (antiparallel).", "完成です。新しい鎖は鋳型に相補的です。2本の骨格が逆向き (逆平行) に走っていることに注目しましょう。", "完成。新鏈與模板互補。請留意兩條骨架走向相反 (反向平行)。", "완성했다. 새 가닥은 주형 가닥과 상보적이다. 두 골격이 서로 반대 방향으로 뻗어 있음(역평행, antiparallel)에 주목하시오."),
+      mistakes: L("Mistakes", "間違い", "錯誤次數", "실수"),
+      template: L("template strand", "鋳型鎖 (template)", "模板鏈 (template)", "주형 가닥"),
+      newStrand: L("new strand", "新しい鎖 (new)", "新鏈 (new)", "새 가닥")
     },
     compare: {
-      cap: L("The highlighted features are the differences: number of strands, the base (T in DNA, U in RNA) and the sugar (deoxyribose has H, ribose has OH on carbon 2′).", "強調表示された点が違いです。鎖の数、塩基 (DNA では T、RNA では U)、糖 (2′位の炭素に、デオキシリボースは H、リボースは OH をもつ)。", "高亮的部分就是差異：鏈的數目、鹼基 (DNA 為 T，RNA 為 U)，以及糖 (在 2′ 位碳上，脫氧核糖是 H，核糖是 OH)。"),
-      th: { f: L("Feature", "特徴", "特徵"), d: L("DNA", "DNA", "DNA"), r: L("RNA", "RNA", "RNA") },
+      cap: L("The highlighted features are the differences: number of strands, the base (T in DNA, U in RNA) and the sugar (deoxyribose has H, ribose has OH on carbon 2′).", "強調表示された点が違いです。鎖の数、塩基 (DNA では T、RNA では U)、糖 (2′位の炭素に、デオキシリボースは H、リボースは OH をもつ)。", "高亮的部分就是差異：鏈的數目、鹼基 (DNA 為 T，RNA 為 U)，以及糖 (在 2′ 位碳上，脫氧核糖是 H，核糖是 OH)。", "강조 표시된 부분이 차이점이다: 가닥의 수, 염기(DNA는 T, RNA는 U), 당(디옥시리보스는 2′ 탄소에 H, 리보스는 OH가 있다)."),
+      th: { f: L("Feature", "特徴", "特徵", "특징"), d: L("DNA", "DNA", "DNA", "DNA"), r: L("RNA", "RNA", "RNA", "RNA") },
       rows: [
-        [L("Strands", "鎖の数 (strands)", "鏈的數目 (strands)"), L("two", "2本", "兩條"), L("one", "1本", "一條")],
-        [L("Sugar", "糖 (sugar)", "糖 (sugar)"), L("deoxyribose", "デオキシリボース", "脫氧核糖"), L("ribose", "リボース", "核糖")],
-        [L("Bases", "塩基 (bases)", "鹼基 (bases)"), L("A, T, G, C", "A、T、G、C", "A、T、G、C"), L("A, U, G, C", "A、U、G、C", "A、U、G、C")]
+        [L("Strands", "鎖の数 (strands)", "鏈的數目 (strands)", "가닥 수"), L("two", "2本", "兩條", "2개"), L("one", "1本", "一條", "1개")],
+        [L("Sugar", "糖 (sugar)", "糖 (sugar)", "당"), L("deoxyribose", "デオキシリボース", "脫氧核糖", "디옥시리보스"), L("ribose", "リボース", "核糖", "리보스")],
+        [L("Bases", "塩基 (bases)", "鹼基 (bases)", "염기"), L("A, T, G, C", "A、T、G、C", "A、T、G、C", "A, T, G, C"), L("A, U, G, C", "A、U、G、C", "A、U、G、C", "A, U, G, C")]
       ]
     },
     aria: {
-      parts: L("Diagram of three nucleotides drawn with circles, pentagons and rectangles", "円・五角形・長方形で描いた3つのヌクレオチドの図", "以圓形、五邊形和長方形繪畫的三個核苷酸圖"),
-      build: L("Diagram of two antiparallel DNA strands with complementary base pairs", "相補的塩基対をもつ、逆平行の2本の DNA 鎖の図", "具互補鹼基對的兩條反向平行 DNA 鏈圖"),
-      compare: L("Diagram comparing a double-stranded DNA with a single-stranded RNA, and the sugars deoxyribose and ribose", "2本鎖 DNA と1本鎖 RNA、およびデオキシリボースとリボースを比較する図", "比較雙鏈 DNA 與單鏈 RNA，以及脫氧核糖與核糖的圖")
+      parts: L("Diagram of three nucleotides drawn with circles, pentagons and rectangles", "円・五角形・長方形で描いた3つのヌクレオチドの図", "以圓形、五邊形和長方形繪畫的三個核苷酸圖", "원, 오각형, 직사각형으로 그린 뉴클레오타이드 3개의 그림"),
+      build: L("Diagram of two antiparallel DNA strands with complementary base pairs", "相補的塩基対をもつ、逆平行の2本の DNA 鎖の図", "具互補鹼基對的兩條反向平行 DNA 鏈圖", "상보적 염기쌍을 이룬 역평행한 DNA 두 가닥의 그림"),
+      compare: L("Diagram comparing a double-stranded DNA with a single-stranded RNA, and the sugars deoxyribose and ribose", "2本鎖 DNA と1本鎖 RNA、およびデオキシリボースとリボースを比較する図", "比較雙鏈 DNA 與單鏈 RNA，以及脫氧核糖與核糖的圖", "두 가닥 DNA와 한 가닥 RNA, 그리고 당인 디옥시리보스와 리보스를 비교한 그림")
     }
   };
 

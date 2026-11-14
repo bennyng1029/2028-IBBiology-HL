@@ -49,32 +49,32 @@
   ].join("\n");
 
   var S = {
-    title: { en: "Cube model: surface area-to-volume ratio", ja: "立方体モデル：表面積と体積の比 (SA:V)", zh: "立方體模型：表面面積與體積比 (SA:V)" },
-    side: { en: "Side length (l)", ja: "辺の長さ (l)", zh: "邊長 (l)" },
+    title: { en: "Cube model: surface area-to-volume ratio", ja: "立方体モデル：表面積と体積の比 (SA:V)", zh: "立方體模型：表面面積與體積比 (SA:V)", ko: "정육면체 모형: 표면적 대 부피 비(surface area-to-volume ratio)" },
+    side: { en: "Side length (l)", ja: "辺の長さ (l)", zh: "邊長 (l)", ko: "한 변의 길이 (l)" },
     unit: "µm",
-    dbl: { en: "Double the side", ja: "辺を2倍にする", zh: "邊長加倍" },
-    reset: { en: "Back to 1 µm", ja: "1 µmに戻す", zh: "回到 1 µm" },
-    cube: { en: "Your cube (drawn to scale)", ja: "あなたの立方体（縮尺どおり）", zh: "你的立方體（按比例繪畫）" },
-    unitCube: { en: "1 µm cube", ja: "1 µmの立方体", zh: "1 µm 立方體" },
-    sa: { en: "Surface area = 6 × l²", ja: "表面積 = 6 × l²", zh: "表面面積 = 6 × l²" },
-    vol: { en: "Volume = l³", ja: "体積 = l³", zh: "體積 = l³" },
-    ratio: { en: "SA:V = 6 ÷ l", ja: "SA:V = 6 ÷ l", zh: "SA:V = 6 ÷ l" },
-    thSide: { en: "Side (µm)", ja: "辺 (µm)", zh: "邊長 (µm)" },
-    thSA: { en: "Surface area (µm²)", ja: "表面積 (µm²)", zh: "表面面積 (µm²)" },
-    thV: { en: "Volume (µm³)", ja: "体積 (µm³)", zh: "體積 (µm³)" },
-    thR: { en: "SA:V", ja: "SA:V", zh: "SA:V" },
-    graph: { en: "SA:V falls as size rises", ja: "大きくなるとSA:Vは小さくなる", zh: "大小增加，SA:V下降" },
-    xAxis: { en: "Side length (µm)", ja: "辺の長さ (µm)", zh: "邊長 (µm)" },
-    yAxis: { en: "SA:V", ja: "SA:V", zh: "SA:V" },
-    needH: { en: "Link to cell size", ja: "細胞の大きさとのつながり", zh: "與細胞大小的關係" },
-    supply: { en: "Exchange possible (∝ surface area)", ja: "可能な交換量（∝ 表面積）", zh: "可進行的交換量（∝ 表面面積）" },
-    need: { en: "Exchange needed (∝ volume)", ja: "必要な交換量（∝ 体積）", zh: "所需的交換量（∝ 體積）" },
-    note: { en: "Both bars are scaled to the largest cube (l = 10 µm).", ja: "どちらの棒も最大の立方体 (l = 10 µm) を基準にした長さです。", zh: "兩條棒都以最大的立方體 (l = 10 µm) 為基準。" },
-    tabCube: { en: "Cube", ja: "立方体", zh: "立方體" },
-    tabGraph: { en: "Graph", ja: "グラフ", zh: "圖表" },
-    tabCell: { en: "Cell size", ja: "細胞の大きさ", zh: "細胞大小" },
-    tableH: { en: "Table of values", ja: "数値の表", zh: "數值表" },
-    nos: { en: "Nature of science: a cube is a model, a simplified version of a complex system. Real cells are not cubes, but scale factors work in the same way.", ja: "科学の本質：立方体はモデル、つまり複雑な系を単純にしたものです。実際の細胞は立方体ではありませんが、スケールの関係は同じように働きます。", zh: "科學本質：立方體是模型，即複雜系統的簡化版本。真實的細胞不是立方體，但比例因子的作用相同。" }
+    dbl: { en: "Double the side", ja: "辺を2倍にする", zh: "邊長加倍", ko: "한 변을 2배로" },
+    reset: { en: "Back to 1 µm", ja: "1 µmに戻す", zh: "回到 1 µm", ko: "1 µm로 되돌리기" },
+    cube: { en: "Your cube (drawn to scale)", ja: "あなたの立方体（縮尺どおり）", zh: "你的立方體（按比例繪畫）", ko: "내 정육면체(축척에 맞게 그림)" },
+    unitCube: { en: "1 µm cube", ja: "1 µmの立方体", zh: "1 µm 立方體", ko: "1 µm 정육면체" },
+    sa: { en: "Surface area = 6 × l²", ja: "表面積 = 6 × l²", zh: "表面面積 = 6 × l²", ko: "표면적 = 6 × l²" },
+    vol: { en: "Volume = l³", ja: "体積 = l³", zh: "體積 = l³", ko: "부피 = l³" },
+    ratio: { en: "SA:V = 6 ÷ l", ja: "SA:V = 6 ÷ l", zh: "SA:V = 6 ÷ l", ko: "SA:V = 6 ÷ l" },
+    thSide: { en: "Side (µm)", ja: "辺 (µm)", zh: "邊長 (µm)", ko: "한 변 (µm)" },
+    thSA: { en: "Surface area (µm²)", ja: "表面積 (µm²)", zh: "表面面積 (µm²)", ko: "표면적 (µm²)" },
+    thV: { en: "Volume (µm³)", ja: "体積 (µm³)", zh: "體積 (µm³)", ko: "부피 (µm³)" },
+    thR: { en: "SA:V", ja: "SA:V", zh: "SA:V", ko: "SA:V" },
+    graph: { en: "SA:V falls as size rises", ja: "大きくなるとSA:Vは小さくなる", zh: "大小增加，SA:V下降", ko: "크기가 커지면 SA:V가 감소한다" },
+    xAxis: { en: "Side length (µm)", ja: "辺の長さ (µm)", zh: "邊長 (µm)", ko: "한 변의 길이 (µm)" },
+    yAxis: { en: "SA:V", ja: "SA:V", zh: "SA:V", ko: "SA:V" },
+    needH: { en: "Link to cell size", ja: "細胞の大きさとのつながり", zh: "與細胞大小的關係", ko: "세포 크기와의 관계" },
+    supply: { en: "Exchange possible (∝ surface area)", ja: "可能な交換量（∝ 表面積）", zh: "可進行的交換量（∝ 表面面積）", ko: "가능한 교환량 (∝ 표면적)" },
+    need: { en: "Exchange needed (∝ volume)", ja: "必要な交換量（∝ 体積）", zh: "所需的交換量（∝ 體積）", ko: "필요한 교환량 (∝ 부피)" },
+    note: { en: "Both bars are scaled to the largest cube (l = 10 µm).", ja: "どちらの棒も最大の立方体 (l = 10 µm) を基準にした長さです。", zh: "兩條棒都以最大的立方體 (l = 10 µm) 為基準。", ko: "두 막대 모두 가장 큰 정육면체(l = 10 µm)를 기준으로 한 길이이다." },
+    tabCube: { en: "Cube", ja: "立方体", zh: "立方體", ko: "정육면체" },
+    tabGraph: { en: "Graph", ja: "グラフ", zh: "圖表", ko: "그래프" },
+    tabCell: { en: "Cell size", ja: "細胞の大きさ", zh: "細胞大小", ko: "세포 크기" },
+    tableH: { en: "Table of values", ja: "数値の表", zh: "數值表", ko: "수치 표" },
+    nos: { en: "Nature of science: a cube is a model, a simplified version of a complex system. Real cells are not cubes, but scale factors work in the same way.", ja: "科学の本質：立方体はモデル、つまり複雑な系を単純にしたものです。実際の細胞は立方体ではありませんが、スケールの関係は同じように働きます。", zh: "科學本質：立方體是模型，即複雜系統的簡化版本。真實的細胞不是立方體，但比例因子的作用相同。", ko: "과학의 본성: 정육면체는 모형, 즉 복잡한 계를 단순하게 만든 것이다. 실제 세포는 정육면체가 아니지만, 크기 비율의 관계는 같은 방식으로 작용한다." }
   };
 
   function fmt(x) {
@@ -225,7 +225,8 @@
         var m = {
           en: "A cube of side " + l + " µm has " + pct + "% of the surface area per unit of volume that a 1 µm cube has. When the side doubles, area ×4 but volume ×8, so SA:V halves.",
           ja: "辺が " + l + " µm の立方体は、体積あたりの表面積が1 µmの立方体の " + pct + "% です。辺が2倍になると、面積は4倍、体積は8倍になるので、SA:Vは半分になります。",
-          zh: "邊長 " + l + " µm 的立方體，每單位體積的表面面積是 1 µm 立方體的 " + pct + "%。邊長加倍時，面積增至4倍而體積增至8倍，所以SA:V減半。"
+          zh: "邊長 " + l + " µm 的立方體，每單位體積的表面面積是 1 µm 立方體的 " + pct + "%。邊長加倍時，面積增至4倍而體積增至8倍，所以SA:V減半。",
+          ko: "한 변이 " + l + " µm인 정육면체는 부피당 표면적이 1 µm 정육면체의 " + pct + "%이다. 한 변이 2배가 되면 면적은 4배, 부피는 8배가 되므로 SA:V는 절반이 된다."
         };
         for (var i = 0; i < msgs.length; i++) msgs[i].textContent = t(m);
       }

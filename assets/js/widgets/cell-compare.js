@@ -84,94 +84,94 @@
     document.head.appendChild(s);
   }
 
-  var T = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var T = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko || en }; };
 
   var UI = {
-    title: T("Cell comparison", "細胞の比較", "細胞比較"),
-    tabDiagram: T("Cell diagram", "細胞の図", "細胞圖"),
-    tabTable: T("Compare table", "比較表", "比較表"),
-    tabAtyp: T("Atypical cells", "典型的でない細胞", "非典型細胞"),
-    prompt: T("Tap a structure in the picture, or choose it from the list below.", "図の構造をタップするか、下の一覧から選びます。", "點選圖中的結構，或從下面的清單選擇。"),
-    promptA: T("Choose a cell type below.", "下から細胞の種類を選びます。", "請從下面選擇細胞類型。"),
-    function: T("Function", "働き", "功能"),
-    foundIn: T("Found in:", "存在する細胞：", "存在於："),
-    structures: T("Structures (list)", "構造の一覧", "結構清單"),
-    nuclei: T("Number of nuclei:", "核の数：", "細胞核數目："),
-    typical: T("A typical eukaryote cell has one nucleus.", "典型的な真核細胞には核が1つあります。", "典型的真核細胞有一個細胞核。"),
-    feature: T("Feature", "特徴", "特徵"),
+    title: T("Cell comparison", "細胞の比較", "細胞比較", "세포 비교"),
+    tabDiagram: T("Cell diagram", "細胞の図", "細胞圖", "세포 그림"),
+    tabTable: T("Compare table", "比較表", "比較表", "비교표"),
+    tabAtyp: T("Atypical cells", "典型的でない細胞", "非典型細胞", "특수한 세포 (atypical cells)"),
+    prompt: T("Tap a structure in the picture, or choose it from the list below.", "図の構造をタップするか、下の一覧から選びます。", "點選圖中的結構，或從下面的清單選擇。", "그림에서 구조를 누르거나 아래 목록에서 고르시오."),
+    promptA: T("Choose a cell type below.", "下から細胞の種類を選びます。", "請從下面選擇細胞類型。", "아래에서 세포의 종류를 고르시오."),
+    function: T("Function", "働き", "功能", "기능"),
+    foundIn: T("Found in:", "存在する細胞：", "存在於：", "발견되는 곳:"),
+    structures: T("Structures (list)", "構造の一覧", "結構清單", "구조 (목록)"),
+    nuclei: T("Number of nuclei:", "核の数：", "細胞核數目：", "핵의 수:"),
+    typical: T("A typical eukaryote cell has one nucleus.", "典型的な真核細胞には核が1つあります。", "典型的真核細胞有一個細胞核。", "전형적인 진핵생물(eukaryote) 세포에는 핵이 1개 있다."),
+    feature: T("Feature", "特徴", "特徵", "특징"),
     tableNote: T("Green = present, white = absent. “Absent” for centrioles, cilia and flagella means absent in most cells of that type. “—” = not covered for this cell type here.",
       "緑 = あり、白 = なし。中心小体・繊毛・鞭毛の「なし」は、その種類のほとんどの細胞にないという意味です。「—」はここでは扱いません。",
-      "綠色 = 有，白色 = 沒有。中心粒、纖毛和鞭毛的「沒有」指該類細胞大多沒有。「—」= 此處不涉及。"),
-    drawing: T("Simplified diagram, not to scale.", "簡略化した図（縮尺なし）。", "簡化圖示（未按比例）。"),
-    many: T("Many", "多数", "很多"),
-    none: T("None", "なし", "沒有"),
-    noneMature: T("None (when mature)", "なし（成熟後）", "沒有（成熟時）")
+      "綠色 = 有，白色 = 沒有。中心粒、纖毛和鞭毛的「沒有」指該類細胞大多沒有。「—」= 此處不涉及。", "초록 = 있음, 흰색 = 없음. 중심체, 섬모, 편모의 “없음”은 그 종류의 대부분의 세포에 없다는 뜻이다. “—” = 여기서는 이 세포 종류에 대해 다루지 않음."),
+    drawing: T("Simplified diagram, not to scale.", "簡略化した図（縮尺なし）。", "簡化圖示（未按比例）。", "단순화한 그림이며 축척은 정확하지 않다."),
+    many: T("Many", "多数", "很多", "많음"),
+    none: T("None", "なし", "沒有", "없음"),
+    noneMature: T("None (when mature)", "なし（成熟後）", "沒有（成熟時）", "없음 (성숙했을 때)")
   };
 
   var CELLNAME = {
-    pro: T("Prokaryote (e.g. Bacillus)", "原核細胞 (prokaryote)", "原核細胞 (prokaryote)"),
-    animal: T("Animal cell", "動物細胞 (animal)", "動物細胞 (animal)"),
-    plant: T("Plant cell", "植物細胞 (plant)", "植物細胞 (plant)"),
-    fungal: T("Fungal cell", "菌類の細胞 (fungal)", "真菌細胞 (fungal)")
+    pro: T("Prokaryote (e.g. Bacillus)", "原核細胞 (prokaryote)", "原核細胞 (prokaryote)", "원핵생물(prokaryote) (예: Bacillus)"),
+    animal: T("Animal cell", "動物細胞 (animal)", "動物細胞 (animal)", "동물 세포"),
+    plant: T("Plant cell", "植物細胞 (plant)", "植物細胞 (plant)", "식물 세포"),
+    fungal: T("Fungal cell", "菌類の細胞 (fungal)", "真菌細胞 (fungal)", "균류 세포")
   };
   var CELLSHORT = {
-    pro: T("Prokaryote", "原核", "原核"),
-    animal: T("Animal", "動物", "動物"),
-    plant: T("Plant", "植物", "植物"),
-    fungal: T("Fungal", "菌類", "真菌")
+    pro: T("Prokaryote", "原核", "原核", "원핵생물"),
+    animal: T("Animal", "動物", "動物", "동물"),
+    plant: T("Plant", "植物", "植物", "식물"),
+    fungal: T("Fungal", "菌類", "真菌", "균류")
   };
   var CELLORDER = ["pro", "animal", "plant", "fungal"];
 
   /* structures: [name, function] each a T() */
   var S = {
-    wall_pro: [T("Cell wall", "細胞壁 (cell wall)", "細胞壁 (cell wall)"),
-      T("Outside the plasma membrane. Gives the cell its shape, protects it and stops it bursting if it takes in too much water.", "細胞膜の外側にあります。細胞の形を保ち、保護し、水を取り込みすぎて破裂するのを防ぎます。", "在質膜之外。賦予細胞形狀、保護細胞，並防止因吸水過多而脹破。")],
-    wall_plant: [T("Cell wall (cellulose)", "細胞壁 (cell wall)：セルロース", "細胞壁 (cell wall)：纖維素"),
-      T("Made mainly of cellulose. Supports and protects the cell, gives it a fixed shape and prevents bursting.", "主にセルロースでできています。細胞を支え守り、形を固定し、破裂を防ぎます。", "主要由纖維素構成。支撐和保護細胞，使其形狀固定，並防止脹破。")],
-    wall_fungal: [T("Cell wall (chitin)", "細胞壁 (cell wall)：キチン", "細胞壁 (cell wall)：幾丁質"),
-      T("Made mainly of chitin, not cellulose. Supports and protects the cell and prevents bursting.", "セルロースではなく主にキチンでできています。細胞を支え守り、破裂を防ぎます。", "主要由幾丁質而非纖維素構成。支撐和保護細胞，並防止脹破。")],
-    membrane: [T("Plasma membrane", "細胞膜 (plasma membrane)", "質膜 (plasma membrane)"),
-      T("A lipid bilayer around the cytoplasm. Controls which substances enter and leave the cell.", "細胞質を囲む脂質二重層。細胞に出入りする物質を制御します。", "圍繞細胞質的脂質雙層。控制物質進出細胞。")],
-    cytoplasm: [T("Cytoplasm", "細胞質 (cytoplasm)", "細胞質 (cytoplasm)"),
-      T("Mainly water. The place where the reactions of metabolism happen. In eukaryotes it is divided into compartments and contains the organelles and cytoskeleton.", "主に水。代謝反応が起こる場所です。真核細胞では区画化され、細胞小器官や細胞骨格を含みます。", "主要是水。新陳代謝反應發生的地方。真核細胞的細胞質被區室化，含有胞器和細胞骨架。")],
-    dna: [T("Naked DNA in a loop (nucleoid)", "環状のむき出しのDNA（核様体） (naked DNA)", "環狀裸 DNA（擬核） (naked DNA)"),
-      T("One circular DNA molecule with no histones (“naked”). It lies in the nucleoid region, which has no membrane around it. Carries the genetic information.", "ヒストンのない（むき出しの）環状DNA分子が1本。膜に囲まれていない核様体領域にあります。遺伝情報をもちます。", "一個沒有組蛋白（「裸」）的環狀 DNA 分子，位於沒有膜包圍的擬核區。帶有遺傳資訊。")],
-    rib70: [T("70S ribosomes", "70Sリボソーム (70S ribosomes)", "70S 核糖體 (70S ribosomes)"),
-      T("Make proteins. Smaller than the 80S ribosomes of eukaryotes.", "タンパク質を合成します。真核生物の80Sリボソームより小さいです。", "製造蛋白質。比真核生物的 80S 核糖體小。")],
-    rib80: [T("80S ribosomes", "80Sリボソーム (80S ribosomes)", "80S 核糖體 (80S ribosomes)"),
-      T("Make proteins. Free in the cytoplasm or attached to rough ER. Larger than prokaryote 70S ribosomes.", "タンパク質を合成します。細胞質に遊離、または粗面小胞体に付着。原核生物の70Sより大きいです。", "製造蛋白質。游離在細胞質或附着於粗糙內質網。比原核生物的 70S 大。")],
-    nucleus: [T("Nucleus", "核 (nucleus)", "細胞核 (nucleus)"),
-      T("Surrounded by a double membrane (nuclear envelope) with pores. Holds the chromosomes, so it stores the genetic information. Pores let molecules such as mRNA pass out.", "核膜孔のある二重膜（核膜）に囲まれています。染色体を収め、遺伝情報を保存します。核膜孔からmRNAなどが出ていきます。", "被有核孔的雙層膜（核膜）包圍。容納染色體，儲存遺傳資訊。核孔讓 mRNA 等分子通過。")],
-    chrom: [T("Chromosomes (DNA + histones)", "染色体（DNA＋ヒストン） (chromosomes)", "染色體（DNA ＋ 組蛋白） (chromosomes)"),
-      T("DNA bound to histone proteins, inside the nucleus. Carry the genes.", "ヒストンタンパク質と結合したDNA。核の中にあり、遺伝子をもちます。", "與組蛋白結合的 DNA，位於細胞核內。攜帶基因。")],
-    mito: [T("Mitochondrion", "ミトコンドリア (mitochondrion)", "線粒體 (mitochondrion)"),
-      T("Double membrane, inner membrane folded. Site of aerobic cell respiration, which makes ATP.", "二重膜で、内膜は折りたたまれています。好気呼吸の場で、ATPを合成します。", "雙層膜，內膜摺疊。有氧細胞呼吸的場所，製造 ATP。")],
-    rer: [T("Rough endoplasmic reticulum", "粗面小胞体 (rough ER)", "粗糙內質網 (rough ER)"),
-      T("Flattened membrane sacs with 80S ribosomes on the surface. Makes proteins that will be secreted or put into membranes.", "表面に80Sリボソームのある平たい膜の袋。分泌される、または膜に組み込まれるタンパク質を合成します。", "表面有 80S 核糖體的扁平膜囊。製造將被分泌或放入膜中的蛋白質。")],
-    ser: [T("Smooth endoplasmic reticulum", "滑面小胞体 (smooth ER)", "光滑內質網 (smooth ER)"),
-      T("Membrane tubes and sacs with no ribosomes. Makes lipids.", "リボソームのない膜の管や袋。脂質を合成します。", "沒有核糖體的膜管和膜囊。製造脂質。")],
-    golgi: [T("Golgi apparatus", "ゴルジ体 (Golgi apparatus)", "高爾基體 (Golgi apparatus)"),
-      T("A stack of flattened membrane sacs. Modifies, sorts and packages proteins into vesicles.", "平たい膜の袋の積み重ね。タンパク質を修飾・選別し、小胞に包みます。", "一疊扁平的膜囊。修飾、分類蛋白質並包裝入囊泡。")],
-    lyso: [T("Lysosome", "リソソーム (lysosome)", "溶酶體 (lysosome)"),
-      T("A vesicle containing digestive enzymes that break down materials.", "消化酵素を含み、物質を分解する小胞。", "含有消化酶、分解物質的囊泡。")],
-    vesicle: [T("Vesicles (and small vacuoles)", "小胞（と小さな液胞） (vesicles)", "囊泡（和小液泡） (vesicles)"),
-      T("Small membrane-bound sacs that transport or store substances. Secretory vesicles carry proteins to the plasma membrane to be released.", "物質を運んだり貯蔵したりする膜で囲まれた小さな袋。分泌小胞は、タンパク質を細胞膜へ運んで放出します。", "運輸或儲存物質的小型膜囊。分泌囊泡把蛋白質運到質膜釋出。")],
-    cskel: [T("Cytoskeleton", "細胞骨格 (cytoskeleton)", "細胞骨架 (cytoskeleton)"),
-      T("A network of microtubules (hollow tubes) and microfilaments (thin protein threads). Supports the cell, holds its shape and moves organelles and vesicles.", "微小管（中空の管）と微小繊維（細いタンパク質の糸）のネットワーク。細胞を支え形を保ち、細胞小器官や小胞を動かします。", "由微管（中空的管）和微絲（幼細的蛋白質絲）組成的網絡。支撐細胞、維持形狀，並移動胞器和囊泡。")],
-    centriole: [T("Centrioles", "中心小体 (centrioles)", "中心粒 (centrioles)"),
-      T("A pair of small tube-like structures made of microtubules, found in animal cells. They help organise the microtubules used when the cell divides.", "微小管でできた小さな管状構造の対で、動物細胞にあります。細胞分裂の際に使う微小管の形成に関わります。", "由微管構成的一對小管狀結構，見於動物細胞。幫助組織細胞分裂時用的微管。")],
-    cilia: [T("Cilia and flagellum", "繊毛と鞭毛 (cilia, flagellum)", "纖毛和鞭毛 (cilia, flagellum)"),
-      T("Moving projections of the cell. Cilia are short and many (e.g. moving fluid over a surface); a flagellum is long (e.g. a sperm tail moving the whole cell).", "細胞の動く突起。繊毛は短く数が多く（表面の液体を動かすなど）、鞭毛は長い（精子の尾のように細胞全体を動かす）。", "細胞的活動突起。纖毛短而多（如推動表面的液體）；鞭毛長（如精子尾部推動整個細胞）。")],
-    microvilli: [T("Microvilli", "微絨毛 (microvilli)", "微絨毛 (microvilli)"),
-      T("Finger-like projections of the plasma membrane. They increase the surface area for absorption or secretion.", "細胞膜の指状の突起。吸収や分泌のための表面積を増やします。", "質膜的指狀突起。增加吸收或分泌的表面積。")],
-    vac_sap: [T("Large sap vacuole", "大きな液胞 (sap vacuole)", "大型液泡 (sap vacuole)"),
-      T("One large permanent central vacuole. Stores water and dissolved substances; its pressure keeps the cell firm (turgid).", "大きな永続的中央液胞が1つ。水と溶質を貯蔵し、その圧力で細胞が張りを保ちます。", "一個大型永久性中央液泡。儲存水和溶質；其壓力使細胞保持堅挺（膨脹）。")],
-    vac_fungal: [T("Vacuoles (fungal)", "液胞（菌類） (vacuoles)", "液泡（真菌） (vacuoles)"),
-      T("Membrane-bound sacs of varying size. They store substances and can break materials down.", "大きさはさまざまな膜で囲まれた袋。物質を貯蔵し、物質を分解することもあります。", "大小不一的膜囊。儲存物質，也能分解物質。")],
-    chlo: [T("Chloroplast", "葉緑体 (chloroplast)", "葉綠體 (chloroplast)"),
-      T("Double membrane; contains stacks of flattened membranes with chlorophyll. Site of photosynthesis, making sugars using light energy.", "二重膜で、クロロフィルをもつ平たい膜の重なりを含みます。光合成の場で、光エネルギーを使って糖を合成します。", "雙層膜；內含有葉綠素的成疊扁平膜。光合作用的場所，利用光能製造糖。")],
-    plastid: [T("Other plastid: amyloplast", "ほかの色素体：アミロプラスト (amyloplast)", "其他質體：澱粉體 (amyloplast)"),
-      T("A plastid that stores starch (the white grains), found in cells that do not photosynthesize, e.g. in roots and storage tissue.", "デンプン（白い粒）を貯蔵する色素体。根や貯蔵組織など、光合成をしない細胞にあります。", "儲存澱粉（白色顆粒）的質體，見於不進行光合作用的細胞，如根和儲存組織。")]
+    wall_pro: [T("Cell wall", "細胞壁 (cell wall)", "細胞壁 (cell wall)", "세포벽 (cell wall)"),
+      T("Outside the plasma membrane. Gives the cell its shape, protects it and stops it bursting if it takes in too much water.", "細胞膜の外側にあります。細胞の形を保ち、保護し、水を取り込みすぎて破裂するのを防ぎます。", "在質膜之外。賦予細胞形狀、保護細胞，並防止因吸水過多而脹破。", "세포막 바깥에 있다. 세포에 모양을 주고 보호하며, 물을 너무 많이 흡수해도 터지지 않게 한다.")],
+    wall_plant: [T("Cell wall (cellulose)", "細胞壁 (cell wall)：セルロース", "細胞壁 (cell wall)：纖維素", "세포벽(셀룰로스)"),
+      T("Made mainly of cellulose. Supports and protects the cell, gives it a fixed shape and prevents bursting.", "主にセルロースでできています。細胞を支え守り、形を固定し、破裂を防ぎます。", "主要由纖維素構成。支撐和保護細胞，使其形狀固定，並防止脹破。", "주로 셀룰로스로 이루어진다. 세포를 지지하고 보호하며 일정한 모양을 유지하게 하고 터지는 것을 막는다.")],
+    wall_fungal: [T("Cell wall (chitin)", "細胞壁 (cell wall)：キチン", "細胞壁 (cell wall)：幾丁質", "세포벽(키틴)"),
+      T("Made mainly of chitin, not cellulose. Supports and protects the cell and prevents bursting.", "セルロースではなく主にキチンでできています。細胞を支え守り、破裂を防ぎます。", "主要由幾丁質而非纖維素構成。支撐和保護細胞，並防止脹破。", "셀룰로스가 아니라 주로 키틴(chitin)으로 이루어진다. 세포를 지지하고 보호하며 터지는 것을 막는다.")],
+    membrane: [T("Plasma membrane", "細胞膜 (plasma membrane)", "質膜 (plasma membrane)", "세포막 (plasma membrane)"),
+      T("A lipid bilayer around the cytoplasm. Controls which substances enter and leave the cell.", "細胞質を囲む脂質二重層。細胞に出入りする物質を制御します。", "圍繞細胞質的脂質雙層。控制物質進出細胞。", "세포질을 둘러싼 지질 2중층이다. 어떤 물질이 세포 안팎으로 드나들지를 조절한다.")],
+    cytoplasm: [T("Cytoplasm", "細胞質 (cytoplasm)", "細胞質 (cytoplasm)", "세포질 (cytoplasm)"),
+      T("Mainly water. The place where the reactions of metabolism happen. In eukaryotes it is divided into compartments and contains the organelles and cytoskeleton.", "主に水。代謝反応が起こる場所です。真核細胞では区画化され、細胞小器官や細胞骨格を含みます。", "主要是水。新陳代謝反應發生的地方。真核細胞的細胞質被區室化，含有胞器和細胞骨架。", "주로 물로 이루어져 있다. 물질대사(metabolism) 반응이 일어나는 장소이다. 진핵생물에서는 구획으로 나뉘어 있으며 세포 소기관과 세포 골격이 들어 있다.")],
+    dna: [T("Naked DNA in a loop (nucleoid)", "環状のむき出しのDNA（核様体） (naked DNA)", "環狀裸 DNA（擬核） (naked DNA)", "고리 모양의 맨 DNA (핵양체, nucleoid)"),
+      T("One circular DNA molecule with no histones (“naked”). It lies in the nucleoid region, which has no membrane around it. Carries the genetic information.", "ヒストンのない（むき出しの）環状DNA分子が1本。膜に囲まれていない核様体領域にあります。遺伝情報をもちます。", "一個沒有組蛋白（「裸」）的環狀 DNA 分子，位於沒有膜包圍的擬核區。帶有遺傳資訊。", "히스톤이 없는(“맨”) 고리 모양 DNA 분자 1개이다. 주위에 막이 없는 핵양체 영역에 놓여 있다. 유전 정보를 지닌다.")],
+    rib70: [T("70S ribosomes", "70Sリボソーム (70S ribosomes)", "70S 核糖體 (70S ribosomes)", "70S 리보솜"),
+      T("Make proteins. Smaller than the 80S ribosomes of eukaryotes.", "タンパク質を合成します。真核生物の80Sリボソームより小さいです。", "製造蛋白質。比真核生物的 80S 核糖體小。", "단백질을 만든다. 진핵생물의 80S 리보솜보다 작다.")],
+    rib80: [T("80S ribosomes", "80Sリボソーム (80S ribosomes)", "80S 核糖體 (80S ribosomes)", "80S 리보솜"),
+      T("Make proteins. Free in the cytoplasm or attached to rough ER. Larger than prokaryote 70S ribosomes.", "タンパク質を合成します。細胞質に遊離、または粗面小胞体に付着。原核生物の70Sより大きいです。", "製造蛋白質。游離在細胞質或附着於粗糙內質網。比原核生物的 70S 大。", "단백질을 만든다. 세포질에 떠 있거나 거친면 소포체(rough ER)에 붙어 있다. 원핵생물의 70S 리보솜보다 크다.")],
+    nucleus: [T("Nucleus", "核 (nucleus)", "細胞核 (nucleus)", "핵 (nucleus)"),
+      T("Surrounded by a double membrane (nuclear envelope) with pores. Holds the chromosomes, so it stores the genetic information. Pores let molecules such as mRNA pass out.", "核膜孔のある二重膜（核膜）に囲まれています。染色体を収め、遺伝情報を保存します。核膜孔からmRNAなどが出ていきます。", "被有核孔的雙層膜（核膜）包圍。容納染色體，儲存遺傳資訊。核孔讓 mRNA 等分子通過。", "구멍(핵공)이 있는 2중막(핵막, nuclear envelope)으로 둘러싸여 있다. 염색체를 담고 있으므로 유전 정보를 저장한다. 핵공으로 mRNA 같은 분자가 밖으로 나간다.")],
+    chrom: [T("Chromosomes (DNA + histones)", "染色体（DNA＋ヒストン） (chromosomes)", "染色體（DNA ＋ 組蛋白） (chromosomes)", "염색체 (DNA + 히스톤)"),
+      T("DNA bound to histone proteins, inside the nucleus. Carry the genes.", "ヒストンタンパク質と結合したDNA。核の中にあり、遺伝子をもちます。", "與組蛋白結合的 DNA，位於細胞核內。攜帶基因。", "핵 안에서 히스톤 단백질과 결합한 DNA이다. 유전자를 지닌다.")],
+    mito: [T("Mitochondrion", "ミトコンドリア (mitochondrion)", "線粒體 (mitochondrion)", "미토콘드리아 (mitochondrion)"),
+      T("Double membrane, inner membrane folded. Site of aerobic cell respiration, which makes ATP.", "二重膜で、内膜は折りたたまれています。好気呼吸の場で、ATPを合成します。", "雙層膜，內膜摺疊。有氧細胞呼吸的場所，製造 ATP。", "2중막이며 안쪽 막이 접혀 있다. ATP를 만드는 유산소 세포 호흡(aerobic cell respiration)이 일어나는 곳이다.")],
+    rer: [T("Rough endoplasmic reticulum", "粗面小胞体 (rough ER)", "粗糙內質網 (rough ER)", "거친면 소포체 (rough endoplasmic reticulum)"),
+      T("Flattened membrane sacs with 80S ribosomes on the surface. Makes proteins that will be secreted or put into membranes.", "表面に80Sリボソームのある平たい膜の袋。分泌される、または膜に組み込まれるタンパク質を合成します。", "表面有 80S 核糖體的扁平膜囊。製造將被分泌或放入膜中的蛋白質。", "표면에 80S 리보솜이 붙어 있는 납작한 막 주머니이다. 분비되거나 막에 들어갈 단백질을 만든다.")],
+    ser: [T("Smooth endoplasmic reticulum", "滑面小胞体 (smooth ER)", "光滑內質網 (smooth ER)", "매끈면 소포체 (smooth endoplasmic reticulum)"),
+      T("Membrane tubes and sacs with no ribosomes. Makes lipids.", "リボソームのない膜の管や袋。脂質を合成します。", "沒有核糖體的膜管和膜囊。製造脂質。", "리보솜이 없는 막 관과 주머니이다. 지질을 만든다.")],
+    golgi: [T("Golgi apparatus", "ゴルジ体 (Golgi apparatus)", "高爾基體 (Golgi apparatus)", "골지체 (Golgi apparatus)"),
+      T("A stack of flattened membrane sacs. Modifies, sorts and packages proteins into vesicles.", "平たい膜の袋の積み重ね。タンパク質を修飾・選別し、小胞に包みます。", "一疊扁平的膜囊。修飾、分類蛋白質並包裝入囊泡。", "납작한 막 주머니가 쌓여 있는 구조이다. 단백질을 변형하고 분류하여 소낭(vesicle)에 담는다.")],
+    lyso: [T("Lysosome", "リソソーム (lysosome)", "溶酶體 (lysosome)", "리소좀 (lysosome)"),
+      T("A vesicle containing digestive enzymes that break down materials.", "消化酵素を含み、物質を分解する小胞。", "含有消化酶、分解物質的囊泡。", "물질을 분해하는 소화 효소를 담은 소낭이다.")],
+    vesicle: [T("Vesicles (and small vacuoles)", "小胞（と小さな液胞） (vesicles)", "囊泡（和小液泡） (vesicles)", "소낭(vesicle)과 작은 액포"),
+      T("Small membrane-bound sacs that transport or store substances. Secretory vesicles carry proteins to the plasma membrane to be released.", "物質を運んだり貯蔵したりする膜で囲まれた小さな袋。分泌小胞は、タンパク質を細胞膜へ運んで放出します。", "運輸或儲存物質的小型膜囊。分泌囊泡把蛋白質運到質膜釋出。", "물질을 운반하거나 저장하는 작은 막 주머니이다. 분비 소낭은 단백질을 세포막으로 운반하여 방출한다.")],
+    cskel: [T("Cytoskeleton", "細胞骨格 (cytoskeleton)", "細胞骨架 (cytoskeleton)", "세포 골격 (cytoskeleton)"),
+      T("A network of microtubules (hollow tubes) and microfilaments (thin protein threads). Supports the cell, holds its shape and moves organelles and vesicles.", "微小管（中空の管）と微小繊維（細いタンパク質の糸）のネットワーク。細胞を支え形を保ち、細胞小器官や小胞を動かします。", "由微管（中空的管）和微絲（幼細的蛋白質絲）組成的網絡。支撐細胞、維持形狀，並移動胞器和囊泡。", "미세 소관(속이 빈 관)과 미세 섬유(가는 단백질 가닥)의 그물망이다. 세포를 지지하고 모양을 유지하며 세포 소기관과 소낭을 이동시킨다.")],
+    centriole: [T("Centrioles", "中心小体 (centrioles)", "中心粒 (centrioles)", "중심체 (centrioles)"),
+      T("A pair of small tube-like structures made of microtubules, found in animal cells. They help organise the microtubules used when the cell divides.", "微小管でできた小さな管状構造の対で、動物細胞にあります。細胞分裂の際に使う微小管の形成に関わります。", "由微管構成的一對小管狀結構，見於動物細胞。幫助組織細胞分裂時用的微管。", "미세 소관으로 이루어진 작은 관 모양 구조 한 쌍으로, 동물 세포에서 발견된다. 세포가 분열할 때 쓰이는 미세 소관을 조직하는 일을 돕는다.")],
+    cilia: [T("Cilia and flagellum", "繊毛と鞭毛 (cilia, flagellum)", "纖毛和鞭毛 (cilia, flagellum)", "섬모와 편모 (cilia and flagellum)"),
+      T("Moving projections of the cell. Cilia are short and many (e.g. moving fluid over a surface); a flagellum is long (e.g. a sperm tail moving the whole cell).", "細胞の動く突起。繊毛は短く数が多く（表面の液体を動かすなど）、鞭毛は長い（精子の尾のように細胞全体を動かす）。", "細胞的活動突起。纖毛短而多（如推動表面的液體）；鞭毛長（如精子尾部推動整個細胞）。", "세포의 움직이는 돌기이다. 섬모는 짧고 많다(예: 표면 위의 액체를 움직임). 편모는 길다(예: 정자 꼬리가 세포 전체를 움직임).")],
+    microvilli: [T("Microvilli", "微絨毛 (microvilli)", "微絨毛 (microvilli)", "미세 융털 (microvilli)"),
+      T("Finger-like projections of the plasma membrane. They increase the surface area for absorption or secretion.", "細胞膜の指状の突起。吸収や分泌のための表面積を増やします。", "質膜的指狀突起。增加吸收或分泌的表面積。", "세포막이 손가락 모양으로 튀어나온 돌기이다. 흡수나 분비를 위한 표면적을 늘린다.")],
+    vac_sap: [T("Large sap vacuole", "大きな液胞 (sap vacuole)", "大型液泡 (sap vacuole)", "큰 액포 (sap vacuole)"),
+      T("One large permanent central vacuole. Stores water and dissolved substances; its pressure keeps the cell firm (turgid).", "大きな永続的中央液胞が1つ。水と溶質を貯蔵し、その圧力で細胞が張りを保ちます。", "一個大型永久性中央液泡。儲存水和溶質；其壓力使細胞保持堅挺（膨脹）。", "크고 영구적인 중앙 액포 1개이다. 물과 녹아 있는 물질을 저장하며, 그 압력이 세포를 단단하게(팽팽하게, turgid) 유지한다.")],
+    vac_fungal: [T("Vacuoles (fungal)", "液胞（菌類） (vacuoles)", "液泡（真菌） (vacuoles)", "액포 (균류)"),
+      T("Membrane-bound sacs of varying size. They store substances and can break materials down.", "大きさはさまざまな膜で囲まれた袋。物質を貯蔵し、物質を分解することもあります。", "大小不一的膜囊。儲存物質，也能分解物質。", "크기가 다양한 막 주머니이다. 물질을 저장하며 물질을 분해할 수도 있다.")],
+    chlo: [T("Chloroplast", "葉緑体 (chloroplast)", "葉綠體 (chloroplast)", "엽록체 (chloroplast)"),
+      T("Double membrane; contains stacks of flattened membranes with chlorophyll. Site of photosynthesis, making sugars using light energy.", "二重膜で、クロロフィルをもつ平たい膜の重なりを含みます。光合成の場で、光エネルギーを使って糖を合成します。", "雙層膜；內含有葉綠素的成疊扁平膜。光合作用的場所，利用光能製造糖。", "2중막이며, 엽록소가 있는 납작한 막이 쌓인 구조가 들어 있다. 빛에너지를 이용해 당을 만드는 광합성(photosynthesis)이 일어나는 곳이다.")],
+    plastid: [T("Other plastid: amyloplast", "ほかの色素体：アミロプラスト (amyloplast)", "其他質體：澱粉體 (amyloplast)", "그 밖의 색소체: 아밀로플라스트(amyloplast)"),
+      T("A plastid that stores starch (the white grains), found in cells that do not photosynthesize, e.g. in roots and storage tissue.", "デンプン（白い粒）を貯蔵する色素体。根や貯蔵組織など、光合成をしない細胞にあります。", "儲存澱粉（白色顆粒）的質體，見於不進行光合作用的細胞，如根和儲存組織。", "녹말(흰 알갱이)을 저장하는 색소체로, 뿌리와 저장 조직처럼 광합성을 하지 않는 세포에서 발견된다.")]
   };
 
   /* which structures each cell has, in chip order */
@@ -329,18 +329,18 @@
 
   /* ---------- atypical cells ---------- */
   var LB = {
-    septa: T("no cross-walls (septa)", "仕切り壁 (septa) なし", "沒有橫隔 (septa)"),
-    hb: T("haemoglobin", "ヘモグロビン", "血紅蛋白"),
-    nonuc: T("no nucleus", "核なし", "沒有細胞核"),
-    tube: T("sieve tube element", "師管要素", "篩管分子"),
-    comp: T("companion cell", "伴細胞", "伴細胞"),
-    plate: T("sieve plate", "師板", "篩板")
+    septa: T("no cross-walls (septa)", "仕切り壁 (septa) なし", "沒有橫隔 (septa)", "가로벽(격벽, septa) 없음"),
+    hb: T("haemoglobin", "ヘモグロビン", "血紅蛋白", "헤모글로빈"),
+    nonuc: T("no nucleus", "核なし", "沒有細胞核", "핵 없음"),
+    tube: T("sieve tube element", "師管要素", "篩管分子", "체관 요소"),
+    comp: T("companion cell", "伴細胞", "伴細胞", "반세포"),
+    plate: T("sieve plate", "師板", "篩板", "체판")
   };
   var ATYP = {
     hypha: {
-      name: T("Aseptate fungal hypha", "隔壁のない菌糸 (aseptate hypha)", "無隔膜真菌菌絲 (aseptate hypha)"),
+      name: T("Aseptate fungal hypha", "隔壁のない菌糸 (aseptate hypha)", "無隔膜真菌菌絲 (aseptate hypha)", "격벽이 없는 균사 (aseptate hypha)"),
       nuclei: "many",
-      text: T("A hypha is a thread-like fungal filament. This one has no cross-walls (septa), so one continuous cytoplasm contains many nuclei.", "菌糸は糸状の菌類の細胞列です。この菌糸には仕切り壁 (septa) がなく、1つの連続した細胞質に多数の核が含まれます。", "菌絲是絲狀的真菌細胞鏈。這條菌絲沒有橫隔 (septa)，所以一個連續的細胞質含有很多細胞核。"),
+      text: T("A hypha is a thread-like fungal filament. This one has no cross-walls (septa), so one continuous cytoplasm contains many nuclei.", "菌糸は糸状の菌類の細胞列です。この菌糸には仕切り壁 (septa) がなく、1つの連続した細胞質に多数の核が含まれます。", "菌絲是絲狀的真菌細胞鏈。這條菌絲沒有橫隔 (septa)，所以一個連續的細胞質含有很多細胞核。", "균사(hypha)는 실 모양의 균류 필라멘트이다. 이 균사는 가로벽(격벽, septa)이 없으므로 연속된 하나의 세포질 안에 많은 핵이 들어 있다."),
       svg: function (t) {
         var s = '<rect class="k-wall" x="16" y="116" width="368" height="88" rx="44"/><rect class="k-mem" x="28" y="128" width="344" height="64" rx="32"/>';
         [66, 122, 180, 238, 296, 346].forEach(function (x, i) { s += '<circle class="k-nuc" cx="' + x + '" cy="' + (i % 2 ? 168 : 152) + '" r="13"/>'; });
@@ -349,9 +349,9 @@
       }
     },
     muscle: {
-      name: T("Skeletal muscle fibre", "骨格筋線維 (skeletal muscle fibre)", "骨骼肌纖維 (skeletal muscle fibre)"),
+      name: T("Skeletal muscle fibre", "骨格筋線維 (skeletal muscle fibre)", "骨骼肌纖維 (skeletal muscle fibre)", "골격근 섬유 (skeletal muscle fibre)"),
       nuclei: "many",
-      text: T("A very long cell formed when many cells fused together, so it has many nuclei (lying just under the plasma membrane).", "多数の細胞が融合してできた非常に長い細胞で、多数の核が細胞膜のすぐ内側に並びます。", "由許多細胞融合而成的極長細胞，所以有很多細胞核（位於質膜之下）。"),
+      text: T("A very long cell formed when many cells fused together, so it has many nuclei (lying just under the plasma membrane).", "多数の細胞が融合してできた非常に長い細胞で、多数の核が細胞膜のすぐ内側に並びます。", "由許多細胞融合而成的極長細胞，所以有很多細胞核（位於質膜之下）。", "많은 세포가 융합하여 만들어진 매우 긴 세포이므로 핵이 많다(세포막 바로 아래에 놓여 있다)."),
       svg: function (t) {
         var s = '<rect class="k-mem" x="14" y="104" width="372" height="112" rx="14"/>', i;
         for (i = 0; i < 18; i++) { s += '<line class="k-stri" x1="' + (36 + i * 19) + '" y1="124" x2="' + (36 + i * 19) + '" y2="196"/>'; }
@@ -360,17 +360,17 @@
       }
     },
     rbc: {
-      name: T("Red blood cell (mature, mammal)", "赤血球（成熟した哺乳類） (red blood cell)", "紅血球（成熟的哺乳動物） (red blood cell)"),
+      name: T("Red blood cell (mature, mammal)", "赤血球（成熟した哺乳類） (red blood cell)", "紅血球（成熟的哺乳動物） (red blood cell)", "적혈구 (성숙한 포유류 것)"),
       nuclei: "none",
-      text: T("No nucleus, which leaves more room for haemoglobin to carry oxygen. It cannot make new proteins or divide, so its life is limited.", "核がないため、酸素を運ぶヘモグロビンを入れる空間が増えます。新しいタンパク質を作れず分裂もできないので、寿命が限られます。", "沒有細胞核，騰出更多空間給運載氧氣的血紅蛋白。它不能製造新蛋白質或分裂，壽命有限。"),
+      text: T("No nucleus, which leaves more room for haemoglobin to carry oxygen. It cannot make new proteins or divide, so its life is limited.", "核がないため、酸素を運ぶヘモグロビンを入れる空間が増えます。新しいタンパク質を作れず分裂もできないので、寿命が限られます。", "沒有細胞核，騰出更多空間給運載氧氣的血紅蛋白。它不能製造新蛋白質或分裂，壽命有限。", "핵이 없어서 산소를 운반하는 헤모글로빈이 들어갈 공간이 더 많다. 새 단백질을 만들거나 분열할 수 없으므로 수명이 제한된다."),
       svg: function (t) {
         return '<circle class="k-rbc" cx="200" cy="160" r="84"/><circle class="k-rbc2" cx="200" cy="160" r="42"/><text class="k-lbl" x="200" y="164" text-anchor="middle">' + t(LB.hb) + '</text><text class="k-lbl" x="200" y="290" text-anchor="middle">' + t(LB.nonuc) + '</text>';
       }
     },
     sieve: {
-      name: T("Phloem sieve tube element", "師管要素 (phloem sieve tube element)", "韌皮部篩管分子 (phloem sieve tube element)"),
+      name: T("Phloem sieve tube element", "師管要素 (phloem sieve tube element)", "韌皮部篩管分子 (phloem sieve tube element)", "체관 요소 (phloem sieve tube element)"),
       nuclei: "noneMature",
-      text: T("Joined end to end to form a tube that carries sugars. No nucleus and few organelles leaves a clear path for flow. Sieve plates (pores) join neighbours. A companion cell (with a nucleus) supports it.", "端と端でつながり、糖を運ぶ管をつくります。核や細胞小器官が少ないので流れる通路が確保されます。師板（孔）が隣の細胞をつなぎます。核をもつ伴細胞が支えます。", "首尾相連形成運輸糖分的管道。沒有細胞核和較少胞器，令液流暢通。篩板（小孔）連接相鄰細胞。有細胞核的伴細胞為它提供支援。"),
+      text: T("Joined end to end to form a tube that carries sugars. No nucleus and few organelles leaves a clear path for flow. Sieve plates (pores) join neighbours. A companion cell (with a nucleus) supports it.", "端と端でつながり、糖を運ぶ管をつくります。核や細胞小器官が少ないので流れる通路が確保されます。師板（孔）が隣の細胞をつなぎます。核をもつ伴細胞が支えます。", "首尾相連形成運輸糖分的管道。沒有細胞核和較少胞器，令液流暢通。篩板（小孔）連接相鄰細胞。有細胞核的伴細胞為它提供支援。", "끝과 끝이 이어져 당을 운반하는 관을 이룬다. 핵이 없고 세포 소기관이 적어 흐름의 통로가 트여 있다. 체판(구멍)이 이웃한 세포를 연결한다. 반세포(핵이 있음)가 이를 돕는다."),
       svg: function (t) {
         var s = '<rect class="k-tube" x="120" y="14" width="86" height="136" rx="6"/><rect class="k-tube" x="120" y="150" width="86" height="156" rx="6"/>';
         s += '<line class="k-sieve" x1="124" y1="150" x2="202" y2="150" stroke-dasharray="9 7"/>';
@@ -386,19 +386,19 @@
 
   /* ---------- comparison table ---------- */
   var Y = "y", N = "n", D = "d";
-  var YES = T("✓", "✓", "✓"), NO = T("✗", "✗", "✗"), DASH = T("—", "—", "—");
+  var YES = T("✓", "✓", "✓", "✓"), NO = T("✗", "✗", "✗", "✗"), DASH = T("—", "—", "—", "—");
   var ROWS = [
-    [T("Plasma membrane", "細胞膜", "質膜"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
-    [T("Cytoplasm", "細胞質", "細胞質"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
-    [T("DNA", "DNA", "DNA"), [[D, T("Naked loop", "環状・むき出し", "環狀裸 DNA")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體")]]],
-    [T("Ribosomes", "リボソーム", "核糖體"), [[D, T("70S", "70S", "70S")], [D, T("80S", "80S", "80S")], [D, T("80S", "80S", "80S")], [D, T("80S", "80S", "80S")]]],
-    [T("Nucleus (double membrane, pores)", "核（二重膜・核膜孔）", "細胞核（雙層膜、核孔）"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
-    [T("Mitochondria, ER, Golgi", "ミトコンドリア・小胞体・ゴルジ体", "線粒體、內質網、高爾基體"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
-    [T("Cell wall", "細胞壁", "細胞壁"), [[Y, YES], [N, NO], [Y, T("✓ cellulose", "✓ セルロース", "✓ 纖維素")], [Y, T("✓ chitin", "✓ キチン", "✓ 幾丁質")]]],
-    [T("Vacuoles", "液胞", "液泡"), [[N, NO], [D, T("Small, temporary", "小さく一時的", "細小、暫時性")], [D, T("One large sap vacuole", "大きな液胞が1つ", "一個大型液泡")], [D, T("Present, size varies", "あり、大きさはさまざま", "有，大小不一")]]],
-    [T("Chloroplasts and other plastids", "葉緑体・ほかの色素体", "葉綠體及其他質體"), [[N, NO], [N, NO], [Y, YES], [N, NO]]],
-    [T("Centrioles", "中心小体", "中心粒"), [[N, NO], [Y, YES], [N, NO], [N, NO]]],
-    [T("Cilia and flagella", "繊毛・鞭毛", "纖毛和鞭毛"), [[N, DASH], [Y, T("✓ in some cells", "✓ 一部の細胞", "✓ 部分細胞")], [N, NO], [N, NO]]]
+    [T("Plasma membrane", "細胞膜", "質膜", "세포막 (plasma membrane)"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
+    [T("Cytoplasm", "細胞質", "細胞質", "세포질 (cytoplasm)"), [[Y, YES], [Y, YES], [Y, YES], [Y, YES]]],
+    [T("DNA", "DNA", "DNA", "DNA"), [[D, T("Naked loop", "環状・むき出し", "環狀裸 DNA", "맨 DNA 고리")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體", "핵 속의 염색체")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體", "핵 속의 염색체")], [D, T("Chromosomes in nucleus", "核内の染色体", "核內染色體", "핵 속의 염색체")]]],
+    [T("Ribosomes", "リボソーム", "核糖體", "리보솜"), [[D, T("70S", "70S", "70S", "70S")], [D, T("80S", "80S", "80S", "80S")], [D, T("80S", "80S", "80S", "80S")], [D, T("80S", "80S", "80S", "80S")]]],
+    [T("Nucleus (double membrane, pores)", "核（二重膜・核膜孔）", "細胞核（雙層膜、核孔）", "핵 (2중막, 핵공)"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
+    [T("Mitochondria, ER, Golgi", "ミトコンドリア・小胞体・ゴルジ体", "線粒體、內質網、高爾基體", "미토콘드리아, 소포체, 골지체"), [[N, NO], [Y, YES], [Y, YES], [Y, YES]]],
+    [T("Cell wall", "細胞壁", "細胞壁", "세포벽 (cell wall)"), [[Y, YES], [N, NO], [Y, T("✓ cellulose", "✓ セルロース", "✓ 纖維素", "✓ 셀룰로스")], [Y, T("✓ chitin", "✓ キチン", "✓ 幾丁質", "✓ 키틴")]]],
+    [T("Vacuoles", "液胞", "液泡", "액포"), [[N, NO], [D, T("Small, temporary", "小さく一時的", "細小、暫時性", "작고 일시적임")], [D, T("One large sap vacuole", "大きな液胞が1つ", "一個大型液泡", "큰 액포 1개")], [D, T("Present, size varies", "あり、大きさはさまざま", "有，大小不一", "있음, 크기는 다양함")]]],
+    [T("Chloroplasts and other plastids", "葉緑体・ほかの色素体", "葉綠體及其他質體", "엽록체와 그 밖의 색소체"), [[N, NO], [N, NO], [Y, YES], [N, NO]]],
+    [T("Centrioles", "中心小体", "中心粒", "중심체 (centrioles)"), [[N, NO], [Y, YES], [N, NO], [N, NO]]],
+    [T("Cilia and flagella", "繊毛・鞭毛", "纖毛和鞭毛", "섬모와 편모"), [[N, DASH], [Y, T("✓ in some cells", "✓ 一部の細胞", "✓ 部分細胞", "✓ 일부 세포에서")], [N, NO], [N, NO]]]
   ];
 
   /* ---------- widget ---------- */

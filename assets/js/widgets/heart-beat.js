@@ -6,7 +6,7 @@
    Right side is drawn beating in step with the left (pressures plotted for the left side only). */
 (function () {
   "use strict";
-  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
   var ID = "w-heart-beat-css";
   var KIT = [
     ":where(.wl){display:grid;gap:.75rem;--stage-max:min(42vh,320px)}",
@@ -84,47 +84,47 @@
   function phaseOf(x) { return x < EV.avClose ? 0 : (x < EV.slClose ? 1 : 2); }
 
   var T = {
-    title: L("Heart beat", "心臓の拍動", "心臟跳動"),
+    title: L("Heart beat", "心臓の拍動", "心臟跳動", "심장 박동"),
     ph: [
-      L("Atrial systole", "心房収縮期 (atrial systole)", "心房收縮期 (atrial systole)"),
-      L("Ventricular systole", "心室収縮期 (ventricular systole)", "心室收縮期 (ventricular systole)"),
-      L("Diastole", "拡張期 (diastole)", "舒張期 (diastole)")
+      L("Atrial systole", "心房収縮期 (atrial systole)", "心房收縮期 (atrial systole)", "심방 수축기(atrial systole)"),
+      L("Ventricular systole", "心室収縮期 (ventricular systole)", "心室收縮期 (ventricular systole)", "심실 수축기(ventricular systole)"),
+      L("Diastole", "拡張期 (diastole)", "舒張期 (diastole)", "이완기(diastole)")
     ],
     msg: [
-      L("The SA node signal makes the atria contract, pushing the last blood into the ventricles. AV valves open, semilunar valves closed.", "洞房結節の信号で心房が収縮し、血液を心室へ押し込みます。房室弁は開き、半月弁は閉じています。", "竇房結的信號令心房收縮，把血液推入心室。房室瓣張開，半月瓣關閉。"),
-      L("Ventricles contract. Pressure above atrial: AV valves close. Pressure above aortic: semilunar valves open and blood is pumped out.", "心室が収縮。圧力が心房を上回ると房室弁が閉じ、大動脈を上回ると半月弁が開いて血液が送り出されます。", "心室收縮。壓力高於心房，房室瓣關閉；高於主動脈，半月瓣張開，血液被泵出。"),
-      L("Ventricles relax. Pressure below aortic: semilunar valves close. Below atrial: AV valves open and blood flows in.", "心室がゆるむ。圧力が大動脈より低いと半月弁が閉じ、心房より低いと房室弁が開いて血液が流れ込みます。", "心室放鬆。壓力低於主動脈，半月瓣關閉；低於心房，房室瓣張開，血液流入。")
+      L("The SA node signal makes the atria contract, pushing the last blood into the ventricles. AV valves open, semilunar valves closed.", "洞房結節の信号で心房が収縮し、血液を心室へ押し込みます。房室弁は開き、半月弁は閉じています。", "竇房結的信號令心房收縮，把血液推入心室。房室瓣張開，半月瓣關閉。", "동방 결절(SA node)의 신호가 심방을 수축시켜 마지막 혈액을 심실로 밀어 넣는다. 방실판은 열리고 반월판은 닫혀 있다."),
+      L("Ventricles contract. Pressure above atrial: AV valves close. Pressure above aortic: semilunar valves open and blood is pumped out.", "心室が収縮。圧力が心房を上回ると房室弁が閉じ、大動脈を上回ると半月弁が開いて血液が送り出されます。", "心室收縮。壓力高於心房，房室瓣關閉；高於主動脈，半月瓣張開，血液被泵出。", "심실이 수축한다. 압력이 심방보다 높아지면 방실판이 닫힌다. 압력이 대동맥보다 높아지면 반월판이 열리고 혈액이 밖으로 내보내진다."),
+      L("Ventricles relax. Pressure below aortic: semilunar valves close. Below atrial: AV valves open and blood flows in.", "心室がゆるむ。圧力が大動脈より低いと半月弁が閉じ、心房より低いと房室弁が開いて血液が流れ込みます。", "心室放鬆。壓力低於主動脈，半月瓣關閉；低於心房，房室瓣張開，血液流入。", "심실이 이완한다. 압력이 대동맥보다 낮아지면 반월판이 닫힌다. 심방보다 낮아지면 방실판이 열리고 혈액이 흘러 들어온다.")
     ],
-    av: L("AV valves", "房室弁 (AV valves)", "房室瓣 (AV valves)"),
-    sl: L("Semilunar valves", "半月弁 (semilunar valves)", "半月瓣 (semilunar valves)"),
-    open: L("open", "開", "開"),
-    closed: L("closed", "閉", "閉"),
-    play: L("Play", "再生", "播放"),
-    pause: L("Pause", "停止", "暫停"),
-    prev: L("Previous step", "前のステップ", "上一步"),
-    next: L("Next step", "次のステップ", "下一步"),
-    speed: L("Speed", "速さ", "速度"),
-    time: L("Time in the cycle (s)", "周期内の時間 (s)", "週期內的時間 (s)"),
-    ra: L("Right atrium", "右心房", "右心房"), la: L("Left atrium", "左心房", "左心房"),
-    rv: L("Right ventricle", "右心室", "右心室"), lv: L("Left ventricle", "左心室", "左心室"),
+    av: L("AV valves", "房室弁 (AV valves)", "房室瓣 (AV valves)", "방실판(AV valves)"),
+    sl: L("Semilunar valves", "半月弁 (semilunar valves)", "半月瓣 (semilunar valves)", "반월판(semilunar valves)"),
+    open: L("open", "開", "開", "열림"),
+    closed: L("closed", "閉", "閉", "닫힘"),
+    play: L("Play", "再生", "播放", "재생"),
+    pause: L("Pause", "停止", "暫停", "일시 정지"),
+    prev: L("Previous step", "前のステップ", "上一步", "이전 단계"),
+    next: L("Next step", "次のステップ", "下一步", "다음 단계"),
+    speed: L("Speed", "速さ", "速度", "속도"),
+    time: L("Time in the cycle (s)", "周期内の時間 (s)", "週期內的時間 (s)", "주기 내 시간 (s)"),
+    ra: L("Right atrium", "右心房", "右心房", "우심방"), la: L("Left atrium", "左心房", "左心房", "좌심방"),
+    rv: L("Right ventricle", "右心室", "右心室", "우심실"), lv: L("Left ventricle", "左心室", "左心室", "좌심실"),
     raE: "right atrium", laE: "left atrium", rvE: "right ventricle", lvE: "left ventricle",
-    aorta: L("Aorta", "大動脈", "主動脈"), pa: L("Pulmonary artery", "肺動脈", "肺動脈"),
-    vc: L("Vena cava", "大静脈", "腔靜脈"), pv: L("Pulmonary vein", "肺静脈", "肺靜脈"),
-    toLungs: L("to lungs", "肺へ", "往肺"), toBody: L("to body", "全身へ", "往全身"),
-    fromBody: L("from body", "全身から", "來自全身"), fromLungs: L("from lungs", "肺から", "來自肺"),
-    avv: L("AV valve", "房室弁", "房室瓣"), slv: L("semilunar valve", "半月弁", "半月瓣"),
-    sa: L("SA node", "洞房結節", "竇房結"),
-    gAtr: L("Atrium", "心房", "心房"), gVen: L("Ventricle", "心室", "心室"), gAo: L("Aorta", "大動脈", "主動脈"),
-    gT: L("Time (s)", "時間 (s)", "時間 (s)"), gP: L("Pressure (mmHg)", "圧力 (mmHg)", "壓力 (mmHg)"),
-    gTitle: L("Left side of the heart (illustrative values)", "心臓の左側（説明用の値）", "心臟左側（示範數值）"),
-    ev: [L("AV valves close", "房室弁が閉じる", "房室瓣關閉"), L("semilunar valves open", "半月弁が開く", "半月瓣張開"), L("semilunar valves close", "半月弁が閉じる", "半月瓣關閉"), L("AV valves open", "房室弁が開く", "房室瓣張開")],
-    blue: L("deoxygenated", "酸素の少ない血液", "缺氧血"), red: L("oxygenated", "酸素の多い血液", "含氧血"),
-    legBlood: L("Colour code: blue = deoxygenated blood, red = oxygenated blood. Both sides beat together; pressures are for the left side.", "色: 青＝酸素の少ない血液 (deoxygenated)、赤＝酸素の多い血液 (oxygenated)。左右は同時に拍動します。圧力は左側のものです。", "顏色：藍＝缺氧血 (deoxygenated)，紅＝含氧血 (oxygenated)。左右兩側同時跳動；壓力為左側數值。"),
-    ex: L("Valves open and close where the pressure curves cross. Blood flows from high to low pressure.", "弁は圧力曲線が交わるところで開閉します。血液は高圧から低圧へ流れます。", "瓣膜在壓力曲線相交處開合。血液由高壓流向低壓。"),
-    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住"),
-    ref: L("Syllabus B3.2.15–16 · AHL · illustrative, about 75 beats per minute at 1×", "シラバス B3.2.15–16 · AHL · 説明用、1×で約75拍/分", "課程大綱 B3.2.15–16 · AHL · 示範，1×約每分鐘75次"),
-    more: L("More detail", "くわしく", "更多資料"),
-    aria: L("Animated heart and pressure graph", "動く心臓と圧力グラフ", "動態心臟與壓力圖")
+    aorta: L("Aorta", "大動脈", "主動脈", "대동맥"), pa: L("Pulmonary artery", "肺動脈", "肺動脈", "폐동맥"),
+    vc: L("Vena cava", "大静脈", "腔靜脈", "대정맥"), pv: L("Pulmonary vein", "肺静脈", "肺靜脈", "폐정맥"),
+    toLungs: L("to lungs", "肺へ", "往肺", "폐로"), toBody: L("to body", "全身へ", "往全身", "온몸으로"),
+    fromBody: L("from body", "全身から", "來自全身", "온몸에서"), fromLungs: L("from lungs", "肺から", "來自肺", "폐에서"),
+    avv: L("AV valve", "房室弁", "房室瓣", "방실판"), slv: L("semilunar valve", "半月弁", "半月瓣", "반월판"),
+    sa: L("SA node", "洞房結節", "竇房結", "동방 결절"),
+    gAtr: L("Atrium", "心房", "心房", "심방"), gVen: L("Ventricle", "心室", "心室", "심실"), gAo: L("Aorta", "大動脈", "主動脈", "대동맥"),
+    gT: L("Time (s)", "時間 (s)", "時間 (s)", "시간 (s)"), gP: L("Pressure (mmHg)", "圧力 (mmHg)", "壓力 (mmHg)", "압력 (mmHg)"),
+    gTitle: L("Left side of the heart (illustrative values)", "心臓の左側（説明用の値）", "心臟左側（示範數值）", "심장의 왼쪽(예시 값)"),
+    ev: [L("AV valves close", "房室弁が閉じる", "房室瓣關閉", "방실판 닫힘"), L("semilunar valves open", "半月弁が開く", "半月瓣張開", "반월판 열림"), L("semilunar valves close", "半月弁が閉じる", "半月瓣關閉", "반월판 닫힘"), L("AV valves open", "房室弁が開く", "房室瓣張開", "방실판 열림")],
+    blue: L("deoxygenated", "酸素の少ない血液", "缺氧血", "산소가 적음"), red: L("oxygenated", "酸素の多い血液", "含氧血", "산소가 많음"),
+    legBlood: L("Colour code: blue = deoxygenated blood, red = oxygenated blood. Both sides beat together; pressures are for the left side.", "色: 青＝酸素の少ない血液 (deoxygenated)、赤＝酸素の多い血液 (oxygenated)。左右は同時に拍動します。圧力は左側のものです。", "顏色：藍＝缺氧血 (deoxygenated)，紅＝含氧血 (oxygenated)。左右兩側同時跳動；壓力為左側數值。", "색 구분: 파란색 = 산소가 적은 혈액, 빨간색 = 산소가 많은 혈액. 양쪽이 함께 박동하며, 압력은 왼쪽 기준이다."),
+    ex: L("Valves open and close where the pressure curves cross. Blood flows from high to low pressure.", "弁は圧力曲線が交わるところで開閉します。血液は高圧から低圧へ流れます。", "瓣膜在壓力曲線相交處開合。血液由高壓流向低壓。", "압력 곡선이 교차하는 지점에서 판막이 열리고 닫힌다. 혈액은 압력이 높은 곳에서 낮은 곳으로 흐른다."),
+    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住", "시험을 위해 기억할 것"),
+    ref: L("Syllabus B3.2.15–16 · AHL · illustrative, about 75 beats per minute at 1×", "シラバス B3.2.15–16 · AHL · 説明用、1×で約75拍/分", "課程大綱 B3.2.15–16 · AHL · 示範，1×約每分鐘75次", "교육과정 B3.2.15–16 · AHL · 예시이며, 1배속에서 분당 약 75회 박동"),
+    more: L("More detail", "くわしく", "更多資料", "더 자세히"),
+    aria: L("Animated heart and pressure graph", "動く心臓と圧力グラフ", "動態心臟與壓力圖", "박동하는 심장과 압력 그래프의 애니메이션")
   };
 
   function clamp(x, a, b) { return x < a ? a : (x > b ? b : x); }
@@ -157,7 +157,7 @@
   }
 
   IB.registerWidget("heart-beat", {
-    title: L("Beating heart and pressure graph (AHL)", "拍動する心臓と圧力グラフ（AHL）", "跳動的心臟與壓力圖（AHL）"),
+    title: L("Beating heart and pressure graph (AHL)", "拍動する心臓と圧力グラフ（AHL）", "跳動的心臟與壓力圖（AHL）", "박동하는 심장과 압력 그래프(AHL)"),
     mount: function (el, ctx) {
       if (!document.getElementById(ID)) { var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st); }
       var t = ctx.t, noMotion = reduced();

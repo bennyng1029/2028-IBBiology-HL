@@ -7,7 +7,7 @@
 
 A free, static, open-source study site for **IB Diploma Biology, Themes A (Unity and diversity) and B (Form and function)**, SL and AHL, for students sitting the **May 2028** exams. Syllabus: IB Biology guide, first assessment 2025.
 
-- Languages: English (default), Japanese, Hong Kong Traditional Chinese. The language never switches automatically.
+- Languages: English (default), Japanese, Hong Kong Traditional Chinese, Korean (한국어). The language never switches automatically.
 - Each subtopic: notes mapped to the guide's understanding statements, exam tips, key terms, common mistakes, a "Beyond the syllabus: you do NOT need to know" box, and a quiz.
 - Guided **Labs** (menu: Labs): step-by-step activities with one interactive per step, such as the Protein Lab (B1.2). Each topic page links to its related labs. Plus a Practice page and a Glossary.
 - No build step, no framework, no tracking. Progress is stored in your own browser.
@@ -18,7 +18,7 @@ Send the link: https://bennyng1029.github.io/2028-IBBiology-HL/ . The **Share** 
 
 How to use it:
 - On your first visit, choose **SL** or **HL**. SL hides AHL-only content. You can switch any time with the SL / SL + AHL button in the header (open the Menu on a phone).
-- Choose English, 日本語 or 中文 with the language list in the header. The site never switches language by itself.
+- Choose English, 日本語, 中文 or 한국어 with the language list in the header. The site never switches language by itself.
 - Your quiz progress is saved only in your own browser on this device. It does not sync to other devices, and clearing browser data resets it.
 - It can also be opened straight from the downloaded files (`index.html`), with no server.
 

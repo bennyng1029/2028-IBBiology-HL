@@ -50,63 +50,63 @@
     s.id = STYLE_ID; s.textContent = CSS;
     document.head.appendChild(s);
   }
-  var T = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var T = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko || en }; };
 
   var UI = {
-    title: T("Magnification and scale bars", "倍率とスケールバー", "放大率與比例尺"),
-    tCalc: T("Calculator", "計算機", "計算器"),
-    tBar: T("Scale bar", "スケールバー", "比例尺"),
-    tPrac: T("Practice", "練習", "練習"),
-    formula: T("magnification = image size ÷ actual size", "倍率 = 像の大きさ ÷ 実際の大きさ", "放大率 = 影像大小 ÷ 實際大小"),
-    formula2: T("Put both sizes in the same unit first. 1 mm = 1000 µm; 1 µm = 1000 nm.", "必ず先に単位をそろえます。1 mm = 1000 µm、1 µm = 1000 nm。", "先把兩個大小換成同一單位。1 mm = 1000 µm；1 µm = 1000 nm。"),
-    solveFor: T("Find:", "求めるもの：", "求："),
-    sM: T("Magnification (M)", "倍率 (M)", "放大率 (M)"),
-    sA: T("Actual size (A)", "実際の大きさ (A)", "實際大小 (A)"),
-    sI: T("Image size (I)", "像の大きさ (I)", "影像大小 (I)"),
-    imgSize: T("Image size (I)", "像の大きさ (I)", "影像大小 (I)"),
-    actSize: T("Actual size (A)", "実際の大きさ (A)", "實際大小 (A)"),
-    magn: T("Magnification (M)", "倍率 (M)", "放大率 (M)"),
-    answerUnit: T("(answer unit)", "（答えの単位）", "（答案單位）"),
-    enterPos: T("Enter positive numbers in the other two boxes.", "ほかの2つの欄に正の数を入力します。", "請在另外兩格輸入正數。"),
-    working: T("Working", "計算の過程", "計算步驟"),
-    sameUnit: T("Both lengths are already in {u}.", "どちらの長さもすでに {u} です。", "兩個長度都已經是 {u}。"),
-    convImg: T("Put both in the same unit. Image: {I} {Iu} = {Ic} {Au}.", "単位をそろえます。像：{I} {Iu} = {Ic} {Au}。", "統一單位。影像：{I} {Iu} = {Ic} {Au}。"),
-    stepM: T("M = I ÷ A = {Ic} ÷ {A} = {M}", "M = I ÷ A = {Ic} ÷ {A} = {M}", "M = I ÷ A = {Ic} ÷ {A} = {M}"),
-    resM: T("Magnification = ×{M}", "倍率 = ×{M}", "放大率 = ×{M}"),
-    convImgO: T("Convert the image to the answer unit: {I} {Iu} = {Ic} {Ou}.", "像を答えの単位に換算します：{I} {Iu} = {Ic} {Ou}。", "把影像換算成答案單位：{I} {Iu} = {Ic} {Ou}。"),
-    stepA: T("A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}", "A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}", "A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}"),
-    resA: T("Actual size = {R} {Ou}", "実際の大きさ = {R} {Ou}", "實際大小 = {R} {Ou}"),
-    stepI: T("I = A × M = {A} {Au} × {M} = {Rc} {Au}", "I = A × M = {A} {Au} × {M} = {Rc} {Au}", "I = A × M = {A} {Au} × {M} = {Rc} {Au}"),
-    convO: T("Convert to the answer unit: {Rc} {Au} = {R} {Ou}.", "答えの単位に換算します：{Rc} {Au} = {R} {Ou}。", "換算成答案單位：{Rc} {Au} = {R} {Ou}。"),
-    resI: T("Image size = {R} {Ou}", "像の大きさ = {R} {Ou}", "影像大小 = {R} {Ou}"),
-    barLabel: T("Scale bar is labelled", "スケールバーの表示", "比例尺標示為"),
-    barLen: T("Scale bar measures (mm)", "スケールバーの長さ (mm)", "比例尺量得 (mm)"),
-    cellLen: T("Structure measures (mm)", "構造の長さ (mm)", "結構量得 (mm)"),
-    barNote: T("Drawing is schematic. In an exam you measure the bar and the structure with a ruler, in mm.", "図は模式的です。試験では、バーと構造を定規でmm単位で測ります。", "圖為示意。考試時要用直尺以 mm 量度比例尺和結構。"),
-    barSteps1: T("Magnification = bar length ÷ bar’s actual length = {bl} mm ÷ {b} {bu}. Same unit: {bl} mm = {blc} {bu}. So M = {blc} ÷ {b} = ×{M}.", "倍率 = バーの長さ ÷ バーの実際の長さ = {bl} mm ÷ {b} {bu}。単位をそろえる：{bl} mm = {blc} {bu}。よって M = {blc} ÷ {b} = ×{M}。", "放大率 = 比例尺長度 ÷ 比例尺代表的實際長度 = {bl} mm ÷ {b} {bu}。統一單位：{bl} mm = {blc} {bu}。所以 M = {blc} ÷ {b} = ×{M}。"),
-    barSteps2: T("Actual length = structure ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}.", "実際の長さ = 構造 ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}。", "實際長度 = 結構 ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}。"),
-    barShort: T("Shortcut: the structure is {sl}/{bl} of the bar, so {sl}/{bl} × {b} {bu} = {R2} {bu}.", "近道：構造はバーの {sl}/{bl} なので、{sl}/{bl} × {b} {bu} = {R2} {bu}。", "捷徑：結構是比例尺的 {sl}/{bl}，所以 {sl}/{bl} × {b} {bu} = {R2} {bu}。"),
-    newQ: T("New question", "新しい問題", "新題目"),
-    check: T("Check", "答え合わせ", "核對"),
-    show: T("Show worked solution", "解法を見る", "顯示解答步驟"),
-    yourAns: T("Your answer:", "あなたの答え：", "你的答案："),
-    right: T("Correct.", "正解です。", "正確。"),
-    wrong: T("Not quite. Check the units, then look at the worked solution.", "惜しい。単位を確認し、解法を見ましょう。", "未完全正確。請檢查單位，然後看解答步驟。"),
-    enterNum: T("Enter a number first.", "まず数値を入力します。", "請先輸入數字。"),
-    score: T("Score", "得点", "得分"),
-    hardMode: T("Question types", "問題の種類", "題目類型"),
-    qAll: T("All", "すべて", "全部"),
-    qBasic: T("Magnification and size", "倍率と大きさ", "放大率與大小"),
-    qBar: T("Scale bars", "スケールバー", "比例尺"),
-    qM: T("A structure is {a} {u} long. In a micrograph it measures {I} mm. Calculate the magnification.", "ある構造の実際の長さは {a} {u} です。顕微鏡写真では {I} mm でした。倍率を計算しなさい。", "一個結構的實際長度為 {a} {u}。在顯微照片中量得 {I} mm。計算放大率。"),
-    qA: T("A micrograph has a magnification of ×{M}. A structure measures {I} mm in the micrograph. Calculate its actual size.", "顕微鏡写真の倍率は ×{M} です。ある構造は写真上で {I} mm でした。実際の大きさを計算しなさい。", "一張顯微照片的放大率為 ×{M}。一個結構在照片中量得 {I} mm。計算它的實際大小。"),
-    qI: T("A structure is {a} {u} long. A drawing of it has a magnification of ×{M}. Calculate the length of the structure in the drawing.", "ある構造の長さは {a} {u} です。×{M} の倍率で描いた図での長さを計算しなさい。", "一個結構長 {a} {u}。以 ×{M} 的放大率繪畫，計算它在圖中的長度。"),
-    qS: T("The scale bar in the micrograph is labelled “{b} {bu}” and measures {bl} mm. A structure measures {sl} mm. Calculate the actual length of the structure.", "顕微鏡写真のスケールバーは「{b} {bu}」と表示され、長さは {bl} mm です。ある構造は {sl} mm でした。構造の実際の長さを計算しなさい。", "顯微照片的比例尺標示為「{b} {bu}」，量得 {bl} mm。一個結構量得 {sl} mm。計算該結構的實際長度。"),
-    qSM: T("The scale bar in the micrograph is labelled “{b} {bu}” and measures {bl} mm. Calculate the magnification of the micrograph.", "顕微鏡写真のスケールバーは「{b} {bu}」と表示され、長さは {bl} mm です。写真の倍率を計算しなさい。", "顯微照片的比例尺標示為「{b} {bu}」，量得 {bl} mm。計算照片的放大率。"),
-    ansUnitHint: T("Choose the unit that matches your number.", "数値に合う単位を選びます。", "請選擇與你的數字相符的單位。"),
-    correctIs: T("Correct answer: {x}", "正解：{x}", "正確答案：{x}"),
-    stepsHead: T("Worked solution", "解法", "解答步驟"),
-    aIsMag: T("(a number with no unit)", "（単位なしの数）", "（沒有單位的數字）")
+    title: T("Magnification and scale bars", "倍率とスケールバー", "放大率與比例尺", "배율과 축척 막대"),
+    tCalc: T("Calculator", "計算機", "計算器", "계산기"),
+    tBar: T("Scale bar", "スケールバー", "比例尺", "축척 막대 (scale bar)"),
+    tPrac: T("Practice", "練習", "練習", "연습 문제"),
+    formula: T("magnification = image size ÷ actual size", "倍率 = 像の大きさ ÷ 実際の大きさ", "放大率 = 影像大小 ÷ 實際大小", "배율(magnification) = 상의 크기 ÷ 실제 크기"),
+    formula2: T("Put both sizes in the same unit first. 1 mm = 1000 µm; 1 µm = 1000 nm.", "必ず先に単位をそろえます。1 mm = 1000 µm、1 µm = 1000 nm。", "先把兩個大小換成同一單位。1 mm = 1000 µm；1 µm = 1000 nm。", "먼저 두 크기를 같은 단위로 맞춘다. 1 mm = 1000 µm; 1 µm = 1000 nm."),
+    solveFor: T("Find:", "求めるもの：", "求：", "구할 것:"),
+    sM: T("Magnification (M)", "倍率 (M)", "放大率 (M)", "배율 (M)"),
+    sA: T("Actual size (A)", "実際の大きさ (A)", "實際大小 (A)", "실제 크기 (A)"),
+    sI: T("Image size (I)", "像の大きさ (I)", "影像大小 (I)", "상의 크기 (I)"),
+    imgSize: T("Image size (I)", "像の大きさ (I)", "影像大小 (I)", "상의 크기 (I)"),
+    actSize: T("Actual size (A)", "実際の大きさ (A)", "實際大小 (A)", "실제 크기 (A)"),
+    magn: T("Magnification (M)", "倍率 (M)", "放大率 (M)", "배율 (M)"),
+    answerUnit: T("(answer unit)", "（答えの単位）", "（答案單位）", "(답의 단위)"),
+    enterPos: T("Enter positive numbers in the other two boxes.", "ほかの2つの欄に正の数を入力します。", "請在另外兩格輸入正數。", "나머지 두 칸에 양수를 입력하시오."),
+    working: T("Working", "計算の過程", "計算步驟", "풀이 과정"),
+    sameUnit: T("Both lengths are already in {u}.", "どちらの長さもすでに {u} です。", "兩個長度都已經是 {u}。", "두 길이는 이미 {u} 단위이다."),
+    convImg: T("Put both in the same unit. Image: {I} {Iu} = {Ic} {Au}.", "単位をそろえます。像：{I} {Iu} = {Ic} {Au}。", "統一單位。影像：{I} {Iu} = {Ic} {Au}。", "두 값을 같은 단위로 맞춘다. 상: {I} {Iu} = {Ic} {Au}."),
+    stepM: T("M = I ÷ A = {Ic} ÷ {A} = {M}", "M = I ÷ A = {Ic} ÷ {A} = {M}", "M = I ÷ A = {Ic} ÷ {A} = {M}", "M = I ÷ A = {Ic} ÷ {A} = {M}"),
+    resM: T("Magnification = ×{M}", "倍率 = ×{M}", "放大率 = ×{M}", "배율 = ×{M}"),
+    convImgO: T("Convert the image to the answer unit: {I} {Iu} = {Ic} {Ou}.", "像を答えの単位に換算します：{I} {Iu} = {Ic} {Ou}。", "把影像換算成答案單位：{I} {Iu} = {Ic} {Ou}。", "상을 답의 단위로 바꾼다: {I} {Iu} = {Ic} {Ou}."),
+    stepA: T("A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}", "A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}", "A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}", "A = I ÷ M = {Ic} ÷ {M} = {R} {Ou}"),
+    resA: T("Actual size = {R} {Ou}", "実際の大きさ = {R} {Ou}", "實際大小 = {R} {Ou}", "실제 크기 = {R} {Ou}"),
+    stepI: T("I = A × M = {A} {Au} × {M} = {Rc} {Au}", "I = A × M = {A} {Au} × {M} = {Rc} {Au}", "I = A × M = {A} {Au} × {M} = {Rc} {Au}", "I = A × M = {A} {Au} × {M} = {Rc} {Au}"),
+    convO: T("Convert to the answer unit: {Rc} {Au} = {R} {Ou}.", "答えの単位に換算します：{Rc} {Au} = {R} {Ou}。", "換算成答案單位：{Rc} {Au} = {R} {Ou}。", "답의 단위로 바꾼다: {Rc} {Au} = {R} {Ou}."),
+    resI: T("Image size = {R} {Ou}", "像の大きさ = {R} {Ou}", "影像大小 = {R} {Ou}", "상의 크기 = {R} {Ou}"),
+    barLabel: T("Scale bar is labelled", "スケールバーの表示", "比例尺標示為", "축척 막대에 적힌 값"),
+    barLen: T("Scale bar measures (mm)", "スケールバーの長さ (mm)", "比例尺量得 (mm)", "축척 막대의 측정값 (mm)"),
+    cellLen: T("Structure measures (mm)", "構造の長さ (mm)", "結構量得 (mm)", "구조의 측정값 (mm)"),
+    barNote: T("Drawing is schematic. In an exam you measure the bar and the structure with a ruler, in mm.", "図は模式的です。試験では、バーと構造を定規でmm単位で測ります。", "圖為示意。考試時要用直尺以 mm 量度比例尺和結構。", "그림은 개략도이다. 시험에서는 막대와 구조를 자로 재어 mm 단위로 나타낸다."),
+    barSteps1: T("Magnification = bar length ÷ bar’s actual length = {bl} mm ÷ {b} {bu}. Same unit: {bl} mm = {blc} {bu}. So M = {blc} ÷ {b} = ×{M}.", "倍率 = バーの長さ ÷ バーの実際の長さ = {bl} mm ÷ {b} {bu}。単位をそろえる：{bl} mm = {blc} {bu}。よって M = {blc} ÷ {b} = ×{M}。", "放大率 = 比例尺長度 ÷ 比例尺代表的實際長度 = {bl} mm ÷ {b} {bu}。統一單位：{bl} mm = {blc} {bu}。所以 M = {blc} ÷ {b} = ×{M}。", "배율 = 막대 길이 ÷ 막대의 실제 길이 = {bl} mm ÷ {b} {bu}. 같은 단위로: {bl} mm = {blc} {bu}. 따라서 M = {blc} ÷ {b} = ×{M}."),
+    barSteps2: T("Actual length = structure ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}.", "実際の長さ = 構造 ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}。", "實際長度 = 結構 ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}。", "실제 길이 = 구조 ÷ M = {sl} mm ÷ {M} = {Amm} mm = {R} {Ou}."),
+    barShort: T("Shortcut: the structure is {sl}/{bl} of the bar, so {sl}/{bl} × {b} {bu} = {R2} {bu}.", "近道：構造はバーの {sl}/{bl} なので、{sl}/{bl} × {b} {bu} = {R2} {bu}。", "捷徑：結構是比例尺的 {sl}/{bl}，所以 {sl}/{bl} × {b} {bu} = {R2} {bu}。", "간편 풀이: 구조는 막대의 {sl}/{bl}이므로 {sl}/{bl} × {b} {bu} = {R2} {bu}."),
+    newQ: T("New question", "新しい問題", "新題目", "새 문제"),
+    check: T("Check", "答え合わせ", "核對", "확인"),
+    show: T("Show worked solution", "解法を見る", "顯示解答步驟", "풀이 보기"),
+    yourAns: T("Your answer:", "あなたの答え：", "你的答案：", "내 답:"),
+    right: T("Correct.", "正解です。", "正確。", "정답이다."),
+    wrong: T("Not quite. Check the units, then look at the worked solution.", "惜しい。単位を確認し、解法を見ましょう。", "未完全正確。請檢查單位，然後看解答步驟。", "틀렸다. 단위를 확인한 다음 풀이를 보시오."),
+    enterNum: T("Enter a number first.", "まず数値を入力します。", "請先輸入數字。", "먼저 숫자를 입력하시오."),
+    score: T("Score", "得点", "得分", "점수"),
+    hardMode: T("Question types", "問題の種類", "題目類型", "문제 유형"),
+    qAll: T("All", "すべて", "全部", "전체"),
+    qBasic: T("Magnification and size", "倍率と大きさ", "放大率與大小", "배율과 크기"),
+    qBar: T("Scale bars", "スケールバー", "比例尺", "축척 막대"),
+    qM: T("A structure is {a} {u} long. In a micrograph it measures {I} mm. Calculate the magnification.", "ある構造の実際の長さは {a} {u} です。顕微鏡写真では {I} mm でした。倍率を計算しなさい。", "一個結構的實際長度為 {a} {u}。在顯微照片中量得 {I} mm。計算放大率。", "어떤 구조의 길이는 {a} {u}이다. 현미경 사진에서 그 구조는 {I} mm로 측정된다. 배율을 계산하시오(Calculate)."),
+    qA: T("A micrograph has a magnification of ×{M}. A structure measures {I} mm in the micrograph. Calculate its actual size.", "顕微鏡写真の倍率は ×{M} です。ある構造は写真上で {I} mm でした。実際の大きさを計算しなさい。", "一張顯微照片的放大率為 ×{M}。一個結構在照片中量得 {I} mm。計算它的實際大小。", "현미경 사진의 배율은 ×{M}이다. 사진에서 어떤 구조가 {I} mm로 측정된다. 그 구조의 실제 크기를 계산하시오(Calculate)."),
+    qI: T("A structure is {a} {u} long. A drawing of it has a magnification of ×{M}. Calculate the length of the structure in the drawing.", "ある構造の長さは {a} {u} です。×{M} の倍率で描いた図での長さを計算しなさい。", "一個結構長 {a} {u}。以 ×{M} 的放大率繪畫，計算它在圖中的長度。", "어떤 구조의 길이는 {a} {u}이다. 이를 그린 그림의 배율은 ×{M}이다. 그림에서 그 구조의 길이를 계산하시오(Calculate)."),
+    qS: T("The scale bar in the micrograph is labelled “{b} {bu}” and measures {bl} mm. A structure measures {sl} mm. Calculate the actual length of the structure.", "顕微鏡写真のスケールバーは「{b} {bu}」と表示され、長さは {bl} mm です。ある構造は {sl} mm でした。構造の実際の長さを計算しなさい。", "顯微照片的比例尺標示為「{b} {bu}」，量得 {bl} mm。一個結構量得 {sl} mm。計算該結構的實際長度。", "현미경 사진의 축척 막대에는 “{b} {bu}”라고 적혀 있고 길이는 {bl} mm로 측정된다. 어떤 구조는 {sl} mm로 측정된다. 그 구조의 실제 길이를 계산하시오(Calculate)."),
+    qSM: T("The scale bar in the micrograph is labelled “{b} {bu}” and measures {bl} mm. Calculate the magnification of the micrograph.", "顕微鏡写真のスケールバーは「{b} {bu}」と表示され、長さは {bl} mm です。写真の倍率を計算しなさい。", "顯微照片的比例尺標示為「{b} {bu}」，量得 {bl} mm。計算照片的放大率。", "현미경 사진의 축척 막대에는 “{b} {bu}”라고 적혀 있고 길이는 {bl} mm로 측정된다. 현미경 사진의 배율을 계산하시오(Calculate)."),
+    ansUnitHint: T("Choose the unit that matches your number.", "数値に合う単位を選びます。", "請選擇與你的數字相符的單位。", "자신의 수에 맞는 단위를 고르시오."),
+    correctIs: T("Correct answer: {x}", "正解：{x}", "正確答案：{x}", "정답: {x}"),
+    stepsHead: T("Worked solution", "解法", "解答步驟", "풀이 과정"),
+    aIsMag: T("(a number with no unit)", "（単位なしの数）", "（沒有單位的數字）", "(단위가 없는 수)")
   };
 
   var F = { "mm": 1e6, "µm": 1e3, "nm": 1 };
@@ -299,9 +299,9 @@
             q.answerM = M;
             var Ic = Imm * F.mm / F[u];
             q.steps = [
-              T("Same unit: image {I} mm = {Ic} {u} (1 mm = 1000 µm" + (u === "nm" ? ", 1 µm = 1000 nm" : "") + ").", "単位をそろえる：像 {I} mm = {Ic} {u}（1 mm = 1000 µm" + (u === "nm" ? "、1 µm = 1000 nm" : "") + "）。", "統一單位：影像 {I} mm = {Ic} {u}（1 mm = 1000 µm" + (u === "nm" ? "，1 µm = 1000 nm" : "") + "）。"),
-              T("M = I ÷ A = {Ic} ÷ {a} = {M}", "M = I ÷ A = {Ic} ÷ {a} = {M}", "M = I ÷ A = {Ic} ÷ {a} = {M}"),
-              T("Magnification = ×{M}", "倍率 = ×{M}", "放大率 = ×{M}")
+              T("Same unit: image {I} mm = {Ic} {u} (1 mm = 1000 µm" + (u === "nm" ? ", 1 µm = 1000 nm" : "") + ").", "単位をそろえる：像 {I} mm = {Ic} {u}（1 mm = 1000 µm" + (u === "nm" ? "、1 µm = 1000 nm" : "") + "）。", "統一單位：影像 {I} mm = {Ic} {u}（1 mm = 1000 µm" + (u === "nm" ? "，1 µm = 1000 nm" : "") + "）。", "단위를 맞춘다: 상 {I} mm = {Ic} {u} (1 mm = 1000 µm" + (u === "nm" ? ", 1 µm = 1000 nm" : "") + ")."),
+              T("M = I ÷ A = {Ic} ÷ {a} = {M}", "M = I ÷ A = {Ic} ÷ {a} = {M}", "M = I ÷ A = {Ic} ÷ {a} = {M}", "M = I ÷ A = {Ic} ÷ {a} = {M}"),
+              T("Magnification = ×{M}", "倍率 = ×{M}", "放大率 = ×{M}", "배율 = ×{M}")
             ].map(function (o) { return fill(t(o), { I: fmt(Imm), Ic: fmt(Ic), u: u, a: fmt(a), M: fmt(M) }); });
             q.correct = "×" + fmt(M);
           } else if (kind === "A") {
@@ -309,9 +309,9 @@
             q.answerNm = anm;
             var Amm = Imm / M;
             q.steps = [
-              T("A = I ÷ M = {I} mm ÷ {M} = {Amm} mm", "A = I ÷ M = {I} mm ÷ {M} = {Amm} mm", "A = I ÷ M = {I} mm ÷ {M} = {Amm} mm"),
-              T("Convert: {Amm} mm = {a} {u} (× 1000 for each step down: mm → µm → nm)", "換算：{Amm} mm = {a} {u}（mm → µm → nm と進むごとに×1000）", "換算：{Amm} mm = {a} {u}（mm → µm → nm 每步 ×1000）"),
-              T("Actual size = {a} {u}", "実際の大きさ = {a} {u}", "實際大小 = {a} {u}")
+              T("A = I ÷ M = {I} mm ÷ {M} = {Amm} mm", "A = I ÷ M = {I} mm ÷ {M} = {Amm} mm", "A = I ÷ M = {I} mm ÷ {M} = {Amm} mm", "A = I ÷ M = {I} mm ÷ {M} = {Amm} mm"),
+              T("Convert: {Amm} mm = {a} {u} (× 1000 for each step down: mm → µm → nm)", "換算：{Amm} mm = {a} {u}（mm → µm → nm と進むごとに×1000）", "換算：{Amm} mm = {a} {u}（mm → µm → nm 每步 ×1000）", "단위 변환: {Amm} mm = {a} {u} (한 단계 내려갈 때마다 × 1000: mm → µm → nm)"),
+              T("Actual size = {a} {u}", "実際の大きさ = {a} {u}", "實際大小 = {a} {u}", "실제 크기 = {a} {u}")
             ].map(function (o) { return fill(t(o), { I: fmt(Imm), M: fmt(M), Amm: fmt(Amm), a: fmt(a), u: u }); });
             q.correct = fmt(a) + " " + u;
           } else {
@@ -319,9 +319,9 @@
             q.answerNm = Imm * F.mm;
             var Ru = a * M;
             q.steps = [
-              T("I = A × M = {a} {u} × {M} = {Ru} {u}", "I = A × M = {a} {u} × {M} = {Ru} {u}", "I = A × M = {a} {u} × {M} = {Ru} {u}"),
-              T("Convert to mm: {Ru} {u} = {I} mm", "mmに換算：{Ru} {u} = {I} mm", "換算成 mm：{Ru} {u} = {I} mm"),
-              T("Image size = {I} mm", "像の大きさ = {I} mm", "影像大小 = {I} mm")
+              T("I = A × M = {a} {u} × {M} = {Ru} {u}", "I = A × M = {a} {u} × {M} = {Ru} {u}", "I = A × M = {a} {u} × {M} = {Ru} {u}", "I = A × M = {a} {u} × {M} = {Ru} {u}"),
+              T("Convert to mm: {Ru} {u} = {I} mm", "mmに換算：{Ru} {u} = {I} mm", "換算成 mm：{Ru} {u} = {I} mm", "mm로 바꾼다: {Ru} {u} = {I} mm"),
+              T("Image size = {I} mm", "像の大きさ = {I} mm", "影像大小 = {I} mm", "상의 크기 = {I} mm")
             ].map(function (o) { return fill(t(o), { a: fmt(a), u: u, M: fmt(M), Ru: fmt(Ru), I: fmt(Imm) }); });
             q.correct = fmt(Imm) + " mm";
           }

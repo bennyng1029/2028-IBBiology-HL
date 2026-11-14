@@ -19,7 +19,7 @@
   }
   function el(tag, a, kids) { return fill(document.createElement(tag), a, kids); }
   function sv(tag, a, kids) { return fill(document.createElementNS(NS, tag), a, kids); }
-  var BASE = ".W{--k-ink:var(--ink,#1d2733);--k-sf:var(--surface,#fff);--k-bg:var(--bg,#f4f6f9);--k-mut:var(--muted,#5b6775);--k-line:var(--line,#c9d1da);--k-acc:var(--accent,#2f6fdb);--k-ahl:var(--ahl,#8e44ad);--k-good:var(--good,#1e8e4e);--k-bad:var(--bad,#d03b3b);--k-np:var(--r-nonpolar,#e8a317);--k-pol:var(--r-polar,#16a39a);--k-ac:var(--r-acidic,#d9483b);--k-ba:var(--r-basic,#3a6fd8);--k-hb:var(--hbond,#2a7de1);--k-io:var(--ionic,#d9483b);--k-ds:var(--disulfide,#b8860b);--k-hp:var(--hydrophobic,#e8a317);--k-C:var(--c-carbon,#6b7785);--k-O:var(--c-oxygen,#d9483b);--k-N:var(--c-nitrogen,#3a6fd8);--k-H:var(--c-hydrogen,#9aa5b1);--k-S:var(--c-sulfur,#c9a100);font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;color:var(--k-ink);max-width:100%;text-align:left}" +
+  var BASE = ".W{--k-ink:var(--ink,#1d2733);--k-sf:var(--surface,#fff);--k-bg:var(--bg,#f4f6f9);--k-mut:var(--muted,#5b6775);--k-line:var(--line,#c9d1da);--k-acc:var(--accent,#2f6fdb);--k-ahl:var(--ahl,#8e44ad);--k-good:var(--good,#1e8e4e);--k-bad:var(--bad,#d03b3b);--k-np:var(--r-nonpolar,#e8a317);--k-pol:var(--r-polar,#16a39a);--k-ac:var(--r-acidic,#d9483b);--k-ba:var(--r-basic,#3a6fd8);--k-hb:var(--hbond,#2a7de1);--k-io:var(--ionic,#d9483b);--k-ds:var(--disulfide,#b8860b);--k-hp:var(--hydrophobic,#e8a317);--k-C:var(--c-carbon,#6b7785);--k-O:var(--c-oxygen,#d9483b);--k-N:var(--c-nitrogen,#3a6fd8);--k-H:var(--c-hydrogen,#9aa5b1);--k-S:var(--c-sulfur,#c9a100);font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;color:var(--k-ink);max-width:100%;text-align:left}" +
     ".W *{box-sizing:border-box}" +
     ".W .wl-exam{margin:0}.W .wl-legend{margin:4px 0 0}" +
     ".W .bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}" +
@@ -29,7 +29,7 @@
     ".W button:not([role=tab]):disabled{opacity:.45;cursor:default}" +
     ".W button:focus-visible,.W [tabindex]:focus-visible,.W input:focus-visible{outline:3px solid var(--k-acc);outline-offset:2px}" +
     ".W svg{width:100%;height:auto;display:block;touch-action:manipulation}" +
-    ".W svg text{fill:var(--k-ink);font:13px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif}" +
+    ".W svg text{fill:var(--k-ink);font:13px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif}" +
     ".W .panel{background:var(--k-bg);border:1px solid var(--k-line);border-radius:12px;padding:10px 12px;margin:8px 0}" +
     ".W .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;margin:6px 0}" +
     ".W .legend .i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}" +
@@ -48,16 +48,16 @@
     s.textContent = (BASE + extra).split(".W").join(".w-" + name);
     document.head.appendChild(s);
   }
-  var EXAM = ["What to remember for the exam", "試験で覚えること (exam points)", "考試重點 (exam points)"];
+  var EXAM = ["What to remember for the exam", "試験で覚えること (exam points)", "考試重點 (exam points)", "시험 대비 핵심"];
   var REDUCED = function () { try { return window.matchMedia("(prefers-reduced-motion:reduce)").matches; } catch (e) { return false; } };
-  function mkT(ctx) { return function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2] }); }; }
+  function mkT(ctx) { return function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2], ko: a[3] }); }; }
   function exam(T, a) {
     if (window.innerWidth < 640) return el("details", { class: "exam wl-exam" }, [el("summary", { text: T(EXAM), style: "font-weight:700;cursor:pointer;min-height:36px;display:flex;align-items:center" }), el("div", { text: T(a) })]);
     return el("div", { class: "exam wl-exam" }, [el("strong", { text: T(EXAM) + ": " }), document.createTextNode(T(a))]);
   }
   function ahl() { return el("span", { class: "ahl", text: "AHL" }); }
   function legendItem(cls, color, label) { return el("span", {}, [el("span", { class: cls, style: (cls === "i" ? "background:" : "border-color:") + color }), label]); }
-  var MORE = ["More detail", "詳しく見る", "更多詳情"];
+  var MORE = ["More detail", "詳しく見る", "更多詳情", "자세히 보기"];
   function more(T, kids) { return el("details", { class: "more" }, [el("summary", { text: T(MORE) })].concat(kids)); }
   function optTab(ctx, n) { var t = parseInt(ctx && ctx.options && ctx.options.tab, 10); return t >= 0 && t < n ? t : 0; }
   function tabsBar(T, items, cur, onSel) {
@@ -86,7 +86,7 @@
   var X0 = 40, P = 72, G = 54, Y = 96, MAXR = 4;
 
   IB.registerWidget("peptide-builder", {
-    title: { en: "Building a polypeptide", ja: "ポリペプチドをつくる", zh: "建構多肽" },
+    title: { en: "Building a polypeptide", ja: "ポリペプチドをつくる", zh: "建構多肽", ko: "폴리펩타이드 만들기" },
     mount: function (root, ctx) {
       css("peptide-builder", CSS);
       root.classList.add("W");
@@ -96,8 +96,8 @@
       var n, cond, busy, res, svg, bondLayer, waterLayer, eq, bCond, bAdd, status;
       var tab = optTab(ctx, 2);
       var TABS = [
-        { n: ["1 Condensation", "1 縮合反応", "1 縮合反應"] },
-        { n: ["2 How many sequences?", "2 配列は何通り？", "2 有多少種序列？"] }
+        { n: ["1 Condensation", "1 縮合反応", "1 縮合反應", "1 축합"] },
+        { n: ["2 How many sequences?", "2 配列は何通り？", "2 有多少種序列？", "2 서열은 몇 가지?"] }
       ];
       var tabHost = el("div"), panes = [el("div"), el("div")];
       root.appendChild(tabHost); root.appendChild(panes[0]); root.appendChild(panes[1]);
@@ -148,20 +148,20 @@
         for (var j = 0; j < cond; j++) {
           var x = xOf(j) + 48;
           bondLayer.appendChild(sv("rect", { x: x - 16, y: Y - 18, width: 48 + 8, height: 36, rx: 14, fill: "var(--k-acc)", opacity: ".2", stroke: "var(--k-acc)", "stroke-width": 2 }));
-          bondLayer.appendChild(sv("text", { x: x + 12, y: Y - 56, "text-anchor": "middle", style: "font-size:12px;fill:var(--k-acc);font-weight:700", text: T(["peptide bond", "ペプチド結合", "肽鍵"]) }));
+          bondLayer.appendChild(sv("text", { x: x + 12, y: Y - 56, "text-anchor": "middle", style: "font-size:12px;fill:var(--k-acc);font-weight:700", text: T(["peptide bond", "ペプチド結合", "肽鍵", "펩타이드 결합"]) }));
           bondLayer.appendChild(ln(x + 12, Y - 52, x + 12, Y - 20, 1.5)).setAttribute("stroke", "var(--k-acc)");
         }
       }
       function setText() {
-        var AA = T(["amino acid", "アミノ酸 (amino acid)", "氨基酸 (amino acid)"]), W = T(["water", "水 (water)", "水 (water)"]);
+        var AA = T(["amino acid", "アミノ酸 (amino acid)", "氨基酸 (amino acid)", "아미노산"]), W = T(["water", "水 (water)", "水 (water)", "물"]);
         var k = Math.max(cond, 1);
         eq.textContent = (k === 1 ? AA : pepName(k)) + " + " + AA + " → " + pepName(k + 1) + " + " + W;
-        status.textContent = T(["Peptide bonds: ", "ペプチド結合の数: ", "肽鍵數目："]) + cond + "  |  " + T(["Water released: ", "放出された水分子: ", "釋出的水分子："]) + cond;
+        status.textContent = T(["Peptide bonds: ", "ペプチド結合の数: ", "肽鍵數目：", "펩타이드 결합 수: "]) + cond + "  |  " + T(["Water released: ", "放出された水分子: ", "釋出的水分子：", "방출된 물 분자 수: "]) + cond;
         bCond.disabled = busy || cond >= n - 1;
         bAdd.disabled = busy || cond < n - 1 || n >= MAXR;
       }
       function pepName(k) {
-        var a = [["", "", ""], ["amino acid", "アミノ酸", "氨基酸"], ["dipeptide", "ジペプチド (dipeptide)", "二肽 (dipeptide)"], ["tripeptide", "トリペプチド (tripeptide)", "三肽 (tripeptide)"], ["tetrapeptide", "テトラペプチド (tetrapeptide)", "四肽 (tetrapeptide)"]];
+        var a = [["", "", "", ""], ["amino acid", "アミノ酸", "氨基酸", "아미노산"], ["dipeptide", "ジペプチド (dipeptide)", "二肽 (dipeptide)", "다이펩타이드"], ["tripeptide", "トリペプチド (tripeptide)", "三肽 (tripeptide)", "트라이펩타이드"], ["tetrapeptide", "テトラペプチド (tetrapeptide)", "四肽 (tetrapeptide)", "테트라펩타이드"]];
         return T(a[Math.min(k, 4)]);
       }
       function build() {
@@ -169,37 +169,37 @@
         var pane = panes[0];
         pane.innerHTML = "";
         n = 2; cond = 0; busy = false;
-        svg = sv("svg", { viewBox: "0 4 410 186", role: "img", "aria-label": T(["Amino acids joining by condensation", "縮合でつながるアミノ酸", "經縮合連接的氨基酸"]) });
+        svg = sv("svg", { viewBox: "0 4 410 186", role: "img", "aria-label": T(["Amino acids joining by condensation", "縮合でつながるアミノ酸", "經縮合連接的氨基酸", "축합으로 연결되는 아미노산"]) });
         bondLayer = sv("g"); waterLayer = sv("g");
         svg.appendChild(bondLayer);
         res = [makeRes(0), makeRes(1)];
         res.forEach(function (g) { svg.appendChild(g); });
         svg.appendChild(waterLayer);
-        svg.appendChild(sv("text", { x: X0, y: 182, "text-anchor": "middle", style: "font-size:12px", text: T(["N-terminus", "N末端", "N 端"]) }));
-        var ct = sv("text", { class: "ct", x: 0, y: 182, "text-anchor": "middle", style: "font-size:12px", text: T(["C-terminus", "C末端", "C 端"]) });
+        svg.appendChild(sv("text", { x: X0, y: 182, "text-anchor": "middle", style: "font-size:12px", text: T(["N-terminus", "N末端", "N 端", "N 말단"]) }));
+        var ct = sv("text", { class: "ct", x: 0, y: 182, "text-anchor": "middle", style: "font-size:12px", text: T(["C-terminus", "C末端", "C 端", "C 말단"]) });
         svg.appendChild(ct);
         function placeCT() { var x = xOf(n - 1) + 74; ct.setAttribute("x", Math.min(x, 356)); ct.setAttribute("style", "font-size:12px;transition:all .8s"); }
         build.placeCT = placeCT;
         eq = el("div", { class: "eq panel", "aria-live": "polite" });
         status = el("p", { class: "small", style: "text-align:center" });
-        bCond = el("button", { type: "button", text: T(["Condense", "縮合する (condense)", "縮合 (condense)"]) });
-        bAdd = el("button", { type: "button", text: T(["+ Add an amino acid", "+ アミノ酸を追加", "+ 加入氨基酸"]) });
-        var bReset = el("button", { type: "button", text: T(["Reset", "リセット", "重設"]) });
+        bCond = el("button", { type: "button", text: T(["Condense", "縮合する (condense)", "縮合 (condense)", "축합"]) });
+        bAdd = el("button", { type: "button", text: T(["+ Add an amino acid", "+ アミノ酸を追加", "+ 加入氨基酸", "+ 아미노산 추가"]) });
+        var bReset = el("button", { type: "button", text: T(["Reset", "リセット", "重設", "다시 시작"]) });
         pane.appendChild(el("div", { class: "wl" }, [
           el("div", { class: "wl-stage" }, [svg, el("div", { class: "legend wl-legend" }, [
-            legendItem("i", "var(--k-C)", T(["carbon", "炭素", "碳"])), legendItem("i", "var(--k-N)", T(["nitrogen", "窒素", "氮"])),
-            legendItem("i", "var(--k-O)", T(["oxygen", "酸素", "氧"])), legendItem("i", "var(--k-H)", T(["hydrogen", "水素", "氫"])),
-            legendItem("l", "var(--k-acc)", T(["peptide bond", "ペプチド結合", "肽鍵"]))
+            legendItem("i", "var(--k-C)", T(["carbon", "炭素", "碳", "탄소"])), legendItem("i", "var(--k-N)", T(["nitrogen", "窒素", "氮", "질소"])),
+            legendItem("i", "var(--k-O)", T(["oxygen", "酸素", "氧", "산소"])), legendItem("i", "var(--k-H)", T(["hydrogen", "水素", "氫", "수소"])),
+            legendItem("l", "var(--k-acc)", T(["peptide bond", "ペプチド結合", "肽鍵", "펩타이드 결합"]))
           ])]),
           el("div", { class: "wl-panel" }, [
-            el("p", { class: "small", text: T(["Press Condense. The –OH from one carboxyl group and an H from the next amine group leave as water, and a peptide bond forms.", "「縮合」を押してください。一方のカルボキシ基の –OH と、もう一方のアミノ基の H が水として外れ、ペプチド結合ができます。", "按「縮合」。一個羧基的 –OH 與下一個氨基的 H 會以水的形式離開，並形成肽鍵。"]) }),
+            el("p", { class: "small", text: T(["Press Condense. The –OH from one carboxyl group and an H from the next amine group leave as water, and a peptide bond forms.", "「縮合」を押してください。一方のカルボキシ基の –OH と、もう一方のアミノ基の H が水として外れ、ペプチド結合ができます。", "按「縮合」。一個羧基的 –OH 與下一個氨基的 H 會以水的形式離開，並形成肽鍵。", "'축합'을 누르세요. 한 카복실기의 –OH와 다음 아미노기의 H가 물로 떨어져 나가고, 펩타이드 결합이 만들어집니다."]) }),
             el("div", { class: "bar", style: "margin:0" }, [bCond, bAdd, bReset]),
             eq, status,
-            more(T, [el("p", { class: "small", text: T(["Each condensation makes one peptide bond and releases one water molecule. Real polypeptides have from a few to thousands of amino acids (this model shows up to " + MAXR + ").", "縮合のたびにペプチド結合が1つでき、水が1分子放出されます。実際のポリペプチドは数個から数千個のアミノ酸でできています（この図は最大" + MAXR + "個）。", "每次縮合形成一個肽鍵並釋出一個水分子。真正的多肽由數個至數千個氨基酸組成（此模型最多顯示 " + MAXR + " 個）。"]) })]),
+            more(T, [el("p", { class: "small", text: T(["Each condensation makes one peptide bond and releases one water molecule. Real polypeptides have from a few to thousands of amino acids (this model shows up to " + MAXR + ").", "縮合のたびにペプチド結合が1つでき、水が1分子放出されます。実際のポリペプチドは数個から数千個のアミノ酸でできています（この図は最大" + MAXR + "個）。", "每次縮合形成一個肽鍵並釋出一個水分子。真正的多肽由數個至數千個氨基酸組成（此模型最多顯示 " + MAXR + " 個）。", "각 축합마다 펩타이드 결합 1개가 생기고 물 분자 1개가 방출됩니다. 실제 폴리펩타이드는 아미노산이 몇 개에서 수천 개까지 이어져 있습니다(이 모델은 최대 " + MAXR + "개까지 보여 줍니다)."]) })]),
             exam(T, [
               "Amino acid + amino acid → dipeptide + water (condensation). The new bond is a peptide bond, C(=O)–N(H). With 20 amino acids in any order, a chain of n has 20ⁿ possible sequences.",
               "アミノ酸 + アミノ酸 → ジペプチド + 水 (縮合反応)。できる結合はペプチド結合 C(=O)–N(H)。20種類のアミノ酸が任意の順序で並ぶので、n 個の鎖は 20ⁿ 通り。",
-              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。"])
+              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)입니다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능합니다."])
           ])
         ]));
         bCond.addEventListener("click", condense);
@@ -247,7 +247,7 @@
         function mant(s) { return (Math.round(+s.slice(0, 4) / 10) / 100).toFixed(2); }
         function sciOf(bi) { var s = bi.toString(); if (s.length < 4) return s; return mant(s) + " × 10" + sup(s.length - 1); }
         function beads(k) {
-          var s = sv("svg", { viewBox: "0 0 410 120", role: "img", "aria-label": T(["A chain of n amino acids, each with 20 possible choices", "n 個のアミノ酸の鎖。各位置に20通りの選択", "n 個氨基酸的鏈，每個位置有 20 種選擇"]) });
+          var s = sv("svg", { viewBox: "0 0 410 120", role: "img", "aria-label": T(["A chain of n amino acids, each with 20 possible choices", "n 個のアミノ酸の鎖。各位置に20通りの選択", "n 個氨基酸的鏈，每個位置有 20 種選擇", "20가지 가능한 아미노산이 각각 들어갈 수 있는 n개 아미노산의 사슬"]) });
           var step = 38, x0 = (410 - (k - 1) * step) / 2;
           for (var i = 0; i < k; i++) {
             var x = x0 + i * step;
@@ -255,7 +255,7 @@
             s.appendChild(sv("circle", { cx: x, cy: 56, r: 17, fill: "var(" + COLS[i % 5] + ")" }));
             s.appendChild(sv("text", { x: x, y: 61, "text-anchor": "middle", style: "font-size:13px;font-weight:700;fill:var(--k-sf)", text: "20" }));
           }
-          s.appendChild(sv("text", { x: 205, y: 106, "text-anchor": "middle", style: "font-size:13px", text: T(["each position: 20 possible amino acids", "各位置: 20種類のアミノ酸から選べる", "每個位置：有 20 種氨基酸可選"]) }));
+          s.appendChild(sv("text", { x: 205, y: 106, "text-anchor": "middle", style: "font-size:13px", text: T(["each position: 20 possible amino acids", "各位置: 20種類のアミノ酸から選べる", "每個位置：有 20 種氨基酸可選", "각 위치: 20가지 아미노산 중 선택 가능"]) }));
           return s;
         }
         function upd() {
@@ -263,21 +263,21 @@
           lbl.textContent = "n = " + k;
           beadsHost.innerHTML = ""; beadsHost.appendChild(beads(k));
           big.textContent = "20" + sup(k) + " = " + fmt(v);
-          sci.textContent = T(["Scientific notation: ", "科学的記数法: ", "科學記數法："]) + sciOf(v) + (k === 1 ? "" : "  (" + T(["different sequences", "通りの配列", "種序列"]) + ")");
+          sci.textContent = T(["Scientific notation: ", "科学的記数法: ", "科學記數法：", "과학적 표기법: "]) + sciOf(v) + (k === 1 ? "" : "  (" + T(["different sequences", "通りの配列", "種序列", "서로 다른 서열"]) + ")");
         }
         sl.addEventListener("input", upd);
         var h = BigInt(20) ** 100n, hs = h.toString();
         pane.appendChild(el("div", { class: "wl" }, [
           el("div", { class: "wl-stage" }, [beadsHost, big, sci]),
           el("div", { class: "wl-panel" }, [
-            el("p", { text: T(["20 different amino acids are coded for in the genetic code, and they can be joined in any order. A chain of n amino acids can therefore have 20ⁿ different sequences.", "遺伝暗号 (genetic code) は20種類のアミノ酸を指定しており、どんな順序でもつなぐことができます。したがって n 個のアミノ酸の鎖には 20ⁿ 通りの配列があります。", "遺傳密碼 (genetic code) 編碼 20 種氨基酸，它們可按任何次序連接。因此由 n 個氨基酸組成的鏈可有 20ⁿ 種序列。"]) }),
-            el("div", { class: "lab" }, [el("span", { text: T(["Chain length n:", "鎖の長さ n:", "鏈長 n："]) }), lbl]),
+            el("p", { text: T(["20 different amino acids are coded for in the genetic code, and they can be joined in any order. A chain of n amino acids can therefore have 20ⁿ different sequences.", "遺伝暗号 (genetic code) は20種類のアミノ酸を指定しており、どんな順序でもつなぐことができます。したがって n 個のアミノ酸の鎖には 20ⁿ 通りの配列があります。", "遺傳密碼 (genetic code) 編碼 20 種氨基酸，它們可按任何次序連接。因此由 n 個氨基酸組成的鏈可有 20ⁿ 種序列。", "유전 암호(genetic code)는 20가지 아미노산을 지정하며, 이 아미노산들은 어떤 순서로든 연결될 수 있습니다. 따라서 n개의 아미노산으로 된 사슬은 20ⁿ가지의 서열을 가질 수 있습니다."]) }),
+            el("div", { class: "lab" }, [el("span", { text: T(["Chain length n:", "鎖の長さ n:", "鏈長 n：", "사슬 길이 n:"]) }), lbl]),
             sl,
-            more(T, [el("p", { class: "small", text: T(["For a chain of just 100 amino acids: 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " possible sequences. Polypeptides can be much longer, so the possible variety is effectively unlimited.", "アミノ酸100個の鎖でも 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 通りの配列があります。ポリペプチドはもっと長くなりうるので、可能な種類は事実上無限です。", "只是 100 個氨基酸的鏈，已有 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 種可能序列。多肽可以更長，所以可能的變化實際上是無限的。"]) })]),
+            more(T, [el("p", { class: "small", text: T(["For a chain of just 100 amino acids: 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " possible sequences. Polypeptides can be much longer, so the possible variety is effectively unlimited.", "アミノ酸100個の鎖でも 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 通りの配列があります。ポリペプチドはもっと長くなりうるので、可能な種類は事実上無限です。", "只是 100 個氨基酸的鏈，已有 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + " 種可能序列。多肽可以更長，所以可能的變化實際上是無限的。", "아미노산 100개로 된 사슬만 해도 20¹⁰⁰ ≈ " + mant(hs) + " × 10" + sup(hs.length - 1) + "가지의 서열이 가능합니다. 폴리펩타이드는 훨씬 더 길 수도 있으므로, 가능한 다양성은 사실상 무한합니다."]) })]),
             exam(T, [
               "Amino acid + amino acid → dipeptide + water (condensation). The new bond is a peptide bond, C(=O)–N(H). With 20 amino acids in any order, a chain of n has 20ⁿ possible sequences.",
               "アミノ酸 + アミノ酸 → ジペプチド + 水 (縮合反応)。できる結合はペプチド結合 C(=O)–N(H)。20種類のアミノ酸が任意の順序で並ぶので、n 個の鎖は 20ⁿ 通り。",
-              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。"])
+              "氨基酸 + 氨基酸 → 二肽 + 水（縮合反應）。新形成的鍵是肽鍵 C(=O)–N(H)。20 種氨基酸可按任何次序排列，n 個氨基酸的鏈有 20ⁿ 種序列。", "아미노산 + 아미노산 → 다이펩타이드 + 물(축합 반응). 새로 생기는 결합은 펩타이드 결합 C(=O)–N(H)입니다. 20가지 아미노산이 어떤 순서로든 배열될 수 있으므로, n개로 된 사슬은 20ⁿ가지의 서열이 가능합니다."])
           ])
         ]));
         upd();
