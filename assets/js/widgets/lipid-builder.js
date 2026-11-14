@@ -4,7 +4,7 @@
    ctx.options: { tab: 0|1|2 }.  Schematic, not to scale. */
 (function () {
   "use strict";
-  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
   var ID = "w-lipid-builder-css";
   var KIT = [
     ":where(.wl){display:grid;gap:.75rem;--stage-max:min(42vh,320px)}",

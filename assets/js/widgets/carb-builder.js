@@ -4,7 +4,7 @@
    ctx.options: { tab: 0|1|2, poly: 0..3 }.  Schematic drawings, not to scale. */
 (function () {
   "use strict";
-  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
+  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
   var ID = "w-carb-builder-css";
 
   var KIT = [
@@ -55,62 +55,62 @@
   ].join("\n");
 
   var T = {
-    tab0: L("Condensation and hydrolysis", "縮合と加水分解", "縮合與水解"),
-    tab1: L("α- and β-glucose", "α-グルコースとβ-グルコース", "α-葡萄糖與β-葡萄糖"),
-    tab2: L("Polysaccharides", "多糖類", "多糖"),
-    cond: L("Condensation ▶", "縮合 ▶", "縮合 ▶"),
-    hyd: L("◀ Hydrolysis", "◀ 加水分解", "◀ 水解"),
-    reset: L("Reset", "リセット", "重設"),
-    replay: L("Replay", "もう一度", "重播"),
-    add: L("+ glucose", "+ グルコース", "+ 葡萄糖"),
-    addT: L("Add glucose to each end (condensation)", "各末端にグルコースを付ける（縮合）", "在每個末端加上葡萄糖（縮合）"),
-    remT: L("Remove glucose from each end (hydrolysis)", "各末端からグルコースを外す（加水分解）", "由每個末端移去葡萄糖（水解）"),
-    rem: L("− glucose", "− グルコース", "− 葡萄糖"),
-    more: L("More detail", "くわしく", "更多資料"),
-    glc: L("α-glucose", "α-グルコース (α-glucose)", "α-葡萄糖 (α-glucose)"),
-    gb: L("glycosidic bond", "グリコシド結合 (glycosidic bond)", "糖苷鍵 (glycosidic bond)"),
-    water: L("water", "水", "水"),
+    tab0: L("Condensation and hydrolysis", "縮合と加水分解", "縮合與水解", "축합과 가수 분해"),
+    tab1: L("α- and β-glucose", "α-グルコースとβ-グルコース", "α-葡萄糖與β-葡萄糖", "α-포도당과 β-포도당"),
+    tab2: L("Polysaccharides", "多糖類", "多糖", "다당류"),
+    cond: L("Condensation ▶", "縮合 ▶", "縮合 ▶", "축합 ▶"),
+    hyd: L("◀ Hydrolysis", "◀ 加水分解", "◀ 水解", "◀ 가수 분해"),
+    reset: L("Reset", "リセット", "重設", "다시 시작"),
+    replay: L("Replay", "もう一度", "重播", "다시 재생"),
+    add: L("+ glucose", "+ グルコース", "+ 葡萄糖", "+ 포도당"),
+    addT: L("Add glucose to each end (condensation)", "各末端にグルコースを付ける（縮合）", "在每個末端加上葡萄糖（縮合）", "각 말단에 포도당 붙이기(축합)"),
+    remT: L("Remove glucose from each end (hydrolysis)", "各末端からグルコースを外す（加水分解）", "由每個末端移去葡萄糖（水解）", "각 말단에서 포도당 떼어 내기(가수 분해)"),
+    rem: L("− glucose", "− グルコース", "− 葡萄糖", "− 포도당"),
+    more: L("More detail", "くわしく", "更多資料", "자세히 보기"),
+    glc: L("α-glucose", "α-グルコース (α-glucose)", "α-葡萄糖 (α-glucose)", "α-포도당(α-glucose)"),
+    gb: L("glycosidic bond", "グリコシド結合 (glycosidic bond)", "糖苷鍵 (glycosidic bond)", "글리코사이드 결합(glycosidic bond)"),
+    water: L("water", "水", "水", "물"),
     // tab 0 messages
-    m0: L("Two α-glucose molecules (monomers, <b>monosaccharides</b>). Each has –OH groups. Press Condensation.", "α-グルコース2分子（単量体 (monomer)、単糖類 (monosaccharide)）です。どちらも–OH基を持っています。「縮合」を押しましょう。", "兩個α-葡萄糖分子（單體 (monomer)、單糖 (monosaccharide)），都有–OH基。按「縮合」。"),
-    m0c: L("<b>Condensation</b>: an –OH from one glucose and an –H from the other are removed together as <b>water</b>. The two rings are joining.", "<b>縮合 (condensation)</b>: 一方の–OHともう一方の–Hが取れ、<b>水</b>として放出されます。2つの環がつながっていきます。", "<b>縮合 (condensation)</b>：一個葡萄糖的–OH和另一個的–H一同脫去，成為<b>水</b>。兩個環正在連接。"),
-    m1: L("<b>Maltose</b> (a disaccharide) has formed, joined by a <b>glycosidic bond</b>. One water molecule was released. More units can be added the same way to make a polysaccharide.", "<b>マルトース (maltose)</b>（二糖類 (disaccharide)）ができ、<b>グリコシド結合</b>でつながっています。水が1分子放出されました。同じ方法で単位を増やすと多糖類になります。", "已形成<b>麥芽糖 (maltose)</b>（雙糖 (disaccharide)），以<b>糖苷鍵</b>相連，並釋出一個水分子。以同樣方式加入更多單位便成為多糖。"),
-    m1h: L("<b>Hydrolysis</b>: a water molecule is split. Its –H and –OH are added to the two sides of the glycosidic bond, which breaks, giving two α-glucose again.", "<b>加水分解 (hydrolysis)</b>: 水分子が分かれ、その–Hと–OHがグリコシド結合の両側に付いて結合が切れ、α-グルコース2分子に戻ります。", "<b>水解 (hydrolysis)</b>：水分子被分開，其–H和–OH加到糖苷鍵的兩端，使鍵斷開，重新得到兩個α-葡萄糖。"),
-    m0h: L("<b>Hydrolysis</b>: water is split and its –H and –OH are added to the two sides of the bond. The bond breaks.", "<b>加水分解 (hydrolysis)</b>: 水が分かれ、–Hと–OHが結合の両側に付きます。結合が切れます。", "<b>水解 (hydrolysis)</b>：水被分開，–H和–OH加到鍵的兩側，鍵斷開。"),
-    eq0: L("glucose + glucose  ⇌  maltose + H₂O", "グルコース + グルコース ⇌ マルトース + H₂O", "葡萄糖 + 葡萄糖 ⇌ 麥芽糖 + H₂O"),
-    ex0: L("Condensation joins monomers and releases water. Hydrolysis uses water to split them again.", "縮合 (condensation) は単量体をつないで水を放出し、加水分解 (hydrolysis) は水を使って切り離します。", "縮合 (condensation) 把單體連起並釋出水；水解 (hydrolysis) 則利用水把它們分開。"),
-    ref0: L("Syllabus B1.1.2–3", "シラバス B1.1.2–3", "課程大綱 B1.1.2–3"),
+    m0: L("Two α-glucose molecules (monomers, <b>monosaccharides</b>). Each has –OH groups. Press Condensation.", "α-グルコース2分子（単量体 (monomer)、単糖類 (monosaccharide)）です。どちらも–OH基を持っています。「縮合」を押しましょう。", "兩個α-葡萄糖分子（單體 (monomer)、單糖 (monosaccharide)），都有–OH基。按「縮合」。", "α-포도당 2분자(단위체, <b>단당류(monosaccharide)</b>). 각각 –OH기가 있다. 축합을 누르시오."),
+    m0c: L("<b>Condensation</b>: an –OH from one glucose and an –H from the other are removed together as <b>water</b>. The two rings are joining.", "<b>縮合 (condensation)</b>: 一方の–OHともう一方の–Hが取れ、<b>水</b>として放出されます。2つの環がつながっていきます。", "<b>縮合 (condensation)</b>：一個葡萄糖的–OH和另一個的–H一同脫去，成為<b>水</b>。兩個環正在連接。", "<b>축합(condensation)</b>: 한 포도당의 –OH와 다른 포도당의 –H가 함께 <b>물</b>로 떨어져 나간다. 두 고리가 결합하는 중이다."),
+    m1: L("<b>Maltose</b> (a disaccharide) has formed, joined by a <b>glycosidic bond</b>. One water molecule was released. More units can be added the same way to make a polysaccharide.", "<b>マルトース (maltose)</b>（二糖類 (disaccharide)）ができ、<b>グリコシド結合</b>でつながっています。水が1分子放出されました。同じ方法で単位を増やすと多糖類になります。", "已形成<b>麥芽糖 (maltose)</b>（雙糖 (disaccharide)），以<b>糖苷鍵</b>相連，並釋出一個水分子。以同樣方式加入更多單位便成為多糖。", "<b>엿당(maltose)</b>(이당류)이 만들어졌고, <b>글리코사이드 결합</b>으로 연결되어 있다. 물 분자 1개가 방출되었다. 같은 방법으로 단위를 더 붙이면 다당류가 된다."),
+    m1h: L("<b>Hydrolysis</b>: a water molecule is split. Its –H and –OH are added to the two sides of the glycosidic bond, which breaks, giving two α-glucose again.", "<b>加水分解 (hydrolysis)</b>: 水分子が分かれ、その–Hと–OHがグリコシド結合の両側に付いて結合が切れ、α-グルコース2分子に戻ります。", "<b>水解 (hydrolysis)</b>：水分子被分開，其–H和–OH加到糖苷鍵的兩端，使鍵斷開，重新得到兩個α-葡萄糖。", "<b>가수 분해(hydrolysis)</b>: 물 분자가 쪼개진다. 물의 –H와 –OH가 글리코사이드 결합의 양쪽에 붙으면서 결합이 끊어져, 다시 α-포도당 2분자가 된다."),
+    m0h: L("<b>Hydrolysis</b>: water is split and its –H and –OH are added to the two sides of the bond. The bond breaks.", "<b>加水分解 (hydrolysis)</b>: 水が分かれ、–Hと–OHが結合の両側に付きます。結合が切れます。", "<b>水解 (hydrolysis)</b>：水被分開，–H和–OH加到鍵的兩側，鍵斷開。", "<b>가수 분해</b>: 물이 쪼개져 그 –H와 –OH가 결합의 양쪽에 붙는다. 결합이 끊어진다."),
+    eq0: L("glucose + glucose  ⇌  maltose + H₂O", "グルコース + グルコース ⇌ マルトース + H₂O", "葡萄糖 + 葡萄糖 ⇌ 麥芽糖 + H₂O", "포도당 + 포도당  ⇌  엿당 + H₂O"),
+    ex0: L("Condensation joins monomers and releases water. Hydrolysis uses water to split them again.", "縮合 (condensation) は単量体をつないで水を放出し、加水分解 (hydrolysis) は水を使って切り離します。", "縮合 (condensation) 把單體連起並釋出水；水解 (hydrolysis) 則利用水把它們分開。", "축합은 단위체를 연결하면서 물을 방출한다. 가수 분해는 물을 사용하여 다시 쪼갠다."),
+    ref0: L("Syllabus B1.1.2–3", "シラバス B1.1.2–3", "課程大綱 B1.1.2–3", "교육과정 B1.1.2–3"),
     // tab 1
-    alpha: L("α-glucose", "α-グルコース", "α-葡萄糖"),
-    beta: L("β-glucose", "β-グルコース", "β-葡萄糖"),
-    below: L("OH on C1 below the ring", "C1のOHは環の下", "C1的OH在環下方"),
-    above: L("OH on C1 above the ring", "C1のOHは環の上", "C1的OH在環上方"),
-    m2: L("Glucose is a <b>hexose</b> (6-carbon monosaccharide). The two forms differ only in the –OH on carbon 1 (C1).", "グルコースは<b>六炭糖 (hexose)</b>（炭素6個の単糖）です。2つの型の違いは炭素1（C1）の–OHだけです。", "葡萄糖是<b>己糖 (hexose)</b>（含6個碳的單糖）。兩種形式只在碳1（C1）的–OH位置不同。"),
-    m2a: L("<b>α-glucose</b>: –OH on C1 below the ring. Linked into starch and glycogen.", "<b>α-グルコース</b>: C1の–OHが環の下。デンプンとグリコーゲンになります。", "<b>α-葡萄糖</b>：C1的–OH在環下方。構成澱粉和糖原。"),
-    m2b: L("<b>β-glucose</b>: –OH on C1 above the ring. Linked into cellulose.", "<b>β-グルコース</b>: C1の–OHが環の上。セルロースになります。", "<b>β-葡萄糖</b>：C1的–OH在環上方。構成纖維素。"),
-    glcprop: L("Glucose: soluble (easily transported in blood), chemically stable, and yields energy when oxidised.", "グルコース: 水に溶け（血液で運びやすい）、化学的に安定で、酸化されるとエネルギーを生みます。", "葡萄糖：可溶於水（易於由血液運送）、化學性質穩定，氧化時可釋出能量。"),
-    ex1: L("α-glucose: OH on C1 below the ring. β-glucose: OH on C1 above the ring.", "α-グルコースはC1のOHが環の下、β-グルコースは環の上です。", "α-葡萄糖的C1–OH在環下方；β-葡萄糖的在環上方。"),
-    ref1: L("Syllabus B1.1.4–6", "シラバス B1.1.4–6", "課程大綱 B1.1.4–6"),
+    alpha: L("α-glucose", "α-グルコース", "α-葡萄糖", "α-포도당"),
+    beta: L("β-glucose", "β-グルコース", "β-葡萄糖", "β-포도당"),
+    below: L("OH on C1 below the ring", "C1のOHは環の下", "C1的OH在環下方", "C1의 OH가 고리 아래"),
+    above: L("OH on C1 above the ring", "C1のOHは環の上", "C1的OH在環上方", "C1의 OH가 고리 위"),
+    m2: L("Glucose is a <b>hexose</b> (6-carbon monosaccharide). The two forms differ only in the –OH on carbon 1 (C1).", "グルコースは<b>六炭糖 (hexose)</b>（炭素6個の単糖）です。2つの型の違いは炭素1（C1）の–OHだけです。", "葡萄糖是<b>己糖 (hexose)</b>（含6個碳的單糖）。兩種形式只在碳1（C1）的–OH位置不同。", "포도당은 <b>육탄당(hexose)</b>(탄소 6개의 단당류)이다. 두 형태는 1번 탄소(C1)의 –OH만 다르다."),
+    m2a: L("<b>α-glucose</b>: –OH on C1 below the ring. Linked into starch and glycogen.", "<b>α-グルコース</b>: C1の–OHが環の下。デンプンとグリコーゲンになります。", "<b>α-葡萄糖</b>：C1的–OH在環下方。構成澱粉和糖原。", "<b>α-포도당</b>: C1의 –OH가 고리 아래에 있다. 연결되어 녹말과 글리코젠이 된다."),
+    m2b: L("<b>β-glucose</b>: –OH on C1 above the ring. Linked into cellulose.", "<b>β-グルコース</b>: C1の–OHが環の上。セルロースになります。", "<b>β-葡萄糖</b>：C1的–OH在環上方。構成纖維素。", "<b>β-포도당</b>: C1의 –OH가 고리 위에 있다. 연결되어 셀룰로스가 된다."),
+    glcprop: L("Glucose: soluble (easily transported in blood), chemically stable, and yields energy when oxidised.", "グルコース: 水に溶け（血液で運びやすい）、化学的に安定で、酸化されるとエネルギーを生みます。", "葡萄糖：可溶於水（易於由血液運送）、化學性質穩定，氧化時可釋出能量。", "포도당: 물에 녹고(혈액으로 쉽게 운반됨), 화학적으로 안정하며, 산화되면 에너지를 낸다."),
+    ex1: L("α-glucose: OH on C1 below the ring. β-glucose: OH on C1 above the ring.", "α-グルコースはC1のOHが環の下、β-グルコースは環の上です。", "α-葡萄糖的C1–OH在環下方；β-葡萄糖的在環上方。", "α-포도당: C1의 OH가 고리 아래. β-포도당: C1의 OH가 고리 위."),
+    ref1: L("Syllabus B1.1.4–6", "シラバス B1.1.4–6", "課程大綱 B1.1.4–6", "교육과정 B1.1.4–6"),
     // tab 2
-    p0: L("Amylose", "アミロース", "直鏈澱粉"),
-    p1: L("Amylopectin", "アミロペクチン", "支鏈澱粉"),
-    p2: L("Glycogen", "グリコーゲン", "糖原"),
-    p3: L("Cellulose", "セルロース", "纖維素"),
-    d0: L("<b>Amylose</b> (a starch): an unbranched chain of α-glucose that coils up. Coiling makes it compact. Plants store starch.", "<b>アミロース (amylose)</b>（デンプンの一種）: α-グルコースが枝分かれせずにつながり、らせん状に巻いてコンパクトになります。植物はデンプンを貯蔵します。", "<b>直鏈澱粉 (amylose)</b>（澱粉的一種）：α-葡萄糖不分支地連成長鏈，並盤繞成螺旋。盤繞令它緊密。植物以澱粉儲存能量。"),
-    d1: L("<b>Amylopectin</b> (a starch): α-glucose with side branches as well as coiling. Branching and coiling make it compact. Many ends: glucose is added or removed at each.", "<b>アミロペクチン (amylopectin)</b>（デンプン）: α-グルコースで、巻いて枝分かれもし、コンパクトです。末端が多く、そこでグルコースを付け外しします。", "<b>支鏈澱粉 (amylopectin)</b>（澱粉的一種）：α-葡萄糖，既盤繞也有分支。分支和盤繞令它緊密。末端多，可在每個末端加上或移去葡萄糖。"),
-    d2: L("<b>Glycogen</b> (animals): α-glucose like amylopectin, but branched even more. Very compact, with many ends, so glucose can be added or removed quickly.", "<b>グリコーゲン (glycogen)</b>（動物）: アミロペクチンと同じα-グルコースですが、さらに多く枝分かれします。非常にコンパクトで末端が多く、グルコースをすばやく付け外しできます。", "<b>糖原 (glycogen)</b>（動物）：與支鏈澱粉一樣由α-葡萄糖組成，但分支更多。非常緊密，末端多，因此可快速加上或移去葡萄糖。"),
-    d3: L("<b>Cellulose</b> (plant cell walls): β-glucose, with every other unit inverted. This gives straight chains. Chains lie in bundles, cross-linked by many hydrogen bonds: strong fibres.", "<b>セルロース (cellulose)</b>（植物の細胞壁）: β-グルコースで、1つおきに上下が反転しています。そのため鎖はまっすぐです。鎖は束になり、多くの水素結合で架橋されて丈夫な繊維になります。", "<b>纖維素 (cellulose)</b>（植物細胞壁）：β-葡萄糖，每隔一個單位便倒轉。因此鏈呈直線。多條鏈成束，以大量氫鍵交聯，形成堅韌的纖維。"),
-    mt: L("More detail", "くわしく", "更多資料"),
-    md0: L("Starch and glycogen are large molecules, so they are relatively insoluble: they stay in the cell and do not dissolve away. Adding or removing α-glucose is done by condensation and hydrolysis, so the store is easy to build up or mobilise.", "デンプンとグリコーゲンは大きな分子なので溶けにくく、細胞内にとどまります。α-グルコースの付加と除去は縮合と加水分解で行うので、貯蔵を増やしたり動員したりしやすいのです。", "澱粉和糖原是大分子，相對不溶於水，會留在細胞內。α-葡萄糖的加入和移去靠縮合和水解進行，所以儲備容易增加或動用。"),
-    md3: L("Cellulose cannot coil because of the inverted units. Its straight chains pack side by side, and hydrogen bonds between chains hold them in bundles.", "反転した単位のためセルロースは巻けません。まっすぐな鎖が並び、鎖どうしの水素結合で束になります。", "纖維素因單位倒轉而不能盤繞。直鏈並排緊貼，鏈與鏈之間的氫鍵把它們固定成束。"),
-    ends: L("Ends where glucose can be added or removed", "グルコースを付け外しできる末端", "可加上或移去葡萄糖的末端"),
-    ex2: L("Starch (plants), glycogen (animals): α-glucose, coiled and branched, compact energy stores. Cellulose: β-glucose, alternate units inverted, straight chains, H-bonds between chains.", "デンプン・グリコーゲン: α-グルコース、巻いて枝分かれした貯蔵物質。セルロース: β-グルコース、1つおきに反転、まっすぐな鎖、鎖間に水素結合。", "澱粉（植物）和糖原（動物）：α-葡萄糖，盤繞並有分支，緊密的能量儲備。纖維素：β-葡萄糖，每隔一個單位倒轉，直鏈，鏈間有氫鍵。"),
-    ref2: L("Syllabus B1.1.5–6", "シラバス B1.1.5–6", "課程大綱 B1.1.5–6"),
-    lgA: L("α-glucose", "α-グルコース", "α-葡萄糖"),
-    lgBc: L("β-glucose", "β-グルコース", "β-葡萄糖"),
-    lgB: L("β-glucose, inverted", "β-グルコース（反転）", "β-葡萄糖（倒轉）"),
-    lgH: L("H bond", "水素結合", "氫鍵"),
-    lgN: L("added", "付加", "新增"),
-    schem: L("schematic, not to scale", "模式図（縮尺は不同）", "示意圖，非按比例")
+    p0: L("Amylose", "アミロース", "直鏈澱粉", "아밀로스"),
+    p1: L("Amylopectin", "アミロペクチン", "支鏈澱粉", "아밀로펙틴"),
+    p2: L("Glycogen", "グリコーゲン", "糖原", "글리코젠"),
+    p3: L("Cellulose", "セルロース", "纖維素", "셀룰로스"),
+    d0: L("<b>Amylose</b> (a starch): an unbranched chain of α-glucose that coils up. Coiling makes it compact. Plants store starch.", "<b>アミロース (amylose)</b>（デンプンの一種）: α-グルコースが枝分かれせずにつながり、らせん状に巻いてコンパクトになります。植物はデンプンを貯蔵します。", "<b>直鏈澱粉 (amylose)</b>（澱粉的一種）：α-葡萄糖不分支地連成長鏈，並盤繞成螺旋。盤繞令它緊密。植物以澱粉儲存能量。", "<b>아밀로스(amylose)</b>(녹말의 한 종류): 가지가 없는 α-포도당 사슬이 코일처럼 감긴다. 감기면 조밀해진다. 식물은 녹말을 저장한다."),
+    d1: L("<b>Amylopectin</b> (a starch): α-glucose with side branches as well as coiling. Branching and coiling make it compact. Many ends: glucose is added or removed at each.", "<b>アミロペクチン (amylopectin)</b>（デンプン）: α-グルコースで、巻いて枝分かれもし、コンパクトです。末端が多く、そこでグルコースを付け外しします。", "<b>支鏈澱粉 (amylopectin)</b>（澱粉的一種）：α-葡萄糖，既盤繞也有分支。分支和盤繞令它緊密。末端多，可在每個末端加上或移去葡萄糖。", "<b>아밀로펙틴(amylopectin)</b>(녹말의 한 종류): α-포도당 사슬이 감기고 곁가지도 있다. 가지와 감김 때문에 조밀하다. 말단이 많아 각 말단에서 포도당을 붙이거나 뗄 수 있다."),
+    d2: L("<b>Glycogen</b> (animals): α-glucose like amylopectin, but branched even more. Very compact, with many ends, so glucose can be added or removed quickly.", "<b>グリコーゲン (glycogen)</b>（動物）: アミロペクチンと同じα-グルコースですが、さらに多く枝分かれします。非常にコンパクトで末端が多く、グルコースをすばやく付け外しできます。", "<b>糖原 (glycogen)</b>（動物）：與支鏈澱粉一樣由α-葡萄糖組成，但分支更多。非常緊密，末端多，因此可快速加上或移去葡萄糖。", "<b>글리코젠(glycogen)</b>(동물): 아밀로펙틴처럼 α-포도당으로 되어 있지만 가지가 훨씬 더 많다. 매우 조밀하고 말단이 많아 포도당을 빠르게 붙이거나 뗄 수 있다."),
+    d3: L("<b>Cellulose</b> (plant cell walls): β-glucose, with every other unit inverted. This gives straight chains. Chains lie in bundles, cross-linked by many hydrogen bonds: strong fibres.", "<b>セルロース (cellulose)</b>（植物の細胞壁）: β-グルコースで、1つおきに上下が反転しています。そのため鎖はまっすぐです。鎖は束になり、多くの水素結合で架橋されて丈夫な繊維になります。", "<b>纖維素 (cellulose)</b>（植物細胞壁）：β-葡萄糖，每隔一個單位便倒轉。因此鏈呈直線。多條鏈成束，以大量氫鍵交聯，形成堅韌的纖維。", "<b>셀룰로스(cellulose)</b>(식물 세포벽): β-포도당으로 되어 있으며 단위가 하나씩 걸러 뒤집혀 있다. 그래서 곧은 사슬이 된다. 사슬은 다발로 놓이고 많은 수소 결합으로 서로 연결되어 튼튼한 섬유가 된다."),
+    mt: L("More detail", "くわしく", "更多資料", "자세히 보기"),
+    md0: L("Starch and glycogen are large molecules, so they are relatively insoluble: they stay in the cell and do not dissolve away. Adding or removing α-glucose is done by condensation and hydrolysis, so the store is easy to build up or mobilise.", "デンプンとグリコーゲンは大きな分子なので溶けにくく、細胞内にとどまります。α-グルコースの付加と除去は縮合と加水分解で行うので、貯蔵を増やしたり動員したりしやすいのです。", "澱粉和糖原是大分子，相對不溶於水，會留在細胞內。α-葡萄糖的加入和移去靠縮合和水解進行，所以儲備容易增加或動用。", "녹말과 글리코젠은 큰 분자이므로 비교적 물에 녹지 않는다. 그래서 세포 안에 머물며 녹아 나가지 않는다. α-포도당을 붙이고 떼는 일은 축합과 가수 분해로 이루어지므로, 저장 물질을 쉽게 쌓고 동원할 수 있다."),
+    md3: L("Cellulose cannot coil because of the inverted units. Its straight chains pack side by side, and hydrogen bonds between chains hold them in bundles.", "反転した単位のためセルロースは巻けません。まっすぐな鎖が並び、鎖どうしの水素結合で束になります。", "纖維素因單位倒轉而不能盤繞。直鏈並排緊貼，鏈與鏈之間的氫鍵把它們固定成束。", "셀룰로스는 뒤집힌 단위 때문에 감길 수 없다. 곧은 사슬이 나란히 놓이고, 사슬 사이의 수소 결합이 사슬을 다발로 묶는다."),
+    ends: L("Ends where glucose can be added or removed", "グルコースを付け外しできる末端", "可加上或移去葡萄糖的末端", "포도당을 붙이거나 뗄 수 있는 말단"),
+    ex2: L("Starch (plants), glycogen (animals): α-glucose, coiled and branched, compact energy stores. Cellulose: β-glucose, alternate units inverted, straight chains, H-bonds between chains.", "デンプン・グリコーゲン: α-グルコース、巻いて枝分かれした貯蔵物質。セルロース: β-グルコース、1つおきに反転、まっすぐな鎖、鎖間に水素結合。", "澱粉（植物）和糖原（動物）：α-葡萄糖，盤繞並有分支，緊密的能量儲備。纖維素：β-葡萄糖，每隔一個單位倒轉，直鏈，鏈間有氫鍵。", "녹말(식물), 글리코젠(동물): α-포도당, 감기고 가지가 있는 조밀한 에너지 저장 물질. 셀룰로스: β-포도당, 단위가 하나씩 걸러 뒤집힘, 곧은 사슬, 사슬 사이의 수소 결합."),
+    ref2: L("Syllabus B1.1.5–6", "シラバス B1.1.5–6", "課程大綱 B1.1.5–6", "교육과정 B1.1.5–6"),
+    lgA: L("α-glucose", "α-グルコース", "α-葡萄糖", "α-포도당"),
+    lgBc: L("β-glucose", "β-グルコース", "β-葡萄糖", "β-포도당"),
+    lgB: L("β-glucose, inverted", "β-グルコース（反転）", "β-葡萄糖（倒轉）", "β-포도당, 뒤집힘"),
+    lgH: L("H bond", "水素結合", "氫鍵", "수소 결합"),
+    lgN: L("added", "付加", "新增", "추가됨"),
+    schem: L("schematic, not to scale", "模式図（縮尺は不同）", "示意圖，非按比例", "모식도, 축척 아님")
   };
 
   function clamp(x, a, b) { return x < a ? a : (x > b ? b : x); }
@@ -273,7 +273,7 @@
   }
 
   IB.registerWidget("carb-builder", {
-    title: L("Carbohydrate builder", "炭水化物ビルダー", "碳水化合物建構器"),
+    title: L("Carbohydrate builder", "炭水化物ビルダー", "碳水化合物建構器", "탄수화물 만들기"),
     mount: function (el, ctx) {
       if (!document.getElementById(ID)) { var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st); }
       var t = ctx.t, opt = ctx.options || {};
@@ -334,7 +334,7 @@
           panel.insertBefore(bt2, msg);
           var det = document.createElement("details"); det.innerHTML = "<summary>" + t(T.mt) + "</summary><p></p>"; el$.det = det; msg.parentNode.insertBefore(det, msg.nextSibling);
         }
-        var ex = document.createElement("div"); ex.className = "wl-exam"; ex.innerHTML = "<strong>" + t(L("What to remember for the exam", "試験でおぼえること", "考試要記住")) + ":</strong> " + t([T.ex0, T.ex1, T.ex2][i]); panel.appendChild(ex);
+        var ex = document.createElement("div"); ex.className = "wl-exam"; ex.innerHTML = "<strong>" + t(L("What to remember for the exam", "試験でおぼえること", "考試要記住", "시험 대비 핵심")) + ":</strong> " + t([T.ex0, T.ex1, T.ex2][i]); panel.appendChild(ex);
         var cap = document.createElement("p"); cap.className = "cb-cap"; cap.textContent = t([T.ref0, T.ref1, T.ref2][i]) + " · " + t(T.schem); panel.appendChild(cap);
         if (i === 2) setPoly(true);
         draw();
