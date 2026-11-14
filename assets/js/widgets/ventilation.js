@@ -19,7 +19,7 @@
   var CSS = KIT + "\n" + [
     ".w-ventilation{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink)}",
     ".w-ventilation svg text{fill:var(--ink);font-family:var(--font-body,system-ui,sans-serif);font-size:12px}",
-    ".w-ventilation .vt-vh{max-height:min(226px,var(--stage-max))}",
+    ".w-ventilation .vt-vh{max-height:min(212px,var(--stage-max))}",
     "@media(min-width:900px){.w-ventilation .vt-vh{max-height:var(--stage-max)}}",
     ".w-ventilation .vt-row{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}",
     ".w-ventilation .vt-b{font:inherit;font-size:.84rem;font-weight:700;min-height:40px;min-width:40px;padding:.2rem .5rem;border-radius:var(--radius);border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}",

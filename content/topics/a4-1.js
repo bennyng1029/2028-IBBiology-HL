@@ -67,6 +67,8 @@
       /* ---------------------------------------------------------------- */
       {
         ref: "A4.1.3", ahl: false,
+        widget: "evolution-evidence",
+        widgetOptions: {tab: 2},
         heading: L("Evidence from selective breeding", "選択育種からの証拠", "來自選擇性育種的證據"),
         body: L(
           `<p>In <strong>selective breeding</strong> (artificial selection) people choose which individuals breed, picking those with the traits they want and breeding them together, generation after generation.</p>
@@ -83,6 +85,8 @@
       /* ---------------------------------------------------------------- */
       {
         ref: "A4.1.4", ahl: false,
+        widget: "evolution-evidence",
+        widgetOptions: {tab: 0},
         heading: L("Evidence from homologous structures: the pentadactyl limb", "相同構造からの証拠：五指性の肢", "來自同源結構的證據：五指型肢"),
         body: L(
           `<p><strong>Homologous structures</strong> are structures in different species that have the <strong>same basic structure and the same evolutionary origin</strong>, although they may have <strong>different functions</strong>.</p>
@@ -121,6 +125,8 @@
       /* ---------------------------------------------------------------- */
       {
         ref: "A4.1.5", ahl: false,
+        widget: "evolution-evidence",
+        widgetOptions: {tab: 1},
         heading: L("Convergent evolution and analogous structures", "収斂進化と相似構造", "趨同進化與同功結構"),
         body: L(
           `<p>Sometimes unrelated organisms face <strong>similar environmental problems</strong>. Natural selection can then produce <strong>similar features</strong> in them, even though they did not inherit the feature from a recent common ancestor. This is <strong>convergent evolution</strong>.</p>

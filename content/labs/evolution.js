@@ -65,18 +65,18 @@ IB.registerLab({
     {
       title: { en: "Evidence for evolution", ja: "進化の証拠", zh: "進化的證據" },
       ahl: false,
-      refs: ["A4.1.2", "A4.1.3", "A4.1.4", "A4.1.5"],
+      refs: ["A4.1.3", "A4.1.4", "A4.1.5"],
       intro: {
-        en: "<p>Evidence for evolution comes from several sources. Sequence data are powerful evidence of common ancestry. Selective breeding of domesticated animals and crop plants shows how rapidly change can occur. Homologous structures, such as pentadactyl limbs, have a shared origin. Analogous structures have the same function but different origins, and arise by convergent evolution.</p>",
-        ja: "<p>進化の証拠はいくつもの源から得られます。配列データは、共通祖先をもつことの強力な証拠です。家畜や作物の選択的育種 (selective breeding) は、変化がどれほど速く起こりうるかを示します。五指肢 (pentadactyl limb) のような相同構造 (homologous structures) は、起源を共有します。相似構造 (analogous structures) は、働きは同じでも起源が異なり、収れん進化 (convergent evolution) で生じます。</p>",
-        zh: "<p>進化的證據有多個來源。序列數據是共同祖先的有力證據。家畜和農作物的選擇性育種 (selective breeding) 顯示變化可以多麼迅速。同源結構 (homologous structures)，例如五趾肢 (pentadactyl limb)，有共同的起源。類似結構 (analogous structures) 功能相同但起源不同，由趨同進化 (convergent evolution) 產生。</p>"
+        en: "<p>Selective breeding of domesticated animals and crop plants shows how rapidly heritable change can occur. Homologous structures, such as the pentadactyl limb, have the same basic pattern from a common ancestor, even when their functions differ. Analogous structures have the same function but different evolutionary origins. They arise by convergent evolution.</p>",
+        ja: "<p>家畜や作物の選択的育種 (selective breeding) は、遺伝する変化がどれほど速く起こりうるかを示します。五指肢 (pentadactyl limb) のような相同構造 (homologous structures) は、働きが違っても、共通祖先に由来する同じ基本パターンをもちます。相似構造 (analogous structures) は、働きは同じでも進化的な起源が異なり、収れん進化 (convergent evolution) で生じます。</p>",
+        zh: "<p>家畜和農作物的選擇性育種 (selective breeding) 顯示遺傳變化可以多麼迅速。同源結構 (homologous structures)，例如五趾肢 (pentadactyl limb)，即使功能不同，也具有源自共同祖先的相同基本模式。同功結構 (analogous structures) 功能相同，但進化起源不同，由趨同進化 (convergent evolution) 產生。</p>"
       },
       widget: "evolution-evidence",
-      options: {},
+      options: { tab: 0 },
       task: {
-        en: "Explore each kind of evidence in turn. For one example of each, say what is the same, what is different, and what it shows about ancestry.",
-        ja: "証拠の種類を順に調べましょう。それぞれ1つの例について、何が同じで何が違うか、そして祖先について何がわかるかを答えましょう。",
-        zh: "依次探索各種證據。每種各選一個例子，說出相同之處、不同之處，以及它顯示了甚麼關於祖先的資訊。"
+        en: "On the Pentadactyl limb tab, tap each bone group and compare the human arm, cat foreleg, bat wing and whale flipper. On the Homologous / analogous tab, classify each pair. On the Selective breeding tab, say which part of the wild cabbage people kept choosing for each vegetable.",
+        ja: "「五指肢」タブで、各骨のグループをタップし、ヒトの腕、ネコの前肢、コウモリの翼、クジラの胸びれを比べましょう。「相同と相似」タブでは、各組を分類します。「選択的育種」タブでは、それぞれの野菜で、野生のキャベツ (cabbage) のどの部分を人が選び続けたかを答えましょう。",
+        zh: "在「五指肢」分頁中，點選每組骨骼，比較人的手臂、貓的前肢、蝙蝠的翼和鯨的鰭肢。在「同源與同功」分頁中，把每一對分類。在「選擇性育種」分頁中，說出人們為每種蔬菜持續選擇了野生甘藍的哪一部分。"
       }
     },
     {
