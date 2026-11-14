@@ -36,7 +36,7 @@ IB.registerTopic({
 </ul>`,
         `<p><strong>微血管 (capillary)</strong> 是最細的血管，連接小動脈 (arteriole) 和小靜脈 (venule)。血液與組織（內環境）之間，或血液與肺中空氣（外環境）之間的物質交換，都在其壁上進行。適應特徵：</p>
 <ul>
-<li><strong>大表面面積</strong>，因為微血管<strong>分支</strong>成龐大的網絡，並且<strong>直徑狹窄</strong>（約與一個紅血球一樣闊）。同樣體積下，許多幼管的總表面面積遠大於少數粗管。</li>
+<li><strong>大表面積</strong>，因為微血管<strong>分支</strong>成龐大的網絡，並且<strong>直徑狹窄</strong>（約與一個紅血球一樣闊）。同樣體積下，許多幼管的總表面積遠大於少數粗管。</li>
 <li><strong>薄壁 (thin walls)。</strong>管壁只有一個細胞厚（一層扁平的內皮細胞），擴散距離極短。狹窄的微血管亦使血流減慢，並使紅血球靠近管壁。</li>
 <li>部分微血管有<strong>窗孔 (fenestrations)</strong>。這是穿過壁細胞的小孔（空隙），讓液體和溶解物質極快通過。有窗孔的微血管見於需要特別迅速交換的地方，例如腎臟和小腸。</li>
 </ul>`)
@@ -282,7 +282,7 @@ IB.registerTopic({
 <li><strong>Epidermis:</strong> the outer layer; protects the stem and reduces water loss.</li>
 <li><strong>Cortex:</strong> tissue between the epidermis and the vascular bundles; supports the stem and stores food.</li>
 <li><strong>Vascular bundles:</strong> arranged in a <strong>ring</strong> near the outside of the stem. In each bundle, the <strong>xylem</strong> is on the inner side (towards the centre) and carries water and minerals up and supports the stem. The <strong>phloem</strong> is on the outer side and carries sugars and other organic compounds.</li>
-<li><strong>Pith:</strong> the central tissue, which stores food.</li>
+<li><strong>Pith:</strong> the central tissue, which stores food. (The guide does not list the pith, but you will see it on micrographs.)</li>
 </ul>
 <p><strong>Root (B3.2.10).</strong></p>
 <ul>
@@ -296,8 +296,8 @@ IB.registerTopic({
 <ul>
 <li><strong>表皮 (epidermis)：</strong>外側の層。茎を守り、水分の損失を減らします。</li>
 <li><strong>皮層 (cortex)：</strong>表皮と維管束の間の組織。茎を支え、養分を蓄えます。</li>
-<li><strong>維管束 (vascular bundles)：</strong>茎の外側近くに<strong>輪</strong>状に並びます。各維管束で、<strong>木部</strong>は内側（中心側）にあり、水と無機物を上方へ運び、茎を支えます。<strong>師部</strong>は外側にあり、糖などの有機化合物を運びます。</li>
-<li><strong>髄 (pith)：</strong>中心の組織で、養分を蓄えます。</li>
+<li><strong>維管束 (vascular bundles)：</strong>茎の外側近くに<strong>輪</strong>状に並びます。各維管束で、<strong>木部</strong>は内側（中心側）にあり、水と無機塩類を上方へ運び、茎を支えます。<strong>師部</strong>は外側にあり、糖などの有機化合物を運びます。</li>
+<li><strong>髄 (pith)：</strong>中心の組織で、養分を蓄えます（ガイドには挙げられていませんが、顕微鏡写真には見えます）。</li>
 </ul>
 <p><strong>根 (B3.2.10)</strong>。</p>
 <ul>
@@ -312,7 +312,7 @@ IB.registerTopic({
 <li><strong>表皮 (epidermis)：</strong>最外層，保護莖並減少水分散失。</li>
 <li><strong>皮層 (cortex)：</strong>表皮與維管束之間的組織，支撐莖並貯存養分。</li>
 <li><strong>維管束 (vascular bundles)：</strong>排成<strong>環</strong>形，靠近莖的外側。每個維管束中，<strong>木質部</strong>在內側（朝向中心），向上運送水和礦物質，並支撐莖；<strong>韌皮部</strong>在外側，運送糖和其他有機化合物。</li>
-<li><strong>髓 (pith)：</strong>中央組織，貯存養分。</li>
+<li><strong>髓 (pith)：</strong>中央組織，貯存養分（課程指引沒有列出髓，但你會在顯微照片中看到它）。</li>
 </ul>
 <p><strong>根 (B3.2.10)</strong>。</p>
 <ul>
@@ -553,7 +553,7 @@ IB.registerTopic({
         `<p>通常，水被蒸騰作用（負壓）沿木質部向上拉。但有些時候蒸騰作用太慢，不足以做到這點，此時植物便利用<strong>根壓 (root pressure)</strong>。</p>
 <ol>
 <li>根中的細胞利用ATP把礦物離子<strong>主動運輸</strong>入木質部導管。</li>
-<li>木質部液體的溶質濃度變得高於周圍的根細胞，所以水藉<strong>滲透</strong>作用跟進入木質部。</li>
+<li>木質部液體的溶質濃度變得高於周圍的根細胞，所以水藉<strong>滲透</strong>作用跟隨進入木質部。</li>
 <li>額外的水在木質部中產生<strong>正壓</strong>（正壓勢），把水沿根和莖向上推。</li>
 </ol>
 <p><strong>何時重要：</strong>當蒸騰作用引起的運輸不足時，例如</p>
@@ -593,7 +593,7 @@ IB.registerTopic({
 <li><strong>原形質連絡 (plasmodesmata)：</strong>伴細胞と師管要素をつなぐ細い細胞質の通路で、物質が両者の間を移動できます。伴細胞は代謝の仕事（師管要素を生かし続けることも含む）を担います。</li>
 </ul>
 <p>これらの適応が一体となって、師管内の師管液の流れを容易にし、ソースでの炭素化合物の積み込みとシンクでの積み下ろしを高めます。</p>
-<div class="note">比較：木部は死んだ細胞の中で水と無機物を<em>上方へ</em>運び、師部は生きた細胞の中で糖を（ソースからシンクへ）<em>両方向に</em>運びます。</div>`,
+<div class="note">比較：木部は死んだ細胞の中で水と無機塩類を<em>上方へ</em>運び、師部は生きた細胞の中で糖を（ソースからシンクへ）<em>両方向に</em>運びます。</div>`,
         `<p><strong>韌皮部 (phloem)</strong> 把含碳化合物（主要為蔗糖）及其他物質（如氨基酸）的<strong>汁液 (sap)</strong>，由<strong>源 (source)</strong> 運到<strong>庫 (sink)</strong>。這種運動稱為<strong>運移 (translocation)</strong>。源是製造或釋出糖的地方（例如進行光合作用的成熟葉）；庫是使用或貯存糖的地方（例如生長中的根、果實或貯存器官）。韌皮部有兩種細胞協同工作。</p>
 <p><strong>篩管分子 (sieve tube elements)</strong>（組成篩管的細胞）：</p>
 <ul>
@@ -657,7 +657,7 @@ IB.registerTopic({
   ],
   links: [
     { to: "B3.1", why: T("Transpiration is a consequence of gas exchange; capillaries carry gases to and from alveoli.", "蒸散はガス交換の結果です。毛細血管は肺胞との間で気体を運びます。", "蒸騰作用是氣體交換的後果；微血管在肺泡之間運送氣體。") },
-    { to: "B2.3", why: T("Cardiac muscle cells and striated muscle fibres; surface area-to-volume ratio.", "心筋細胞と横紋筋線維。表面積と体積の比。", "心肌細胞與橫紋肌纖維；表面面積與體積比。") },
+    { to: "B2.3", why: T("Cardiac muscle cells and striated muscle fibres; surface area-to-volume ratio.", "心筋細胞と横紋筋線維。表面積と体積の比。", "心肌細胞與橫紋肌纖維；表面積與體積比。") },
     { to: "B1.1", why: T("Hydrogen bonding of water (cohesion) and the transport of sucrose.", "水の水素結合（凝集）とスクロースの輸送。", "水的氫鍵（內聚力）與蔗糖的運輸。") },
     { to: "B2.1", why: T("Active transport and osmosis underlie root pressure and phloem loading.", "能動輸送と浸透が、根圧と師部への積み込みの基礎です。", "主動運輸和滲透是根壓和韌皮部裝載的基礎。") }
   ],
@@ -684,7 +684,7 @@ IB.registerTopic({
         T("Thick layers of elastic tissue", "弾性組織の厚い層", "厚的彈性組織層")
       ],
       answer: [0, 1],
-      explanation: T("Thin walls shorten the diffusion distance and branching with narrow diameters gives a large surface area. Valves are a feature of veins and thick elastic walls are a feature of arteries.", "薄い壁は拡散距離を短くし、細い直径での枝分かれは表面積を大きくします。弁は静脈の特徴、厚い弾性の壁は動脈の特徴です。", "薄壁縮短擴散距離，狹窄直徑加分支提供大表面面積。瓣膜是靜脈的特徵，厚彈性壁是動脈的特徵。") },
+      explanation: T("Thin walls shorten the diffusion distance and branching with narrow diameters gives a large surface area. Valves are a feature of veins and thick elastic walls are a feature of arteries.", "薄い壁は拡散距離を短くし、細い直径での枝分かれは表面積を大きくします。弁は静脈の特徴、厚い弾性の壁は動脈の特徴です。", "薄壁縮短擴散距離，狹窄直徑加分支提供大表面積。瓣膜是靜脈的特徵，厚彈性壁是動脈的特徵。") },
     { id: "b3-2-q03", type: "mcq", ahl: false, difficulty: 2, ref: "B3.2.2", paper: "1A",
       stem: T("A micrograph shows a blood vessel with a thick wall and a narrow, round lumen. The wall has thick layers of muscle and elastic fibres. What is the vessel?", "顕微鏡写真に、壁が厚く管腔が狭く丸い血管が写っている。壁には筋肉と弾性繊維の厚い層がある。この血管は何か。", "顯微照片顯示一條血管，壁厚、管腔窄而圓，壁上有厚的肌肉和彈性纖維層。這是甚麼血管？"),
       options: [
@@ -706,7 +706,7 @@ IB.registerTopic({
     { id: "b3-2-q22", type: "short", ahl: false, difficulty: 2, ref: "B3.2.4", paper: "2", commandTerm: "Outline", marks: 3,
       stem: T("Outline how pulse rate can be measured, and one way in which a digital method could differ from a traditional method.", "脈拍数をどのように測定できるか、また、デジタルの方法が従来の方法とどう異なりうるかを1つ概説しなさい。", "概述如何量度脈搏率，以及數碼方法與傳統方法可能有何不同之處（一點）。"),
       markscheme: [
-        T("Press fingertips (not thumb) on the carotid (neck) or radial (wrist) artery", "指先（親指以外）を頸動脈（首）または橈骨動脈（手首）に当てる", "用指尖（不用拇指）按頸（頸部）或橈（手腕）動脈"),
+        T("Press fingertips (not thumb) on the carotid (neck) or radial (wrist) artery", "指先（親指以外）を頸動脈（首）または橈骨動脈（手首）に当てる", "用指尖（不用拇指）按頸動脈（頸部）或橈動脈（手腕）"),
         T("Count beats for a set time (e.g. 30 s or 60 s) and convert to beats per minute, at rest", "決まった時間（例：30秒または60秒）の拍動を安静時に数え、1分あたりに換算する", "在靜止狀態下數算固定時間（如30秒或60秒）的脈搏，並換算為每分鐘次數"),
         T("Digital method (e.g. sensor/smartwatch) records continuously / may be more precise / less affected by counting error (accept any valid difference)", "デジタルの方法（センサー／スマートウォッチなど）は連続記録できる／より精密／数え間違いの影響を受けにくい（妥当な違いなら可）", "數碼方法（如感應器／智能手錶）可持續記錄／可能更精確／較少受計數錯誤影響（接受任何合理差異）")
       ],
@@ -787,9 +787,9 @@ IB.registerTopic({
       stem: T("Match each tissue in a dicotyledonous stem with its main function.", "双子葉植物の茎の各組織と、その主な機能を組み合わせなさい。", "把雙子葉植物莖中每種組織與其主要功能配對。"),
       pairs: [
         { left: T("Epidermis", "表皮", "表皮"), right: T("Protects the stem and reduces water loss", "茎を守り、水分の損失を減らす", "保護莖並減少水分散失") },
-        { left: T("Xylem", "木部", "木質部"), right: T("Carries water and minerals up and supports the stem", "水と無機物を上方へ運び、茎を支える", "向上運送水和礦物質，並支撐莖") },
+        { left: T("Xylem", "木部", "木質部"), right: T("Carries water and minerals up and supports the stem", "水と無機塩類を上方へ運び、茎を支える", "向上運送水和礦物質，並支撐莖") },
         { left: T("Phloem", "師部", "韌皮部"), right: T("Transports sugars and other organic compounds", "糖などの有機化合物を輸送する", "運輸糖及其他有機化合物") },
-        { left: T("Pith", "髄", "髓"), right: T("Stores food", "養分を蓄える", "貯存養分") }
+        { left: T("Cortex", "皮層", "皮層"), right: T("Supports the stem and stores food", "茎を支え、養分を蓄える", "支撐莖並貯存養分") }
       ],
       explanation: T("These are the functions you would write when annotating a plan diagram of a stem.", "これらは、茎の平面図に注釈を書き込むときの機能です。", "這些是為莖的平面圖加註解時應寫的功能。") },
     { id: "b3-2-q13", type: "short", ahl: true, difficulty: 2, ref: "B3.2.11", paper: "2", commandTerm: "Explain", marks: 3,
