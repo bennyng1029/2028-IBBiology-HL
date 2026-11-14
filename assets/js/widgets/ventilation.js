@@ -146,12 +146,12 @@
     }
     s += '<text x="236" y="26" style="font-weight:700">' + t(fl > 0.0005 ? T.air : T.air) + (mag > 0.04 ? (dir > 0 ? " ↓" : " ↑") : "") + '</text>';
     // labels
-    s += '<text x="' + f1(ribsQ[2][0] - 16) + '" y="' + f1(ribsQ[2][1] - 28) + '" text-anchor="end" style="font-weight:700">' + t(T.stern).replace(/ \(.*/, "") + '</text>';
-    s += '<text x="' + (xB + 38) + '" y="120" text-anchor="start" style="font-weight:700">' + t(T.ribs).replace(/ \(.*/, "") + '</text>';
-    s += '<text x="' + f1((lf + xB) / 2) + '" y="128" text-anchor="middle" style="font-weight:700;fill:var(--accent-ink)">' + t(T.lung).replace(/ \(.*/, "") + '</text>';
-    s += '<text x="' + f1((xF + xB) / 2) + '" y="' + f1(Math.min(270, yE + 20)) + '" text-anchor="middle" style="font-weight:700;fill:' + CLR.dia + '">' + t(T.dia).replace(/ \(.*/, "") + '</text>';
-    s += '<text x="' + (xB + 38) + '" y="206" text-anchor="start" style="font-weight:700">' + t(T.spine).replace(/ \(.*/, "") + '</text>';
-    s += '<text x="46" y="' + f1(Math.min(292, 284)) + '" text-anchor="start" style="font-weight:700;fill:var(--good);paint-order:stroke;stroke:var(--surface);stroke-width:4px">' + t(T.abd).replace(/ \(.*/, "") + '</text>';
+    s += '<text x="' + f1(ribsQ[2][0] - 16) + '" y="' + f1(ribsQ[2][1] - 28) + '" text-anchor="end" style="font-weight:700">' + t(T.stern).replace(/\s?\(.*/, "") + '</text>';
+    s += '<text x="' + (xB + 38) + '" y="120" text-anchor="start" style="font-weight:700">' + t(T.ribs).replace(/\s?\(.*/, "") + '</text>';
+    s += '<text x="' + f1((lf + xB) / 2) + '" y="128" text-anchor="middle" style="font-weight:700;fill:var(--accent-ink)">' + t(T.lung).replace(/\s?\(.*/, "") + '</text>';
+    s += '<text x="' + f1((xF + xB) / 2) + '" y="' + f1(Math.min(270, yE + 20)) + '" text-anchor="middle" style="font-weight:700;fill:' + CLR.dia + '">' + t(T.dia).replace(/\s?\(.*/, "") + '</text>';
+    s += '<text x="' + (xB + 38) + '" y="206" text-anchor="start" style="font-weight:700">' + t(T.spine).replace(/\s?\(.*/, "") + '</text>';
+    s += '<text x="46" y="' + f1(Math.min(292, 284)) + '" text-anchor="start" style="font-weight:700;fill:var(--good);paint-order:stroke;stroke:var(--surface);stroke-width:4px">' + t(T.abd).replace(/\s?\(.*/, "") + '</text>';
     return { svg: s, act: act, V: V };
   }
 
@@ -203,8 +203,8 @@
       function btn(label, fn, pressed) { var b = document.createElement("button"); b.type = "button"; b.className = "vt-b"; b.innerHTML = label; if (pressed !== undefined) b.setAttribute("aria-pressed", String(pressed)); b.addEventListener("click", fn); return b; }
       var r1 = document.createElement("div"); r1.className = "vt-row"; panel.appendChild(r1);
       var bPlay = btn("", function () { playing = !playing; sync(); kick(); });
-      var bI = btn(t(T.insp).replace(/ \(.*/, ""), function () { playing = false; u = 0.2; sync(); draw(); });
-      var bE = btn(t(T.exp).replace(/ \(.*/, ""), function () { playing = false; u = 0.7; sync(); draw(); });
+      var bI = btn(t(T.insp).replace(/\s?\(.*/, ""), function () { playing = false; u = 0.2; sync(); draw(); });
+      var bE = btn(t(T.exp).replace(/\s?\(.*/, ""), function () { playing = false; u = 0.7; sync(); draw(); });
       var bF = btn(t(T.forced), function () { mode = mode === "f" ? "q" : "f"; sync(); draw(); kick(); }, mode === "f");
       bF.title = t(T.tF);
       [bPlay, bI, bE, bF].forEach(function (b) { r1.appendChild(b); });

@@ -148,8 +148,8 @@
           mk("rect", { x: faceL - 1, y: p + PH, width: MT + 2, height: 5, rx: 2, fill: "var(--theme-b)" }, pg);
           mk("rect", { x: faceL, y: p - PH, width: MT, height: 2 * PH, fill: "var(--surface)", "fill-opacity": "0.75" }, pg);
         });
-        mk("text", { x: faceL + MT / 2, y: 12, "text-anchor": "middle", style: "font-weight:700" }, lab).textContent = t(T.mem).replace(/ \(.*/, "");
-        if (aq) mk("text", { x: faceL + MT / 2, y: 25, "text-anchor": "middle", style: "fill:var(--theme-b);font-weight:700" }, lab).textContent = t(T.aqL).replace(/ \(.*/, "");
+        mk("text", { x: faceL + MT / 2, y: 12, "text-anchor": "middle", style: "font-weight:700" }, lab).textContent = t(T.mem).replace(/\s?\(.*/, "");
+        if (aq) mk("text", { x: faceL + MT / 2, y: 25, "text-anchor": "middle", style: "fill:var(--theme-b);font-weight:700" }, lab).textContent = t(T.aqL).replace(/\s?\(.*/, "");
       }
       var waterEls = [], soluEls = [];
       function build() {
