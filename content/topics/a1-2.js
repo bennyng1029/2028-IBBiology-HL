@@ -638,15 +638,15 @@
         stem: L("Which observation provides the best evidence that all living organisms share a common ancestor?", "すべての生物が共通の祖先をもつことの最もよい証拠となる観察はどれか。", "哪項觀察最能證明所有生物有共同祖先？"),
         options: [
           L("All organisms need water.", "すべての生物は水を必要とする。", "所有生物都需要水。"),
-          L("DNA is double-stranded in all cells.", "すべての細胞で DNA は2本鎖である。", "所有細胞中的 DNA 都是雙鏈。"),
+          L("All organisms have cell walls.", "すべての生物が細胞壁をもつ。", "所有生物都有細胞壁。"),
           L("The same triplets of bases code for the same amino acids in almost all organisms.", "ほぼすべての生物で、同じ3つ組の塩基が同じアミノ酸を指定する。", "在幾乎所有生物中，相同的三個鹼基組合都編碼相同的氨基酸。"),
           L("All organisms contain ribosomes of exactly the same size.", "すべての生物が、まったく同じ大きさのリボソームをもつ。", "所有生物都含有大小完全相同的核糖體。")
         ],
         answer: 2,
         explanation: L(
-          "C is correct: a shared code is arbitrary, so it is best explained by inheritance from a common ancestor. A is true but could result from any origin of life. B is not true of all cells (and some viruses use RNA). D is not true: ribosomes differ in size between prokaryotes and eukaryotes.",
-          "C が正解です。共有された暗号は恣意的なものなので、共通祖先からの遺伝で最もよく説明されます。A は事実ですが、生命がどのように始まったとしても起こりえます。B はすべての細胞には当てはまりません (また、RNA を使うウイルスもあります)。D は誤りで、リボソームの大きさは原核生物と真核生物で異なります。",
-          "答案是 C：共用的密碼是任意的，最好的解釋是從共同祖先遺傳而來。A 正確，但無論生命如何起源都可能成立。B 不適用於所有細胞 (而且有些病毒使用 RNA)。D 不正確，原核生物與真核生物的核糖體大小不同。")
+          "C is correct: a shared code is arbitrary, so it is best explained by inheritance from a common ancestor. A is true but could result from any origin of life. B is not true: animal cells have no cell wall. D is not true: ribosomes differ in size between prokaryotes and eukaryotes.",
+          "C が正解です。共有された暗号は恣意的なものなので、共通祖先からの遺伝で最もよく説明されます。A は事実ですが、生命がどのように始まったとしても起こりえます。B は誤りで、動物細胞には細胞壁がありません。D は誤りで、リボソームの大きさは原核生物と真核生物で異なります。",
+          "答案是 C：共用的密碼是任意的，最好的解釋是從共同祖先遺傳而來。A 正確，但無論生命如何起源都可能成立。B 不正確，動物細胞沒有細胞壁。D 不正確，原核生物與真核生物的核糖體大小不同。")
       },
       {
         id: "a1-2-q14", type: "mcq", ahl: false, difficulty: 3, ref: "A1.2.6–7", paper: "1A",
