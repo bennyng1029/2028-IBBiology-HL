@@ -51,6 +51,7 @@
     ".w-carb-builder .cb-link{stroke:var(--ink-2);stroke-width:1.6;fill:none}",
     ".w-carb-builder .cb-hb{stroke:var(--hbond);stroke-width:2;stroke-dasharray:3 3;fill:none}",
     ".w-carb-builder .cb-sw{display:inline-block;width:.9rem;height:.9rem;border:1.6px solid;vertical-align:-.15rem;margin-right:.3rem;border-radius:2px}",
+    "@media(max-width:639px){.w-carb-builder .wl-stage svg{max-height:min(30vh,230px)}.w-carb-builder .cb-msg{max-height:4.5rem;overflow-y:auto}.w-carb-builder .cb-chip{padding-inline:8px;font-size:13px}.w-carb-builder .wl-exam{font-size:13px}}",
     "@media(prefers-reduced-motion:reduce){.w-carb-builder *{transition:none!important;animation:none!important}}"
   ].join("\n");
 
