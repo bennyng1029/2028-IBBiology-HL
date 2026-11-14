@@ -83,6 +83,7 @@
     ".W .lock{color:var(--k-bad);font-weight:600;font-size:14px}.W .lock:empty{display:none}" +
     ".W .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.W .seg button{padding:4px 4px;font-size:13px;line-height:1.2}" +
     "@media (max-width:639px){.W .wl-panel{gap:6px}.W .wl-panel .panel{padding:6px 10px;font-size:14px}.W .st{line-height:1.35;font-size:13px;justify-content:flex-start;gap:0 14px}.W .seg button{font-size:12px}.W .wl-stage .legend{font-size:12px}}" +
+    ".W .wl-exam{font-size:13px;line-height:1.4}.W .wl-panel .panel{font-size:14px;padding:8px 12px}.W .sl input[type=range]{min-height:32px}.W .wl-panel{gap:8px}" +
     ".W .orow{display:flex;gap:8px;align-items:center}.W .orow p{flex:1;margin:0}.W .orow button{flex:none;min-width:64px}" +
     ".W .sl{margin:0;display:grid;grid-template-columns:6.5em 1fr 4.2em;align-items:center;gap:8px;font-weight:600}.W .sl .sl-n{white-space:nowrap}.W .sl span:last-child{text-align:right}.W .sl input[type=range]{min-height:36px}.W .wl-stage svg{max-height:min(50vh,360px)}.W .st{margin:2px 0}.W .wl-panel .panel p{margin:0 0 4px}";
   var COL = { N: "--k-np", P: "--k-pol", A: "--k-ac", B: "--k-ba", C: "--k-S" };
