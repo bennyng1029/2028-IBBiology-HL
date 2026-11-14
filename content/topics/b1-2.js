@@ -891,20 +891,20 @@ IB.registerTopic({
 <g stroke="var(--line,#999)" stroke-width="1"><line x1="72.5" y1="170" x2="72.5" y2="175"/><line x1="105" y1="170" x2="105" y2="175"/><line x1="137.5" y1="170" x2="137.5" y2="175"/><line x1="170" y1="170" x2="170" y2="175"/><line x1="202.5" y1="170" x2="202.5" y2="175"/><line x1="235" y1="170" x2="235" y2="175"/><line x1="267.5" y1="170" x2="267.5" y2="175"/><line x1="300" y1="170" x2="300" y2="175"/>
 <line x1="35" y1="20" x2="40" y2="20"/><line x1="35" y1="95" x2="40" y2="95"/></g>
 <g fill="var(--ink,#222)" font-size="10" text-anchor="middle"><text x="72.5" y="187">10</text><text x="105" y="187">20</text><text x="137.5" y="187">30</text><text x="170" y="187">40</text><text x="202.5" y="187">50</text><text x="235" y="187">60</text><text x="267.5" y="187">70</text><text x="300" y="187">80</text>
-<text x="175" y="204">温度 (°C) / Temperature</text></g>
+<text x="175" y="204">温度 (°C)</text></g>
 <g fill="var(--ink,#222)" font-size="10" text-anchor="end"><text x="32" y="174">0</text><text x="32" y="99">50</text><text x="32" y="24">100</text></g>
 <text x="12" y="95" fill="var(--ink,#222)" font-size="10" text-anchor="middle" transform="rotate(-90 12 95)">相対活性 (%)</text>
 <polyline fill="none" stroke="var(--accent,#2a7de1)" stroke-width="2.5" points="72.5,152 105,132.5 137.5,95 170,42.5 202.5,20 235,117.5 267.5,162.5 300,170"/>
 <g fill="var(--accent,#2a7de1)"><circle cx="72.5" cy="152" r="3"/><circle cx="105" cy="132.5" r="3"/><circle cx="137.5" cy="95" r="3"/><circle cx="170" cy="42.5" r="3"/><circle cx="202.5" cy="20" r="3"/><circle cx="235" cy="117.5" r="3"/><circle cx="267.5" cy="162.5" r="3"/><circle cx="300" cy="170" r="3"/></g>
 </svg><figcaption>酵素活性（相対％）と温度。値：10 °C 12、20 °C 25、30 °C 50、40 °C 85、50 °C 100、60 °C 35、70 °C 5、80 °C 0。</figcaption></figure>`,
-        zh: `<p>圖表顯示一種蛋白質酶在不同溫度下的活性（示意數據）。</p>
+        zh: `<p>圖表顯示一種酶（蛋白質）在不同溫度下的活性（示意數據）。</p>
 <figure><svg viewBox="0 0 340 210" width="100%" role="img" aria-label="酶活性與溫度的折線圖">
 <line x1="40" y1="170" x2="310" y2="170" stroke="var(--ink,#222)" stroke-width="1.5"/>
 <line x1="40" y1="170" x2="40" y2="15" stroke="var(--ink,#222)" stroke-width="1.5"/>
 <g stroke="var(--line,#999)" stroke-width="1"><line x1="72.5" y1="170" x2="72.5" y2="175"/><line x1="105" y1="170" x2="105" y2="175"/><line x1="137.5" y1="170" x2="137.5" y2="175"/><line x1="170" y1="170" x2="170" y2="175"/><line x1="202.5" y1="170" x2="202.5" y2="175"/><line x1="235" y1="170" x2="235" y2="175"/><line x1="267.5" y1="170" x2="267.5" y2="175"/><line x1="300" y1="170" x2="300" y2="175"/>
 <line x1="35" y1="20" x2="40" y2="20"/><line x1="35" y1="95" x2="40" y2="95"/></g>
 <g fill="var(--ink,#222)" font-size="10" text-anchor="middle"><text x="72.5" y="187">10</text><text x="105" y="187">20</text><text x="137.5" y="187">30</text><text x="170" y="187">40</text><text x="202.5" y="187">50</text><text x="235" y="187">60</text><text x="267.5" y="187">70</text><text x="300" y="187">80</text>
-<text x="175" y="204">溫度 (°C) / Temperature</text></g>
+<text x="175" y="204">溫度 (°C)</text></g>
 <g fill="var(--ink,#222)" font-size="10" text-anchor="end"><text x="32" y="174">0</text><text x="32" y="99">50</text><text x="32" y="24">100</text></g>
 <text x="12" y="95" fill="var(--ink,#222)" font-size="10" text-anchor="middle" transform="rotate(-90 12 95)">相對活性 (%)</text>
 <polyline fill="none" stroke="var(--accent,#2a7de1)" stroke-width="2.5" points="72.5,152 105,132.5 137.5,95 170,42.5 202.5,20 235,117.5 267.5,162.5 300,170"/>
@@ -1048,7 +1048,7 @@ IB.registerTopic({
 <tr><td>改變後的形式</td><td>極性</td><td>極性</td><td>非極性</td><td>酸性</td><td>非極性</td><td>非極性</td><td>極性</td></tr></table>
 <p>在正常的蛋白質中，第 5 個位置的 R 基與長鏈上另一處的鹼性（帶正電）R 基形成離子鍵。</p>`
       },
-      stem: { en: "Suggest how the change at position 5 could alter the protein's structure and function.", ja: "5番目の位置の変化が、タンパク質の構造と働きをどう変えうるかを示唆せよ。", zh: "提出 5 號位置的改變如何可能改變蛋白質的結構和功能。" },
+      stem: { en: "Suggest how the change at position 5 could alter the protein's structure and function.", ja: "5番目の位置の変化が、タンパク質の構造と働きをどう変えうるかを示唆せよ。", zh: "提出第 5 個位置的改變如何可能改變蛋白質的結構和功能。" },
       markscheme: [
         { en: "the altered R-group is non-polar / uncharged so cannot form the ionic bond with the basic R-group", ja: "変化したR基は無極性／電荷なしなので、塩基性のR基とイオン結合をつくれない", zh: "改變後的 R 基是非極性／不帶電，不能與鹼性 R 基形成離子鍵" },
         { en: "(may form hydrophobic interactions instead, so) the tertiary structure / folding changes", ja: "（代わりに疎水性相互作用をつくるかもしれず）三次構造／折りたたみが変わる", zh: "（可能改為形成疏水相互作用，所以）三級結構／摺疊改變" },
@@ -1070,7 +1070,7 @@ IB.registerTopic({
 
     /* q20 */
     { id: "b1-2-q20", type: "short", ahl: true, difficulty: 3, ref: "B1.2.9", paper: "2", commandTerm: "Distinguish", marks: 3,
-      stem: { en: "A student writes: 'Boiling an egg white breaks the peptide bonds and the disulfide bonds in the proteins.' Distinguish between the roles of peptide bonds and disulfide bonds, and comment on what the student has got wrong about denaturation.", ja: "ある生徒が「卵白をゆでると、タンパク質のペプチド結合とジスルフィド結合が切れる」と書いた。ペプチド結合とジスルフィド結合の役割を区別し、変性についてこの生徒の誤りを論評せよ。", zh: "一位學生寫道：「把蛋白煮沸會破壞蛋白質中的肽鍵和二硫鍵。」區分肽鍵和二硫鍵的作用，並評論該學生對變性的理解有何錯誤。" },
+      stem: { en: "A student writes: 'Boiling an egg white breaks the peptide bonds and the disulfide bonds in the proteins.' Distinguish between the roles of peptide bonds and disulfide bonds, and comment on what the student has got wrong about denaturation.", ja: "ある生徒が「卵白をゆでると、タンパク質のペプチド結合とジスルフィド結合が切れる」と書いた。ペプチド結合とジスルフィド結合の役割を区別し、変性についてこの生徒の誤りを論評せよ。", zh: "一位學生寫道：「把雞蛋白煮沸會破壞其蛋白質中的肽鍵和二硫鍵。」區分肽鍵和二硫鍵的作用，並評論該學生對變性的理解有何錯誤。" },
       markscheme: [
         { en: "peptide bonds join adjacent amino acids in the backbone (C–N) and make the primary structure", ja: "ペプチド結合は骨格でとなり合うアミノ酸を結び (C–N)、一次構造をつくる", zh: "肽鍵連接骨架上相鄰的氨基酸 (C–N)，構成一級結構" },
         { en: "disulfide bonds are S–S bonds between the R-groups of two cysteines (which can be far apart in the sequence) and help hold the tertiary / quaternary structure", ja: "ジスルフィド結合は、2つのシステイン（配列上離れていてもよい）のR基間のS–S結合で、三次／四次構造を保つのを助ける", zh: "二硫鍵是兩個半胱氨酸（序列中可相隔很遠）R 基之間的 S–S 鍵，有助維持三級／四級結構" },

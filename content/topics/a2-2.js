@@ -241,7 +241,7 @@
 <tr><td><strong>移動</strong> (movement)</td><td>移動自己或身體的一部分</td><td>草履蟲：纖毛擺動；衣藻：兩條鞭毛</td></tr>
 <tr><td><strong>排泄</strong> (excretion)</td><td>排出新陳代謝產生的廢物</td><td>二氧化碳等廢物經質膜擴散出去</td></tr>
 <tr><td><strong>生長</strong> (growth)</td><td>體積增大</td><td>細胞分裂前會增大</td></tr>
-<tr><td><strong>對刺激作出反應</strong> (response to stimuli)</td><td>察覺變化並作出反應</td><td>衣藻游向光（眼點感光）；草履蟲游離有害化學物質</td></tr>
+<tr><td><strong>對刺激作出反應</strong> (response to stimuli)</td><td>察覺變化並作出反應</td><td>衣藻游向光（眼點感光）；草履蟲會游開，遠離有害化學物質</td></tr>
 <tr><td><strong>繁殖</strong> (reproduction)</td><td>產生新個體</td><td>兩者都以分裂產生新細胞（無性繁殖）</td></tr>
 </table>
 <p>草履蟲和衣藻只是這裏選來說明的例子，指引只列出這八項功能。</p>`)
@@ -309,7 +309,7 @@
 <tr><td><strong>師管要素</strong> (phloem sieve tube element)</td><td>なし（成熟後）</td><td>端と端でつながり、糖を運ぶ管をつくります。核や細胞小器官が少ないため流れる通路が確保されます。隣の伴細胞（核をもつ）が支えます。</td></tr>
 </table>
 <p>これらの細胞も生きていて、細胞です。真核生物の中でも、細胞構造がどこでも同じではないことを示しています。</p>`,
-        `<p>「典型的」的真核細胞有<strong>一個細胞核</strong>，但有些細胞不是。指引要求用<strong>細胞核的數目</strong>來說明非典型的細胞結構，例子有以下四個：</p>
+        `<p>「典型」的真核細胞有<strong>一個細胞核</strong>，但有些細胞不是。指引要求用<strong>細胞核的數目</strong>來說明非典型的細胞結構，例子有以下四個：</p>
 <table>
 <tr><th>細胞</th><th>細胞核數目</th><th>說明</th></tr>
 <tr><td><strong>無隔膜的真菌菌絲</strong> (aseptate fungal hypha)</td><td>很多</td><td>菌絲是絲狀的真菌細胞鏈。「無隔膜」(aseptate) 指沒有橫隔 (septa)，所以一個連續的細胞質含有很多細胞核。</td></tr>
