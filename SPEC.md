@@ -155,3 +155,39 @@ Classes widgets may reuse: `.btn .btn--primary .btn--small .btn--quiet .badge .b
 - Topic page order: header, guiding questions, summary, sections (+ widget + examTip), nature of science, key terms, common mistakes, beyond-the-syllabus box, links (only to topics that are registered), quiz, pager.
 - Storage keys: `ibbio.lang`, `ibbio.theme`, `ibbio.level`, `ibbio.progress`.
 - Protein Lab step intros live in `core.js` (array `LAB`), in en/ja/zh. They must be checked against `docs/syllabus.md` for B1.2 (which understanding statements are SL vs AHL; globular/fibrous and conjugated wording).
+
+## Widget sizing standard (v2 — applies to every widget)
+
+Goal: each interactive is **sized in proportion to its content and the screen**, so a student can see the diagram, its controls and the feedback together.
+
+1. **One view fits one screen.** At 1280×720 (laptop), 1440×900 (desktop) and 390×844 (phone), one view of a widget (the diagram + its controls + the current feedback) fits inside the viewport minus the site header (~64px). Never stack several independent parts vertically: split them into **tabs or steps** (`.wl-tabs`), one part visible at a time.
+2. **Layout kit** (CSS in main.css; use these classes, do not invent your own frame layout):
+   - `.wl` — the widget layout grid. Phone/tablet (<900px wide): one column, stage first, panel below. ≥900px: two columns, `.wl-stage` (≈ 3fr) left and `.wl-panel` (≈ 2fr) right, top-aligned.
+   - `.wl-stage` — holds the main SVG/canvas. The SVG gets `width:100%; height:auto; max-height:var(--stage-max)` where `--stage-max: min(58vh, 440px)` on desktop and `min(42vh, 320px)` on phones. Drawings scale with `viewBox` (preserveAspectRatio default). Design viewBoxes near the aspect ratio actually used (landscape ≈ 4:3 or 16:10 on desktop); avoid tall portrait viewBoxes.
+   - `.wl-panel` — controls, readouts, short explanation (≤ ~60 words visible), and feedback. Longer text goes in `<details>` ("More detail").
+   - `.wl-tabs` — tab bar (buttons with `aria-selected`), scrolls horizontally on phones if needed.
+   - `.wl-exam` — the "What to remember for the exam" one-liner, at the bottom of the panel.
+   - `.wl-legend` — compact legend row under the stage.
+3. Typography inside SVG: ≥ 12px rendered at phone width (choose viewBox so labels are not tiny), never larger than ~18px on desktop.
+4. Buttons ≥ 40px tall; sliders full panel width.
+5. Animations: use requestAnimationFrame, pause when off-screen (IntersectionObserver) and when `prefers-reduced-motion` (offer a Play button instead), always show a sensible still frame at rest.
+
+## Labs (v2)
+
+Guided labs are data files `content/labs/<id>.js`:
+
+```js
+IB.registerLab({
+  id: "protein",                 // route #lab-protein  (#protein-lab stays as an alias)
+  order: 1,
+  theme: "B",                    // "A" | "B" | "AB"
+  topics: ["B1.2"],              // related subtopic ids (linked from the lab and shown on topic pages)
+  title: {en,ja,zh}, intro: {en,ja,zh},
+  steps: [
+    { title: {en,ja,zh}, ahl: false, refs: ["B1.2.1"], intro: {en,ja,zh},   // ≤ 70 words, accurate to the guide
+      widget: "amino-acid", options: { tab: 0 },                           // options passed to widget as ctx.options
+      task: {en,ja,zh} }                                                   // optional "Try this:" instruction
+  ]
+});
+```
+Widgets receive optional `ctx.options` (e.g. `{ tab: 1 }` or `{ preset: "haemoglobin" }`) and should honour a `tab`/`preset` option where they have tabs/presets. Topic sections may also set `widgetOptions`.
