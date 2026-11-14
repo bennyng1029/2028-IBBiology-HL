@@ -9,7 +9,8 @@
   var LANGS = [
     { id: 'en', label: 'English', html: 'en' },
     { id: 'ja', label: '日本語', html: 'ja' },
-    { id: 'zh', label: '中文(香港)', html: 'zh-HK' }
+    { id: 'zh', label: '中文(香港)', html: 'zh-HK' },
+    { id: 'ko', label: '한국어', html: 'ko' }
   ];
   var REPO = 'https://github.com/bennyng1029/2028-IBBiology-HL';
   var SITE = 'IB Biology A & B';
@@ -67,7 +68,25 @@
   function saveProgress() { store.set('ibbio.progress', JSON.stringify(IB.progress)); }
 
   /* ---------- helpers ---------- */
-  function t(o) { if (o == null) return ''; if (typeof o === 'string') return o; return o[IB.lang] || o.en || ''; }
+  /* Korean (ko) text for topics and labs lives in content/i18n/ko/*.js as an English -> Korean map,
+     loaded only when Korean is chosen. Widgets carry their own ko strings inline. */
+  IB.KO = {};
+  IB.addKo = function (m) { for (var k in m) if (Object.prototype.hasOwnProperty.call(m, k)) IB.KO[k] = m[k]; };
+  IB.ko = function (en) { return (en && IB.KO[en]) || en; };
+  function t(o) {
+    if (o == null) return ''; if (typeof o === 'string') return o;
+    if (IB.lang === 'ko') return o.ko || (o.en && IB.KO[o.en]) || o.en || '';
+    return o[IB.lang] || o.en || '';
+  }
+  var KO_FILES = ['a1-1','a1-2','a2-1','a2-2','a2-3','a3-1','a3-2','a4-1','a4-2','b1-1','b1-2','b2-1','b2-2','b2-3','b3-1','b3-2','b3-3','b4-1','b4-2',
+    'lab-protein','lab-molecules','lab-cells','lab-transport','lab-body','lab-evolution','lab-ecology'];
+  var koPromise = null;
+  function ensureKo() {
+    if (!koPromise) koPromise = Promise.all(KO_FILES.map(function (f) {
+      return IB.loadScript('content/i18n/ko/' + f + '.js').catch(function () { /* missing file: English fallback */ });
+    }));
+    return koPromise;
+  }
   function ui(key, vars) {
     var S = IB.UI || {};
     var s = (S[IB.lang] && S[IB.lang][key]) || (S.en && S.en[key]) || key;
@@ -240,7 +259,7 @@
       '<div class="seg" role="group" aria-label="' + esc(ui('levelGroup')) + '">' +
       '<button class="seg__btn" type="button" data-level="sl" aria-pressed="' + (IB.level === 'sl') + '">' + esc(ui('slOnly')) + '</button>' +
       '<button class="seg__btn" type="button" data-level="hl" aria-pressed="' + (IB.level === 'hl') + '">' + ui('slHl') + '</button></div>' +
-      '<select class="select lang-select" id="lang-select" aria-label="Language / 言語 / 語言">' + langOpts + '</select>' +
+      '<select class="select lang-select" id="lang-select" aria-label="Language / 言語 / 語言 / 언어">' + langOpts + '</select>' +
       '<button class="icon-btn share-btn" type="button" aria-label="' + esc(ui('share')) + '" title="' + esc(ui('share')) + '">' + ICON.share + '</button>' +
       '<button class="icon-btn theme-toggle" type="button" aria-label="' + esc(ui('switchTheme')) + '" title="' + esc(ui('switchTheme')) + '">' + ICON.theme + '</button>' +
       '</div></div></div><div class="stain" aria-hidden="true"><i></i><i></i></div></header>';
@@ -303,7 +322,7 @@
     IB.lang = l;
     store.set('ibbio.lang', l);
     doc.documentElement.setAttribute('lang', LANGS.filter(function (x) { return x.id === l; })[0].html);
-    render(true);
+    if (l === 'ko') ensureKo().then(function () { if (IB.lang === 'ko') render(true); }); else render(true);
   };
   IB.setLevel = function (l) {
     IB.level = l === 'sl' ? 'sl' : 'hl';
@@ -603,7 +622,7 @@
   function termCard(k) {
     var en = (k.term && k.term.en) || '', tr = t(k.term);
     var dt = h('dt', null, [h('span', { text: en })]);
-    if (IB.lang !== 'en' && tr && tr !== en) dt.appendChild(h('span', { class: 'tr', lang: IB.lang === 'ja' ? 'ja' : 'zh-HK', text: tr }));
+    if (IB.lang !== 'en' && tr && tr !== en) dt.appendChild(h('span', { class: 'tr', lang: ({ ja: 'ja', zh: 'zh-HK', ko: 'ko' })[IB.lang] || IB.lang, text: tr }));
     if (k.ahl) dt.appendChild(ahlBadge());
     return h('div', { class: 'term-card' }, [dt, h('dd', { html: t(k.def) })]);
   }
@@ -999,7 +1018,7 @@
         if (L !== letter) { letter = L; host.appendChild(h('div', { class: 'gloss-letter', 'aria-hidden': 'true', text: L })); }
         var tr = t(e.k.term);
         var term = h('div', { class: 'gloss-term' }, [h('strong', { text: en })]);
-        if (IB.lang !== 'en' && tr && tr !== en) term.appendChild(h('span', { class: 'tr', lang: IB.lang === 'ja' ? 'ja' : 'zh-HK', text: tr }));
+        if (IB.lang !== 'en' && tr && tr !== en) term.appendChild(h('span', { class: 'tr', lang: ({ ja: 'ja', zh: 'zh-HK', ko: 'ko' })[IB.lang] || IB.lang, text: tr }));
         if (e.k.ahl) term.appendChild(ahlBadge());
         term.appendChild(h('a', { class: 'tag mono', href: '#topic-' + e.tp.slug, text: e.tp.id }));
         host.appendChild(h('div', { class: 'gloss-entry' }, [term, wrapTables(h('div', { class: 'gloss-def', html: t(e.k.def) }))]));
@@ -1185,6 +1204,7 @@
     loadProgress();
     window.addEventListener('hashchange', function () { render(false); var m = doc.getElementById('main'); if (m) m.focus({ preventScroll: true }); });
     render(false);
+    if (IB.lang === 'ko') ensureKo().then(function () { if (IB.lang === 'ko') render(true); });
   }
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -97,8 +97,8 @@
   --lvl-3: #2679BD;
   --lvl-4: #8A6035;
 
-  --font-display: "Bricolage Grotesque", "Noto Sans JP", "Noto Sans HK", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Atkinson Hyperlegible", "Noto Sans JP", "Noto Sans HK", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-display: "Bricolage Grotesque", "Noto Sans JP", "Noto Sans HK", "Noto Sans KR", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Noto Sans JP", "Noto Sans HK", "Noto Sans KR", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --radius: 3px;
   --gutter: clamp(1rem, 4vw, 2rem);
@@ -639,3 +639,6 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
 
 /* Keep the hidden attribute authoritative inside layout grids */
 [hidden] { display: none !important; }
+
+/* Korean: keep words whole when wrapping */
+:root[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
