@@ -29,20 +29,20 @@ IB.registerLab({
       }
     },
     {
-      title: { en: "Water: cohesion and adhesion", ja: "水：凝集力と付着力", zh: "水：內聚力與黏附力" },
+      title: { en: "Water: cohesion and adhesion", ja: "水：凝集力と付着力", zh: "水：內聚力與附著力" },
       ahl: false,
       refs: ["A1.1.3", "A1.1.4"],
       intro: {
         en: "<p>Cohesion is the attraction between water molecules, caused by hydrogen bonds. It lets water be pulled up xylem vessels in an unbroken column under tension. It also gives water surfaces surface tension, which small animals use as a habitat. Adhesion is the attraction of water to polar or charged surfaces, such as cell walls and soil particles. It causes capillary action.</p>",
         ja: "<p>凝集力 (cohesion) は水素結合による水分子どうしの引き合いです。これにより、水は張力を受けながら途切れない柱となって木部 (xylem) の道管を引き上げられます。水面には表面張力 (surface tension) も生じ、小さな動物が生活の場として利用します。付着力 (adhesion) は、細胞壁や土の粒子のような極性または電荷をもつ表面に水が引きつけられる力で、毛細管現象 (capillary action) を起こします。</p>",
-        zh: "<p>內聚力 (cohesion) 是水分子之間由氫鍵造成的吸引力，使水能在張力下以不斷開的水柱沿木質部 (xylem) 導管上升，也使水面產生表面張力 (surface tension)，讓細小動物以水面為棲息處。黏附力 (adhesion) 是水被極性或帶電表面（例如細胞壁和土壤顆粒）吸引的力，會引起毛細作用 (capillary action)。</p>"
+        zh: "<p>內聚力 (cohesion) 是水分子之間由氫鍵造成的吸引力，使水能在張力下以不斷開的水柱沿木質部 (xylem) 導管上升，也使水面產生表面張力 (surface tension)，讓細小動物以水面為棲息處。附著力 (adhesion) 是水被極性或帶電表面（例如細胞壁和土壤顆粒）吸引的力，會引起毛細作用 (capillary action)。</p>"
       },
       widget: "water-hbond",
       options: { tab: 1 },
       task: {
         en: "In the xylem view, say what pulls the water up and what keeps the column from breaking. Then open the Adhesion tab and choose Capillary rise: explain why water climbs a narrow tube.",
         ja: "木部の図で、水を引き上げているものと、水の柱が切れないようにしているものを答えましょう。次に「付着力」タブを開いて「毛細管上昇」を選び、水が細い管を上る理由を説明しましょう。",
-        zh: "在木質部圖中，說出是甚麼把水拉上去，又是甚麼使水柱不會斷開。然後打開「黏附力」分頁，選擇「毛細上升」，解釋水為何會沿細管上升。"
+        zh: "在木質部圖中，說出是甚麼把水拉上去，又是甚麼使水柱不會斷開。然後打開「附著力」分頁，選擇「毛細管作用」，解釋水為何會沿細管上升。"
       }
     },
     {
@@ -92,8 +92,8 @@ IB.registerLab({
       options: {},
       task: {
         en: "Rotate the model. Under Highlight, choose Sugar–phosphate backbone, then Complementary base pairs. Which part is on the outside? Then colour by Base type and check that A pairs with T and G with C.",
-        ja: "モデルを回しましょう。「ハイライト」で「糖–リン酸骨格」、続いて「相補的塩基対」を選びます。外側にあるのはどの部分でしょう。次に色分けを「塩基の種類」にして、AがT、GがCと対になることを確かめましょう。",
-        zh: "旋轉模型。在「突出顯示」中先選「糖–磷酸骨架」，再選「互補鹼基對」。哪一部分在外側？然後把顏色設為「鹼基類型」，確認 A 與 T 配對、G 與 C 配對。"
+        ja: "モデルを回しましょう。「強調」で「糖–リン酸骨格」、続いて「相補的塩基対」を選びます。外側にあるのはどの部分でしょう。次に色分けを「塩基の種類」にして、AがT、GがCと対になることを確かめましょう。",
+        zh: "旋轉模型。在「突出顯示」中先選「糖–磷酸骨架」，再選「互補鹼基對」。哪一部分在外側？然後把顏色設為「鹼基種類」，確認 A 與 T 配對、G 與 C 配對。"
       }
     },
     {
@@ -131,20 +131,20 @@ IB.registerLab({
       }
     },
     {
-      title: { en: "Triglycerides and phospholipids", ja: "トリグリセリドとリン脂質", zh: "三酸甘油酯與磷脂" },
+      title: { en: "Triglycerides and phospholipids", ja: "トリグリセリドとリン脂質", zh: "甘油三酯與磷脂" },
       ahl: false,
       refs: ["B1.1.8", "B1.1.9", "B1.1.12"],
       intro: {
         en: "<p>Lipids dissolve in non-polar solvents but are only sparingly soluble in water. A triglyceride is one glycerol joined to three fatty acids by condensation. A phospholipid has glycerol joined to two fatty acids and one phosphate group. It is amphipathic: a hydrophilic head and hydrophobic tails. In water, phospholipids form a bilayer.</p>",
         ja: "<p>脂質 (lipid) は無極性溶媒に溶けますが、水には少ししか溶けません。トリグリセリド (triglyceride) は、1分子のグリセロールに3分子の脂肪酸が縮合で結合したものです。リン脂質 (phospholipid) は、グリセロールに2分子の脂肪酸と1つのリン酸基が結合したもので、親水性の頭部と疎水性の尾部をもつ両親媒性 (amphipathic) です。水中では二重層 (bilayer) をつくります。</p>",
-        zh: "<p>脂質 (lipid) 可溶於非極性溶劑，但只稍微溶於水。三酸甘油酯 (triglyceride) 是一個甘油通過縮合連接三個脂肪酸。磷脂 (phospholipid) 則是甘油連接兩個脂肪酸和一個磷酸基團，具兩親性 (amphipathic)：有親水的頭部和疏水的尾部。在水中，磷脂會形成雙層 (bilayer)。</p>"
+        zh: "<p>脂質 (lipid) 可溶於非極性溶劑，但只稍微溶於水。甘油三酯 (triglyceride) 是一個甘油通過縮合連接三個脂肪酸。磷脂 (phospholipid) 則是甘油連接兩個脂肪酸和一個磷酸基團，具兩親性 (amphipathic)：有親水的頭部和疏水的尾部。在水中，磷脂會形成雙層 (bilayer)。</p>"
       },
       widget: "lipid-builder",
       options: { tab: 0 },
       task: {
         en: "Press Add fatty acid three times and count the water molecules released. Then open the Phospholipids tab and press Self-assemble: which part of each molecule faces the water, and why?",
         ja: "「脂肪酸を追加」を3回押し、放出される水分子の数を数えましょう。次に「リン脂質」タブを開いて「自己集合」を押し、各分子のどの部分が水に面するか、その理由とともに答えましょう。",
-        zh: "按三次「加入脂肪酸」，數一數釋出的水分子。然後打開「磷脂」分頁並按「自行組裝」：每個分子的哪一部分朝向水？為甚麼？"
+        zh: "按三次「加入脂肪酸」，數一數釋出的水分子。然後打開「磷脂」分頁並按「自行組合」：每個分子的哪一部分朝向水？為甚麼？"
       }
     }
   ]
