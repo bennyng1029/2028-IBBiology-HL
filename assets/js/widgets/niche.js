@@ -3,7 +3,7 @@
    Outcomes shown: no competition (realized = fundamental), restriction to part of the fundamental niche, elimination.
    Qualitative model only. */
 (function () {
-  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
+  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
   var ID = "niche-css";
   var CSS = [
     ".w-niche{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
@@ -28,26 +28,26 @@
   ].join("\n");
 
   var T = {
-    overlap: L("Niche overlap", "ニッチの重なり", "生態位重疊", "생태적 지위 겹침"),
-    comp: L("Competition strength", "競争の強さ", "競爭強度", "경쟁 강도"),
-    strong: L("B is the stronger competitor", "Bのほうが競争に強い", "B是較強的競爭者", "B가 더 강한 경쟁자"),
-    equal: L("Equally matched", "互角", "旗鼓相當", "대등함"),
-    removeB: L("Remove species B", "種Bを取り除く", "移走物種B", "종 B 제거"),
-    reset: L("Reset", "リセット", "重設", "초기화"),
-    axis: L("Environmental gradient (for example height on a rocky shore, or soil moisture)", "環境の傾度（例: 岩礁海岸の高さ、土壌の水分）", "環境梯度（例如岩岸的高度或土壤水分）", "환경 기울기(예: 암석 해안의 높이 또는 토양 수분)"),
-    fundA: L("A: fundamental niche", "A: 基本ニッチ (fundamental niche)", "A：基礎生態位 (fundamental niche)", "A: 기본 생태적 지위(fundamental niche)"),
-    realA: L("A: realized niche", "A: 実現ニッチ (realized niche)", "A：實現生態位 (realized niche)", "A: 실현 생태적 지위(realized niche)"),
-    realB: L("B: realized niche", "B: 実現ニッチ", "B：實現生態位", "B: 실현 생태적 지위"),
-    legFund: L("fundamental niche of A (dashed)", "Aの基本ニッチ（破線）", "A的基礎生態位（虛線）", "A의 기본 생태적 지위(점선)"),
-    legReal: L("realized niche of A", "Aの実現ニッチ", "A的實現生態位", "A의 실현 생태적 지위"),
-    legB: L("species B", "種B", "物種B", "종 B"),
-    sizeLbl: L("Realized niche of A = {p}% of its fundamental niche", "Aの実現ニッチ = 基本ニッチの {p}%", "A的實現生態位 = 其基礎生態位的 {p}%", "A의 실현 생태적 지위 = 기본 생태적 지위의 {p}%"),
-    noComp: L("<strong>No competition effect.</strong> The realized niche of A is the same as its fundamental niche. (Either the niches do not overlap, or competition strength is zero, or B has been removed.)", "<strong>競争の影響なし。</strong> Aの実現ニッチは基本ニッチと同じです（ニッチが重ならないか、競争の強さがゼロか、Bを取り除いた場合）。", "<strong>沒有競爭影響。</strong>A的實現生態位與其基礎生態位相同（生態位沒有重疊、競爭強度為零，或已移走B）。", "<strong>경쟁의 영향이 없다.</strong> A의 실현 생태적 지위가 기본 생태적 지위와 같다. (생태적 지위가 겹치지 않거나, 경쟁 강도가 0이거나, B가 제거된 경우이다.)"),
-    restrict: L("<strong>A is restricted to part of its fundamental niche.</strong> B outcompetes A in the zone where their niches overlap, so A's realized niche is smaller than its fundamental niche. Move the competition slider to 0 and A spreads back.", "<strong>Aは基本ニッチの一部に制限されます。</strong> ニッチが重なる範囲ではBがAを圧倒するため、Aの実現ニッチは基本ニッチより小さくなります。競争のスライダーを0にするとAは広がります。", "<strong>A被限制在其基礎生態位的一部分。</strong>在生態位重疊的範圍內B勝過A，所以A的實現生態位比其基礎生態位小。把競爭滑桿移到0，A便會擴展回去。", "<strong>A는 기본 생태적 지위의 일부로 제한된다.</strong> 두 종의 생태적 지위가 겹치는 구간에서 B가 A를 경쟁에서 이기므로, A의 실현 생태적 지위는 기본 생태적 지위보다 작다. 경쟁 슬라이더를 0으로 옮기면 A가 다시 퍼진다."),
-    both: L("<strong>Both species are restricted to part of their fundamental niche.</strong> Each keeps the part of the overlap where it is the better competitor, so competition is reduced and they can coexist.", "<strong>両方の種が基本ニッチの一部に制限されます。</strong> 各種は重なりのうち自分が競争に強い部分を保つので、競争が減り、共存できます。", "<strong>兩個物種都被限制在其基礎生態位的一部分。</strong>每個物種保留重疊範圍中自己較有優勢的部分，競爭因而減少，得以共存。", "<strong>두 종 모두 기본 생태적 지위의 일부로 제한된다.</strong> 각 종은 겹치는 구간 중 더 우세한 부분을 차지하므로 경쟁이 줄어들고 공존할 수 있다."),
-    elim: L("<strong>Competitive exclusion: A is eliminated.</strong> The niches are (almost) identical and B is the stronger competitor, so A has no part of its niche left.", "<strong>競争的排除: Aは排除されます。</strong> ニッチがほぼ同一でBが競争に強いため、Aにはニッチが残りません。", "<strong>競爭排斥：A被淘汰。</strong>兩者的生態位（幾乎）相同而B是較強的競爭者，所以A沒有任何生態位部分剩下。", "<strong>경쟁 배타(competitive exclusion): A가 제거된다.</strong> 생태적 지위가 (거의) 같고 B가 더 강한 경쟁자이므로, A에게 남는 생태적 지위가 없다."),
-    nearIdent: L(" (With equal competitors and complete overlap, in practice one species is usually eliminated.)", "（互角で完全に重なる場合、実際にはどちらか一方が排除されることが多い。）", "（若兩者旗鼓相當且完全重疊，實際上通常其中一個會被淘汰。）", " (경쟁자의 능력이 같고 완전히 겹칠 때도 실제로는 대개 한 종이 제거된다.)"),
-    note: L("Qualitative model, not real data. The shape of each curve shows how well a species does at each point along the gradient.", "定性的なモデルで、実際のデータではありません。曲線の形は、傾度上の各点で種がどれだけよく育つかを示します。", "定性模型，並非真實數據。曲線形狀顯示物種在梯度上各點的表現。", "정성적 모형이며 실제 자료가 아니다. 각 곡선의 모양은 기울기를 따라 각 지점에서 종이 얼마나 잘 지내는지를 나타낸다.")
+    overlap: L("Niche overlap", "ニッチの重なり", "生態位重疊"),
+    comp: L("Competition strength", "競争の強さ", "競爭強度"),
+    strong: L("B is the stronger competitor", "Bのほうが競争に強い", "B是較強的競爭者"),
+    equal: L("Equally matched", "互角", "旗鼓相當"),
+    removeB: L("Remove species B", "種Bを取り除く", "移走物種B"),
+    reset: L("Reset", "リセット", "重設"),
+    axis: L("Environmental gradient (for example height on a rocky shore, or soil moisture)", "環境の傾度（例: 岩礁海岸の高さ、土壌の水分）", "環境梯度（例如岩岸的高度或土壤水分）"),
+    fundA: L("A: fundamental niche", "A: 基本ニッチ (fundamental niche)", "A：基礎生態位 (fundamental niche)"),
+    realA: L("A: realized niche", "A: 実現ニッチ (realized niche)", "A：實現生態位 (realized niche)"),
+    realB: L("B: realized niche", "B: 実現ニッチ", "B：實現生態位"),
+    legFund: L("fundamental niche of A (dashed)", "Aの基本ニッチ（破線）", "A的基礎生態位（虛線）"),
+    legReal: L("realized niche of A", "Aの実現ニッチ", "A的實現生態位"),
+    legB: L("species B", "種B", "物種B"),
+    sizeLbl: L("Realized niche of A = {p}% of its fundamental niche", "Aの実現ニッチ = 基本ニッチの {p}%", "A的實現生態位 = 其基礎生態位的 {p}%"),
+    noComp: L("<strong>No competition effect.</strong> The realized niche of A is the same as its fundamental niche. (Either the niches do not overlap, or competition strength is zero, or B has been removed.)", "<strong>競争の影響なし。</strong> Aの実現ニッチは基本ニッチと同じです（ニッチが重ならないか、競争の強さがゼロか、Bを取り除いた場合）。", "<strong>沒有競爭影響。</strong>A的實現生態位與其基礎生態位相同（生態位沒有重疊、競爭強度為零，或已移走B）。"),
+    restrict: L("<strong>A is restricted to part of its fundamental niche.</strong> B outcompetes A in the zone where their niches overlap, so A's realized niche is smaller than its fundamental niche. Move the competition slider to 0 and A spreads back.", "<strong>Aは基本ニッチの一部に制限されます。</strong> ニッチが重なる範囲ではBがAを圧倒するため、Aの実現ニッチは基本ニッチより小さくなります。競争のスライダーを0にするとAは広がります。", "<strong>A被限制在其基礎生態位的一部分。</strong>在生態位重疊的範圍內B勝過A，所以A的實現生態位比其基礎生態位小。把競爭滑桿移到0，A便會擴展回去。"),
+    both: L("<strong>Both species are restricted to part of their fundamental niche.</strong> Each keeps the part of the overlap where it is the better competitor, so competition is reduced and they can coexist.", "<strong>両方の種が基本ニッチの一部に制限されます。</strong> 各種は重なりのうち自分が競争に強い部分を保つので、競争が減り、共存できます。", "<strong>兩個物種都被限制在其基礎生態位的一部分。</strong>每個物種保留重疊範圍中自己較有優勢的部分，競爭因而減少，得以共存。"),
+    elim: L("<strong>Competitive exclusion: A is eliminated.</strong> The niches are (almost) identical and B is the stronger competitor, so A has no part of its niche left.", "<strong>競争的排除: Aは排除されます。</strong> ニッチがほぼ同一でBが競争に強いため、Aにはニッチが残りません。", "<strong>競爭排斥：A被淘汰。</strong>兩者的生態位（幾乎）相同而B是較強的競爭者，所以A沒有任何生態位部分剩下。"),
+    nearIdent: L(" (With equal competitors and complete overlap, in practice one species is usually eliminated.)", "（互角で完全に重なる場合、実際にはどちらか一方が排除されることが多い。）", "（若兩者旗鼓相當且完全重疊，實際上通常其中一個會被淘汰。）"),
+    note: L("Qualitative model, not real data. The shape of each curve shows how well a species does at each point along the gradient.", "定性的なモデルで、実際のデータではありません。曲線の形は、傾度上の各点で種がどれだけよく育つかを示します。", "定性模型，並非真實數據。曲線形狀顯示物種在梯度上各點的表現。")
   };
 
   function mount(el, ctx) {
@@ -150,7 +150,7 @@
   }
 
   IB.registerWidget("niche", {
-    title: L("Fundamental and realized niche: effect of competition", "基本ニッチと実現ニッチ: 競争の影響", "基礎生態位與實現生態位：競爭的影響", "기본 생태적 지위와 실현 생태적 지위: 경쟁의 영향"),
+    title: L("Fundamental and realized niche: effect of competition", "基本ニッチと実現ニッチ: 競争の影響", "基礎生態位與實現生態位：競爭的影響"),
     mount: mount
   });
 })();

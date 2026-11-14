@@ -3,7 +3,7 @@
    Z lines move together; A band constant; I band and H zone shorten. Titin drawn as a spring (recoil / limits stretch).
    Illustrative model: units are model units, 100 units = 1 µm. */
 (function () {
-  var L = function (en, ja, zh, ko) { return { en: en, ja: ja, zh: zh, ko: ko }; };
+  var L = function (en, ja, zh) { return { en: en, ja: ja, zh: zh }; };
   var ID = "sarcomere-css";
   var CSS = [
     ".w-sarcomere{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
@@ -31,35 +31,35 @@
   ].join("\n");
 
   var T = {
-    slider: L("Muscle state", "筋肉の状態", "肌肉狀態", "근육 상태"),
-    contracted: L("Contracted", "収縮", "收縮", "수축"),
-    stretched: L("Stretched", "伸展", "拉伸", "늘어남"),
-    sliderLabel: L("Sarcomere length slider: from contracted to stretched", "サルコメアの長さのスライダー: 収縮から伸展まで", "肌節長度滑桿：由收縮至拉伸", "근육 원섬유 마디 길이 슬라이더: 수축에서 늘어남까지"),
-    pContract: L("Contract", "収縮させる", "收縮", "수축시키기"),
-    pRest: L("Resting", "静止長", "靜止長度", "휴지 길이"),
-    pStretch: L("Stretch", "引き伸ばす", "拉伸", "늘이기"),
-    play: L("Animate", "アニメーション", "動畫", "애니메이션"),
-    stop: L("Stop", "停止", "停止", "정지"),
-    z: L("Z line", "Z線 (Z line)", "Z線 (Z line)", "Z선(Z line)"),
-    A: L("A band", "A帯 (A band)", "A帶 (A band)", "A대(A band)"),
-    I: L("I band", "I帯 (I band)", "I帶 (I band)", "I대(I band)"),
-    H: L("H zone", "H帯 (H zone)", "H區 (H zone)", "H대(H zone)"),
-    sarc: L("Sarcomere", "サルコメア (sarcomere)", "肌節 (sarcomere)", "근육 원섬유 마디(sarcomere)"),
-    actin: L("actin (thin filament)", "アクチン (actin、細いフィラメント)", "肌動蛋白 (actin，細肌絲)", "액틴(actin, 가는 필라멘트)"),
-    myosin: L("myosin (thick filament)", "ミオシン (myosin、太いフィラメント)", "肌球蛋白 (myosin，粗肌絲)", "마이오신(myosin, 굵은 필라멘트)"),
-    titin: L("titin (elastic protein)", "タイチン (titin、弾性タンパク質)", "肌聯蛋白 (titin，彈性蛋白質)", "타이틴(titin, 탄성 단백질)"),
-    region: L("Region", "領域", "區域", "영역"),
-    len: L("Length (µm)", "長さ (µm)", "長度 (µm)", "길이 (µm)"),
-    vsRest: L("Compared with resting", "静止長との比較", "與靜止長度比較", "휴지 상태와 비교"),
-    same: L("same", "変化なし", "不變", "같음"),
-    shorter: L("shorter", "短い", "較短", "짧음"),
-    longer: L("longer", "長い", "較長", "긺"),
-    modelNote: L("Illustrative model: actin 1.0 µm and myosin 1.6 µm never change length. The filaments slide.", "説明用のモデル: アクチン1.0 µmとミオシン1.6 µmの長さは変わりません。フィラメントがすべります。", "示意模型：肌動蛋白1.0 µm和肌球蛋白1.6 µm的長度都不會改變，只是肌絲滑動。", "예시 모형: 액틴 1.0 µm와 마이오신 1.6 µm는 길이가 변하지 않는다. 필라멘트가 미끄러져 움직인다."),
-    msgContract: L("Contracted: myosin heads have pulled the actin filaments towards the centre. The Z lines are closer. The H zone has disappeared and the I band is short. The A band is still 1.6 µm. Titin is coiled up.", "収縮: ミオシンの頭部がアクチンを中央へ引いたため、Z線が近づいています。H帯が消え、I帯は短くなっています。A帯は1.6 µmのままです。タイチンは縮んでいます。", "收縮：肌球蛋白頭部把肌動蛋白拉向中央，Z線靠近。H區消失，I帶變短，A帶仍是1.6 µm。肌聯蛋白縮成一團。", "수축: 마이오신 머리가 액틴 필라멘트를 중앙 쪽으로 끌어당겼다. Z선이 가까워졌다. H대가 사라졌고 I대는 짧다. A대는 여전히 1.6 µm이다. 타이틴은 말려 있다."),
-    msgRest: L("Resting length: the actin and myosin filaments partly overlap. There is a clear H zone and I band.", "静止長: アクチンとミオシンのフィラメントが部分的に重なっています。H帯とI帯がはっきり見えます。", "靜止長度：肌動蛋白和肌球蛋白肌絲部分重疊，可清楚看見H區和I帶。", "휴지 길이: 액틴 필라멘트와 마이오신 필라멘트가 부분적으로 겹쳐 있다. H대와 I대가 뚜렷하다."),
-    msgPartial: L("Partly contracted: compare with resting. The I band and H zone are shorter, the A band is unchanged.", "部分的に収縮: 静止長と比べましょう。I帯とH帯は短く、A帯は変わりません。", "部分收縮：與靜止長度比較。I帶和H區較短，A帶不變。", "부분 수축: 휴지 상태와 비교해 보자. I대와 H대는 짧아졌고 A대는 변하지 않았다."),
-    msgStretch: L("Stretched: titin is pulled taut. It stores energy, will recoil when the pull stops, and stops the sarcomere being overstretched so the filaments are not pulled apart.", "伸展: タイチンが張っています。エネルギーを蓄え、引く力がなくなると反跳し、サルコメアの伸びすぎを防いでフィラメントが引き離されないようにします。", "拉伸：肌聯蛋白被拉緊。它儲存能量，拉力停止後會回彈，並防止肌節過度拉伸，使肌絲不致被拉開。", "늘어남: 타이틴이 팽팽하게 당겨져 있다. 타이틴은 에너지를 저장하고, 당기는 힘이 없어지면 되돌아가며, 근육 원섬유 마디가 지나치게 늘어나 필라멘트가 서로 떨어지지 않도록 막는다."),
-    msgNear: L("Nearly overstretched: only a little overlap remains. Titin is very taut and resists any further stretching.", "ほぼ伸びきった状態: 重なりがわずかです。タイチンはぴんと張り、これ以上の伸展に抵抗します。", "接近過度拉伸：只剩少許重疊。肌聯蛋白非常繃緊，抵抗進一步拉伸。", "거의 과신장: 겹치는 부분이 조금만 남아 있다. 타이틴은 매우 팽팽하며 더 늘어나는 것을 막는다.")
+    slider: L("Muscle state", "筋肉の状態", "肌肉狀態"),
+    contracted: L("Contracted", "収縮", "收縮"),
+    stretched: L("Stretched", "伸展", "拉伸"),
+    sliderLabel: L("Sarcomere length slider: from contracted to stretched", "サルコメアの長さのスライダー: 収縮から伸展まで", "肌節長度滑桿：由收縮至拉伸"),
+    pContract: L("Contract", "収縮させる", "收縮"),
+    pRest: L("Resting", "静止長", "靜止長度"),
+    pStretch: L("Stretch", "引き伸ばす", "拉伸"),
+    play: L("Animate", "アニメーション", "動畫"),
+    stop: L("Stop", "停止", "停止"),
+    z: L("Z line", "Z線 (Z line)", "Z線 (Z line)"),
+    A: L("A band", "A帯 (A band)", "A帶 (A band)"),
+    I: L("I band", "I帯 (I band)", "I帶 (I band)"),
+    H: L("H zone", "H帯 (H zone)", "H區 (H zone)"),
+    sarc: L("Sarcomere", "サルコメア (sarcomere)", "肌節 (sarcomere)"),
+    actin: L("actin (thin filament)", "アクチン (actin、細いフィラメント)", "肌動蛋白 (actin，細肌絲)"),
+    myosin: L("myosin (thick filament)", "ミオシン (myosin、太いフィラメント)", "肌球蛋白 (myosin，粗肌絲)"),
+    titin: L("titin (elastic protein)", "タイチン (titin、弾性タンパク質)", "肌聯蛋白 (titin，彈性蛋白質)"),
+    region: L("Region", "領域", "區域"),
+    len: L("Length (µm)", "長さ (µm)", "長度 (µm)"),
+    vsRest: L("Compared with resting", "静止長との比較", "與靜止長度比較"),
+    same: L("same", "変化なし", "不變"),
+    shorter: L("shorter", "短い", "較短"),
+    longer: L("longer", "長い", "較長"),
+    modelNote: L("Illustrative model: actin 1.0 µm and myosin 1.6 µm never change length. The filaments slide.", "説明用のモデル: アクチン1.0 µmとミオシン1.6 µmの長さは変わりません。フィラメントがすべります。", "示意模型：肌動蛋白1.0 µm和肌球蛋白1.6 µm的長度都不會改變，只是肌絲滑動。"),
+    msgContract: L("Contracted: myosin heads have pulled the actin filaments towards the centre. The Z lines are closer. The H zone has disappeared and the I band is short. The A band is still 1.6 µm. Titin is coiled up.", "収縮: ミオシンの頭部がアクチンを中央へ引いたため、Z線が近づいています。H帯が消え、I帯は短くなっています。A帯は1.6 µmのままです。タイチンは縮んでいます。", "收縮：肌球蛋白頭部把肌動蛋白拉向中央，Z線靠近。H區消失，I帶變短，A帶仍是1.6 µm。肌聯蛋白縮成一團。"),
+    msgRest: L("Resting length: the actin and myosin filaments partly overlap. There is a clear H zone and I band.", "静止長: アクチンとミオシンのフィラメントが部分的に重なっています。H帯とI帯がはっきり見えます。", "靜止長度：肌動蛋白和肌球蛋白肌絲部分重疊，可清楚看見H區和I帶。"),
+    msgPartial: L("Partly contracted: compare with resting. The I band and H zone are shorter, the A band is unchanged.", "部分的に収縮: 静止長と比べましょう。I帯とH帯は短く、A帯は変わりません。", "部分收縮：與靜止長度比較。I帶和H區較短，A帶不變。"),
+    msgStretch: L("Stretched: titin is pulled taut. It stores energy, will recoil when the pull stops, and stops the sarcomere being overstretched so the filaments are not pulled apart.", "伸展: タイチンが張っています。エネルギーを蓄え、引く力がなくなると反跳し、サルコメアの伸びすぎを防いでフィラメントが引き離されないようにします。", "拉伸：肌聯蛋白被拉緊。它儲存能量，拉力停止後會回彈，並防止肌節過度拉伸，使肌絲不致被拉開。"),
+    msgNear: L("Nearly overstretched: only a little overlap remains. Titin is very taut and resists any further stretching.", "ほぼ伸びきった状態: 重なりがわずかです。タイチンはぴんと張り、これ以上の伸展に抵抗します。", "接近過度拉伸：只剩少許重疊。肌聯蛋白非常繃緊，抵抗進一步拉伸。")
   };
 
   var A = 100, M = 160, REST = 250, MIN = 200, MAX = 340, S = 1.5, CX = 300;
@@ -211,7 +211,7 @@
   }
 
   IB.registerWidget("sarcomere", {
-    title: L("Sliding filament model: how a sarcomere contracts", "滑り説: サルコメアはどのように収縮するか", "滑動肌絲模型：肌節如何收縮", "근필라멘트 활주설(sliding filament model): 근육 원섬유 마디는 어떻게 수축할까"),
+    title: L("Sliding filament model: how a sarcomere contracts", "滑り説: サルコメアはどのように収縮するか", "滑動肌絲模型：肌節如何收縮"),
     mount: mount
   });
 })();

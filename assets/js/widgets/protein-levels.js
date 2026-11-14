@@ -81,10 +81,10 @@
     ".W .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0}@media (max-width:639px){.W .opts{grid-template-columns:repeat(4,1fr);gap:4px}.W .opts button{padding:4px 2px;font-size:13px}}";
   var COL = { N: "--k-np", P: "--k-pol", A: "--k-ac", B: "--k-ba" };
   var CN = {
-    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)・疏水", "비극성(소수성)"],
-    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)・親水", "극성(친수성)"],
-    A: ["acidic (−)", "酸性 (acidic, −)", "酸性 (acidic, −)", "산성 (−)"],
-    B: ["basic (+)", "塩基性 (basic, +)", "鹼性 (basic, +)", "염기성 (+)"]
+    N: ["non-polar (hydrophobic)", "非極性 (non-polar)・疎水性", "非極性 (non-polar)・疏水", "비극성(non-polar)·소수성"],
+    P: ["polar (hydrophilic)", "極性 (polar)・親水性", "極性 (polar)・親水", "극성(polar)·친수성"],
+    A: ["acidic (−)", "酸性 (acidic, −)", "酸性 (acidic, −)", "산성(acidic, −)"],
+    B: ["basic (+)", "塩基性 (basic, +)", "鹼性 (basic, +)", "염기성(basic, +)"]
   };
   var CS = {
     N: ["non-polar", "非極性", "非極性", "비극성"], P: ["polar", "極性", "極性", "극성"], A: ["acidic (−)", "酸性 (−)", "酸性 (−)", "산성 (−)"], B: ["basic (+)", "塩基性 (+)", "鹼性 (+)", "염기성 (+)"]
@@ -257,7 +257,7 @@
             NAR ? null : P(["The order of amino acids in a polypeptide, joined by peptide bonds. Tap a bead, then change its R-group type to see what happens to the folded shape.",
               "ポリペプチド中のアミノ酸の並び順で、ペプチド結合でつながっています。丸をタップして R基の種類を変え、折りたたまれた形がどうなるか見てみましょう。",
               "多肽中氨基酸的排列次序，由肽鍵連接。點選一顆珠，改變它的 R 基類型，看看摺疊後的形狀有何變化。", "펩타이드 결합(peptide bond)으로 연결된 폴리펩타이드 속 아미노산의 배열 순서이다. 구슬을 누르고 R기 유형을 바꾸어, 접힌 모양이 어떻게 달라지는지 확인해 보시오."]),
-            el("strong", { text: T(["Bead #" + (sel + 1) + " is " + T(CN[seq[sel]]) + ". Change it to:", "#" + (sel + 1) + " 番は " + T(CN[seq[sel]]) + " です。次に変更:", "第 " + (sel + 1) + " 顆為 " + T(CN[seq[sel]]) + "。改為："]) }),
+            el("strong", { text: T(["Bead #" + (sel + 1) + " is " + T(CN[seq[sel]]) + ". Change it to:", "#" + (sel + 1) + " 番は " + T(CN[seq[sel]]) + " です。次に変更:", "第 " + (sel + 1) + " 顆為 " + T(CN[seq[sel]]) + "。改為：", (sel + 1) + "번 구슬은 " + T(CN[seq[sel]]) + "이다. 다음으로 바꾸시오:"]) }),
             el("div", { class: "opts" }, ["N", "P", "A", "B"].map(function (k) {
               var bt = el("button", { type: "button", "aria-pressed": seq[sel] === k ? "true" : "false", text: T(CS[k]) });
               bt.addEventListener("click", function () { seq[sel] = k; render(); });
