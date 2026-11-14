@@ -76,20 +76,28 @@
     ".w-mol3d .m3-ov{position:absolute;inset:0;z-index:2;display:flex;align-items:flex-end;justify-content:center;padding:.6rem;border:0;background:transparent;color:var(--ink,#0f2029);font:inherit;cursor:pointer;touch-action:pan-y}",
     ".w-mol3d .m3-ov span{background:var(--surface,#fff);border:1.5px solid var(--line-strong,#9bb);border-radius:var(--radius,3px);padding:.45rem .8rem;font-size:.88rem;font-weight:700}",
     ".w-mol3d .m3-tools{position:absolute;top:.5rem;right:.5rem;z-index:2;display:flex;gap:.3rem}",
-    ".w-mol3d .m3-tools .m3-btn{min-width:2.5rem;padding:.2rem .5rem;background:var(--surface,#fff);color:var(--ink,#0f2029)}",
+    ".w-mol3d .m3-tools-l{position:absolute;top:.5rem;left:.5rem;z-index:2;display:flex;gap:.3rem}",
+    ".w-mol3d .m3-btn.m3-done{position:absolute;bottom:.5rem;left:50%;transform:translateX(-50%);z-index:2;white-space:nowrap}",
+    ".w-mol3d .m3-tools .m3-btn,.w-mol3d .m3-tools-l .m3-btn{font-size:.8rem;min-width:2.5rem;padding:.2rem .5rem;background:var(--surface,#fff);color:var(--ink,#0f2029)}",
     ".w-mol3d .m3-hint{margin:.35rem 0 0;font-size:.78rem;color:var(--muted,#4d626d)}",
     ".w-mol3d .wl-legend{display:flex;flex-wrap:wrap;gap:.25rem .9rem;margin:.55rem 0 0;font-size:.84rem;line-height:1.3}",
     ".w-mol3d .wl-legend span{display:inline-flex;align-items:center;gap:.35rem}",
     ".w-mol3d .wl-legend i{display:inline-block;width:.9rem;height:.9rem;border-radius:2px;border:1px solid var(--ink-2,#33454f);flex:0 0 auto}",
-    ".w-mol3d .wl-panel{display:flex;flex-direction:column;gap:.6rem;min-width:0}",
-    ".w-mol3d .m3-grp{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem}",
-    ".w-mol3d .m3-lbl{flex:0 0 100%;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,#4d626d)}",
-    ".w-mol3d .m3-slice{display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;font-size:.86rem;font-weight:700}",
-    ".w-mol3d .m3-slice input{flex:1 1 auto;min-width:0;accent-color:var(--accent,#0A6C7D);height:2.5rem}",
-    ".w-mol3d .m3-cap{margin:0;font-size:.92rem;line-height:1.5}",
-    ".w-mol3d .m3-look{margin:0;padding:.55rem .75rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,3px);font-size:.9rem;line-height:1.5}",
-    ".w-mol3d .m3-look b{display:block;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,#4d626d);margin-bottom:.15rem}",
-    ".w-mol3d .wl-exam{margin:0;padding:.55rem .75rem;border-left:4px solid var(--accent,#0A6C7D);background:var(--accent-soft,#e1f2f4);font-size:.9rem;line-height:1.5}",
+    ".w-mol3d .wl-panel{display:flex;flex-direction:column;gap:.45rem;min-width:0}",
+    ".w-mol3d .m3-bar{display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:start;gap:.2rem .5rem}",
+    ".w-mol3d .m3-grp{display:contents}",
+    ".w-mol3d .m3-lbl{align-self:start;line-height:2.5rem;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,#4d626d)}",
+    ".w-mol3d .m3-seg{display:flex;flex-wrap:wrap;gap:.2rem;min-width:0}",
+    ".w-mol3d .m3-seg .m3-btn{flex:0 1 auto;font-size:.8rem;line-height:1.2;padding:.2rem .45rem}",
+    ".w-mol3d .m3-slice{display:flex;flex-direction:row;align-items:center;gap:.6rem;width:100%;font-size:.84rem;font-weight:700}",
+    ".w-mol3d .m3-slice span{flex:0 1 auto}",
+    ".w-mol3d .m3-slice input{flex:1 1 7rem;min-width:0;accent-color:var(--accent,#0A6C7D);height:2.5rem}",
+    ".w-mol3d .m3-cap{margin:0;font-size:.9rem;line-height:1.45}",
+    ".w-mol3d details.m3-look{margin:0;padding:0 .75rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,3px);font-size:.88rem;line-height:1.5}",
+    ".w-mol3d details.m3-look>:not(summary){margin:0 0 .55rem}",
+    ".w-mol3d .m3-hint-in{color:var(--muted,#4d626d)}",
+    "@container wf (max-width:639px){.w-mol3d .m3-view{height:min(33vh,250px)}.w-mol3d .wl-legend{margin-top:.35rem}.w-mol3d .wl-exam{padding:.4rem .65rem;font-size:.86rem;line-height:1.4}}",
+    ".w-mol3d .wl-exam{margin:0;padding:.45rem .75rem;border-left:4px solid var(--accent,#0A6C7D);background:var(--accent-soft,#e1f2f4);font-size:.9rem;line-height:1.5}",
     ".w-mol3d .m3-ref{display:inline-block;margin-right:.4rem}",
     ".w-mol3d details{font-size:.84rem;line-height:1.5}",
     ".w-mol3d summary{cursor:pointer;font-weight:700;min-height:2rem;display:flex;align-items:center}",
@@ -360,32 +368,36 @@
         var grpMode = h("div", { "class": "m3-grp" });
         var grpShow = h("div", { "class": "m3-grp" });
         var grpHl = h("div", { "class": "m3-grp" });
-        var grpView = h("div", { "class": "m3-grp" });
+        var toolsL = h("div", { "class": "m3-tools-l", role: "group", "aria-label": t(T.view) });
         var sliceBox = h("label", { "class": "m3-slice" });
-        var lookP = h("p", { "class": "m3-look" });
+        var bar = h("div", { "class": "m3-bar" });
+        var lookD = h("details", { "class": "m3-look" });
+        var lookP = h("p");
         var examP = h("p", { "class": "wl-exam" });
         var det = h("details");
         var detBody = h("div");
 
         var btnIn = h("button", { type: "button", "class": "m3-btn", "aria-label": t(T.zoomIn), text: "+" });
         var btnOut = h("button", { type: "button", "class": "m3-btn", "aria-label": t(T.zoomOut), text: "−" });
-        var btnDone = h("button", { type: "button", "class": "m3-btn", text: t(T.tapStop) });
+        var btnDone = h("button", { type: "button", "class": "m3-btn m3-done", text: t(T.tapStop) });
         btnDone.hidden = true;
-        tools.appendChild(btnDone); tools.appendChild(btnOut); tools.appendChild(btnIn);
+        tools.appendChild(btnOut); tools.appendChild(btnIn);
         var wrap = h("div", { "class": "m3-wrap" });
         view.appendChild(msg);
         wrap.appendChild(view);
         wrap.appendChild(overlay);
-        wrap.appendChild(tools);
+        wrap.appendChild(tools); wrap.appendChild(toolsL); wrap.appendChild(btnDone);
         stage.appendChild(wrap);
         stage.appendChild(legend);
         stage.appendChild(hint);
         det.appendChild(h("summary", { text: t(T.more) }));
         det.appendChild(detBody);
         panel.appendChild(capP);
-        [grpStyle, grpMode, grpShow, grpHl, grpView].forEach(function (g) { panel.appendChild(g); });
+        [grpStyle, grpMode, grpShow, grpHl].forEach(function (g) { bar.appendChild(g); });
+        panel.appendChild(bar);
         panel.appendChild(sliceBox);
-        panel.appendChild(lookP); panel.appendChild(examP); panel.appendChild(det);
+        lookD.appendChild(h("summary")); lookD.firstChild.addEventListener("click", function () { userLook = true; }); lookD.appendChild(lookP);
+        panel.appendChild(lookD); panel.appendChild(examP); panel.appendChild(det);
         wl.appendChild(stage); wl.appendChild(panel);
         if (list.length > 1) wl.insertBefore(tabs, stage);
         el.appendChild(wl);
@@ -592,39 +604,53 @@
           b.addEventListener("click", onclick);
           return b;
         }
+        function narrow() { return window.innerWidth < 640; }
+        /* the explanation opens by itself only on wide screens and only if the whole widget still fits the viewport minus the 64px header */
+        function fitLook() {
+          userLook = false;
+          lookD.open = false;
+          if (window.innerWidth < 1100) return;
+          lookD.open = true;
+          var chk = function () { if (!userLook && !destroyed && el.getBoundingClientRect().height > window.innerHeight - 64) lookD.open = false; };
+          chk();
+          if (window.requestAnimationFrame) requestAnimationFrame(function () { requestAnimationFrame(chk); });
+          setTimeout(chk, 400);
+        }
+        var userLook = false;
         function buildControls() {
           var pr = cur();
           capP.textContent = t(pr.cap);
-          lookP.innerHTML = ""; lookP.appendChild(h("b", { text: t(T.look) })); lookP.appendChild(document.createTextNode(t(pr.look)));
+          lookD.firstChild.textContent = t(T.look); lookP.textContent = t(pr.look);
           examP.innerHTML = "";
           examP.appendChild(h("strong", { "class": "m3-ref", text: pr.ref + (pr.ahl ? " AHL" : "") }));
           examP.appendChild(document.createTextNode(t(T.exam) + ": " + t(pr.exam)));
 
-          grpStyle.innerHTML = ""; grpStyle.appendChild(h("span", { "class": "m3-lbl", text: t(T.style) }));
-          pr.styles.forEach(function (s) { grpStyle.appendChild(btn(t(T.styles[s]), S.style === s, function () { S.style = s; refreshButtons(); draw(); })); });
-          grpMode.innerHTML = ""; grpMode.appendChild(h("span", { "class": "m3-lbl", text: t(T.colour) }));
-          pr.modes.forEach(function (m) { grpMode.appendChild(btn(t(MODE[m]), S.mode === m, function () { S.mode = m; refreshButtons(); draw(); })); });
+          function seg(g, label) { g.innerHTML = ""; g.appendChild(h("span", { "class": "m3-lbl", text: label })); var sg = h("div", { "class": "m3-seg", role: "group", "aria-label": label }); g.appendChild(sg); return sg; }
+          var segS = seg(grpStyle, t(T.style));
+          pr.styles.forEach(function (s) { segS.appendChild(btn(t(T.styles[s]), S.style === s, function () { S.style = s; refreshButtons(); draw(); })); });
+          var segM = seg(grpMode, t(T.colour));
+          pr.modes.forEach(function (m) { segM.appendChild(btn(t(MODE[m]), S.mode === m, function () { S.mode = m; refreshButtons(); draw(); })); });
           grpShow.innerHTML = "";
           if (pr.toggles.length) {
-            grpShow.appendChild(h("span", { "class": "m3-lbl", text: t(T.show) }));
-            pr.toggles.forEach(function (k) { grpShow.appendChild(btn(t(SHOW[k]), !!S.on[k], function () { S.on[k] = !S.on[k]; refreshButtons(); draw(); })); });
+            var segW = seg(grpShow, t(T.show));
+            pr.toggles.forEach(function (k) { segW.appendChild(btn(t(SHOW[k]), !!S.on[k], function () { S.on[k] = !S.on[k]; refreshButtons(); draw(); })); });
           }
           grpShow.hidden = !pr.toggles.length;
           grpHl.innerHTML = "";
           if (pr.hls) {
-            grpHl.appendChild(h("span", { "class": "m3-lbl", text: t(HL.label) }));
-            pr.hls.forEach(function (k) { grpHl.appendChild(btn(t(HL[k]), S.hl === k, function () { S.hl = k; refreshButtons(); draw(); })); });
+            var segH = seg(grpHl, t(HL.label));
+            pr.hls.forEach(function (k) { segH.appendChild(btn(t(HL[k]), S.hl === k, function () { S.hl = k; refreshButtons(); draw(); })); });
           }
           grpHl.hidden = !pr.hls;
-          grpView.innerHTML = ""; grpView.appendChild(h("span", { "class": "m3-lbl", text: t(T.view) }));
+          toolsL.innerHTML = "";
           var spinB = btn(t(S.spin ? T.spinOn : T.spinOff), S.spin, function () {
             S.spin = !S.spin; spinB.textContent = t(S.spin ? T.spinOn : T.spinOff); spinB.setAttribute("aria-pressed", S.spin ? "true" : "false"); applySpin();
           });
           spinB.setAttribute("data-k", "spin");
-          grpView.appendChild(spinB);
+          toolsL.appendChild(spinB);
           var rB = h("button", { type: "button", "class": "m3-btn", text: t(T.reset) });
           rB.addEventListener("click", function () { if (viewer) { viewer.zoomTo(); viewer.zoom(zoomFor(cur())); applySlab(); } });
-          grpView.appendChild(rB);
+          toolsL.appendChild(rB);
 
           sliceBox.innerHTML = "";
           sliceBox.hidden = !pr.slice;
@@ -637,8 +663,21 @@
           }
 
           detBody.innerHTML = "";
+          if (narrow()) { hint.parentNode && hint.parentNode.removeChild(hint); hint.className = "m3-hint m3-hint-in"; detBody.appendChild(hint); }
+          else if (hint.parentNode !== stage) { hint.className = "m3-hint"; stage.appendChild(hint); }
           if (pr.id === "hydrophobic") detBody.appendChild(h("p", { text: t(T.hydroTable) }));
           detBody.appendChild(h("p", { "class": "m3-credit", text: t(T.credit) + " " + pr.pdb.toUpperCase() + " “" + pr.pdbTitle + "”. " + t(T.viewer) }));
+          /* phones: one "What am I looking at?" disclosure holds the explanation, the exam line, the hint and the credit */
+          while (lookD.children.length > 2) lookD.removeChild(lookD.lastChild);
+          if (narrow()) {
+            lookD.appendChild(examP);
+            while (detBody.firstChild) lookD.appendChild(detBody.firstChild);
+            det.hidden = true;
+          } else {
+            det.hidden = false;
+            panel.insertBefore(examP, det);
+          }
+          fitLook();
         }
         function refreshButtons() {
           var pr = cur();
