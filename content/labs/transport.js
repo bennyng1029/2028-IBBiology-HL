@@ -74,9 +74,9 @@ IB.registerLab({
       widget: "osmosis-anim",
       options: {},
       task: {
-        en: "The model starts with 4 solute particles on the left and 16 on the right. Predict which way water moves and which side swells, then watch. Try Equal and Left higher. Finally switch Aquaporins off: what changes? Explain each result using random movement, solutes that cannot cross, and the difference in solute concentration.",
-        ja: "モデルは、左に溶質4個、右に溶質16個の状態で始まります。水がどちらへ動き、どちら側がふくらむかを予想してから見ましょう。「同じ」と「左が高い」も試します。最後にアクアポリンをオフにすると何が変わるでしょう。各結果を、ランダムな動き、通れない溶質、溶質濃度の差から説明しましょう。",
-        zh: "模型一開始時，左側有 4 個溶質粒子，右側有 16 個。先預測水往哪邊移動、哪一側會膨脹，再觀察。再試「相同」和「左側較高」。最後關閉水通道蛋白，看看有何改變。以隨機運動、不能穿過的溶質和溶質濃度差，解釋每個結果。"
+        en: "The model starts with 4 solute particles on the left and 16 on the right. Predict which way water moves and which side swells, then watch. Then move the sliders to make the two sides equal, and then make the left side higher. Finally switch Aquaporins off: what changes? Explain each result using random movement, solutes that cannot cross, and the difference in solute concentration.",
+        ja: "モデルは、左に溶質4個、右に溶質16個の状態で始まります。水がどちらへ動き、どちら側がふくらむかを予想してから見ましょう。次にスライダーで両側を同じにし、さらに左側を高くしてみます。最後にアクアポリンをオフにすると何が変わるでしょう。各結果を、ランダムな動き、通れない溶質、溶質濃度の差から説明しましょう。",
+        zh: "模型一開始時，左側有 4 個溶質粒子，右側有 16 個。先預測水往哪邊移動、哪一側會膨脹，再觀察。然後用滑桿令兩側相同，再令左側較高。最後關閉水通道蛋白，看看有何改變。以隨機運動、不能穿過的溶質和溶質濃度差，解釋每個結果。"
       }
     },
     {
@@ -108,9 +108,9 @@ IB.registerLab({
       widget: "membrane-transport",
       options: { tab: 5 },
       task: {
-        en: "Let the pump run and watch the particle counts. Which ion builds up outside and which inside? Why does the pump move more positive charge out than in? Switch the ATP supply off and predict what happens.",
-        ja: "ポンプを動かして粒子の数を見ましょう。外側に増えるイオンはどれで、内側に増えるのはどれでしょう。ポンプが入れるよりも多くの正電荷を外へ出すのはなぜでしょう。ATP供給をオフにして、何が起こるか予想しましょう。",
-        zh: "讓泵運作並觀察粒子數目。哪種離子在細胞外積聚，哪種在細胞內積聚？為何泵運出的正電荷比運入的多？關閉ATP供應，預測會發生甚麼事。"
+        en: "Let the pump run and watch the particle counts. Which ion builds up outside and which inside? How much positive charge does each cycle move out compared with in, and how does this help to generate a membrane potential? Switch the ATP supply off and predict what happens.",
+        ja: "ポンプを動かして粒子の数を見ましょう。外側に増えるイオンはどれで、内側に増えるのはどれでしょう。1回のサイクルで外へ出す正電荷と中へ入れる正電荷を比べ、それが膜電位の形成にどう役立つかを説明しましょう。ATP供給をオフにして、何が起こるか予想しましょう。",
+        zh: "讓泵運作並觀察粒子數目。哪種離子在細胞外積聚，哪種在細胞內積聚？每個循環運出和運入的正電荷各有多少？這如何有助產生膜電位？關閉ATP供應，預測會發生甚麼事。"
       }
     },
     {

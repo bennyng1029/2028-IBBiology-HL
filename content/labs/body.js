@@ -50,9 +50,9 @@ IB.registerLab({
       ahl: true,
       refs: ["B3.1.11", "B3.1.12", "B3.1.13"],
       intro: {
-        en: "<p>An oxygen dissociation curve shows how saturated haemoglobin is with oxygen at different oxygen partial pressures. It is S-shaped because of cooperative binding: once one O<sub>2</sub> binds to a haem group, the next binds more easily. Foetal haemoglobin has a higher affinity for oxygen than adult haemoglobin. More CO<sub>2</sub> causes the Bohr shift: haemoglobin releases more oxygen.</p>",
-        ja: "<p>酸素解離曲線 (oxygen dissociation curve) は、酸素分圧ごとに、ヘモグロビンがどれだけ酸素で飽和しているかを示します。協同的結合 (cooperative binding) があるのでS字形になります。1つのヘム基にO<sub>2</sub>が結合すると、次のO<sub>2</sub>が結合しやすくなります。胎児ヘモグロビンは成人のヘモグロビンより酸素への親和性が高いです。CO<sub>2</sub>が増えるとボーア効果 (Bohr shift) が起こり、ヘモグロビンはより多くの酸素を放出します。</p>",
-        zh: "<p>氧解離曲線 (oxygen dissociation curve) 顯示在不同氧分壓下，血紅蛋白的氧飽和程度。曲線呈 S 形，是因為協同結合 (cooperative binding)：一個 O<sub>2</sub> 與一個血紅素基結合後，下一個更容易結合。胎兒血紅蛋白對氧的親和力比成人的高。CO<sub>2</sub> 增加會引起玻爾效應 (Bohr shift)：血紅蛋白釋出更多氧。</p>"
+        en: "<p>An oxygen dissociation curve shows how saturated haemoglobin is with oxygen at different oxygen partial pressures. It is S-shaped because of cooperative binding: once one O<sub>2</sub> binds to a haem group, the next binds more easily. Foetal haemoglobin has a higher affinity for oxygen than adult haemoglobin. CO<sub>2</sub> binds to haemoglobin at allosteric sites and lowers its affinity for oxygen. So more CO<sub>2</sub> causes the Bohr shift: haemoglobin releases more oxygen.</p>",
+        ja: "<p>酸素解離曲線 (oxygen dissociation curve) は、酸素分圧ごとに、ヘモグロビンがどれだけ酸素で飽和しているかを示します。協同的結合 (cooperative binding) があるのでS字形になります。1つのヘム基にO<sub>2</sub>が結合すると、次のO<sub>2</sub>が結合しやすくなります。胎児ヘモグロビンは成人のヘモグロビンより酸素への親和性が高いです。CO<sub>2</sub>はヘモグロビンのアロステリック部位 (allosteric site) に結合し、酸素への親和性を下げます。そのためCO<sub>2</sub>が増えるとボーア効果 (Bohr shift) が起こり、ヘモグロビンはより多くの酸素を放出します。</p>",
+        zh: "<p>氧解離曲線 (oxygen dissociation curve) 顯示在不同氧分壓下，血紅蛋白的氧飽和程度。曲線呈 S 形，是因為協同結合 (cooperative binding)：一個 O<sub>2</sub> 與一個血紅素基結合後，下一個更容易結合。胎兒血紅蛋白對氧的親和力比成人的高。CO<sub>2</sub> 會與血紅蛋白的別構位點 (allosteric site) 結合，降低它對氧的親和力。所以 CO<sub>2</sub> 增加會引起玻爾效應 (Bohr shift)：血紅蛋白釋出更多氧。</p>"
       },
       widget: "o2-curve",
       options: {},

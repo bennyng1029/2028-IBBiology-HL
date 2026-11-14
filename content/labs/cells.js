@@ -74,9 +74,9 @@ IB.registerLab({
       widget: "cell-compare",
       options: { tab: 1 },
       task: {
-        en: "In the table, find three features that plant cells have and animal cells lack. Then state what the cell walls of plant cells and of fungal cells are made of. Switch to the Cell diagram tab and tap each structure of the plant cell.",
-        ja: "表で、植物細胞にあって動物細胞にない特徴を3つ見つけましょう。次に、植物細胞と菌類の細胞壁の成分をそれぞれ答えましょう。最後に「細胞の図」タブに切り替え、植物細胞の各構造をタップしましょう。",
-        zh: "在表中找出植物細胞有而動物細胞沒有的三項特徵。然後說出植物細胞和真菌細胞的細胞壁各由甚麼構成。最後切換到「細胞圖」分頁，點選植物細胞的各個結構。"
+        en: "In the table, find three features that plant cells have and animal cells lack. Then state what the cell walls of plant cells and of fungal cells are made of. Switch to the Cell diagram tab, choose Plant cell and tap each structure.",
+        ja: "表で、植物細胞にあって動物細胞にない特徴を3つ見つけましょう。次に、植物細胞と菌類の細胞壁の成分をそれぞれ答えましょう。最後に「細胞の図」タブに切り替えて植物細胞を選び、各構造をタップしましょう。",
+        zh: "在表中找出植物細胞有而動物細胞沒有的三項特徵。然後說出植物細胞和真菌細胞的細胞壁各由甚麼構成。最後切換到「細胞圖」分頁，選擇植物細胞，再點選各個結構。"
       }
     },
     {
@@ -108,9 +108,9 @@ IB.registerLab({
       widget: "sav-ratio",
       options: { tab: 0 },
       task: {
-        en: "Start with the 1 &micro;m cube and write down its SA:V. Predict the SA:V after doubling the side once and then twice, then press Double the side to check your predictions.",
-        ja: "1 &micro;mの立方体から始め、そのSA:Vを書きとめましょう。一辺を1回、次にもう1回2倍にしたときのSA:Vを予想し、「辺を2倍にする」を押して確かめましょう。",
-        zh: "從 1 &micro;m 立方體開始，寫下它的 SA:V。先預測邊長加倍一次和兩次後的 SA:V，再按「邊長加倍」驗證。"
+        en: "Press Back to 1 &micro;m and write down the SA:V of the 1 &micro;m cube. Predict the SA:V after doubling the side once and then twice, then press Double the side to check your predictions.",
+        ja: "「1 µmに戻す」を押し、1 &micro;mの立方体のSA:Vを書きとめましょう。一辺を1回、次にもう1回2倍にしたときのSA:Vを予想し、「辺を2倍にする」を押して確かめましょう。",
+        zh: "按「回到 1 µm」，寫下 1 &micro;m 立方體的 SA:V。先預測邊長加倍一次和兩次後的 SA:V，再按「邊長加倍」驗證。"
       }
     },
     {
