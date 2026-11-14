@@ -21,11 +21,12 @@
   function sv(tag, a, kids) { return fill(document.createElementNS(NS, tag), a, kids); }
   var BASE = ".W{--k-ink:var(--ink,#1d2733);--k-sf:var(--surface,#fff);--k-bg:var(--bg,#f4f6f9);--k-mut:var(--muted,#5b6775);--k-line:var(--line,#c9d1da);--k-acc:var(--accent,#2f6fdb);--k-ahl:var(--ahl,#8e44ad);--k-good:var(--good,#1e8e4e);--k-bad:var(--bad,#d03b3b);--k-np:var(--r-nonpolar,#e8a317);--k-pol:var(--r-polar,#16a39a);--k-ac:var(--r-acidic,#d9483b);--k-ba:var(--r-basic,#3a6fd8);--k-hb:var(--hbond,#2a7de1);--k-io:var(--ionic,#d9483b);--k-ds:var(--disulfide,#b8860b);--k-hp:var(--hydrophobic,#e8a317);--k-C:var(--c-carbon,#6b7785);--k-O:var(--c-oxygen,#d9483b);--k-N:var(--c-nitrogen,#3a6fd8);--k-H:var(--c-hydrogen,#9aa5b1);--k-S:var(--c-sulfur,#c9a100);font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;color:var(--k-ink);max-width:100%;text-align:left}" +
     ".W *{box-sizing:border-box}" +
+    ".W .wl-exam{margin:0}.W .wl-legend{margin:4px 0 0}" +
     ".W .bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}" +
-    ".W button{font:inherit;font-size:14px;min-height:44px;min-width:44px;padding:6px 12px;border:1.5px solid var(--k-line);background:var(--k-sf);color:var(--k-ink);border-radius:10px;cursor:pointer;line-height:1.25}" +
-    ".W button:hover:not(:disabled){border-color:var(--k-acc)}" +
-    ".W button[aria-pressed=true],.W button.on{background:var(--k-acc);color:var(--k-sf);border-color:var(--k-acc)}" +
-    ".W button:disabled{opacity:.45;cursor:default}" +
+    ".W button:not([role=tab]){font:inherit;font-size:14px;min-height:44px;min-width:44px;padding:6px 12px;border:1.5px solid var(--k-line);background:var(--k-sf);color:var(--k-ink);border-radius:10px;cursor:pointer;line-height:1.25}" +
+    ".W button:not([role=tab]):hover:not(:disabled){border-color:var(--k-acc)}" +
+    ".W button[aria-pressed=true]:not([role=tab]),.W button.on{background:var(--k-acc);color:var(--k-sf);border-color:var(--k-acc)}" +
+    ".W button:not([role=tab]):disabled{opacity:.45;cursor:default}" +
     ".W button:focus-visible,.W [tabindex]:focus-visible,.W input:focus-visible{outline:3px solid var(--k-acc);outline-offset:2px}" +
     ".W svg{width:100%;height:auto;display:block;touch-action:manipulation}" +
     ".W svg text{fill:var(--k-ink);font:13px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif}" +
@@ -50,9 +51,25 @@
   var EXAM = ["What to remember for the exam", "試験で覚えること (exam points)", "考試重點 (exam points)"];
   var REDUCED = function () { try { return window.matchMedia("(prefers-reduced-motion:reduce)").matches; } catch (e) { return false; } };
   function mkT(ctx) { return function (a) { return ctx.t({ en: a[0], ja: a[1], zh: a[2] }); }; }
-  function exam(T, a) { return el("div", { class: "exam" }, [el("strong", { text: T(EXAM) + ": " }), document.createTextNode(T(a))]); }
+  function exam(T, a) {
+    if (window.innerWidth < 640) return el("details", { class: "exam wl-exam" }, [el("summary", { text: T(EXAM), style: "font-weight:700;cursor:pointer;min-height:36px;display:flex;align-items:center" }), el("div", { text: T(a) })]);
+    return el("div", { class: "exam wl-exam" }, [el("strong", { text: T(EXAM) + ": " }), document.createTextNode(T(a))]);
+  }
   function ahl() { return el("span", { class: "ahl", text: "AHL" }); }
   function legendItem(cls, color, label) { return el("span", {}, [el("span", { class: cls, style: (cls === "i" ? "background:" : "border-color:") + color }), label]); }
+  var MORE = ["More detail", "詳しく見る", "更多詳情"];
+  function more(T, kids) { return el("details", { class: "more" }, [el("summary", { text: T(MORE) })].concat(kids)); }
+  function optTab(ctx, n) { var t = parseInt(ctx && ctx.options && ctx.options.tab, 10); return t >= 0 && t < n ? t : 0; }
+  function tabsBar(T, items, cur, onSel) {
+    var bar = el("div", { class: "wl-tabs", role: "tablist" });
+    items.forEach(function (t, i) {
+      var b = el("button", { type: "button", role: "tab", "aria-selected": i === cur ? "true" : "false" }, [T(t.n)]);
+      if (t.a) { var a = ahl(); if (i === cur) { a.style.background = "var(--k-sf)"; a.style.color = "var(--k-ahl)"; } b.appendChild(a); }
+      b.addEventListener("click", function () { onSel(i); });
+      bar.appendChild(b);
+    });
+    return bar;
+  }
   var CSS =
     ".W .grp{cursor:pointer}.W .grp .hit{fill:transparent;stroke:transparent;stroke-width:2}" +
     ".W .grp:hover .hit{stroke:var(--k-line)}.W .grp.sel .hit{stroke:var(--k-acc);stroke-width:3}" +
@@ -63,7 +80,10 @@
     ".W .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0}" +
     ".W .fb{min-height:1.4em;font-size:14px}.W .fb.good{color:var(--k-good)}.W .fb.bad{color:var(--k-bad)}" +
     ".W .tree{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px}.W .tree b{padding:2px 8px;border-radius:8px;border:1.5px solid var(--k-line)}" +
-    ".W .score{font-weight:600}";
+    ".W .score{font-weight:600}" +
+    ".W .chips{display:flex;gap:6px}.W .chips button{min-width:44px;padding:4px 0;flex:1}.W .chips button.cur{border-color:var(--k-acc);border-width:3px}.W .chips button.ok{color:var(--k-good);border-color:var(--k-good)}" +
+    ".W .card .f{font-size:22px}" +
+    ".W .tree-mob{display:flex}@media (min-width:900px){.W .tree-mob{display:none}}@media (max-width:899px){.W .tree-desk{display:none}}";
 
   var GROUPS = {
     amine: {
@@ -124,14 +144,21 @@
       css("amino-acid", CSS);
       root.classList.add("W");
       var T = mkT(ctx);
-      build();
-      function build() {
-      root.innerHTML = "";
-      var sel = "alpha";
-      var info, groups = {};
+      var tab = optTab(ctx, 2), sel = "alpha", groups = {}, info;
+      var done = {}, cur = 0;
+      var TABS = [
+        { n: ["1 Structure", "1 構造", "1 結構"] },
+        { n: ["2 Sort the R-groups", "2 R基を分類", "2 為 R 基分類"], a: true }
+      ];
+      var view = el("div");
+      root.appendChild(view);
+      render();
 
-      root.appendChild(el("h4", { text: T(["1. The generalized amino acid", "1. 一般的なアミノ酸 (generalized amino acid)", "1. 通式氨基酸 (generalized amino acid)"]) }));
-      root.appendChild(el("p", { class: "small", text: T(["Tap each part to see what it is.", "各部分をタップして確認しましょう。", "點選各部分，看看它是甚麼。"]) }));
+      function render() {
+        view.innerHTML = "";
+        view.appendChild(tabsBar(T, TABS, tab, function (i) { tab = i; render(); }));
+        (tab === 0 ? structure : sorter)();
+      }
 
       function atom(x, y, r, tok, label, size) {
         return sv("g", { class: "atom" }, [
@@ -158,43 +185,6 @@
         groups[key] = g;
         return g;
       }
-      var svg = sv("svg", { viewBox: "0 0 360 260", role: "img", "aria-label": T(["Generalized amino acid", "一般的なアミノ酸", "通式氨基酸"]) });
-      // bonds first
-      svg.appendChild(bond(100, 120, 180, 120));
-      svg.appendChild(bond(180, 120, 258, 120));
-      svg.appendChild(bond(180, 120, 180, 70));
-      svg.appendChild(bond(180, 120, 180, 168));
-      // alpha carbon
-      svg.appendChild(group("alpha", [156, 98, 48, 44], "--k-C", [atom(180, 120, 15, "--k-C", "C", 14)], T(GROUPS.alpha.n)));
-      // amine
-      svg.appendChild(bond(100, 120, 68, 98)); svg.appendChild(bond(100, 120, 68, 142));
-      svg.appendChild(group("amine", [30, 70, 100, 100], "--k-ba", [
-        atom(100, 120, 15, "--k-N", "N", 14), atom(66, 96, 10, "--k-H", "H", 11), atom(66, 144, 10, "--k-H", "H", 11),
-        sv("text", { x: 80, y: 66, "text-anchor": "middle", text: "H₂N" })], T(GROUPS.amine.n)));
-      // carboxyl
-      svg.appendChild(bond(258, 120, 292, 92, true)); svg.appendChild(bond(258, 120, 292, 148));
-      svg.appendChild(group("carboxyl", [232, 70, 110, 100], "--k-ac", [
-        bond(294, 150, 312, 150),
-        atom(258, 120, 15, "--k-C", "C", 14), atom(294, 90, 12, "--k-O", "O", 13), atom(294, 150, 12, "--k-O", "O", 13), atom(322, 150, 10, "--k-H", "H", 11),
-        sv("text", { x: 290, y: 66, "text-anchor": "middle", text: "COOH" })], T(GROUPS.carboxyl.n)));
-      // H
-      svg.appendChild(group("h", [150, 30, 60, 50], "--k-H", [atom(180, 56, 11, "--k-H", "H", 12)], T(GROUPS.h.n)));
-      // R
-      svg.appendChild(group("r", [140, 166, 80, 84], "--k-acc", [
-        sv("circle", { cx: 180, cy: 196, r: 22, fill: "var(--k-sf)", stroke: "var(--k-acc)", "stroke-width": 3 }),
-        sv("text", { x: 180, y: 203, "text-anchor": "middle", style: "font-size:20px;font-weight:700", text: "R" }),
-        sv("text", { x: 180, y: 244, "text-anchor": "middle", style: "font-size:12px", text: T(["variable side chain", "可変の側鎖", "可變的側鏈"]) })], T(GROUPS.r.n)));
-      svg.appendChild(sv("text", { x: 206, y: 100, style: "font-size:11px;fill:var(--k-mut)", text: "α" }));
-      root.appendChild(svg);
-      root.appendChild(el("p", { class: "small", style: "text-align:center", html: "H<sub>2</sub>N – C(H)(R) – COOH" }));
-      info = el("div", { class: "panel", "aria-live": "polite" });
-      root.appendChild(info);
-      root.appendChild(el("div", { class: "legend" }, [
-        legendItem("i", "var(--k-C)", T(["carbon", "炭素 (C)", "碳 (C)"])),
-        legendItem("i", "var(--k-N)", T(["nitrogen", "窒素 (N)", "氮 (N)"])),
-        legendItem("i", "var(--k-O)", T(["oxygen", "酸素 (O)", "氧 (O)"])),
-        legendItem("i", "var(--k-H)", T(["hydrogen", "水素 (H)", "氫 (H)"]))
-      ]));
       function pick(k) {
         sel = k;
         Object.keys(groups).forEach(function (g) { groups[g].classList.toggle("sel", g === k); });
@@ -202,75 +192,117 @@
         info.appendChild(el("strong", { text: T(GROUPS[k].n) }));
         info.appendChild(el("p", { text: T(GROUPS[k].d) }));
       }
-      pick("alpha");
 
-      // ---- Part 2: R-group classifier
-      root.appendChild(el("h4", { text: T(["2. Sort the R-groups", "2. R基 (R-group) を分類しよう", "2. 為 R 基 (R-group) 分類"]) })).appendChild(ahl());
-      root.appendChild(el("p", { text: T([
-        "R-groups are either hydrophobic (they avoid water) or hydrophilic (they attract water). Hydrophilic R-groups are polar or charged, and charged R-groups are acidic (negative) or basic (positive).",
-        "R基は、疎水性 (hydrophobic：水をはじく) か親水性 (hydrophilic：水とひきあう) のどちらかです。親水性の R基は極性 (polar) か、電荷をもつもの（酸性 acidic は負、塩基性 basic は正）です。",
-        "R 基不是疏水 (hydrophobic，不愛水)，便是親水 (hydrophilic，吸引水)。親水的 R 基是極性 (polar) 或帶電荷的；帶電荷的 R 基分酸性 (acidic，帶負電) 和鹼性 (basic，帶正電)。"]) }));
-      root.appendChild(el("div", { class: "tree panel" }, [
-        el("b", { text: "R-group" }), "→",
-        el("b", { style: "border-color:var(--k-np)", text: T(["Hydrophobic = non-polar", "疎水性 (hydrophobic) = 非極性", "疏水 (hydrophobic) = 非極性"]) }), T(["or", "または", "或"]),
-        el("b", { text: T(["Hydrophilic", "親水性 (hydrophilic)", "親水 (hydrophilic)"]) }), "→",
-        el("b", { style: "border-color:var(--k-pol)", text: T(["Polar", "極性 (polar)", "極性 (polar)"]) }), T(["or", "または", "或"]),
-        el("b", { text: T(["Charged", "電荷をもつ", "帶電荷"]) }), "→",
-        el("b", { style: "border-color:var(--k-ac)", text: T(["Acidic (−)", "酸性 (−)", "酸性 (−)"]) }), T(["or", "または", "或"]),
-        el("b", { style: "border-color:var(--k-ba)", text: T(["Basic (+)", "塩基性 (+)", "鹼性 (+)"]) })
-      ]));
-      root.appendChild(el("p", { class: "small", text: T(["You do not need to learn the names of particular R-groups: just learn to recognise the type from its chemistry.", "個々の R基の名前を覚える必要はありません。化学的な特徴から種類を見分けられればよいのです。", "不需要記住個別 R 基的名稱，只需從化學特徵辨認其類型。"]) }));
-      var done = {}, tries = 0, scoreEl = el("p", { class: "score" });
-      var list = el("div");
-      root.appendChild(list);
-      root.appendChild(scoreEl);
-      function score() {
-        var n = Object.keys(done).length;
-        scoreEl.textContent = T(["Sorted correctly: ", "正しく分類: ", "已正確分類："]) + n + " / " + CARDS.length;
+      function structure() {
+        groups = {};
+        // landscape viewBox: the molecule is drawn left to right
+        var svg = sv("svg", { viewBox: "30 14 330 226", role: "img", "aria-label": T(["Generalized amino acid", "一般的なアミノ酸", "通式氨基酸"]) });
+        svg.appendChild(bond(112, 112, 190, 112));
+        svg.appendChild(bond(190, 112, 268, 112));
+        svg.appendChild(bond(190, 112, 190, 62));
+        svg.appendChild(bond(190, 112, 190, 160));
+        svg.appendChild(group("alpha", [166, 90, 48, 44], "--k-C", [atom(190, 112, 15, "--k-C", "C", 14)], T(GROUPS.alpha.n)));
+        svg.appendChild(bond(112, 112, 80, 90)); svg.appendChild(bond(112, 112, 80, 134));
+        svg.appendChild(group("amine", [38, 52, 108, 104], "--k-ba", [
+          atom(112, 112, 15, "--k-N", "N", 14), atom(78, 88, 10, "--k-H", "H", 11), atom(78, 136, 10, "--k-H", "H", 11),
+          sv("text", { x: 92, y: 66, "text-anchor": "middle", style: "font-size:14px;font-weight:600", text: "H₂N" })], T(GROUPS.amine.n)));
+        svg.appendChild(bond(268, 112, 302, 84, true)); svg.appendChild(bond(268, 112, 302, 140));
+        svg.appendChild(group("carboxyl", [242, 52, 128, 104], "--k-ac", [
+          bond(304, 142, 324, 142),
+          atom(268, 112, 15, "--k-C", "C", 14), atom(304, 82, 12, "--k-O", "O", 13), atom(304, 142, 12, "--k-O", "O", 13), atom(334, 142, 10, "--k-H", "H", 11)
+          ], T(GROUPS.carboxyl.n)));
+        svg.appendChild(sv("text", { x: 306, y: 44, "text-anchor": "middle", style: "font-size:14px;font-weight:600", text: "COOH" }));
+        svg.appendChild(group("h", [160, 22, 60, 50], "--k-H", [atom(190, 48, 11, "--k-H", "H", 12)], T(GROUPS.h.n)));
+        svg.appendChild(group("r", [148, 158, 84, 78], "--k-acc", [
+          sv("circle", { cx: 190, cy: 184, r: 20, fill: "var(--k-sf)", stroke: "var(--k-acc)", "stroke-width": 3 }),
+          sv("text", { x: 190, y: 191, "text-anchor": "middle", style: "font-size:20px;font-weight:700", text: "R" }),
+          sv("text", { x: 190, y: 228, "text-anchor": "middle", style: "font-size:12px", text: T(["variable side chain", "可変の側鎖", "可變的側鏈"]) })], T(GROUPS.r.n)));
+        svg.appendChild(sv("text", { x: 222, y: 100, style: "font-size:13px;fill:var(--k-mut)", text: "α" }));
+        info = el("div", { class: "panel", "aria-live": "polite", style: "min-height:96px" });
+        view.appendChild(el("div", { class: "wl" }, [
+          el("div", { class: "wl-stage" }, [svg, el("div", { class: "legend wl-legend" }, [
+            legendItem("i", "var(--k-C)", T(["carbon", "炭素 (C)", "碳 (C)"])),
+            legendItem("i", "var(--k-N)", T(["nitrogen", "窒素 (N)", "氮 (N)"])),
+            legendItem("i", "var(--k-O)", T(["oxygen", "酸素 (O)", "氧 (O)"])),
+            legendItem("i", "var(--k-H)", T(["hydrogen", "水素 (H)", "氫 (H)"]))
+          ])]),
+          el("div", { class: "wl-panel" }, [
+            el("p", { class: "small", text: T(["Tap each part of the molecule to see what it is.", "分子の各部分をタップして確認しましょう。", "點選分子的各部分，看看它是甚麼。"]) }),
+            info,
+            el("p", { class: "small", html: "H<sub>2</sub>N – C(H)(R) – COOH" }),
+            exam(T, [
+              "An amino acid has an amine group, a carboxyl group, a hydrogen atom and an R-group, all on the alpha carbon. The R-group is what differs: hydrophobic or hydrophilic (polar, or charged acidic/basic).",
+              "アミノ酸は α炭素 にアミノ基、カルボキシ基、水素原子、R基 が結合した構造。違いは R基 だけで、疎水性か親水性（極性、または酸性・塩基性で電荷をもつ）に分けられる。",
+              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。"])
+          ])
+        ]));
+        pick(sel);
       }
-      CARDS.forEach(function (c, i) {
+
+      function sorter() {
+        var c = CARDS[cur], isDone = !!done[cur], nDone = Object.keys(done).length;
         var fb = el("div", { class: "fb", "aria-live": "polite" });
-        var card = el("div", { class: "card" });
+        var scoreEl = el("p", { class: "score", text: T(["Sorted correctly: ", "正しく分類: ", "已正確分類："]) + nDone + " / " + CARDS.length });
+        var chips = el("div", { class: "chips" }, CARDS.map(function (_, i) {
+          var b = el("button", { type: "button", class: (i === cur ? "cur " : "") + (done[i] ? "ok" : ""), "aria-label": "R-group " + (i + 1), "aria-current": i === cur ? "true" : null, text: done[i] ? "✔" : String(i + 1) });
+          b.addEventListener("click", function () { cur = i; render(); });
+          return b;
+        }));
+        var card = el("div", { class: "card", style: done[cur] ? "border-left-color:var(" + CAT[c.c].col + ")" : "" }, [
+          el("div", { class: "f", html: "R = " + c.f }),
+          el("div", { class: "small", text: T(c.hint) })
+        ]);
         var btns = ORDER.map(function (k) {
-          var b = el("button", { type: "button", text: T(CAT[k].n) });
+          var b = el("button", { type: "button", text: T(CAT[k].n), disabled: isDone ? true : null });
+          if (isDone && k === c.c) b.classList.add("on");
           b.addEventListener("click", function () {
-            if (done[i]) return;
-            if (k === c.c) {
-              done[i] = 1;
-              card.style.borderLeftColor = "var(" + CAT[k].col + ")";
-              fb.className = "fb good"; fb.textContent = "✔ " + T(CAT[k].fb);
-              btns.forEach(function (x) { x.disabled = true; });
-              b.classList.add("on"); b.disabled = true;
-              score();
-            } else {
-              fb.className = "fb bad";
-              fb.textContent = "✘ " + T(["Not quite. Hint: ", "惜しい。ヒント: ", "不太對。提示："]) + T(c.hint);
-            }
+            if (done[cur]) return;
+            if (k === c.c) { done[cur] = 1; render(); }
+            else { fb.className = "fb bad"; fb.textContent = "✘ " + T(["Not quite. Hint: ", "惜しい。ヒント: ", "不太對。提示："]) + T(c.hint); }
           });
           return b;
         });
-        card.appendChild(el("div", { class: "f", html: "R = " + c.f }));
-        card.appendChild(el("div", { class: "small", text: T(c.hint) }));
-        card.appendChild(el("div", { class: "opts" }, btns));
-        card.appendChild(fb);
-        list.appendChild(card);
-      });
-      var sp = el("div", { class: "card", style: "border-left-color:var(--k-S)" }, [
-        el("div", { class: "f", html: "R = –CH<sub>2</sub>–SH" }),
-        el("p", { class: "small", text: T([
-          "This sulfur-containing R-group belongs to cysteine, the one amino acid you need to name (AHL, B1.2.9). Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). You are not asked to sort it here.",
-          "この硫黄を含む R基 はシステイン (cysteine) のもので、名前を覚える必要がある唯一のアミノ酸です（AHL, B1.2.9）。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。ここでは分類は不要です。",
-          "這個含硫的 R 基屬於半胱氨酸 (cysteine)，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏不需要為它分類。"]) })
-      ]);
-      root.appendChild(sp);
-      var rb = el("button", { type: "button", text: T(["Reset", "リセット", "重設"]) });
-      rb.addEventListener("click", build);
-      root.appendChild(el("div", { class: "bar" }, [rb]));
-      score();
-      root.appendChild(exam(T, [
-        "An amino acid has an amine group, a carboxyl group, a hydrogen atom and an R-group, all on the alpha carbon. The R-group is what differs: hydrophobic or hydrophilic (polar, or charged acidic/basic).",
-        "アミノ酸は α炭素 にアミノ基、カルボキシ基、水素原子、R基 が結合した構造。違いは R基 だけで、疎水性か親水性（極性、または酸性・塩基性で電荷をもつ）に分けられる。",
-        "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。"]));
+        if (isDone) { fb.className = "fb good"; fb.textContent = "✔ " + T(CAT[c.c].fb); }
+        var nxt = el("button", { type: "button", text: T(["Next R-group →", "次の R基 →", "下一個 R 基 →"]) });
+        nxt.addEventListener("click", function () {
+          for (var s = 1; s <= CARDS.length; s++) { var j = (cur + s) % CARDS.length; if (!done[j]) { cur = j; break; } if (s === CARDS.length) cur = (cur + 1) % CARDS.length; }
+          render();
+        });
+        var rb = el("button", { type: "button", text: T(["Reset", "リセット", "重設"]) });
+        rb.addEventListener("click", function () { done = {}; cur = 0; render(); });
+        function mkTree(cls) { return el("div", { class: "tree panel " + cls }, [
+          el("b", { text: "R-group" }), "→",
+          el("b", { style: "border-color:var(--k-np)", text: T(["Hydrophobic = non-polar", "疎水性 (hydrophobic) = 非極性", "疏水 (hydrophobic) = 非極性"]) }), T(["or", "または", "或"]),
+          el("b", { text: T(["Hydrophilic", "親水性 (hydrophilic)", "親水 (hydrophilic)"]) }), "→",
+          el("b", { style: "border-color:var(--k-pol)", text: T(["Polar", "極性 (polar)", "極性 (polar)"]) }), T(["or", "または", "或"]),
+          el("b", { text: T(["Charged", "電荷をもつ", "帶電荷"]) }), "→",
+          el("b", { style: "border-color:var(--k-ac)", text: T(["Acidic (−)", "酸性 (−)", "酸性 (−)"]) }), T(["or", "または", "或"]),
+          el("b", { style: "border-color:var(--k-ba)", text: T(["Basic (+)", "塩基性 (+)", "鹼性 (+)"]) })
+        ]); }
+        var side = more(T, [mkTree("tree-mob"),
+          el("p", { text: T([
+            "R-groups are either hydrophobic (they avoid water) or hydrophilic (they attract water). Hydrophilic R-groups are polar or charged, and charged R-groups are acidic (negative) or basic (positive).",
+            "R基は、疎水性 (hydrophobic：水をはじく) か親水性 (hydrophilic：水とひきあう) のどちらかです。親水性の R基は極性 (polar) か、電荷をもつもの（酸性 acidic は負、塩基性 basic は正）です。",
+            "R 基不是疏水 (hydrophobic，不愛水)，便是親水 (hydrophilic，吸引水)。親水的 R 基是極性 (polar) 或帶電荷的；帶電荷的 R 基分酸性 (acidic，帶負電) 和鹼性 (basic，帶正電)。"]) }),
+          el("p", { class: "small", text: T(["You do not need to learn the names of particular R-groups: just learn to recognise the type from its chemistry.", "個々の R基の名前を覚える必要はありません。化学的な特徴から種類を見分けられればよいのです。", "不需要記住個別 R 基的名稱，只需從化學特徵辨認其類型。"]) }),
+          el("p", { class: "small", text: T([
+            "Cysteine: its R-group is –CH₂–SH. It is the one amino acid you need to name (AHL, B1.2.9). Two cysteines can link by a covalent disulfide bond (S–S), which helps hold a protein's shape (see the protein folding widget). It is not one of the cards here.",
+            "システイン (cysteine)：R基は –CH₂–SH で、名前を覚える必要がある唯一のアミノ酸です（AHL, B1.2.9）。2つのシステインは共有結合であるジスルフィド結合 (disulfide bond, S–S) をつくり、タンパク質の形を保つのに役立ちます（タンパク質の折りたたみの教材を参照）。ここのカードには含まれません。",
+            "半胱氨酸 (cysteine)：R 基為 –CH₂–SH，是唯一須要說出名稱的氨基酸（AHL，B1.2.9）。兩個半胱氨酸可形成共價的二硫鍵 (disulfide bond, S–S)，有助維持蛋白質的形狀（見蛋白質摺疊教材）。這裏的卡片不包括它。"]) })
+        ]);
+        view.appendChild(el("div", { class: "wl" }, [
+          el("div", { class: "wl-stage" }, [chips, card, mkTree("tree-desk")]),
+          el("div", { class: "wl-panel" }, [
+            el("p", { class: "small", text: T(["Which type of R-group is this? Choose one.", "この R基 はどの種類ですか。1つ選びましょう。", "這是哪一類 R 基？請選一項。"]) }),
+            el("div", { class: "opts" }, btns), fb,
+            el("div", { class: "bar", style: "margin:0" }, [isDone ? nxt : null, rb]),
+            scoreEl, side,
+            exam(T, [
+              "An amino acid has an amine group, a carboxyl group, a hydrogen atom and an R-group, all on the alpha carbon. The R-group is what differs: hydrophobic or hydrophilic (polar, or charged acidic/basic).",
+              "アミノ酸は α炭素 にアミノ基、カルボキシ基、水素原子、R基 が結合した構造。違いは R基 だけで、疎水性か親水性（極性、または酸性・塩基性で電荷をもつ）に分けられる。",
+              "氨基酸的 α 碳連接氨基、羧基、氫原子和 R 基。不同之處只在 R 基：疏水，或親水（極性，或帶電荷的酸性／鹼性）。"])
+          ])
+        ]));
       }
     }
   });

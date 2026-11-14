@@ -7,23 +7,24 @@
   var ID = "niche-css";
   var CSS = [
     ".w-niche{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
-    ".w-niche .ni-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px)}",
+    ".w-niche .ni-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px);padding:.2rem}",
     ".w-niche svg{display:block;width:100%;height:auto}",
     ".w-niche svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
-    ".w-niche .ni-ctl{display:grid;gap:.55rem;margin:.7rem 0 .3rem}",
-    ".w-niche .ni-row{display:grid;grid-template-columns:minmax(8rem,12rem) 1fr 3rem;gap:.5rem;align-items:center;font-size:.88rem}",
+    ".w-niche .ni-ctl{display:grid;gap:.4rem;margin:0}",
+    ".w-niche .ni-row{display:grid;grid-template-columns:1fr 3rem;gap:.1rem .5rem;align-items:center;font-size:.88rem}",
     ".w-niche .ni-row output{font-variant-numeric:tabular-nums;font-weight:800;text-align:right}",
-    ".w-niche input[type=range]{width:100%;height:2.2rem;accent-color:var(--accent,#2547c7)}",
-    ".w-niche .ni-btns{display:flex;flex-wrap:wrap;gap:.4rem}",
-    ".w-niche .ni-btn{font:inherit;font-size:.86rem;font-weight:700;min-height:2.5rem;padding:.35rem .8rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
+    ".w-niche .ni-row input{grid-column:1/-1;grid-row:2}",
+    ".w-niche input[type=range]{width:100%;height:2rem;accent-color:var(--accent,#2547c7)}",
+    ".w-niche .ni-btns{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}",
+    ".w-niche .ni-btn{font:inherit;font-size:.84rem;font-weight:700;min-height:2.5rem;padding:.25rem .5rem;line-height:1.2;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".w-niche .ni-btn[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-niche .ni-btn:focus-visible,.w-niche input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".w-niche .ni-msg{margin:.5rem 0;padding:.6rem .8rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.92rem;line-height:1.5;min-height:3.4rem}",
+    ".w-niche .ni-msg{margin:0;padding:.5rem .7rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.88rem;line-height:1.45}",
     ".w-niche .ni-msg strong{font-weight:800}",
-    ".w-niche .ni-leg{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.8rem;margin:.3rem 0}",
+    ".w-niche .ni-leg{display:flex;flex-wrap:wrap;gap:.2rem 1rem;font-size:.8rem;margin:.3rem 0 0}",
     ".w-niche .ni-leg i{display:inline-block;width:1.4rem;height:.6rem;border-radius:2px;margin-right:.3rem;vertical-align:middle}",
     ".w-niche .ni-note{margin:.3rem 0 0;font-size:.76rem;color:var(--muted,#4d626d)}",
-    "@media (max-width:480px){.w-niche .ni-row{grid-template-columns:1fr 3rem}.w-niche .ni-row input{grid-column:1/-1;grid-row:2}}"
+    ".w-niche .ni-note{margin:0}"
   ].join("\n");
 
   var T = {
@@ -55,7 +56,7 @@
     }
     var t = ctx.t;
     var f = 0.6, c = 0.8, strongB = true, removed = false;
-    var X0 = 40, W = 540, BASE = 230, H = 140;
+    var X0 = 40, W = 540, BASE = 196, H = 124;
     function px(x) { return X0 + x * W; }
     function h(x, lo, hi) { var u = (x - lo) / (hi - lo); return u <= 0 || u >= 1 ? 0 : Math.pow(Math.sin(Math.PI * u), 0.8); }
     function path(lo, hi, rlo, rhi, close) {
@@ -69,8 +70,11 @@
     }
 
     el.innerHTML = "";
-    var stage = document.createElement("div"); stage.className = "ni-stage"; var svgHost = document.createElement("div"); stage.appendChild(svgHost); el.appendChild(stage);
-    var ctl = document.createElement("div"); ctl.className = "ni-ctl"; el.appendChild(ctl);
+    var wl = document.createElement("div"); wl.className = "wl"; el.appendChild(wl);
+    var stageCol = document.createElement("div"); stageCol.className = "wl-stage"; wl.appendChild(stageCol);
+    var panel = document.createElement("div"); panel.className = "wl-panel"; wl.appendChild(panel);
+    var stage = document.createElement("div"); stage.className = "ni-stage"; var svgHost = document.createElement("div"); stage.appendChild(svgHost); stageCol.appendChild(stage);
+    var ctl = document.createElement("div"); ctl.className = "ni-ctl"; panel.appendChild(ctl);
 
     function slider(label, init, cb) {
       var row = document.createElement("label"); row.className = "ni-row";
@@ -94,11 +98,11 @@
     btn(t(T.removeB), function () { c = 0; removed = true; sComp.inp.value = 0; sComp.out.textContent = "0%"; draw(); });
     btn(t(T.reset), function () { f = 0.6; c = 0.8; strongB = true; removed = false; sOver.inp.value = 60; sOver.out.textContent = "60%"; sComp.inp.value = 80; sComp.out.textContent = "80%"; draw(); });
 
-    var msg = document.createElement("div"); msg.className = "ni-msg"; msg.setAttribute("aria-live", "polite"); el.appendChild(msg);
-    var leg = document.createElement("div"); leg.className = "ni-leg";
+    var msg = document.createElement("div"); msg.className = "ni-msg"; msg.setAttribute("aria-live", "polite"); panel.appendChild(msg);
+    var leg = document.createElement("div"); leg.className = "ni-leg wl-legend";
     leg.innerHTML = '<span><i style="border:2px dashed var(--theme-a,#07756f);background:none"></i>' + t(T.legFund) + '</span><span><i style="background:var(--theme-a,#07756f)"></i>' + t(T.legReal) + '</span><span><i style="background:var(--theme-b,#b82a56)"></i>' + t(T.legB) + '</span>';
-    el.appendChild(leg);
-    var note = document.createElement("p"); note.className = "ni-note"; note.textContent = t(T.axis) + ". " + t(T.note); el.appendChild(note);
+    stageCol.appendChild(leg);
+    var note = document.createElement("p"); note.className = "ni-note"; note.textContent = t(T.axis) + ". " + t(T.note); panel.appendChild(note);
 
     function draw() {
       // B fundamental niche fixed [0.5, 1.0]; A fundamental niche [a0, a0+0.5], overlap = a0
@@ -112,24 +116,24 @@
       if (rHi < rLo) rHi = rLo;
       var width = rHi - rLo, pct = Math.round(width / 0.5 * 100);
       var elim = pct <= 3;
-      var s = '<svg viewBox="0 0 600 316" role="img" aria-label="' + t(T.axis) + '">';
+      var s = '<svg viewBox="0 0 600 290" role="img" aria-label="' + t(T.axis) + '">';
       s += '<line x1="' + X0 + '" y1="' + BASE + '" x2="' + (X0 + W) + '" y2="' + BASE + '" stroke="var(--ink,#0f2029)" stroke-width="2"/>';
       // B
       if (!removed) {
       s += '<path d="' + path(bLo, bHi, bLo, bHi, false) + '" fill="none" stroke="var(--theme-b,#b82a56)" stroke-width="2" stroke-dasharray="5 4" opacity="0.6"/>';
       if (bHi > bRLo) s += '<path d="' + path(bLo, bHi, bRLo, bHi, true) + '" fill="var(--theme-b,#b82a56)" opacity="0.35" stroke="var(--theme-b,#b82a56)" stroke-width="2"/>';
-      s += '<text x="' + px(0.75) + '" y="' + (BASE - H - 8) + '" text-anchor="middle" font-size="28" font-weight="800" style="fill:var(--theme-b,#b82a56)">B</text>';
+      s += '<text x="' + px(0.75) + '" y="' + (BASE - H - 8) + '" text-anchor="middle" font-size="30" font-weight="800" style="fill:var(--theme-b,#b82a56)">B</text>';
       }
       // A fundamental
       s += '<path d="' + path(a0, aHi, a0, aHi, false) + '" fill="none" stroke="var(--theme-a,#07756f)" stroke-width="2.5" stroke-dasharray="6 4"/>';
       // A realized
       if (!elim) s += '<path d="' + path(a0, aHi, rLo, rHi, true) + '" fill="var(--theme-a,#07756f)" opacity="0.5" stroke="var(--theme-a,#07756f)" stroke-width="2.5"/>';
-      s += '<text x="' + px(a0 + 0.25) + '" y="' + (BASE - H - 8) + '" text-anchor="middle" font-size="28" font-weight="800" style="fill:var(--theme-a,#07756f)">A</text>';
+      s += '<text x="' + px(a0 + 0.25) + '" y="' + (BASE - H - 8) + '" text-anchor="middle" font-size="30" font-weight="800" style="fill:var(--theme-a,#07756f)">A</text>';
       // range bars
-      s += '<line x1="' + px(a0) + '" y1="258" x2="' + px(aHi) + '" y2="258" stroke="var(--theme-a,#07756f)" stroke-width="4" stroke-dasharray="8 5"/>';
-      s += '<text x="' + X0 + '" y="248" font-size="17" font-weight="700">' + t(T.fundA) + '</text>';
-      if (!elim) s += '<line x1="' + px(rLo) + '" y1="296" x2="' + px(rHi) + '" y2="296" stroke="var(--theme-a,#07756f)" stroke-width="6"/>';
-      s += '<text x="' + X0 + '" y="286" font-size="17" font-weight="700">' + t(T.realA) + (elim ? " = 0" : "") + '</text>';
+      s += '<line x1="' + px(a0) + '" y1="232" x2="' + px(aHi) + '" y2="232" stroke="var(--theme-a,#07756f)" stroke-width="4" stroke-dasharray="8 5"/>';
+      s += '<text x="' + X0 + '" y="223" font-size="20" font-weight="700">' + t(T.fundA) + '</text>';
+      if (!elim) s += '<line x1="' + px(rLo) + '" y1="276" x2="' + px(rHi) + '" y2="276" stroke="var(--theme-a,#07756f)" stroke-width="6"/>';
+      s += '<text x="' + X0 + '" y="262" font-size="20" font-weight="700">' + t(T.realA) + (elim ? " = 0" : "") + '</text>';
       s += '</svg>';
       svgHost.innerHTML = s;
       bStrong.setAttribute("aria-pressed", strongB ? "true" : "false");

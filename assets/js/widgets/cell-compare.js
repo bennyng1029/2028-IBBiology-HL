@@ -6,14 +6,18 @@
   var STYLE_ID = "ibw-cell-compare-css";
   var CSS = [
     ".w-cell-compare{color:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
-    ".w-cell-compare .cc-tabs,.w-cell-compare .cc-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:0;list-style:none}",
-    ".w-cell-compare button.cc-tab,.w-cell-compare button.cc-chip{border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);border-radius:999px;padding:6px 12px;font:inherit;font-size:.88rem;line-height:1.2;cursor:pointer;min-height:36px}",
-    ".w-cell-compare button.cc-chip{border-radius:8px;padding:5px 9px;font-size:.8rem;min-height:32px}",
-    ".w-cell-compare button[aria-selected='true'],.w-cell-compare button[aria-pressed='true']{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
+    ".w-cell-compare .cc-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}",
+    ".w-cell-compare .cc-chips.row{grid-column:1/-1}",
+    ".w-cell-compare .cc-body{display:contents}",
+    ".w-cell-compare .wl-stage{background:transparent;border:0;padding:0}",
+    ".w-cell-compare svg.cc-svg{display:block;width:100%;height:auto;max-height:var(--stage-max);background:var(--bg,#edf1f3);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius-lg,12px)}",
+    ".w-cell-compare .wl-tabs button[aria-selected='true']{background:var(--accent-soft,#e0e7fb);color:var(--ink,#0f2029);border-bottom-color:var(--accent,#2547c7)}",
+    ".w-cell-compare button.cc-chip{border:1px solid var(--line-strong,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);font:inherit;line-height:1.2;cursor:pointer;border-radius:8px;min-height:40px;padding:5px 11px;font-size:.85rem}",
+    ".w-cell-compare button.cc-chip{border-radius:8px;padding:5px 9px;font-size:.8rem;min-height:40px}",
+    ".w-cell-compare button[aria-pressed='true']{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-cell-compare button:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".w-cell-compare .cc-cap{font-size:.85rem;color:var(--muted,#4d626d);margin:2px 0 8px}",
-    ".w-cell-compare svg.cc-svg{display:block;width:100%;height:auto;background:var(--bg,#edf1f3);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius-lg,12px)}",
-    ".w-cell-compare .cc-info{margin:10px 0;padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-left:5px solid var(--accent,#2547c7);border-radius:var(--radius,6px);min-height:5.2em}",
+    ".w-cell-compare .cc-cap{font-size:.85rem;color:var(--muted,#4d626d);margin:4px 0 0}",
+    ".w-cell-compare .cc-info{margin:0;padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-left:5px solid var(--accent,#2547c7);border-radius:var(--radius,6px)}",
     ".w-cell-compare .cc-info h4{margin:0 0 4px;font-size:1rem}",
     ".w-cell-compare .cc-info p{margin:0 0 6px;font-size:.92rem;line-height:1.45}",
     ".w-cell-compare .cc-found{display:flex;flex-wrap:wrap;gap:5px;align-items:center;font-size:.8rem;color:var(--muted,#4d626d)}",
@@ -30,7 +34,8 @@
     ".w-cell-compare .cc-gc.y{background:var(--good-soft,#dcf2e4)}",
     ".w-cell-compare .cc-gc.n{background:var(--surface,#fff);color:var(--muted,#4d626d)}",
     ".w-cell-compare .cc-gc.d{background:var(--accent-soft,#e0e7fb)}",
-    ".w-cell-compare .cc-note{font-size:.78rem;color:var(--muted,#4d626d);margin:6px 0 0}",
+    ".w-cell-compare .cc-note{font-size:.78rem;color:var(--muted,#4d626d);margin:6px 0 0;grid-column:1/-1}",
+    ".w-cell-compare .cc-tblwrap{grid-column:1/-1;min-width:0}",
     /* shapes */
     ".w-cell-compare .hit{cursor:pointer}",
     ".w-cell-compare .hit:hover{opacity:.78}",
@@ -67,7 +72,7 @@
     ".w-cell-compare .k-rbc2{fill:var(--surface,#fff);fill-opacity:.55;stroke:var(--bad,#b3261e);stroke-width:1.5;stroke-dasharray:4 3}",
     ".w-cell-compare .k-tube{fill:var(--surface,#fff);stroke:var(--hydrophobic,#8a6838);stroke-width:4}",
     ".w-cell-compare .k-sieve{stroke:var(--hydrophobic,#8a6838);stroke-width:5}",
-    ".w-cell-compare .k-lbl{font-size:13px;fill:var(--muted,#4d626d);font-family:var(--font-body,sans-serif)}",
+    ".w-cell-compare .k-lbl{font-size:14px;fill:var(--muted,#4d626d);font-family:var(--font-body,sans-serif)}",
     "@media (prefers-reduced-motion:no-preference){.w-cell-compare .hit{transition:opacity .15s}}"
   ].join("\n");
 
@@ -407,8 +412,12 @@
         var body;
 
         el.classList.add("w-cell-compare");
-        el.innerHTML = '<div class="cc-tabs" role="tablist"></div><div class="cc-body"></div>';
-        var tabs = el.querySelector(".cc-tabs");
+        el.innerHTML = '<div class="wl"><div class="wl-tabs" role="tablist"></div><div class="cc-body"></div></div>';
+        var tabs = el.querySelector(".wl-tabs");
+        var ot = ctx.options && ctx.options.tab;
+        var tabIds = ["diagram", "table", "atypical"];
+        if (typeof ot === "number" && tabIds[ot]) st.tab = tabIds[ot]; else if (typeof ot === "string" && tabIds.indexOf(ot) >= 0) st.tab = ot;
+        var wide = window.matchMedia ? window.matchMedia("(min-width: 900px)").matches : true;
         body = el.querySelector(".cc-body");
 
         function renderTabs() {
@@ -416,7 +425,7 @@
           tabs.innerHTML = "";
           defs.forEach(function (d) {
             var b = document.createElement("button");
-            b.type = "button"; b.className = "cc-tab"; b.setAttribute("role", "tab");
+            b.type = "button"; b.setAttribute("role", "tab");
             b.setAttribute("aria-selected", st.tab === d[0] ? "true" : "false");
             b.textContent = t(d[1]);
             b.addEventListener("click", function () { st.tab = d[0]; render(); });
@@ -433,16 +442,15 @@
 
         function renderDiagram() {
           var cell = st.cell;
-          var h = '<div class="cc-chips" role="group" aria-label="' + t(UI.tabDiagram) + '">';
-          CELLORDER.forEach(function (c) { h += '<button type="button" class="cc-chip" data-cell="' + c + '" aria-pressed="' + (c === cell) + '" style="font-size:.88rem">' + t(CELLNAME[c]) + "</button>"; });
+          var h = '<div class="cc-chips row" role="group" aria-label="' + t(UI.tabDiagram) + '">';
+          CELLORDER.forEach(function (c) { h += '<button type="button" class="cc-chip" data-cell="' + c + '" aria-pressed="' + (c === cell) + '">' + t(CELLNAME[c]) + "</button>"; });
           h += "</div>";
-          h += '<svg class="cc-svg" viewBox="' + VBS[cell] + '" role="group" aria-label="' + t(CELLNAME[cell]) + '">' + SVGS[cell]() + "</svg>";
-          h += '<p class="cc-cap">' + t(UI.drawing) + "</p>";
-          h += '<div class="cc-info" aria-live="polite"></div>';
-          h += '<p class="cc-cap">' + t(UI.structures) + "</p>";
-          h += '<div class="cc-chips">';
+          h += '<div class="wl-stage"><svg class="cc-svg" viewBox="' + VBS[cell] + '" role="group" aria-label="' + t(CELLNAME[cell]) + '">' + SVGS[cell]() + "</svg>";
+          h += '<p class="cc-cap">' + t(UI.drawing) + "</p></div>";
+          h += '<div class="wl-panel"><div class="cc-info" aria-live="polite"></div>';
+          h += '<details class="cc-list"' + (wide ? " open" : "") + '><summary>' + t(UI.structures) + '</summary><div class="cc-chips" style="margin-top:6px">';
           CELLIDS[cell].forEach(function (id) { h += '<button type="button" class="cc-chip" data-s="' + id + '" aria-pressed="false">' + t(S[id][0]) + "</button>"; });
-          h += "</div>";
+          h += "</div></details></div>";
           body.innerHTML = h;
 
           body.querySelectorAll("button[data-cell]").forEach(function (b) {
@@ -472,7 +480,7 @@
         }
 
         function renderTable() {
-          var h = '<div class="cc-grid" role="table"><div class="cc-gr head" role="row"><div class="cc-gh" role="columnheader">' + t(UI.feature) + "</div>";
+          var h = '<div class="cc-tblwrap"><div class="cc-grid" role="table"><div class="cc-gr head" role="row"><div class="cc-gh" role="columnheader">' + t(UI.feature) + "</div>";
           CELLORDER.forEach(function (c) { h += '<div class="cc-gh" role="columnheader">' + t(CELLSHORT[c]) + "</div>"; });
           h += "</div>";
           ROWS.forEach(function (r) {
@@ -480,18 +488,18 @@
             r[1].forEach(function (c) { h += '<div class="cc-gc ' + c[0] + '" role="cell">' + t(c[1]) + "</div>"; });
             h += "</div>";
           });
-          h += '</div><p class="cc-note">' + t(UI.tableNote) + "</p>";
+          h += '</div><p class="cc-note">' + t(UI.tableNote) + "</p></div>";
           body.innerHTML = h;
         }
 
         function renderAtyp() {
           var a = ATYP[st.atyp];
           var vb = st.atyp === "sieve" || st.atyp === "rbc" ? "0 0 400 320" : "0 0 400 320";
-          var h = '<div class="cc-chips" role="group">';
-          ATYPORDER.forEach(function (k) { h += '<button type="button" class="cc-chip" data-a="' + k + '" aria-pressed="' + (k === st.atyp) + '" style="font-size:.85rem">' + t(ATYP[k].name) + "</button>"; });
+          var h = '<div class="cc-chips row" role="group">';
+          ATYPORDER.forEach(function (k) { h += '<button type="button" class="cc-chip" data-a="' + k + '" aria-pressed="' + (k === st.atyp) + '">' + t(ATYP[k].name) + "</button>"; });
           h += "</div>";
-          h += '<svg class="cc-svg" viewBox="' + vb + '" role="img" aria-label="' + t(a.name) + '">' + a.svg(t) + "</svg>";
-          h += '<div class="cc-info" aria-live="polite"><h4>' + t(a.name) + '</h4><span class="cc-big">' + t(UI.nuclei) + " " + t(UI[a.nuclei]) + "</span><p>" + t(a.text) + '</p><p class="cc-cap" style="margin:0">' + t(UI.typical) + "</p></div>";
+          h += '<div class="wl-stage"><svg class="cc-svg" viewBox="' + vb + '" role="img" aria-label="' + t(a.name) + '">' + a.svg(t) + "</svg></div>";
+          h += '<div class="wl-panel"><div class="cc-info" aria-live="polite"><h4>' + t(a.name) + '</h4><span class="cc-big">' + t(UI.nuclei) + " " + t(UI[a.nuclei]) + "</span><p>" + t(a.text) + '</p><p class="cc-cap" style="margin:0">' + t(UI.typical) + "</p></div></div>";
           body.innerHTML = h;
           body.querySelectorAll("button[data-a]").forEach(function (b) {
             b.addEventListener("click", function () { st.atyp = b.getAttribute("data-a"); render(); });

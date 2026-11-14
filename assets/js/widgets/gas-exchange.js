@@ -11,7 +11,13 @@
     ".gx-root{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029);font-size:.95rem}",
     ".gx-root *{box-sizing:border-box}",
     ".gx-root svg{display:block;width:100%;height:auto}",
-    ".gx-tabs,.gx-bar,.gx-chips,.gx-tog{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .6rem}",
+    ".gx-tabs,.gx-bar,.gx-chips,.gx-tog{display:flex;flex-wrap:wrap;gap:.4rem;margin:0}",
+    ".gx-tabs{overflow-x:auto;flex-wrap:nowrap;margin-bottom:.5rem}",
+    ".gx-tabs .gx-b{flex:none}",
+    ".gx-root [hidden]{display:none!important}",
+    ".gx-root .wl-panel{gap:.5rem}",
+    "@media(max-width:899px){.gx-chips,.gx-tog{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.2rem}.gx-chip,.gx-tog .gx-b{flex:none}.gx-tog .gx-b{min-height:2.25rem;font-size:.85rem;padding:.2rem .6rem}}",
+    ".gx-root .oc-svg .tm,.gx-root .oc-svg .tx{font-size:14px}",
     ".gx-b{font:inherit;font-weight:600;min-height:2.5rem;padding:.35rem .8rem;border-radius:var(--radius,6px);border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".gx-b:hover{background:var(--surface-2,#e3eaee)}",
     ".gx-b[aria-pressed=true],.gx-b[aria-selected=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
@@ -19,17 +25,17 @@
     ".gx-chip{font:inherit;font-size:.85rem;min-height:2.25rem;padding:.2rem .6rem;border-radius:999px;border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".gx-chip[aria-pressed=true]{background:var(--accent-soft,#e0e7fb);border-color:var(--accent,#2547c7);font-weight:700}",
     ".gx-chip:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".gx-art{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.5rem;margin-bottom:.6rem}",
-    ".gx-info{background:var(--surface-2,#e3eaee);border-left:4px solid var(--accent,#2547c7);border-radius:var(--radius,6px);padding:.6rem .8rem;min-height:4.5rem}",
-    ".gx-info p{margin:.3rem 0 0}",
+    ".gx-art{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.4rem}",
+    ".gx-info{background:var(--surface-2,#e3eaee);border-left:4px solid var(--accent,#2547c7);border-radius:var(--radius,6px);padding:.4rem .65rem;font-size:.88rem;line-height:1.4}",
+    ".gx-info p{margin:.25rem 0 0}",
     ".gx-info .gx-tag{color:var(--muted,#4d626d);font-size:.85rem}",
     ".gx-info.good{border-left-color:var(--good,#17703f);background:var(--good-soft,#dcf2e4)}",
     ".gx-info.bad{border-left-color:var(--bad,#b3261e);background:var(--bad-soft,#fbe0de)}",
     ".gx-al{display:inline-block;margin-left:.4rem;padding:0 .4rem;border-radius:3px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000);font-size:.7rem;font-weight:800;letter-spacing:.04em;vertical-align:middle}",
-    ".gx-note{color:var(--muted,#4d626d);font-size:.85rem;margin:.5rem 0 0}",
+    ".gx-note{color:var(--muted,#4d626d);font-size:.8rem;margin:.3rem 0 0}",
     ".gx-hs{cursor:pointer}",
     ".gx-hs circle{fill:var(--surface,#fff);stroke:var(--accent,#2547c7);stroke-width:2}",
-    ".gx-hs text{fill:var(--ink,#0f2029);font-size:11px;font-weight:700;text-anchor:middle;pointer-events:none}",
+    ".gx-hs text{fill:var(--ink,#0f2029);font-size:12px;font-weight:700;text-anchor:middle;pointer-events:none}",
     ".gx-hs.sel circle{fill:var(--accent,#2547c7)}",
     ".gx-hs.sel text{fill:var(--on-accent,#fff)}",
     ".gx-hs.ok circle{fill:var(--good,#17703f);stroke:var(--good,#17703f)}",
@@ -38,8 +44,8 @@
     ".gx-hs.no text{fill:#fff}",
     ".gx-quiz-h{font-weight:700}",
     /* art classes */
-    ".gx-root .tx{fill:var(--ink,#0f2029);font-size:10px}",
-    ".gx-root .tm{fill:var(--muted,#4d626d);font-size:10px}",
+    ".gx-root .tx{fill:var(--ink,#0f2029);font-size:12px}",
+    ".gx-root .tm{fill:var(--muted,#4d626d);font-size:12px}",
     ".gx-root .air{fill:var(--surface,#fff);stroke:var(--ink,#0f2029);stroke-width:1.5}",
     ".gx-root .wall{fill:none;stroke:var(--theme-b,#b82a56);stroke-width:4}",
     ".gx-root .film{fill:none;stroke:var(--hbond,#1989c9);stroke-width:2.5}",
@@ -70,7 +76,8 @@
     ".gx-root .cur{stroke:var(--ink,#0f2029);stroke-width:1.3}",
     ".gx-root input[type=range]{width:100%;accent-color:var(--accent,#2547c7);min-height:2rem}",
     ".gx-root .gx-sw{display:inline-block;width:1.6rem;height:0;border-top:3px solid;vertical-align:middle;margin-right:.35rem}",
-    ".gx-root .gx-read{display:grid;grid-template-columns:auto 1fr;gap:.15rem .6rem;font-variant-numeric:tabular-nums;margin:.4rem 0}",
+    ".gx-root .gx-read{display:grid;grid-template-columns:1fr auto;gap:.15rem .6rem;font-variant-numeric:tabular-nums;margin:0;font-size:.88rem}",
+    ".gx-root details summary{cursor:pointer;font-weight:700;font-size:.88rem;min-height:2.2rem;display:flex;align-items:center}",
     ".gx-root .gx-sites{display:inline-flex;gap:.25rem;vertical-align:middle;margin-left:.4rem}",
     ".gx-root .gx-site{width:.9rem;height:.9rem;border-radius:50%;border:2px solid var(--c-oxygen,#d33a2c);background:transparent}",
     ".gx-root .gx-site.f{background:var(--c-oxygen,#d33a2c)}",
@@ -248,11 +255,15 @@
     var chips = mk("div", "gx-chips");
     var info = mk("div", "gx-info"); info.setAttribute("aria-live", "polite");
     var note = mk("p", "gx-note", cfg.note ? t(cfg.note) : "");
-    root.appendChild(bar); root.appendChild(art); root.appendChild(chips); root.appendChild(info); root.appendChild(note);
+    var wl = mk("div", "wl"), stageCol = mk("div", "wl-stage"), panel = mk("div", "wl-panel");
+    note.className = "gx-note wl-legend";
+    stageCol.appendChild(art); stageCol.appendChild(note);
+    panel.appendChild(bar); panel.appendChild(chips); panel.appendChild(info);
+    wl.appendChild(stageCol); wl.appendChild(panel); root.appendChild(wl);
 
     var svg = '<svg viewBox="' + cfg.vb + '" role="group" aria-label="' + t(cfg.title) + '">' + cfg.art(ctx.lang);
     for (var i = 0; i < parts.length; i++) {
-      svg += '<g class="gx-hs" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '"><circle cx="' + parts[i].x + '" cy="' + parts[i].y + '" r="11"/><text x="' + parts[i].x + '" y="' + (parts[i].y + 4) + '">' + (i + 1) + '</text></g>';
+      svg += '<g class="gx-hs" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '"><circle cx="' + parts[i].x + '" cy="' + parts[i].y + '" r="12"/><text x="' + parts[i].x + '" y="' + (parts[i].y + 4.5) + '">' + (i + 1) + '</text></g>';
     }
     art.innerHTML = svg + "</svg>";
     var hs = art.querySelectorAll(".gx-hs");
@@ -361,7 +372,7 @@
       ensureCss();
       var t = ctx.t;
       var root = mk("div", "gx-root"); el.appendChild(root);
-      var tabs = mk("div", "gx-tabs"); tabs.setAttribute("role", "tablist");
+      var tabs = mk("div", "gx-tabs wl-tabs"); tabs.setAttribute("role", "tablist");
       var host = mk("div");
       root.appendChild(tabs); root.appendChild(host);
       var cleanup = null, cur = "lung";
@@ -378,6 +389,8 @@
       }
       bL.addEventListener("click", function () { show("lung"); });
       bF.addEventListener("click", function () { show("leaf"); });
+      var o = ctx.options && ctx.options.tab;
+      if (o === 1 || o === "1" || o === "leaf") cur = "leaf";
       show(cur);
       return function () { if (cleanup) cleanup(); };
     }
@@ -408,6 +421,7 @@
     z3: { en: "3 levels off", ja: "3 平らになる", zh: "3 趨平" },
     sites: { en: "Average number of haem groups carrying O₂ per adult haemoglobin (out of 4):", ja: "成人型ヘモグロビン1分子あたり、O₂を結合しているヘム基の平均数（4つのうち）：", zh: "每個成人血紅蛋白中載有O₂的血紅素基團平均數目（共4個）：" },
     ill: { en: "Illustrative values. Real curves differ a little between sources. The positions of 'lungs' and 'tissue' are approximate.", ja: "イラスト用の値です。実際の曲線は資料によって少し異なります。「肺」「組織」の位置はおおよそです。", zh: "示範數值。實際曲線在不同資料中略有差異。「肺」和「組織」的位置只是大約。" },
+    more: { en: "Explanation", ja: "説明", zh: "解說" },
     sat: { en: "saturation", ja: "飽和度", zh: "飽和度" },
     expl: {
       s1: { en: "1. At low O₂ the first O₂ binds slowly, so the curve is shallow.", ja: "1. 酸素が少ないと最初のO₂はゆっくり結合するので、曲線はなだらかです。", zh: "1. 氧氣少時，第一個O₂結合緩慢，所以曲線平緩。" },
@@ -427,30 +441,34 @@
       var root = mk("div", "gx-root"); el.appendChild(root);
       var uid = "oc" + Math.random().toString(36).slice(2, 7);
       var show = { ad: true, fo: false, bo: false, zones: false };
+      var last = "";
       var p = 5;
-      var L = 46, R = 326, T = 14, B = 196, XM = 14;
+      var L = 52, R = 404, T = 14, B = 212, XM = 14;
       function X(v) { return L + (v / XM) * (R - L); }
       function Y(v) { return B - (v / 100) * (B - T); }
 
       root.innerHTML =
-        '<div style="margin-bottom:.4rem"><span class="gx-al" style="margin:0 .4rem 0 0">AHL</span><strong>' + t(OC.title) + '</strong></div>' +
-        '<div class="gx-tog">' +
+        '<div class="wl"><div class="wl-stage">' +
+        '<div class="gx-art"><svg class="oc-svg" viewBox="0 0 420 262" role="img" aria-label="' + t(OC.title) + '"></svg></div>' +
+        '</div>' +
+        '<div class="wl-panel">' +
+        '<div class="gx-tog"><span class="gx-al" style="margin:0 .2rem 0 0;align-self:center">AHL</span>' +
         '<button type="button" class="gx-b" data-k="fo" aria-pressed="false"><span class="gx-sw" style="border-top-style:dashed;border-color:var(--theme-b,#b82a56)"></span>' + t(OC.foetal) + '</button>' +
         '<button type="button" class="gx-b" data-k="bo" aria-pressed="false"><span class="gx-sw" style="border-top-style:dotted;border-color:var(--theme-a,#07756f)"></span>' + t(OC.bohr) + '</button>' +
         '<button type="button" class="gx-b" data-k="zones" aria-pressed="false">' + t(OC.s) + '</button>' +
         '</div>' +
-        '<div class="gx-art"><svg class="oc-svg" viewBox="0 0 340 236" role="img" aria-label="' + t(OC.title) + '"></svg></div>' +
-        '<label for="' + uid + '"><strong>' + t(OC.slider) + ': <span class="oc-pv"></span> kPa</strong></label>' +
-        '<input id="' + uid + '" type="range" min="0" max="14" step="0.5" value="' + p + '">' +
+        '<div><label for="' + uid + '"><strong>' + t(OC.slider) + ': <span class="oc-pv"></span> kPa</strong></label>' +
+        '<input id="' + uid + '" type="range" min="0" max="14" step="0.5" value="' + p + '"></div>' +
         '<div class="gx-read oc-read" aria-live="polite"></div>' +
-        '<div class="gx-info oc-info"></div>' +
-        '<p class="gx-note">' + t(OC.ill) + '</p>';
+        '<details class="oc-det"><summary>' + t(OC.more) + '</summary><div class="gx-info oc-info"></div><p class="gx-note">' + t(OC.ill) + '</p></details>' +
+        '</div></div>';
 
       var svg = root.querySelector(".oc-svg");
       var slider = root.querySelector("input");
       var pv = root.querySelector(".oc-pv");
       var read = root.querySelector(".oc-read");
       var info = root.querySelector(".oc-info");
+      var det = root.querySelector(".oc-det");
 
       function path(p50, cls) {
         var pts = [];
@@ -463,12 +481,12 @@
           g += '<rect class="zone" x="' + X(0) + '" y="' + T + '" width="' + (X(2.5) - X(0)) + '" height="' + (B - T) + '"/>';
           g += '<rect class="zone2" x="' + X(2.5) + '" y="' + T + '" width="' + (X(6) - X(2.5)) + '" height="' + (B - T) + '"/>';
           g += '<rect class="zone" x="' + X(8) + '" y="' + T + '" width="' + (X(14) - X(8)) + '" height="' + (B - T) + '"/>';
-          g += '<text class="tx" x="' + (X(0) + 3) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '1' + '</text>';
-          g += '<text class="tx" x="' + (X(2.5) + 4) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '2' + '</text>';
-          g += '<text class="tx" x="' + (X(8) + 4) + '" y="' + (T + 13) + '" style="font-size:13px;font-weight:700">' + '3' + '</text>';
+          g += '<text class="tx" x="' + (X(0) + 3) + '" y="' + (T + 13) + '" style="font-size:15px;font-weight:700">' + '1' + '</text>';
+          g += '<text class="tx" x="' + (X(2.5) + 4) + '" y="' + (T + 13) + '" style="font-size:15px;font-weight:700">' + '2' + '</text>';
+          g += '<text class="tx" x="' + (X(8) + 4) + '" y="' + (T + 13) + '" style="font-size:15px;font-weight:700">' + '3' + '</text>';
         }
-        for (i = 0; i <= 100; i += 25) g += '<line class="gl" x1="' + L + '" x2="' + R + '" y1="' + Y(i) + '" y2="' + Y(i) + '"/><text class="tm" x="' + (L - 5) + '" y="' + (Y(i) + 3) + '" text-anchor="end">' + i + '</text>';
-        for (i = 0; i <= 14; i += 2) g += '<text class="tm" x="' + X(i) + '" y="' + (B + 13) + '" text-anchor="middle">' + i + '</text>';
+        for (i = 0; i <= 100; i += 25) g += '<line class="gl" x1="' + L + '" x2="' + R + '" y1="' + Y(i) + '" y2="' + Y(i) + '"/><text class="tm" x="' + (L - 5) + '" y="' + (Y(i) + 4) + '" text-anchor="end">' + i + '</text>';
+        for (i = 0; i <= 14; i += 2) g += '<text class="tm" x="' + X(i) + '" y="' + (B + 16) + '" text-anchor="middle">' + i + '</text>';
         g += '<line class="ax" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '"/><line class="ax" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '"/>';
         // markers
         var marks = [[13, OC.lungs], [5, OC.rest], [3, OC.active]];
@@ -484,8 +502,8 @@
         g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 3.5)) + '" r="5" style="fill:var(--accent,#2547c7);stroke:var(--surface,#fff);stroke-width:2"/>';
         if (show.fo) g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 2.5)) + '" r="5" style="fill:var(--theme-b,#b82a56);stroke:var(--surface,#fff);stroke-width:2"/>';
         if (show.bo) g += '<circle cx="' + X(p) + '" cy="' + Y(hill(p, 4.7)) + '" r="5" style="fill:var(--theme-a,#07756f);stroke:var(--surface,#fff);stroke-width:2"/>';
-        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="232" text-anchor="middle">' + t(OC.x) + '</text>';
-        g += '<text class="tx" x="11" y="' + ((T + B) / 2) + '" text-anchor="middle" transform="rotate(-90 11 ' + ((T + B) / 2) + ')">' + t(OC.y) + '</text>';
+        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="256" text-anchor="middle">' + t(OC.x) + '</text>';
+        g += '<text class="tx" x="13" y="' + ((T + B) / 2) + '" text-anchor="middle" transform="rotate(-90 13 ' + ((T + B) / 2) + ')">' + t(OC.y) + '</text>';
         svg.innerHTML = g;
 
         pv.textContent = p.toFixed(1);
@@ -502,9 +520,11 @@
         read.innerHTML = rows;
 
         var txt = "";
-        if (show.zones) txt += "<p>" + t(OC.expl.s1) + "</p><p>" + t(OC.expl.s2) + "</p><p>" + t(OC.expl.s3) + "</p>";
-        if (show.fo) txt += "<p>" + t(OC.expl.fo) + "</p>";
-        if (show.bo) txt += "<p>" + t(OC.expl.bo) + "</p>";
+        // explain the feature switched on most recently (others stay on the graph)
+        var which = show[last] ? last : (show.zones ? "zones" : show.fo ? "fo" : show.bo ? "bo" : "");
+        if (which === "zones") txt += "<p>" + t(OC.expl.s1) + "</p><p>" + t(OC.expl.s2) + "</p><p>" + t(OC.expl.s3) + "</p>";
+        if (which === "fo") txt += "<p>" + t(OC.expl.fo) + "</p>";
+        if (which === "bo") txt += "<p>" + t(OC.expl.bo) + "</p>";
         info.style.display = txt ? "" : "none";
         info.innerHTML = txt;
       }
@@ -514,6 +534,7 @@
         var k = b.getAttribute("data-k");
         show[k] = !show[k];
         b.setAttribute("aria-pressed", show[k] ? "true" : "false");
+        if (show[k]) { last = k; det.open = true; }
         draw();
       }
       function onSlide() { p = parseFloat(slider.value); draw(); }

@@ -8,27 +8,27 @@
 
   var CSS = [
     ".w-water-hbond{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
-    ".w-water-hbond .wh-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .6rem}",
-    ".w-water-hbond .wh-tab,.w-water-hbond .wh-sub{font:inherit;font-size:.88rem;font-weight:700;min-height:2.5rem;padding:.35rem .75rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer;line-height:1.2}",
-    ".w-water-hbond .wh-tab[aria-pressed=true],.w-water-hbond .wh-sub[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
-    ".w-water-hbond .wh-tab:focus-visible,.w-water-hbond .wh-sub:focus-visible,.w-water-hbond input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".w-water-hbond .wh-subs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0 0 .5rem}",
-    ".w-water-hbond .wh-sub{min-height:2.25rem;font-size:.82rem}",
-    ".w-water-hbond label.wh-chk{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;min-height:2.25rem;padding:0 .4rem;cursor:pointer}",
+    ".w-water-hbond details{font-size:.85rem}",
+    ".w-water-hbond summary{cursor:pointer;min-height:2rem;font-weight:700}",
+    ".w-water-hbond .wh-sub{font:inherit;font-size:.88rem;font-weight:700;min-height:2.5rem;padding:.3rem .7rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer;line-height:1.2}",
+    ".w-water-hbond .wh-sub[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
+    ".w-water-hbond .wh-sub:focus-visible,.w-water-hbond input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
+    ".w-water-hbond .wh-subs{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0}",
+    ".w-water-hbond .wh-sub{min-height:2.5rem;font-size:.82rem}",
+    ".w-water-hbond label.wh-chk{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;min-height:2.25rem;padding:0 .3rem;cursor:pointer}",
     ".w-water-hbond label.wh-chk input{width:1.15rem;height:1.15rem;accent-color:var(--accent,#2547c7)}",
-    ".w-water-hbond .wh-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px)}",
-    ".w-water-hbond svg{display:block;width:100%;height:auto;max-height:70vh}",
+        ".w-water-hbond svg{display:block;width:100%;height:auto;max-height:var(--stage-max,440px)}",
     ".w-water-hbond svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
-    ".w-water-hbond .wh-cap{margin:.6rem 0 0;font-size:.92rem;line-height:1.5}",
+    ".w-water-hbond .wh-cap{margin:0;font-size:.92rem;line-height:1.5}",
     ".w-water-hbond .wh-cap strong{font-weight:800}",
-    ".w-water-hbond .wh-air{padding:.8rem}",
-    ".w-water-hbond .wh-bar{display:grid;grid-template-columns:4.5rem 1fr;gap:.5rem;align-items:center;margin:.35rem 0;font-size:.9rem}",
+    ".w-water-hbond .wh-air{padding:.4rem .2rem}",
+    ".w-water-hbond .wh-bar{display:grid;grid-template-columns:5.5rem 1fr;gap:.5rem;align-items:center;margin:.35rem 0;font-size:.9rem}",
     ".w-water-hbond .wh-track{background:var(--surface-2,#e3eaee);border-radius:4px;height:1.4rem;overflow:hidden}",
     ".w-water-hbond .wh-fill{height:100%;border-radius:4px}",
     ".w-water-hbond .wh-fill.w{background:var(--accent,#2547c7)}",
     ".w-water-hbond .wh-fill.a{background:var(--muted,#4d626d)}",
-    ".w-water-hbond .wh-ex{margin:.6rem 0 0;padding:.6rem .8rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.9rem;line-height:1.5}",
-    ".w-water-hbond .wh-note{margin:.4rem 0 0;font-size:.78rem;color:var(--muted,#4d626d)}"
+    ".w-water-hbond .wh-ex{margin:0;padding:.6rem .8rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.9rem;line-height:1.5}",
+    ".w-water-hbond .wh-note{margin:0;font-size:.78rem;color:var(--muted,#4d626d)}"
   ].join("\n");
 
   var T = {
@@ -184,7 +184,7 @@
   function angleTo(a, b) { return Math.atan2(b[1] - a[1], b[0] - a[0]) / RAD; }
 
   function txt(x, y, str, size, anchor, weight, fillVar) {
-    return '<text x="' + x + '" y="' + y + '" font-size="' + (size || 11) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fillVar ? ' style="fill:' + fillVar + '"' : '') + '>' + str + '</text>';
+    return '<text x="' + x + '" y="' + y + '" font-size="' + Math.max(size || 12.5, 12.5) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fillVar ? ' style="fill:' + fillVar + '"' : '') + '>' + str + '</text>';
   }
 
   function wrapLines(str, maxEm) {
@@ -256,7 +256,7 @@
   function legend(y, items) {
     var s = '';
     items.forEach(function (it, i) {
-      var yy = y + i * 15;
+      var yy = y + i * 17;
       if (it.dash) {
         s += '<line x1="14" y1="' + yy + '" x2="40" y2="' + yy + '" stroke="' + it.color + '" stroke-width="2.6" stroke-dasharray="5 4"/>';
       } else {
@@ -280,7 +280,7 @@
     var s = svgOpen(360, VB_H, S.t(T.aria.xylem));
     s += '<line x1="50" y1="36" x2="50" y2="290" stroke="var(--muted,#4d626d)" stroke-width="6"/><line x1="310" y1="36" x2="310" y2="290" stroke="var(--muted,#4d626d)" stroke-width="6"/>';
     s += txt(58, 28, S.t(T.labels.wall), 10, "start", 700, "var(--muted,#4d626d)");
-    var pos = [[132, 72], [132, 152], [132, 232], [236, 72], [236, 152], [236, 232]];
+    var pos = [[132, 66], [132, 142], [132, 218], [236, 66], [236, 142], [236, 218]];
     var links = [[0, 1], [1, 2], [3, 4], [4, 5]];
     s += network(pos, links, { charges: S.charges, bonds: S.bonds, defaultAim: [90, 90, 90, 90, 90, 90] });
     s += arrow(184, 66, 184, 14, "var(--ink,#0f2029)");
@@ -292,7 +292,7 @@
   function sceneSurface(S) {
     var s = svgOpen(360, VB_H, S.t(T.aria.surface));
     s += txt(14, 24, S.t(T.labels.air), 11, "start", 700, "var(--muted,#4d626d)");
-    s += wrap(348, 100, S.t(T.labels.noUp), 9.5, "end", 700, "var(--muted,#4d626d)", 13);
+    s += wrap(348, 44, S.t(T.labels.noUp), 9.5, "end", 700, "var(--muted,#4d626d)", 13);
     s += '<path d="M6 134 L132 134 Q140 142 148 134 L154 134 Q162 142 170 134 L176 134 Q184 142 192 134 L354 134" fill="none" stroke="var(--accent,#2547c7)" stroke-width="2" opacity="0.6"/>';
     s += '<ellipse cx="162" cy="104" rx="24" ry="7" fill="var(--c-carbon,#4a5a63)"/><circle cx="135" cy="102" r="5" fill="var(--c-carbon,#4a5a63)"/>';
     [[136, 132], [148, 136], [176, 136], [188, 132]].forEach(function (p) {
@@ -384,7 +384,7 @@
         waterSvg += m.svg;
       });
     }
-    shell(112, 140, true, [-90, 90, 150]); shell(250, 140, false, [-90, 90, 30]);
+    shell(112, 140, true, [-90, 90, 150]); shell(250, 140, false, [-90, 30, 150]);
     s += att + waterSvg + ion(112, 140, "Na⁺", NA) + ion(250, 140, "Cl⁻", CL);
     s += legend(268, [{ label: S.t(T.legCov) }, { label: S.t(T.labels.attractIon), dash: true, color: "var(--ionic,#8e44ad)" }]);
     return s + '</svg>';
@@ -423,15 +423,17 @@
     return s + '</svg>';
   }
 
-  function airPanel(S, key) {
-    var p = T.props[key];
+  function airBars(S, key) {
     var h = '<div class="wh-air">';
     h += '<div class="wh-bar"><span>' + S.t(T.barW) + '</span><div class="wh-track"><div class="wh-fill w" style="width:92%"></div></div></div>';
     h += '<div class="wh-bar"><span>' + S.t(T.barA) + '</span><div class="wh-track"><div class="wh-fill a" style="width:' + (key === "buoyancy" ? 6 : 12) + '%"></div></div></div>';
-    h += '<p class="wh-note">' + S.t(T.barNote) + '</p>';
-    h += '<p class="wh-cap"><strong>' + S.t(p.name) + ':</strong> ' + S.t(T.barW) + ' = ' + S.t(p.water) + '; ' + S.t(T.barA) + ' = ' + S.t(p.air) + '. ' + S.t(p.text) + '</p>';
-    h += '<div class="wh-ex">' + S.t(p.ex) + '</div></div>';
+    h += '<p class="wh-note">' + S.t(T.barNote) + '</p></div>';
     return h;
+  }
+  function airText(S, key) {
+    var p = T.props[key];
+    return '<p class="wh-cap" aria-live="polite"><strong>' + S.t(p.name) + ':</strong> ' + S.t(T.barW) + ' = ' + S.t(p.water) + '; ' + S.t(T.barA) + ' = ' + S.t(p.air) + '. ' + S.t(p.text) + '</p>' +
+      '<div class="wh-ex">' + S.t(p.ex) + '</div>';
   }
 
   IB.registerWidget("water-hbond", {
@@ -450,6 +452,9 @@
       var tabKeys = ["structure", "cohesion", "adhesion", "solvent", "air"];
       var subKeys = { cohesion: ["xylem", "surface"], adhesion: ["wall", "capillary"], solvent: ["nacl", "glucose", "oil"] };
       var propKeys = ["buoyancy", "viscosity", "conductivity", "heat"];
+      var ot = ctx.options && ctx.options.tab;
+      if (typeof ot === "number" && tabKeys[ot]) state.tab = tabKeys[ot];
+      else if (typeof ot === "string" && tabKeys.indexOf(ot) >= 0) state.tab = ot;
 
       function currentKey() {
         if (state.tab === "structure") return "structure";
@@ -459,39 +464,42 @@
 
       function render() {
         var key = currentKey();
-        var h = '<div class="wh-tabs" role="group" aria-label="' + ctx.t(T.title) + '">';
+        var h = '<div class="wl"><div class="wl-tabs" role="tablist" aria-label="' + ctx.t(T.title) + '">';
         tabKeys.forEach(function (k) {
-          h += '<button type="button" class="wh-tab" data-tab="' + k + '" aria-pressed="' + (state.tab === k) + '">' + ctx.t(T.tabs[k]) + '</button>';
+          h += '<button type="button" role="tab" class="wh-tab" data-tab="' + k + '" aria-pressed="' + (state.tab === k) + '" aria-selected="' + (state.tab === k) + '">' + ctx.t(T.tabs[k]) + '</button>';
         });
         h += '</div>';
-        // sub controls
-        h += '<div class="wh-subs">';
+        var panel = '<div class="wh-subs">';
         if (subKeys[state.tab]) {
           subKeys[state.tab].forEach(function (k) {
-            h += '<button type="button" class="wh-sub" data-sub="' + k + '" aria-pressed="' + (state.sub[state.tab] === k) + '">' + ctx.t(T.sub[k]) + '</button>';
+            panel += '<button type="button" class="wh-sub wl-sub" data-sub="' + k + '" aria-pressed="' + (state.sub[state.tab] === k) + '">' + ctx.t(T.sub[k]) + '</button>';
           });
         }
         if (state.tab === "air") {
           propKeys.forEach(function (k) {
-            h += '<button type="button" class="wh-sub" data-prop="' + k + '" aria-pressed="' + (state.prop === k) + '">' + ctx.t(T.props[k].name) + '</button>';
+            panel += '<button type="button" class="wh-sub wl-sub" data-prop="' + k + '" aria-pressed="' + (state.prop === k) + '">' + ctx.t(T.props[k].name) + '</button>';
           });
         }
         if (state.tab === "solvent" && state.sub.solvent === "nacl") {
-          h += '<button type="button" class="wh-sub" data-dissolve="1">' + ctx.t(S.dissolved ? T.reset : T.dissolve) + '</button>';
+          panel += '<button type="button" class="wh-sub" data-dissolve="1">' + ctx.t(S.dissolved ? T.reset : T.dissolve) + '</button>';
         }
+        panel += '</div>';
         if (state.tab !== "air") {
-          h += '<label class="wh-chk"><input type="checkbox" data-chg ' + (S.charges ? "checked" : "") + '> ' + ctx.t(T.charges) + '</label>';
-          h += '<label class="wh-chk"><input type="checkbox" data-bnd ' + (S.bonds ? "checked" : "") + '> ' + ctx.t(T.bonds) + '</label>';
+          panel += '<div class="wh-subs">';
+          panel += '<label class="wh-chk"><input type="checkbox" data-chg ' + (S.charges ? "checked" : "") + '> ' + ctx.t(T.charges) + '</label>';
+          panel += '<label class="wh-chk"><input type="checkbox" data-bnd ' + (S.bonds ? "checked" : "") + '> ' + ctx.t(T.bonds) + '</label>';
+          panel += '</div>';
         }
-        h += '</div>';
         if (key === "air") {
-          h += '<div class="wh-stage">' + airPanel(ctx, state.prop) + '</div>';
+          h += '<div class="wl-stage">' + airBars(ctx, state.prop) + '</div>';
+          panel += airText(ctx, state.prop);
         } else {
           var scene = { structure: sceneStructure, xylem: sceneXylem, surface: sceneSurface, wall: sceneWall, capillary: sceneCapillary, nacl: sceneNaCl, glucose: sceneGlucose, oil: sceneOil }[key];
-          h += '<div class="wh-stage">' + scene(S) + '</div>';
-          h += '<p class="wh-cap" aria-live="polite">' + ctx.t(T.cap[key]) + '</p>';
-          h += '<p class="wh-note">' + ctx.t(T.notScale) + '</p>';
+          h += '<div class="wl-stage">' + scene(S) + '</div>';
+          panel += '<p class="wh-cap" aria-live="polite">' + ctx.t(T.cap[key]) + '</p>';
+          panel += '<p class="wh-note">' + ctx.t(T.notScale) + '</p>';
         }
+        h += '<div class="wl-panel">' + panel + '</div></div>';
         el.innerHTML = h;
       }
 

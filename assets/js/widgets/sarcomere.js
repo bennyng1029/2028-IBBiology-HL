@@ -10,10 +10,10 @@
     ".w-sarcomere .sa-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px)}",
     ".w-sarcomere svg{display:block;width:100%;height:auto}",
     ".w-sarcomere svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
-    ".w-sarcomere .sa-ctl{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.7rem 0 .3rem}",
-    ".w-sarcomere .sa-rng{flex:1 1 14rem;display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--muted,#4d626d)}",
+    ".w-sarcomere .sa-ctl{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0}",
+    ".w-sarcomere .sa-rng{flex:1 1 100%;display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--muted,#4d626d)}",
     ".w-sarcomere input[type=range]{flex:1;min-width:6rem;height:2.2rem;accent-color:var(--accent,#2547c7)}",
-    ".w-sarcomere .sa-btn{font:inherit;font-size:.86rem;font-weight:700;min-height:2.5rem;padding:.35rem .8rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
+    ".w-sarcomere .sa-btn{font:inherit;font-size:.86rem;font-weight:700;min-height:2.5rem;padding:.3rem .7rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".w-sarcomere .sa-btn[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-sarcomere .sa-btn:focus-visible,.w-sarcomere input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".w-sarcomere table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.5rem 0}",
@@ -22,10 +22,12 @@
     ".w-sarcomere .ch-same{color:var(--ink,#0f2029);font-weight:800}",
     ".w-sarcomere .ch-dn{color:var(--bad,#d1495b);font-weight:800}",
     ".w-sarcomere .ch-up{color:var(--good,#2a9d5c);font-weight:800}",
-    ".w-sarcomere .sa-msg{margin:.4rem 0;padding:.6rem .8rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.9rem;line-height:1.5;min-height:3.2rem}",
-    ".w-sarcomere .sa-leg{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.8rem;margin:.3rem 0}",
+    ".w-sarcomere .sa-msg{margin:0;padding:.5rem .7rem;background:var(--surface-2,#e3eaee);border-radius:var(--radius,6px);font-size:.88rem;line-height:1.45}",
+    ".w-sarcomere .sa-leg{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.2rem 1rem;font-size:.8rem;margin:.3rem 0 0}",
     ".w-sarcomere .sa-leg i{display:inline-block;width:1.4rem;height:.5rem;border-radius:2px;margin-right:.3rem;vertical-align:middle}",
-    ".w-sarcomere .sa-note{margin:.3rem 0 0;font-size:.76rem;color:var(--muted,#4d626d)}"
+    ".w-sarcomere .sa-note{margin:0;font-size:.76rem;color:var(--muted,#4d626d)}",
+    ".w-sarcomere details summary{cursor:pointer;font-weight:700;font-size:.86rem;min-height:2.2rem;display:flex;align-items:center}",
+    ".w-sarcomere details table{margin:.2rem 0 0;font-size:.82rem}"
   ].join("\n");
 
   var T = {
@@ -72,9 +74,12 @@
     try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
 
     el.innerHTML = "";
+    var wl = document.createElement("div"); wl.className = "wl"; el.appendChild(wl);
+    var stageCol = document.createElement("div"); stageCol.className = "wl-stage"; wl.appendChild(stageCol);
+    var panel = document.createElement("div"); panel.className = "wl-panel"; wl.appendChild(panel);
     var stage = document.createElement("div"); stage.className = "sa-stage";
     var svgHost = document.createElement("div"); stage.appendChild(svgHost);
-    el.appendChild(stage);
+    stageCol.appendChild(stage);
 
     var ctl = document.createElement("div"); ctl.className = "sa-ctl";
     var rng = document.createElement("label"); rng.className = "sa-rng";
@@ -94,14 +99,17 @@
     btn(t(T.pStretch), function () { stopPlay(); set(MAX - 10); });
     var playBtn = null;
     if (!reduce) playBtn = btn(t(T.play), togglePlay, true);
-    el.appendChild(ctl);
+    panel.appendChild(ctl);
 
-    var msg = document.createElement("div"); msg.className = "sa-msg"; msg.setAttribute("aria-live", "polite"); el.appendChild(msg);
-    var tableHost = document.createElement("div"); el.appendChild(tableHost);
-    var leg = document.createElement("div"); leg.className = "sa-leg";
+    var msg = document.createElement("div"); msg.className = "sa-msg"; msg.setAttribute("aria-live", "polite"); panel.appendChild(msg);
+    var det = document.createElement("details");
+    var sum = document.createElement("summary"); sum.textContent = t(T.len);
+    var tableHost = document.createElement("div"); det.appendChild(sum); det.appendChild(tableHost); panel.appendChild(det);
+    try { if (window.matchMedia("(min-width:900px)").matches) det.open = true; } catch (e) {}
+    var leg = document.createElement("div"); leg.className = "sa-leg wl-legend";
     leg.innerHTML = '<span><i style="background:var(--theme-a,#07756f)"></i>' + t(T.actin) + '</span><span><i style="background:var(--accent,#2547c7)"></i>' + t(T.myosin) + '</span><span><i style="background:var(--warn,#c98a00)"></i>' + t(T.titin) + '</span><span><i style="background:var(--ink,#0f2029)"></i>' + t(T.z) + '</span>';
-    el.appendChild(leg);
-    var note = document.createElement("p"); note.className = "sa-note"; note.textContent = t(T.modelNote); el.appendChild(note);
+    stageCol.appendChild(leg);
+    var note = document.createElement("p"); note.className = "sa-note"; note.textContent = t(T.modelNote); panel.appendChild(note);
 
     function bracket(x1, x2, y, up) {
       var d = up ? 6 : -6;
@@ -112,7 +120,7 @@
       var mL = CX - M / 2 * S, mR = CX + M / 2 * S;
       var aTipL = zl + A * S, aTipR = zr - A * S;
       var hW = Math.max(0, len - 2 * A);
-      var s = '<svg viewBox="0 0 600 340" role="img" aria-label="' + t(T.sarc) + '">';
+      var s = '<svg viewBox="0 0 600 344" role="img" aria-label="' + t(T.sarc) + '">';
       // shading: A band, H zone
       s += '<rect x="' + mL + '" y="70" width="' + (mR - mL) + '" height="130" fill="var(--accent-soft,#e0e7fb)"/>';
       if (hW > 0) s += '<rect x="' + (CX - hW / 2 * S) + '" y="70" width="' + (hW * S) + '" height="130" fill="var(--ahl,#ffcf3a)" opacity="0.4"/>';
@@ -151,21 +159,21 @@
       s += '<line x1="' + zl + '" y1="72" x2="' + zl + '" y2="198" stroke="var(--ink,#0f2029)" stroke-width="5"/>';
       s += '<line x1="' + zr + '" y1="72" x2="' + zr + '" y2="198" stroke="var(--ink,#0f2029)" stroke-width="5"/>';
       // brackets and labels
-      s += bracket(mL, mR, 42, true) + '<text x="' + CX + '" y="28" text-anchor="middle" font-size="21" font-weight="700">' + t(T.A) + '</text>';
+      s += bracket(mL, mR, 42, true) + '<text x="' + CX + '" y="28" text-anchor="middle" font-size="24" font-weight="700">' + t(T.A) + '</text>';
       s += bracket(zl, mL, 42, true) + bracket(mR, zr, 42, true);
-      s += '<text x="' + ((zl + mL) / 2) + '" y="68" text-anchor="middle" font-size="19" font-weight="700">' + t(T.I) + '</text>';
-      s += '<text x="' + ((mR + zr) / 2) + '" y="68" text-anchor="middle" font-size="19" font-weight="700">' + t(T.I) + '</text>';
-      s += '<text x="' + zl + '" y="224" text-anchor="middle" font-size="18">' + t(T.z) + '</text>';
-      s += '<text x="' + zr + '" y="224" text-anchor="middle" font-size="18">' + t(T.z) + '</text>';
+      s += '<text x="' + ((zl + mL) / 2) + '" y="68" text-anchor="middle" font-size="22" font-weight="700">' + t(T.I) + '</text>';
+      s += '<text x="' + ((mR + zr) / 2) + '" y="68" text-anchor="middle" font-size="22" font-weight="700">' + t(T.I) + '</text>';
+      s += '<text x="' + zl + '" y="224" text-anchor="middle" font-size="21">' + t(T.z) + '</text>';
+      s += '<text x="' + zr + '" y="224" text-anchor="middle" font-size="21">' + t(T.z) + '</text>';
       // H zone bracket
       if (hW > 0) {
         s += bracket(CX - hW / 2 * S, CX + hW / 2 * S, 244, false);
-        s += '<text x="' + CX + '" y="274" text-anchor="middle" font-size="20" font-weight="700">' + t(T.H) + '</text>';
+        s += '<text x="' + CX + '" y="276" text-anchor="middle" font-size="22" font-weight="700">' + t(T.H) + '</text>';
       } else {
-        s += '<text x="' + CX + '" y="274" text-anchor="middle" font-size="20" font-weight="700">' + t(T.H) + ' = 0</text>';
+        s += '<text x="' + CX + '" y="276" text-anchor="middle" font-size="22" font-weight="700">' + t(T.H) + ' = 0</text>';
       }
       // sarcomere bracket
-      s += bracket(zl, zr, 302, false) + '<text x="' + CX + '" y="330" text-anchor="middle" font-size="20" font-weight="700">' + t(T.sarc) + ' = ' + (len / 100).toFixed(2) + ' µm</text>';
+      s += bracket(zl, zr, 302, false) + '<text x="' + CX + '" y="332" text-anchor="middle" font-size="22" font-weight="700">' + t(T.sarc) + ' = ' + (len / 100).toFixed(2) + ' µm</text>';
       s += '</svg>';
       svgHost.innerHTML = s;
       input.value = len;

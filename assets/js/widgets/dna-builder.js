@@ -8,9 +8,13 @@
 
   var CSS = [
     ".w-dna-builder{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029)}",
-    ".w-dna-builder .wd-tabs,.w-dna-builder .wd-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .6rem;align-items:center}",
-    ".w-dna-builder button{font:inherit;font-size:.88rem;font-weight:700;min-height:2.5rem;padding:.35rem .75rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer;line-height:1.2}",
-    ".w-dna-builder button[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
+    ".w-dna-builder .wd-row{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}",
+    ".w-dna-builder .wl-stage svg{display:block;width:100%;height:auto;max-height:var(--stage-max)}",
+    ".w-dna-builder .wl-tabs button{border:0;border-bottom:4px solid transparent;border-radius:0;background:transparent}",
+    ".w-dna-builder .wl-tabs button[aria-selected=true]{background:var(--accent-soft,#e0e7fb);color:var(--ink,#0f2029);border-bottom-color:var(--accent,#2547c7)}",
+    ".w-dna-builder .wl-legend .wd-sw{display:inline-block;width:.9rem;height:.9rem;flex:none}",
+    ".w-dna-builder .wd-row button,.w-dna-builder button.wd-base{font:inherit;font-size:.88rem;font-weight:700;min-height:2.5rem;padding:.35rem .75rem;border-radius:var(--radius,6px);border:1.5px solid var(--line-strong,var(--line,#c3d0d7));background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer;line-height:1.2}",
+    ".w-dna-builder .wd-row button[aria-pressed=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-dna-builder button:focus-visible,.w-dna-builder input:focus-visible,.w-dna-builder [role=button]:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".w-dna-builder .wd-base{min-width:4.2rem;min-height:3.2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem}",
     ".w-dna-builder .wd-base b{font-size:1.25rem}",
@@ -18,16 +22,14 @@
     ".w-dna-builder label.wd-chk{display:inline-flex;align-items:center;gap:.4rem;font-size:.88rem;min-height:2.25rem;padding:0 .3rem;cursor:pointer}",
     ".w-dna-builder label.wd-chk input{width:1.15rem;height:1.15rem;accent-color:var(--accent,#2547c7)}",
     ".w-dna-builder .wd-ahl{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.05em;padding:.05rem .4rem;border-radius:3px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000)}",
-    ".w-dna-builder .wd-stage{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px)}",
-    ".w-dna-builder svg{display:block;width:100%;height:auto;max-height:78vh}",
     ".w-dna-builder svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif)}",
     ".w-dna-builder [role=button]{cursor:pointer}",
-    ".w-dna-builder .wd-msg{margin:.6rem 0 0;padding:.55rem .75rem;border-radius:var(--radius,6px);background:var(--surface-2,#e3eaee);font-size:.92rem;line-height:1.5;min-height:2.6rem}",
+    ".w-dna-builder .wd-msg{margin:0;padding:.55rem .75rem;border-radius:var(--radius,6px);background:var(--surface-2,#e3eaee);font-size:.92rem;line-height:1.5;min-height:2.6rem}",
     ".w-dna-builder .wd-msg.good{background:var(--good-soft,#dcf2e4)}",
     ".w-dna-builder .wd-msg.bad{background:var(--bad-soft,#fbe0de)}",
-    ".w-dna-builder table{width:100%;margin-top:.6rem;font-size:.88rem}",
+    ".w-dna-builder table{width:100%;margin:0;font-size:.88rem}",
     ".w-dna-builder th,.w-dna-builder td{border:1px solid var(--line,#c3d0d7);padding:.3rem .5rem;text-align:left;vertical-align:top}",
-    ".w-dna-builder .wd-note{margin:.4rem 0 0;font-size:.78rem;color:var(--muted,#4d626d)}"
+    ".w-dna-builder .wd-note{margin:0;font-size:.78rem;color:var(--muted,#4d626d)}"
   ].join("\n");
 
   var T = {
@@ -116,7 +118,7 @@
   function esc(s) { return String(s).replace(/"/g, "&quot;"); }
   function svgOpen(w, h, label) { return '<svg viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + esc(label) + '" xmlns="http://www.w3.org/2000/svg">'; }
   function txt(x, y, s, size, anchor, weight, fill) {
-    return '<text x="' + x + '" y="' + y + '" font-size="' + (size || 11) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fill ? ' style="fill:' + fill + '"' : '') + '>' + s + '</text>';
+    return '<text x="' + x + '" y="' + y + '" font-size="' + Math.max(size || 12.5, 12.5) + '" text-anchor="' + (anchor || "middle") + '" font-weight="' + (weight || 600) + '"' + (fill ? ' style="fill:' + fill + '"' : '') + '>' + s + '</text>';
   }
   function wrapLines(str, maxEm) {
     function w(t) { var n = 0; for (var i = 0; i < t.length; i++) n += t.charCodeAt(i) >= 0x3000 ? 1 : 0.56; return n; }
@@ -185,98 +187,88 @@
       s += part("base", ctx.t(T.lab.base), rectB(SX + 32, sy - 12, 70, 24, bases[i], "plain"));
     }
     s += txt(SX + 20, 36, ctx.t(T.lab.phosphate), 10.5, "start", 700, MUT);
-    var sl = wrapLines(ctx.t(T.lab.sugar), 10);
-    s += wrap(SX - 22, 54, ctx.t(T.lab.sugar), 10, "end", 700, MUT, 10);
-    s += wrap(SX - 22, 54 + sl.length * 13, "(" + ctx.t(st.rna ? T.lab.ribose : T.lab.deoxy) + ")", 10, "end", 700, MUT, 10);
-    s += wrap(SX + 67, 94, ctx.t(T.lab.base), 10, "middle", 700, MUT, 14);
-    s += wrap(250, 156, ctx.t(st.joined ? T.lab.polymer : T.lab.monomers), 10.5, "start", 700, MUT, 11);
+    var sl = wrapLines(ctx.t(T.lab.sugar), 8);
+    s += wrap(SX - 22, 52, ctx.t(T.lab.sugar), 12.5, "end", 700, MUT, 8);
+    s += wrap(SX - 22, 52 + sl.length * 15.5, "(" + ctx.t(st.rna ? T.lab.ribose : T.lab.deoxy) + ")", 12.5, "end", 700, MUT, 8);
+    s += wrap(SX + 110, 64, ctx.t(T.lab.base), 12.5, "start", 700, MUT, 9.5);
+    s += wrap(236, 156, ctx.t(st.joined ? T.lab.polymer : T.lab.monomers), 12.5, "start", 700, MUT, 9.5);
     if (st.joined) {
-      s += wrap(250, 200, ctx.t(T.lab.backbone), 10.5, "start", 700, BB, 11);
-      s += wrap(250, 244, ctx.t(T.lab.water), 10.5, "start", 600, "var(--c-nitrogen,#2d5cdd)", 11);
+      s += wrap(236, 206, ctx.t(T.lab.backbone), 12.5, "start", 700, BB, 9.5);
+      s += wrap(236, 262, ctx.t(T.lab.water), 12.5, "start", 600, "var(--c-nitrogen,#2d5cdd)", 9.5);
     }
     return s + '</svg>';
   }
 
   /* ---------- Tab 2: build the complementary strand ---------- */
   function sceneBuild(ctx, st) {
-    var seq = SEQS[st.seqIdx], N = seq.length, ROW = 46, TOP = 78;
-    var H = TOP + (N - 1) * ROW + 120;
-    var s = svgOpen(360, H, ctx.t(T.aria.build));
-    var LX = 70, RX = 290, BASEW = 72, BH = 24;
+    var seq = SEQS[st.seqIdx], N = seq.length, X0 = 70, DX = 50;
+    var YT = 64, YB = 190, T0 = 82, T1 = 172, BW = 38, MUT = "var(--muted,#4d626d)";
+    var s = svgOpen(392, 244, ctx.t(T.aria.build));
     function mode(letter) { return st.pp ? (PURINE[letter] ? "purine" : "pyrimidine") : "plain"; }
-    function wOf(letter) { return st.pp ? (PURINE[letter] ? 92 : 52) : BASEW; }
-    // current row band
+    function lenOf(letter) { return st.pp ? (PURINE[letter] ? 46 : 22) : 34; }
+    function cx(i) { return X0 + i * DX; }
+    // current column band
     if (st.filled < N) {
-      var cy0 = TOP + st.filled * ROW;
-      s += '<rect x="56" y="' + (cy0 - 19) + '" width="248" height="38" rx="5" fill="var(--accent-soft,#e0e7fb)" opacity="0.55"/>';
+      s += '<rect x="' + (cx(st.filled) - 24) + '" y="46" width="48" height="152" rx="5" fill="var(--accent-soft,#e0e7fb)" opacity="0.6"/>';
     }
-    // backbones
-    for (var i = 0; i < N; i++) {
-      var cy = TOP + i * ROW;
-      s += line(LX, cy - 20, LX, cy);               // P-S (left)
-      s += line(RX, cy, RX, cy + 20);               // S-P (right)
-      if (i < N - 1) {
-        s += line(LX, cy, LX, cy + ROW - 20);       // S -> next P (left)
-        s += line(RX, cy + 20, RX, cy + ROW);       // P -> next S (right)
-      }
-    }
-    // base pairs
+    // backbones: template (5′ left) and new strand (5′ right)
+    s += line(cx(0) - 22, YT, cx(N - 1) + 20, YT) + line(cx(0) - 20, YB, cx(N - 1) + 22, YB);
     for (var j = 0; j < N; j++) {
-      var cy2 = TOP + j * ROW, L1 = seq[j], R1 = COMP[L1], wl = wOf(L1), wr = wOf(R1);
-      var lx = 84, rx = 276 - wr;
-      s += line(80, cy2, 84, cy2);
-      s += line(276, cy2, 280, cy2);
+      var x = cx(j), L1 = seq[j], R1 = COMP[L1], a = lenOf(L1), b = lenOf(R1);
+      s += line(x, YT + 10, x, T0, null, 2.2) + line(x, YB - 10, x, T1, null, 2.2);
       if (j < st.filled) {
-        s += line(lx + wl + 1, cy2, rx - 1, cy2, "var(--hbond,#2a7de1)", 2.6, "5 4");
-        s += rectB(lx, cy2 - BH / 2, wl, BH, L1, mode(L1));
-        s += rectB(rx, cy2 - BH / 2, wr, BH, R1, mode(R1));
+        s += line(x, T0 + a, x, T1 - b, "var(--hbond,#2a7de1)", 2.6, "4 3");
+        s += rectB(x - BW / 2, T0, BW, a, L1, mode(L1));
+        s += rectB(x - BW / 2, T1 - b, BW, b, R1, mode(R1));
       } else {
-        s += rectB(lx, cy2 - BH / 2, wl, BH, L1, mode(L1));
-        var isCur = j === st.filled;
-        s += rectB(276 - BASEW, cy2 - BH / 2, BASEW, BH, ctx.t(T.lab.slot), isCur ? "cur" : "slot");
+        s += rectB(x - BW / 2, T0, BW, a, L1, mode(L1));
+        s += rectB(x - BW / 2, T1 - 34, BW, 34, ctx.t(T.lab.slot), j === st.filled ? "cur" : "slot");
       }
     }
-    // shapes on top
+    // shapes on top (phosphate on the 5′ side of each sugar)
     for (var k = 0; k < N; k++) {
-      var cy3 = TOP + k * ROW;
-      s += circ(LX, cy3 - 20, 6.5) + pent(LX, cy3, 10.5);
-      s += pent(RX, cy3, 10.5) + circ(RX, cy3 + 20, 6.5);
+      var xk = cx(k);
+      s += circ(xk - 22, YT, 6.5) + pent(xk, YT, 10.5);
+      s += pent(xk, YB, 10.5) + circ(xk + 22, YB, 6.5);
     }
     // direction arrows (antiparallel)
-    var bot = TOP + (N - 1) * ROW;
-    s += arrow(26, TOP - 22, 26, bot + 12, "var(--muted,#4d626d)");
-    s += arrow(334, bot + 12, 334, TOP - 22, "var(--muted,#4d626d)");
-    // titles
-    s += txt(LX, 14, ctx.t(T.build.template), 10.5, "middle", 700, "var(--muted,#4d626d)");
-    s += txt(RX, 14, ctx.t(T.build.newStrand), 10.5, "middle", 700, "var(--muted,#4d626d)");
+    s += arrow(cx(0) - 22, 34, cx(N - 1) + 24, 34, MUT);
+    s += arrow(cx(N - 1) + 24, 214, cx(0) - 22, 214, MUT);
+    s += txt(14, 16, ctx.t(T.build.template), 13, "start", 700, MUT);
+    s += txt(14, 238, ctx.t(T.build.newStrand), 13, "start", 700, MUT);
     if (st.sh53) {
-      s += pill(LX, TOP - 38, P5) + pill(LX, bot + 34, P3) + pill(RX, TOP - 38, P3) + pill(RX, bot + 40, P5);
+      s += pill(21, YT + 6, P5) + pill(cx(N - 1) + 44, YT + 6, P3) + pill(21, YB + 6, P3) + pill(cx(N - 1) + 46, YB + 6, P5);
     }
-    // legend (one item per row so long ja/zh labels fit)
-    var ly = bot + 52, MUT = "var(--muted,#4d626d)";
-    s += circ(20, ly, 6) + txt(34, ly + 4, ctx.t(T.lab.legP), 10, "start", 600, MUT);
-    ly += 19; s += pent(20, ly, 8) + txt(34, ly + 4, ctx.t(T.lab.legS), 10, "start", 600, MUT);
-    ly += 19; s += '<rect x="14" y="' + (ly - 6) + '" width="12" height="12" rx="2" fill="var(--accent-soft,#e0e7fb)" stroke="var(--accent,#2547c7)" stroke-width="1.5"/>' + txt(34, ly + 4, ctx.t(T.lab.legB), 10, "start", 600, MUT);
-    ly += 19; s += line(12, ly, 28, ly, "var(--hbond,#2a7de1)", 2.6, "5 4") + txt(34, ly + 4, ctx.t(T.lab.legH), 10, "start", 600, MUT);
-    ly += 19; s += txt(14, ly + 4, ctx.t(T.lab.dirs), 10, "start", 600, MUT);
-    if (st.pp) {
-      ly += 19; s += '<rect x="14" y="' + (ly - 6) + '" width="12" height="12" rx="2" fill="var(--theme-a-soft,#d9efec)" stroke="var(--theme-a,#07756f)" stroke-width="1.5"/>' + txt(34, ly + 4, ctx.t(T.lab.purine), 10, "start", 600, MUT);
-      ly += 19; s += '<rect x="14" y="' + (ly - 6) + '" width="12" height="12" rx="2" fill="var(--theme-b-soft,#f8dfe7)" stroke="var(--theme-b,#b82a56)" stroke-width="1.5"/>' + txt(34, ly + 4, ctx.t(T.lab.pyrimidine), 10, "start", 600, MUT);
-      ly += 19; s += txt(14, ly + 4, ctx.t(T.lab.sameWidth), 10, "start", 700, "var(--ink,#0f2029)");
-    }
-    var total = ly + 14;
-    return s.replace(/viewBox="0 0 360 \d+"/, 'viewBox="0 0 360 ' + total + '"') + '</svg>';
+    return s + '</svg>';
+  }
+
+  function sw(kind) {
+    var base = "display:inline-block;width:.9rem;height:.9rem;flex:none;";
+    if (kind === "p") return '<i class="wd-sw" style="' + base + 'border-radius:50%;background:var(--warn-soft,#ffeed6);border:2px solid var(--warn,#9a4a00)"></i>';
+    if (kind === "s") return '<i class="wd-sw" style="' + base + 'background:var(--theme-a,#07756f);clip-path:polygon(50% 0,100% 38%,82% 100%,18% 100%,0 38%);border:0"></i>';
+    if (kind === "b") return '<i class="wd-sw" style="' + base + 'background:var(--accent-soft,#e0e7fb);border:2px solid var(--accent,#2547c7)"></i>';
+    if (kind === "h") return '<i class="wd-sw" style="' + base + 'width:1.3rem;height:0;border:0;border-top:3px dashed var(--hbond,#2a7de1)"></i>';
+    if (kind === "pu") return '<i class="wd-sw" style="' + base + 'background:var(--theme-a-soft,#d9efec);border:2px solid var(--theme-a,#07756f)"></i>';
+    if (kind === "py") return '<i class="wd-sw" style="' + base + 'background:var(--theme-b-soft,#f8dfe7);border:2px solid var(--theme-b,#b82a56)"></i>';
+    return "";
+  }
+  function legendBuild(ctx, st) {
+    var h = '<ul class="wl-legend">';
+    h += '<li>' + sw("p") + ctx.t(T.lab.legP) + '</li><li>' + sw("s") + ctx.t(T.lab.legS) + '</li><li>' + sw("b") + ctx.t(T.lab.legB) + '</li><li>' + sw("h") + ctx.t(T.lab.legH) + '</li>';
+    if (st.pp) h += '<li>' + sw("pu") + ctx.t(T.lab.purine) + '</li><li>' + sw("py") + ctx.t(T.lab.pyrimidine) + '</li><li>' + ctx.t(T.lab.sameWidth) + '</li>';
+    h += '<li>' + ctx.t(T.lab.dirs) + '</li></ul>';
+    return h;
   }
 
   /* ---------- Tab 3: DNA vs RNA ---------- */
   function sugarRing(ctx, cx, cy, rna) {
-    var R = 26, v = [-90, -18, 54, 126, 198].map(function (a) { var r = a * Math.PI / 180; return [cx + R * Math.cos(r), cy + R * Math.sin(r)]; });
+    var R = 30, v = [-90, -18, 54, 126, 198].map(function (a) { var r = a * Math.PI / 180; return [cx + R * Math.cos(r), cy + R * Math.sin(r)]; });
     var s = '<polygon points="' + v.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ") + '" fill="var(--theme-a-soft,#d9efec)" stroke="var(--theme-a,#07756f)" stroke-width="2.5"/>';
     s += txt(v[0][0], v[0][1] + 4, "O", 11, "middle", 800);
     var nums = ["", "1′", "2′", "3′", "4′"];
     for (var i = 1; i < 5; i++) {
-      var nx = cx + (v[i][0] - cx) * 0.55, ny = cy + (v[i][1] - cy) * 0.55;
-      s += txt(nx, ny + 3.5, nums[i], 9, "middle", 700, "var(--muted,#4d626d)");
+      var nx = cx + (v[i][0] - cx) * 0.62, ny = cy + (v[i][1] - cy) * 0.62;
+      s += txt(nx, ny + 4, nums[i], 12, "middle", 700, "var(--muted,#4d626d)");
     }
     // C1' base
     s += line(v[1][0], v[1][1], v[1][0] + 22, v[1][1] - 9, "var(--ink,#0f2029)", 2.2) + txt(v[1][0] + 25, v[1][1] - 6, ctx.t(T.lab.base1), 10, "start", 700);
@@ -344,41 +336,43 @@
         seqIdx: 0, filled: 0, errors: 0, sh53: false, pp: false, msg: null, msgKind: ""
       };
       var tabs = ["parts", "build", "compare"];
+      var ot = ctx.options && ctx.options.tab;
+      if (typeof ot === "number" && tabs[ot]) st.tab = tabs[ot]; else if (typeof ot === "string" && tabs.indexOf(ot) >= 0) st.tab = ot;
 
       function render() {
-        var h = '<div class="wd-tabs" role="group" aria-label="' + esc(ctx.t(T.title)) + '">';
-        tabs.forEach(function (k) { h += '<button type="button" data-tab="' + k + '" aria-pressed="' + (st.tab === k) + '">' + ctx.t(T.tabs[k]) + '</button>'; });
+        var h = '<div class="wl"><div class="wl-tabs" role="tablist" aria-label="' + esc(ctx.t(T.title)) + '">';
+        tabs.forEach(function (k) { h += '<button type="button" role="tab" data-tab="' + k + '" aria-selected="' + (st.tab === k) + '">' + ctx.t(T.tabs[k]) + '</button>'; });
         h += '</div>';
 
         if (st.tab === "parts") {
+          h += '<div class="wl-stage">' + sceneParts(ctx, st) + '</div><div class="wl-panel">';
           h += '<div class="wd-row">' +
             '<button type="button" data-rna="0" aria-pressed="' + (!st.rna) + '">' + ctx.t(T.dna) + '</button>' +
             '<button type="button" data-rna="1" aria-pressed="' + st.rna + '">' + ctx.t(T.rna) + '</button>' +
             '<button type="button" data-join="1">' + ctx.t(st.joined ? T.split : T.join) + '</button></div>';
-          h += '<div class="wd-stage">' + sceneParts(ctx, st) + '</div>';
           var info = st.info === "sugar" ? (st.rna ? T.parts.sugarRNA : T.parts.sugarDNA) : (st.info ? T.parts[st.info] : T.parts.hint);
           h += '<p class="wd-msg" aria-live="polite">' + ctx.t(info) + '</p>';
-          h += '<p class="wd-note">' + ctx.t(st.joined ? T.capParts.joined : T.capParts.separate) + '</p>';
+          h += '<p class="wd-note">' + ctx.t(st.joined ? T.capParts.joined : T.capParts.separate) + '</p></div>';
         } else if (st.tab === "build") {
           var seq = SEQS[st.seqIdx], done = st.filled >= seq.length;
-          h += '<div class="wd-row">' +
-            '<label class="wd-chk"><input type="checkbox" data-s53 ' + (st.sh53 ? "checked" : "") + '> ' + ctx.t(T.sh53) + ' <span class="wd-ahl">' + ctx.t(T.ahl) + '</span></label>' +
-            '<label class="wd-chk"><input type="checkbox" data-pp ' + (st.pp ? "checked" : "") + '> ' + ctx.t(T.shPP) + ' <span class="wd-ahl">' + ctx.t(T.ahl) + '</span></label></div>';
-          h += '<div class="wd-stage">' + sceneBuild(ctx, st) + '</div>';
-          h += '<div class="wd-row" style="margin-top:.6rem">';
-          ["A", "T", "G", "C"].forEach(function (b) {
-            h += '<button type="button" class="wd-base" data-pick="' + b + '"' + (done ? " disabled" : "") + '><b>' + b + '</b><small>' + ctx.t(T.names[b]) + '</small></button>';
-          });
-          h += '<button type="button" data-new="1">' + ctx.t(T.newSeq) + '</button><button type="button" data-restart="1">' + ctx.t(T.reset) + '</button></div>';
+          h += '<div class="wl-stage">' + sceneBuild(ctx, st) + legendBuild(ctx, st) + '</div><div class="wl-panel">';
           var msg = st.msg ? ctx.t(st.msg) : ctx.t(T.build.start);
           if (done) msg = ctx.t(T.build.done) + " (" + ctx.t(T.build.mistakes) + ": " + st.errors + ")";
           h += '<p class="wd-msg ' + (done ? "good" : st.msgKind) + '" aria-live="polite">' + msg + '</p>';
+          h += '<div class="wd-row">';
+          ["A", "T", "G", "C"].forEach(function (b) {
+            h += '<button type="button" class="wd-base" data-pick="' + b + '"' + (done ? " disabled" : "") + '><b>' + b + '</b><small>' + ctx.t(T.names[b]) + '</small></button>';
+          });
+          h += '</div><div class="wd-row"><button type="button" data-new="1">' + ctx.t(T.newSeq) + '</button><button type="button" data-restart="1">' + ctx.t(T.reset) + '</button></div>';
+          h += '<div class="wd-row">' +
+            '<label class="wd-chk"><input type="checkbox" data-s53 ' + (st.sh53 ? "checked" : "") + '> ' + ctx.t(T.sh53) + ' <span class="wd-ahl">' + ctx.t(T.ahl) + '</span></label>' +
+            '<label class="wd-chk"><input type="checkbox" data-pp ' + (st.pp ? "checked" : "") + '> ' + ctx.t(T.shPP) + ' <span class="wd-ahl">' + ctx.t(T.ahl) + '</span></label></div></div>';
         } else {
-          h += '<div class="wd-stage">' + sceneCompare(ctx) + '</div>';
+          h += '<div class="wl-stage">' + sceneCompare(ctx) + '</div><div class="wl-panel">';
           h += '<p class="wd-msg">' + ctx.t(T.compare.cap) + '</p>';
-          h += compareTable(ctx);
+          h += compareTable(ctx) + '</div>';
         }
-        el.innerHTML = h;
+        el.innerHTML = h + '</div>';
       }
 
       function focusSel(sel) { var n = el.querySelector(sel); if (n) n.focus(); }

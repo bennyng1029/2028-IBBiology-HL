@@ -5,36 +5,43 @@
   var STYLE_ID = "ibw-magnification-css";
   var CSS = [
     ".w-magnification{color:var(--ink,#0f2029);font-family:var(--font-body,system-ui,sans-serif);font-size:.95rem}",
-    ".w-magnification .mg-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}",
+    ".w-magnification .mg-body{display:contents}",
+    ".w-magnification .wl-stage{background:transparent;border:0;padding:0;display:grid;gap:.6rem;align-content:start}",
+    ".w-magnification .wl-stage.card{background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px);padding:.8rem}",
+    ".w-magnification .wl-tabs button[aria-selected='true']{background:var(--accent-soft,#e0e7fb);color:var(--ink,#0f2029);border-bottom-color:var(--accent,#2547c7)}",
+    ".w-magnification .mg-out details{margin-top:6px}",
+    ".w-magnification .mg-out summary{cursor:pointer;font-weight:700;min-height:2rem}",
     ".w-magnification button{font:inherit;cursor:pointer}",
-    ".w-magnification button.mg-tab,.w-magnification button.mg-btn,.w-magnification button.mg-opt{border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);border-radius:999px;padding:6px 13px;font-size:.9rem;min-height:38px;line-height:1.2}",
+    ".w-magnification button.mg-btn,.w-magnification button.mg-opt{border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);border-radius:999px;padding:6px 13px;font-size:.9rem;min-height:38px;line-height:1.2}",
     ".w-magnification button.mg-btn.primary{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff);border-radius:var(--radius,6px)}",
     ".w-magnification button.mg-btn{border-radius:var(--radius,6px)}",
     ".w-magnification button[aria-selected='true'],.w-magnification button[aria-pressed='true']{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".w-magnification button:focus-visible,.w-magnification input:focus-visible,.w-magnification select:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".w-magnification .mg-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}",
+    ".w-magnification .mg-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0}",
     ".w-magnification .mg-s>label{flex:1 1 100%}",
     ".w-magnification .mg-row>label,.w-magnification .mg-lab{min-width:7.2em;font-weight:600}",
     ".w-magnification input[type=number],.w-magnification select{font:inherit;padding:6px 8px;border:1px solid var(--line-strong,var(--line,#c3d0d7));border-radius:var(--radius,6px);background:var(--surface,#fff);color:var(--ink,#0f2029);min-height:38px}",
     ".w-magnification input[type=number]{width:8.5em}",
     ".w-magnification input[disabled]{background:var(--surface-2,#e3eaee);color:var(--muted,#4d626d)}",
     ".w-magnification input[type=range]{flex:1 1 150px;min-width:120px;accent-color:var(--accent,#2547c7)}",
-    ".w-magnification .mg-out{margin:12px 0 4px;padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-left:5px solid var(--accent,#2547c7);border-radius:var(--radius,6px)}",
+    ".w-magnification .mg-out{margin:0;padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-left:5px solid var(--accent,#2547c7);border-radius:var(--radius,6px)}",
     ".w-magnification .mg-out ol{margin:4px 0 6px 1.2em;padding:0}",
     ".w-magnification .mg-out li{margin:3px 0;line-height:1.45}",
     ".w-magnification .mg-res{font-weight:700;font-size:1.08rem;margin:6px 0 0}",
     ".w-magnification .mg-bad{color:var(--bad,#b3261e)}",
     ".w-magnification .mg-good{color:var(--good,#17703f);font-weight:700}",
-    ".w-magnification .mg-svg{display:block;width:100%;height:auto;background:var(--bg,#edf1f3);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius-lg,12px)}",
-    ".w-magnification .mg-svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,sans-serif);font-size:13px}",
-    ".w-magnification .mg-formula{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 10px}",
-    ".w-magnification .mg-formula svg{width:96px;height:auto;flex:none}",
+    ".w-magnification .mg-svg{display:block;width:100%;height:auto;max-height:var(--stage-max,320px);background:var(--bg,#edf1f3);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius-lg,12px)}",
+    ".w-magnification .mg-svg text{fill:var(--ink,#0f2029);font-family:var(--font-body,sans-serif);font-size:14px}",
+    ".w-magnification .mg-formula{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0}",
+    ".w-magnification .mg-formula>div{flex:1 1 11rem;min-width:0}",
+    "@media(max-width:560px){.w-magnification .mg-formula svg{width:105px}}",
+    ".w-magnification .mg-formula svg{width:140px;height:auto;flex:none}",
     ".w-magnification .mg-formula svg text{fill:var(--ink,#0f2029);font-size:15px;font-weight:700;font-family:var(--font-body,sans-serif)}",
     ".w-magnification .mg-formula svg line,.w-magnification .mg-formula svg path{stroke:var(--ink-2,var(--muted,#4d626d));fill:none;stroke-width:2}",
     ".w-magnification .mg-small{font-size:.83rem;color:var(--muted,#4d626d)}",
-    ".w-magnification .mg-q{padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px);margin:8px 0;line-height:1.5}",
+    ".w-magnification .mg-q{padding:10px 12px;background:var(--surface,#fff);border:1px solid var(--line,#c3d0d7);border-radius:var(--radius,6px);margin:0;line-height:1.5}",
     ".w-magnification .mg-score{margin-left:auto;font-size:.85rem;color:var(--muted,#4d626d)}",
-    ".w-magnification .mg-fb{min-height:1.6em;margin:6px 0}"
+    ".w-magnification .mg-fb{min-height:1.4em;margin:0}"
   ].join("\n");
 
   function injectCss() {
@@ -162,14 +169,17 @@
         var uid = "mg" + Math.floor(Math.random() * 1e6);
         var st = { tab: startTab || "calc" };
         el.classList.add("w-magnification");
-        el.innerHTML = '<div class="mg-tabs" role="tablist"></div><div class="mg-body"></div>';
-        var tabs = el.querySelector(".mg-tabs"), body = el.querySelector(".mg-body");
+        el.innerHTML = '<div class="wl"><div class="wl-tabs" role="tablist"></div><div class="mg-body"></div></div>';
+        var tabs = el.querySelector(".wl-tabs"), body = el.querySelector(".mg-body");
+        var wide = window.matchMedia ? window.matchMedia("(min-width: 900px)").matches : true;
+        var tabIds = ["calc", "bar", "prac"], ot = ctx.options && ctx.options.tab;
+        if (typeof ot === "number" && tabIds[ot]) st.tab = tabIds[ot]; else if (typeof ot === "string" && tabIds.indexOf(ot) >= 0) st.tab = ot;
 
         function renderTabs() {
           tabs.innerHTML = "";
           [["calc", UI.tCalc], ["bar", UI.tBar], ["prac", UI.tPrac]].forEach(function (d) {
             var b = document.createElement("button");
-            b.type = "button"; b.className = "mg-tab"; b.setAttribute("role", "tab");
+            b.type = "button"; b.setAttribute("role", "tab");
             b.setAttribute("aria-selected", st.tab === d[0] ? "true" : "false");
             b.textContent = t(d[1]);
             b.addEventListener("click", function () { st.tab = d[0]; render(); });
@@ -180,14 +190,14 @@
         /* ---------- Calculator ---------- */
         var calc = { solve: "M", I: "36", Iu: "mm", A: "12", Au: "µm", M: "3000", Ou: "µm" };
         function renderCalc() {
-          var h = '<div class="mg-formula"><svg viewBox="0 0 100 86" aria-hidden="true"><path d="M50 4 L96 80 L4 80 Z"/><line x1="12" y1="42" x2="88" y2="42"/><line x1="50" y1="42" x2="50" y2="80"/><text x="50" y="34" text-anchor="middle">I</text><text x="28" y="68" text-anchor="middle">A</text><text x="72" y="68" text-anchor="middle">M</text></svg><div><strong>' + t(UI.formula) + '</strong><div class="mg-small">I = A × M &nbsp;·&nbsp; A = I ÷ M</div><div class="mg-small">' + t(UI.formula2) + "</div></div></div>";
+          var h = '<div class="wl-stage card"><div class="mg-formula"><svg viewBox="0 0 100 86" aria-hidden="true"><path d="M50 4 L96 80 L4 80 Z"/><line x1="12" y1="42" x2="88" y2="42"/><line x1="50" y1="42" x2="50" y2="80"/><text x="50" y="34" text-anchor="middle">I</text><text x="28" y="68" text-anchor="middle">A</text><text x="72" y="68" text-anchor="middle">M</text></svg><div><strong>' + t(UI.formula) + '</strong><div class="mg-small">I = A × M &nbsp;·&nbsp; A = I ÷ M</div><div class="mg-small">' + t(UI.formula2) + "</div></div></div></div><div class=\"wl-panel\">";
           h += '<div class="mg-row" role="group" aria-label="' + t(UI.solveFor) + '"><span class="mg-lab">' + t(UI.solveFor) + "</span>";
           [["M", UI.sM], ["A", UI.sA], ["I", UI.sI]].forEach(function (d) { h += '<button type="button" class="mg-opt" data-solve="' + d[0] + '" aria-pressed="' + (calc.solve === d[0]) + '">' + t(d[1]) + "</button>"; });
           h += "</div>";
           h += '<div class="mg-row"><label for="' + uid + 'I">' + t(UI.imgSize) + '</label><input type="number" id="' + uid + 'I" step="any" min="0" inputmode="decimal" value="' + calc.I + '">' + unitSelect(uid + "Iu", calc.Iu) + "</div>";
           h += '<div class="mg-row"><label for="' + uid + 'A">' + t(UI.actSize) + '</label><input type="number" id="' + uid + 'A" step="any" min="0" inputmode="decimal" value="' + calc.A + '">' + unitSelect(uid + "Au", calc.Au) + "</div>";
           h += '<div class="mg-row"><label for="' + uid + 'M">' + t(UI.magn) + '</label><span>×</span><input type="number" id="' + uid + 'M" step="any" min="0" inputmode="decimal" value="' + calc.M + '"></div>';
-          h += '<div class="mg-small" id="' + uid + 'hint"></div><div class="mg-out" aria-live="polite" id="' + uid + 'out"></div>';
+          h += '<div class="mg-small" id="' + uid + 'hint"></div><div class="mg-out" aria-live="polite" id="' + uid + 'out"></div></div>';
           body.innerHTML = h;
           body.querySelectorAll("button[data-solve]").forEach(function (b) {
             b.addEventListener("click", function () { calc.solve = b.getAttribute("data-solve"); renderCalc(); });
@@ -233,18 +243,18 @@
             res = fill(t(UI.resI), { R: fmt(v), Ou: Ou });
           }
           if (hint && s !== "M") hint.textContent = t(UI.answerUnit) + " → " + (s === "A" ? calc.Au : calc.Iu);
-          out.innerHTML = "<strong>" + t(UI.working) + "</strong><ol>" + steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + '</ol><p class="mg-res">' + res + "</p>";
+          out.innerHTML = '<p class="mg-res" style="margin:0">' + res + '</p><details' + (wide ? " open" : "") + "><summary>" + t(UI.working) + "</summary><ol>" + steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol></details>";
         }
 
         /* ---------- Scale bar ---------- */
         var bar = { b: "5", bu: "µm", bl: 25, sl: 38 };
         function renderBar() {
-          var h = '<div class="mg-row"><label for="' + uid + 'bb">' + t(UI.barLabel) + '</label><select id="' + uid + 'bb" aria-label="' + t(UI.barLabel) + '">';
+          var h = '<div class="wl-stage"><div id="' + uid + 'pic"></div><p class="mg-small" style="margin:0">' + t(UI.barNote) + '</p></div><div class="wl-panel"><div class="mg-row"><label for="' + uid + 'bb">' + t(UI.barLabel) + '</label><select id="' + uid + 'bb" aria-label="' + t(UI.barLabel) + '">';
           [["1", "µm"], ["2", "µm"], ["5", "µm"], ["10", "µm"], ["500", "nm"], ["200", "nm"], ["100", "nm"], ["50", "nm"]].forEach(function (p) { h += '<option value="' + p[0] + "|" + p[1] + '"' + (p[0] === bar.b && p[1] === bar.bu ? " selected" : "") + ">" + p[0] + " " + p[1] + "</option>"; });
           h += "</select></div>";
           h += '<div class="mg-row mg-s"><label for="' + uid + 'bl">' + t(UI.barLen) + '</label><input type="range" id="' + uid + 'bl" min="5" max="60" step="1" value="' + bar.bl + '"><output id="' + uid + 'blo">' + bar.bl + "</output></div>";
           h += '<div class="mg-row mg-s"><label for="' + uid + 'sl">' + t(UI.cellLen) + '</label><input type="range" id="' + uid + 'sl" min="5" max="100" step="1" value="' + bar.sl + '"><output id="' + uid + 'slo">' + bar.sl + "</output></div>";
-          h += '<div id="' + uid + 'pic"></div><p class="mg-small">' + t(UI.barNote) + '</p><div class="mg-out" aria-live="polite" id="' + uid + 'bout"></div>';
+          h += '<div class="mg-out" aria-live="polite" id="' + uid + 'bout"></div></div>';
           body.innerHTML = h;
           var sb = body.querySelector("#" + uid + "bb"), rl = body.querySelector("#" + uid + "bl"), rs = body.querySelector("#" + uid + "sl");
           function upd() {
@@ -255,9 +265,9 @@
             var Mv = blnm / bnm, blc = blnm / F[bar.bu];
             var Anm = bar.sl * F.mm / Mv, Ou = Anm >= 1000 ? "µm" : "nm", R = Anm / F[Ou];
             var R2 = bar.sl / bar.bl * b;
-            var html = "<strong>" + t(UI.working) + "</strong><ol><li>" + fill(t(UI.barSteps1), { bl: fmt(bar.bl), b: fmt(b), bu: bar.bu, blc: fmt(blc), M: fmt(Mv) }) + "</li><li>" +
+            var html = '<p class="mg-res" style="margin:0">' + fill(t(UI.resM), { M: fmt(Mv) }) + " &nbsp;·&nbsp; " + fill(t(UI.resA), { R: fmt(R), Ou: Ou }) + '</p><details' + (wide ? " open" : "") + "><summary>" + t(UI.working) + "</summary><ol><li>" + fill(t(UI.barSteps1), { bl: fmt(bar.bl), b: fmt(b), bu: bar.bu, blc: fmt(blc), M: fmt(Mv) }) + "</li><li>" +
               fill(t(UI.barSteps2), { sl: fmt(bar.sl), M: fmt(Mv), Amm: fmt(bar.sl / Mv), R: fmt(R), Ou: Ou }) + "</li><li>" +
-              fill(t(UI.barShort), { sl: bar.sl, bl: bar.bl, b: fmt(b), bu: bar.bu, R2: fmt(R2) }) + '</li></ol><p class="mg-res">' + fill(t(UI.resM), { M: fmt(Mv) }) + " &nbsp;·&nbsp; " + fill(t(UI.resA), { R: fmt(R), Ou: Ou }) + "</p>";
+              fill(t(UI.barShort), { sl: bar.sl, bl: bar.bl, b: fmt(b), bu: bar.bu, R2: fmt(R2) }) + "</li></ol></details>";
             body.querySelector("#" + uid + "bout").innerHTML = html;
           }
           [sb, rl, rs].forEach(function (n) { n.addEventListener("input", upd); n.addEventListener("change", upd); });
@@ -357,19 +367,19 @@
         function renderPrac() {
           if (!pr.q) newQ();
           var q = pr.q, isMag = q.answerM !== undefined;
-          var h = '<div class="mg-row" role="group" aria-label="' + t(UI.hardMode) + '"><span class="mg-lab">' + t(UI.hardMode) + "</span>";
+          var h = '<div class="wl-stage">' + (q.svg ? q.svg : "") + '<div class="mg-q">' + q.text + '</div></div><div class="wl-panel">';
+          h += '<div class="mg-row" role="group" aria-label="' + t(UI.hardMode) + '"><span class="mg-lab">' + t(UI.hardMode) + "</span>";
           [["all", UI.qAll], ["basic", UI.qBasic], ["bar", UI.qBar]].forEach(function (d) { h += '<button type="button" class="mg-opt" data-mode="' + d[0] + '" aria-pressed="' + (pr.mode === d[0]) + '">' + t(d[1]) + "</button>"; });
           h += '<span class="mg-score" id="' + uid + 'sc">' + t(UI.score) + ": " + pr.score + " / " + pr.tries + "</span></div>";
-          h += (q.svg ? q.svg : "") + '<div class="mg-q">' + q.text + "</div>";
           h += '<div class="mg-row"><label for="' + uid + 'ans">' + t(UI.yourAns) + "</label>" + (isMag ? "<span>×</span>" : "") + '<input type="number" id="' + uid + 'ans" step="any" inputmode="decimal">' + (isMag ? '<span class="mg-small">' + t(UI.aIsMag) + "</span>" : unitSelect(uid + "au", q.unitDefault)) + "</div>";
           h += '<div class="mg-row"><button type="button" class="mg-btn primary" id="' + uid + 'chk">' + t(UI.check) + '</button><button type="button" class="mg-btn" id="' + uid + 'show">' + t(UI.show) + '</button><button type="button" class="mg-btn" id="' + uid + 'new">' + t(UI.newQ) + "</button></div>";
-          h += '<div class="mg-fb" id="' + uid + 'fb" aria-live="polite"></div><div id="' + uid + 'sol"></div>';
+          h += '<div class="mg-fb" id="' + uid + 'fb" aria-live="polite"></div><div id="' + uid + 'sol"></div></div>';
           body.innerHTML = h;
           body.querySelectorAll("button[data-mode]").forEach(function (b) { b.addEventListener("click", function () { pr.mode = b.getAttribute("data-mode"); newQ(); renderPrac(); }); });
           var ans = body.querySelector("#" + uid + "ans"), fb = body.querySelector("#" + uid + "fb"), sol = body.querySelector("#" + uid + "sol");
           function showSol() {
             pr.shown = true;
-            sol.innerHTML = '<div class="mg-out"><strong>' + t(UI.stepsHead) + "</strong><ol>" + q.steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + '</ol><p class="mg-res">' + fill(t(UI.correctIs), { x: q.correct }) + "</p></div>";
+            sol.innerHTML = '<div class="mg-out"><p class="mg-res" style="margin:0">' + fill(t(UI.correctIs), { x: q.correct }) + "</p><details" + (wide ? " open" : "") + "><summary>" + t(UI.stepsHead) + "</summary><ol>" + q.steps.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol></details></div>";
           }
           function check() {
             var v = parseFloat(ans.value);

@@ -6,19 +6,17 @@
   var CSS = [
     ".sav{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029);font-size:.95rem}",
     ".sav *{box-sizing:border-box}",
-    ".sav .sv-top{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin-bottom:.75rem}",
-    ".sav .sv-slide{flex:1 1 220px;min-width:200px}",
+    ".sav .sv-top{display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:center}",
+    ".sav .sv-slide{flex:1 1 100%;min-width:0}",
     ".sav .sv-slide label{display:flex;justify-content:space-between;gap:.5rem;font-weight:600;margin-bottom:.25rem}",
     ".sav input[type=range]{width:100%;accent-color:var(--accent,#2547c7);min-height:2rem}",
     ".sav .sv-btn{font:inherit;font-weight:600;min-height:2.5rem;padding:.4rem .9rem;border-radius:var(--radius,6px);border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".sav .sv-btn:hover{background:var(--surface-2,#e3eaee)}",
     ".sav .sv-btn:disabled{opacity:.5;cursor:default}",
     ".sav .sv-btn:focus-visible,.sav input:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
-    ".sav .sv-grid{display:grid;grid-template-columns:1fr;gap:1rem}",
-    "@media(min-width:640px){.sav .sv-grid{grid-template-columns:1fr 1fr}}",
-    ".sav .sv-card{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.75rem}",
+        ".sav .sv-card{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.5rem .75rem}",
     ".sav svg{display:block;width:100%;height:auto}",
-    ".sav .sv-nums{display:grid;grid-template-columns:auto 1fr;gap:.2rem .75rem;margin:.5rem 0 0;font-variant-numeric:tabular-nums}",
+    ".sav .sv-nums{display:grid;grid-template-columns:auto 1fr;gap:.15rem .75rem;margin:0;font-size:.88rem;font-variant-numeric:tabular-nums}",
     ".sav .sv-nums dt{color:var(--muted,#4d626d)}",
     ".sav .sv-nums dd{margin:0;font-weight:700}",
     ".sav table{width:100%;border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums}",
@@ -30,12 +28,19 @@
     ".sav .sv-bar>span{display:block;height:100%;background:var(--accent,#2547c7);transition:width .25s}",
     ".sav .sv-bar.need>span{background:var(--theme-b,#b82a56)}",
     "@media(prefers-reduced-motion:reduce){.sav .sv-bar>span{transition:none}}",
-    ".sav .sv-msg{margin:.6rem 0 0;padding:.55rem .75rem;border-left:4px solid var(--accent,#2547c7);background:var(--accent-soft,#e0e7fb);border-radius:var(--radius,6px)}",
-    ".sav .sv-note{margin:.75rem 0 0;color:var(--muted,#4d626d);font-size:.85rem}",
+    ".sav .sv-msg{margin:0;padding:.5rem .7rem;font-size:.88rem;line-height:1.45;border-left:4px solid var(--accent,#2547c7);background:var(--accent-soft,#e0e7fb);border-radius:var(--radius,6px)}",
+    ".sav .sv-note{margin:0;color:var(--muted,#4d626d);font-size:.82rem}",
     ".sav h4{margin:0 0 .4rem;font-size:.95rem}",
+    ".sav [hidden]{display:none!important}",
+    ".sav .tabs{display:flex;gap:.3rem;overflow-x:auto;margin-bottom:.5rem}",
+    ".sav .tabs button{flex:none}",
+    ".sav .tabs button[aria-selected=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
+    ".sav details summary{cursor:pointer;font-weight:700;font-size:.86rem;min-height:2.2rem;display:flex;align-items:center}",
+    ".sav .sv-bars{display:grid;gap:.7rem;padding:.4rem 0}",
+    ".sav .sv-bars .sv-bar{height:1.4rem}",
     ".sav .gl{stroke:var(--line,#c3d0d7)}",
-    ".sav .tx{fill:var(--ink,#0f2029);font-size:10px}",
-    ".sav .tm{fill:var(--muted,#4d626d);font-size:10px}",
+    ".sav .tx{fill:var(--ink,#0f2029);font-size:16px}",
+    ".sav .tm{fill:var(--muted,#4d626d);font-size:15px}",
     ".sav .curve{fill:none;stroke:var(--accent,#2547c7);stroke-width:2.5}",
     ".sav .dot{fill:var(--theme-b,#b82a56);stroke:var(--surface,#fff);stroke-width:2}",
     ".sav .fT{fill:var(--accent-soft,#e0e7fb);stroke:var(--ink,#0f2029);stroke-width:1}",
@@ -65,6 +70,10 @@
     supply: { en: "Exchange possible (∝ surface area)", ja: "可能な交換量（∝ 表面積）", zh: "可進行的交換量（∝ 表面面積）" },
     need: { en: "Exchange needed (∝ volume)", ja: "必要な交換量（∝ 体積）", zh: "所需的交換量（∝ 體積）" },
     note: { en: "Both bars are scaled to the largest cube (l = 10 µm).", ja: "どちらの棒も最大の立方体 (l = 10 µm) を基準にした長さです。", zh: "兩條棒都以最大的立方體 (l = 10 µm) 為基準。" },
+    tabCube: { en: "Cube", ja: "立方体", zh: "立方體" },
+    tabGraph: { en: "Graph", ja: "グラフ", zh: "圖表" },
+    tabCell: { en: "Cell size", ja: "細胞の大きさ", zh: "細胞大小" },
+    tableH: { en: "Table of values", ja: "数値の表", zh: "數值表" },
     nos: { en: "Nature of science: a cube is a model, a simplified version of a complex system. Real cells are not cubes, but scale factors work in the same way.", ja: "科学の本質：立方体はモデル、つまり複雑な系を単純にしたものです。実際の細胞は立方体ではありませんが、スケールの関係は同じように働きます。", zh: "科學本質：立方體是模型，即複雜系統的簡化版本。真實的細胞不是立方體，但比例因子的作用相同。" }
   };
 
@@ -95,36 +104,55 @@
       el.appendChild(root);
 
       var uid = "sav" + Math.random().toString(36).slice(2, 7);
-      root.innerHTML =
-        '<div class="sv-top">' +
-        '<div class="sv-slide"><label for="' + uid + '"><span>' + t(S.side) + '</span><span class="sv-val" aria-hidden="true"></span></label>' +
-        '<input id="' + uid + '" type="range" min="1" max="10" step="1" value="' + l + '"></div>' +
-        '<button type="button" class="sv-btn sv-dbl">' + t(S.dbl) + '</button>' +
-        '<button type="button" class="sv-btn sv-rst">' + t(S.reset) + '</button>' +
-        '</div>' +
-        '<div class="sv-grid">' +
-        '<div class="sv-card"><h4>' + t(S.cube) + '</h4><svg class="sv-cube" viewBox="0 0 220 176" role="img"></svg>' +
-        '<dl class="sv-nums" aria-live="polite"></dl></div>' +
-        '<div class="sv-card"><h4>' + t(S.graph) + '</h4><svg class="sv-graph" viewBox="0 0 300 200" role="img" aria-label="' + t(S.graph) + '"></svg></div>' +
-        '<div class="sv-card"><table class="sv-tab"></table></div>' +
-        '<div class="sv-card"><h4>' + t(S.needH) + '</h4>' +
-        '<div>' + t(S.supply) + '</div><div class="sv-bar"><span class="sv-b1"></span></div>' +
-        '<div style="margin-top:.5rem">' + t(S.need) + '</div><div class="sv-bar need"><span class="sv-b2"></span></div>' +
-        '<p class="sv-note">' + t(S.note) + '</p>' +
-        '<p class="sv-msg" aria-live="polite"></p></div>' +
-        '</div>' +
-        '<p class="sv-note">' + t(S.nos) + '</p>';
+      var n = 0;
+      function controls() {
+        n++;
+        return '<div class="sv-top">' +
+          '<div class="sv-slide"><label for="' + uid + n + '"><span>' + t(S.side) + '</span><span class="sv-val" aria-hidden="true"></span></label>' +
+          '<input id="' + uid + n + '" class="sv-in" type="range" min="1" max="10" step="1" value="' + l + '"></div>' +
+          '<button type="button" class="sv-btn sv-dbl">' + t(S.dbl) + '</button>' +
+          '<button type="button" class="sv-btn sv-rst">' + t(S.reset) + '</button>' +
+          '</div>';
+      }
+      var tabsHtml = '<div class="tabs wl-tabs" role="tablist">' +
+        [S.tabCube, S.tabGraph, S.tabCell].map(function (x, i) { return '<button type="button" class="sv-btn" role="tab" aria-selected="' + (i === 0) + '">' + t(x) + '</button>'; }).join("") + '</div>';
+      root.innerHTML = tabsHtml +
+        // view 1: cube
+        '<div class="wl sv-view"><div class="wl-stage"><div class="sv-card"><svg class="sv-cube" viewBox="0 0 360 214" role="img"></svg></div></div>' +
+        '<div class="wl-panel">' + controls() + '<dl class="sv-nums" aria-live="polite"></dl><p class="sv-msg" aria-live="polite"></p></div></div>' +
+        // view 2: graph
+        '<div class="wl sv-view" hidden><div class="wl-stage"><div class="sv-card"><svg class="sv-graph" viewBox="0 0 400 250" role="img" aria-label="' + t(S.graph) + '"></svg></div>' +
+        '<div class="wl-legend"><strong>' + t(S.graph) + '</strong></div></div>' +
+        '<div class="wl-panel">' + controls() + '<details><summary>' + t(S.tableH) + '</summary><table class="sv-tab"></table></details></div></div>' +
+        // view 3: cell size
+        '<div class="wl sv-view" hidden><div class="wl-stage"><div class="sv-card"><h4>' + t(S.needH) + '</h4><div class="sv-bars">' +
+        '<div><div>' + t(S.supply) + '</div><div class="sv-bar"><span class="sv-b1"></span></div></div>' +
+        '<div><div>' + t(S.need) + '</div><div class="sv-bar need"><span class="sv-b2"></span></div></div></div>' +
+        '<p class="sv-note">' + t(S.note) + '</p></div></div>' +
+        '<div class="wl-panel">' + controls() + '<p class="sv-msg" aria-live="polite"></p><p class="sv-note">' + t(S.nos) + '</p></div></div>';
 
-      var slider = root.querySelector("input");
-      var valEl = root.querySelector(".sv-val");
+      var views = root.querySelectorAll(".sv-view");
+      var tabBtns = root.querySelectorAll(".tabs button");
+      var sliders = root.querySelectorAll(".sv-in");
+      var valEls = root.querySelectorAll(".sv-val");
       var cubeSvg = root.querySelector(".sv-cube");
       var nums = root.querySelector(".sv-nums");
       var graph = root.querySelector(".sv-graph");
       var tab = root.querySelector(".sv-tab");
       var b1 = root.querySelector(".sv-b1");
       var b2 = root.querySelector(".sv-b2");
-      var msg = root.querySelector(".sv-msg");
-      var dblBtn = root.querySelector(".sv-dbl");
+      var msgs = root.querySelectorAll(".sv-msg");
+      var dblBtns = root.querySelectorAll(".sv-dbl");
+
+      function showTab(k) {
+        for (var i = 0; i < views.length; i++) {
+          views[i].hidden = i !== k;
+          tabBtns[i].setAttribute("aria-selected", i === k ? "true" : "false");
+        }
+      }
+      var startTab = ctx.options && ctx.options.tab != null ? parseInt(ctx.options.tab, 10) : 0;
+      if (!(startTab >= 0 && startTab < views.length)) startTab = 0;
+      Array.prototype.forEach.call(tabBtns, function (b, i) { b.addEventListener("click", function () { showTab(i); }); });
 
       function isoCube(x, y, s, id) {
         // x,y = bottom-front corner; s = edge length in px; simple oblique projection
@@ -138,16 +166,15 @@
       }
 
       function drawCube() {
-        // 11 px per µm so a 10 µm cube is 110 px wide; the 1 µm reference cube is 11 px.
-        var u = 11;
+        // 15 px per µm so a 10 µm cube is 150 px wide; the 1 µm reference cube is 15 px.
+        var u = 15;
         var s = l * u;
-        var x0 = 14, y0 = 156;
+        var x0 = 16, y0 = 188;
         var h = isoCube(x0, y0, s, "yc");
-        var refX = 192;
-        var ref = isoCube(refX, y0, u, "rc");
+        var ref = isoCube(300, y0, u, "rc");
         var out = h + ref;
-        out += '<text class="tm" x="218" y="' + (y0 + 14) + '" text-anchor="end">' + t(S.unitCube) + '</text>';
-        out += '<text class="tx" x="' + (x0) + '" y="' + (y0 + 14) + '">l = ' + l + ' µm</text>';
+        out += '<text class="tm" x="344" y="' + (y0 + 20) + '" text-anchor="end">' + t(S.unitCube) + '</text>';
+        out += '<text class="tx" x="' + x0 + '" y="' + (y0 + 20) + '">l = ' + l + ' µm</text>';
         cubeSvg.innerHTML = out;
         cubeSvg.setAttribute("aria-label", t(S.cube) + ": l = " + l + " µm");
       }
@@ -169,15 +196,15 @@
       }
 
       function drawGraph() {
-        var L = 38, R = 290, T = 12, B = 168; // plot box
+        var L = 50, R = 386, T = 12, B = 202; // plot box
         function X(v) { return L + (v / 10) * (R - L); }
         function Y(v) { return B - (v / 6) * (B - T); }
         var g = "";
         for (var yy = 0; yy <= 6; yy += 2) {
-          g += '<line class="gl" x1="' + L + '" x2="' + R + '" y1="' + Y(yy) + '" y2="' + Y(yy) + '"/><text class="tm" x="' + (L - 5) + '" y="' + (Y(yy) + 3) + '" text-anchor="end">' + yy + '</text>';
+          g += '<line class="gl" x1="' + L + '" x2="' + R + '" y1="' + Y(yy) + '" y2="' + Y(yy) + '"/><text class="tm" x="' + (L - 6) + '" y="' + (Y(yy) + 4) + '" text-anchor="end">' + yy + '</text>';
         }
         for (var xx = 0; xx <= 10; xx += 2) {
-          g += '<text class="tm" x="' + X(xx) + '" y="' + (B + 13) + '" text-anchor="middle">' + xx + '</text>';
+          g += '<text class="tm" x="' + X(xx) + '" y="' + (B + 16) + '" text-anchor="middle">' + xx + '</text>';
         }
         g += '<line class="gl" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '" style="stroke:var(--ink,#0f2029)"/><line class="gl" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '" style="stroke:var(--ink,#0f2029)"/>';
         var pts = [];
@@ -185,9 +212,9 @@
         g += '<polyline class="curve" points="' + pts.join(" ") + '"/>';
         g += '<line class="gl" style="stroke-dasharray:3 3;stroke:var(--theme-b,#b82a56)" x1="' + X(l) + '" x2="' + X(l) + '" y1="' + Y(6 / l) + '" y2="' + B + '"/>';
         g += '<line class="gl" style="stroke-dasharray:3 3;stroke:var(--theme-b,#b82a56)" x1="' + L + '" x2="' + X(l) + '" y1="' + Y(6 / l) + '" y2="' + Y(6 / l) + '"/>';
-        g += '<circle class="dot" cx="' + X(l) + '" cy="' + Y(6 / l) + '" r="5"/>';
-        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="196" text-anchor="middle">' + t(S.xAxis) + '</text>';
-        g += '<text class="tx" x="10" y="' + ((T + B) / 2) + '" text-anchor="middle" transform="rotate(-90 10 ' + ((T + B) / 2) + ')">' + t(S.yAxis) + '</text>';
+        g += '<circle class="dot" cx="' + X(l) + '" cy="' + Y(6 / l) + '" r="6"/>';
+        g += '<text class="tx" x="' + ((L + R) / 2) + '" y="245" text-anchor="middle">' + t(S.xAxis) + '</text>';
+        g += '<text class="tx" x="13" y="' + ((T + B) / 2) + '" text-anchor="middle" transform="rotate(-90 13 ' + ((T + B) / 2) + ')">' + t(S.yAxis) + '</text>';
         graph.innerHTML = g;
       }
 
@@ -200,26 +227,34 @@
           ja: "辺が " + l + " µm の立方体は、体積あたりの表面積が1 µmの立方体の " + pct + "% です。辺が2倍になると、面積は4倍、体積は8倍になるので、SA:Vは半分になります。",
           zh: "邊長 " + l + " µm 的立方體，每單位體積的表面面積是 1 µm 立方體的 " + pct + "%。邊長加倍時，面積增至4倍而體積增至8倍，所以SA:V減半。"
         };
-        msg.textContent = t(m);
+        for (var i = 0; i < msgs.length; i++) msgs[i].textContent = t(m);
       }
 
       function render() {
-        valEl.textContent = l + " " + S.unit;
-        slider.setAttribute("aria-valuetext", l + " µm");
-        dblBtn.disabled = l * 2 > 10;
+        for (var i = 0; i < sliders.length; i++) {
+          sliders[i].value = l;
+          sliders[i].setAttribute("aria-valuetext", l + " µm");
+          valEls[i].textContent = l + " " + S.unit;
+          dblBtns[i].disabled = l * 2 > 10;
+        }
         drawCube(); drawNums(); drawTable(); drawGraph(); drawBars();
       }
 
-      function onInput() { l = parseInt(slider.value, 10); render(); }
-      slider.addEventListener("input", onInput);
-      root.querySelector(".sv-dbl").addEventListener("click", function () {
-        if (l * 2 > 10) return; l = l * 2; slider.value = l; render();
+      var offs = [];
+      Array.prototype.forEach.call(sliders, function (sl) {
+        var f = function () { l = parseInt(sl.value, 10); render(); };
+        sl.addEventListener("input", f);
+        offs.push(function () { sl.removeEventListener("input", f); });
       });
-      root.querySelector(".sv-rst").addEventListener("click", function () {
-        l = 1; slider.value = l; render();
+      Array.prototype.forEach.call(root.querySelectorAll(".sv-dbl"), function (b) {
+        b.addEventListener("click", function () { if (l * 2 > 10) return; l = l * 2; render(); });
+      });
+      Array.prototype.forEach.call(root.querySelectorAll(".sv-rst"), function (b) {
+        b.addEventListener("click", function () { l = 1; render(); });
       });
       render();
-      return function () { slider.removeEventListener("input", onInput); };
+      showTab(startTab);
+      return function () { offs.forEach(function (f) { f(); }); };
     }
   });
 })();

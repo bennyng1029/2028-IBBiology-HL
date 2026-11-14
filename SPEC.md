@@ -129,7 +129,7 @@ IB.registerWidget("amino-acid", {
 
 ## Routes (hash)
 
-`#home` · `#topic-<slug>` (e.g. `#topic-b1-2`) · `#protein-lab` · `#practice` · `#glossary` · `#about`
+`#home` · `#topic-<slug>` (e.g. `#topic-b1-2`) · `#labs` · `#lab-<id>` · `#lab-<id>-<n>` · `#protein-lab` (alias of `#lab-protein`) · `#practice` · `#glossary` · `#about`
 
 ## Progress
 
@@ -154,7 +154,16 @@ Classes widgets may reuse: `.btn .btn--primary .btn--small .btn--quiet .badge .b
 - Quiz: `short` questions record `right` when ticked points >= marks, `partial` for some, else `wrong`. `order` and `match` need `items` / `pairs` as in this spec. `data` is shown above the stem in a scrollable box. Progress key `ibbio.progress` = `{ [questionId]: { s: 'right'|'wrong'|'partial', t: ms } }`.
 - Topic page order: header, guiding questions, summary, sections (+ widget + examTip), nature of science, key terms, common mistakes, beyond-the-syllabus box, links (only to topics that are registered), quiz, pager.
 - Storage keys: `ibbio.lang`, `ibbio.theme`, `ibbio.level`, `ibbio.progress`.
-- Protein Lab step intros live in `core.js` (array `LAB`), in en/ja/zh. They must be checked against `docs/syllabus.md` for B1.2 (which understanding statements are SL vs AHL; globular/fibrous and conjugated wording).
+- Lab content lives in `content/labs/<id>.js` (see "Labs (v2)"); the Protein Lab is `content/labs/protein.js`. Step intros must be checked against `docs/syllabus.md` (which understanding statements are SL vs AHL).
+- **`ctx.options`**: `mount(el, ctx)` always receives `ctx.options` (an object, `{}` when none). Sources: a lab step's `options`, or a topic section's `widgetOptions`.
+- **`IB.registerLab(lab)`**: registers a guided lab (format in "Labs (v2)"). Labs appear in the header "Labs" menu, on `#labs`, on the home page, and as "Related lab" buttons on each topic page listed in `lab.topics`. Add a `<script src="content/labs/<id>.js">` to `index.html` (tags for protein, molecules, cells, transport, body, evolution, ecology already exist; a missing file is harmless).
+- **Lab routes**: `#labs` (index), `#lab-<id>` (step 1), `#lab-<id>-<n>` (step n, 1-based). `#protein-lab` is an alias of `#lab-protein`. Prev/Next and the step list update the hash with `history.replaceState`, so a copied link opens the same step; the widget is re-mounted per step (cleanups run).
+- **`IB.loadScript(url)`** returns a Promise and loads each URL once (dedup). Use it for CDN libraries a widget needs, e.g. `IB.loadScript('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js').then(function () { /* window.$3Dmol */ })`. Pin an exact version from cdnjs. Always handle `.catch` (offline) by showing a short message and a static fallback; never block the rest of the widget. The site must still work with no network.
+- **Layout kit** (main.css): `.wl` is a grid that switches to two columns (3fr stage / 2fr panel) when the widget *frame* is at least 640px wide (container query; `--stage-max` is set per breakpoint), so it also behaves inside narrow lab/topic columns. Skeleton: `<div class="wl"><div class="wl-tabs" role="tablist">…</div><div class="wl-stage">svg + <ul class="wl-legend">…</ul></div><div class="wl-panel">controls, readout, <details><summary>More detail</summary>…</details>, <p class="wl-exam"><strong>Exam:</strong> …</p></div></div>`. `.wl-tabs` spans both columns. Tab buttons use `aria-selected="true"` for the active tab. Inside `.widget`, `<details>` is already styled.
+- **Wide widget frames**: the page container is up to 86rem; text stays ~66ch, but `.widget-frame` fills the content column (up to ~1040px beside the "On this page" list on desktop; full width on phones).
+- **Sharing**: `IB.share()` (header and footer buttons) uses `navigator.share` if present, otherwise copies the URL (Clipboard API, then a hidden-textarea fallback) and shows a "Link copied" toast. On `file://` it shares the GitHub Pages URL plus the current hash. First visit shows a dismissible welcome bar (SL / HL / Dismiss) in `#site-welcome`; the choice calls `IB.setLevel` and `ibbio.welcomed=1` is stored. Default before a choice stays HL-visible. Storage keys now also include `ibbio.welcomed`.
+- Social preview: `assets/img/og.png` (1200x630) and `assets/img/favicon.svg`; Open Graph and Twitter tags are in `index.html`.
+- UI strings added by the lead (labs, share, welcome, footer note) are at the end of `ui-strings.js` in a `V2` block, in en/ja/zh.
 
 ## Widget sizing standard (v2 — applies to every widget)
 
@@ -162,7 +171,7 @@ Goal: each interactive is **sized in proportion to its content and the screen**,
 
 1. **One view fits one screen.** At 1280×720 (laptop), 1440×900 (desktop) and 390×844 (phone), one view of a widget (the diagram + its controls + the current feedback) fits inside the viewport minus the site header (~64px). Never stack several independent parts vertically: split them into **tabs or steps** (`.wl-tabs`), one part visible at a time.
 2. **Layout kit** (CSS in main.css; use these classes, do not invent your own frame layout):
-   - `.wl` — the widget layout grid. Phone/tablet (<900px wide): one column, stage first, panel below. ≥900px: two columns, `.wl-stage` (≈ 3fr) left and `.wl-panel` (≈ 2fr) right, top-aligned.
+   - `.wl` — the widget layout grid. Phone/tablet (<900px wide): one column, stage first, panel below. two columns when the frame is ≥ 640px wide (implemented as a container query; ≈ 900px window on a topic page), `.wl-stage` (≈ 3fr) left and `.wl-panel` (≈ 2fr) right, top-aligned.
    - `.wl-stage` — holds the main SVG/canvas. The SVG gets `width:100%; height:auto; max-height:var(--stage-max)` where `--stage-max: min(58vh, 440px)` on desktop and `min(42vh, 320px)` on phones. Drawings scale with `viewBox` (preserveAspectRatio default). Design viewBoxes near the aspect ratio actually used (landscape ≈ 4:3 or 16:10 on desktop); avoid tall portrait viewBoxes.
    - `.wl-panel` — controls, readouts, short explanation (≤ ~60 words visible), and feedback. Longer text goes in `<details>` ("More detail").
    - `.wl-tabs` — tab bar (buttons with `aria-selected`), scrolls horizontally on phones if needed.

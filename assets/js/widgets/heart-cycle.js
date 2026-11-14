@@ -11,24 +11,32 @@
     ".hc-root{font-family:var(--font-body,system-ui,sans-serif);color:var(--ink,#0f2029);font-size:.95rem}",
     ".hc-root *{box-sizing:border-box}",
     ".hc-root svg{display:block;width:100%;height:auto}",
-    ".hc-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .6rem}",
+    ".hc-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:0}",
+    ".hc-info .hc-row{margin-top:.4rem}",
+    ".hc-root [hidden]{display:none!important}",
+    ".hc-stages{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem}",
+    ".hc-stages .hc-b{padding:.25rem .3rem;font-size:.82rem;line-height:1.2}",
+    ".hc-tabs{display:flex;gap:.3rem;overflow-x:auto;margin-bottom:.5rem}",
+    ".hc-tabs .hc-b{flex:none}",
+    "@media(max-width:899px){.hc-chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.2rem}.hc-chips .hc-chip{flex:none}}",
+    ".hc-root details summary{cursor:pointer;font-weight:700;font-size:.88rem;min-height:2.2rem;display:flex;align-items:center}",
     ".hc-b{font:inherit;font-weight:600;min-height:2.5rem;padding:.35rem .8rem;border-radius:var(--radius,6px);border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".hc-b:hover{background:var(--surface-2,#e3eaee)}",
     ".hc-b[aria-pressed=true],.hc-b[aria-selected=true]{background:var(--accent,#2547c7);border-color:var(--accent,#2547c7);color:var(--on-accent,#fff)}",
     ".hc-b:focus-visible,.hc-root input:focus-visible,.hc-hs:focus-visible,.hc-chip:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".hc-chip{font:inherit;font-size:.85rem;min-height:2.25rem;padding:.2rem .6rem;border-radius:999px;border:1px solid var(--line,#c3d0d7);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".hc-chip[aria-pressed=true]{background:var(--accent-soft,#e0e7fb);border-color:var(--accent,#2547c7);font-weight:700}",
-    ".hc-art{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.5rem;margin-bottom:.6rem}",
-    ".hc-info{background:var(--surface-2,#e3eaee);border-left:4px solid var(--accent,#2547c7);border-radius:var(--radius,6px);padding:.6rem .8rem;min-height:4.5rem;margin-bottom:.6rem}",
-    ".hc-info p{margin:.3rem 0 0}",
+    ".hc-art{background:var(--surface-2,#e3eaee);border-radius:var(--radius-lg,12px);padding:.4rem}",
+    ".hc-info{background:var(--surface-2,#e3eaee);border-left:4px solid var(--accent,#2547c7);border-radius:var(--radius,6px);padding:.45rem .7rem;font-size:.88rem;line-height:1.4;margin:0}",
+    ".hc-info p{margin:.25rem 0 0}",
     ".hc-info.good{border-left-color:var(--good,#17703f);background:var(--good-soft,#dcf2e4)}",
     ".hc-info.bad{border-left-color:var(--bad,#b3261e);background:var(--bad-soft,#fbe0de)}",
     ".hc-tag{color:var(--muted,#4d626d);font-size:.85rem}",
     ".hc-al{display:inline-block;margin-left:.4rem;padding:0 .4rem;border-radius:3px;background:var(--ahl,#ffcf3a);color:var(--ahl-ink,#2a2000);font-size:.7rem;font-weight:800;letter-spacing:.04em;vertical-align:middle}",
-    ".hc-note{color:var(--muted,#4d626d);font-size:.85rem;margin:.4rem 0 0}",
+    ".hc-note{color:var(--muted,#4d626d);font-size:.8rem;margin:.3rem 0 0}",
     ".hc-hs{cursor:pointer}",
     ".hc-hs circle{fill:var(--surface,#fff);stroke:var(--accent,#2547c7);stroke-width:2}",
-    ".hc-hs text{fill:var(--ink,#0f2029);font-size:10px;font-weight:700;text-anchor:middle;pointer-events:none}",
+    ".hc-hs text{fill:var(--ink,#0f2029);font-size:13px;font-weight:700;text-anchor:middle;pointer-events:none}",
     ".hc-hs.sel circle{fill:var(--accent,#2547c7)}",
     ".hc-hs.sel text{fill:var(--on-accent,#fff)}",
     ".hc-hs.ok circle{fill:var(--good,#17703f);stroke:var(--good,#17703f)}",
@@ -36,8 +44,8 @@
     ".hc-hs.no circle{fill:var(--bad,#b3261e);stroke:var(--bad,#b3261e)}",
     ".hc-root input[type=range]{width:100%;accent-color:var(--accent,#2547c7);min-height:2rem}",
     /* art */
-    ".hc-root .tx{fill:var(--ink,#0f2029);font-size:10px}",
-    ".hc-root .tm{fill:var(--muted,#4d626d);font-size:9.5px}",
+    ".hc-root .tx{fill:var(--ink,#0f2029);font-size:12px}",
+    ".hc-root .tm{fill:var(--muted,#4d626d);font-size:12px}",
     ".hc-root .dx{fill:var(--c-nitrogen,#2d5cdd);fill-opacity:.28;stroke:var(--c-nitrogen,#2d5cdd);stroke-width:1.6}",
     ".hc-root .ox{fill:var(--c-oxygen,#d33a2c);fill-opacity:.28;stroke:var(--c-oxygen,#d33a2c);stroke-width:1.6}",
     ".hc-root .mus{fill:var(--theme-b-soft,#f8dfe7);stroke:var(--ink,#0f2029);stroke-width:1.4}",
@@ -56,8 +64,8 @@
     ".hc-root .band3{fill:var(--good-soft,#dcf2e4);fill-opacity:.8}",
     ".hc-root .cur{stroke:var(--ink,#0f2029);stroke-width:1.4;stroke-dasharray:4 3}",
     ".hc-root .sw{display:inline-block;width:1.6rem;height:0;border-top:3px solid;vertical-align:middle;margin-right:.3rem}",
-    ".hc-root .hc-grid{font-variant-numeric:tabular-nums;font-size:.9rem;margin:.4rem 0}",
-    ".hc-root .hc-grid>div{margin:.2rem 0}",
+    ".hc-root .hc-grid{font-variant-numeric:tabular-nums;font-size:.86rem;margin:0}",
+    ".hc-root .hc-grid>div{margin:.15rem 0}",
     ".hc-root .st{font-weight:800}",
     ".hc-root .open{color:var(--good,#17703f)}",
     ".hc-root .closed{color:var(--bad,#b3261e)}",
@@ -70,7 +78,7 @@
     ".hc-root .vlum{fill:var(--c-oxygen,#d33a2c);fill-opacity:.22}",
     ".hc-root .vlumv{fill:var(--c-nitrogen,#2d5cdd);fill-opacity:.22}",
     ".hc-root .vrbc{fill:var(--c-oxygen,#d33a2c)}",
-    ".hc-root table{width:100%;border-collapse:collapse;font-size:.85rem;margin:.4rem 0}",
+    ".hc-root table{width:100%;border-collapse:collapse;font-size:.84rem;margin:.2rem 0}",
     ".hc-root th,.hc-root td{text-align:left;padding:.25rem .4rem;border-bottom:1px solid var(--line,#c3d0d7);vertical-align:top}",
     "@media(prefers-reduced-motion:reduce){.hc-root *{transition:none!important;animation:none!important}}"
   ].join("\n");
@@ -214,11 +222,15 @@
     var chips = mk("div", "hc-row");
     var info = mk("div", "hc-info"); info.setAttribute("aria-live", "polite");
     var note = mk("p", "hc-note", t(UI.colours));
-    root.appendChild(bar); root.appendChild(art); root.appendChild(chips); root.appendChild(info); root.appendChild(note);
+    chips.className = "hc-row hc-chips"; note.className = "hc-note wl-legend";
+    var wl = mk("div", "wl"), stageCol = mk("div", "wl-stage"), panel = mk("div", "wl-panel");
+    stageCol.appendChild(art); stageCol.appendChild(note);
+    panel.appendChild(bar); panel.appendChild(chips); panel.appendChild(info);
+    wl.appendChild(stageCol); wl.appendChild(panel); root.appendChild(wl);
 
     var svg = '<svg viewBox="0 0 340 362" role="group" aria-label="' + t({ en: "Heart in the frontal plane", ja: "前頭面の心臓", zh: "冠狀面的心臟" }) + '">' + heartArt(lang);
     HEART.forEach(function (p, i) {
-      svg += '<g class="hc-hs" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '"><circle cx="' + p.x + '" cy="' + p.y + '" r="10"/><text x="' + p.x + '" y="' + (p.y + 3.5) + '">' + (i + 1) + '</text></g>';
+      svg += '<g class="hc-hs" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '"><circle cx="' + p.x + '" cy="' + p.y + '" r="12"/><text x="' + p.x + '" y="' + (p.y + 4.5) + '">' + (i + 1) + '</text></g>';
     });
     art.innerHTML = svg + "</svg>";
     var hs = art.querySelectorAll(".hc-hs");
@@ -369,6 +381,9 @@
     valve: { en: "Valve", ja: "弁", zh: "瓣膜" },
     xAxis: { en: "Time (s)", ja: "時間 (s)", zh: "時間 (s)" },
     yAxis: { en: "Pressure (mmHg)", ja: "圧力 (mmHg)", zh: "壓力 (mmHg)" },
+    tabHeart: { en: "Heart", ja: "心臓", zh: "心臟" },
+    tabGraph: { en: "Pressure graph", ja: "圧力グラフ", zh: "壓力圖" },
+    more: { en: "Valve events and blood pressure", ja: "弁の動きと血圧", zh: "瓣膜活動與血壓" },
     sa: { en: "SA node signal", ja: "洞房結節の信号", zh: "竇房結信號" },
     events: { en: "Valve events read from the graph: ", ja: "グラフから読み取る弁の動き：", zh: "從圖表讀出的瓣膜活動：" },
     bp: { en: "Aortic pressure ranges from %d (diastolic) to %s (systolic) mmHg, a reading of about 120/80.", ja: "大動脈の圧力は %d（拡張期血圧）から %s（収縮期血圧）mmHgで、約120/80の値です。", zh: "主動脈壓力由 %d（舒張壓）至 %s（收縮壓）mmHg，即約120/80的讀數。" },
@@ -392,15 +407,25 @@
       var noMotion = reduced();
 
       root.innerHTML =
+        '<div class="hc-tabs wl-tabs" role="tablist"><button type="button" class="hc-b" role="tab" aria-selected="true">' + t(HC.tabHeart) + '</button><button type="button" class="hc-b" role="tab" aria-selected="false">' + t(HC.tabGraph) + '</button></div>' +
+        '<div class="wl"><div class="wl-stage">' +
+        '<div class="hc-art hc-v0"><svg class="hc-heart" viewBox="0 0 340 228" role="img" aria-label="' + t(HC.title) + '"></svg></div>' +
+        '<div class="hc-art hc-v1" hidden><svg class="hc-graph" viewBox="0 0 340 215" role="img" aria-label="' + t(HC.yAxis) + '"></svg></div>' +
+        '</div><div class="wl-panel">' +
         '<div class="hc-row hc-stages"></div>' +
-        '<div class="hc-art"><svg class="hc-heart" viewBox="0 0 340 228" role="img" aria-label="' + t(HC.title) + '"></svg></div>' +
-        '<label for="' + uid + '"><strong>' + t(HC.time) + ': <span class="hc-tv"></span> s</strong></label>' +
-        '<div class="hc-row" style="align-items:center;margin-top:.2rem"><input id="' + uid + '" type="range" min="0" max="0.79" step="0.01" value="' + tt + '" style="flex:1 1 200px">' +
-        (noMotion ? "" : '<button type="button" class="hc-b hc-play"></button>') + '</div>' +
-        '<div class="hc-art"><svg class="hc-graph" viewBox="0 0 340 215" role="img" aria-label="' + t(HC.yAxis) + '"></svg></div>' +
+        '<div><label for="' + uid + '"><strong>' + t(HC.time) + ': <span class="hc-tv"></span> s</strong></label>' +
+        '<div class="hc-row" style="align-items:center;margin-top:.2rem"><input id="' + uid + '" type="range" min="0" max="0.79" step="0.01" value="' + tt + '" style="flex:1 1 140px">' +
+        (noMotion ? "" : '<button type="button" class="hc-b hc-play"></button>') + '</div></div>' +
         '<div class="hc-grid hc-read" aria-live="polite"></div>' +
         '<div class="hc-info hc-txt"></div>' +
-        '<p class="hc-note">' + t(HC.ill) + '</p>';
+        '<details class="hc-det"><summary>' + t(HC.more) + '</summary><div class="hc-more"></div><p class="hc-note">' + t(HC.ill) + '</p></details>' +
+        '</div></div>';
+      var tabEls = root.querySelectorAll(".hc-tabs button");
+      var viewEls = [root.querySelector(".hc-v0"), root.querySelector(".hc-v1")];
+      function showTab(k) { for (var i = 0; i < 2; i++) { viewEls[i].hidden = i !== k; tabEls[i].setAttribute("aria-selected", i === k ? "true" : "false"); } }
+      Array.prototype.forEach.call(tabEls, function (b, i) { b.addEventListener("click", function () { showTab(i); }); });
+      var o = ctx.options && ctx.options.tab;
+      showTab(o === 1 || o === "1" || o === "graph" ? 1 : 0);
 
       var stages = root.querySelector(".hc-stages");
       var heart = root.querySelector(".hc-heart");
@@ -409,6 +434,7 @@
       var tv = root.querySelector(".hc-tv");
       var read = root.querySelector(".hc-read");
       var txt = root.querySelector(".hc-txt");
+      var more = root.querySelector(".hc-more");
       var playB = root.querySelector(".hc-play");
       var stageBtns = [];
       [[1, HC.s1, 0.04], [2, HC.s2, 0.25], [3, HC.s3, 0.6]].forEach(function (s) {
@@ -487,7 +513,7 @@
         if (st !== 1) s += '<path class="arr" d="M10,48 H34"/><polygon class="arrf" points="44,48 34,43 34,53"/>';
         if (st === 1) s += '<text class="tx" x="100" y="12" text-anchor="middle" style="font-weight:700">\u26A1 ' + t(HC.sa) + '</text>';
         // labels
-        s += '<text class="tm" x="6" y="34">' + t(HC.pv) + '</text>';
+        s += '<text class="tm" x="6" y="30">' + t(HC.pv) + '</text>';
         s += '<text class="tx" x="100" y="46" text-anchor="middle">' + t(HC.la) + '</text><text class="tm" x="100" y="58" text-anchor="middle">' + Math.round(pLA) + ' mmHg</text>';
         s += '<text class="tx" x="' + cx + '" y="' + (cy + 4).toFixed(1) + '" text-anchor="middle">' + t(HC.lv) + '</text><text class="tm" x="' + cx + '" y="' + (cy + 17).toFixed(1) + '" text-anchor="middle">' + Math.round(pLV) + ' mmHg</text>';
         s += '<text class="tx" x="270" y="18" text-anchor="middle">' + t(HC.ao) + ' ' + Math.round(pAo) + ' mmHg</text>';
@@ -509,7 +535,8 @@
           '<div>' + t(HC.valve) + ': ' + t(HC.av) + ' <span class="st ' + (avOpen ? "open" : "closed") + '">' + t(avOpen ? HC.open : HC.closed) + '</span> <span class="hc-tag">(' + t(HC.la) + ' ' + Math.round(pLA) + (avOpen ? " > " : " < ") + Math.round(pLV) + ' ' + t(HC.lv) + ')</span></div>' +
           '<div>' + t(HC.valve) + ': ' + t(HC.sl) + ' <span class="st ' + (slOpen ? "open" : "closed") + '">' + t(slOpen ? HC.open : HC.closed) + '</span> <span class="hc-tag">(' + t(HC.lv) + ' ' + Math.round(pLV) + (slOpen ? " > " : " < ") + Math.round(pAo) + ' ' + t(HC.ao) + ')</span></div>';
         var bp = t(HC.bp).replace("%d", Math.round(minAo)).replace("%s", Math.round(maxAo));
-        txt.innerHTML = "<strong>" + t([HC.s1, HC.s2, HC.s3][st - 1]) + "</strong><p>" + t(HC.st[st]) + "</p>" +
+        txt.innerHTML = "<strong>" + t([HC.s1, HC.s2, HC.s3][st - 1]) + "</strong><p>" + t(HC.st[st]) + "</p>";
+        more.innerHTML =
           '<p class="hc-tag">' + t(HC.events) + t(HC.av) + " " + t(HC.closed) + " " + E.avClose.toFixed(2) + " s; " + t(HC.sl) + " " + t(HC.open) + " " + E.slOpen.toFixed(2) + " s, " + t(HC.closed) + " " + E.slClose.toFixed(2) + " s; " + t(HC.av) + " " + t(HC.open) + " " + E.avOpen.toFixed(2) + " s.</p>" +
           '<p class="hc-tag">' + bp + "</p>";
       }

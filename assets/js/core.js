@@ -13,6 +13,7 @@
   ];
   var REPO = 'https://github.com/bennyng1029/2028-IBBiology-HL';
   var SITE = 'IB Biology A & B';
+  var SITE_URL = 'https://bennyng1029.github.io/2028-IBBiology-HL/';
   var LEVEL_SCALE = { 1: 'nm', 2: 'µm', 3: 'mm – m', 4: 'm – km' };
 
   /* Fixed outline of the IB guide, so the map is complete even before every topic file is loaded. */
@@ -46,6 +47,8 @@
   IB.topics = [];
   IB.topicMap = {};
   IB.widgets = {};
+  IB.labs = [];
+  IB.labMap = {};
   IB.lang = 'en';
   IB.level = 'hl';           // 'hl' = SL + AHL (default), 'sl' = SL core only
   IB.progress = {};
@@ -121,6 +124,27 @@
     IB.topics.sort(function (a, b) { return ORDER.indexOf(a.slug) - ORDER.indexOf(b.slug); });
   };
   IB.registerWidget = function (name, def) { IB.widgets[name] = def; };
+  IB.registerLab = function (lab) {
+    if (!lab || !lab.id) return;
+    lab.steps = lab.steps || [];
+    lab.topics = lab.topics || [];
+    var at = IB.labs.map(function (x) { return x.id; }).indexOf(lab.id);
+    if (at >= 0) IB.labs[at] = lab; else IB.labs.push(lab);
+    IB.labMap[lab.id] = lab;
+  };
+  /* Lazy-load an external script (e.g. a CDN library). Returns a Promise; each URL is loaded once. */
+  var scriptPromises = {};
+  IB.loadScript = function (url) {
+    if (scriptPromises[url]) return scriptPromises[url];
+    scriptPromises[url] = new Promise(function (resolve, reject) {
+      var s = doc.createElement('script');
+      s.src = url; s.async = true;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { delete scriptPromises[url]; s.parentNode && s.parentNode.removeChild(s); reject(new Error('Could not load ' + url)); };
+      doc.head.appendChild(s);
+    });
+    return scriptPromises[url];
+  };
   IB.t = t;
   IB.ui = ui;
   IB.store = store;
@@ -148,7 +172,7 @@
   }
 
   /* ---------- widgets ---------- */
-  function mountWidget(parent, name) {
+  function mountWidget(parent, name, options) {
     var w = IB.widgets[name];
     var frame = h('figure', { class: 'widget-frame', style: 'margin:1.25rem 0' });
     var title = (w && w.title) ? t(w.title) : name;
@@ -162,7 +186,7 @@
       return;
     }
     try {
-      var c = w.mount(el, { lang: IB.lang, t: t });
+      var c = w.mount(el, { lang: IB.lang, t: t, options: options || {} });
       if (typeof c === 'function') cleanups.push(c);
     } catch (err) {
       if (window.console) console.error('Widget "' + name + '" failed', err);
@@ -178,6 +202,7 @@
     chev: '<svg class="navgroup__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
     up: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>',
     down: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
+    share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>',
     theme: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>'
   };
   var current = { name: 'home', slug: null };
@@ -197,6 +222,11 @@
         '<span class="navgroup__label">' + esc(ui('themeWord')) + ' ' + th + '</span><span class="navgroup__title">' + esc(ui('theme' + th)) + '</span>' + ICON.chev + '</button>' +
         '<ul class="navgroup__menu" id="menu-' + th + '">' + items + '</ul></li>';
     }).join('');
+    var labItems = labsSorted().map(function (l) {
+      return '<li><a href="#lab-' + esc(l.id) + '"' + (current.name === 'lab' && current.labId === l.id ? ' aria-current="page"' : '') + '><span class="site-nav__num">' + esc((l.topics || []).slice(0, 2).join(' ')) + '</span><span class="site-nav__name">' + esc(t(l.title)) + '</span></a></li>';
+    }).join('');
+    var labsGroup = '<li class="navgroup is-labs' + ((current.name === 'lab' || current.name === 'labs') ? ' is-here' : '') + '"><button class="navgroup__btn" type="button" aria-expanded="false" aria-controls="menu-labs"><span class="navgroup__label">' + esc(ui('navLabs')) + '</span>' + ICON.chev + '</button>' +
+      '<ul class="navgroup__menu" id="menu-labs">' + labItems + '<li><a href="#labs"' + (current.name === 'labs' ? ' aria-current="page"' : '') + '><span class="site-nav__name">' + esc(ui('labsAll')) + '</span></a></li></ul></li>';
     function link(route, key, cls) { return '<li><a href="#' + route + '"' + (cls ? ' class="' + cls + '"' : '') + (current.name === route ? ' aria-current="page"' : '') + '>' + esc(ui(key)) + '</a></li>'; }
     var langOpts = LANGS.map(function (l) { return '<option value="' + l.id + '" lang="' + l.html + '"' + (IB.lang === l.id ? ' selected' : '') + '>' + l.label + '</option>'; }).join('');
     mount.innerHTML =
@@ -205,12 +235,13 @@
       '<a class="wordmark" href="#home"><span class="wordmark__cell" aria-hidden="true"><b>A</b><b>B</b></span><span>' + esc(SITE) + '</span></a>' +
       '<button class="btn btn--small nav-toggle" type="button" aria-expanded="' + openMenu + '" aria-controls="header-panel">' + esc(ui(openMenu ? 'close' : 'menu')) + '</button>' +
       '<div class="site-header__panel" id="header-panel"><nav class="site-nav" aria-label="' + esc(ui('navTopics')) + '"><ul class="site-nav__list">' +
-      groups + link('protein-lab', 'navLab', 'is-lab') + link('practice', 'navPractice') + link('glossary', 'navGlossary') + link('about', 'navAbout') +
+      groups + labsGroup + link('practice', 'navPractice') + link('glossary', 'navGlossary') + link('about', 'navAbout') +
       '</ul></nav><div class="site-tools">' +
       '<div class="seg" role="group" aria-label="' + esc(ui('levelGroup')) + '">' +
       '<button class="seg__btn" type="button" data-level="sl" aria-pressed="' + (IB.level === 'sl') + '">' + esc(ui('slOnly')) + '</button>' +
       '<button class="seg__btn" type="button" data-level="hl" aria-pressed="' + (IB.level === 'hl') + '">' + ui('slHl') + '</button></div>' +
       '<select class="select lang-select" id="lang-select" aria-label="Language / 言語 / 語言">' + langOpts + '</select>' +
+      '<button class="icon-btn share-btn" type="button" aria-label="' + esc(ui('share')) + '" title="' + esc(ui('share')) + '">' + ICON.share + '</button>' +
       '<button class="icon-btn theme-toggle" type="button" aria-label="' + esc(ui('switchTheme')) + '" title="' + esc(ui('switchTheme')) + '">' + ICON.theme + '</button>' +
       '</div></div></div><div class="stain" aria-hidden="true"><i></i><i></i></div></header>';
 
@@ -230,6 +261,7 @@
     mount.querySelectorAll('[data-level]').forEach(function (b) { b.addEventListener('click', function () { IB.setLevel(b.getAttribute('data-level')); }); });
     mount.querySelector('#lang-select').addEventListener('change', function (e) { IB.setLang(e.target.value); });
     mount.querySelector('.theme-toggle').addEventListener('click', cycleTheme);
+    mount.querySelector('.share-btn').addEventListener('click', IB.share);
     mount._gs = gs;
   }
   doc.addEventListener('click', function (e) {
@@ -247,7 +279,9 @@
     var mount = doc.getElementById('site-footer');
     if (!mount) return;
     mount.innerHTML = '<footer class="site-footer"><div class="wrap site-footer__inner"><div><p><strong>' + esc(SITE) + '</strong></p><p>' + esc(ui('footerDisclaimer')) + '</p></div>' +
-      '<div><p><a href="' + REPO + '" rel="noopener">' + esc(ui('github')) + '</a></p><p>' + esc(ui('footerLicence')) + '</p></div></div></footer>';
+      '<div><p><button class="btn btn--small share-btn" type="button">' + ICON.share + ' ' + esc(ui('share')) + '</button></p><p><a href="' + REPO + '" rel="noopener">' + esc(ui('github')) + '</a></p><p>' + esc(ui('footerLicence')) + '</p></div>' +
+      '<p class="site-footer__note">' + esc(ui('footerProgress')) + '</p></div></footer>';
+    mount.querySelector('.share-btn').addEventListener('click', IB.share);
   }
 
   /* ---------- theme (colour) ---------- */
@@ -277,6 +311,58 @@
     if (IB.level === 'sl') doc.documentElement.setAttribute('data-show', 'sl'); else doc.documentElement.removeAttribute('data-show');
     render(true);
   };
+
+  /* ---------- share, toast, welcome bar ---------- */
+  function toast(msg) {
+    var el = doc.getElementById('toast');
+    if (!el) { el = h('div', { id: 'toast', class: 'toast', role: 'status', 'aria-live': 'polite' }); doc.body.appendChild(el); }
+    el.textContent = msg; el.classList.add('is-on');
+    clearTimeout(toast._t); toast._t = setTimeout(function () { el.classList.remove('is-on'); }, 2800);
+  }
+  function shareUrl() {
+    var p = window.location.protocol;
+    return (p === 'http:' || p === 'https:') ? window.location.href : SITE_URL + (window.location.hash || '');
+  }
+  function copyText(text) {
+    function fallback() {
+      return new Promise(function (resolve, reject) {
+        var ta = h('textarea', { 'aria-hidden': 'true', readonly: true, style: 'position:fixed;left:0;top:0;opacity:0;font-size:16px' });
+        ta.value = text; doc.body.appendChild(ta); ta.focus(); ta.select();
+        try { ta.setSelectionRange(0, text.length); } catch (e) { /* ignore */ }
+        var ok = false; try { ok = doc.execCommand('copy'); } catch (e) { ok = false; }
+        doc.body.removeChild(ta);
+        ok ? resolve() : reject(new Error('copy failed'));
+      });
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) return navigator.clipboard.writeText(text).catch(fallback);
+    return fallback();
+  }
+  IB.share = function () {
+    var url = shareUrl(), title = doc.title || SITE;
+    if (navigator.share) {
+      navigator.share({ title: title, url: url }).catch(function (err) { if (!err || err.name !== 'AbortError') copyText(url).then(function () { toast(ui('shareCopied')); }, function () { toast(ui('shareManual') + ' ' + url); }); });
+      return;
+    }
+    copyText(url).then(function () { toast(ui('shareCopied')); }, function () { toast(ui('shareManual') + ' ' + url); });
+  };
+  function renderWelcome() {
+    var mount = doc.getElementById('site-welcome');
+    if (!mount) return;
+    mount.innerHTML = '';
+    if (store.get('ibbio.welcomed')) return;
+    function done(level) {
+      store.set('ibbio.welcomed', '1');
+      if (level) IB.setLevel(level); else renderWelcome();
+    }
+    mount.appendChild(h('div', { class: 'welcome', role: 'region', 'aria-label': ui('welcomeQ') }, h('div', { class: 'wrap welcome__in' }, [
+      h('p', { class: 'welcome__text' }, [h('strong', { text: ui('welcomeQ') + ' ' }), ui('welcomeLang')]),
+      h('div', { class: 'welcome__btns' }, [
+        h('button', { class: 'btn btn--small', type: 'button', title: ui('welcomeSlHint'), onclick: function () { done('sl'); } }, 'SL'),
+        h('button', { class: 'btn btn--small btn--primary', type: 'button', title: ui('welcomeHlHint'), onclick: function () { done('hl'); } }, 'HL'),
+        h('button', { class: 'btn btn--small btn--quiet', type: 'button', onclick: function () { done(null); } }, ui('welcomeClose'))
+      ])
+    ])));
+  }
 
   /* ---------- badges / small pieces ---------- */
   function ahlBadge() { return h('span', { class: 'badge badge--ahl', title: ui('ahlLong'), text: ui('ahl') }); }
@@ -330,7 +416,7 @@
     app.appendChild(intro);
 
     var lab = h('section', { class: 'wrap band-section' }, [
-      h('a', { class: 'lab-feature', href: '#protein-lab' }, [
+      h('a', { class: 'lab-feature', href: '#lab-protein' }, [
         h('div', null, [
           h('p', { class: 'eyebrow', text: 'B1.2' }),
           h('h2', { text: ui('labCtaTitle') }),
@@ -341,6 +427,11 @@
       ])
     ]);
     app.appendChild(lab);
+    var others = labsSorted().filter(function (l) { return l.id !== 'protein'; });
+    if (others.length) {
+      lab.appendChild(h('div', { class: 'section-head', style: 'margin-top:1.75rem' }, [h('h2', { text: ui('labsTitle') }), h('a', { class: 'btn btn--small', href: '#labs', text: ui('labsAll') + ' →' })]));
+      lab.appendChild(h('div', { class: 'lab-grid' }, others.map(labCard)));
+    }
 
     var mapSec = h('section', { class: 'wrap band-section', 'aria-labelledby': 'map-title' });
     mapSec.appendChild(h('div', { class: 'section-head' }, [h('h2', { id: 'map-title', text: ui('mapTitle') }), h('p', { class: 'muted small', text: ui('mapHint') })]));
@@ -393,7 +484,7 @@
     var entry = SKELETON.filter(function (s) { return s.slug === slug; })[0];
     if (!entry) { return renderMessage(app, ui('notFound'), ui('notFoundText')); }
     var m = metaFor(entry), topic = m.topic, th = m.theme.toLowerCase();
-    var wrap = h('div', { class: 'wrap' });
+    var wrap = h('div', { class: 'wrap wrap--wide' });
     wrap.appendChild(h('p', { class: 'crumb' }, h('a', { href: '#home', text: '← ' + ui('back') })));
     var hero = h('div', { class: 'topic-hero theme-' + th }, [
       h('div', { class: 'cell', 'aria-hidden': 'true' }, [h('span', { class: 'cell__top' }, [m.ahlOnly ? ahlBadge() : h('span')]), h('span', { class: 'cell__code', text: m.id }), h('span', { class: 'cell__name', text: ui('level' + m.level) })])
@@ -412,6 +503,12 @@
       txt.appendChild(h('ul', { class: 'guiding' }, topic.guidingQuestions.map(function (q) { return h('li', { html: t(q) }); })));
     }
     if (topic.summary) txt.appendChild(h('div', { class: 'summary', html: '<p>' + t(topic.summary).replace(/^<p>|<\/p>$/g, '') + '</p>' }));
+    var relLabs = labsFor(m.id);
+    if (relLabs.length) {
+      txt.appendChild(h('p', { class: 'related-labs' }, [h('span', { class: 'guiding__label', style: 'display:inline;margin:0 0.6rem 0 0', text: ui('labRelated') })].concat(relLabs.map(function (l) {
+        return h('a', { class: 'btn btn--small related-lab', href: '#lab-' + l.id, text: t(l.title) + ' →' });
+      }))));
+    }
 
     if (topic.ahlOnly && IB.level === 'sl') {
       wrap.appendChild(h('div', { class: 'sl-note' }, [
@@ -430,7 +527,7 @@
       sec.appendChild(h('p', { class: 'section-code' }, [s.ref || '', s.ahl ? ahlBadge() : null]));
       sec.appendChild(h('h2', { text: t(s.heading) }));
       sec.appendChild(wrapTables(h('div', { class: 'topic-body', html: t(s.body) })));
-      if (s.widget) mountWidget(sec, s.widget);
+      if (s.widget) mountWidget(sec, s.widget, s.widgetOptions);
       if (s.examTip) sec.appendChild(h('div', { class: 'callout callout--exam' }, [h('span', { class: 'callout__title', text: ui('examTip') }), h('div', { html: t(s.examTip) })]));
       content.appendChild(sec);
       toc.push({ id: id, label: t(s.heading), ref: s.ref, ahl: s.ahl });
@@ -912,74 +1009,101 @@
     draw();
   }
 
-  /* ---------- PROTEIN LAB ---------- */
-  var LAB = [
-    { w: 'amino-acid', ahl: false,
-      title: { en: 'Amino acid structure and R-groups', ja: 'アミノ酸の構造とR基 (R-group)', zh: '氨基酸的結構與 R 基 (R-group)' },
-      intro: {
-        en: '<p>Every amino acid has the same basic structure. A central carbon atom is bonded to an amino group (–NH<sub>2</sub>), a carboxyl group (–COOH), a hydrogen atom and a variable R-group. The R-group is what makes one amino acid different from another. Tap each part of the molecule to see what it is. The second part, sorting R-groups into hydrophobic, polar, acidic and basic, is AHL (B1.2.6).</p>',
-        ja: '<p>すべてのアミノ酸は同じ基本構造をもちます。中心の炭素原子に、アミノ基 (–NH<sub>2</sub>)、カルボキシ基 (–COOH)、水素原子、そして側鎖であるR基 (R-group) が結合しています。アミノ酸どうしの違いを生むのはR基です。分子の各部分をタップして確かめましょう。後半のR基を疎水性・極性・酸性・塩基性に分類する部分はAHL (B1.2.6) です。</p>',
-        zh: '<p>所有氨基酸都有相同的基本結構：中心碳原子連接氨基 (–NH<sub>2</sub>)、羧基 (–COOH)、氫原子和可變的 R 基 (R-group)。不同氨基酸的分別就在於 R 基。請點選分子的各部分，看看它們是甚麼。第二部分把 R 基分為疏水性、極性、酸性和鹼性，屬 AHL (B1.2.6)。</p>'
-      } },
-    { w: 'peptide-builder', ahl: false,
-      title: { en: 'Condensation and peptide bonds', ja: '縮合反応とペプチド結合 (peptide bond)', zh: '縮合反應與肽鍵 (peptide bond)' },
-      intro: {
-        en: '<p>Amino acids are joined by condensation reactions. The –OH from the carboxyl group of one amino acid and an –H from the amino group of the next are removed together as a molecule of water (H<sub>2</sub>O). A peptide bond forms between them. Many amino acids joined this way make a polypeptide.</p>',
-        ja: '<p>アミノ酸は縮合反応 (condensation reaction) で結合します。一方のアミノ酸のカルボキシ基の –OH と、次のアミノ酸のアミノ基の –H がいっしょに取れて、水 (H<sub>2</sub>O) が1分子できます。その間にペプチド結合 (peptide bond) ができます。多くのアミノ酸がこうして結合したものがポリペプチド (polypeptide) です。</p>',
-        zh: '<p>氨基酸通過縮合反應 (condensation reaction) 連接。一個氨基酸羧基上的 –OH 與下一個氨基酸氨基上的 –H 一同脫去，形成一分子水 (H<sub>2</sub>O)，兩者之間便形成肽鍵 (peptide bond)。許多氨基酸這樣連接起來，就成為多肽 (polypeptide)。</p>'
-      } },
-    { w: 'protein-levels', ahl: true,
-      title: { en: 'Levels of protein structure', ja: 'タンパク質の構造の階層', zh: '蛋白質結構的層次' },
-      intro: {
-        en: '<p>Protein structure is described at four levels. <strong>Primary</strong>: the sequence of amino acids. <strong>Secondary</strong>: regular shapes such as the &alpha;-helix and &beta;-pleated sheet, held by hydrogen bonds between backbone C=O and N–H groups. <strong>Tertiary</strong>: the overall 3D shape of one polypeptide. <strong>Quaternary</strong>: two or more polypeptides together. The idea that amino acids can be joined in any order is core (B1.2.4). The named levels, and how the sequence decides the 3D shape (B1.2.7), are AHL.</p>',
-        ja: '<p>タンパク質の構造は4つの階層で表します。<strong>一次構造 (primary)</strong>：アミノ酸の配列。<strong>二次構造 (secondary)</strong>：骨格のC=OとN–Hの間の水素結合で保たれる、&alpha;ヘリックスや&beta;シートのような規則的な形。<strong>三次構造 (tertiary)</strong>：1本のポリペプチド全体の立体構造。<strong>四次構造 (quaternary)</strong>：2本以上のポリペプチドの組み合わせ。アミノ酸がどんな順序でもつながるという考えは共通 (B1.2.4) です。構造の各段階の名前と、配列が立体構造を決めるしくみ (B1.2.7) はAHLです。</p>',
-        zh: '<p>蛋白質結構分為四個層次。<strong>一級結構 (primary)</strong>：氨基酸的序列。<strong>二級結構 (secondary)</strong>：由骨架上 C=O 與 N–H 之間的氫鍵維持的規則形狀，例如 &alpha; 螺旋和 &beta; 摺板。<strong>三級結構 (tertiary)</strong>：單條多肽的整體三維形狀。<strong>四級結構 (quaternary)</strong>：兩條或以上多肽結合在一起。氨基酸可按任何次序連接，這屬核心內容 (B1.2.4)。各級結構的名稱，以及序列如何決定三維形狀 (B1.2.7)，屬於 AHL。</p>'
-      } },
-    { w: 'protein-folding', ahl: true,
-      title: { en: 'What holds the tertiary structure together', ja: '三次構造を保つもの', zh: '維持三級結構的作用力' },
-      intro: {
-        en: '<p>A polypeptide folds into its tertiary structure because of interactions between R-groups: hydrogen bonds, ionic bonds, disulfide bridges (covalent bonds between two cysteine R-groups) and hydrophobic interactions. Switch each type on to see where it acts.</p>',
-        ja: '<p>ポリペプチドが三次構造に折りたたまれるのは、R基どうしの相互作用があるからです。水素結合、イオン結合 (ionic bond)、ジスルフィド結合 (disulfide bridge：2つのシステインのR基の間の共有結合)、疎水性相互作用 (hydrophobic interaction) がそれにあたります。種類ごとにオンにして、どこで働くか見てみましょう。</p>',
-        zh: '<p>多肽摺疊成三級結構，是由於 R 基之間的相互作用：氫鍵 (hydrogen bond)、離子鍵 (ionic bond)、二硫鍵 (disulfide bridge，兩個半胱氨酸 R 基之間的共價鍵) 和疏水相互作用 (hydrophobic interaction)。請逐一開啟各種作用力，看看它們在哪裏起作用。</p>'
-      } },
-    { w: 'denaturation', ahl: false,
-      title: { en: 'Denaturation by heat and pH', ja: '熱とpHによる変性 (denaturation)', zh: '高溫與 pH 引致的變性 (denaturation)' },
-      intro: {
-        en: '<p>Denaturation is a change in the 3D shape of a protein, so it usually loses its biological function. Heat makes the molecule vibrate more and breaks the weak bonds that hold its shape. An extreme pH changes the charges on R-groups and disrupts the bonds between them. The peptide bonds are not broken, so the amino acid sequence stays the same. Denaturation is usually permanent. The three model proteins are illustrative, not real measurements. Use the sliders to see the effect.</p>',
-        ja: '<p>変性 (denaturation) とは、タンパク質の立体構造が変わることで、ふつう生物としての働きを失います。熱は分子の振動を激しくして、形を保っている弱い結合を切ります。極端なpHはR基の電荷を変え、R基どうしの結合を乱します。ペプチド結合は切れないので、アミノ酸の配列は変わりません。変性はふつう元に戻りません。3つのモデルタンパク質は説明用で、実際の測定値ではありません。スライダーで影響を確かめましょう。</p>',
-        zh: '<p>變性 (denaturation) 是指蛋白質的三維形狀改變，通常令它失去生物功能。高溫使分子振動加劇，破壞維持形狀的較弱鍵。極端的 pH 會改變 R 基上的電荷，擾亂 R 基之間的鍵。肽鍵不會斷開，所以氨基酸序列不變。變性通常是永久的。三個模型蛋白質只作示意，並非真實量度數據。請用滑桿觀察影響。</p>'
-      } },
-    { w: 'protein-compare', ahl: true,
-      title: { en: 'Form and function: globular and fibrous, conjugated and non-conjugated', ja: '形と働き：球状と繊維状、複合と非複合', zh: '形態與功能：球狀與纖維狀、結合與非結合' },
-      intro: {
-        en: '<p>A protein’s shape decides what it can do. Globular proteins are compact and rounded, and are usually soluble in water, for example insulin. Fibrous proteins form long strands that give strength, for example collagen. A conjugated protein contains a non-protein part, such as the haem group in haemoglobin; a non-conjugated protein does not. This whole step is AHL (B1.2.11 and B1.2.12).</p>',
-        ja: '<p>タンパク質の形は、その働きを決めます。球状タンパク質 (globular protein) は丸くコンパクトで、ふつう水に溶けます（例：インスリン）。繊維状タンパク質 (fibrous protein) は長い繊維になって強度を与えます（例：コラーゲン）。複合タンパク質 (conjugated protein) はタンパク質以外の部分をもち、たとえばヘモグロビンのヘム基がそうです。非複合タンパク質 (non-conjugated protein) はそれをもちません。このステップはすべてAHL（B1.2.11とB1.2.12）です。</p>',
-        zh: '<p>蛋白質的形狀決定它的功能。球狀蛋白質 (globular protein) 結構緊密、呈圓形，通常可溶於水，例如胰島素。纖維狀蛋白質 (fibrous protein) 形成長纖維，提供強度，例如膠原蛋白。綴合蛋白質 (conjugated protein) 含有非蛋白質部分，例如血紅蛋白中的血紅素基團；非綴合蛋白質 (non-conjugated protein) 則沒有。這一步全部屬於 AHL（B1.2.11 和 B1.2.12）。</p>'
-      } }
-  ];
-  function renderLab(app) {
+  /* ---------- LABS ---------- */
+  function themeVar(th) { return th === 'A' ? 'var(--theme-a)' : 'var(--theme-b)'; }
+  function labsSorted() { return IB.labs.slice().sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
+  function labById(id) { return IB.labMap[id] || null; }
+  function labsFor(topicId) { return labsSorted().filter(function (l) { return (l.topics || []).indexOf(topicId) >= 0; }); }
+  function refTopicSlug(ref) { var m = /^([AB]\d)\.(\d)/.exec(ref || ''); return m ? slugOf(m[1] + '.' + m[2]) : null; }
+  function topicTags(ids) {
+    return (ids || []).map(function (id) {
+      var sl = slugOf(id);
+      return IB.topicMap[sl] ? h('a', { class: 'tag', href: '#topic-' + sl, text: id }) : h('span', { class: 'tag', text: id });
+    });
+  }
+  function labCard(lab) {
+    var th = String(lab.theme || 'B').charAt(0) === 'A' && lab.theme !== 'AB' ? 'A' : 'B';
+    return h('a', { class: 'lab-card', href: '#lab-' + lab.id, style: '--lc:' + (lab.theme === 'AB' ? 'var(--accent)' : themeVar(th)) }, [
+      h('span', { class: 'lab-card__top' }, [
+        h('span', { class: 'lab-card__topics mono', text: (lab.topics || []).join(' · ') }),
+        h('span', { class: 'lab-card__n', text: ui('labSteps', { n: (lab.steps || []).length }) })
+      ]),
+      h('strong', { class: 'lab-card__title', text: t(lab.title) }),
+      h('span', { class: 'lab-card__intro', text: plain(t(lab.intro)) })
+    ]);
+  }
+  function renderLabs(app) {
     var wrap = h('div', { class: 'wrap band-section' });
     app.appendChild(wrap);
-    wrap.appendChild(h('p', { class: 'eyebrow', text: 'B1.2' }));
-    wrap.appendChild(h('h1', { text: ui('labTitle') }));
-    wrap.appendChild(h('p', { class: 'lede', text: ui('labLead') }));
+    wrap.appendChild(h('p', { class: 'eyebrow', text: ui('labsEyebrow') }));
+    wrap.appendChild(h('h1', { text: ui('labsTitle') }));
+    wrap.appendChild(h('p', { class: 'lede', text: ui('labsLead') }));
+    var list = labsSorted();
+    if (!list.length) { wrap.appendChild(h('p', { class: 'muted', text: ui('labsNone') })); return; }
+    wrap.appendChild(h('div', { class: 'lab-grid' }, list.map(labCard)));
+  }
+  function setStepHash(id, n) {
+    var hs = '#lab-' + id + '-' + (n + 1);
+    try { window.history.replaceState(null, '', hs); lastRoute = hs.slice(1); } catch (e) { window.location.hash = hs; }
+  }
+  function renderLab(app, id, step) {
+    var lab = labById(id);
+    if (!lab) return renderMessage(app, ui('notFound'), ui('notFoundText'));
+    var steps = lab.steps || [], total = steps.length;
+    var cur = Math.max(0, Math.min(total - 1, step || 0));
+    var wrap = h('div', { class: 'wrap wrap--wide band-section lab-page' });
+    app.appendChild(wrap);
+    wrap.appendChild(h('p', { class: 'crumb', style: 'padding-top:0' }, h('a', { href: '#labs', text: '← ' + ui('labsAll') })));
+    wrap.appendChild(h('p', { class: 'eyebrow' }, [ui('labWord') + ' · ' + (lab.topics || []).join(' · ')]));
+    wrap.appendChild(h('h1', { text: t(lab.title) }));
+    wrap.appendChild(h('div', { class: 'lede', html: t(lab.intro) }));
+    if (!total) return;
     var nav = h('ol', { class: 'step-nav', 'aria-label': ui('jumpTo') });
-    var visible = LAB.filter(function (s) { return true; });
-    visible.forEach(function (s, i) {
-      var a = h('a', { href: '#' + hashNow(), 'data-step': 'lab-step-' + (i + 1) }, [h('span', { class: 'mono', text: ui('step', { n: i + 1 }) }), h('span', { text: t(s.title) })]);
-      a.addEventListener('click', function (e) { e.preventDefault(); scrollToEl(doc.getElementById('lab-step-' + (i + 1))); });
+    var pane = h('section', { class: 'lab-step', 'aria-live': 'polite' });
+    var stepCleanups = [];
+    var links = steps.map(function (s, i) {
+      var a = h('a', { href: '#lab-' + id + '-' + (i + 1), title: t(s.title) }, [h('span', { class: 'mono', text: ui('step', { n: i + 1 }) }), h('span', { class: 'step-nav__t', text: t(s.title) }), s.ahl ? ahlBadge() : null]);
+      a.addEventListener('click', function (e) { e.preventDefault(); go(i, true); });
       nav.appendChild(h('li', null, a));
+      return a;
     });
     wrap.appendChild(nav);
-    visible.forEach(function (s, i) {
-      var step = h('section', { class: 'lab-step', id: 'lab-step-' + (i + 1), 'data-level': s.ahl ? 'ahl' : null }, [
-        h('div', { class: 'lab-step__head' }, [h('span', { class: 'lab-step__num', text: ui('step', { n: i + 1 }) }), h('h2', { text: t(s.title) }), s.ahl ? ahlBadge() : null]),
-        wrapTables(h('div', { class: 'lab-step__intro', html: t(s.intro) }))
-      ]);
-      mountWidget(step, s.w);
-      wrap.appendChild(step);
-    });
-    wrap.appendChild(h('p', { style: 'margin-top:2rem' }, h('a', { class: 'btn btn--primary', href: '#topic-b1-2', text: ui('labTopicLink') + ' →' })));
+    wrap.appendChild(pane);
+
+    function go(i, scroll) {
+      cur = i;
+      stepCleanups.forEach(function (fn) { var k = cleanups.indexOf(fn); if (k >= 0) cleanups.splice(k, 1); try { fn(); } catch (e) { /* ignore */ } });
+      stepCleanups = [];
+      links.forEach(function (a, k) { if (k === i) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current'); });
+      pane.innerHTML = '';
+      var s = steps[i];
+      pane.setAttribute('data-level', s.ahl ? 'ahl' : '');
+      pane.appendChild(h('div', { class: 'lab-step__head' }, [
+        h('span', { class: 'lab-step__num', text: ui('stepOf', { n: i + 1, total: total }) }), h('h2', { text: t(s.title) }), s.ahl ? ahlBadge() : null
+      ]));
+      if (s.refs && s.refs.length) {
+        var seen = {};
+        pane.appendChild(h('p', { class: 'lab-step__refs' }, [h('span', { class: 'muted small', text: ui('labCovers') + ' ' })].concat(s.refs.map(function (r) {
+          var sl = refTopicSlug(r);
+          return (sl && IB.topicMap[sl]) ? h('a', { class: 'tag mono', href: '#topic-' + sl, title: ui('labOpenTopic'), text: r }) : h('span', { class: 'tag mono', text: r });
+        }))));
+      }
+      pane.appendChild(wrapTables(h('div', { class: 'lab-step__intro', html: t(s.intro) })));
+      if (s.task) pane.appendChild(h('div', { class: 'callout callout--key lab-task' }, [h('span', { class: 'callout__title', text: ui('labTry') }), h('div', { html: t(s.task) })]));
+      var before = cleanups.length;
+      if (s.widget) mountWidget(pane, s.widget, s.options);
+      stepCleanups = cleanups.slice(before);
+      var prev = i > 0, next = i < total - 1;
+      pane.appendChild(h('div', { class: 'lab-pager' }, [
+        prev ? h('button', { class: 'btn', type: 'button', onclick: function () { go(i - 1, true); } }, '← ' + ui('labPrev')) : h('span'),
+        h('span', { class: 'lab-pager__pos mono', text: (i + 1) + ' / ' + total }),
+        next ? h('button', { class: 'btn btn--primary', type: 'button', onclick: function () { go(i + 1, true); } }, ui('labNext') + ' →')
+             : ((lab.topics || []).length && IB.topicMap[slugOf(lab.topics[0])] ? h('a', { class: 'btn btn--primary', href: '#topic-' + slugOf(lab.topics[0]) }, ui('labTopicShort') + ' →') : h('a', { class: 'btn', href: '#labs' }, ui('labsAll')))
+      ]));
+      setStepHash(id, i);
+      if (scroll) scrollToEl(wrap.querySelector('.step-nav'));
+    }
+    go(cur, false);
   }
 
   /* ---------- ABOUT ---------- */
@@ -1009,18 +1133,22 @@
   function parse() {
     var hs = hashNow();
     if (hs.indexOf('topic-') === 0) return { name: 'topic', slug: hs.slice(6) };
-    if (['home', 'protein-lab', 'practice', 'glossary', 'about'].indexOf(hs) >= 0) return { name: hs };
+    if (hs === 'protein-lab') return { name: 'lab', id: 'protein', step: 0 };
+    if (hs === 'labs') return { name: 'labs' };
+    var lm = /^lab-(.+?)(?:-(\d+))?$/.exec(hs);
+    if (lm) return { name: 'lab', id: lm[1], step: lm[2] ? Number(lm[2]) - 1 : 0 };
+    if (['home', 'practice', 'glossary', 'about'].indexOf(hs) >= 0) return { name: hs };
     return { name: 'home' };
   }
   var lastRoute = '';
   function render(keepScroll) {
     var r = parse(), y = window.pageYOffset;
-    current = { name: r.name, slug: r.slug || null };
+    current = { name: r.name, slug: r.slug || null, labId: r.id || null };
     runCleanups();
-    renderHeader(); renderFooter();
+    renderHeader(); renderWelcome(); renderFooter();
     var app = doc.getElementById('app');
     app.innerHTML = '';
-    var titleKey = { home: null, 'protein-lab': 'navLab', practice: 'navPractice', glossary: 'navGlossary', about: 'navAbout' }[r.name];
+    var titleKey = { home: null, labs: 'navLabs', practice: 'navPractice', glossary: 'navGlossary', about: 'navAbout' }[r.name];
     var pageTitle = titleKey ? ui(titleKey) + ' | ' + SITE : SITE;
     try {
       if (r.name === 'home') renderHome(app);
@@ -1029,7 +1157,11 @@
         var e = SKELETON.filter(function (s) { return s.slug === r.slug; })[0];
         if (e) pageTitle = e.id + ' ' + t(metaFor(e).title) + ' | ' + SITE;
       }
-      else if (r.name === 'protein-lab') renderLab(app);
+      else if (r.name === 'labs') renderLabs(app);
+      else if (r.name === 'lab') {
+        renderLab(app, r.id, r.step);
+        if (labById(r.id)) pageTitle = t(labById(r.id).title) + ' | ' + SITE;
+      }
       else if (r.name === 'practice') renderPractice(app);
       else if (r.name === 'glossary') renderGlossary(app);
       else if (r.name === 'about') renderAbout(app);

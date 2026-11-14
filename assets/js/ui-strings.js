@@ -254,4 +254,41 @@
       footerLicence: '程式碼：MIT。內容：CC BY-NC-SA 4.0。'
     }
   };
+  /* v2 additions: labs, sharing, welcome bar */
+  var V2 = {
+    en: {
+      navLabs: 'Labs', labsAll: 'All labs', labsEyebrow: 'Guided practice', labsTitle: 'Labs',
+      labsLead: 'Short guided activities. Each lab has a few steps with one interactive per step. Follow the steps in order, or jump to the one you need.',
+      labsNone: 'No labs have loaded yet.', labSteps: '{n} steps', labWord: 'Lab', stepOf: 'Step {n} of {total}',
+      labCovers: 'Covers', labOpenTopic: 'Open the notes for this subtopic', labTry: 'Try this', labPrev: 'Previous step', labNext: 'Next step',
+      labTopicShort: 'Go to the full notes', labRelated: 'Related lab:',
+      share: 'Share', shareCopied: 'Link copied', shareManual: 'Copy this link:',
+      welcomeQ: 'Which course are you taking?', welcomeLang: 'Choose SL or HL here. You can change the language in the header at any time.',
+      welcomeSlHint: 'Hide AHL-only content', welcomeHlHint: 'Show SL and AHL content', welcomeClose: 'Dismiss',
+      footerProgress: 'Your progress is saved only on this device and browser. It does not follow you to another phone or computer.'
+    },
+    ja: {
+      navLabs: 'ラボ', labsAll: 'すべてのラボ', labsEyebrow: 'ガイド付き練習', labsTitle: 'ラボ',
+      labsLead: '短いガイド付きの活動です。各ラボはいくつかのステップに分かれ、1ステップにつき1つのインタラクティブがあります。順番に進んでも、必要なステップへ飛んでもかまいません。',
+      labsNone: 'ラボがまだ読み込まれていません。', labSteps: '{n}ステップ', labWord: 'ラボ', stepOf: 'ステップ {n} / {total}',
+      labCovers: '対応', labOpenTopic: 'このサブトピックのノートを開く', labTry: 'やってみよう', labPrev: '前のステップ', labNext: '次のステップ',
+      labTopicShort: '詳しいノートへ', labRelated: '関連ラボ：',
+      share: '共有', shareCopied: 'リンクをコピーしました', shareManual: 'このリンクをコピーしてください：',
+      welcomeQ: 'どちらのコースを履修していますか？', welcomeLang: 'SLかHLを選んでください。言語はいつでもヘッダーで変更できます。',
+      welcomeSlHint: 'AHLのみの内容を隠す', welcomeHlHint: 'SLとAHLの内容を表示', welcomeClose: '閉じる',
+      footerProgress: '学習の進み具合は、この端末のこのブラウザにだけ保存されます。ほかのスマートフォンやパソコンには引き継がれません。'
+    },
+    zh: {
+      navLabs: '實驗室', labsAll: '所有實驗室', labsEyebrow: '引導式練習', labsTitle: '實驗室',
+      labsLead: '簡短的引導式活動。每個實驗室分為數個步驟，每個步驟有一個互動內容。可以依次完成，也可以直接跳到需要的步驟。',
+      labsNone: '實驗室尚未載入。', labSteps: '{n} 個步驟', labWord: '實驗室', stepOf: '第 {n} 步，共 {total} 步',
+      labCovers: '涵蓋', labOpenTopic: '開啟這個子課題的筆記', labTry: '試一試', labPrev: '上一步', labNext: '下一步',
+      labTopicShort: '前往完整筆記', labRelated: '相關實驗室：',
+      share: '分享', shareCopied: '已複製連結', shareManual: '請複製這個連結：',
+      welcomeQ: '你修讀哪個課程？', welcomeLang: '請在此選擇 SL 或 HL。語言可隨時在頁首更改。',
+      welcomeSlHint: '隱藏只屬 AHL 的內容', welcomeHlHint: '顯示 SL 和 AHL 內容', welcomeClose: '關閉',
+      footerProgress: '你的進度只儲存在這部裝置的這個瀏覽器內，不會轉移到其他手機或電腦。'
+    }
+  };
+  Object.keys(V2).forEach(function (l) { for (var k in V2[l]) IB.UI[l][k] = V2[l][k]; });
 })();
