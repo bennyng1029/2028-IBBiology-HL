@@ -50,49 +50,49 @@
   ].join("\n");
 
   var T = {
-    tab0: L("Triglyceride", "トリグリセリド", "甘油三酯"),
-    tab1: L("Fatty acids", "脂肪酸", "脂肪酸"),
-    tab2: L("Phospholipids", "リン脂質", "磷脂"),
-    add: L("Add fatty acid", "脂肪酸を付ける", "加入脂肪酸"),
-    playAll: L("Play all ▶", "すべて再生 ▶", "全部播放 ▶"),
-    reset: L("Reset", "リセット", "重設"),
-    gly: L("glycerol", "グリセロール (glycerol)", "甘油 (glycerol)"),
-    fa: L("fatty acid", "脂肪酸 (fatty acid)", "脂肪酸 (fatty acid)"),
-    es: L("ester bond", "エステル結合", "酯鍵"),
-    m0: L("<b>Glycerol</b> has three –OH groups. Each <b>fatty acid</b> has a –COOH group and a long hydrocarbon chain. Press Add fatty acid.", "<b>グリセロール (glycerol)</b>には–OH基が3つあります。<b>脂肪酸 (fatty acid)</b>は–COOH基と長い炭化水素鎖を持ちます。「脂肪酸を付ける」を押しましょう。", "<b>甘油 (glycerol)</b>有三個–OH基。每個<b>脂肪酸 (fatty acid)</b>有一個–COOH基和長長的烴鏈。按「加入脂肪酸」。"),
-    m0n: L("<b>Condensation</b>: –OH from the fatty acid and –H from the glycerol leave as <b>water</b>, and an <b>ester bond</b> forms. Fatty acids joined: %n of 3.", "<b>縮合 (condensation)</b>: 脂肪酸の–OHとグリセロールの–Hが<b>水</b>として取れ、<b>エステル結合</b>ができます。結合した脂肪酸: %n / 3。", "<b>縮合 (condensation)</b>：脂肪酸的–OH和甘油的–H脫去成為<b>水</b>，形成<b>酯鍵</b>。已連接的脂肪酸：%n / 3。"),
-    m03: L("<b>Triglyceride</b>: one glycerol + three fatty acids, three ester bonds, three water molecules released. Triglycerides store energy and give thermal insulation in adipose tissue.", "<b>トリグリセリド (triglyceride)</b>: グリセロール1分子＋脂肪酸3分子、エステル結合3つ、水3分子が放出されます。脂肪組織でエネルギーを貯蔵し、断熱にも働きます。", "<b>甘油三酯 (triglyceride)</b>：1個甘油＋3個脂肪酸，3個酯鍵，釋出3個水分子。在脂肪組織中儲存能量並提供隔熱。"),
-    ex0: L("Triglyceride = glycerol + 3 fatty acids, made by 3 condensation reactions (3 H₂O released).", "トリグリセリド (triglyceride) ＝ グリセロール＋脂肪酸3つ。縮合 (condensation) が3回起こり、水が3分子できる。", "甘油三酯 (triglyceride) ＝ 甘油＋3個脂肪酸，經3次縮合 (condensation)，釋出3個水。"),
-    ref0: L("Syllabus B1.1.8–9", "シラバス B1.1.8–9", "課程大綱 B1.1.8–9"),
-    sat: L("Saturated", "飽和 (saturated)", "飽和 (saturated)"),
-    mono: L("Monounsaturated", "一価不飽和 (mono-unsaturated)", "單元不飽和 (monounsaturated)"),
-    poly: L("Polyunsaturated", "多価不飽和 (poly-unsaturated)", "多元不飽和 (polyunsaturated)"),
-    h0: L("no C=C", "C=Cなし", "無C=C"),
-    h1: L("one C=C", "C=C 1つ", "1個C=C"),
-    h2: L("2+ C=C", "C=C 2つ以上", "2個或以上C=C"),
-    packed: L("packed: solid", "密: 固体", "緊密：固態"),
-    loose: L("loose: liquid", "ゆるい: 液体", "鬆散：液態"),
-    temp: L("Temperature", "温度", "溫度"),
-    cool: L("cooler", "低い", "較低"),
-    warm: L("warmer", "高い", "較高"),
-    m1: L("Saturated chains are straight, so they pack closely: <b>higher melting point</b>. Each cis C=C bond puts a kink in the chain, so unsaturated chains pack loosely: <b>lower melting point</b>. Slide the temperature.", "飽和脂肪酸の鎖はまっすぐで密に並ぶので、<b>融点が高い</b>です。シス型のC=C結合は鎖を折り曲げるので、不飽和脂肪酸は密に並べず、<b>融点が低い</b>です。温度を動かしてみましょう。", "飽和脂肪酸的鏈是直的，排列緊密，所以<b>熔點較高</b>。每個順式C=C鍵令鏈出現扭折，不飽和脂肪酸排列鬆散，所以<b>熔點較低</b>。拉動溫度滑桿。"),
-    md1: L("Storage lipids: plants mostly store oils, with more unsaturated fatty acids (liquid at ordinary temperatures). Endotherms (animals that keep a warm body temperature) mostly store fats, with more saturated fatty acids. Illustrative melting points only; real values vary.", "貯蔵脂質: 植物は不飽和脂肪酸の多い油 (oil) を主に貯蔵し、通常の温度では液体です。恒温動物 (endotherm) は飽和脂肪酸の多い脂肪 (fat) を主に貯蔵します。融点は説明用で、実際の値は異なります。", "儲存脂質：植物主要儲存含較多不飽和脂肪酸的油 (oil)，在一般溫度下為液態。恆溫動物 (endotherm) 主要儲存含較多飽和脂肪酸的脂肪 (fat)。熔點只作示意，實際數值不同。"),
-    ex1: L("More C=C bonds: more kinks, looser packing, lower melting point. Plant oils are more unsaturated; animal fats more saturated.", "C=Cが多いほど折れ曲がりが多く、ゆるく並び、融点が低い。植物の油は不飽和が多く、動物の脂肪は飽和が多い。", "C=C越多，扭折越多，排列越鬆散，熔點越低。植物油較不飽和，動物脂肪較飽和。"),
-    ref1: L("Syllabus B1.1.10 (links to B2.1.11, AHL)", "シラバス B1.1.10（B2.1.11 (AHL) と関連）", "課程大綱 B1.1.10（與B2.1.11 (AHL) 有關）"),
-    assemble: L("Self-assemble ▶", "自己集合 ▶", "自行組合 ▶"),
-    scatter: L("Scatter", "ばらまく", "散開"),
-    head: L("hydrophilic head", "親水性の頭部 (hydrophilic head)", "親水頭部 (hydrophilic head)"),
-    tails: L("hydrophobic tails", "疎水性の尾部 (hydrophobic tails)", "疏水尾部 (hydrophobic tails)"),
-    water: L("water", "水", "水"),
-    core: L("hydrophobic core", "疎水性の内部", "疏水內部"),
-    m2: L("Each <b>phospholipid</b> is <b>amphipathic</b>: a hydrophilic phosphate head and two hydrophobic fatty acid tails. Press Self-assemble.", "<b>リン脂質 (phospholipid)</b>は<b>両親媒性 (amphipathic)</b>で、親水性のリン酸の頭部と、2本の疎水性の脂肪酸の尾部を持ちます。「自己集合」を押しましょう。", "<b>磷脂 (phospholipid)</b>是<b>雙親性 (amphipathic)</b>的：有親水的磷酸頭部和兩條疏水的脂肪酸尾部。按「自行組合」。"),
-    m2b: L("In water the heads face the water and the tails face each other, away from water. A <b>phospholipid bilayer</b> forms: the basis of cell membranes (B2.1).", "水中では頭部が水に向き、尾部は水から離れて向かい合います。<b>リン脂質二重層 (phospholipid bilayer)</b>ができ、これが細胞膜の基本です (B2.1)。", "在水中，頭部朝向水，尾部互相面對、遠離水。形成<b>磷脂雙層 (phospholipid bilayer)</b>，是細胞膜的基礎 (B2.1)。"),
-    md2: L("A phospholipid is made by condensation reactions: one glycerol links two fatty acids and one phosphate group. A triglyceride has three fatty acids instead.", "リン脂質も縮合で作られます。グリセロール1分子に脂肪酸2分子とリン酸基1つがつながります。トリグリセリドは脂肪酸が3つです。", "磷脂也經縮合形成：1個甘油連接兩個脂肪酸和一個磷酸基。甘油三酯則連接三個脂肪酸。"),
-    ex2: L("Phospholipid: hydrophilic head + 2 hydrophobic tails (amphipathic). In water they form a bilayer.", "リン脂質 (phospholipid): 親水性の頭部＋疎水性の尾部2本（両親媒性 (amphipathic)）。水中で二重層をつくる。", "磷脂 (phospholipid)：親水頭部＋2條疏水尾部（雙親性 (amphipathic)）。在水中形成雙層。"),
-    ref2: L("Syllabus B1.1.9, B1.1.12 (→ B2.1.1)", "シラバス B1.1.9、B1.1.12（→ B2.1.1）", "課程大綱 B1.1.9、B1.1.12（→ B2.1.1）"),
-    more: L("More detail", "くわしく", "更多資料"),
-    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住"),
-    schem: L("schematic", "模式図", "示意圖")
+    tab0: L("Triglyceride", "トリグリセリド", "甘油三酯", "트라이글리세리드"),
+    tab1: L("Fatty acids", "脂肪酸", "脂肪酸", "지방산"),
+    tab2: L("Phospholipids", "リン脂質", "磷脂", "인지질"),
+    add: L("Add fatty acid", "脂肪酸を付ける", "加入脂肪酸", "지방산 붙이기"),
+    playAll: L("Play all ▶", "すべて再生 ▶", "全部播放 ▶", "모두 재생 ▶"),
+    reset: L("Reset", "リセット", "重設", "다시 시작"),
+    gly: L("glycerol", "グリセロール (glycerol)", "甘油 (glycerol)", "글리세롤(glycerol)"),
+    fa: L("fatty acid", "脂肪酸 (fatty acid)", "脂肪酸 (fatty acid)", "지방산(fatty acid)"),
+    es: L("ester bond", "エステル結合", "酯鍵", "에스터 결합(ester bond)"),
+    m0: L("<b>Glycerol</b> has three –OH groups. Each <b>fatty acid</b> has a –COOH group and a long hydrocarbon chain. Press Add fatty acid.", "<b>グリセロール (glycerol)</b>には–OH基が3つあります。<b>脂肪酸 (fatty acid)</b>は–COOH基と長い炭化水素鎖を持ちます。「脂肪酸を付ける」を押しましょう。", "<b>甘油 (glycerol)</b>有三個–OH基。每個<b>脂肪酸 (fatty acid)</b>有一個–COOH基和長長的烴鏈。按「加入脂肪酸」。", "<b>글리세롤(glycerol)</b>에는 –OH기가 3개 있다. 각 <b>지방산(fatty acid)</b>에는 –COOH기와 긴 탄화수소 사슬이 있다. '지방산 붙이기'를 누르시오."),
+    m0n: L("<b>Condensation</b>: –OH from the fatty acid and –H from the glycerol leave as <b>water</b>, and an <b>ester bond</b> forms. Fatty acids joined: %n of 3.", "<b>縮合 (condensation)</b>: 脂肪酸の–OHとグリセロールの–Hが<b>水</b>として取れ、<b>エステル結合</b>ができます。結合した脂肪酸: %n / 3。", "<b>縮合 (condensation)</b>：脂肪酸的–OH和甘油的–H脫去成為<b>水</b>，形成<b>酯鍵</b>。已連接的脂肪酸：%n / 3。", "<b>축합(condensation)</b>: 지방산의 –OH와 글리세롤의 –H가 <b>물</b>로 떨어져 나가고 <b>에스터 결합</b>이 생긴다. 연결된 지방산: 3개 중 %n개."),
+    m03: L("<b>Triglyceride</b>: one glycerol + three fatty acids, three ester bonds, three water molecules released. Triglycerides store energy and give thermal insulation in adipose tissue.", "<b>トリグリセリド (triglyceride)</b>: グリセロール1分子＋脂肪酸3分子、エステル結合3つ、水3分子が放出されます。脂肪組織でエネルギーを貯蔵し、断熱にも働きます。", "<b>甘油三酯 (triglyceride)</b>：1個甘油＋3個脂肪酸，3個酯鍵，釋出3個水分子。在脂肪組織中儲存能量並提供隔熱。", "<b>트라이글리세리드(triglyceride)</b>: 글리세롤 1분자 + 지방산 3분자, 에스터 결합 3개, 방출된 물 분자 3개. 트라이글리세리드는 지방 조직(adipose tissue)에서 에너지를 저장하고 열을 차단한다."),
+    ex0: L("Triglyceride = glycerol + 3 fatty acids, made by 3 condensation reactions (3 H₂O released).", "トリグリセリド (triglyceride) ＝ グリセロール＋脂肪酸3つ。縮合 (condensation) が3回起こり、水が3分子できる。", "甘油三酯 (triglyceride) ＝ 甘油＋3個脂肪酸，經3次縮合 (condensation)，釋出3個水。", "트라이글리세리드 = 글리세롤 + 지방산 3분자. 축합 반응 3번으로 만들어진다(H₂O 3분자 방출)."),
+    ref0: L("Syllabus B1.1.8–9", "シラバス B1.1.8–9", "課程大綱 B1.1.8–9", "교육과정 B1.1.8–9"),
+    sat: L("Saturated", "飽和 (saturated)", "飽和 (saturated)", "포화(saturated)"),
+    mono: L("Monounsaturated", "一価不飽和 (mono-unsaturated)", "單元不飽和 (monounsaturated)", "단일 불포화(mono-unsaturated)"),
+    poly: L("Polyunsaturated", "多価不飽和 (poly-unsaturated)", "多元不飽和 (polyunsaturated)", "다중 불포화(poly-unsaturated)"),
+    h0: L("no C=C", "C=Cなし", "無C=C", "C=C 없음"),
+    h1: L("one C=C", "C=C 1つ", "1個C=C", "C=C 1개"),
+    h2: L("2+ C=C", "C=C 2つ以上", "2個或以上C=C", "C=C 2개 이상"),
+    packed: L("packed: solid", "密: 固体", "緊密：固態", "조밀함: 고체"),
+    loose: L("loose: liquid", "ゆるい: 液体", "鬆散：液態", "느슨함: 액체"),
+    temp: L("Temperature", "温度", "溫度", "온도"),
+    cool: L("cooler", "低い", "較低", "낮음"),
+    warm: L("warmer", "高い", "較高", "높음"),
+    m1: L("Saturated chains are straight, so they pack closely: <b>higher melting point</b>. Each cis C=C bond puts a kink in the chain, so unsaturated chains pack loosely: <b>lower melting point</b>. Slide the temperature.", "飽和脂肪酸の鎖はまっすぐで密に並ぶので、<b>融点が高い</b>です。シス型のC=C結合は鎖を折り曲げるので、不飽和脂肪酸は密に並べず、<b>融点が低い</b>です。温度を動かしてみましょう。", "飽和脂肪酸的鏈是直的，排列緊密，所以<b>熔點較高</b>。每個順式C=C鍵令鏈出現扭折，不飽和脂肪酸排列鬆散，所以<b>熔點較低</b>。拉動溫度滑桿。", "포화 지방산의 사슬은 곧아서 촘촘히 채워진다. 따라서 <b>녹는점이 더 높다</b>. 시스(cis) C=C 결합마다 사슬이 꺾이므로 불포화 지방산의 사슬은 느슨하게 채워진다. 따라서 <b>녹는점이 더 낮다</b>. 온도를 조절해 보시오."),
+    md1: L("Storage lipids: plants mostly store oils, with more unsaturated fatty acids (liquid at ordinary temperatures). Endotherms (animals that keep a warm body temperature) mostly store fats, with more saturated fatty acids. Illustrative melting points only; real values vary.", "貯蔵脂質: 植物は不飽和脂肪酸の多い油 (oil) を主に貯蔵し、通常の温度では液体です。恒温動物 (endotherm) は飽和脂肪酸の多い脂肪 (fat) を主に貯蔵します。融点は説明用で、実際の値は異なります。", "儲存脂質：植物主要儲存含較多不飽和脂肪酸的油 (oil)，在一般溫度下為液態。恆溫動物 (endotherm) 主要儲存含較多飽和脂肪酸的脂肪 (fat)。熔點只作示意，實際數值不同。", "저장 지질: 식물은 주로 불포화 지방산이 더 많은 기름을 저장한다(보통 온도에서 액체). 내온 동물(체온을 따뜻하게 유지하는 동물)은 주로 포화 지방산이 더 많은 지방을 저장한다. 녹는점은 설명을 위한 값일 뿐이며 실제 값은 다양하다."),
+    ex1: L("More C=C bonds: more kinks, looser packing, lower melting point. Plant oils are more unsaturated; animal fats more saturated.", "C=Cが多いほど折れ曲がりが多く、ゆるく並び、融点が低い。植物の油は不飽和が多く、動物の脂肪は飽和が多い。", "C=C越多，扭折越多，排列越鬆散，熔點越低。植物油較不飽和，動物脂肪較飽和。", "C=C 결합이 많을수록 꺾임이 많아지고, 더 느슨하게 채워져 녹는점이 낮아진다. 식물 기름은 불포화도가 더 높고, 동물 지방은 포화도가 더 높다."),
+    ref1: L("Syllabus B1.1.10 (links to B2.1.11, AHL)", "シラバス B1.1.10（B2.1.11 (AHL) と関連）", "課程大綱 B1.1.10（與B2.1.11 (AHL) 有關）", "교육과정 B1.1.10 (B2.1.11, AHL과 연결)"),
+    assemble: L("Self-assemble ▶", "自己集合 ▶", "自行組合 ▶", "스스로 모이기 ▶"),
+    scatter: L("Scatter", "ばらまく", "散開", "흩뜨리기"),
+    head: L("hydrophilic head", "親水性の頭部 (hydrophilic head)", "親水頭部 (hydrophilic head)", "친수성 머리(hydrophilic head)"),
+    tails: L("hydrophobic tails", "疎水性の尾部 (hydrophobic tails)", "疏水尾部 (hydrophobic tails)", "소수성 꼬리(hydrophobic tails)"),
+    water: L("water", "水", "水", "물"),
+    core: L("hydrophobic core", "疎水性の内部", "疏水內部", "소수성 중심부"),
+    m2: L("Each <b>phospholipid</b> is <b>amphipathic</b>: a hydrophilic phosphate head and two hydrophobic fatty acid tails. Press Self-assemble.", "<b>リン脂質 (phospholipid)</b>は<b>両親媒性 (amphipathic)</b>で、親水性のリン酸の頭部と、2本の疎水性の脂肪酸の尾部を持ちます。「自己集合」を押しましょう。", "<b>磷脂 (phospholipid)</b>是<b>雙親性 (amphipathic)</b>的：有親水的磷酸頭部和兩條疏水的脂肪酸尾部。按「自行組合」。", "각 <b>인지질(phospholipid)</b>은 <b>양친매성(amphipathic)</b>이다. 친수성인 인산 머리와 소수성인 지방산 꼬리 2개를 가진다. '스스로 모이기'를 누르시오."),
+    m2b: L("In water the heads face the water and the tails face each other, away from water. A <b>phospholipid bilayer</b> forms: the basis of cell membranes (B2.1).", "水中では頭部が水に向き、尾部は水から離れて向かい合います。<b>リン脂質二重層 (phospholipid bilayer)</b>ができ、これが細胞膜の基本です (B2.1)。", "在水中，頭部朝向水，尾部互相面對、遠離水。形成<b>磷脂雙層 (phospholipid bilayer)</b>，是細胞膜的基礎 (B2.1)。", "물속에서는 머리가 물을 향하고, 꼬리는 물에서 멀어져 서로를 향한다. <b>인지질 2중층(phospholipid bilayer)</b>이 만들어지며, 이것이 세포막의 바탕이다(B2.1)."),
+    md2: L("A phospholipid is made by condensation reactions: one glycerol links two fatty acids and one phosphate group. A triglyceride has three fatty acids instead.", "リン脂質も縮合で作られます。グリセロール1分子に脂肪酸2分子とリン酸基1つがつながります。トリグリセリドは脂肪酸が3つです。", "磷脂也經縮合形成：1個甘油連接兩個脂肪酸和一個磷酸基。甘油三酯則連接三個脂肪酸。", "인지질도 축합 반응으로 만들어진다. 글리세롤 1분자가 지방산 2분자와 인산기 1개를 연결한다. 트라이글리세리드는 그 대신 지방산이 3개이다."),
+    ex2: L("Phospholipid: hydrophilic head + 2 hydrophobic tails (amphipathic). In water they form a bilayer.", "リン脂質 (phospholipid): 親水性の頭部＋疎水性の尾部2本（両親媒性 (amphipathic)）。水中で二重層をつくる。", "磷脂 (phospholipid)：親水頭部＋2條疏水尾部（雙親性 (amphipathic)）。在水中形成雙層。", "인지질(phospholipid): 친수성 머리 + 소수성 꼬리 2개(양친매성). 물속에서는 2중층을 이룬다."),
+    ref2: L("Syllabus B1.1.9, B1.1.12 (→ B2.1.1)", "シラバス B1.1.9、B1.1.12（→ B2.1.1）", "課程大綱 B1.1.9、B1.1.12（→ B2.1.1）", "교육과정 B1.1.9, B1.1.12 (→ B2.1.1)"),
+    more: L("More detail", "くわしく", "更多資料", "자세히 보기"),
+    exam: L("What to remember for the exam", "試験でおぼえること", "考試要記住", "시험 대비 핵심"),
+    schem: L("schematic", "模式図", "示意圖", "모식도")
   };
 
   function clamp(x, a, b) { return x < a ? a : (x > b ? b : x); }
@@ -101,7 +101,7 @@
   function lerp(a, b, u) { return a + (b - a) * u; }
   function f1(x) { return Math.round(x * 10) / 10; }
   function reduced() { try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { return false; } }
-  function strip(o) { return o.replace(/ \(.*/, ""); }
+  function strip(o) { return o.replace(/\s*\(.*/, ""); }
 
   // ---- tab 0 ---------------------------------------------------------
   function zig(x, y, n, dx) { var pts = []; for (var i = 0; i < n; i++) pts.push((x + i * dx) + " " + f1(y + (i % 2 ? 5 : -5))); return "M" + pts.join(" L"); }
@@ -211,7 +211,7 @@
   }
 
   IB.registerWidget("lipid-builder", {
-    title: L("Lipid builder", "脂質ビルダー", "脂質建構器"),
+    title: L("Lipid builder", "脂質ビルダー", "脂質建構器", "지질 만들기"),
     mount: function (el, ctx) {
       if (!document.getElementById(ID)) { var st = document.createElement("style"); st.id = ID; st.textContent = CSS; document.head.appendChild(st); }
       var t = ctx.t, opt = ctx.options || {};
