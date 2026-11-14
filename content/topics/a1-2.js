@@ -155,6 +155,7 @@
           "<p>試試看：在下方的 DNA 建構器中，打開「建構 DNA 鏈」分頁，在反向平行的鏈上配對鹼基；「DNA 與 RNA」分頁則對應 A1.2.7。HL 學生還可以在那裏顯示 5′ 與 3′ 端，並以顏色區分嘌呤與嘧啶。</p>" +
           "<p><em>不需要</em>記住各種鹼基的相對長度，或每個鹼基對的氫鍵數目。</p>"),
         widget: "dna-builder",
+        widgetOptions: {tab: 1},
         examTip: L(
           "If asked to draw DNA, check three things before you move on: strands antiparallel, A opposite T and G opposite C, and hydrogen bonds shown as dashed lines between bases (not through the backbone).",
           "DNA を描く問題では、次の3点を確認しましょう。鎖が逆平行であること、A の向かいが T で G の向かいが C であること、水素結合が塩基の間の破線で (骨格ではなく) 描かれていること。",

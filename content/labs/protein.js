@@ -186,7 +186,7 @@ IB.registerLab({
       },
       "task": {
         "en": "Colour by Chain and tick Show disulfide bonds. How many S–S bonds join the A chain to the B chain? Which amino acid supplies the sulfur atoms?",
-        "ja": "色分けを「鎖」にして「ジスルフィド結合を表示」をオンにしましょう。A鎖とB鎖をつなぐS–S結合は何本でしょう。硫黄原子を出すのはどのアミノ酸でしょう。",
+        "ja": "色分けを「鎖」にして「ジスルフィド結合」をオンにしましょう。A鎖とB鎖をつなぐS–S結合は何本でしょう。硫黄原子を出すのはどのアミノ酸でしょう。",
         "zh": "把顏色設為「鏈」並開啟「顯示」下的「二硫鍵」。有多少個 S–S 鍵連接 A 鏈與 B 鏈？硫原子來自哪種氨基酸？"
       }
     },
@@ -259,7 +259,7 @@ IB.registerLab({
       },
       "task": {
         "en": "In haemoglobin, tick Show Haem + Fe and count the haem groups. Then open the Collagen tab: how does its shape differ from a globular protein, and why does that suit its job?",
-        "ja": "ヘモグロビンで「ヘムと鉄を表示」をオンにし、ヘム基の数を数えましょう。次に「コラーゲン」のタブを開き、球状タンパク質と形がどう違うか、その形がなぜ働きに合っているか答えましょう。",
+        "ja": "ヘモグロビンで「ヘム＋Fe」をオンにし、ヘム基の数を数えましょう。次に「コラーゲン」のタブを開き、球状タンパク質と形がどう違うか、その形がなぜ働きに合っているか答えましょう。",
         "zh": "在血紅蛋白中開啟「顯示」下的「血紅素＋Fe」，數一數血紅素基團的數目。然後打開「膠原蛋白」分頁：它的形狀與球狀蛋白質有何不同？為何適合它的功能？"
       }
     }

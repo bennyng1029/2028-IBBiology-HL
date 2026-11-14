@@ -50,7 +50,7 @@ IB.registerLab({
       ahl: true,
       refs: ["B3.1.11", "B3.1.12", "B3.1.13"],
       intro: {
-        en: "<p>An oxygen dissociation curve shows how saturated haemoglobin is with oxygen at different oxygen partial pressures. It is S-shaped because of cooperative binding: once one O<sub>2</sub> binds to a haem group, the next binds more easily. Foetal haemoglobin has a higher affinity for oxygen than adult haemoglobin. CO<sub>2</sub> binds to haemoglobin at allosteric sites and lowers its affinity for oxygen. So more CO<sub>2</sub> causes the Bohr shift: haemoglobin releases more oxygen.</p>",
+        en: "<p>An oxygen dissociation curve shows how saturated haemoglobin is with oxygen at different oxygen partial pressures. It is S-shaped because of cooperative binding: once one O<sub>2</sub> binds to a haem group, the next binds more easily. Foetal haemoglobin has a higher affinity for oxygen than adult haemoglobin. CO<sub>2</sub> binds to haemoglobin at allosteric sites and lowers its affinity for oxygen. So more CO<sub>2</sub> makes haemoglobin release more oxygen: the Bohr shift.</p>",
         ja: "<p>酸素解離曲線 (oxygen dissociation curve) は、酸素分圧ごとに、ヘモグロビンがどれだけ酸素で飽和しているかを示します。協同的結合 (cooperative binding) があるのでS字形になります。1つのヘム基にO<sub>2</sub>が結合すると、次のO<sub>2</sub>が結合しやすくなります。胎児ヘモグロビンは成人のヘモグロビンより酸素への親和性が高いです。CO<sub>2</sub>はヘモグロビンのアロステリック部位 (allosteric site) に結合し、酸素への親和性を下げます。そのためCO<sub>2</sub>が増えるとボーア効果 (Bohr shift) が起こり、ヘモグロビンはより多くの酸素を放出します。</p>",
         zh: "<p>氧解離曲線 (oxygen dissociation curve) 顯示在不同氧分壓下，血紅蛋白的氧飽和程度。曲線呈 S 形，是因為協同結合 (cooperative binding)：一個 O<sub>2</sub> 與一個血紅素基結合後，下一個更容易結合。胎兒血紅蛋白對氧的親和力比成人的高。CO<sub>2</sub> 會與血紅蛋白的別構位點 (allosteric site) 結合，降低它對氧的親和力。所以 CO<sub>2</sub> 增加會引起玻爾效應 (Bohr shift)：血紅蛋白釋出更多氧。</p>"
       },
@@ -58,7 +58,7 @@ IB.registerLab({
       options: {},
       task: {
         en: "Move the oxygen partial pressure from the lungs to resting tissue to active muscle. Switch on Foetal haemoglobin: at the same pressure, does it hold more or less oxygen than adult haemoglobin, and why is that useful? Then switch on the Bohr shift and describe the effect at active muscle.",
-        ja: "酸素分圧を、肺から安静時の組織、活動中の筋肉へと動かしましょう。「胎児ヘモグロビン」をオンにして、同じ分圧で成人のヘモグロビンより多く酸素を保持するか少ないか、またそれがなぜ役立つか答えます。次にボーア効果をオンにして、活動中の筋肉での影響を説明しましょう。",
+        ja: "酸素分圧を、肺から安静時の組織、活動中の筋肉へと動かしましょう。「胎児型ヘモグロビン」をオンにして、同じ分圧で成人のヘモグロビンより多く酸素を保持するか少ないか、またそれがなぜ役立つか答えます。次にボーア効果をオンにして、活動中の筋肉での影響を説明しましょう。",
         zh: "把氧分壓由肺部移到靜止組織，再移到活動中的肌肉。開啟「胎兒血紅蛋白」：在相同分壓下，它比成人血紅蛋白攜帶的氧較多還是較少？為何有用？然後開啟玻爾效應，描述它對活動中肌肉的影響。"
       }
     },
@@ -125,9 +125,9 @@ IB.registerLab({
       widget: "heart-beat",
       options: {},
       task: {
-        en: "Slow the animation and watch the four moments where the pressure curves cross. State which valves are open and which are closed during ventricular systole, and which event ends it. The pressure values are illustrative.",
-        ja: "アニメーションをゆっくりにして、圧力の曲線が交わる4つの瞬間を見ましょう。心室収縮期にどの弁が開き、どの弁が閉じるか、そして何がきっかけでそれが終わるか答えましょう。圧力の値は説明用です。",
-        zh: "放慢動畫，觀察壓力曲線相交的四個時刻。說出心室收縮期間哪些瓣膜開啟、哪些關閉，以及是甚麼事件令這階段結束。壓力數值只作示意。"
+        en: "Slow the animation and watch the four moments where the pressure curves cross. State which valves are open and which are closed during ventricular systole, and which event ends it. Then read the highest and lowest pressures on the aorta curve: these are the systolic and diastolic pressures. The pressure values are illustrative.",
+        ja: "アニメーションをゆっくりにして、圧力の曲線が交わる4つの瞬間を見ましょう。心室収縮期にどの弁が開き、どの弁が閉じるか、そして何がきっかけでそれが終わるか答えましょう。次に大動脈の曲線の最高値と最低値を読み取りましょう。これが収縮期血圧 (systolic pressure) と拡張期血圧 (diastolic pressure) です。圧力の値は説明用です。",
+        zh: "放慢動畫，觀察壓力曲線相交的四個時刻。說出心室收縮期間哪些瓣膜開啟、哪些關閉，以及是甚麼事件令這階段結束。然後讀出主動脈曲線的最高和最低壓力：這就是收縮壓 (systolic pressure) 和舒張壓 (diastolic pressure)。壓力數值只作示意。"
       }
     },
     {

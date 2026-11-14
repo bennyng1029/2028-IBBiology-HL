@@ -41,7 +41,7 @@ IB.registerLab({
       options: { tab: 1 },
       task: {
         en: "In the xylem view, say what pulls the water up and what keeps the column from breaking. Then open the Adhesion tab and choose Capillary rise: explain why water climbs a narrow tube.",
-        ja: "木部の図で、水を引き上げているものと、水の柱が切れないようにしているものを答えましょう。次に「付着力」タブを開いて「毛細管上昇」を選び、水が細い管を上る理由を説明しましょう。",
+        ja: "木部の図で、水を引き上げているものと、水の柱が切れないようにしているものを答えましょう。次に「付着力」タブを開いて「毛細管現象」を選び、水が細い管を上る理由を説明しましょう。",
         zh: "在木質部圖中，說出是甚麼把水拉上去，又是甚麼使水柱不會斷開。然後打開「附著力」分頁，選擇「毛細管作用」，解釋水為何會沿細管上升。"
       }
     },
@@ -126,8 +126,8 @@ IB.registerLab({
       options: { tab: 2 },
       task: {
         en: "Compare Amylose, Amylopectin, Glycogen and Cellulose. Which are made of &alpha;-glucose, and which are branched? Use the + glucose and − glucose buttons to see how an energy store is built up or mobilised.",
-        ja: "アミロース、アミロペクチン、グリコーゲン、セルロースを比べましょう。&alpha;-グルコースでできているのはどれで、枝分かれしているのはどれでしょう。「＋グルコース」「−グルコース」で、エネルギー貯蔵がどう増え、どう動員されるか見てみましょう。",
-        zh: "比較直鏈澱粉、支鏈澱粉、糖原和纖維素：哪些由 &alpha;-葡萄糖組成？哪些有分支？用「＋葡萄糖」和「−葡萄糖」按鈕，看看能量貯存如何增加或動用。"
+        ja: "アミロース、アミロペクチン、グリコーゲン、セルロースを比べましょう。&alpha;-グルコースでできているのはどれで、枝分かれしているのはどれでしょう。「+ グルコース」「− グルコース」で、エネルギー貯蔵がどう増え、どう動員されるか見てみましょう。",
+        zh: "比較直鏈澱粉、支鏈澱粉、糖原和纖維素：哪些由 &alpha;-葡萄糖組成？哪些有分支？用「+ 葡萄糖」和「− 葡萄糖」按鈕，看看能量貯存如何增加或動用。"
       }
     },
     {
@@ -143,7 +143,7 @@ IB.registerLab({
       options: { tab: 0 },
       task: {
         en: "Press Add fatty acid three times and count the water molecules released. Then open the Phospholipids tab and press Self-assemble: which part of each molecule faces the water, and why?",
-        ja: "「脂肪酸を追加」を3回押し、放出される水分子の数を数えましょう。次に「リン脂質」タブを開いて「自己集合」を押し、各分子のどの部分が水に面するか、その理由とともに答えましょう。",
+        ja: "「脂肪酸を付ける」を3回押し、放出される水分子の数を数えましょう。次に「リン脂質」タブを開いて「自己集合」を押し、各分子のどの部分が水に面するか、その理由とともに答えましょう。",
         zh: "按三次「加入脂肪酸」，數一數釋出的水分子。然後打開「磷脂」分頁並按「自行組合」：每個分子的哪一部分朝向水？為甚麼？"
       }
     }
