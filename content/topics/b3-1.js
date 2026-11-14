@@ -515,11 +515,11 @@ IB.registerTopic({
       options: [
         T("Their surface area-to-volume ratio is smaller and diffusion distances to the centre are greater.", "表面積と体積の比が小さく、中心までの拡散距離が長いから。", "它們的表面面積與體積比較小，而且到中央的擴散距離較長。"),
         T("Large organisms respire anaerobically.", "大きな生物は嫌気呼吸をするから。", "大型生物進行無氧呼吸。"),
-        T("Large organisms have a larger surface area-to-volume ratio, which loses too much oxygen.", "大きな生物はSA:Vが大きく、酸素を失いすぎるから。", "大型生物的表面面積與體積比較大，失去太多氧氣。"),
+        T("Large organisms have a larger surface area-to-volume ratio, which loses too much oxygen.", "大きな生物は表面積と体積の比が大きく、酸素を失いすぎるから。", "大型生物的表面面積與體積比較大，失去太多氧氣。"),
         T("Gases cannot diffuse in living tissue.", "生きた組織の中では気体は拡散できないから。", "氣體不能在活組織中擴散。")
       ],
       answer: 0,
-      explanation: T("As size increases, the surface area-to-volume ratio falls and the distance from centre to outside increases. C has the trend backwards. B and D are untrue statements.", "大きくなるとSA:Vは小さくなり、中心から外側までの距離は長くなります。Cは傾向が逆です。BとDは事実ではありません。", "大小增加時，表面面積與體積比下降，由中心到外界的距離增加。C的趨勢相反。B和D是不正確的陳述。") },
+      explanation: T("As size increases, the surface area-to-volume ratio falls and the distance from centre to outside increases. C has the trend backwards. B and D are untrue statements.", "大きくなると表面積と体積の比は小さくなり、中心から外側までの距離は長くなります。Cは傾向が逆です。BとDは事実ではありません。", "大小增加時，表面面積與體積比下降，由中心到外界的距離增加。C的趨勢相反。B和D是不正確的陳述。") },
     { id: "b3-1-q02", type: "multi", ahl: false, difficulty: 1, ref: "B3.1.2", paper: "1A",
       stem: T("Which are properties of an efficient gas-exchange surface? Select all that apply.", "効率のよいガス交換面の性質はどれか。当てはまるものをすべて選びなさい。", "哪些是高效氣體交換表面的特性？選出所有適用者。"),
       options: [

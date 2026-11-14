@@ -19,7 +19,7 @@ IB.registerTopic({
   sections: [
     {
       ref: "B4.2.1", ahl: false,
-      heading: L("What is an ecological niche?", "生態的ニッチとは", "甚麼是生態位 (ecological niche)？"),
+      heading: L("What is an ecological niche?", "生態的ニッチとは", "甚麼是生態位？"),
       body: L(
         "<p>An <strong>ecological niche</strong> is the <strong>role of a species in an ecosystem</strong>. It includes all the <strong>biotic</strong> (living) and <strong>abiotic</strong> (non-living) interactions that affect the species' growth, survival and reproduction. This includes <strong>how the species obtains food</strong>.</p><p>Examples of what a niche includes:</p><ul><li>what it eats and what eats it (feeding relationships);</li><li>which other species it competes with, or depends on;</li><li>the range of temperature, moisture, light and other abiotic conditions it needs;</li><li>when and where it feeds and breeds.</li></ul><p>Habitat is the address where an organism lives. Niche is its job in the ecosystem.</p>",
         "<p><strong>生態的ニッチ (ecological niche)</strong> とは、<strong>生態系での種の役割</strong>です。種の成長、生存、繁殖に影響する<strong>生物的</strong>および<strong>非生物的</strong>なあらゆる相互作用を含みます。これには<strong>餌の得方</strong>も含まれます。</p><p>ニッチに含まれるものの例:</p><ul><li>何を食べ、何に食べられるか（食物関係）</li><li>どの種と競争し、どの種に依存するか</li><li>必要な温度、湿度、光などの非生物的条件の範囲</li><li>いつ、どこで食べ、繁殖するか</li></ul><p>生息地 (habitat) は生物が住む「住所」で、ニッチは生態系での「仕事」です。</p>",
@@ -46,7 +46,7 @@ IB.registerTopic({
     },
     {
       ref: "B4.2.4", ahl: false,
-      heading: L("Holozoic nutrition in animals", "動物の摂食型栄養（ホロゾイック）", "動物的攝食式營養 (holozoic)"),
+      heading: L("Holozoic nutrition in animals", "動物の摂食型栄養", "動物的攝食式營養"),
       body: L(
         "<p>All animals are <strong>heterotrophs</strong>: they cannot make their own food and must take in organic matter made by other organisms. Animals use <strong>holozoic nutrition</strong>. In this, food is:</p><ol><li><strong>ingested</strong> (taken into the body, usually through a mouth);</li><li><strong>digested internally</strong> (broken down into small molecules by enzymes inside a gut);</li><li><strong>absorbed</strong> (small molecules pass into the body's cells or blood);</li><li><strong>assimilated</strong> (the absorbed molecules become part of the body's own structure, or are used as a source of energy).</li></ol><p>Compare this with saprotrophic nutrition (B4.2.6), where digestion happens outside the body.</p>",
         "<p>すべての動物は<strong>従属栄養生物 (heterotroph)</strong> です。自分で食物をつくれず、他の生物がつくった有機物を取り入れなければなりません。動物は<strong>摂食型栄養 (holozoic nutrition)</strong> を行います。この様式では食物は次のように処理されます。</p><ol><li><strong>摂取 (ingestion)</strong>: 体内に取り込む（通常は口から）</li><li><strong>体内での消化 (digestion)</strong>: 消化管内の酵素で小さな分子に分解する</li><li><strong>吸収 (absorption)</strong>: 小さな分子が体の細胞や血液に入る</li><li><strong>同化 (assimilation)</strong>: 吸収された分子が体自身の構造の一部になる、またはエネルギー源として使われる</li></ol><p>消化が体外で起こる腐生栄養 (B4.2.6) と比べましょう。</p>",
@@ -56,7 +56,7 @@ IB.registerTopic({
     },
     {
       ref: "B4.2.5", ahl: false,
-      heading: L("Mixotrophic nutrition in some protists", "一部の原生生物の混合栄養", "部分原生生物的混合營養 (mixotrophic)"),
+      heading: L("Mixotrophic nutrition in some protists", "一部の原生生物の混合栄養", "部分原生生物的混合營養"),
       body: L(
         "<p><strong>Mixotrophs</strong> use both autotrophic and heterotrophic nutrition. They can photosynthesise and also take in organic matter. <strong><em>Euglena</em></strong> is a well-known freshwater protist that is both autotrophic (photosynthesis in light) and heterotrophic (taking in organic food). Many other mixotrophic species are part of oceanic plankton.</p><ul><li><strong>Obligate mixotrophs</strong> need both modes of nutrition to survive.</li><li><strong>Facultative mixotrophs</strong> can survive using just one of the two modes, and use the other when it is useful.</li></ul><p>The advantage of mixotrophy is flexibility: the organism can survive when light is low or when food is scarce.</p>",
         "<p><strong>混合栄養生物 (mixotroph)</strong> は独立栄養と従属栄養の両方を用います。光合成をしつつ有機物も取り込めます。<strong>ミドリムシ (<em>Euglena</em>)</strong> は淡水の有名な原生生物で、独立栄養（光があるときの光合成）と従属栄養（有機物の摂取）の両方を行います。他にも多くの混合栄養種が海洋プランクトンの一部です。</p><ul><li><strong>偏性混合栄養生物 (obligate mixotroph)</strong> は生存に両方の様式が必要です。</li><li><strong>通性混合栄養生物 (facultative mixotroph)</strong> は一方だけでも生存でき、役に立つときに他方も使います。</li></ul><p>混合栄養の利点は柔軟性です。光が弱いときや食物が乏しいときにも生き延びられます。</p>",
@@ -65,7 +65,7 @@ IB.registerTopic({
     },
     {
       ref: "B4.2.6", ahl: false,
-      heading: L("Saprotrophic nutrition: fungi and bacteria", "腐生栄養: 菌類と細菌", "腐生營養 (saprotrophic)：真菌與細菌"),
+      heading: L("Saprotrophic nutrition: fungi and bacteria", "腐生栄養: 菌類と細菌", "腐生營養：真菌與細菌"),
       body: L(
         "<p><strong>Saprotrophs</strong> feed on dead organic matter such as dead leaves, wood and dead animals. They are a type of heterotroph. The method is:</p><ol><li>The saprotroph <strong>secretes digestive enzymes</strong> onto the dead matter (external digestion).</li><li>The enzymes break large molecules into small ones.</li><li>The saprotroph <strong>absorbs</strong> the small molecules.</li></ol><p>Saprotrophic fungi (for example bread mould or mushrooms) and bacteria can be called <strong>decomposers</strong>. Their niche is breaking down dead material and returning nutrients to the soil, where plants can take them up again. Without them, dead matter would pile up and nutrients would stay locked in it.</p>",
         "<p><strong>腐生生物 (saprotroph)</strong> は枯れ葉、木材、動物の死骸などの死んだ有機物を食べます。従属栄養生物の一種です。方法は次のとおりです。</p><ol><li>腐生生物は死んだ物質に<strong>消化酵素を分泌</strong>します（体外消化）。</li><li>酵素が大きな分子を小さな分子に分解します。</li><li>腐生生物はその小さな分子を<strong>吸収</strong>します。</li></ol><p>腐生性の菌類（パンのカビやキノコなど）や細菌は<strong>分解者 (decomposer)</strong> と呼べます。そのニッチは、死んだ物質を分解し、植物が再び吸収できるよう栄養分を土壌に戻すことです。分解者がいなければ、死んだ物質がたまり、栄養分はそこに閉じ込められたままになります。</p>",
@@ -169,7 +169,7 @@ IB.registerTopic({
   ],
   links: [
     { to: "B4.1", why: L("Tolerance limits and adaptations to the abiotic environment set the fundamental niche.", "非生物的環境への耐性の限界と適応が、基本ニッチを決める。", "對非生物環境的耐受極限和適應特徵決定基礎生態位。") },
-    { to: "B1.2", why: L("Specific enzymes secreted by saprotrophs and used in digestion link to enzyme and protein function.", "腐生生物が分泌する酵素や消化に使われる酵素は、酵素とタンパク質の機能につながる。", "腐生生物分泌的酶和消化用的酶，與酶和蛋白質的功能相連。") },
+    { to: "B1.1", why: L("Digestion by holozoic animals and by saprotrophs relies on the hydrolysis of polymers into monomers (B1.1.3).", "摂食型の動物や腐生生物の消化は、重合体を加水分解して単量体にすることに基づく (B1.1.3)。", "攝食式動物和腐生生物的消化，依靠把聚合物水解成單體 (B1.1.3)。") },
     { to: "A4.1", why: L("Competition and niche differences drive natural selection and diversification.", "競争とニッチの違いは自然選択と多様化を促す。", "競爭和生態位差異推動自然選擇與多樣化。") }
   ],
   natureOfScience: [
@@ -207,7 +207,7 @@ IB.registerTopic({
       stem: L("Select ALL the groups in which photosynthesis is a mode of nutrition.", "光合成が栄養様式であるグループをすべて選べ。", "選出以光合作用作為營養方式的所有類別。"),
       options: [L("Plants", "植物", "植物"), L("Algae", "藻類", "藻類"), L("Cyanobacteria (photosynthetic prokaryotes)", "シアノバクテリア（光合成をする原核生物）", "藍菌（進行光合作用的原核生物）"), L("Fungi", "菌類", "真菌"), L("Animals", "動物", "動物")],
       answer: [0, 1, 2],
-      explanation: L("Plants, algae and photosynthetic prokaryotes photosynthesise. Fungi are heterotrophs, often saprotrophs, and animals are holozoic heterotrophs.", "植物、藻類、光合成をする原核生物は光合成を行います。菌類は従属栄養生物（多くは腐生）、動物は摂食型の従属栄養生物です。", "植物、藻類和光合成原核生物進行光合作用。真菌是異養生物（多為腐生），動物是攝食式異養生物。") },
+      explanation: L("Plants, algae and photosynthetic prokaryotes photosynthesise. Fungi are heterotrophs, often saprotrophs, and animals are holozoic heterotrophs.", "植物、藻類、光合成をする原核生物は光合成を行います。菌類は従属栄養生物（多くは腐生）、動物は摂食型の従属栄養生物です。", "植物、藻類和進行光合作用的原核生物進行光合作用。真菌是異養生物（多為腐生），動物是攝食式異養生物。") },
     { id: "b4-2-q07", type: "short", ahl: false, difficulty: 2, ref: "B4.2.5", paper: "2", commandTerm: "Distinguish", marks: 2,
       stem: L("Distinguish between an obligate mixotroph and a facultative mixotroph.", "偏性混合栄養生物と通性混合栄養生物を区別せよ。", "區別專性混合營養生物與兼性混合營養生物。"),
       markscheme: [L("Obligate mixotroph needs both autotrophic and heterotrophic nutrition to survive", "偏性混合栄養生物は生存に独立栄養と従属栄養の両方が必要", "專性混合營養生物需要自養和異養兩種方式才能生存"), L("Facultative mixotroph can survive using only one mode (autotrophic or heterotrophic), and uses the other when it is useful", "通性混合栄養生物は一方の様式だけでも生存でき、役立つときに他方も使う", "兼性混合營養生物只用其中一種方式（自養或異養）也能生存，有用時才使用另一種")],
@@ -264,7 +264,7 @@ IB.registerTopic({
       markscheme: [L("If both fed in the same place they would compete for the same food (similar niches)", "同じ場所で採食すれば同じ餌をめぐって競争する（似たニッチ）", "若在同一處覓食，它們會爭奪相同的食物（相似生態位）"), L("Each species is restricted to part of its fundamental niche (its realized niche), where it is the better competitor", "各種は基本ニッチの一部（実現ニッチ）に制限され、そこでは競争に強い", "每個物種被限制在其基礎生態位的一部分（實現生態位），在那裏它是較強的競爭者"), L("Competition is reduced because the niches no longer fully overlap, so neither is eliminated (no competitive exclusion)", "ニッチが完全には重ならなくなって競争が減り、どちらも排除されない（競争的排除は起こらない）", "生態位不再完全重疊，競爭減少，所以兩者都不被淘汰（沒有競爭排斥）")],
       modelAnswer: L("Feeding in the same place would make the species compete for the same food. By each restricting itself to a different part of the tree, each uses only part of its fundamental niche. This reduces competition, so neither species is eliminated and both coexist.", "同じ場所で採食すれば、同じ餌をめぐって競争します。それぞれが木の異なる部分に制限されることで、各種は基本ニッチの一部だけを使います。競争が減るので、どちらも排除されず共存できます。", "在同一處覓食會令兩物種爭奪相同食物。各自限於樹的不同部分，每個物種只用其基礎生態位的一部分，競爭因此減少，所以兩者都不被淘汰而得以共存。") },
     { id: "b4-2-q18", type: "short", ahl: false, difficulty: 3, ref: "B4.2.5", paper: "2", commandTerm: "Suggest", marks: 2,
-      stem: L("Suggest an advantage to a mixotrophic protist in ocean plankton of being able to use both photosynthesis and feeding on other cells.", "海洋プランクトンの混合栄養性の原生生物が、光合成と他の細胞の摂食の両方を使える利点を推論せよ。", "推測海洋浮游生物中的混合營養原生生物能同時使用光合作用和攝食其他細胞的好處。"),
+      stem: L("Suggest an advantage to a mixotrophic protist in ocean plankton of being able to use both photosynthesis and feeding on other cells.", "海洋プランクトンの混合栄養性の原生生物が、光合成と他の細胞の摂食の両方を使える利点を挙げよ。", "推測海洋浮游生物中的混合營養原生生物能同時使用光合作用和攝食其他細胞的好處。"),
       markscheme: [L("Can photosynthesise when light is available (and so survive without prey)", "光があるときは光合成できる（餌がなくても生存できる）", "有光時可進行光合作用（所以沒有獵物也能生存）"), L("Can feed on other cells/organic matter when light is low or nutrients are scarce (so survives in more conditions / more flexible niche)", "光が弱いときや栄養塩が乏しいときは他の細胞や有機物を食べられる（より多くの条件で生存でき、ニッチが柔軟）", "光線弱或養分少時可攝食其他細胞／有機物（能在更多條件下生存／生態位更靈活）")],
       modelAnswer: L("It can photosynthesise when there is light, and feed on other cells when light is poor or nutrients are scarce, so it can survive in a wider range of conditions.", "光があるときは光合成し、光が弱いときや栄養塩が乏しいときは他の細胞を食べられるので、より広い条件で生存できます。", "有光時可光合作用，光線差或養分少時可攝食其他細胞，所以能在更廣泛的條件下生存。") },
     { id: "b4-2-q19", type: "short", ahl: false, difficulty: 2, ref: "B4.2.6", paper: "2", commandTerm: "Compare and contrast", marks: 4,
