@@ -71,12 +71,16 @@
     return bar;
   }
   var CSS =
-    ".W .sl{margin:6px 0}.W .sl .lab{display:flex;justify-content:space-between;align-items:center;font-weight:600}" +
+    
     ".W input[type=range]{width:100%;min-height:40px;accent-color:var(--k-acc)}" +
     ".W .meter{height:12px;border-radius:99px;background:var(--k-line);overflow:hidden}.W .meter i{display:block;height:100%;background:var(--k-good);transition:width .3s}" +
     ".W .st{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;margin:6px 0}" +
     ".W .st b.good{color:var(--k-good)}.W .st b.bad{color:var(--k-bad)}.W .st b.mid{color:var(--k-ds)}" +
-    ".W .lock{color:var(--k-bad);font-weight:600;font-size:14px}";
+    ".W .lock{color:var(--k-bad);font-weight:600;font-size:14px}.W .lock:empty{display:none}" +
+    ".W .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.W .seg button{padding:4px 4px;font-size:13px;line-height:1.2}" +
+    "@media (max-width:639px){.W .wl-panel{gap:6px}.W .wl-panel .panel{padding:6px 10px;font-size:14px}.W .st{line-height:1.35;font-size:13px;justify-content:flex-start;gap:0 14px}.W .seg button{font-size:12px}.W .wl-stage .legend{font-size:12px}}" +
+    ".W .orow{display:flex;gap:8px;align-items:center}.W .orow p{flex:1;margin:0}.W .orow button{flex:none;min-width:64px}" +
+    ".W .sl{margin:0;display:grid;grid-template-columns:6.5em 1fr 4.2em;align-items:center;gap:8px;font-weight:600}.W .sl .sl-n{white-space:nowrap}.W .sl span:last-child{text-align:right}.W .sl input[type=range]{min-height:36px}.W .wl-stage svg{max-height:min(50vh,360px)}.W .st{margin:2px 0}.W .wl-panel .panel p{margin:0 0 4px}";
   var COL = { N: "--k-np", P: "--k-pol", A: "--k-ac", B: "--k-ba", C: "--k-S" };
   var R = [
     ["P", 50, 235], ["P", 25, 175], ["B", 45, 120], ["C", 75, 60], ["N", 125, 90], ["N", 175, 100], ["N", 225, 90], ["P", 285, 70], ["B", 325, 55],
@@ -92,27 +96,25 @@
     { n: ["Model C: heat-tolerant (hot-spring organism)", "モデル C: 高温に強い (温泉にすむ生物)", "模型 C：耐熱（溫泉生物）"], To: 70, Tm: 88, pH: 7 }
   ];
 
+  var SHORT = [["A: typical", "A: ふつう", "A：一般"], ["B: acid-adapted", "B: 酸に適応", "B：適應酸性"], ["C: heat-tolerant", "C: 高温に強い", "C：耐熱"]];
   IB.registerWidget("denaturation", {
     title: { en: "Denaturation: temperature and pH", ja: "変性：温度と pH", zh: "變性：溫度與 pH" },
     mount: function (root, ctx) {
       css("denaturation", CSS);
       root.classList.add("W");
       var T = mkT(ctx);
+      var NAR = window.innerWidth < 640;
       var m = MODELS[0], temp = 37, ph = 7, lock = 1, shown = 1, timer, tick = 0, reduced = REDUCED();
 
-      root.appendChild(el("h4", { text: T(["Denaturation of a model protein", "モデルタンパク質の変性 (denaturation)", "模型蛋白質的變性 (denaturation)"]) }));
-      root.appendChild(el("p", { class: "small", text: T(["These three models are illustrative, not measured data for real proteins. Different proteins have different optimum conditions: choose a model, then move the sliders.", "この3つは説明用のモデルで、実在のタンパク質の測定値ではありません。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這三個都是示意模型，並非真實蛋白質的量度數據。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。"]) }));
+      var intro = el("p", { class: "small", text: T(["These three models are illustrative, not measured data for real proteins. Different proteins have different optimum conditions: choose a model, then move the sliders.", "この3つは説明用のモデルで、実在のタンパク質の測定値ではありません。最適条件はタンパク質ごとに違います。モデルを選んでスライダーを動かしましょう。", "這三個都是示意模型，並非真實蛋白質的量度數據。不同蛋白質有不同的最適條件：先選模型，再移動滑桿。"]) });
       var mb = MODELS.map(function (md, i) {
-        var b = el("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", text: T(md.n) });
+        var b = el("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", title: T(md.n), text: T(SHORT[i]) });
         b.addEventListener("click", function () { setModel(i); });
         return b;
       });
-      root.appendChild(el("div", { class: "bar" }, mb));
       var optNote = el("p", { class: "small" });
-      root.appendChild(optNote);
 
-      var svg = sv("svg", { viewBox: "0 0 360 215", role: "img", "aria-label": T(["Model protein changing shape", "形が変わるモデルタンパク質", "形狀改變的模型蛋白質"]) });
-      var core = sv("circle", { cx: 0, cy: 0, r: 0 });
+      var svg = sv("svg", { viewBox: "0 4 360 190", role: "img", "aria-label": T(["Model protein changing shape", "形が変わるモデルタンパク質", "形狀改變的模型蛋白質"]) });
       var coreG = sv("g");
       var line = sv("path", { fill: "none", stroke: "var(--k-mut)", "stroke-width": 4, "stroke-linecap": "round", "stroke-linejoin": "round" });
       var bondEls = BONDS.map(function (b) { return sv("line", { stroke: "var(" + (b[0] === "hb" ? "--k-hb" : "--k-io") + ")", "stroke-width": 3.5, "stroke-dasharray": b[0] === "hb" ? "5 4" : "1 5", "stroke-linecap": "round" }); });
@@ -122,43 +124,50 @@
       svg.appendChild(coreG); svg.appendChild(line);
       bondEls.forEach(function (b) { svg.appendChild(b); });
       beadEls.forEach(function (b) { svg.appendChild(b); });
-      root.appendChild(svg);
-      root.appendChild(el("div", { class: "legend" }, [
-        legendItem("l", "var(--k-mut)", T(["peptide bonds (backbone)", "ペプチド結合 (骨格)", "肽鍵（骨架）"])),
+      var legend = el("div", { class: "legend wl-legend" }, [
+        legendItem("l", "var(--k-mut)", NAR ? T(["peptide bonds", "ペプチド結合", "肽鍵"]) : T(["peptide bonds (backbone)", "ペプチド結合 (骨格)", "肽鍵（骨架）"])),
         legendItem("l", "var(--k-hb)", T(["hydrogen bonds", "水素結合", "氫鍵"])),
         legendItem("l", "var(--k-io)", T(["ionic bonds", "イオン結合", "離子鍵"])),
         legendItem("i", "var(--k-hp)", T(["hydrophobic core", "疎水性の核", "疏水核心"]))
-      ]));
+      ]);
       var st = el("div", { class: "st", "aria-live": "polite" });
       var meter = el("div", { class: "meter" }, [el("i", {})]);
-      root.appendChild(st); root.appendChild(meter);
       var lockEl = el("div", { class: "lock" });
-      root.appendChild(lockEl);
 
       function slider(label, min, max, val, step, unit) {
         var inp = el("input", { type: "range", min: min, max: max, value: val, step: step, "aria-label": label });
         var v = el("span");
-        var w = el("div", { class: "sl" }, [el("div", { class: "lab" }, [el("span", { text: label }), v]), inp]);
+        var w = el("div", { class: "sl" }, [el("span", { class: "sl-n", text: label }), inp, v]);
         inp._v = v; inp._u = unit; return [w, inp];
       }
       var ts = slider(T(["Temperature", "温度", "溫度"]), 0, 100, 37, 1, " °C"), ps = slider("pH", 1, 14, 7, 0.5, "");
-      root.insertBefore(ts[0], svg); root.insertBefore(ps[0], svg);
       var tI = ts[1], pI = ps[1];
       tI.addEventListener("input", function () { temp = +tI.value; update(); });
       pI.addEventListener("input", function () { ph = +pI.value; update(); });
-      var rb = el("button", { type: "button", text: T(["Reset (fresh protein sample)", "リセット (新しいサンプル)", "重設（新的蛋白質樣本）"]) });
+      var rb = el("button", { type: "button", text: NAR ? T(["Reset", "リセット", "重設"]) : T(["Reset (fresh protein sample)", "リセット (新しいサンプル)", "重設（新的蛋白質樣本）"]) });
       rb.addEventListener("click", function () { lock = 1; temp = m.To; ph = m.pH; tI.value = temp; pI.value = ph; update(); });
-      root.appendChild(el("div", { class: "bar" }, [rb]));
-      var why = el("div", { class: "panel", "aria-live": "polite" });
-      root.appendChild(why);
-      root.appendChild(el("div", { class: "panel" }, [
+      var why = el("div", { class: "panel", "aria-live": "polite", style: NAR ? "" : "min-height:5em" });
+      var defn = el("div", { class: "panel" }, [
         el("p", {}, [el("strong", { text: T(["Denaturation ", "変性 (denaturation) ", "變性 (denaturation) "]) }), T(["is a change in the 3-D shape (conformation) of a protein, so it can no longer do its job.", "とは、タンパク質の立体的な形 (conformation) が変わり、はたらきを果たせなくなることです。", "是蛋白質立體形狀 (conformation) 的改變，令它不能再發揮功能。"])]),
         el("p", { text: T(["The peptide bonds are NOT broken: the amino acid sequence (primary structure) stays the same. Denaturation is usually permanent.", "ペプチド結合は切れません。アミノ酸配列（一次構造）は変わりません。変性はふつう元に戻りません。", "肽鍵「不會」斷開：氨基酸序列（一級結構）不變。變性通常是永久的。"]) })
-      ]));
-      root.appendChild(exam(T, [
+      ]);
+      var EXAMTXT = [
         "Denaturation = loss of 3-D shape (conformation) and so of function. Heat increases vibration and breaks weak bonds; extreme pH changes R-group charges (H⁺ gained or lost), breaking ionic and hydrogen bonds. Peptide bonds stay intact. Usually permanent.",
         "変性 = 立体構造 (conformation) が失われ、はたらきも失われること。熱は振動を大きくして弱い結合を切る。極端な pH は R基の電荷 (H⁺ の授受) を変え、イオン結合と水素結合を壊す。ペプチド結合は切れない。ふつう不可逆。",
-        "變性 = 失去立體形狀 (conformation)，因而失去功能。熱令振動加劇，弱鍵斷開；極端 pH 改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵。肽鍵保持完整。通常是永久的。"]));
+        "變性 = 失去立體形狀 (conformation)，因而失去功能。熱令振動加劇，弱鍵斷開；極端 pH 改變 R 基的電荷（得失 H⁺），破壞離子鍵和氫鍵。肽鍵保持完整。通常是永久的。"];
+      root.appendChild(el("div", { class: "wl" }, [
+        el("div", { class: "wl-stage" }, [svg, legend, st, meter, lockEl, NAR ? null : defn]),
+        el("div", { class: "wl-panel" }, [
+          NAR ? null : intro,
+          el("div", { class: "seg" }, mb),
+          NAR ? el("div", { class: "orow" }, [optNote, rb]) : optNote,
+          ts[0], ps[0],
+          NAR ? null : el("div", { class: "bar", style: "margin:0" }, [rb]),
+          why,
+          NAR ? more(T, [intro, defn]) : null,
+          exam(T, EXAMTXT)
+        ])
+      ]));
 
       function target() {
         var fT = 1 / (1 + Math.exp((temp - m.Tm) / 4));
@@ -175,7 +184,7 @@
         cur = target();
         if (cur.f < 0.5) lock = Math.min(lock, cur.f);
         tI._v.textContent = temp + " °C"; pI._v.textContent = "pH " + ph;
-        optNote.textContent = T(["Illustrative optimum for this model: about " + m.To + " °C and pH " + m.pH + ". Other proteins differ.", "このモデルの最適条件(例): 約 " + m.To + " °C、pH " + m.pH + "。他のタンパク質では異なります。", "此模型的示例最適條件：約 " + m.To + " °C、pH " + m.pH + "。其他蛋白質並不相同。"]);
+        optNote.textContent = T(m.n) + ". " + T(["Illustrative optimum for this model: about " + m.To + " °C and pH " + m.pH + ". Other proteins differ.", "このモデルの最適条件(例): 約 " + m.To + " °C、pH " + m.pH + "。他のタンパク質では異なります。", "此模型的示例最適條件：約 " + m.To + " °C、pH " + m.pH + "。其他蛋白質並不相同。"]);
         var f = Math.min(cur.f, lock);
         var cls = f > 0.8 ? "good" : f > 0.4 ? "mid" : "bad";
         var txt = f > 0.8 ? T(["Folded, functional", "折りたたまれ、機能する", "已摺疊，有功能"]) : f > 0.4 ? T(["Partly unfolded, function reduced", "一部ほどけ、機能低下", "部分解開，功能下降"]) : T(["Denatured: shape and function lost", "変性: 形もはたらきも失われた", "已變性：失去形狀和功能"]);

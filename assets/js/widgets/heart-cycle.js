@@ -631,53 +631,58 @@
       var t = ctx.t;
       var root = mk("div", "hc-root"); el.appendChild(root);
       var mode = "compare", cur = "artery", score = 0, asked = 0, curQ = null, answered = false;
-      var bar = mk("div", "hc-row");
+      var bar = mk("div", "hc-tabs wl-tabs"); bar.setAttribute("role", "tablist");
       var bC = mk("button", "hc-b", t(VC.compare)), bI = mk("button", "hc-b", t(VC.ident));
-      [bC, bI].forEach(function (b) { b.type = "button"; bar.appendChild(b); });
+      [bC, bI].forEach(function (b) { b.type = "button"; b.setAttribute("role", "tab"); bar.appendChild(b); });
       var host = mk("div");
       root.appendChild(bar); root.appendChild(host);
-      root.appendChild(mk("p", "hc-note", t(VC.note)));
+
+      function frame(artHtml) {
+        var wl = mk("div", "wl"), st = mk("div", "wl-stage"), pn = mk("div", "wl-panel");
+        var art = mk("div", "hc-art", artHtml);
+        st.appendChild(art);
+        wl.appendChild(st); wl.appendChild(pn);
+        host.appendChild(wl);
+        return { stage: st, panel: pn };
+      }
 
       function compareView() {
         host.innerHTML = "";
-        var row = mk("div", "hc-row");
         var kinds = [["artery", VC.art], ["capillary", VC.cap], ["vein", VC.vein]];
-        var btns = {};
+        var svg = '<svg viewBox="0 0 400 176" role="img" aria-label="' + t(VC.title) + '">';
+        var xs = { artery: 62, capillary: 198, vein: 334 };
+        kinds.forEach(function (k) {
+          var sel = k[0] === cur;
+          svg += '<g transform="translate(' + xs[k[0]] + ',76) scale(1.08)" style="opacity:' + (sel ? 1 : 0.45) + '">' + vesselSVG(k[0]) + '</g>';
+          svg += '<text class="tx" x="' + xs[k[0]] + '" y="166" text-anchor="middle" style="font-size:15px;font-weight:' + (sel ? 800 : 400) + '">' + t(k[1]) + '</text>';
+        });
+        var f = frame(svg + "</svg>");
+        f.stage.appendChild(mk("p", "hc-note wl-legend", t(VC.note)));
+        var row = mk("div", "hc-row hc-stages");
         kinds.forEach(function (k) {
           var b = mk("button", "hc-b", t(k[1])); b.type = "button"; b.setAttribute("aria-pressed", k[0] === cur ? "true" : "false");
           b.addEventListener("click", function () { cur = k[0]; compareView(); });
-          row.appendChild(b); btns[k[0]] = b;
+          row.appendChild(b);
         });
-        host.appendChild(row);
-        var art = mk("div", "hc-art");
-        var svg = '<svg viewBox="0 0 340 140" role="img" aria-label="' + t(VC.title) + '">';
-        var xs = { artery: 60, capillary: 170, vein: 280 };
-        kinds.forEach(function (k) {
-          var sel = k[0] === cur;
-          svg += '<g transform="translate(' + xs[k[0]] + ',68)" style="opacity:' + (sel ? 1 : 0.45) + '">' + vesselSVG(k[0]) + '</g>';
-          svg += '<text class="tx" x="' + xs[k[0]] + '" y="136" text-anchor="middle" style="font-weight:' + (sel ? 800 : 400) + '">' + t(k[1]) + '</text>';
-        });
-        art.innerHTML = svg + "</svg>";
-        host.appendChild(art);
+        f.panel.appendChild(row);
         var idx = { artery: 1, capillary: 2, vein: 3 }[cur];
         var tbl = '<table><tr><th>' + t(VC.th) + '</th><th>' + t(cur === "artery" ? VC.art : cur === "capillary" ? VC.cap : VC.vein) + '</th></tr>';
         VC.rows.forEach(function (r) { tbl += "<tr><td><strong>" + t(r[0]) + "</strong></td><td>" + t(r[idx]) + "</td></tr>"; });
         tbl += "</table>";
         var layersTxt = cur === "capillary" ? "" : "<p class=\"hc-tag\">" + t(VC.layers) + ": " + t(VC.endo) + " → " + t(VC.mus) + " → " + t(VC.outer) + "</p>";
-        var info = mk("div", "hc-info", tbl + layersTxt);
-        host.appendChild(info);
+        f.panel.appendChild(mk("div", "hc-info", tbl + layersTxt));
       }
 
       function newQ() {
         answered = false;
         curQ = Math.random() < 0.5 ? "artery" : "vein";
         host.innerHTML = "";
-        var art = mk("div", "hc-art");
-        var jitter = curQ === "artery" ? 0.9 + Math.random() * 0.6 : 0.7 + Math.random() * 0.5;
-        art.innerHTML = '<svg viewBox="0 0 340 190" role="img" aria-label="' + t(VC.q) + '"><g transform="translate(170,95) scale(' + jitter.toFixed(2) + ')">' + vesselSVG(curQ) + '</g></svg>';
-        host.appendChild(art);
-        host.appendChild(mk("p", "", "<strong>" + t(VC.q) + "</strong> <span class=\"hc-tag\">" + t(VC.score) + ": " + score + " / " + asked + "</span>"));
-        var row = mk("div", "hc-row");
+        var jitter = curQ === "artery" ? 0.9 + Math.random() * 0.5 : 0.7 + Math.random() * 0.45;
+        var f = frame('<svg viewBox="0 0 400 190" role="img" aria-label="' + t(VC.q) + '"><g transform="translate(200,95) scale(' + jitter.toFixed(2) + ')">' + vesselSVG(curQ) + '</g></svg>');
+        f.stage.appendChild(mk("p", "hc-note wl-legend", t(VC.note)));
+        f.panel.appendChild(mk("p", "", "<strong>" + t(VC.q) + "</strong> <span class=\"hc-tag\">" + t(VC.score) + ": " + score + " / " + asked + "</span>"));
+        var row = mk("div", "hc-row hc-stages");
+        row.style.gridTemplateColumns = "1fr 1fr";
         var fb = mk("div", "hc-info");
         fb.setAttribute("aria-live", "polite");
         [["artery", VC.art], ["vein", VC.vein]].forEach(function (k) {
@@ -695,17 +700,18 @@
           });
           row.appendChild(b);
         });
-        host.appendChild(row); host.appendChild(fb);
+        f.panel.appendChild(row); f.panel.appendChild(fb);
       }
       function setMode(m) {
         mode = m;
-        bC.setAttribute("aria-pressed", m === "compare" ? "true" : "false");
-        bI.setAttribute("aria-pressed", m === "ident" ? "true" : "false");
+        bC.setAttribute("aria-selected", m === "compare" ? "true" : "false");
+        bI.setAttribute("aria-selected", m === "ident" ? "true" : "false");
         if (m === "compare") compareView(); else { score = 0; asked = 0; newQ(); }
       }
       bC.addEventListener("click", function () { setMode("compare"); });
       bI.addEventListener("click", function () { setMode("ident"); });
-      setMode("compare");
+      var o = ctx.options && ctx.options.tab;
+      setMode(o === 1 || o === "1" || o === "ident" ? "ident" : "compare");
     }
   });
 })();

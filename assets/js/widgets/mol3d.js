@@ -316,6 +316,7 @@
       title: titleOverride || T.title,
       mount: function (el, ctx) {
         injectCss();
+        if (el.classList) el.classList.add("w-mol3d");
         var t = ctx.t || function (o) { return o[ctx.lang] || o.en; };
         var opts = ctx.options || {};
         var list = allowed.map(function (id) { return PRESET_BY_ID[id]; });

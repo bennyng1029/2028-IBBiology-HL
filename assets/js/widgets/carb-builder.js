@@ -27,12 +27,13 @@
     ".w-carb-builder .cb-b{font:inherit;font-size:.9rem;font-weight:700;min-height:40px;padding:.3rem .8rem;border-radius:var(--radius);border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer}",
     ".w-carb-builder .cb-b:hover{background:var(--surface-2)}",
     ".w-carb-builder .cb-b[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}",
+    ".w-carb-builder .cb-chip{font-size:.74rem;padding:.25rem .3rem;letter-spacing:-.01em}.w-carb-builder .cb-btns{gap:.3rem}",
     ".w-carb-builder .cb-b[disabled]{opacity:.45;cursor:default}",
     ".w-carb-builder button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}",
-    ".w-carb-builder .cb-msg{background:var(--surface-2);border-radius:var(--radius);padding:.5rem .7rem;line-height:1.45;min-height:4.2em}",
+    ".w-carb-builder .cb-msg{background:var(--surface-2);border-radius:var(--radius);padding:.45rem .65rem;line-height:1.4;min-height:4.6em;font-size:.9rem}",
     ".w-carb-builder .cb-msg b{color:var(--accent-ink)}",
-    ".w-carb-builder .cb-cap{font-size:.76rem;color:var(--muted);margin:0}",
-    ".w-carb-builder details{font-size:.86rem}",
+    ".w-carb-builder .cb-cap{font-size:.76rem;color:var(--muted);margin:0}.w-carb-builder .wl-exam{font-size:.82rem;line-height:1.4}",
+    ".w-carb-builder details{font-size:.86rem;margin:-.25rem 0 0;border:0!important;background:none!important}.w-carb-builder details>p{padding:0 .1rem}.w-carb-builder summary{cursor:pointer;font-weight:700;color:var(--accent-ink);min-height:32px;display:flex;align-items:center}",
     ".w-carb-builder details p{margin:.3rem 0}",
     ".w-carb-builder .cb-ring{fill:var(--surface-2);stroke:var(--ink-2);stroke-width:2;stroke-linejoin:round}",
     ".w-carb-builder .cb-front{stroke:var(--ink);stroke-width:4.5;stroke-linecap:round;fill:none}",
@@ -61,8 +62,10 @@
     hyd: L("◀ Hydrolysis", "◀ 加水分解", "◀ 水解"),
     reset: L("Reset", "リセット", "重設"),
     replay: L("Replay", "もう一度", "重播"),
-    add: L("+ glucose (condensation)", "+ グルコース（縮合）", "+ 葡萄糖（縮合）"),
-    rem: L("− glucose (hydrolysis)", "− グルコース（加水分解）", "− 葡萄糖（水解）"),
+    add: L("+ glucose", "+ グルコース", "+ 葡萄糖"),
+    addT: L("Add glucose to each end (condensation)", "各末端にグルコースを付ける（縮合）", "在每個末端加上葡萄糖（縮合）"),
+    remT: L("Remove glucose from each end (hydrolysis)", "各末端からグルコースを外す（加水分解）", "由每個末端移去葡萄糖（水解）"),
+    rem: L("− glucose", "− グルコース", "− 葡萄糖"),
     more: L("More detail", "くわしく", "更多資料"),
     glc: L("α-glucose", "α-グルコース (α-glucose)", "α-葡萄糖 (α-glucose)"),
     gb: L("glycosidic bond", "グリコシド結合 (glycosidic bond)", "糖苷鍵 (glycosidic bond)"),
@@ -75,7 +78,7 @@
     m0h: L("<b>Hydrolysis</b>: water is split and its –H and –OH are added to the two sides of the bond. The bond breaks.", "<b>加水分解 (hydrolysis)</b>: 水が分かれ、–Hと–OHが結合の両側に付きます。結合が切れます。", "<b>水解 (hydrolysis)</b>：水被分開，–H和–OH加到鍵的兩側，鍵斷開。"),
     eq0: L("glucose + glucose  ⇌  maltose + H₂O", "グルコース + グルコース ⇌ マルトース + H₂O", "葡萄糖 + 葡萄糖 ⇌ 麥芽糖 + H₂O"),
     ex0: L("Condensation joins monomers and releases water. Hydrolysis uses water to split them again.", "縮合 (condensation) は単量体をつないで水を放出し、加水分解 (hydrolysis) は水を使って切り離します。", "縮合 (condensation) 把單體連起並釋出水；水解 (hydrolysis) 則利用水把它們分開。"),
-    ref0: L("Syllabus: B1.1.2 (condensation), B1.1.3 (hydrolysis)", "シラバス: B1.1.2（縮合）、B1.1.3（加水分解）", "課程大綱：B1.1.2（縮合）、B1.1.3（水解）"),
+    ref0: L("Syllabus B1.1.2–3", "シラバス B1.1.2–3", "課程大綱 B1.1.2–3"),
     // tab 1
     alpha: L("α-glucose", "α-グルコース", "α-葡萄糖"),
     beta: L("β-glucose", "β-グルコース", "β-葡萄糖"),
@@ -86,27 +89,28 @@
     m2b: L("<b>β-glucose</b>: –OH on C1 above the ring. Linked into cellulose.", "<b>β-グルコース</b>: C1の–OHが環の上。セルロースになります。", "<b>β-葡萄糖</b>：C1的–OH在環上方。構成纖維素。"),
     glcprop: L("Glucose: soluble (easily transported in blood), chemically stable, and yields energy when oxidised.", "グルコース: 水に溶け（血液で運びやすい）、化学的に安定で、酸化されるとエネルギーを生みます。", "葡萄糖：可溶於水（易於由血液運送）、化學性質穩定，氧化時可釋出能量。"),
     ex1: L("α-glucose: OH on C1 below the ring. β-glucose: OH on C1 above the ring.", "α-グルコースはC1のOHが環の下、β-グルコースは環の上です。", "α-葡萄糖的C1–OH在環下方；β-葡萄糖的在環上方。"),
-    ref1: L("Syllabus: B1.1.4 (monosaccharides), B1.1.5–6 (starch, glycogen, cellulose)", "シラバス: B1.1.4（単糖類）、B1.1.5–6（デンプン、グリコーゲン、セルロース）", "課程大綱：B1.1.4（單糖）、B1.1.5–6（澱粉、糖原、纖維素）"),
+    ref1: L("Syllabus B1.1.4–6", "シラバス B1.1.4–6", "課程大綱 B1.1.4–6"),
     // tab 2
     p0: L("Amylose", "アミロース", "直鏈澱粉"),
     p1: L("Amylopectin", "アミロペクチン", "支鏈澱粉"),
     p2: L("Glycogen", "グリコーゲン", "糖原"),
     p3: L("Cellulose", "セルロース", "纖維素"),
-    d0: L("<b>Amylose</b> (a starch): an unbranched chain of α-glucose that coils up. Coiling makes it compact. Plants store starch for energy.", "<b>アミロース (amylose)</b>（デンプンの一種）: α-グルコースが枝分かれせずにつながり、らせん状に巻きます。巻くとコンパクトになります。植物はデンプンをエネルギーとして貯蔵します。", "<b>直鏈澱粉 (amylose)</b>（澱粉的一種）：α-葡萄糖不分支地連成長鏈，並盤繞成螺旋。盤繞令它緊密。植物以澱粉儲存能量。"),
-    d1: L("<b>Amylopectin</b> (a starch): α-glucose with side branches as well as coiling. Branching and coiling make it compact. Each branch end is a place where glucose can be added or removed.", "<b>アミロペクチン (amylopectin)</b>（デンプンの一種）: α-グルコースで、巻くだけでなく枝分かれもします。枝分かれと巻きでコンパクトになります。枝の先端でグルコースを付けたり外したりできます。", "<b>支鏈澱粉 (amylopectin)</b>（澱粉的一種）：α-葡萄糖，既盤繞也有分支。分支和盤繞令它緊密。每個分支末端都可加上或移去葡萄糖。"),
+    d0: L("<b>Amylose</b> (a starch): an unbranched chain of α-glucose that coils up. Coiling makes it compact. Plants store starch.", "<b>アミロース (amylose)</b>（デンプンの一種）: α-グルコースが枝分かれせずにつながり、らせん状に巻いてコンパクトになります。植物はデンプンを貯蔵します。", "<b>直鏈澱粉 (amylose)</b>（澱粉的一種）：α-葡萄糖不分支地連成長鏈，並盤繞成螺旋。盤繞令它緊密。植物以澱粉儲存能量。"),
+    d1: L("<b>Amylopectin</b> (a starch): α-glucose with side branches as well as coiling. Branching and coiling make it compact. Many ends: glucose is added or removed at each.", "<b>アミロペクチン (amylopectin)</b>（デンプン）: α-グルコースで、巻いて枝分かれもし、コンパクトです。末端が多く、そこでグルコースを付け外しします。", "<b>支鏈澱粉 (amylopectin)</b>（澱粉的一種）：α-葡萄糖，既盤繞也有分支。分支和盤繞令它緊密。末端多，可在每個末端加上或移去葡萄糖。"),
     d2: L("<b>Glycogen</b> (animals): α-glucose like amylopectin, but branched even more. Very compact, with many ends, so glucose can be added or removed quickly.", "<b>グリコーゲン (glycogen)</b>（動物）: アミロペクチンと同じα-グルコースですが、さらに多く枝分かれします。非常にコンパクトで末端が多く、グルコースをすばやく付け外しできます。", "<b>糖原 (glycogen)</b>（動物）：與支鏈澱粉一樣由α-葡萄糖組成，但分支更多。非常緊密，末端多，因此可快速加上或移去葡萄糖。"),
     d3: L("<b>Cellulose</b> (plant cell walls): β-glucose, with every other unit inverted. This gives straight chains. Chains lie in bundles, cross-linked by many hydrogen bonds: strong fibres.", "<b>セルロース (cellulose)</b>（植物の細胞壁）: β-グルコースで、1つおきに上下が反転しています。そのため鎖はまっすぐです。鎖は束になり、多くの水素結合で架橋されて丈夫な繊維になります。", "<b>纖維素 (cellulose)</b>（植物細胞壁）：β-葡萄糖，每隔一個單位便倒轉。因此鏈呈直線。多條鏈成束，以大量氫鍵交聯，形成堅韌的纖維。"),
     mt: L("More detail", "くわしく", "更多資料"),
     md0: L("Starch and glycogen are large molecules, so they are relatively insoluble: they stay in the cell and do not dissolve away. Adding or removing α-glucose is done by condensation and hydrolysis, so the store is easy to build up or mobilise.", "デンプンとグリコーゲンは大きな分子なので溶けにくく、細胞内にとどまります。α-グルコースの付加と除去は縮合と加水分解で行うので、貯蔵を増やしたり動員したりしやすいのです。", "澱粉和糖原是大分子，相對不溶於水，會留在細胞內。α-葡萄糖的加入和移去靠縮合和水解進行，所以儲備容易增加或動用。"),
     md3: L("Cellulose cannot coil because of the inverted units. Its straight chains pack side by side, and hydrogen bonds between chains hold them in bundles.", "反転した単位のためセルロースは巻けません。まっすぐな鎖が並び、鎖どうしの水素結合で束になります。", "纖維素因單位倒轉而不能盤繞。直鏈並排緊貼，鏈與鏈之間的氫鍵把它們固定成束。"),
     ends: L("Ends where glucose can be added or removed", "グルコースを付け外しできる末端", "可加上或移去葡萄糖的末端"),
-    ex2: L("Starch (plants) and glycogen (animals): α-glucose, coiled and branched, compact energy stores. Cellulose: β-glucose, alternate units inverted, straight chains held in bundles by hydrogen bonds.", "デンプン（植物）とグリコーゲン（動物）はα-グルコースで、巻いて枝分かれした省スペースのエネルギー貯蔵物質。セルロースはβ-グルコースで、1つおきに反転し、まっすぐな鎖が水素結合で束になります。", "澱粉（植物）和糖原（動物）：α-葡萄糖，盤繞並有分支，是緊密的能量儲備。纖維素：β-葡萄糖，每隔一個單位倒轉，直鏈以氫鍵結成束。"),
-    ref2: L("Syllabus: B1.1.5 (starch, glycogen), B1.1.6 (cellulose)", "シラバス: B1.1.5（デンプン、グリコーゲン）、B1.1.6（セルロース）", "課程大綱：B1.1.5（澱粉、糖原）、B1.1.6（纖維素）"),
-    lgA: L("α-glucose unit", "α-グルコース単位", "α-葡萄糖單位"),
-    lgB: L("β-glucose unit (inverted)", "β-グルコース単位（反転）", "β-葡萄糖單位（倒轉）"),
-    lgH: L("hydrogen bond", "水素結合", "氫鍵"),
-    lgN: L("added unit", "付加した単位", "新增單位"),
-    schem: L("Schematic, not to scale.", "模式図（縮尺は不同）。", "示意圖，並非按比例。")
+    ex2: L("Starch (plants), glycogen (animals): α-glucose, coiled and branched, compact energy stores. Cellulose: β-glucose, alternate units inverted, straight chains, H-bonds between chains.", "デンプン・グリコーゲン: α-グルコース、巻いて枝分かれした貯蔵物質。セルロース: β-グルコース、1つおきに反転、まっすぐな鎖、鎖間に水素結合。", "澱粉（植物）和糖原（動物）：α-葡萄糖，盤繞並有分支，緊密的能量儲備。纖維素：β-葡萄糖，每隔一個單位倒轉，直鏈，鏈間有氫鍵。"),
+    ref2: L("Syllabus B1.1.5–6", "シラバス B1.1.5–6", "課程大綱 B1.1.5–6"),
+    lgA: L("α-glucose", "α-グルコース", "α-葡萄糖"),
+    lgBc: L("β-glucose", "β-グルコース", "β-葡萄糖"),
+    lgB: L("β-glucose, inverted", "β-グルコース（反転）", "β-葡萄糖（倒轉）"),
+    lgH: L("H bond", "水素結合", "氫鍵"),
+    lgN: L("added", "付加", "新增"),
+    schem: L("schematic, not to scale", "模式図（縮尺は不同）", "示意圖，非按比例")
   };
 
   function clamp(x, a, b) { return x < a ? a : (x > b ? b : x); }
@@ -211,12 +215,12 @@
   function fitTree(tr, W, H) {
     var x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
     tr.pts.forEach(function (q) { x0 = Math.min(x0, q.x); x1 = Math.max(x1, q.x); y0 = Math.min(y0, q.y); y1 = Math.max(y1, q.y); });
-    var sc = Math.min((W - 40) / (x1 - x0 || 1), (H - 40) / (y1 - y0 || 1), 1.7);
-    return { sc: sc, ox: W / 2 - ((x0 + x1) / 2) * sc, oy: H / 2 - ((y0 + y1) / 2) * sc };
+    var sc = Math.min((W - 40) / (x1 - x0 || 1), (H - 64) / (y1 - y0 || 1), 1.7);
+    return { sc: sc, ox: W / 2 - ((x0 + x1) / 2) * sc, oy: H / 2 + 12 - ((y0 + y1) / 2) * sc };
   }
 
   function polySvg(kind, p, extra, t) {
-    var W = 400, H = 250, s = "";
+    var W = 400, H = 226, s = "";
     if (kind === 0) {
       var N = 24, pos = [], u = ss(p);
       for (var i = 0; i < N; i++) {
@@ -304,8 +308,8 @@
         tabBtns.forEach(function (b, k) { b.setAttribute("aria-selected", k === i ? "true" : "false"); });
         stage.innerHTML = ""; panel.innerHTML = ""; el$ = {};
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute("viewBox", i === 0 ? "0 0 320 176" : (i === 1 ? "0 0 340 190" : "0 0 400 250"));
-        svg.setAttribute("role", "img"); svg.setAttribute("aria-label", t([T.tab0, T.tab1, T.tab2][i]));
+        svg.setAttribute("viewBox", i === 0 ? "0 0 320 176" : (i === 1 ? "0 0 340 190" : "0 0 400 226"));
+        svg.style.maxWidth = i === 2 ? "560px" : "460px"; svg.setAttribute("role", "img"); svg.setAttribute("aria-label", t([T.tab0, T.tab1, T.tab2][i]));
         stage.appendChild(svg); el$.svg = svg;
         var lg = document.createElement("div"); lg.className = "wl-legend"; stage.appendChild(lg); el$.lg = lg;
         var msg = document.createElement("div"); msg.className = "cb-msg"; msg.setAttribute("aria-live", "polite"); el$.msg = msg;
@@ -321,15 +325,14 @@
         } else {
           pp = 0; extra = 0; extraT = 0;
           el$.chips = [T.p0, T.p1, T.p2, T.p3].map(function (lab, k) {
-            var b = btn(t(lab), function () { poly = k; setPoly(); }, k === poly); bt.appendChild(b); return b;
+            var b = btn(t(lab), function () { poly = k; setPoly(); }, k === poly); b.className += " cb-chip"; bt.appendChild(b); return b;
           });
-          var br2 = btn("↻ " + t(T.replay), function () { pp = 0; startAnim(); }); bt.appendChild(br2);
-          var bt2 = document.createElement("div"); bt2.className = "cb-btns"; el$.bt2 = bt2;
-          el$.addB = btn(t(T.add), function () { extraT = 1; startAnim(); });
-          el$.remB = btn(t(T.rem), function () { extraT = 0; startAnim(); });
-          bt2.appendChild(el$.addB); bt2.appendChild(el$.remB);
-          panel.insertBefore(bt2, msg.nextSibling);
-          var det = document.createElement("details"); det.innerHTML = "<summary>" + t(T.mt) + "</summary><p></p>"; el$.det = det; panel.appendChild(det);
+          var rp = btn("↻", function () { pp = 0; startAnim(); }); rp.className += " cb-chip"; rp.title = t(T.replay); rp.setAttribute("aria-label", t(T.replay));           var bt2 = document.createElement("div"); bt2.className = "cb-btns"; el$.bt2 = bt2;
+          el$.addB = btn(t(T.add), function () { extraT = 1; startAnim(); }); el$.addB.title = t(T.addT);
+          el$.remB = btn(t(T.rem), function () { extraT = 0; startAnim(); }); el$.remB.title = t(T.remT);
+          bt2.appendChild(el$.addB); bt2.appendChild(el$.remB); bt2.appendChild(rp);
+          panel.insertBefore(bt2, msg);
+          var det = document.createElement("details"); det.innerHTML = "<summary>" + t(T.mt) + "</summary><p></p>"; el$.det = det; msg.parentNode.insertBefore(det, msg.nextSibling);
         }
         var ex = document.createElement("div"); ex.className = "wl-exam"; ex.innerHTML = "<strong>" + t(L("What to remember for the exam", "試験でおぼえること", "考試要記住")) + ":</strong> " + t([T.ex0, T.ex1, T.ex2][i]); panel.appendChild(ex);
         var cap = document.createElement("p"); cap.className = "cb-cap"; cap.textContent = t([T.ref0, T.ref1, T.ref2][i]) + " · " + t(T.schem); panel.appendChild(cap);
@@ -343,8 +346,8 @@
         el$.msg.innerHTML = t([T.d0, T.d1, T.d2, T.d3][poly]);
         var det = el$.det; det.querySelector("p").innerHTML = t(poly === 3 ? T.md3 : T.md0);
         var branched = poly === 1 || poly === 2 || poly === 0;
-        el$.bt2.style.display = poly === 3 ? "none" : "";
-        var lgs = poly === 3 ? '<span><i class="cb-sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>' + t(T.lgA) + '</span><span><i class="cb-sw" style="background:var(--theme-b-soft);border-color:var(--theme-b)"></i>' + t(T.lgB) + '</span><span><i class="cb-sw" style="border-style:dashed;border-color:var(--hbond)"></i>' + t(T.lgH) + '</span>'
+        el$.addB.style.display = el$.remB.style.display = poly === 3 ? "none" : "";
+        var lgs = poly === 3 ? '<span><i class="cb-sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>' + t(T.lgBc) + '</span><span><i class="cb-sw" style="background:var(--theme-b-soft);border-color:var(--theme-b)"></i>' + t(T.lgB) + '</span><span><i class="cb-sw" style="border-style:dashed;border-color:var(--hbond)"></i>' + t(T.lgH) + '</span>'
           : '<span><i class="cb-sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>' + t(T.lgA) + '</span><span><i class="cb-sw" style="background:var(--good-soft);border-color:var(--good)"></i>' + t(T.lgN) + '</span>';
         el$.lg.innerHTML = lgs;
         if (skip !== true) { pp = 0; extra = 0; extraT = 0; startAnim(); }
@@ -381,7 +384,7 @@
         } else {
           var r = polySvg(poly, ss(pp), ss(extra), t);
           el$.svg.innerHTML = r.svg;
-          var endsTxt = poly === 3 ? "" : '<text class="cb-sm" x="8" y="244">' + t(T.ends) + ": " + r.ends + "</text>";
+          var endsTxt = poly === 3 ? "" : '<text class="cb-sm" x="8" y="18" style="font-weight:700">' + t(T.ends) + ": " + r.ends + "</text>";
           el$.svg.innerHTML += endsTxt;
         }
       }

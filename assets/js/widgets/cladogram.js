@@ -46,11 +46,13 @@
     ".w-cladogram .cl-t .vary{background:var(--warn-soft,#fff2cc);font-weight:700}",
     ".w-cladogram .cl-seq{font-family:var(--font-mono,monospace)}",
     ".w-cladogram .cl-cands{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin:0}",
-    ".w-cladogram .cl-cand{display:block;font:inherit;text-align:center;padding:.3rem;border:1.5px solid var(--line-strong,var(--line,#c3d0d7));border-radius:var(--radius,6px);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
+    ".w-cladogram .cl-cand{display:block;font:inherit;text-align:center;padding:.2rem;border:1.5px solid var(--line-strong,var(--line,#c3d0d7));border-radius:var(--radius,6px);background:var(--surface,#fff);color:var(--ink,#0f2029);cursor:pointer}",
     ".w-cladogram .cl-cand[aria-pressed=true]{border-color:var(--accent,#2547c7);box-shadow:0 0 0 2px var(--accent,#2547c7)}",
     ".w-cladogram .cl-cand:focus-visible{outline:3px solid var(--accent,#2547c7);outline-offset:2px}",
     ".w-cladogram .cl-cand svg{max-width:150px;width:100%;max-height:none}",
     ".w-cladogram .cl-cand b{display:block;font-size:.82rem;margin-bottom:.1rem}",
+    ".w-cladogram details{font-size:.85rem}",
+    ".w-cladogram summary{cursor:pointer;min-height:2rem;font-weight:700}",
     ".w-cladogram .cl-note{margin:0;font-size:.76rem;color:var(--muted,#4d626d)}",
     ".w-cladogram .cl-chtbl td.cl-ch{text-align:left}",
     ".w-cladogram .cl-chtbl .cl-btn{min-height:2.5rem;padding:.2rem .6rem;width:100%;text-align:left}",
@@ -111,6 +113,8 @@
     pRight: L("<strong>Correct.</strong> Tree {n} needs the fewest changes ({c}), so it is the most parsimonious and so the most probable cladogram.", "<strong>正解。</strong>木{n}は必要な変化が最も少なく（{c}回）、最節約的で、最も確からしい分岐図です。", "<strong>正確。</strong>樹 {n} 所需變化最少（{c} 次），所以最簡約，是最有可能的支序圖。"),
     pWrong: L("<strong>Not the fewest.</strong> Tree {n} needs {c} changes, but Tree {m} needs only {d}. The most parsimonious tree is the most probable cladogram.", "<strong>最少ではありません。</strong>木{n}は{c}回必要ですが、木{m}は{d}回で済みます。最も確からしい分岐図は最節約的な木です。", "<strong>不是最少。</strong>樹 {n} 需要 {c} 次變化，但樹 {m} 只需 {d} 次。最簡約的樹就是最有可能的支序圖。"),
     pNote: L("Sites where all four organisms have the same base, or only one differs, do not help choose between trees. A different method of judging could pick a different tree, so a cladogram is a hypothesis.", "四つの生物が同じ塩基をもつ部位や、一つだけが違う部位は、木を選ぶ助けになりません。別の判断方法なら別の木が選ばれるかもしれないので、分岐図は仮説です。", "四種生物鹼基相同的位點，或只有一種不同的位點，無助於在樹之間作選擇。用另一種判斷方法可能選出另一棵樹，所以支序圖是一個假說。"),
+    how: L("How it works", "使い方", "使用方法"),
+    more: L("More detail", "詳細", "更多說明"),
     pNew: L("Other data set", "別のデータ", "另一組數據")
   };
 
@@ -377,14 +381,14 @@
       var rt = buildCharTree(); numberNodes(rt);
       var cnt = T.chars.filter(function (c, i) { return chosen[i] && c.t.length >= 2 && c.t.length < CH_TAXA.length; }).length;
       var all = T.chars.every(function (c, i) { return chosen[i]; });
-      var h = '<div class="wl-panel"><p class="cl-note" style="font-size:.88rem;color:var(--ink,#0f2029)">' + esc(tr("chIntro")) + "</p>";
+      var h = '<div class="wl-panel"><details><summary>' + esc(tr("how")) + '</summary><p class="cl-note" style="font-size:.88rem;color:var(--ink,#0f2029)">' + esc(tr("chIntro")) + "</p></details>";
       h += '<table class="cl-t cl-chtbl"><tr><th></th>' + CH_TAXA.map(function (k) { return "<th>" + esc(nm(k)) + "</th>"; }).join("") + "</tr>";
       T.chars.forEach(function (c, i) {
         h += '<tr><td class="cl-ch"><button type="button" class="cl-btn" data-ch="' + i + '" aria-pressed="' + !!chosen[i] + '">' + esc(t(c.n)) + "</button></td>" + CH_TAXA.map(function (k) { return "<td>" + (c.t.indexOf(k) >= 0 ? "&#10003;" : "–") + "</td>"; }).join("") + "</tr>";
       });
       h += "</table>";
       var tipExtra = function (nd, xt) { var s = ""; T.chars.forEach(function (c, i) { if (chosen[i] && c.t.length === 1 && c.t[0] === nd.leaf) s += "★ " + t(c.n) + " "; }); return s ? '<text class="cl-chl" style="text-anchor:start" x="' + (xt + 10) + '" y="' + (nd.y + (lang !== "en" ? 26 : 18)) + '">' + esc(s) + "</text>" : ""; };
-      var stage = '<div class="wl-stage">' + svgTree(rt, { lang: lang, names: names, interactive: false, nodeNumbers: false, nodeLabel: function (nd) { return nd.labels && nd.labels.length ? nd.labels.map(function (l) { return t(l); }).join(" + ") : ""; }, tipExtra: tipExtra, rowH: lang !== "en" ? 42 : 38, x0: 20, xt: 205, W: 360 }) + "</div>";
+      var stage = '<div class="wl-stage">' + svgTree(rt, { lang: lang, names: names, interactive: false, nodeNumbers: false, nodeLabel: function (nd) { return nd.labels && nd.labels.length ? nd.labels.map(function (l) { return t(l); }).join(" + ") : ""; }, tipExtra: tipExtra, rowH: lang !== "en" ? 36 : 32, x0: 20, xt: 205, W: 360 }) + "</div>";
       var m = all ? tr("chDone") : cnt === 0 ? tr("chNone") : tr("chSome", { k: cnt });
       h += '<div class="cl-msg ' + (all ? "good" : "") + '" aria-live="polite">' + m + "</div>";
       h += '<div class="cl-row"><button type="button" class="cl-btn" data-act="chreset">' + esc(tr("reset")) + "</button></div></div>";
@@ -407,10 +411,10 @@
       h += '<div class="cl-cands" role="group">';
       cs.forEach(function (c, i3) {
         var r = mk(c); numberNodes(r);
-        h += '<button type="button" class="cl-cand wl-sub" data-pick="' + i3 + '" aria-pressed="' + (pick === i3) + '"><b>' + esc(tr("pTree", { n: i3 + 1 })) + "</b>" + svgTree(r, { lang: "en", names: function (k) { return { en: k }; }, rowH: 24, top: 14, x0: 10, xt: 70, W: 100 }) + "</button>";
+        h += '<button type="button" class="cl-cand wl-sub" data-pick="' + i3 + '" aria-pressed="' + (pick === i3) + '"><b>' + esc(tr("pTree", { n: i3 + 1 })) + "</b>" + svgTree(r, { lang: "en", names: function (k) { return { en: k }; }, rowH: 21, top: 10, x0: 10, xt: 70, W: 100 }) + "</button>";
       });
       h += "</div></div>";
-      h += '<div class="wl-panel"><p class="cl-note" style="font-size:.88rem;color:var(--ink,#0f2029)">' + tr("pIntro") + "</p>";
+      h += '<div class="wl-panel"><details' + (pick < 0 ? " open" : "") + '><summary>' + esc(tr("how")) + '</summary><p class="cl-note" style="font-size:.88rem;color:var(--ink,#0f2029)">' + tr("pIntro") + "</p></details>";
       if (pick >= 0) {
         var tot = cs.map(function (c) { var arr = []; for (var s = 0; s < n; s++) arr.push(fitchSite(c, ds.seqs, s)); return { arr: arr, sum: arr.reduce(function (a, b) { return a + b; }, 0) }; });
         var min = Math.min.apply(null, tot.map(function (x) { return x.sum; })), bi = tot.map(function (x) { return x.sum; }).indexOf(min);
@@ -422,7 +426,7 @@
         var ok = tot[pick].sum === min;
         h += '<div class="cl-msg ' + (ok ? "good" : "bad") + '" aria-live="polite">' + (ok ? tr("pRight", { n: pick + 1, c: min }) : tr("pWrong", { n: pick + 1, c: tot[pick].sum, m: bi + 1, d: min })) + "</div>";
       } else h += '<div class="cl-msg" aria-live="polite"></div>';
-      h += '<div class="cl-row"><button type="button" class="cl-btn" data-act="newds">' + esc(tr("pNew")) + '</button></div><p class="cl-note">' + esc(tr("pNote")) + "</p></div>";
+      h += '<div class="cl-row"><button type="button" class="cl-btn" data-act="newds">' + esc(tr("pNew")) + '</button></div><details><summary>' + esc(tr("more")) + '</summary><p class="cl-note">' + esc(tr("pNote")) + "</p></details></div>";
       return h;
     }
 
@@ -469,3 +473,4 @@
     mount: function (el, ctx) { return mount(el, ctx, "build"); }
   });
 })();
+

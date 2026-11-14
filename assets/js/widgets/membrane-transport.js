@@ -29,6 +29,7 @@
   var S = {
     outside: ["Outside the cell", "細胞外 (outside)", "細胞外 (outside)"],
     inside: ["Inside the cell", "細胞内 (inside)", "細胞內 (inside)"],
+    more: ["Explanation", "説明", "解說"],
     modeTitle: ["Choose a mechanism", "しくみを選ぶ", "選擇機制"],
     m_diff: ["Simple diffusion", "単純拡散 (simple diffusion)", "簡單擴散 (simple diffusion)"],
     m_chan: ["Facilitated diffusion (channel)", "促進拡散 (facilitated diffusion)：チャネル", "易化擴散 (facilitated diffusion)：通道"],
@@ -151,7 +152,10 @@
   var CSS =
     ".W{font:15px/1.5 system-ui,-apple-system,'Segoe UI','Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;color:var(--ink,#101826);max-width:100%;text-align:left}" +
     ".W *{box-sizing:border-box}" +
-    ".W .tabs,.W .row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;align-items:center}" +
+    ".W .tabs{display:flex;gap:4px;margin:0 0 8px;overflow-x:auto;align-items:stretch}" +
+    ".W .tabs button{flex:none;min-height:42px;padding:4px 12px}" +
+    ".W .row{display:flex;flex-wrap:wrap;gap:6px;margin:0;align-items:center}" +
+    ".W [hidden]{display:none!important}" +
     ".W button{font:inherit;font-size:14px;min-height:44px;min-width:44px;padding:6px 12px;border:1.5px solid var(--line-strong,#9FACBD);background:var(--surface,#fff);color:var(--ink,#101826);border-radius:var(--radius,3px);cursor:pointer;line-height:1.25}" +
     ".W button:hover:not(:disabled){border-color:var(--accent,#0A6C7D)}" +
     ".W button[aria-pressed=true]{background:var(--accent,#0A6C7D);color:var(--on-accent,#fff);border-color:var(--accent,#0A6C7D)}" +
@@ -159,17 +163,22 @@
     ".W button:focus-visible,.W input:focus-visible{outline:3px solid var(--accent,#0A6C7D);outline-offset:2px}" +
     ".W .ahl{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;padding:0 6px;border-radius:99px;background:var(--ahl,#6238CC);color:var(--ahl-ink,#fff);margin-left:6px;vertical-align:middle}" +
     ".W button[aria-pressed=true] .ahl{outline:1px solid var(--on-accent,#fff)}" +
+    ".W .opts button{flex:1 1 8rem;min-height:40px;padding:4px 8px;font-size:13px}" +
+    ".W .ctlrow button{flex:1;min-height:40px;padding:2px 8px}" +
+    ".W .sls{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:2px 12px}" +
+    ".W details summary{cursor:pointer;font-weight:700;font-size:14px;min-height:36px;display:flex;align-items:center}" +
+    ".W details .desc{margin:2px 0 4px;font-size:13.5px}" +
     ".W svg{width:100%;height:auto;display:block;background:var(--surface,#fff);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px);touch-action:manipulation}" +
-    ".W svg text{fill:var(--ink,#101826);font:10px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;paint-order:stroke;stroke:var(--surface,#fff);stroke-width:3px;stroke-linejoin:round}" +
-    ".W .sl{margin:6px 0}.W .sl label{display:flex;justify-content:space-between;font-weight:600;font-size:14px}" +
-    ".W input[type=range]{width:100%;min-height:40px;accent-color:var(--accent,#0A6C7D)}" +
-    ".W .panel{background:var(--surface-2,#EDF1F6);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px);padding:8px 12px;margin:8px 0;font-size:14px}" +
-    ".W .panel p{margin:3px 0}" +
+    ".W svg text{fill:var(--ink,#101826);font:12.5px system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Noto Sans TC',sans-serif;paint-order:stroke;stroke:var(--surface,#fff);stroke-width:3px;stroke-linejoin:round}" +
+    ".W .sl{margin:0}.W .sl label{display:flex;justify-content:space-between;gap:6px;font-weight:600;font-size:13px;line-height:1.25}" +
+    ".W input[type=range]{width:100%;min-height:34px;margin:0;accent-color:var(--accent,#0A6C7D)}" +
+    ".W .panel{background:var(--surface-2,#EDF1F6);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px);padding:6px 10px;margin:0;font-size:13.5px;line-height:1.4}" +
+    ".W .panel p{margin:1px 0}" +
     ".W .desc{font-size:14px;margin:8px 0}" +
-    ".W .key{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin:6px 0;color:var(--muted,#566376)}" +
+    ".W .key{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:13px;margin:6px 0 0;color:var(--muted,#566376)}" +
     ".W .key svg{display:inline-block;width:14px;height:14px;border:0;background:none;vertical-align:-2px;margin-right:4px}" +
     ".W .big{font-weight:700}" +
-    ".W .stagebox{font-size:15px;font-weight:600;margin:6px 0}" +
+    ".W .stagebox{font-size:14.5px;font-weight:600;margin:0;padding:6px 10px;background:var(--surface-2,#EDF1F6);border:1px solid var(--line,#D3DAE5);border-radius:var(--radius,3px)}" +
     "@media (prefers-reduced-motion:reduce){.W *{transition:none!important;animation:none!important}}";
   function css() {
     if (document.getElementById("w-style-membrane-transport")) return;
@@ -433,7 +442,13 @@
         var c = tone === "cot" ? "var(--r-polar,#108C7C)" : "var(--accent,#0A6C7D)";
         g.appendChild(sv("path", { d: "M" + (cx - 19) + " " + (YO - 3) + "h38v" + (YI - YO + 6) + "h-38z M" + (cx - 8) + " " + (YO - 3) + "l8 22l8 -22", style: "fill:" + c + ";fill-opacity:.35;stroke:" + c + ";stroke-width:1.8", "stroke-linejoin": "round", "fill-rule": "evenodd" }));
       }
-      function label(g, x, y, txt, anchor) { g.appendChild(sv("text", { x: x, y: y, "text-anchor": anchor || "middle", text: txt })); }
+      function label(g, x, y, txt, anchor) {
+        var i = txt.indexOf(" (");
+        if (i > 0 && (anchor || "middle") === "middle" && y > 150) {
+          g.appendChild(sv("text", { x: x, y: y, "text-anchor": "middle", text: txt.slice(0, i) }));
+          g.appendChild(sv("text", { x: x, y: y + 14, "text-anchor": "middle", text: txt.slice(i + 1) }));
+        } else g.appendChild(sv("text", { x: x, y: y, "text-anchor": anchor || "middle", text: txt }));
+      }
 
       function drawStage(svg) {
         var m = st.mode, gaps = { top: [], bot: [] }, pr = [];
@@ -456,7 +471,9 @@
         // static labels
         var gl = sv("g");
         label(gl, 6, 12, T(S.outside), "start"); label(gl, 6, VH - 4, T(S.inside), "start");
-        label(gl, VW - 6, MID + 3, T(S.p_bil), "end");
+        var bil = T(S.p_bil).split(" ");
+        if (bil.length > 1) { label(gl, 6, MID - 2, bil[0], "start"); label(gl, 6, MID + 12, bil.slice(1).join(" "), "start"); }
+        else label(gl, 6, MID + 5, bil[0], "start");
         svg.appendChild(gl);
         // particles layer
         nodes.pg = sv("g"); svg.appendChild(nodes.pg);
@@ -508,17 +525,19 @@
         nodes = {};
         initPumps();
         var W_ = el("div", { class: "W" }); root.appendChild(W_);
-        // tabs
-        var tabs = el("div", { class: "tabs", role: "group", "aria-label": T(S.modeTitle) });
+        // mode tabs
+        var tabs = el("div", { class: "tabs wl-tabs", role: "tablist", "aria-label": T(S.modeTitle) });
         modes.forEach(function (m) {
-          var b = el("button", { type: "button", "aria-pressed": m.id === st.mode ? "true" : "false" }, [T(S["m_" + m.id])]);
+          var b = el("button", { type: "button", role: "tab", "aria-selected": m.id === st.mode ? "true" : "false" }, [T(S["m_" + m.id])]);
           if (m.ahl) b.appendChild(el("span", { class: "ahl", text: "AHL" }));
           b.addEventListener("click", function () { setMode(m.id); });
           tabs.appendChild(b);
         });
         W_.appendChild(tabs);
+        var wl = el("div", { class: "wl" }), stageCol = el("div", { class: "wl-stage" }), panel = el("div", { class: "wl-panel" });
+        wl.appendChild(stageCol); wl.appendChild(panel); W_.appendChild(wl);
         // options row
-        var opts = el("div", { class: "row" });
+        var opts = el("div", { class: "row opts" });
         var m = st.mode;
         if (m === "diff") {
           [["np", S.p_np], ["ion", S.p_ion]].forEach(function (o) {
@@ -549,18 +568,19 @@
             opts.appendChild(b);
           });
         }
-        if (opts.firstChild) W_.appendChild(opts);
+        if (opts.firstChild) panel.appendChild(opts);
 
         // svg
         var svg = sv("svg", { viewBox: "0 0 " + VW + " " + VH, role: "img", "aria-label": T(W.title) });
         nodes.svg = svg;
         if (m === "vesc") drawVesicle(svg); else drawStage(svg);
-        W_.appendChild(svg);
+        stageCol.appendChild(svg);
 
         // sliders
         if (m === "diff" || m === "chan" || m === "gate" || m === "osm" || m === "act" || m === "sglt") {
           var max = m === "osm" ? 10 : 16;
           var names = m === "osm" ? [S.sOut, S.sIn] : m === "sglt" ? [S.gOut, S.gIn] : [S.cOut, S.cIn];
+          var sls = el("div", { class: "sls" });
           [["cOut", names[0]], ["cIn", names[1]]].forEach(function (s) {
             var id = "mt-" + s[0] + "-" + Math.random().toString(36).slice(2, 7);
             var val = el("span", { text: String(st[s[0]]) });
@@ -569,12 +589,13 @@
               st[s[0]] = parseInt(inp.value, 10); val.textContent = inp.value;
               clearTimeout(timer); timer = setTimeout(function () { resetParts(); status(); }, 120);
             });
-            W_.appendChild(el("div", { class: "sl" }, [el("label", { for: id }, [el("span", { text: T(s[1]) }), val]), inp]));
+            sls.appendChild(el("div", { class: "sl" }, [el("label", { for: id }, [el("span", { text: T(s[1]) }), val]), inp]));
           });
+          panel.appendChild(sls);
         }
 
         // transport controls
-        var ctl = el("div", { class: "row" });
+        var ctl = el("div", { class: "row ctlrow" });
         if (m === "vesc") {
           var stageTxt = el("div", { class: "stagebox", "aria-live": "polite", text: T(S[(st.vdir === "endo" ? "e" : "x") + st.vstage]) });
           var pb = el("button", { type: "button", text: T(S.prev) }), nb = el("button", { type: "button", text: T(S.next) });
@@ -582,7 +603,7 @@
           pb.addEventListener("click", function () { st.vstage = Math.max(0, st.vstage - 1); build(); });
           nb.addEventListener("click", function () { st.vstage = Math.min(3, st.vstage + 1); build(); });
           ctl.appendChild(pb); ctl.appendChild(nb);
-          W_.appendChild(ctl); W_.appendChild(stageTxt);
+          panel.appendChild(ctl); panel.appendChild(stageTxt);
         } else {
           var pl = el("button", { type: "button", text: T(st.playing ? S.pause : S.play) });
           pl.addEventListener("click", function () { st.playing = !st.playing; pl.textContent = T(st.playing ? S.pause : S.play); });
@@ -591,26 +612,33 @@
           var rb = el("button", { type: "button", text: T(S.reset) });
           rb.addEventListener("click", function () { resetParts(); status(); });
           ctl.appendChild(pl); ctl.appendChild(sb); ctl.appendChild(rb);
-          W_.appendChild(ctl);
-          var panel = el("div", { class: "panel", role: "status", "aria-live": "off" });
+          panel.appendChild(ctl);
+          var spanel = el("div", { class: "panel", role: "status", "aria-live": "off" });
           nodes.l1 = el("p", { class: "big" }); nodes.l2 = el("p"); nodes.l3 = el("p");
-          panel.appendChild(nodes.l1); panel.appendChild(nodes.l2); panel.appendChild(nodes.l3);
-          nodes.status = panel; W_.appendChild(panel);
+          spanel.appendChild(nodes.l1); spanel.appendChild(nodes.l2); spanel.appendChild(nodes.l3);
+          nodes.status = spanel; panel.appendChild(spanel);
         }
-        W_.appendChild(el("p", { class: "desc", text: T(S["d_" + m]) }));
+        var det = el("details", {}, [el("summary", { text: T(S.more) }), el("p", { class: "desc", text: T(S["d_" + m]) })]);
+        try { if (window.matchMedia("(min-width:900px)").matches) det.open = true; } catch (e) {}
+        panel.appendChild(det);
         // key
         if (m !== "vesc") {
           var kinds = m === "diff" ? [st.ptype === "np" ? "np" : "ion"] : m === "osm" ? ["sol", "w"] : m === "nak" ? ["na", "k"] : m === "sglt" ? ["na", "k", "g"] : ["ion"];
-          var key = el("div", { class: "key" }, [el("strong", { text: T(S.legendT) + ":" })]);
+          var key = el("div", { class: "key wl-legend" }, [el("strong", { text: T(S.legendT) + ":" })]);
           kinds.forEach(function (k) {
             var ks = sv("svg", { viewBox: "-8 -8 16 16" }); ks.appendChild(shapeFor(k));
             key.appendChild(el("span", {}, [ks, T(S["l_" + k])]));
           });
-          W_.appendChild(key);
+          stageCol.appendChild(key);
         }
         if (m !== "vesc") { resetParts(); status(); }
       }
 
+      var o = ctx.options && ctx.options.tab;
+      if (o != null) {
+        var oi = typeof o === "number" || /^\d+$/.test(String(o)) ? modes[parseInt(o, 10)] : modes.filter(function (m) { return m.id === o; })[0];
+        if (oi && oi.id !== st.mode) { st.mode = oi.id; var dd = DEF[oi.id]; if (dd) { st.cOut = dd[0]; st.cIn = dd[1]; } }
+      }
       build();
       if (typeof IntersectionObserver !== "undefined") {
         io = new IntersectionObserver(function (es) { onScreen = es[es.length - 1].isIntersecting; }, { threshold: 0 });
