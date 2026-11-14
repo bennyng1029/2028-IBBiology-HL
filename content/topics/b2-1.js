@@ -357,12 +357,12 @@ ${fmFigure("zh")}
 <li><strong>電位依存性チャネル (voltage-gated channel)</strong> は、膜をはさむ電位が変わると開閉する。<em>例:</em> 軸索の膜の<span class="term">ナトリウムチャネル (sodium channel)</span> と<span class="term">カリウムチャネル (potassium channel)</span>。それぞれ特定の電位で開き、自分のイオンだけを通す。</li></ul>
 <p>開いたチャネルをイオンが濃度勾配に従って ATP なしで通るので、これはオン・オフできる促進拡散である。ニューロンはこのしくみで電気信号 (神経インパルス) を送る。</p>`,
           `<p>神經細胞 (<span class="term">神經元, neuron</span>) 中很多通道蛋白都有「門」。門會一直<strong>關閉</strong>，直至有訊號令它打開，所以神經元能控制離子何時流動。</p>
-<ul><li><strong>神經遞質門控通道</strong>在化學訊號與它結合時打開。<em>例子：</em><span class="term">菸鹼型乙酰膽鹼受體 (nicotinic acetylcholine receptor)</span>。神經遞質乙酰膽鹼結合後，通道打開，帶正電荷的離子 (主要是 Na⁺) 經孔道流入。</li>
+<ul><li><strong>神經遞質門控通道</strong>在化學訊號與它結合時打開。<em>例子：</em><span class="term">煙鹼型乙醯膽鹼受體 (nicotinic acetylcholine receptor)</span>。神經遞質乙醯膽鹼結合後，通道打開，帶正電荷的離子 (主要是 Na⁺) 經孔道流入。</li>
 <li><strong>電壓門控通道 (voltage-gated channel)</strong> 在膜兩側的電壓改變時開啟或關閉。<em>例子：</em>軸突膜上的<span class="term">鈉通道 (sodium channel)</span> 和<span class="term">鉀通道 (potassium channel)</span>。每種通道在特定電壓下打開，只讓自己的離子通過。</li></ul>
 <p>離子經開啟的通道順濃度梯度移動，不需 ATP，所以這是可開可關的易化擴散。神經元就是這樣傳送電訊號 (神經衝動)。</p>`),
         examTip: L("Know one example of each trigger: acetylcholine (nicotinic receptor) = ligand-gated; Na⁺ and K⁺ channels = voltage-gated.",
           "それぞれの引き金の例を1つずつ: アセチルコリン (ニコチン性受容体)=リガンド (神経伝達物質) 依存性、Na⁺・K⁺ チャネル=電位依存性。",
-          "要認識每種觸發方式的一個例子：乙酰膽鹼 (菸鹼型受體) = 配體 (神經遞質) 門控；Na⁺ 和 K⁺ 通道 = 電壓門控。")
+          "要認識每種觸發方式的一個例子：乙醯膽鹼 (煙鹼型受體) = 配體 (神經遞質) 門控；Na⁺ 和 K⁺ 通道 = 電壓門控。")
       },
       {
         ref: "B2.1.15", ahl: true,
@@ -670,12 +670,12 @@ ${fmFigure("zh")}
         id: "b2-1-q17", type: "mcq", ahl: true, difficulty: 3, ref: "B2.1.14", paper: "1A",
         stem: L("Which statement about gated channels in neurons is correct?", "ニューロンのゲート付きチャネルについて正しいのはどれか。", "以下哪項關於神經元門控通道的敍述正確？"),
         options: [
-          L("The nicotinic acetylcholine receptor opens when acetylcholine binds, letting positive ions such as Na⁺ in.", "ニコチン性アセチルコリン受容体は、アセチルコリンが結合すると開き、Na⁺ などの陽イオンが流入する。", "菸鹼型乙酰膽鹼受體在乙酰膽鹼結合時打開，讓 Na⁺ 等陽離子流入。"),
-          L("Voltage-gated sodium channels open when acetylcholine binds to them.", "電位依存性ナトリウムチャネルは、アセチルコリンが結合すると開く。", "電壓門控鈉通道在乙酰膽鹼與其結合時打開。"),
+          L("The nicotinic acetylcholine receptor opens when acetylcholine binds, letting positive ions such as Na⁺ in.", "ニコチン性アセチルコリン受容体は、アセチルコリンが結合すると開き、Na⁺ などの陽イオンが流入する。", "煙鹼型乙醯膽鹼受體在乙醯膽鹼結合時打開，讓 Na⁺ 等陽離子流入。"),
+          L("Voltage-gated sodium channels open when acetylcholine binds to them.", "電位依存性ナトリウムチャネルは、アセチルコリンが結合すると開く。", "電壓門控鈉通道在乙醯膽鹼與其結合時打開。"),
           L("Gated channels use ATP to push ions against their gradients.", "ゲート付きチャネルは ATP を使ってイオンを勾配に逆らって押し出す。", "門控通道利用 ATP 把離子逆梯度推動。"),
           L("Voltage-gated potassium channels let sodium ions through when closed.", "電位依存性カリウムチャネルは閉じているときにナトリウムイオンを通す。", "電壓門控鉀通道在關閉時讓鈉離子通過。")],
         answer: 0,
-        explanation: L("The nicotinic acetylcholine receptor is a neurotransmitter-gated channel. B mixes up the two kinds of gating. C is wrong because channels are passive (facilitated diffusion); D is impossible because closed channels let nothing through and potassium channels are specific to K⁺.", "ニコチン性アセチルコリン受容体は神経伝達物質依存性チャネルである。Bは2種類のゲート制御を混同している。Cはチャネルが受動的 (促進拡散) なので誤り。Dは閉じたチャネルは何も通さず、カリウムチャネルは K⁺ に特異的なのでありえない。", "菸鹼型乙酰膽鹼受體是神經遞質門控通道。B 混淆了兩種門控方式；C 錯誤，因為通道是被動的 (易化擴散)；D 不可能，因為關閉的通道不讓任何物質通過，且鉀通道只對 K⁺ 有特異性。")
+        explanation: L("The nicotinic acetylcholine receptor is a neurotransmitter-gated channel. B mixes up the two kinds of gating. C is wrong because channels are passive (facilitated diffusion); D is impossible because closed channels let nothing through and potassium channels are specific to K⁺.", "ニコチン性アセチルコリン受容体は神経伝達物質依存性チャネルである。Bは2種類のゲート制御を混同している。Cはチャネルが受動的 (促進拡散) なので誤り。Dは閉じたチャネルは何も通さず、カリウムチャネルは K⁺ に特異的なのでありえない。", "煙鹼型乙醯膽鹼受體是神經遞質門控通道。B 混淆了兩種門控方式；C 錯誤，因為通道是被動的 (易化擴散)；D 不可能，因為關閉的通道不讓任何物質通過，且鉀通道只對 K⁺ 有特異性。")
       },
       {
         id: "b2-1-q18", type: "short", ahl: true, difficulty: 3, ref: "B2.1.15", paper: "2",

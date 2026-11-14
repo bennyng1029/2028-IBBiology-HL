@@ -236,7 +236,7 @@
       explanation: T("Viruses are diverse: lambda has double-stranded DNA while coronaviruses and HIV have single-stranded RNA. D confuses the capsid (a protein coat) with the genetic material, which is always a nucleic acid.",
         "ウイルスは多様で、λファージは二本鎖DNA、コロナウイルスとHIVは一本鎖RNAをもちます。Dはカプシド（タンパク質の殻）と遺伝物質を混同しています。遺伝物質は必ず核酸です。",
         "病毒很多樣：λ噬菌體是雙鏈 DNA，冠狀病毒和 HIV 是單鏈 RNA。D 把衣殼（蛋白質外殼）和遺傳物質混淆了，遺傳物質必定是核酸。") },
-    { id: "a2-3-q03", type: "match", ahl: true, difficulty: 1, ref: "A2.3.1–A2.3.4", paper: "1A",
+    { id: "a2-3-q03", type: "match", ahl: true, difficulty: 1, ref: "A2.3.1–A2.3.5", paper: "1A",
       stem: T("Match each term to its description.", "各用語を説明と対応させなさい。", "把每個詞彙與其描述配對。"),
       pairs: [
         { left: T("Capsid", "カプシド", "衣殼"), right: T("Protein coat around the viral nucleic acid", "ウイルス核酸を囲むタンパク質の殻", "包圍病毒核酸的蛋白質外殼") },

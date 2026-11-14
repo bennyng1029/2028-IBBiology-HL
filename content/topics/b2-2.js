@@ -427,7 +427,7 @@
       {
         id: "b2-2-q14", type: "short", ahl: true, difficulty: 2, ref: "B2.2.7", paper: "2",
         commandTerm: "Distinguish", marks: 3,
-        stem: L("Distinguish between the proteins made by free ribosomes and by ribosomes on the rough endoplasmic reticulum.", "遊離リボソームと粗面小胞体上のリボソームがそれぞれつくるタンパク質の違いを明確にせよ。", "分辨游離核糖體與粗糙內質網上的核糖體所製造的蛋白質。"),
+        stem: L("Distinguish between the proteins made by free ribosomes and by ribosomes on the rough endoplasmic reticulum.", "遊離リボソームと粗面小胞体上のリボソームがそれぞれつくるタンパク質の違いを区別して述べよ。", "分辨游離核糖體與粗糙內質網上的核糖體所製造的蛋白質。"),
         markscheme: [
           L("Free ribosomes (in the cytoplasm) make proteins that are retained / used in the cell.", "遊離リボソーム (細胞質) は、細胞内に保持され・使われるタンパク質をつくる。", "游離核糖體 (在細胞質) 製造留在／用於細胞內的蛋白質。"),
           L("Ribosomes on the RER make proteins for transport within the cell (e.g. to the Golgi, lysosomes, plasma membrane).", "RER 上のリボソームは細胞内輸送 (ゴルジ体、リソソーム、細胞膜へなど) されるタンパク質をつくる。", "RER 上的核糖體製造供細胞內運送 (如到高爾基體、溶酶體、質膜) 的蛋白質。"),
