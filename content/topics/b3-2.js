@@ -25,19 +25,19 @@ IB.registerTopic({
         `<p><strong>Capillaries</strong> are the smallest blood vessels. They connect arterioles (small arteries) to venules (small veins). Exchange of materials between the blood and the tissues (the internal environment), or between blood and the air in the lungs (the external environment), happens across their walls. Adaptations:</p>
 <ul>
 <li><strong>Large surface area</strong>, because capillaries <strong>branch</strong> into huge networks and have <strong>narrow diameters</strong> (about as wide as one red blood cell). Many narrow tubes have a much larger total surface area than a few wide tubes with the same volume.</li>
-<li><strong>Thin walls.</strong> The wall is only one cell thick (a single layer of flat endothelial cells). This gives a very short diffusion distance. Narrow capillaries also slow the blood and bring red blood cells close to the wall.</li>
+<li><strong>Thin walls.</strong> The wall is only one cell thick (a single layer of flat endothelial cells). This gives a very short diffusion distance. Because there are so many capillaries, their total cross-sectional area is very large, so blood flows slowly through them. Their narrowness also brings red blood cells close to the wall.</li>
 <li><strong>Fenestrations</strong> in some capillaries. These are small pores (gaps) through the wall cells. They let fluid and dissolved substances pass very quickly. Fenestrated capillaries are found where exchange needs to be particularly rapid, for example in the kidney and in the intestine.</li>
 </ul>`,
         `<p><strong>毛細血管 (capillary)</strong> は最も細い血管です。細動脈 (arteriole) と細静脈 (venule) をつなぎます。血液と組織（体内環境）の間、または血液と肺の空気（外部環境）の間の物質交換は、その壁を通して行われます。適応は次のとおりです。</p>
 <ul>
 <li><strong>広い表面積。</strong>毛細血管は<strong>枝分かれ</strong>して巨大な網目をつくり、<strong>直径が細い</strong>（赤血球1個分ほど）ためです。同じ体積なら、細い管が多数あるほうが、太い管が少数ある場合より総表面積がはるかに大きくなります。</li>
-<li><strong>薄い壁 (thin walls)。</strong>壁は細胞1個分の厚さ（扁平な内皮細胞の1層）しかありません。そのため拡散距離がごく短くなります。細い毛細血管は血流を遅くし、赤血球を壁の近くへ寄せます。</li>
+<li><strong>薄い壁 (thin walls)。</strong>壁は細胞1個分の厚さ（扁平な内皮細胞の1層）しかありません。そのため拡散距離がごく短くなります。毛細血管は数が非常に多く、断面積の合計がとても大きいので、血液はその中をゆっくり流れます。また、細いので赤血球が壁の近くを通ります。</li>
 <li>一部の毛細血管の<strong>窓 (fenestrations)</strong>。壁の細胞を貫く小さな孔（すき間）で、液体や溶けた物質が非常に速く通れます。窓のある毛細血管は、交換がとくに速く必要な場所、たとえば腎臓や小腸にあります。</li>
 </ul>`,
         `<p><strong>微血管 (capillary)</strong> 是最細的血管，連接小動脈 (arteriole) 和小靜脈 (venule)。血液與組織（內環境）之間，或血液與肺中空氣（外環境）之間的物質交換，都在其壁上進行。適應特徵：</p>
 <ul>
 <li><strong>大表面積</strong>，因為微血管<strong>分支</strong>成龐大的網絡，並且<strong>直徑狹窄</strong>（約與一個紅血球一樣闊）。同樣體積下，許多幼管的總表面積遠大於少數粗管。</li>
-<li><strong>薄壁 (thin walls)。</strong>管壁只有一個細胞厚（一層扁平的內皮細胞），擴散距離極短。狹窄的微血管亦使血流減慢，並使紅血球靠近管壁。</li>
+<li><strong>薄壁 (thin walls)。</strong>管壁只有一個細胞厚（一層扁平的內皮細胞），擴散距離極短。微血管數量極多，總截面積非常大，所以血液在其中流得很慢；而微血管狹窄，亦使紅血球靠近管壁。</li>
 <li>部分微血管有<strong>窗孔 (fenestrations)</strong>。這是穿過壁細胞的小孔（空隙），讓液體和溶解物質極快通過。有窗孔的微血管見於需要特別迅速交換的地方，例如腎臟和小腸。</li>
 </ul>`)
     },
@@ -642,9 +642,9 @@ IB.registerTopic({
       right: T("Xylem vessels are dead, empty tubes. They do not pump; water is pulled through them.", "木部の道管は死んだ空の管です。くみ上げるのではなく、水が通り抜けて引かれます。", "木質部導管是死亡的空管，不會泵水，水是被拉過管道。") },
     { wrong: T("A strong correlation between saturated fat intake and coronary heart disease proves that fat causes the disease.", "飽和脂肪の摂取と冠動脈疾患の強い相関は、脂肪が病気の原因であることを証明する。", "飽和脂肪攝取量與冠心病之間的強相關證明脂肪導致該病。"),
       right: T("Correlation does not prove causation. Other factors may be involved.", "相関は因果関係を証明しません。ほかの要因が関わっているかもしれません。", "相關不能證明因果關係，可能涉及其他因素。") },
-    { wrong: T("Tissue fluid is the same as blood.", "組織液は血液と同じである。", "組織液與血液相同。"),
+    { ahl: true, wrong: T("Tissue fluid is the same as blood.", "組織液は血液と同じである。", "組織液與血液相同。"),
       right: T("Tissue fluid is filtered plasma. It has no red blood cells and very few large proteins.", "組織液はろ過された血しょうです。赤血球はなく、大きなタンパク質もごくわずかです。", "組織液是經過濾的血漿，沒有紅血球，大蛋白質也極少。") },
-    { wrong: T("Phloem only carries sugars downwards from the leaves.", "師部は葉から下向きにだけ糖を運ぶ。", "韌皮部只把糖從葉向下運送。"),
+    { ahl: true, wrong: T("Phloem only carries sugars downwards from the leaves.", "師部は葉から下向きにだけ糖を運ぶ。", "韌皮部只把糖從葉向下運送。"),
       right: T("Phloem carries sap from sources to sinks, which can be up or down the plant.", "師部は、ソースからシンクへ師管液を運びます。植物体の上向きにも下向きにもなりえます。", "韌皮部把汁液由源運到庫，方向可以是向上或向下。") }
   ],
   beyondSyllabus: [

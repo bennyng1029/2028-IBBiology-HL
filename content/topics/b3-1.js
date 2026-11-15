@@ -490,7 +490,7 @@ IB.registerTopic({
       right: T("Some air (residual air) always stays in the lungs after the deepest breath out.", "最大限に吐いた後も、一部の空気（残気）は常に肺に残ります。", "盡力呼氣後，仍有部分空氣（殘氣）留在肺內。") },
     { wrong: T("Stomata open to let water out.", "気孔は水を出すために開く。", "氣孔張開是為了讓水分散失。"),
       right: T("Stomata open mainly to let CO₂ in. Water loss (transpiration) is an unavoidable consequence.", "気孔はおもにCO₂を取り込むために開きます。水の損失（蒸散）は避けられない結果です。", "氣孔張開主要是讓CO₂進入。水分散失（蒸騰作用）是不可避免的後果。") },
-    { wrong: T("The oxygen dissociation curve is S-shaped because haemoglobin gets tired.", "酸素解離曲線がS字形なのは、ヘモグロビンが疲れるからである。", "氧解離曲線呈S形是因為血紅蛋白疲勞了。"),
+    { ahl: true, wrong: T("The oxygen dissociation curve is S-shaped because haemoglobin gets tired.", "酸素解離曲線がS字形なのは、ヘモグロビンが疲れるからである。", "氧解離曲線呈S形是因為血紅蛋白疲勞了。"),
       right: T("The S-shape is due to cooperative binding: each O₂ that binds makes the next one bind more easily until the sites are nearly full.", "S字形は協同的結合によります。O₂が1つ結合するごとに次が結合しやすくなり、部位がほぼ埋まるまで続きます。", "S形是由於協同結合：每結合一個O₂，下一個便更容易結合，直至位點差不多全滿。") }
   ],
   beyondSyllabus: [

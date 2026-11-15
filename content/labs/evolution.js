@@ -80,7 +80,7 @@ IB.registerLab({
       }
     },
     {
-      title: { en: "Allopatric speciation", ja: "異所的種分化 (allopatric speciation)", zh: "異域物種形成 (allopatric speciation)" },
+      title: { en: "Speciation by geographical isolation", ja: "地理的隔離による種分化 (geographical isolation)", zh: "地理隔離引致的物種形成 (geographical isolation)" },
       ahl: false,
       refs: ["A4.1.6", "A4.1.7"],
       intro: {

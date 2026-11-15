@@ -233,8 +233,8 @@
       { term: L("thylakoid", "チラコイド", "類囊體"), def: L("Flattened sac of the chloroplast whose membrane carries photosystems; stacks are called grana.", "葉緑体の平たい袋。膜に光化学系をもつ。積み重なったものをグラナという。", "葉綠體的扁平囊，膜上有光系統；堆疊的稱為基粒。"), ahl: true },
       { term: L("stroma", "ストロマ", "葉綠體基質"), def: L("The fluid around the thylakoids, containing Calvin cycle enzymes and substrates.", "チラコイドの周りの液体。カルビン回路の酵素と基質を含む。", "類囊體周圍的液體，含有卡爾文循環的酶和底物。"), ahl: true },
       { term: L("nuclear pore", "核膜孔", "核孔"), def: L("A protein-lined channel through the nuclear envelope allowing controlled movement of molecules.", "核膜を貫くタンパク質で縁取られた通路。分子の出入りを制御する。", "貫穿核膜、內襯蛋白質的通道，讓分子受控地進出。"), ahl: true },
-      { term: L("rough endoplasmic reticulum (RER)", "粗面小胞体", "粗糙內質網"), def: L("Flattened membrane sacs with ribosomes attached; makes proteins for transport within the cell or secretion.", "リボソームが付着した平たい膜の袋。細胞内輸送または分泌されるタンパク質をつくる。", "附有核糖體的扁平膜囊，製造供細胞內運送或分泌的蛋白質。"), ahl: true },
-      { term: L("Golgi apparatus", "ゴルジ体", "高爾基體"), def: L("Stack of membrane sacs that processes proteins and packages them into vesicles for secretion.", "膜の袋が積み重なったもので、タンパク質を修飾し、分泌用の小胞に包む。", "由膜囊堆疊而成，加工蛋白質並把它們包裝入囊泡以供分泌。"), ahl: true },
+      { term: L("rough endoplasmic reticulum (RER)", "粗面小胞体", "粗糙內質網"), def: L("Flattened membrane sacs with ribosomes attached; makes proteins for transport within the cell or secretion.", "リボソームが付着した平たい膜の袋。細胞内輸送または分泌されるタンパク質をつくる。", "附有核糖體的扁平膜囊，製造供細胞內運送或分泌的蛋白質。"), ahl: false },
+      { term: L("Golgi apparatus", "ゴルジ体", "高爾基體"), def: L("Stack of membrane sacs that processes proteins and packages them into vesicles for secretion.", "膜の袋が積み重なったもので、タンパク質を修飾し、分泌用の小胞に包む。", "由膜囊堆疊而成，加工蛋白質並把它們包裝入囊泡以供分泌。"), ahl: false },
       { term: L("clathrin", "クラスリン", "網格蛋白"), def: L("A protein that coats part of a membrane and helps it form a vesicle.", "膜の一部を覆い、小胞の形成を助けるタンパク質。", "覆蓋部分膜、協助形成囊泡的蛋白質。"), ahl: true }
     ],
     misconceptions: [
@@ -242,9 +242,9 @@
         right: L("The guide says the cell wall, cytoskeleton and cytoplasm are not organelles. Nuclei, vesicles, ribosomes and the plasma membrane are.", "ガイドでは、細胞壁・細胞骨格・細胞質は細胞小器官ではなく、核・小胞・リボソーム・細胞膜は細胞小器官とされている。", "課程指引指出細胞壁、細胞骨架和細胞質不是細胞器；細胞核、囊泡、核糖體和質膜才是。") },
       { wrong: L("Lysosomes are mainly there to destroy the cell.", "リソソームは主に細胞を壊すためにある。", "溶酶體主要用來破壞細胞。"),
         right: L("Lysosomes keep digestive enzymes enclosed so the enzymes digest engulfed material without damaging the rest of the cell.", "リソソームは消化酵素を閉じ込め、細胞の他の部分を傷つけずに取り込んだ物質を消化させる。", "溶酶體把消化酶封存，使其能消化被吞入的物質而不損害細胞其他部分。") },
-      { wrong: L("All proteins are made on the rough ER.", "すべてのタンパク質は粗面小胞体でつくられる。", "所有蛋白質都在粗糙內質網製造。"),
+      { ahl: true, wrong: L("All proteins are made on the rough ER.", "すべてのタンパク質は粗面小胞体でつくられる。", "所有蛋白質都在粗糙內質網製造。"),
         right: L("Free ribosomes make proteins kept in the cell. Only proteins for transport within the cell or secretion are made on the rough ER.", "細胞内で使われるタンパク質は遊離リボソームでつくられる。粗面小胞体でつくられるのは、細胞内輸送または分泌されるタンパク質だけである。", "留在細胞內的蛋白質由游離核糖體製造；只有供細胞內運送或分泌的蛋白質才在 RER 上製造。") },
-      { wrong: L("The nuclear envelope is a permanent, unbroken barrier.", "核膜は永続的で途切れない障壁である。", "核膜是永久不間斷的屏障。"),
+      { ahl: true, wrong: L("The nuclear envelope is a permanent, unbroken barrier.", "核膜は永続的で途切れない障壁である。", "核膜是永久不間斷的屏障。"),
         right: L("It has pores for controlled movement of molecules, and it breaks into vesicles during mitosis and meiosis before reforming.", "核膜には分子を制御して通す孔があり、体細胞分裂や減数分裂のときは小胞に分かれ、その後再形成される。", "核膜有孔讓分子受控地進出，並會在有絲分裂和減數分裂時分解成囊泡，之後再重新形成。") }
     ],
     beyondSyllabus: [

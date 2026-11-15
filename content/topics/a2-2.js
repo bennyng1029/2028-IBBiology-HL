@@ -127,7 +127,7 @@
       heading: T("Prokaryote cell structure", "原核細胞の構造", "原核細胞的結構"),
       widget: "cell-compare-pro",
       body: T(
-        `<p><strong>Prokaryotes</strong> (bacteria) have no nucleus and no membrane-bound organelles. The type you need is the cell of <strong>Gram-positive eubacteria</strong> such as <em>Bacillus</em> and <em>Staphylococcus</em>. Components to know:</p>
+        `<p><strong>Prokaryotes</strong> (bacteria and archaea) have no nucleus and no membrane-bound organelles. The type you need is the cell of <strong>Gram-positive eubacteria</strong> such as <em>Bacillus</em> and <em>Staphylococcus</em>. Components to know:</p>
 <table>
 <tr><th>Component</th><th>Description and function</th></tr>
 <tr><td><strong>Cell wall</strong></td><td>Outside the plasma membrane. Gives the cell its shape, protects it and stops it bursting by taking in too much water.</td></tr>
@@ -137,7 +137,7 @@
 <tr><td><strong>70S ribosomes</strong></td><td>Make proteins. “70S” describes their size; they are smaller than the 80S ribosomes of eukaryotes.</td></tr>
 </table>
 <p>Prokaryote cells vary. You are <em>not</em> required to know the variations, such as the lack of cell walls in phytoplasmas and mycoplasmas. Just appreciate that prokaryote structure is not identical in every species.</p>`,
-        `<p><strong>原核生物</strong> (prokaryote、細菌) には核も膜で囲まれた細胞小器官もありません。学ぶ型は、<em>Bacillus</em>（バシラス）や<em>Staphylococcus</em>（ブドウ球菌）のような<strong>グラム陽性真正細菌</strong> (Gram-positive eubacteria) の細胞です。知っておく構成要素：</p>
+        `<p><strong>原核生物</strong> (prokaryote、細菌と古細菌) には核も膜で囲まれた細胞小器官もありません。学ぶ型は、<em>Bacillus</em>（バシラス）や<em>Staphylococcus</em>（ブドウ球菌）のような<strong>グラム陽性真正細菌</strong> (Gram-positive eubacteria) の細胞です。知っておく構成要素：</p>
 <table>
 <tr><th>構成要素</th><th>説明と働き</th></tr>
 <tr><td><strong>細胞壁</strong> (cell wall)</td><td>細胞膜の外側にあります。細胞の形を保ち、保護し、水を取り込みすぎて破裂するのを防ぎます。</td></tr>
@@ -147,7 +147,7 @@
 <tr><td><strong>70Sリボソーム</strong> (70S ribosomes)</td><td>タンパク質を合成します。「70S」は大きさを表し、真核生物の80Sリボソームより小さいです。</td></tr>
 </table>
 <p>原核細胞には多様性があります。ファイトプラズマやマイコプラズマに細胞壁がないなど、変異型の詳細を知る必要は<em>ありません</em>。原核生物の構造がすべての種で同じではない、という認識があれば十分です。</p>`,
-        `<p><strong>原核生物</strong> (prokaryote，細菌) 沒有細胞核，也沒有膜包圍的胞器。要認識的類型是<strong>革蘭氏陽性真細菌</strong> (Gram-positive eubacteria) 的細胞，例如<em>芽孢桿菌屬</em> (<em>Bacillus</em>) 和<em>葡萄球菌屬</em> (<em>Staphylococcus</em>)。須認識的組成部分：</p>
+        `<p><strong>原核生物</strong> (prokaryote，細菌和古菌) 沒有細胞核，也沒有膜包圍的胞器。要認識的類型是<strong>革蘭氏陽性真細菌</strong> (Gram-positive eubacteria) 的細胞，例如<em>芽孢桿菌屬</em> (<em>Bacillus</em>) 和<em>葡萄球菌屬</em> (<em>Staphylococcus</em>)。須認識的組成部分：</p>
 <table>
 <tr><th>組成部分</th><th>描述和功能</th></tr>
 <tr><td><strong>細胞壁</strong> (cell wall)</td><td>在質膜之外。賦予細胞形狀，保護細胞，防止因吸水過多而脹破。</td></tr>
@@ -767,7 +767,12 @@
       explanation: T("Larger body size and cell specialization are the advantages named in the guide. A describes a unicellular organism. C is false because multicellularity evolved repeatedly. D is false because specialization depends on differentiation.",
         "IB のガイドが挙げる利点は、体の大型化と細胞の特殊化です。Aは単細胞生物の説明。Cは多細胞性が繰り返し進化したので誤り。Dは特殊化が分化に基づくので誤りです。",
         "指引所列的優點是身體較大和細胞特化。A 描述的是單細胞生物。C 錯誤，多細胞性曾多次演化出現。D 錯誤，特化要靠分化。") },
-
+    {
+      id: "a2-2-q21", type: "order", ahl: false, difficulty: 1, ref: "A2.2.2", paper: "1A",
+      stem: T("Put these SI prefixes in order from the smallest to the largest value.", "次のSI接頭語を値の小さいものから大きいものへ並べよ。", "把以下 SI 詞頭由最小至最大排列。"),
+      items: [T("nano (10⁻⁹)", "ナノ (10⁻⁹)", "納 (10⁻⁹)"), T("micro (10⁻⁶)", "マイクロ (10⁻⁶)", "微 (10⁻⁶)"), T("milli (10⁻³)", "ミリ (10⁻³)", "毫 (10⁻³)"), T("centi (10⁻²)", "センチ (10⁻²)", "厘 (10⁻²)"), T("kilo (10³)", "キロ (10³)", "千 (10³)")],
+      explanation: T("10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³. Milli and centi are easy to swap: a millimetre is smaller than a centimetre.", "10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³。ミリとセンチは取り違えやすいが、1ミリメートルは1センチメートルより小さい。", "10⁻⁹ < 10⁻⁶ < 10⁻³ < 10⁻² < 10³。毫和厘容易弄錯：1毫米比1厘米小。")
+    }
   ];
     IB.registerTopic({
     id: "A2.2", slug: "a2-2", theme: "A", level: 2, ahlOnly: false,
@@ -813,7 +818,7 @@
         right: T("Fungal cell walls are mainly chitin (plants: cellulose), and fungi have no chloroplasts. Fungi are a separate group.", "菌類の細胞壁は主にキチン（植物はセルロース）で、葉緑体もありません。菌類は別のグループです。", "真菌的細胞壁主要是幾丁質（植物是纖維素），而且沒有葉綠體。真菌是獨立的類群。") },
       { wrong: T("Cells that look different have different genes (they lose the genes they do not use).", "見た目が違う細胞は遺伝子が違う（使わない遺伝子を失う）。", "外觀不同的細胞有不同的基因（會失去不用的基因）。"),
         right: T("Differentiated cells of one organism keep the same genes. They differ because different genes are expressed (switched on or off).", "1つの生物の分化した細胞は同じ遺伝子をもち続けます。違いは、発現する遺伝子（オン・オフ）が異なるためです。", "同一生物中分化的細胞保留相同的基因。分別在於表達（開啟或關閉）的基因不同。") },
-      { wrong: T("Endosymbiosis means a big cell ate bacteria and digested them.", "細胞内共生とは、大きな細胞が細菌を食べて消化したことである。", "內共生是指大細胞吃掉細菌並把它消化。"),
+      { ahl: true, wrong: T("Endosymbiosis means a big cell ate bacteria and digested them.", "細胞内共生とは、大きな細胞が細菌を食べて消化したことである。", "內共生是指大細胞吃掉細菌並把它消化。"),
         right: T("The engulfed prokaryote was not digested. It survived inside the host and both benefited, eventually becoming a mitochondrion or chloroplast.", "取り込まれた原核生物は消化されませんでした。宿主の中で生き続けて双方が利益を得、やがてミトコンドリアや葉緑体になりました。", "被吞入的原核生物沒有被消化，而是在宿主內存活，雙方得益，最終變成線粒體或葉綠體。") }
     ],
     beyondSyllabus: [
@@ -835,7 +840,7 @@
     natureOfScience: [
       T("Deductive reasoning generates predictions from theories: based on cell theory, a newly discovered organism can be predicted to consist of one or more cells.", "演繹的推論は理論から予測を導きます。細胞説に基づけば、新しく発見された生物は1つ以上の細胞からなると予測できます。", "演繹推理由理論產生預測：根據細胞學說，可預測新發現的生物由一個或多個細胞構成。"),
       T("Measurement using instruments (such as an eyepiece graticule or a ruler) is a form of quantitative observation.", "器具（接眼ミクロメーターや定規）による測定は、定量的観察の一種です。", "用儀器（如目鏡測微尺或直尺）量度是一種定量觀察。"),
-      T("The strength of a theory comes from the observations it explains and the predictions it supports. Endosymbiosis accounts for a wide range of observations.", "理論の強さは、それが説明する観察と支持する予測から生まれます。細胞内共生説は幅広い観察を説明します。", "理論的強度來自它能解釋的觀察和支持的預測。內共生學說解釋了廣泛的觀察。")
+      T("The strength of a theory comes from the observations it explains and the predictions it supports. Endosymbiosis accounts for a wide range of observations (AHL, A2.2.12).", "理論の強さは、それが説明する観察と支持する予測から生まれます。細胞内共生説は幅広い観察を説明します (AHL, A2.2.12)。", "理論的強度來自它能解釋的觀察和支持的預測。內共生學說解釋了廣泛的觀察 (AHL, A2.2.12)。")
     ],
     questions
   });
