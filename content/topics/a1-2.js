@@ -25,6 +25,7 @@
     sections: [
       {
         ref: "A1.2.1",
+        deeper: {"en":"<p><strong>What makes a molecule a good genetic material?</strong> The molecule must do four jobs, and DNA does all of them.</p><table><tr><th>Job</th><th>How DNA does it</th></tr><tr><td>Store a lot of information</td><td>Any length, any order of four bases (A1.2.9)</td></tr><tr><td>Be copied accurately</td><td>Complementary base pairing (A1.2.8)</td></tr><tr><td>Be stable</td><td>Strong covalent sugar–phosphate backbone (A1.2.3)</td></tr><tr><td>Be read by every organism</td><td>One shared genetic code (A1.2.10)</td></tr></table><p><strong>Viruses.</strong> The guide says viruses are not considered to be living. Some use DNA as their genetic material and others use RNA. Influenza viruses and coronaviruses are examples of viruses with RNA. This does not contradict \"DNA is the genetic material of all living organisms\".</p><p><strong>Typical 2-mark answer to \"State the role of DNA\".</strong> It stores the genetic information (instructions) of an organism, and it is passed on to offspring.</p><div class=\"note\">Mark-scheme language: \"genetic material\", \"stores information\", \"inherited / passed on\". Do not write that DNA \"is a gene\" or \"is a chromosome\": genes and chromosomes are made of DNA, but they are not the same thing.</div>","ja":"<p><strong>遺伝物質として優れた分子とは？</strong>遺伝物質には4つの働きが必要で、DNA はそのすべてを果たします。</p><table><tr><th>働き</th><th>DNA の仕組み</th></tr><tr><td>大量の情報を蓄える</td><td>どんな長さでも、4つの塩基をどんな順にも並べられる (A1.2.9)</td></tr><tr><td>正確に複製される</td><td>相補的塩基対合 (A1.2.8)</td></tr><tr><td>安定している</td><td>強い共有結合の糖－リン酸骨格 (A1.2.3)</td></tr><tr><td>すべての生物が読み取れる</td><td>共通の遺伝暗号 (A1.2.10)</td></tr></table><p><strong>ウイルス。</strong>ガイドでは、ウイルスは生物とはみなされません。DNA を遺伝物質とするものと RNA を遺伝物質とするものがあり、インフルエンザウイルスやコロナウイルスは RNA ウイルスの例です。これは「DNA はすべての生物の遺伝物質」という説明と矛盾しません。</p><p><strong>「DNA の役割を述べよ (State)」の2点解答例。</strong>生物の遺伝情報 (設計図) を蓄えること、そしてそれが子に伝えられること。</p><div class=\"note\">採点で使われる言葉：「genetic material」「stores information」「inherited / passed on」。「DNA は遺伝子 (gene) である」「DNA は染色体である」と書かないこと。遺伝子や染色体は DNA でできていますが、同じものではありません。</div>","zh":"<p><strong>怎樣的分子才是好的遺傳物質？</strong>遺傳物質必須完成四項工作，而 DNA 全部做到。</p><table><tr><th>工作</th><th>DNA 如何做到</th></tr><tr><td>儲存大量資訊</td><td>長度不限，四種鹼基可任意排列 (A1.2.9)</td></tr><tr><td>被準確複製</td><td>互補鹼基配對 (A1.2.8)</td></tr><tr><td>穩定</td><td>牢固的共價糖－磷酸骨架 (A1.2.3)</td></tr><tr><td>能被所有生物讀取</td><td>共通的遺傳密碼 (A1.2.10)</td></tr></table><p><strong>病毒。</strong>課程指引指出病毒不被視為生物。有些病毒以 DNA 作遺傳物質，有些則用 RNA。流感病毒和冠狀病毒就是 RNA 病毒的例子。這與「DNA 是所有生物的遺傳物質」並不矛盾。</p><p><strong>「陳述 (State) DNA 的角色」的 2 分答案示例。</strong>它儲存生物的遺傳資訊 (指令)，並傳給下一代。</p><div class=\"note\">評分用語：「genetic material」、「stores information」、「inherited / passed on」。不要寫「DNA 就是基因 (gene)」或「DNA 就是染色體」：基因和染色體由 DNA 構成，但並不等同。</div>"},
         ahl: false,
         heading: L("DNA: the genetic material of life", "DNA：生物の遺伝物質", "DNA：生物的遺傳物質"),
         body: L(
@@ -37,6 +38,7 @@
       },
       {
         ref: "A1.2.2",
+        deeper: {"en":"<p><strong>Drawing a nucleotide: what earns the marks.</strong></p><ol><li>Draw a circle, a pentagon and a rectangle (the guide's shapes).</li><li>Join the circle to the pentagon with a line (phosphate to sugar).</li><li>Join the rectangle to a <em>different</em> corner of the pentagon (base to sugar). The base is never joined to the phosphate.</li><li>Label each shape: phosphate, pentose sugar (deoxyribose or ribose), nitrogenous base.</li></ol><table><tr><th>Part</th><th>Shape</th><th>Same in all nucleotides?</th></tr><tr><td>Phosphate</td><td>Circle</td><td>Yes</td></tr><tr><td>Pentose sugar</td><td>Pentagon</td><td>Yes within DNA (deoxyribose); within RNA (ribose)</td></tr><tr><td>Nitrogenous base</td><td>Rectangle</td><td>No: this is the only part that varies</td></tr></table><p>So DNA has <strong>four</strong> kinds of nucleotide (with A, T, G or C) and RNA has four (A, U, G or C). They differ only in the base. This is why the order of bases carries the information.</p><p>(AHL) In a nucleotide the phosphate is on carbon 5′ and the base on carbon 1′ of the sugar (A1.2.11).</p><div class=\"note\">Mark-scheme language: \"nitrogenous base\", \"pentose sugar\", \"phosphate (group)\". Marks are lost for a base joined to the phosphate, for a missing label, or for calling the whole nucleotide \"the base\". Write \"nitrogenous base\", not \"nitrogen base\".</div>","ja":"<p><strong>ヌクレオチドを描くとき、得点になる点。</strong></p><ol><li>円、五角形、長方形を描く (ガイドが示す図形)。</li><li>円と五角形を線でつなぐ (リン酸と糖)。</li><li>長方形を五角形の<em>別の</em>角につなぐ (塩基と糖)。塩基はリン酸にはつながない。</li><li>各図形に、リン酸 (phosphate)、五炭糖 (pentose sugar：デオキシリボースまたはリボース)、窒素を含む塩基 (nitrogenous base) と書く。</li></ol><table><tr><th>部分</th><th>図形</th><th>すべてのヌクレオチドで同じか</th></tr><tr><td>リン酸</td><td>円</td><td>同じ</td></tr><tr><td>五炭糖</td><td>五角形</td><td>DNA 内では同じ (デオキシリボース)、RNA 内でも同じ (リボース)</td></tr><tr><td>窒素を含む塩基</td><td>長方形</td><td>異なる。変わるのはここだけ</td></tr></table><p>したがって DNA には4種類のヌクレオチド (A, T, G, C)、RNA にも4種類 (A, U, G, C) があり、違いは塩基だけです。だから塩基の並び順が情報を担うのです。</p><p>(AHL) ヌクレオチドでは、リン酸は糖の5′炭素に、塩基は1′炭素に付いています (A1.2.11)。</p><div class=\"note\">採点で使われる言葉：「nitrogenous base」「pentose sugar」「phosphate (group)」。塩基をリン酸につなぐ、ラベルが抜ける、ヌクレオチド全体を「塩基」と呼ぶ、といった誤りは失点になります。</div>","zh":"<p><strong>繪畫核苷酸：得分要點。</strong></p><ol><li>畫出圓形、五邊形和長方形 (課程指引建議的形狀)。</li><li>用線把圓形與五邊形連起來 (磷酸連糖)。</li><li>把長方形連到五邊形的<em>另一個</em>角 (鹼基連糖)。鹼基不會連到磷酸。</li><li>標示各部分：磷酸 (phosphate)、五碳糖 (pentose sugar，脫氧核糖或核糖)、含氮鹼基 (nitrogenous base)。</li></ol><table><tr><th>部分</th><th>形狀</th><th>所有核苷酸都相同嗎？</th></tr><tr><td>磷酸</td><td>圓形</td><td>相同</td></tr><tr><td>五碳糖</td><td>五邊形</td><td>在 DNA 內相同 (脫氧核糖)；在 RNA 內相同 (核糖)</td></tr><tr><td>含氮鹼基</td><td>長方形</td><td>不同，這是唯一會變的部分</td></tr></table><p>所以 DNA 有<strong>四種</strong>核苷酸 (含 A、T、G 或 C)，RNA 也有四種 (含 A、U、G 或 C)，它們只在鹼基上不同。這就是鹼基次序能攜帶資訊的原因。</p><p>(AHL) 在核苷酸中，磷酸接在糖的 5′ 碳上，鹼基接在 1′ 碳上 (A1.2.11)。</p><div class=\"note\">評分用語：「nitrogenous base」、「pentose sugar」、「phosphate (group)」。把鹼基連到磷酸、漏了標示，或把整個核苷酸稱為「鹼基」都會失分。</div>"},
         ahl: false,
         heading: L("The parts of a nucleotide", "ヌクレオチドの構成要素", "核苷酸的組成部分"),
         body: L(
@@ -59,6 +61,7 @@
       },
       {
         ref: "A1.2.3",
+        deeper: {"en":"<p><strong>Two kinds of bond, two jobs.</strong> DNA is held together by strong bonds in one direction and weak bonds in the other, and this combination is what makes it useful.</p><table><tr><th>Bond</th><th>Where?</th><th>Strength</th><th>Job</th></tr><tr><td>Covalent (sugar–phosphate)</td><td>Along each strand</td><td>Strong</td><td>Keeps each strand intact, so the base sequence is protected</td></tr><tr><td>Hydrogen (base to base)</td><td>Between the two strands</td><td>Weak singly</td><td>Holds strands together but lets them be separated when the information must be copied or read</td></tr></table><p><strong>Counting bonds in a chain.</strong> A strand of <em>n</em> nucleotides has <em>n</em> − 1 sugar–phosphate joins. Worked example: a chain of 6 nucleotides has 5 joins, and 5 molecules of water are released when it is built (A1.2.5).</p><div class=\"note\">Extension (not required): phosphate groups carry a negative charge, which makes the backbone polar and hydrophilic. DNA therefore dissolves in the watery nucleus and cytoplasm, while the bases are on the inside of the helix.</div><div class=\"note\">Mark-scheme language: \"covalent bonds\", \"sugar–phosphate backbone\", \"sequence is protected / strand is stable\". Common error: writing that the backbone is held by hydrogen bonds. Hydrogen bonds are between bases only.</div>","ja":"<p><strong>2種類の結合、2つの役割。</strong>DNA は、ある方向には強い結合、別の方向には弱い結合で保たれており、この組み合わせが DNA の働きに役立っています。</p><table><tr><th>結合</th><th>場所</th><th>強さ</th><th>役割</th></tr><tr><td>共有結合 (糖－リン酸)</td><td>各鎖に沿って</td><td>強い</td><td>各鎖を壊れにくくし、塩基配列を守る</td></tr><tr><td>水素結合 (塩基どうし)</td><td>2本の鎖の間</td><td>1本では弱い</td><td>鎖を結び付けるが、情報を複製・読み取るときには引き離せる</td></tr></table><p><strong>鎖の結合を数える。</strong><em>n</em> 個のヌクレオチドの鎖には、糖－リン酸の結合が <em>n</em> − 1 個あります。計算例：6個のヌクレオチドの鎖には結合が5個あり、つくるときに水5分子が放出されます (A1.2.5)。</p><div class=\"note\">発展 (必須ではない)：リン酸基は負の電荷をもつので、骨格は極性があり親水性です。そのため DNA は水を含む核や細胞質に溶け、塩基はらせんの内側にあります。</div><div class=\"note\">採点で使われる言葉：「covalent bonds」「sugar–phosphate backbone」「sequence is protected / strand is stable」。よくある誤り：骨格が水素結合で保たれていると書くこと。水素結合は塩基どうしの間だけです。</div>","zh":"<p><strong>兩種鍵，兩種功用。</strong>DNA 在一個方向由強鍵連結，在另一個方向由弱鍵連結，這種組合正是它有用的原因。</p><table><tr><th>鍵</th><th>位置</th><th>強度</th><th>功用</th></tr><tr><td>共價鍵 (糖－磷酸)</td><td>沿每條鏈</td><td>強</td><td>使每條鏈保持完整，保護鹼基序列</td></tr><tr><td>氫鍵 (鹼基與鹼基)</td><td>兩條鏈之間</td><td>單個很弱</td><td>把兩條鏈結合在一起，但在需要複製或讀取資訊時可被分開</td></tr></table><p><strong>計算鏈中的鍵數。</strong>由 <em>n</em> 個核苷酸組成的鏈有 <em>n</em> − 1 個糖－磷酸連結。計算例：6 個核苷酸的鏈有 5 個連結，合成時釋出 5 個水分子 (A1.2.5)。</p><div class=\"note\">延伸 (非必修)：磷酸基團帶負電荷，使骨架具極性及親水性。所以 DNA 能溶於含水的細胞核和細胞質，而鹼基則在螺旋的內側。</div><div class=\"note\">評分用語：「covalent bonds」、「sugar–phosphate backbone」、「sequence is protected / strand is stable」。常見錯誤：寫成骨架由氫鍵維繫。氫鍵只存在於鹼基之間。</div>"},
         ahl: false,
         widget: "mol3d-dna",
         heading: L("The sugar–phosphate backbone", "糖−リン酸の骨格", "糖−磷酸骨架"),
@@ -75,6 +78,7 @@
       },
       {
         ref: "A1.2.4",
+        deeper: {"en":"<p><strong>Why order matters.</strong> The sequence is the code, so different orders mean different information, even with the same bases. For example, the short sequences ATG and GTA both contain A, T and G, but they are different messages.</p><p><strong>Why a three-base \"word\"?</strong> Proteins are made from 20 different amino acids, so the code needs at least 20 different \"words\".</p><table><tr><th>Bases per word</th><th>Number of different words</th><th>Enough for 20 amino acids?</th></tr><tr><td>1</td><td>4</td><td>No</td></tr><tr><td>2</td><td>4 × 4 = 16</td><td>No</td></tr><tr><td>3</td><td>4 × 4 × 4 = 64</td><td>Yes</td></tr></table><p>Three bases in a row (a triplet) code for one amino acid. This is developed in D1.2 (Protein synthesis).</p><p><strong>Checking RNA.</strong> If a question gives you a sequence containing U, it is RNA; if it contains T, it is DNA. A sequence cannot contain both T and U in a correct answer.</p><div class=\"note\">Mark-scheme language: \"sequence / order of bases\", \"genetic code\", \"codes for amino acids\". When you write \"the code is in the bases\", add that the <em>order</em> of the bases carries the information, not the bases themselves.</div>","ja":"<p><strong>順序が大切な理由。</strong>配列が暗号なので、同じ塩基でも並び順が違えば別の情報になります。たとえば短い配列 ATG と GTA はどちらも A, T, G を含みますが、別のメッセージです。</p><p><strong>なぜ3塩基の「単語」なのか。</strong>タンパク質は20種類のアミノ酸からできているので、暗号には少なくとも20種類の「単語」が必要です。</p><table><tr><th>1語の塩基数</th><th>異なる語の数</th><th>20種類のアミノ酸に足りるか</th></tr><tr><td>1</td><td>4</td><td>足りない</td></tr><tr><td>2</td><td>4 × 4 = 16</td><td>足りない</td></tr><tr><td>3</td><td>4 × 4 × 4 = 64</td><td>足りる</td></tr></table><p>連続する3つの塩基 (トリプレット triplet) が1つのアミノ酸を指定します。詳しくは D1.2 (タンパク質合成) で学びます。</p><p><strong>RNA かどうかの確認。</strong>配列に U があれば RNA、T があれば DNA です。正しい解答では、1つの配列に T と U の両方が現れることはありません。</p><div class=\"note\">採点で使われる言葉：「sequence / order of bases」「genetic code」「codes for amino acids」。「暗号は塩基にある」と書くときは、情報を担うのは塩基そのものではなく塩基の<em>並び順</em>であると付け加えましょう。</div>","zh":"<p><strong>為何次序重要。</strong>序列就是密碼，所以即使鹼基相同，次序不同就代表不同的資訊。例如短序列 ATG 和 GTA 都含有 A、T 和 G，但它們是不同的訊息。</p><p><strong>為何是三個鹼基的「字」？</strong>蛋白質由 20 種氨基酸構成，所以密碼至少需要 20 個不同的「字」。</p><table><tr><th>每個字的鹼基數</th><th>不同字的數目</th><th>足夠 20 種氨基酸嗎？</th></tr><tr><td>1</td><td>4</td><td>不足夠</td></tr><tr><td>2</td><td>4 × 4 = 16</td><td>不足夠</td></tr><tr><td>3</td><td>4 × 4 × 4 = 64</td><td>足夠</td></tr></table><p>連續三個鹼基 (三聯體 triplet) 編碼一種氨基酸。這會在 D1.2 (蛋白質合成) 中進一步學習。</p><p><strong>辨別是否 RNA。</strong>序列中有 U 就是 RNA，有 T 就是 DNA。正確答案中的序列不會同時有 T 和 U。</p><div class=\"note\">評分用語：「sequence / order of bases」、「genetic code」、「codes for amino acids」。寫「密碼在鹼基之中」時，要補充攜帶資訊的是鹼基的<em>次序</em>，而不是鹼基本身。</div>"},
         ahl: false,
         heading: L("The four bases and the code", "4種類の塩基と暗号", "四種鹼基與密碼"),
         body: L(
@@ -105,6 +109,7 @@
       },
       {
         ref: "A1.2.5",
+        deeper: {"en":"<p><strong>One condensation reaction, step by step.</strong></p><ol><li>Two nucleotides lie side by side. One has a free –OH on its sugar; the other has a phosphate group.</li><li>A covalent bond forms between the phosphate of one and the sugar of the other.</li><li>An –OH and an H are lost between them and leave as <strong>one molecule of water</strong>.</li><li>The result is a dinucleotide. Repeat the reaction to extend the chain.</li></ol><p>For a chain of <em>n</em> nucleotides, <em>n</em> − 1 molecules of water are released. Worked example: an RNA of 12 nucleotides is made by 11 condensation reactions and releases 11 molecules of water.</p><table><tr><th>Polymer</th><th>Monomer</th><th>Made by</th><th>Broken by</th></tr><tr><td>Nucleic acid</td><td>Nucleotide</td><td>Condensation (water released)</td><td>Hydrolysis (water added)</td></tr><tr><td>Polypeptide (B1.2)</td><td>Amino acid</td><td>Condensation</td><td>Hydrolysis</td></tr><tr><td>Polysaccharide (B1.1)</td><td>Monosaccharide</td><td>Condensation</td><td>Hydrolysis</td></tr></table><p><strong>RNA drawing check.</strong> Repeating chain of circle–pentagon–circle–pentagon, a rectangle hanging from each pentagon, bases chosen only from A, U, G and C, and a single strand.</p><div class=\"note\">Mark-scheme language: \"condensation\", \"water released\", \"covalent bond between phosphate and sugar\". Marks are lost for adding thymine to RNA, or for drawing rectangles inside the backbone.</div>","ja":"<p><strong>1回の脱水縮合反応を順に見る。</strong></p><ol><li>2つのヌクレオチドが並ぶ。一方は糖に遊離の –OH があり、他方にはリン酸基がある。</li><li>一方のリン酸ともう一方の糖の間に共有結合ができる。</li><li>両者から –OH と H が失われ、<strong>水1分子</strong>として出ていく。</li><li>2つのヌクレオチドがつながる。この反応を繰り返して鎖を伸ばす。</li></ol><p><em>n</em> 個のヌクレオチドの鎖では、<em>n</em> − 1 分子の水が放出されます。計算例：12個のヌクレオチドからなる RNA は11回の脱水縮合でつくられ、水11分子が放出されます。</p><table><tr><th>重合体</th><th>単量体</th><th>合成</th><th>分解</th></tr><tr><td>核酸</td><td>ヌクレオチド</td><td>脱水縮合 (水が出る)</td><td>加水分解 (水が加わる)</td></tr><tr><td>ポリペプチド (B1.2)</td><td>アミノ酸</td><td>脱水縮合</td><td>加水分解</td></tr><tr><td>多糖 (B1.1)</td><td>単糖</td><td>脱水縮合</td><td>加水分解</td></tr></table><p><strong>RNA の図のチェック。</strong>円－五角形－円－五角形の繰り返し、各五角形から下がる長方形、塩基は A, U, G, C だけ、そして1本鎖であること。</p><div class=\"note\">採点で使われる言葉：「condensation」「water released」「covalent bond between phosphate and sugar」。RNA にチミンを入れる、長方形を骨格の中に描く、といった誤りは失点です。</div>","zh":"<p><strong>逐步看一個縮合反應。</strong></p><ol><li>兩個核苷酸並排。其中一個的糖上有游離的 –OH，另一個則有磷酸基團。</li><li>其中一個的磷酸與另一個的糖之間形成共價鍵。</li><li>兩者之間失去一個 –OH 和一個 H，以<strong>一個水分子</strong>的形式離開。</li><li>結果是二核苷酸。重複此反應就能延長鏈。</li></ol><p>由 <em>n</em> 個核苷酸組成的鏈會釋出 <em>n</em> − 1 個水分子。計算例：一條 12 個核苷酸的 RNA 經 11 次縮合反應合成，釋出 11 個水分子。</p><table><tr><th>聚合物</th><th>單體</th><th>合成方式</th><th>分解方式</th></tr><tr><td>核酸</td><td>核苷酸</td><td>縮合 (釋出水)</td><td>水解 (加入水)</td></tr><tr><td>多肽 (B1.2)</td><td>氨基酸</td><td>縮合</td><td>水解</td></tr><tr><td>多糖 (B1.1)</td><td>單糖</td><td>縮合</td><td>水解</td></tr></table><p><strong>檢查 RNA 圖。</strong>圓形－五邊形－圓形－五邊形的重複鏈，每個五邊形下垂一個長方形，鹼基只可以是 A、U、G、C，並且是單鏈。</p><div class=\"note\">評分用語：「condensation」、「water released」、「covalent bond between phosphate and sugar」。在 RNA 中加入胸腺嘧啶，或把長方形畫在骨架之內，都會失分。</div>"},
         ahl: false,
         heading: L("RNA: a polymer made by condensation", "RNA：縮合でつくられるポリマー", "RNA：由縮合反應形成的聚合物"),
         body: L(
@@ -127,6 +132,7 @@
       },
       {
         ref: "A1.2.6",
+        deeper: {"en":"<p><strong>Building the second strand, step by step.</strong> Worked example: the top strand has the bases G G C A T.</p><ol><li>Pair each base with its partner: G with C, G with C, C with G, A with T, T with A.</li><li>The bottom strand is therefore C C G T A.</li><li>Draw the bottom strand running in the <em>opposite</em> direction to the top strand (antiparallel) and mark hydrogen bonds as dashed lines between facing bases.</li></ol><p><strong>Why a double helix is stable yet usable.</strong></p><ul><li>The covalent backbones are strong and protect the sequence.</li><li>Many hydrogen bonds together hold the strands firmly, but each is weak, so the strands can be separated for copying or reading.</li><li>The bases are on the inside of the helix, away from the surrounding water, which protects them.</li></ul><p><strong>Why the strands are called complementary.</strong> One strand determines the other. If you know one sequence, you can work out the other exactly.</p><p>(AHL) Antiparallel means that when one strand runs 5′→3′, the other runs 3′→5′ (A1.2.11).</p><div class=\"note\">Mark-scheme language: \"antiparallel\", \"complementary base pairing\", \"hydrogen bonds between bases\", \"A–T, G–C\". Marks are lost for A–G or C–T pairs, for strands drawn parallel, and for hydrogen bonds drawn between the backbones.</div>","ja":"<p><strong>2本目の鎖を順につくる。</strong>計算例：上の鎖の塩基が G G C A T の場合。</p><ol><li>各塩基を相手と対にする：G と C、G と C、C と G、A と T、T と A。</li><li>したがって下の鎖は C C G T A となる。</li><li>下の鎖は上の鎖と<em>逆</em>向きに描き (逆平行 antiparallel)、向かい合う塩基の間を点線の水素結合でつなぐ。</li></ol><p><strong>二重らせんが安定なのに使える理由。</strong></p><ul><li>共有結合でできた骨格は強く、配列を守る。</li><li>多数の水素結合が全体として鎖をしっかり保つが、1本ずつは弱いので、複製や読み取りのときには鎖を引き離せる。</li><li>塩基はらせんの内側にあり、周りの水から守られている。</li></ul><p><strong>鎖が相補的 (complementary) といわれる理由。</strong>一方の鎖がもう一方を決めます。片方の配列が分かれば、もう片方を正確に導けます。</p><p>(AHL) 逆平行とは、一方の鎖が 5′→3′ なら、もう一方は 3′→5′ に走ることです (A1.2.11)。</p><div class=\"note\">採点で使われる言葉：「antiparallel」「complementary base pairing」「hydrogen bonds between bases」「A–T, G–C」。A–G や C–T の対、平行に描いた鎖、骨格どうしの間に描いた水素結合は失点です。</div>","zh":"<p><strong>逐步建構第二條鏈。</strong>計算例：上方的鏈鹼基為 G G C A T。</p><ol><li>把每個鹼基與其配對：G 配 C、G 配 C、C 配 G、A 配 T、T 配 A。</li><li>所以下方的鏈是 C C G T A。</li><li>把下方的鏈畫成與上方的鏈<em>相反</em>的方向 (反向平行 antiparallel)，並用虛線標示相對鹼基之間的氫鍵。</li></ol><p><strong>為何雙螺旋既穩定又可使用。</strong></p><ul><li>共價骨架牢固，保護序列。</li><li>大量氫鍵合起來把兩條鏈牢牢結合，但每個氫鍵都很弱，所以在複製或讀取時兩條鏈可被分開。</li><li>鹼基位於螺旋內側，遠離周圍的水，得到保護。</li></ul><p><strong>為何稱兩條鏈為互補 (complementary)。</strong>一條鏈決定另一條鏈。知道其中一條的序列，就能準確推出另一條。</p><p>(AHL) 反向平行指一條鏈由 5′ 走向 3′ 時，另一條則由 3′ 走向 5′ (A1.2.11)。</p><div class=\"note\">評分用語：「antiparallel」、「complementary base pairing」、「hydrogen bonds between bases」、「A–T, G–C」。畫成 A–G 或 C–T 配對、兩條鏈平行，或把氫鍵畫在骨架之間，都會失分。</div>"},
         ahl: false,
         heading: L("The DNA double helix", "DNA の二重らせん", "DNA 雙螺旋"),
         body: L(
@@ -163,6 +169,7 @@
       },
       {
         ref: "A1.2.7",
+        deeper: {"en":"<p><strong>Distinguishing DNA from RNA: a checklist.</strong> A \"distinguish\" answer must give a difference for <em>both</em> molecules. Use these three:</p><ol><li>Strands: DNA is double-stranded; RNA is single-stranded.</li><li>Sugar: DNA has deoxyribose; RNA has ribose.</li><li>Bases: DNA has thymine (T); RNA has uracil (U) instead. A, G and C are in both.</li></ol><p><strong>Sketching the sugars.</strong> Draw each as a five-sided ring and number the carbons clockwise 1′ to 5′ (the 5′ carbon sits outside the ring). On carbon 2′, ribose has –OH and deoxyribose has –H. \"Deoxy\" means \"one oxygen fewer\".</p><table><tr><th>Type of RNA</th><th>Short job (details in D1.2)</th></tr><tr><td>mRNA (messenger)</td><td>Carries a copy of a gene's information to the ribosome</td></tr><tr><td>tRNA (transfer)</td><td>Brings amino acids to the ribosome</td></tr><tr><td>rRNA (ribosomal)</td><td>A component of the ribosome</td></tr></table><div class=\"note\">Extension (not required): the extra –OH on ribose makes RNA more easily broken down than DNA. This fits the idea of DNA as the long-term store and RNA as a short-lived working copy.</div><div class=\"note\">Mark-scheme language: \"single-stranded / double-stranded\", \"ribose / deoxyribose\", \"uracil / thymine\". Do not write \"RNA has no thymine\" alone; say what it has instead.</div>","ja":"<p><strong>DNA と RNA の区別：チェックリスト。</strong>「区別せよ (Distinguish)」の解答では、<em>両方</em>の分子について違いを書く必要があります。次の3点を使いましょう。</p><ol><li>鎖：DNA は二本鎖、RNA は一本鎖。</li><li>糖：DNA はデオキシリボース、RNA はリボース。</li><li>塩基：DNA はチミン (T)、RNA は代わりにウラシル (U) をもつ。A, G, C は両方にある。</li></ol><p><strong>糖のスケッチ。</strong>それぞれ五角形の環として描き、炭素を時計回りに 1′ から 5′ まで番号付けします (5′ の炭素は環の外側)。2′ 炭素に、リボースは –OH、デオキシリボースは –H が付いています。「デオキシ」は「酸素が1つ少ない」という意味です。</p><table><tr><th>RNA の種類</th><th>簡単な役割 (詳細は D1.2)</th></tr><tr><td>mRNA (伝令 messenger)</td><td>遺伝子の情報の写しをリボソームに運ぶ</td></tr><tr><td>tRNA (運搬 transfer)</td><td>アミノ酸をリボソームに運ぶ</td></tr><tr><td>rRNA (リボソーム ribosomal)</td><td>リボソームの構成成分</td></tr></table><div class=\"note\">発展 (必須ではない)：リボースの余分な –OH のため、RNA は DNA より分解されやすい。DNA は長期保存用、RNA は短命の作業用コピーという考え方に合っています。</div><div class=\"note\">採点で使われる言葉：「single-stranded / double-stranded」「ribose / deoxyribose」「uracil / thymine」。「RNA にはチミンがない」だけでは不十分で、代わりに何をもつかを書きましょう。</div>","zh":"<p><strong>區分 DNA 與 RNA：檢查清單。</strong>「區分 (Distinguish)」的答案必須為<em>兩種</em>分子都寫出分別。可用以下三點：</p><ol><li>鏈：DNA 是雙鏈；RNA 是單鏈。</li><li>糖：DNA 含脫氧核糖；RNA 含核糖。</li><li>鹼基：DNA 含胸腺嘧啶 (T)；RNA 則改含尿嘧啶 (U)。A、G、C 兩者皆有。</li></ol><p><strong>繪畫糖的結構。</strong>把每種糖畫成五邊形環，並順時針由 1′ 至 5′ 為碳編號 (5′ 碳在環之外)。在 2′ 碳上，核糖是 –OH，脫氧核糖是 –H。「脫氧 (deoxy)」即「少了一個氧」。</p><table><tr><th>RNA 類型</th><th>簡單功用 (詳見 D1.2)</th></tr><tr><td>mRNA (信使 messenger)</td><td>把基因資訊的副本帶到核糖體</td></tr><tr><td>tRNA (轉運 transfer)</td><td>把氨基酸帶到核糖體</td></tr><tr><td>rRNA (核糖體 ribosomal)</td><td>核糖體的組成部分</td></tr></table><div class=\"note\">延伸 (非必修)：核糖多出的 –OH 令 RNA 比 DNA 更容易被分解。這配合 DNA 是長期儲存、RNA 是短暫工作副本的概念。</div><div class=\"note\">評分用語：「single-stranded / double-stranded」、「ribose / deoxyribose」、「uracil / thymine」。不要只寫「RNA 沒有胸腺嘧啶」，要說明它改含甚麼。</div>"},
         ahl: false,
         heading: L("DNA compared with RNA", "DNA と RNA の違い", "DNA 與 RNA 的比較"),
         body: L(
@@ -187,6 +194,7 @@
       },
       {
         ref: "A1.2.8",
+        deeper: {"en":"<p><strong>Why only A–T and G–C?</strong> Each base has a particular pattern of atoms that can form hydrogen bonds. Only A with T (or U), and G with C, have patterns that line up. Other combinations do not line up, so no stable pairing happens. This specificity is the basis of accurate copying.</p><p><strong>Three uses of complementary pairing (worked examples).</strong></p><table><tr><th>Process</th><th>Template</th><th>Product</th></tr><tr><td>DNA replication</td><td>A T G C (DNA strand)</td><td>T A C G (new DNA strand)</td></tr><tr><td>Transcription</td><td>A T G C (DNA template strand)</td><td>U A C G (mRNA)</td></tr><tr><td>Translation</td><td>A U G (mRNA codon)</td><td>U A C (tRNA anticodon)</td></tr></table><p>In replication each of the two new DNA molecules contains one old strand and one new strand, which is why the two copies are identical to the original. Details are in D1.1.</p><p>(Note: in translation, the tRNA pairs with the mRNA by hydrogen bonds between three bases at a time. This is also taught in D1.2.)</p><div class=\"note\">Mark-scheme language: \"template strand\", \"complementary\", \"hydrogen bonds\", \"A with T, G with C (U in RNA)\", \"specific\". A full explanation links pairing to <em>accuracy</em>: because only one base can fit each position, the new strand matches the template.</div>","ja":"<p><strong>なぜ A–T と G–C だけなのか。</strong>各塩基には、水素結合をつくれる原子の特有の並びがあります。A と T (または U)、G と C だけがうまく重なります。他の組み合わせは重ならず、安定な対にはなりません。この特異性が正確な複製の基礎です。</p><p><strong>相補的対合の3つの使い道 (計算例)。</strong></p><table><tr><th>過程</th><th>鋳型</th><th>産物</th></tr><tr><td>DNA 複製</td><td>A T G C (DNA 鎖)</td><td>T A C G (新しい DNA 鎖)</td></tr><tr><td>転写 (transcription)</td><td>A T G C (DNA の鋳型鎖)</td><td>U A C G (mRNA)</td></tr><tr><td>翻訳 (translation)</td><td>A U G (mRNA のコドン)</td><td>U A C (tRNA のアンチコドン)</td></tr></table><p>複製では、できた2つの DNA 分子はそれぞれ古い鎖1本と新しい鎖1本を含むので、2つの複製は元と同一になります。詳しくは D1.1 で学びます。</p><p>(注：翻訳では、tRNA は3塩基ずつ水素結合で mRNA と対になります。これも D1.2 で学びます。)</p><div class=\"note\">採点で使われる言葉：「template strand」「complementary」「hydrogen bonds」「A with T, G with C (U in RNA)」「specific」。完全な説明では、対合を<em>正確さ</em>に結び付けます。各位置にはたった1種類の塩基しか合わないので、新しい鎖は鋳型と一致します。</div>","zh":"<p><strong>為何只有 A–T 和 G–C？</strong>每種鹼基都有特定的原子排列，可形成氫鍵。只有 A 與 T (或 U)、G 與 C 的排列能夠對上。其他組合對不上，不會形成穩定配對。這種專一性是準確複製的基礎。</p><p><strong>互補配對的三種用途 (計算例)。</strong></p><table><tr><th>過程</th><th>模板</th><th>產物</th></tr><tr><td>DNA 複製</td><td>A T G C (DNA 鏈)</td><td>T A C G (新 DNA 鏈)</td></tr><tr><td>轉錄 (transcription)</td><td>A T G C (DNA 模板鏈)</td><td>U A C G (mRNA)</td></tr><tr><td>翻譯 (translation)</td><td>A U G (mRNA 密碼子)</td><td>U A C (tRNA 反密碼子)</td></tr></table><p>在複製中，兩個新 DNA 分子各含一條舊鏈和一條新鏈，所以兩個副本都與原來的相同。詳情見 D1.1。</p><p>(註：在翻譯中，tRNA 以三個鹼基為一組，藉氫鍵與 mRNA 配對。這同樣會在 D1.2 學習。)</p><div class=\"note\">評分用語：「template strand」、「complementary」、「hydrogen bonds」、「A with T, G with C (U in RNA)」、「specific」。完整的解釋要把配對與<em>準確性</em>連起來：每個位置只有一種鹼基能配上，所以新鏈與模板吻合。</div>"},
         ahl: false,
         heading: L("Complementary base pairing: copying and using information", "相補的塩基対形成：情報の複製と発現", "互補鹼基配對：複製和表達資訊"),
         body: L(
@@ -208,6 +216,7 @@
       },
       {
         ref: "A1.2.9",
+        deeper: {"en":"<p><strong>The formula in action.</strong> The number of possible sequences of length <em>n</em> is 4<sup><em>n</em></sup> (not 4 × <em>n</em>).</p><table><tr><th>Length <em>n</em></th><th>Calculation</th><th>Possible sequences</th></tr><tr><td>1</td><td>4</td><td>4</td></tr><tr><td>2</td><td>4 × 4</td><td>16</td></tr><tr><td>3</td><td>4 × 4 × 4</td><td>64</td></tr><tr><td>5</td><td>4<sup>5</sup></td><td>1 024</td></tr><tr><td>10</td><td>4<sup>10</sup></td><td>1 048 576</td></tr></table><p>Each extra base multiplies the number of possibilities by 4. A typical gene is hundreds or thousands of bases long, so the number of possible sequences is far greater than the number of atoms in the observable universe. That is the sense in which DNA's capacity is \"unlimited\".</p><p><strong>Why this matters for life.</strong></p><ul><li>Different organisms and different genes can each have a unique sequence.</li><li>New sequences can arise by changes in the order of bases (the raw material for variation, see A4.1).</li><li>Because the second strand is determined by the first, the information in a double helix is the information in one strand.</li></ul><div class=\"note\">Mark-scheme language: \"any length\", \"any order of four bases\", \"4<sup>n</sup> possible sequences\", \"compact / economical storage\". Marks are lost for writing \"4n\" or \"n<sup>4</sup>\".</div>","ja":"<p><strong>公式を使ってみる。</strong>長さ <em>n</em> の配列の可能な数は 4<sup><em>n</em></sup> です (4 × <em>n</em> ではありません)。</p><table><tr><th>長さ <em>n</em></th><th>計算</th><th>可能な配列の数</th></tr><tr><td>1</td><td>4</td><td>4</td></tr><tr><td>2</td><td>4 × 4</td><td>16</td></tr><tr><td>3</td><td>4 × 4 × 4</td><td>64</td></tr><tr><td>5</td><td>4<sup>5</sup></td><td>1 024</td></tr><tr><td>10</td><td>4<sup>10</sup></td><td>1 048 576</td></tr></table><p>塩基が1つ増えるごとに可能性は4倍になります。典型的な遺伝子は数百から数千塩基の長さなので、可能な配列の数は観測可能な宇宙の原子の数をはるかに超えます。これが DNA の容量が「無制限」といわれる意味です。</p><p><strong>生命にとっての意味。</strong></p><ul><li>生物ごと、遺伝子ごとに固有の配列をもてる。</li><li>塩基の並び順が変わることで新しい配列が生じる (変異の材料、A4.1 参照)。</li><li>2本目の鎖は1本目で決まるので、二重らせんの情報は1本の鎖の情報に等しい。</li></ul><div class=\"note\">採点で使われる言葉：「any length」「any order of four bases」「4<sup>n</sup> possible sequences」「compact / economical storage」。「4n」や「n<sup>4</sup>」と書くと失点です。</div>","zh":"<p><strong>運用公式。</strong>長度為 <em>n</em> 的序列有 4<sup><em>n</em></sup> 種可能 (不是 4 × <em>n</em>)。</p><table><tr><th>長度 <em>n</em></th><th>計算</th><th>可能的序列數目</th></tr><tr><td>1</td><td>4</td><td>4</td></tr><tr><td>2</td><td>4 × 4</td><td>16</td></tr><tr><td>3</td><td>4 × 4 × 4</td><td>64</td></tr><tr><td>5</td><td>4<sup>5</sup></td><td>1 024</td></tr><tr><td>10</td><td>4<sup>10</sup></td><td>1 048 576</td></tr></table><p>每多一個鹼基，可能性便乘以 4。一個典型的基因長達數百至數千個鹼基，所以可能的序列數目遠超可觀測宇宙中的原子數目。這就是 DNA 容量「無限」的意思。</p><p><strong>對生命的意義。</strong></p><ul><li>不同生物、不同基因都可以有獨特的序列。</li><li>鹼基次序的改變可產生新序列 (變異的原材料，見 A4.1)。</li><li>由於第二條鏈由第一條決定，雙螺旋所含的資訊就是一條鏈的資訊。</li></ul><div class=\"note\">評分用語：「any length」、「any order of four bases」、「4<sup>n</sup> possible sequences」、「compact / economical storage」。寫成「4n」或「n<sup>4</sup>」會失分。</div>"},
         ahl: false,
         heading: L("Unlimited information in DNA", "DNA がもつ無限の情報容量", "DNA 的無限資訊容量"),
         body: L(
@@ -223,6 +232,7 @@
       },
       {
         ref: "A1.2.10",
+        deeper: {"en":"<p><strong>The argument for common ancestry, as a chain.</strong></p><ol><li><strong>Observation:</strong> the same triplets code for the same amino acids in bacteria, plants, fungi and animals.</li><li><strong>Expectation if life arose several times independently:</strong> each origin would be likely to settle on a different code, because many different assignments would work equally well.</li><li><strong>Best explanation:</strong> all living things inherited one code from a universal common ancestor.</li></ol><p><strong>A practical consequence.</strong> Because the code is shared, a gene from one species can be read by another. For example, the human gene for insulin can be put into bacteria, which then make human insulin.</p><p><strong>\"Nearly universal\".</strong> There are a few minor exceptions, for example in the DNA of mitochondria in some organisms. A good answer says \"almost universal\" or \"near-universal\" and does not claim the code is identical in every case. You do not need to know specific exceptions.</p><p><strong>Outline of a 4-mark \"Discuss\" answer.</strong> State the observation, explain why separate origins would predict different codes, conclude common ancestry, then add one limit: shared code is evidence, not proof, and other evidence (A4.1) supports the same conclusion.</p><div class=\"note\">Mark-scheme language: \"genetic code is (almost) universal\", \"same codons code for the same amino acids\", \"universal common ancestor\". Do not say that a shared code means all species are \"identical\".</div>","ja":"<p><strong>共通祖先の論証を、連鎖として整理する。</strong></p><ol><li><strong>観察：</strong>細菌、植物、菌類、動物のどれでも、同じトリプレットが同じアミノ酸を指定する。</li><li><strong>生命が複数回独立に生じたなら予想されること：</strong>多くの割り当てが同じようにうまく機能するので、起源ごとに違う暗号に落ち着く可能性が高い。</li><li><strong>最もよい説明：</strong>すべての生物が、1つの暗号を共通の祖先 (universal common ancestor) から受け継いだ。</li></ol><p><strong>実用上の帰結。</strong>暗号が共通なので、ある種の遺伝子を別の種が読み取れます。たとえばヒトのインスリン遺伝子を細菌に入れると、細菌がヒトのインスリンをつくります。</p><p><strong>「ほぼ普遍的」。</strong>わずかな例外があり、たとえば一部の生物のミトコンドリアの DNA にあります。よい解答は「ほぼ普遍的 (almost universal)」と書き、どの場合も完全に同一だとは主張しません。具体的な例外を覚える必要はありません。</p><p><strong>4点の「論ぜよ (Discuss)」の解答の骨組み。</strong>観察を述べ、別々の起源なら異なる暗号が予想される理由を説明し、共通祖先と結論し、最後に限界を1つ加える：共通の暗号は証拠であって証明ではなく、他の証拠 (A4.1) も同じ結論を支持する。</p><div class=\"note\">採点で使われる言葉：「genetic code is (almost) universal」「same codons code for the same amino acids」「universal common ancestor」。暗号が共通だからといって、すべての種が「同一」だと書かないこと。</div>","zh":"<p><strong>共同祖先論證的推理鏈。</strong></p><ol><li><strong>觀察：</strong>在細菌、植物、真菌和動物中，相同的三聯體都編碼相同的氨基酸。</li><li><strong>若生命曾多次獨立出現，預期會怎樣：</strong>由於很多種配對方式同樣可行，各個起源很可能各自採用不同的密碼。</li><li><strong>最佳解釋：</strong>所有生物都從一個共同祖先 (universal common ancestor) 繼承了同一套密碼。</li></ol><p><strong>實際後果。</strong>因為密碼共通，一個物種的基因可被另一物種讀取。例如把人類胰島素基因放入細菌，細菌便會製造人類胰島素。</p><p><strong>「近乎共通」。</strong>有少數輕微例外，例如某些生物的線粒體 DNA。好的答案會寫「近乎共通 (almost universal)」，不會聲稱在每種情況下都完全相同。你不需要認識具體的例外。</p><p><strong>4 分「討論 (Discuss)」答案的大綱。</strong>陳述觀察，解釋為何獨立起源會預期出現不同密碼，推論出共同祖先，最後補充一項限制：共通密碼是證據而非證明，其他證據 (A4.1) 也支持同一結論。</p><div class=\"note\">評分用語：「genetic code is (almost) universal」、「same codons code for the same amino acids」、「universal common ancestor」。不要寫成密碼相同就表示所有物種「完全一樣」。</div>"},
         ahl: false,
         heading: L("The genetic code is shared by all life", "遺伝暗号はすべての生物に共通", "遺傳密碼為所有生物共用"),
         body: L(
@@ -242,6 +252,7 @@
       },
       {
         ref: "A1.2.11",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Writing the complementary strand: the step students forget.</strong> Worked example: the template strand is 5′-ATGCCT-3′.</p><ol><li>Write the complement under it, base by base: T A C G G A.</li><li>The new strand runs in the opposite direction, so its left end is 3′ and its right end is 5′: 3′-TACGGA-5′.</li><li>By convention we write sequences 5′→3′, so rewrite it reversed: 5′-AGGCAT-3′.</li></ol><p>The same strand written two ways, 3′-TACGGA-5′ and 5′-AGGCAT-3′, is correct. Writing \"TACGGA\" with no ends marked is ambiguous.</p><p><strong>Why growth is only at the 3′ end.</strong> The 3′ carbon of the last nucleotide has a free –OH. A new nucleotide joins by a condensation reaction between this –OH and the 5′ phosphate of the incoming nucleotide. So the chain extends 3′ wards, and a new strand is always made in the 5′→3′ direction. Because the template and the new strand are antiparallel, the template is read 3′→5′.</p><table><tr><th>Process</th><th>Strand being built</th><th>Template read</th></tr><tr><td>Replication</td><td>New DNA, 5′→3′</td><td>Old DNA, 3′→5′</td></tr><tr><td>Transcription</td><td>RNA, 5′→3′</td><td>DNA template, 3′→5′</td></tr></table><div class=\"note\">Mark-scheme language: \"5′ end has a free phosphate\", \"3′ end has a free –OH (on carbon 3′)\", \"strands are antiparallel\", \"built 5′ to 3′\". The enzymes involved are taught in D1.1 and D1.2.</div>","ja":"<p><em>(AHL)</em> <strong>相補鎖の書き方：生徒が忘れやすい手順。</strong>計算例：鋳型鎖が 5′-ATGCCT-3′ の場合。</p><ol><li>その下に塩基ごとの相補塩基を書く：T A C G G A。</li><li>新しい鎖は逆向きなので、左端が 3′、右端が 5′ になる：3′-TACGGA-5′。</li><li>配列は慣例として 5′→3′ で書くので、逆順にする：5′-AGGCAT-3′。</li></ol><p>同じ鎖を 3′-TACGGA-5′ とも 5′-AGGCAT-3′ とも書けます。どちらも正しいです。末端を示さずに「TACGGA」とだけ書くのはあいまいです。</p><p><strong>伸長が 3′ 末端でだけ起こる理由。</strong>最後のヌクレオチドの 3′ 炭素には遊離の –OH があります。新しいヌクレオチドは、この –OH と、入ってくるヌクレオチドの 5′ リン酸との間の脱水縮合で結合します。そのため鎖は 3′ 側へ伸び、新しい鎖は常に 5′→3′ 方向につくられます。鋳型と新しい鎖は逆平行なので、鋳型は 3′→5′ に読まれます。</p><table><tr><th>過程</th><th>つくられる鎖</th><th>読まれる鋳型</th></tr><tr><td>複製</td><td>新しい DNA、5′→3′</td><td>古い DNA、3′→5′</td></tr><tr><td>転写</td><td>RNA、5′→3′</td><td>DNA の鋳型鎖、3′→5′</td></tr></table><div class=\"note\">採点で使われる言葉：「5′ end has a free phosphate」「3′ end has a free –OH (on carbon 3′)」「strands are antiparallel」「built 5′ to 3′」。関わる酵素は D1.1 と D1.2 で学びます。</div>","zh":"<p><em>(AHL)</em> <strong>寫出互補鏈：學生最常忘記的步驟。</strong>計算例：模板鏈為 5′-ATGCCT-3′。</p><ol><li>在其下逐個鹼基寫出互補鹼基：T A C G G A。</li><li>新鏈方向相反，所以左端是 3′，右端是 5′：3′-TACGGA-5′。</li><li>按慣例序列以 5′→3′ 書寫，所以倒轉過來：5′-AGGCAT-3′。</li></ol><p>同一條鏈可以寫成 3′-TACGGA-5′ 或 5′-AGGCAT-3′，兩者都正確。只寫「TACGGA」而不標明末端則含糊不清。</p><p><strong>為何只能在 3′ 端延長。</strong>最後一個核苷酸的 3′ 碳帶有游離的 –OH。新的核苷酸通過此 –OH 與進入核苷酸的 5′ 磷酸之間的縮合反應而接上。所以鏈向 3′ 方向延長，新鏈總是以 5′→3′ 方向合成。由於模板與新鏈反向平行，模板以 3′→5′ 方向被讀取。</p><table><tr><th>過程</th><th>正在合成的鏈</th><th>被讀取的模板</th></tr><tr><td>複製</td><td>新 DNA，5′→3′</td><td>舊 DNA，3′→5′</td></tr><tr><td>轉錄</td><td>RNA，5′→3′</td><td>DNA 模板鏈，3′→5′</td></tr></table><div class=\"note\">評分用語：「5′ end has a free phosphate」、「3′ end has a free –OH (on carbon 3′)」、「strands are antiparallel」、「built 5′ to 3′」。相關的酶會在 D1.1 及 D1.2 學習。</div>"},
         ahl: true,
         heading: L("Directionality: 5′ and 3′ ends (AHL)", "方向性：5′末端と3′末端 (AHL)", "方向性：5′ 端與 3′ 端 (AHL)"),
         body: L(
@@ -288,6 +299,7 @@
       },
       {
         ref: "A1.2.12",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Why only purine + pyrimidine works.</strong></p><table><tr><th>Type</th><th>Rings</th><th>Bases</th></tr><tr><td>Purine</td><td>Two (larger)</td><td>A, G</td></tr><tr><td>Pyrimidine</td><td>One (smaller)</td><td>C, T, U</td></tr></table><table><tr><th>Pairing</th><th>Overall width</th><th>Fit between the backbones</th></tr><tr><td>Purine + purine</td><td>Too wide</td><td>Bulges the helix</td></tr><tr><td>Pyrimidine + pyrimidine</td><td>Too narrow</td><td>Strands pulled close together</td></tr><tr><td>Purine + pyrimidine (A–T, G–C)</td><td>The same for every pair</td><td>Constant spacing</td></tr></table><p>A memory aid: <em>pyrimidines</em> have a <em>y</em> in the name and are the smaller bases (C, T, U); purines are A and G, \"pure as gold\".</p><p><strong>Consequences of constant width.</strong></p><ul><li>The two sugar–phosphate backbones stay the same distance apart along the whole molecule, whatever the sequence.</li><li>The helix has a regular, uniform shape, so any sequence can be stored without disturbing the structure.</li><li>Hydrogen bonds between bases can form reliably at every position.</li><li>In double-stranded DNA the number of purines equals the number of pyrimidines (compare Chargaff's data, A1.2.15).</li></ul><div class=\"note\">Mark-scheme language: \"purine (double ring) pairs with pyrimidine (single ring)\", \"constant width / distance between the backbones\", \"uniform shape of the helix\". Do not give lengths or numbers of hydrogen bonds: they are not required.</div>","ja":"<p><em>(AHL)</em> <strong>プリンとピリミジンの組み合わせだけがうまくいく理由。</strong></p><table><tr><th>種類</th><th>環の数</th><th>塩基</th></tr><tr><td>プリン (purine)</td><td>2つ (大きい)</td><td>A, G</td></tr><tr><td>ピリミジン (pyrimidine)</td><td>1つ (小さい)</td><td>C, T, U</td></tr></table><table><tr><th>組み合わせ</th><th>全体の幅</th><th>骨格間へのはまり方</th></tr><tr><td>プリン＋プリン</td><td>広すぎる</td><td>らせんがふくらむ</td></tr><tr><td>ピリミジン＋ピリミジン</td><td>狭すぎる</td><td>鎖どうしが近づきすぎる</td></tr><tr><td>プリン＋ピリミジン (A–T, G–C)</td><td>どの対でも同じ</td><td>間隔が一定</td></tr></table><p>覚え方：<em>ピリミジン</em>は小さい塩基 (C, T, U)、プリンは A と G。</p><p><strong>幅が一定であることの結果。</strong></p><ul><li>2本の糖－リン酸骨格は、配列に関係なく、分子全体で同じ間隔に保たれる。</li><li>らせんが規則的で均一な形になるので、どんな配列を蓄えても構造が乱れない。</li><li>塩基間の水素結合が、どの位置でも確実にできる。</li><li>二本鎖 DNA では、プリンの数とピリミジンの数が等しい (シャルガフのデータ、A1.2.15 参照)。</li></ul><div class=\"note\">採点で使われる言葉：「purine (double ring) pairs with pyrimidine (single ring)」「constant width / distance between the backbones」「uniform shape of the helix」。長さや水素結合の数は求められていないので書かなくてよいです。</div>","zh":"<p><em>(AHL)</em> <strong>為何只有嘌呤配嘧啶才行得通。</strong></p><table><tr><th>類型</th><th>環數</th><th>鹼基</th></tr><tr><td>嘌呤 (purine)</td><td>兩個 (較大)</td><td>A、G</td></tr><tr><td>嘧啶 (pyrimidine)</td><td>一個 (較小)</td><td>C、T、U</td></tr></table><table><tr><th>配對</th><th>整體闊度</th><th>在兩條骨架之間的配合</th></tr><tr><td>嘌呤＋嘌呤</td><td>太闊</td><td>使螺旋鼓脹</td></tr><tr><td>嘧啶＋嘧啶</td><td>太窄</td><td>兩條鏈被拉得太近</td></tr><tr><td>嘌呤＋嘧啶 (A–T、G–C)</td><td>每對都相同</td><td>間距恆定</td></tr></table><p>記憶方法：<em>嘧啶</em>是較小的鹼基 (C、T、U)；嘌呤是 A 和 G。</p><p><strong>闊度恆定的結果。</strong></p><ul><li>無論序列如何，兩條糖－磷酸骨架在整個分子上都保持相同距離。</li><li>螺旋形狀規則而均勻，所以無論儲存任何序列都不會擾亂結構。</li><li>鹼基之間的氫鍵在每個位置都能可靠地形成。</li><li>在雙鏈 DNA 中，嘌呤的數目等於嘧啶的數目 (參考查加夫數據，A1.2.15)。</li></ul><div class=\"note\">評分用語：「purine (double ring) pairs with pyrimidine (single ring)」、「constant width / distance between the backbones」、「uniform shape of the helix」。不需要寫出長度或氫鍵數目，因為課程並不要求。</div>"},
         ahl: true,
         heading: L("Purines, pyrimidines and helix stability (AHL)", "プリン・ピリミジンと二重らせんの安定性 (AHL)", "嘌呤、嘧啶與螺旋穩定性 (AHL)"),
         body: L(
@@ -309,6 +321,7 @@
       },
       {
         ref: "A1.2.13",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Why package DNA at all?</strong> The DNA in one human cell is about two metres long, but the nucleus is only a few micrometres across. DNA must be packed very tightly. In eukaryotes the first level of packing is the nucleosome. Bacterial DNA is not packaged with histones.</p><p><strong>Building a nucleosome, step by step.</strong></p><ol><li>Eight histone proteins form a core.</li><li>DNA winds around the core.</li><li>The DNA continues as linker DNA to the next nucleosome.</li><li>One more histone protein binds to the linker DNA and helps to hold the structure together.</li></ol><p>Under an electron microscope, a stretch of DNA with nucleosomes looks like <em>beads on a string</em>.</p><p><strong>Why DNA and histones stick together.</strong> DNA is negatively charged (phosphate groups). Histones are positively charged (they have many basic amino acids). Opposite charges attract.</p><p><strong>Using molecular visualization software (the skill).</strong> When you examine a nucleosome model, practise these observations: (1) the DNA wraps around the outside of the histone core; (2) the histones' positively charged regions lie close to the DNA backbone; (3) the DNA is bent into a tight curve. Write observations as short statements, such as \"DNA is wound around a core of eight histones\".</p><div class=\"note\">Mark-scheme language: \"DNA wrapped around eight histones\", \"extra histone on the linker DNA\", \"positively charged histones, negatively charged DNA\", \"compacts / packages DNA\". Names of individual histones and numbers of base pairs are not required.</div>","ja":"<p><em>(AHL)</em> <strong>なぜ DNA をパッケージするのか。</strong>ヒトの1個の細胞の DNA は約2 m の長さですが、核の直径は数マイクロメートルしかありません。DNA はきわめて密に詰め込まれなければなりません。真核生物では、最初の段階がヌクレオソームです。細菌の DNA はヒストンとともにパッケージされません。</p><p><strong>ヌクレオソームを順につくる。</strong></p><ol><li>8個のヒストンタンパク質が芯 (コア) をつくる。</li><li>DNA がコアに巻き付く。</li><li>DNA はリンカー DNA となって次のヌクレオソームへ続く。</li><li>もう1個のヒストンタンパク質がリンカー DNA に結合し、構造を保つのを助ける。</li></ol><p>電子顕微鏡では、ヌクレオソームをもつ DNA は<em>糸に通したビーズ</em>のように見えます。</p><p><strong>DNA とヒストンが結び付く理由。</strong>DNA は (リン酸基のために) 負に帯電しています。ヒストンは (塩基性アミノ酸が多いため) 正に帯電しています。反対の電荷は引き合います。</p><p><strong>分子可視化ソフトウェアの使い方 (スキル)。</strong>ヌクレオソームのモデルを調べるときは、次の観察を練習しましょう：(1) DNA がヒストンのコアの外側に巻き付いている。(2) ヒストンの正に帯電した部分が DNA の骨格の近くにある。(3) DNA が急なカーブに曲げられている。観察は「DNA は8個のヒストンのコアに巻き付いている」のような短い文で書きます。</p><div class=\"note\">採点で使われる言葉：「DNA wrapped around eight histones」「extra histone on the linker DNA」「positively charged histones, negatively charged DNA」「compacts / packages DNA」。個々のヒストンの名前や塩基対の数は求められません。</div>","zh":"<p><em>(AHL)</em> <strong>為何要包裝 DNA？</strong>一個人類細胞中的 DNA 約有兩米長，但細胞核只有數微米闊。DNA 必須被緊密包裝。在真核生物中，第一級包裝就是核小體。細菌的 DNA 不與組蛋白一起包裝。</p><p><strong>逐步建構核小體。</strong></p><ol><li>八個組蛋白形成核心。</li><li>DNA 纏繞在核心外。</li><li>DNA 繼續成為連接 DNA (linker DNA) 通往下一個核小體。</li><li>另有一個組蛋白結合在連接 DNA 上，幫助穩固整個結構。</li></ol><p>在電子顯微鏡下，有核小體的 DNA 看來像<em>一串珠子</em>。</p><p><strong>DNA 與組蛋白為何黏在一起。</strong>DNA 帶負電荷 (因為有磷酸基團)。組蛋白帶正電荷 (含有很多鹼性氨基酸)。異性電荷互相吸引。</p><p><strong>使用分子視覺化軟件 (技能)。</strong>觀察核小體模型時，可練習這些觀察：(1) DNA 纏繞在組蛋白核心的外側；(2) 組蛋白帶正電荷的區域靠近 DNA 骨架；(3) DNA 被彎成緊密的弧形。把觀察寫成簡短句子，例如「DNA 纏繞在由八個組蛋白構成的核心上」。</p><div class=\"note\">評分用語：「DNA wrapped around eight histones」、「extra histone on the linker DNA」、「positively charged histones, negatively charged DNA」、「compacts / packages DNA」。個別組蛋白的名稱和鹼基對數目並不要求。</div>"},
         ahl: true,
         heading: L("The nucleosome (AHL)", "ヌクレオソーム (AHL)", "核小體 (AHL)"),
         body: L(
@@ -334,6 +347,7 @@
       },
       {
         ref: "A1.2.14",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Why these particular labels?</strong> The design depends on one idea: find an element found in one molecule but not the other.</p><table><tr><th>Element</th><th>In protein?</th><th>In DNA?</th><th>Useful label?</th></tr><tr><td>Sulfur (<sup>35</sup>S)</td><td>Yes (in some amino acids)</td><td>No</td><td>Yes: labels protein only</td></tr><tr><td>Phosphorus (<sup>32</sup>P)</td><td>Very little</td><td>Yes (phosphate groups)</td><td>Yes: labels DNA</td></tr><tr><td>Carbon, nitrogen</td><td>Yes</td><td>Yes</td><td>No: would label both</td></tr></table><p><strong>Why a phage?</strong> It is made only of DNA and protein, so there are just two candidates for the genetic material. It infects bacteria that grow and divide quickly, so results appear fast.</p><p><strong>Reading the result.</strong> The phage coat stays outside and is shaken off by blending. What enters the bacterium carries the instructions to make new phages. The <sup>32</sup>P (DNA) was found inside the bacteria and in new phages, so DNA is the genetic material.</p><p><strong>Evaluating the evidence.</strong> The separation was not perfect, so some <sup>35</sup>S was found in the pellet and some <sup>32</sup>P in the liquid. The results are described as \"most\", not \"all\". The conclusion is still strong because the difference between the two experiments was large and consistent.</p><div class=\"note\">Mark-scheme language: \"<sup>35</sup>S labels protein only\", \"<sup>32</sup>P labels DNA\", \"pellet contains bacteria\", \"DNA enters the bacteria\". Common error: saying that protein is labelled with phosphorus.</div>","ja":"<p><em>(AHL)</em> <strong>なぜこの標識なのか。</strong>実験の設計は、一方の分子にだけ含まれる元素を探すという1つの考えに基づいています。</p><table><tr><th>元素</th><th>タンパク質にあるか</th><th>DNA にあるか</th><th>標識として有用か</th></tr><tr><td>硫黄 (<sup>35</sup>S)</td><td>ある (一部のアミノ酸)</td><td>ない</td><td>有用：タンパク質だけを標識</td></tr><tr><td>リン (<sup>32</sup>P)</td><td>ごくわずか</td><td>ある (リン酸基)</td><td>有用：DNA を標識</td></tr><tr><td>炭素、窒素</td><td>ある</td><td>ある</td><td>不適：両方を標識してしまう</td></tr></table><p><strong>なぜファージか。</strong>ファージは DNA とタンパク質だけでできているので、遺伝物質の候補は2つだけです。また、速く増える細菌に感染するので、結果がすぐ出ます。</p><p><strong>結果の読み方。</strong>ファージの殻は外に残り、撹拌で振り落とされます。細菌の中に入ったものが、新しいファージをつくる指示を運びます。<sup>32</sup>P (DNA) は細菌の中と新しいファージから見つかったので、DNA が遺伝物質です。</p><p><strong>証拠の評価。</strong>分離は完全ではなく、<sup>35</sup>S の一部が沈殿に、<sup>32</sup>P の一部が上の液に見つかりました。結果は「すべて」ではなく「大部分」と表現されます。2つの実験の差が大きく一貫していたので、結論は十分に強いものです。</p><div class=\"note\">採点で使われる言葉：「<sup>35</sup>S labels protein only」「<sup>32</sup>P labels DNA」「pellet contains bacteria」「DNA enters the bacteria」。よくある誤り：タンパク質がリンで標識されたと書くこと。</div>","zh":"<p><em>(AHL)</em> <strong>為何用這些標記？</strong>實驗設計基於一個概念：找出只存在於其中一種分子的元素。</p><table><tr><th>元素</th><th>蛋白質中有嗎？</th><th>DNA 中有嗎？</th><th>是有用的標記嗎？</th></tr><tr><td>硫 (<sup>35</sup>S)</td><td>有 (在部分氨基酸中)</td><td>沒有</td><td>是：只標記蛋白質</td></tr><tr><td>磷 (<sup>32</sup>P)</td><td>極少</td><td>有 (磷酸基團)</td><td>是：標記 DNA</td></tr><tr><td>碳、氮</td><td>有</td><td>有</td><td>否：會同時標記兩者</td></tr></table><p><strong>為何用噬菌體？</strong>噬菌體只由 DNA 和蛋白質構成，所以遺傳物質只有兩個候選者。它感染的細菌生長和分裂都很快，結果很快便能得到。</p><p><strong>解讀結果。</strong>噬菌體外殼留在外面，經攪拌後被甩脫。進入細菌的東西帶有製造新噬菌體的指令。<sup>32</sup>P (DNA) 在細菌內及新噬菌體中被找到，所以 DNA 是遺傳物質。</p><p><strong>評價證據。</strong>分離並不完全，所以沉澱中有部分 <sup>35</sup>S，液體中也有部分 <sup>32</sup>P。結果以「大部分」而非「全部」描述。由於兩個實驗的差別很大而且一致，結論仍然很有力。</p><div class=\"note\">評分用語：「<sup>35</sup>S labels protein only」、「<sup>32</sup>P labels DNA」、「pellet contains bacteria」、「DNA enters the bacteria」。常見錯誤：寫成蛋白質被磷標記。</div>"},
         ahl: true,
         heading: L("Hershey–Chase experiment (AHL)", "ハーシー・チェイスの実験 (AHL)", "赫爾希−蔡斯實驗 (AHL)"),
         body: L(
@@ -380,6 +394,7 @@
       },
       {
         ref: "A1.2.15",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Using Chargaff's rules to find missing values.</strong> Worked example: in one species, 27% of the bases are adenine.</p><ol><li>A ≈ T, so thymine is also 27%.</li><li>A + T = 54%, so G + C = 100 − 54 = 46%.</li><li>G ≈ C, so each is 46 ÷ 2 = 23%.</li></ol><table><tr><th>Species</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th><th>(A + G) ÷ (T + C)</th></tr><tr><td>Species 1 (illustrative)</td><td>27</td><td>27</td><td>23</td><td>23</td><td>1.00</td></tr><tr><td>Species 2 (illustrative)</td><td>32</td><td>32</td><td>18</td><td>18</td><td>1.00</td></tr></table><p><strong>Two patterns, two conclusions.</strong></p><ul><li><strong>Between species the percentages differ</strong> (27 versus 32 for A). If every DNA were a simple repeat of four bases (the tetranucleotide idea), all species would have 25% of each base. The data falsify that idea.</li><li><strong>Within each species A ≈ T and G ≈ C.</strong> This suggests that A is linked to T and G to C, consistent with base pairing.</li></ul><p>Real measurements are close to, but not exactly, equal because of experimental error, so write \"approximately equal\".</p><div class=\"note\">Extension (not required): Chargaff's rules apply only to double-stranded DNA. Single-stranded DNA and RNA do not need to have A equal to T (or U), because they have no base pairing partner strand.</div><div class=\"note\">Mark-scheme language: \"A = T and G = C\", \"varies between species\", \"falsifies the tetranucleotide hypothesis\", \"a single contradicting observation can falsify\". Check that percentages add up to 100.</div>","ja":"<p><em>(AHL)</em> <strong>シャルガフの規則で欠けている値を求める。</strong>計算例：ある種で塩基の27%がアデニンの場合。</p><ol><li>A ≈ T なので、チミンも27%。</li><li>A + T = 54% なので、G + C = 100 − 54 = 46%。</li><li>G ≈ C なので、それぞれ 46 ÷ 2 = 23%。</li></ol><table><tr><th>種</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th><th>(A + G) ÷ (T + C)</th></tr><tr><td>種1 (架空)</td><td>27</td><td>27</td><td>23</td><td>23</td><td>1.00</td></tr><tr><td>種2 (架空)</td><td>32</td><td>32</td><td>18</td><td>18</td><td>1.00</td></tr></table><p><strong>2つのパターンと2つの結論。</strong></p><ul><li><strong>種の間で割合が異なる</strong> (A は27対32)。もしすべての DNA が4つの塩基の単純な繰り返し (テトラヌクレオチド説) なら、どの種でも各塩基は25%になるはずです。データはこの考えを反証 (falsify) します。</li><li><strong>各種の中で A ≈ T、G ≈ C。</strong>これは A が T と、G が C と結び付いていること、つまり塩基対合と一致します。</li></ul><p>実際の測定値は実験誤差のためぴったりではなく近い値なので、「ほぼ等しい (approximately equal)」と書きます。</p><div class=\"note\">発展 (必須ではない)：シャルガフの規則は二本鎖 DNA にだけ当てはまります。一本鎖 DNA や RNA は対になる鎖がないので、A と T (または U) が等しい必要はありません。</div><div class=\"note\">採点で使われる言葉：「A = T and G = C」「varies between species」「falsifies the tetranucleotide hypothesis」「a single contradicting observation can falsify」。割合の合計が100になることを確認しましょう。</div>","zh":"<p><em>(AHL)</em> <strong>運用查加夫規則求出缺少的數值。</strong>計算例：某物種的鹼基中 27% 是腺嘌呤。</p><ol><li>A ≈ T，所以胸腺嘧啶也是 27%。</li><li>A + T = 54%，所以 G + C = 100 − 54 = 46%。</li><li>G ≈ C，所以各是 46 ÷ 2 = 23%。</li></ol><table><tr><th>物種</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th><th>(A + G) ÷ (T + C)</th></tr><tr><td>物種 1 (虛構)</td><td>27</td><td>27</td><td>23</td><td>23</td><td>1.00</td></tr><tr><td>物種 2 (虛構)</td><td>32</td><td>32</td><td>18</td><td>18</td><td>1.00</td></tr></table><p><strong>兩種規律，兩個結論。</strong></p><ul><li><strong>不同物種的百分比不同</strong> (A 分別是 27 和 32)。若所有 DNA 都是四種鹼基的簡單重複 (四核苷酸假說)，每個物種的每種鹼基都應是 25%。數據證偽 (falsify) 了這個想法。</li><li><strong>每個物種內 A ≈ T、G ≈ C。</strong>這暗示 A 與 T、G 與 C 有關聯，與鹼基配對吻合。</li></ul><p>實際測量值因實驗誤差而接近但不完全相等，所以要寫「大約相等 (approximately equal)」。</p><div class=\"note\">延伸 (非必修)：查加夫規則只適用於雙鏈 DNA。單鏈 DNA 和 RNA 沒有配對的另一條鏈，所以 A 不必等於 T (或 U)。</div><div class=\"note\">評分用語：「A = T and G = C」、「varies between species」、「falsifies the tetranucleotide hypothesis」、「a single contradicting observation can falsify」。記得檢查百分比總和是否為 100。</div>"},
         ahl: true,
         heading: L("Chargaff's data (AHL)", "シャルガフのデータ (AHL)", "查加夫的數據 (AHL)"),
         body: L(
@@ -779,6 +794,209 @@
           "However many observations agree with an idea, they cannot prove it is true (the problem of induction). But one reliable observation that disagrees can show it is false. Chargaff showed that base proportions differ between species, which did not fit the tetranucleotide hypothesis, so he falsified it.",
           "ある考えに合う観察がどれだけあっても、それが真であることは証明できない (帰納の問題)。しかし、合わない信頼できる観察が1つあれば、それが偽であることを示せる。シャルガフは塩基の割合が種によって異なることを示し、テトラヌクレオチド仮説に合わないことから、その仮説を反証した。",
           "無論有多少觀察符合某個想法，都不能證明它是真的 (歸納問題)。但只要有一個可靠的不符觀察，就能證明它是假的。查加夫顯示鹼基比例因物種而異，與四核苷酸假說不符，因此證偽了該假說。")
+      },
+      {
+        "id": "a1-2-q22",
+        "type": "short",
+        "ahl": false,
+        "difficulty": 2,
+        "ref": "A1.2.5, A1.2.9",
+        "paper": "2",
+        "commandTerm": "Calculate",
+        "marks": 3,
+        "stem": {
+          "en": "A single strand of RNA is made of 12 nucleotides joined by condensation reactions. (a) State the number of water molecules released when this strand is built. (b) Calculate the number of different base sequences that are possible for an RNA strand of 12 nucleotides. (c) State one reason why an RNA strand cannot contain the base thymine.",
+          "ja": "1本鎖の RNA が、脱水縮合で結合した12個のヌクレオチドからできている。 (a) この鎖がつくられるときに放出される水分子の数を述べよ。 (b) 12個のヌクレオチドからなる RNA 鎖で可能な塩基配列の数を計算せよ。 (c) RNA 鎖にチミンが含まれない理由を1つ述べよ。",
+          "zh": "一條單鏈 RNA 由 12 個以縮合反應連接的核苷酸組成。 (a) 陳述合成這條鏈時釋出的水分子數目。 (b) 計算由 12 個核苷酸組成的 RNA 鏈可能有多少種不同的鹼基序列。 (c) 陳述 RNA 鏈不含胸腺嘧啶的一個原因。"
+        },
+        "markscheme": [
+          {
+            "en": "(a) 11 molecules of water (one per join; 12 − 1 = 11)",
+            "ja": "(a) 水11分子 (結合1つにつき1分子；12 − 1 = 11)",
+            "zh": "(a) 11 個水分子 (每個連結一個；12 − 1 = 11)"
+          },
+          {
+            "en": "(b) 4<sup>12</sup> = 16 777 216 sequences",
+            "ja": "(b) 4<sup>12</sup> = 16 777 216 通り",
+            "zh": "(b) 4<sup>12</sup> = 16 777 216 種序列"
+          },
+          {
+            "en": "(c) RNA contains uracil instead of thymine / RNA bases are A, U, G and C",
+            "ja": "(c) RNA はチミンの代わりにウラシルをもつ / RNA の塩基は A, U, G, C",
+            "zh": "(c) RNA 含尿嘧啶而非胸腺嘧啶 / RNA 的鹼基是 A、U、G、C"
+          }
+        ],
+        "modelAnswer": {
+          "en": "(a) 11 molecules of water, because 12 nucleotides are joined by 11 condensation reactions. (b) Each position can have 4 bases, so 4<sup>12</sup> = 16 777 216 sequences. (c) RNA has uracil in place of thymine.",
+          "ja": "(a) 12個のヌクレオチドは11回の脱水縮合で結合するので、水11分子。 (b) 各位置に4種類の塩基が入りうるので、4<sup>12</sup> = 16 777 216 通り。 (c) RNA ではチミンの代わりにウラシルがある。",
+          "zh": "(a) 11 個水分子，因為 12 個核苷酸經 11 次縮合反應連接。 (b) 每個位置可有 4 種鹼基，所以有 4<sup>12</sup> = 16 777 216 種序列。 (c) RNA 以尿嘧啶取代胸腺嘧啶。"
+        }
+      },
+      {
+        "id": "a1-2-q23",
+        "type": "mcq",
+        "ahl": false,
+        "difficulty": 2,
+        "ref": "A1.2.3, A1.2.6",
+        "paper": "1A",
+        "stem": {
+          "en": "Double-stranded DNA is gently heated until the two strands separate. The strands themselves stay intact. Which bonds have been broken?",
+          "ja": "二本鎖 DNA を穏やかに加熱して、2本の鎖を分離させた。鎖そのものは壊れていない。どの結合が切れたか。",
+          "zh": "把雙鏈 DNA 輕輕加熱，直至兩條鏈分開，而每條鏈本身保持完整。哪些鍵已被打斷？"
+        },
+        "options": [
+          {
+            "en": "Hydrogen bonds between complementary bases",
+            "ja": "相補的な塩基どうしの水素結合",
+            "zh": "互補鹼基之間的氫鍵"
+          },
+          {
+            "en": "Covalent bonds between sugars and phosphates",
+            "ja": "糖とリン酸の間の共有結合",
+            "zh": "糖與磷酸之間的共價鍵"
+          },
+          {
+            "en": "Covalent bonds between bases and sugars",
+            "ja": "塩基と糖の間の共有結合",
+            "zh": "鹼基與糖之間的共價鍵"
+          },
+          {
+            "en": "Hydrogen bonds between neighbouring phosphates in the same strand",
+            "ja": "同じ鎖の隣り合うリン酸どうしの水素結合",
+            "zh": "同一條鏈中相鄰磷酸之間的氫鍵"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "A is correct: the weak hydrogen bonds between base pairs break first on heating. B and C are strong covalent bonds, and the strands are said to stay intact, so they are not broken. D is wrong: hydrogen bonds link bases on opposite strands, not phosphates in the same strand.",
+          "ja": "A が正解です。加熱すると、塩基対の弱い水素結合が先に切れます。B と C は強い共有結合で、鎖は壊れていないので切れていません。D は誤りで、水素結合は反対側の鎖の塩基どうしを結ぶもので、同じ鎖のリン酸どうしではありません。",
+          "zh": "A 正確：加熱時，鹼基對之間的弱氫鍵最先斷開。B 和 C 是牢固的共價鍵，而題目說明鏈保持完整，所以沒有斷開。D 錯誤：氫鍵連接相對兩條鏈上的鹼基，而不是同一條鏈上的磷酸。"
+        }
+      },
+      {
+        "id": "a1-2-q24",
+        "type": "short",
+        "ahl": true,
+        "difficulty": 3,
+        "ref": "A1.2.11",
+        "paper": "2",
+        "commandTerm": "Deduce",
+        "marks": 3,
+        "stem": {
+          "en": "A template strand of DNA has the sequence 5′-GATTACA-3′. (a) Deduce the sequence of the complementary strand, writing it from its 5′ end to its 3′ end. (b) Explain why a new strand cannot be built by adding nucleotides to its 5′ end.",
+          "ja": "DNA の鋳型鎖の配列が 5′-GATTACA-3′ である。 (a) 相補鎖の配列を、5′ 末端から 3′ 末端の向きで書いて推論せよ。 (b) 新しい鎖が 5′ 末端にヌクレオチドを加えてつくられることがない理由を説明せよ。",
+          "zh": "一條 DNA 模板鏈的序列為 5′-GATTACA-3′。 (a) 推斷互補鏈的序列，並由其 5′ 端寫至 3′ 端。 (b) 解釋為何新鏈不能藉在 5′ 端加入核苷酸來合成。"
+        },
+        "markscheme": [
+          {
+            "en": "(a) Complement base by base is 3′-CTAATGT-5′",
+            "ja": "(a) 塩基ごとの相補配列は 3′-CTAATGT-5′",
+            "zh": "(a) 逐個鹼基互補得 3′-CTAATGT-5′"
+          },
+          {
+            "en": "(a) Written 5′ to 3′ the answer is 5′-TGTAATC-3′ (strand reversed)",
+            "ja": "(a) 5′→3′ で書くと 5′-TGTAATC-3′ (逆順)",
+            "zh": "(a) 以 5′→3′ 書寫為 5′-TGTAATC-3′ (倒轉次序)"
+          },
+          {
+            "en": "(b) New nucleotides can only join to the free –OH on the 3′ end (of the growing strand), so strands grow 5′ to 3′",
+            "ja": "(b) 新しいヌクレオチドは、(伸びている鎖の) 3′ 末端の遊離 –OH にしか結合できないので、鎖は 5′→3′ に伸びる",
+            "zh": "(b) 新核苷酸只能接到 (正在延長的鏈) 3′ 端的游離 –OH 上，所以鏈以 5′→3′ 方向延長"
+          }
+        ],
+        "modelAnswer": {
+          "en": "(a) The complement is 3′-CTAATGT-5′, which written 5′→3′ is 5′-TGTAATC-3′. (b) The growing strand has a free –OH on carbon 3′ at its 3′ end, and the incoming nucleotide joins to this by condensation. Nucleotides are therefore added only at the 3′ end, so the strand is built 5′→3′.",
+          "ja": "(a) 相補配列は 3′-CTAATGT-5′ で、5′→3′ で書くと 5′-TGTAATC-3′。 (b) 伸びている鎖の 3′ 末端の 3′ 炭素には遊離の –OH があり、入ってくるヌクレオチドは脱水縮合でこれに結合する。したがってヌクレオチドは 3′ 末端にだけ加えられ、鎖は 5′→3′ につくられる。",
+          "zh": "(a) 互補鏈為 3′-CTAATGT-5′，以 5′→3′ 書寫為 5′-TGTAATC-3′。 (b) 正在延長的鏈在其 3′ 端的 3′ 碳上有游離的 –OH，進入的核苷酸經縮合反應接到這個位置。所以核苷酸只能加在 3′ 端，鏈因而以 5′→3′ 方向合成。"
+        }
+      },
+      {
+        "id": "a1-2-q25",
+        "type": "short",
+        "ahl": true,
+        "difficulty": 3,
+        "ref": "A1.2.15",
+        "paper": "1B",
+        "commandTerm": "Deduce",
+        "marks": 4,
+        "data": {
+          "en": "<p>The base composition of DNA from three species is shown as a percentage of the total bases (illustrative data). Some values are missing.</p><table><tr><th>Species</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th></tr><tr><td>P</td><td>31</td><td>31</td><td>19</td><td>19</td></tr><tr><td>Q</td><td>24</td><td>?</td><td>26</td><td>?</td></tr><tr><td>R</td><td>20</td><td>20</td><td>30</td><td>30</td></tr></table>",
+          "ja": "<p>3つの種の DNA の塩基組成を、全塩基に対する割合 (%) で示す (架空のデータ)。一部の値が欠けている。</p><table><tr><th>種</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th></tr><tr><td>P</td><td>31</td><td>31</td><td>19</td><td>19</td></tr><tr><td>Q</td><td>24</td><td>?</td><td>26</td><td>?</td></tr><tr><td>R</td><td>20</td><td>20</td><td>30</td><td>30</td></tr></table>",
+          "zh": "<p>下表顯示三個物種 DNA 的鹼基組成，以佔全部鹼基的百分比表示 (虛構數據)。部分數值缺失。</p><table><tr><th>物種</th><th>A / %</th><th>T / %</th><th>G / %</th><th>C / %</th></tr><tr><td>P</td><td>31</td><td>31</td><td>19</td><td>19</td></tr><tr><td>Q</td><td>24</td><td>?</td><td>26</td><td>?</td></tr><tr><td>R</td><td>20</td><td>20</td><td>30</td><td>30</td></tr></table>"
+        },
+        "stem": {
+          "en": "(a) Deduce the missing values for thymine and cytosine in species Q. (b) Identify the feature of the data that goes against the idea that all DNA contains equal amounts of the four bases. (c) State the pattern within each species that suggests that A pairs with T.",
+          "ja": "(a) 種 Q で欠けているチミンとシトシンの値を推論せよ。 (b) 「すべての DNA は4つの塩基を等量含む」という考えに反するデータの特徴を指摘せよ。 (c) A が T と対になることを示唆する、各種の内部のパターンを述べよ。",
+          "zh": "(a) 推斷物種 Q 中缺失的胸腺嘧啶和胞嘧啶的數值。 (b) 指出數據中違反「所有 DNA 都含有等量四種鹼基」這個想法的特徵。 (c) 陳述每個物種內暗示 A 與 T 配對的規律。"
+        },
+        "markscheme": [
+          {
+            "en": "(a) T = 24 % (equal to A)",
+            "ja": "(a) T = 24 % (A に等しい)",
+            "zh": "(a) T = 24 % (等於 A)"
+          },
+          {
+            "en": "(a) C = 26 % (equal to G; check 24 + 24 + 26 + 26 = 100)",
+            "ja": "(a) C = 26 % (G に等しい。24 + 24 + 26 + 26 = 100 を確認)",
+            "zh": "(a) C = 26 % (等於 G；核對 24 + 24 + 26 + 26 = 100)"
+          },
+          {
+            "en": "(b) The percentages of the bases differ between species (e.g. A is 31 %, 24 % and 20 %) and are not all 25 %",
+            "ja": "(b) 塩基の割合は種によって異なり (たとえば A は 31 %、24 %、20 %)、すべてが 25 % ではない",
+            "zh": "(b) 不同物種的鹼基百分比不同 (例如 A 分別為 31 %、24 %、20 %)，並非全部都是 25 %"
+          },
+          {
+            "en": "(c) In each species the amount of A equals the amount of T (and G equals C)",
+            "ja": "(c) どの種でも A の量は T の量に等しい (G と C も等しい)",
+            "zh": "(c) 在每個物種中，A 的量等於 T 的量 (G 也等於 C)"
+          }
+        ],
+        "modelAnswer": {
+          "en": "(a) T = 24 % and C = 26 %, because A = T and G = C and the total is 100 %. (b) The base proportions differ between species, for example A is 31 % in P, 24 % in Q and 20 % in R, so not all DNA has 25 % of each base. (c) Within every species, A equals T and G equals C, which fits A pairing with T and G with C.",
+          "ja": "(a) A = T、G = C で合計が100 % なので、T = 24 %、C = 26 %。 (b) 塩基の割合は種によって異なる。たとえば A は P で31 %、Q で24 %、R で20 % であり、すべての DNA で各塩基が25 % というわけではない。 (c) どの種でも A は T に、G は C に等しく、A が T と、G が C と対になることと一致する。",
+          "zh": "(a) T = 24 %，C = 26 %，因為 A = T、G = C，而總和為 100 %。 (b) 不同物種的鹼基比例不同，例如 A 在 P 中是 31 %，在 Q 中是 24 %，在 R 中是 20 %，所以並非所有 DNA 的每種鹼基都佔 25 %。 (c) 在每個物種內，A 等於 T，G 等於 C，這與 A 配 T、G 配 C 吻合。"
+        }
+      },
+      {
+        "id": "a1-2-q26",
+        "type": "mcq",
+        "ahl": true,
+        "difficulty": 3,
+        "ref": "A1.2.14",
+        "paper": "1A",
+        "stem": {
+          "en": "Suppose protein, not DNA, were the genetic material of a bacteriophage. In a Hershey–Chase experiment with phages labelled with <sup>35</sup>S, which result would be expected?",
+          "ja": "もしバクテリオファージの遺伝物質が DNA ではなくタンパク質だったとする。<sup>35</sup>S で標識したファージを使うハーシー・チェイスの実験では、どの結果が予想されるか。",
+          "zh": "假設噬菌體的遺傳物質是蛋白質而不是 DNA。在以 <sup>35</sup>S 標記噬菌體的赫爾希−蔡斯實驗中，預期得到甚麼結果？"
+        },
+        "options": [
+          {
+            "en": "Most radioactivity in the liquid above the pellet, and none in new phages",
+            "ja": "放射能の大部分は沈殿の上の液にあり、新しいファージには含まれない",
+            "zh": "大部分放射性在沉澱上方的液體中，新噬菌體中沒有"
+          },
+          {
+            "en": "Most radioactivity in the pellet, and some in new phages",
+            "ja": "放射能の大部分は沈殿にあり、新しいファージにも一部含まれる",
+            "zh": "大部分放射性在沉澱中，新噬菌體中也有一部分"
+          },
+          {
+            "en": "No radioactivity anywhere, because sulfur is not in protein",
+            "ja": "硫黄はタンパク質に含まれないので、どこにも放射能は見られない",
+            "zh": "因為蛋白質不含硫，所以任何地方都沒有放射性"
+          },
+          {
+            "en": "Equal radioactivity in the pellet and the liquid, whatever the genetic material",
+            "ja": "遺伝物質が何であっても、沈殿と上の液の放射能は等しい",
+            "zh": "不論遺傳物質是甚麼，沉澱和液體中的放射性都相等"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "B is correct: if protein carried the information it would enter the bacteria, so the <sup>35</sup>S label would be mostly in the pellet and would pass to new phages. A is what Hershey and Chase actually observed (DNA is the genetic material). C is wrong because sulfur is in protein. D ignores the logic of the design.",
+          "ja": "B が正解です。タンパク質が情報を運ぶなら細菌の中に入るので、<sup>35</sup>S の標識は主に沈殿にあり、新しいファージにも受け継がれます。A は実際にハーシーとチェイスが観察した結果 (DNA が遺伝物質) です。C は誤りで、硫黄はタンパク質に含まれます。D は実験設計の論理を無視しています。",
+          "zh": "B 正確：若蛋白質攜帶資訊，它會進入細菌，所以 <sup>35</sup>S 標記大部分在沉澱中，並會傳給新噬菌體。A 是赫爾希和蔡斯實際觀察到的結果 (DNA 是遺傳物質)。C 錯誤，因為蛋白質含硫。D 忽略了實驗設計的邏輯。"
+        }
       }
     ]
   });

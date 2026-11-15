@@ -25,6 +25,7 @@
     sections: [
       {
         ref: "A1.1.1",
+        deeper: {"en":"<p><strong>What \"medium\" means in an exam answer.</strong> A medium must let substances move and meet, and it must allow chemical reactions to happen. Water does both.</p><ul><li><strong>Metabolism</strong> is all the chemical reactions in a cell. Reactants must be dissolved so that they can collide, so most of these reactions happen in the watery cytoplasm.</li><li>Water is not just a bystander. It is a <strong>reactant</strong> when large molecules are broken down (hydrolysis) and a <strong>product</strong> when they are built (condensation). You will meet both in A1.2 and B1.1–B1.2.</li><li>Water is also a <strong>transport medium</strong>: blood plasma, sap and the fluid inside cells.</li></ul><p><strong>Typical 3-mark answer to \"Outline the role of water as a medium for life\".</strong></p><ol><li>Many substances dissolve in water, so ions and small molecules can move around and meet.</li><li>Metabolic reactions take place in solution in the cytoplasm.</li><li>Water is the habitat of many organisms, and the first cells are thought to have arisen in water.</li></ol><div class=\"note\">Mark-scheme language: \"medium for metabolic reactions\", \"solvent\", \"habitat\". A vague line such as \"water is needed for life\" earns nothing.</div>","ja":"<p><strong>試験で「媒体 (medium)」と書くときの意味。</strong>媒体とは、物質が動いて出会えること、そして化学反応が起こせることを可能にするものです。水はその両方を満たします。</p><ul><li><strong>代謝 (metabolism)</strong> とは細胞内のすべての化学反応のことです。反応物は溶けていないと衝突できないので、これらの反応の大部分は水を含む細胞質で起こります。</li><li>水は傍観者ではありません。大きな分子を分解するとき (加水分解 hydrolysis) には<strong>反応物</strong>、組み立てるとき (脱水縮合 condensation) には<strong>生成物</strong>になります。A1.2 と B1.1–B1.2 でどちらも出てきます。</li><li>水は<strong>輸送の媒体</strong>でもあります。血しょう、樹液、細胞内の液体がその例です。</li></ul><p><strong>「生命の媒体としての水の役割を概説せよ (Outline)」の3点解答例。</strong></p><ol><li>多くの物質が水に溶けるので、イオンや小さな分子が動き回って出会える。</li><li>代謝反応は細胞質の溶液中で起こる。</li><li>水は多くの生物の生息場所であり、最初の細胞は水中で生じたと考えられている。</li></ol><div class=\"note\">採点で使われる言葉：「medium for metabolic reactions」「solvent」「habitat」。「水は生命に必要」だけの曖昧な文では得点になりません。</div>","zh":"<p><strong>考試答題中「介質 (medium)」的意思。</strong>介質必須讓物質能夠移動和相遇，並讓化學反應得以發生。水兩者皆能做到。</p><ul><li><strong>新陳代謝 (metabolism)</strong> 是細胞內所有化學反應的總稱。反應物必須溶解才能互相碰撞，所以大部分反應都在含水的細胞質中進行。</li><li>水不只是旁觀者。分解大分子時 (水解 hydrolysis) 水是<strong>反應物</strong>；合成大分子時 (縮合 condensation) 水是<strong>產物</strong>。你會在 A1.2 及 B1.1–B1.2 見到這兩種情況。</li><li>水也是<strong>運輸介質</strong>：血漿、汁液和細胞內的液體都是例子。</li></ul><p><strong>「概述 (Outline) 水作為生命介質的角色」的 3 分答案示例。</strong></p><ol><li>許多物質溶於水，所以離子和小分子能四處移動及相遇。</li><li>新陳代謝反應在細胞質的溶液中進行。</li><li>水是許多生物的棲息地，而最早的細胞相信是在水中出現的。</li></ol><div class=\"note\">評分用語：「medium for metabolic reactions」、「solvent」、「habitat」。只寫「生命需要水」這種含糊的句子不能得分。</div>"},
         ahl: false,
         heading: L("Water: the medium for life", "水は生命の「媒体」", "水：生命的媒介"),
         body: L(
@@ -46,6 +47,7 @@
       },
       {
         ref: "A1.1.2",
+        deeper: {"en":"<p><strong>From electrons to hydrogen bonds, step by step.</strong></p><ol><li>Oxygen pulls the shared electrons in each O–H bond closer to itself, so O is δ<sup>−</sup> and each H is δ<sup>+</sup>. The molecule is <strong>polar</strong>.</li><li>The δ<sup>+</sup> H of one molecule is attracted to the δ<sup>−</sup> O of a <em>neighbouring</em> molecule.</li><li>That attraction is a <strong>hydrogen bond</strong>. Each water molecule can form several of them, so liquid water is a constantly shifting network.</li></ol><table><tr><th></th><th>Covalent O–H bond</th><th>Hydrogen bond</th></tr><tr><td>Where?</td><td>Inside one molecule</td><td>Between two molecules</td></tr><tr><td>Between which atoms?</td><td>O and H sharing electrons</td><td>δ<sup>+</sup> H of one molecule and δ<sup>−</sup> O of another</td></tr><tr><td>Strength</td><td>Strong</td><td>Weak individually, strong as a group</td></tr><tr><td>In liquid water</td><td>Stays intact</td><td>Break and re-form all the time</td></tr></table><p>Because many hydrogen bonds must be overcome to pull molecules apart, water is a <strong>liquid</strong> over the range of temperatures where most life exists, even though it is a very small molecule.</p><div class=\"note\">Mark-scheme language: \"partial charges (δ+/δ−)\", \"between different molecules\", \"dashed line\". Marks are lost for drawing the hydrogen bond between the H and O of the <em>same</em> molecule, or for writing that water has a \"charge\" instead of a \"partial charge\".</div>","ja":"<p><strong>電子から水素結合まで、順を追って。</strong></p><ol><li>酸素は O–H 結合の共有電子を自分の側に強く引き寄せるので、O は δ<sup>−</sup>、各 H は δ<sup>+</sup> になります。分子は<strong>極性 (polar)</strong> をもちます。</li><li>ある分子の δ<sup>+</sup> の H は、<em>隣の</em>分子の δ<sup>−</sup> の O に引かれます。</li><li>この引力が<strong>水素結合 (hydrogen bond)</strong> です。1個の水分子は複数の水素結合をつくれるので、液体の水は絶えず組み替わるネットワークになっています。</li></ol><table><tr><th></th><th>共有結合 (O–H)</th><th>水素結合</th></tr><tr><td>場所</td><td>1つの分子の内部</td><td>2つの分子の間</td></tr><tr><td>どの原子の間か</td><td>電子を共有する O と H</td><td>ある分子の δ<sup>+</sup> の H と別の分子の δ<sup>−</sup> の O</td></tr><tr><td>強さ</td><td>強い</td><td>1本は弱いが、集まると強い</td></tr><tr><td>液体の水の中では</td><td>保たれる</td><td>絶えず切れては再形成される</td></tr></table><p>分子を引き離すには多数の水素結合を断ち切る必要があるので、水はとても小さな分子なのに、ほとんどの生物が生きる温度範囲で<strong>液体</strong>です。</p><div class=\"note\">採点で使われる言葉：「partial charges (δ+/δ−)」「between different molecules」「dashed line」。<em>同じ</em>分子の H と O の間に水素結合を描いたり、「部分電荷」ではなく単に「電荷をもつ」と書いたりすると失点します。</div>","zh":"<p><strong>由電子到氫鍵，逐步說明。</strong></p><ol><li>氧把 O–H 鍵中的共用電子拉得更靠近自己，所以 O 帶 δ<sup>−</sup>，每個 H 帶 δ<sup>+</sup>。分子具有<strong>極性 (polar)</strong>。</li><li>一個分子的 δ<sup>+</sup> H 被<em>鄰近</em>分子的 δ<sup>−</sup> O 吸引。</li><li>這種吸引力就是<strong>氫鍵 (hydrogen bond)</strong>。每個水分子可形成數個氫鍵，所以液態水是一個不斷變動的網絡。</li></ol><table><tr><th></th><th>共價鍵 (O–H)</th><th>氫鍵</th></tr><tr><td>位置</td><td>在一個分子內</td><td>在兩個分子之間</td></tr><tr><td>涉及哪些原子</td><td>共用電子的 O 和 H</td><td>一個分子的 δ<sup>+</sup> H 與另一分子的 δ<sup>−</sup> O</td></tr><tr><td>強度</td><td>強</td><td>單獨很弱，合起來很強</td></tr><tr><td>在液態水中</td><td>保持完整</td><td>不斷斷開和重新形成</td></tr></table><p>要把分子拉開，必須克服大量氫鍵，所以水雖然是很小的分子，卻在大部分生物生存的溫度範圍內是<strong>液體</strong>。</p><div class=\"note\">評分用語：「partial charges (δ+/δ−)」、「between different molecules」、「dashed line」。把氫鍵畫在<em>同一個</em>分子的 H 與 O 之間，或寫成水「帶電荷」而不是「帶部分電荷」，都會失分。</div>"},
         ahl: false,
         heading: L("Polarity and hydrogen bonds", "極性と水素結合", "極性與氫鍵"),
         body: L(
@@ -87,6 +89,7 @@
       },
       {
         ref: "A1.1.3",
+        deeper: {"en":"<p><strong>How water gets up a tall plant, step by step.</strong></p><ol><li>Water evaporates from the surfaces of leaf cells.</li><li>Water from the xylem moves out to replace it, which <strong>pulls</strong> on the water column. The water is under tension.</li><li>Hydrogen bonds make the molecules <strong>cohere</strong>, so the whole column is pulled up as one, from root to leaf, without breaking.</li><li>Adhesion to the xylem walls helps to hold the column up.</li></ol><p>Xylem vessels are narrow, hollow and made of dead cells, so there is no cell contents in the way. Narrow tubes also make a continuous water column easier to keep.</p><p><strong>Surface tension.</strong> A molecule inside the water is pulled equally in all directions. A molecule at the surface has water only beside and below it, so it is pulled inwards and sideways. The surface behaves like a stretched skin. A pond skater's weight is spread over its legs and only makes small dents in the surface; the skin does not break.</p><div class=\"note\">Mark-scheme language: \"cohesion between water molecules due to hydrogen bonding\", \"tension\", \"unbroken column\". Common errors: saying that \"cohesion pulls water up\" (the pull comes from evaporation), or confusing cohesion with adhesion. Link: transport in plants (B3.2).</div>","ja":"<p><strong>水が背の高い植物を上る仕組み (順を追って)。</strong></p><ol><li>葉の細胞の表面から水が蒸発します。</li><li>失われた水を補うために木部の水が移動し、水の柱が<strong>引っ張られ</strong>ます。水は張力を受けています。</li><li>水素結合により分子どうしが<strong>くっつく (cohere)</strong> ので、水の柱全体が根から葉まで途切れずに一体となって引き上げられます。</li><li>木部の壁への付着力 (adhesion) も水柱を支えます。</li></ol><p>木部の道管は細く、中空で、死んだ細胞でできているので、内容物が邪魔になりません。細い管であることも、水の柱をつなげておくのに役立ちます。</p><p><strong>表面張力。</strong>水の内部の分子は全方向に等しく引かれます。水面の分子は、横と下にしか水がないので、内側と横に引かれます。そのため水面は張った膜のようにふるまいます。アメンボの体重は脚全体に分散され、水面を少しへこませるだけで、膜は破れません。</p><div class=\"note\">採点で使われる言葉：「cohesion between water molecules due to hydrogen bonding」「tension」「unbroken column」。よくある誤り：「凝集力が水を引き上げる」と書くこと (引く力の源は蒸発です)、凝集力と付着力の混同。関連：植物の輸送 (B3.2)。</div>","zh":"<p><strong>水如何升到高大的植物頂部 (逐步說明)。</strong></p><ol><li>葉細胞表面的水分蒸發。</li><li>木質部的水移出補充，<strong>拉動</strong>水柱。水因而受到張力。</li><li>氫鍵令水分子<strong>互相黏合 (cohere)</strong>，所以整條水柱由根到葉被一起拉上，不會斷開。</li><li>水與木質部管壁的附著力 (adhesion) 也有助托住水柱。</li></ol><p>木質部導管幼細、中空，由死細胞構成，所以沒有細胞內含物阻礙。管子幼細也有助維持連續的水柱。</p><p><strong>表面張力。</strong>水內部的分子受到各方向相等的拉力。水面的分子只有旁邊和下方有水，所以被向內及向側面拉。水面因而像一層繃緊的薄膜。水黽的體重分散在腳上，只令水面輕微凹陷，薄膜不會破裂。</p><div class=\"note\">評分用語：「cohesion between water molecules due to hydrogen bonding」、「tension」、「unbroken column」。常見錯誤：寫成「內聚力把水拉上去」(拉力來自蒸發)，或混淆內聚力與附著力。關聯：植物的運輸 (B3.2)。</div>"},
         ahl: false,
         heading: L("Cohesion", "凝集力", "內聚力"),
         body: L(
@@ -111,6 +114,7 @@
       },
       {
         ref: "A1.1.4",
+        deeper: {"en":"<p><strong>Cohesion and adhesion side by side.</strong></p><table><tr><th></th><th>Cohesion</th><th>Adhesion</th></tr><tr><td>Attraction between</td><td>Water and water</td><td>Water and a different substance</td></tr><tr><td>Caused by</td><td>Hydrogen bonds between water molecules</td><td>Attraction of water's partial charges to polar or charged groups on the surface</td></tr><tr><td>Example</td><td>Unbroken water column in xylem</td><td>Water held on cellulose in cell walls, or on soil particles</td></tr></table><p><strong>Why a narrower space lifts water higher.</strong> In a thin tube a large fraction of the water is touching the wall, so there is more adhesion for each bit of water. Adhesion pulls water up along the wall and cohesion drags the rest along with it. In a wide tube most of the water is far from the wall and is not lifted as much. This is also why the water surface in a glass tube curves upwards at the edges: adhesion to the glass is strong.</p><p><strong>In soil.</strong> The charged surfaces of soil particles hold thin films of water in the narrow gaps between them. This water resists draining away under gravity, so it stays available for roots to absorb.</p><div class=\"note\">Mark-scheme language: \"adhesion to (polar) cellulose / charged soil particles\", \"capillary action\", \"water is held in narrow spaces\". In an exam always say <em>what</em> water sticks to and <em>why</em> (partial charges).</div>","ja":"<p><strong>凝集力と付着力の比較。</strong></p><table><tr><th></th><th>凝集力 (cohesion)</th><th>付着力 (adhesion)</th></tr><tr><td>引き合う相手</td><td>水と水</td><td>水と別の物質</td></tr><tr><td>原因</td><td>水分子どうしの水素結合</td><td>水の部分電荷が、表面の極性基や電荷をもつ基に引かれること</td></tr><tr><td>例</td><td>木部の途切れない水の柱</td><td>細胞壁のセルロースや土壌粒子に保持される水</td></tr></table><p><strong>狭い空間ほど水が高く上がる理由。</strong>細い管では水の大きな割合が壁に接しているので、水のひとかたまり当たりの付着力が大きくなります。付着力が壁沿いに水を引き上げ、凝集力が残りの水を一緒に引きずり上げます。太い管では大部分の水が壁から遠く、あまり持ち上がりません。ガラス管の水面が端で上向きに曲がるのも、ガラスへの付着力が強いためです。</p><p><strong>土壌では。</strong>土壌粒子の電荷をもつ表面が、粒子間の狭いすき間に薄い水の膜を保持します。この水は重力で流れ落ちにくく、根が吸収できる状態で残ります。</p><div class=\"note\">採点で使われる言葉：「adhesion to (polar) cellulose / charged soil particles」「capillary action」「water is held in narrow spaces」。試験では、水が<em>何に</em>付くのか、そして<em>なぜ</em>(部分電荷) かを必ず書きましょう。</div>","zh":"<p><strong>內聚力與附著力對照。</strong></p><table><tr><th></th><th>內聚力 (cohesion)</th><th>附著力 (adhesion)</th></tr><tr><td>吸引對象</td><td>水與水</td><td>水與另一種物質</td></tr><tr><td>成因</td><td>水分子之間的氫鍵</td><td>水的部分電荷被表面的極性或帶電基團吸引</td></tr><tr><td>例子</td><td>木質部中不斷裂的水柱</td><td>細胞壁纖維素或土壤顆粒所吸附的水</td></tr></table><p><strong>為何空間愈窄，水升得愈高。</strong>在幼細的管中，大部分的水都接觸管壁，所以每一小份水受到的附著力較大。附著力沿管壁把水拉上，內聚力則把其餘的水一併拉上。在闊管中，大部分的水離管壁很遠，被提起的程度較小。玻璃管內水面在邊緣向上彎曲，也是因為水與玻璃的附著力強。</p><p><strong>在土壤中。</strong>土壤顆粒帶電的表面把薄薄的水膜保持在顆粒之間的窄縫中。這些水不易因重力流走，所以仍可供根吸收。</p><div class=\"note\">評分用語：「adhesion to (polar) cellulose / charged soil particles」、「capillary action」、「water is held in narrow spaces」。作答時務必說明水黏附在<em>甚麼</em>上，以及<em>為何</em>(部分電荷)。</div>"},
         ahl: false,
         heading: L("Adhesion", "付着力", "附著力"),
         body: L(
@@ -132,6 +136,7 @@
       },
       {
         ref: "A1.1.5",
+        deeper: {"en":"<p><strong>How sodium chloride dissolves, step by step.</strong></p><ol><li>Na<sup>+</sup> and Cl<sup>−</sup> ions in the crystal are held together by their opposite charges.</li><li>The δ<sup>−</sup> oxygen of water is attracted to Na<sup>+</sup>. The δ<sup>+</sup> hydrogens are attracted to Cl<sup>−</sup>.</li><li>Water molecules cluster around each ion and pull it away from the crystal.</li><li>Each ion is now surrounded by water molecules, which stops it joining the crystal again. The salt has dissolved.</li></ol><p><strong>Polar molecules</strong> such as glucose have –OH groups that form hydrogen bonds with water, so they dissolve too. <strong>Non-polar molecules</strong> such as fats have no charged regions to attract water, so they do not dissolve; water molecules stay bonded to each other and the non-polar molecules are pushed together.</p><table><tr><th>Substance</th><th>Polar or charged?</th><th>Dissolves in water?</th></tr><tr><td>Na<sup>+</sup>, Cl<sup>−</sup></td><td>Charged ions</td><td>Yes</td></tr><tr><td>Glucose</td><td>Polar</td><td>Yes</td></tr><tr><td>Fat / oil</td><td>Non-polar</td><td>No</td></tr><tr><td>Oxygen gas (O<sub>2</sub>)</td><td>Non-polar</td><td>Only slightly</td></tr></table><p>Link: the phospholipid bilayer (B2.1) works because hydrophilic heads face the water and hydrophobic tails face each other, away from it.</p><div class=\"note\">Mark-scheme language: \"polar / charged\", \"attracted to (partial) charges on water\", \"surrounded by water molecules\". Write \"does not dissolve\", not \"is repelled by water\".</div>","ja":"<p><strong>塩化ナトリウムが溶ける過程 (順を追って)。</strong></p><ol><li>結晶中の Na<sup>+</sup> と Cl<sup>−</sup> は、反対の電荷で結び付いています。</li><li>水の δ<sup>−</sup> の酸素は Na<sup>+</sup> に引かれ、δ<sup>+</sup> の水素は Cl<sup>−</sup> に引かれます。</li><li>水分子が各イオンの周りに集まり、イオンを結晶から引き離します。</li><li>イオンは水分子に取り囲まれ、結晶に戻れなくなります。塩が溶けたのです。</li></ol><p>グルコースのような<strong>極性分子</strong>は、水と水素結合をつくる –OH 基をもつので溶けます。脂肪のような<strong>非極性分子</strong>は水を引き付ける電荷の部分がないので溶けません。水分子どうしは結合したままで、非極性分子は押し集められます。</p><table><tr><th>物質</th><th>極性か電荷か</th><th>水に溶けるか</th></tr><tr><td>Na<sup>+</sup>, Cl<sup>−</sup></td><td>電荷をもつイオン</td><td>溶ける</td></tr><tr><td>グルコース</td><td>極性</td><td>溶ける</td></tr><tr><td>脂肪・油</td><td>非極性</td><td>溶けない</td></tr><tr><td>酸素ガス (O<sub>2</sub>)</td><td>非極性</td><td>わずかに溶ける</td></tr></table><p>関連：リン脂質二重層 (B2.1) は、親水性の頭部 (hydrophilic) が水側を向き、疎水性の尾部 (hydrophobic) が水から離れて向かい合うことで成り立っています。</p><div class=\"note\">採点で使われる言葉：「polar / charged」「attracted to (partial) charges on water」「surrounded by water molecules」。「水にはじかれる」ではなく「溶けない (does not dissolve)」と書きましょう。</div>","zh":"<p><strong>氯化鈉如何溶解 (逐步說明)。</strong></p><ol><li>晶體中的 Na<sup>+</sup> 和 Cl<sup>−</sup> 因異性電荷而結合在一起。</li><li>水的 δ<sup>−</sup> 氧被 Na<sup>+</sup> 吸引，δ<sup>+</sup> 氫被 Cl<sup>−</sup> 吸引。</li><li>水分子聚集在每個離子周圍，把離子從晶體拉開。</li><li>每個離子都被水分子包圍，不能再回到晶體中。鹽就溶解了。</li></ol><p>葡萄糖等<strong>極性分子</strong>有能與水形成氫鍵的 –OH 基團，所以能溶解。脂肪等<strong>非極性分子</strong>沒有可吸引水的帶電部分，所以不溶解；水分子繼續互相結合，並把非極性分子擠在一起。</p><table><tr><th>物質</th><th>極性或帶電？</th><th>溶於水？</th></tr><tr><td>Na<sup>+</sup>, Cl<sup>−</sup></td><td>帶電離子</td><td>溶</td></tr><tr><td>葡萄糖</td><td>極性</td><td>溶</td></tr><tr><td>脂肪／油</td><td>非極性</td><td>不溶</td></tr><tr><td>氧氣 (O<sub>2</sub>)</td><td>非極性</td><td>只輕微溶解</td></tr></table><p>關聯：磷脂雙層 (B2.1) 之所以成立，是因為親水的頭部 (hydrophilic) 朝向水，疏水的尾部 (hydrophobic) 則互相對着、遠離水。</p><div class=\"note\">評分用語：「polar / charged」、「attracted to (partial) charges on water」、「surrounded by water molecules」。請寫「不溶解 (does not dissolve)」，不要寫「被水排斥」。</div>"},
         ahl: false,
         heading: L("Water as a solvent", "溶媒としての水", "水作為溶劑"),
         body: L(
@@ -163,6 +168,7 @@
       },
       {
         ref: "A1.1.6",
+        deeper: {"en":"<p><strong>Link each property to a problem and an adaptation.</strong> A good \"contrast\" answer states the property, what it means for the animal, and the adaptation.</p><table><tr><th>Property</th><th>Water (challenge / opportunity)</th><th>Air (challenge / opportunity)</th></tr><tr><td>Buoyancy</td><td>Body is supported, so little energy is spent resisting gravity</td><td>Body weight must be supported by legs, skeleton or wings</td></tr><tr><td>Viscosity</td><td>Movement is costly, so a streamlined shape matters</td><td>Movement is easy, but flight needs lift from wings</td></tr><tr><td>Thermal conductivity</td><td>Heat is lost fast, so insulation is needed</td><td>Heat is lost slowly</td></tr><tr><td>Specific heat capacity</td><td>Stable temperature, so little thermal stress</td><td>Temperature varies a lot, day to night</td></tr></table><p><strong>Black-throated loon in more detail.</strong> It lives in both media, so its body is a compromise. Its legs are set far back on the body, which suits swimming. Its wings are fairly small, so it needs fast wingbeats and a long run across the water to take off. It is streamlined in water and in flight.</p><p><strong>Ringed seal.</strong> The streamlined body reduces drag; the layer of blubber reduces heat loss to the cold, conductive water; buoyancy helps to support its mass.</p><div class=\"note\">Mark-scheme language: \"water is denser, so greater buoyancy\", \"more viscous, so greater drag\", \"higher thermal conductivity, so more heat lost\", \"higher specific heat capacity, so more stable temperature\". Always write the comparison in both directions. Link: gas exchange in water and air (B3.1).</div>","ja":"<p><strong>各性質を「課題」と「適応」に結び付ける。</strong>よい「対比 (contrast)」の解答は、性質、それが動物にとって何を意味するか、そして適応を述べます。</p><table><tr><th>性質</th><th>水 (課題／利点)</th><th>空気 (課題／利点)</th></tr><tr><td>浮力 (buoyancy)</td><td>体が支えられ、重力に抵抗するエネルギーが少なくてすむ</td><td>体重を脚・骨格・翼で支えなければならない</td></tr><tr><td>粘性 (viscosity)</td><td>動くのに力がいるので、流線形が重要</td><td>動きやすいが、飛ぶには翼の揚力が必要</td></tr><tr><td>熱伝導率 (thermal conductivity)</td><td>熱が速く奪われるので断熱が必要</td><td>熱がゆっくりしか失われない</td></tr><tr><td>比熱 (specific heat capacity)</td><td>温度が安定していて、温度ストレスが小さい</td><td>昼夜で温度が大きく変わる</td></tr></table><p><strong>オオハム (black-throated loon) の詳しい例。</strong>水中と空中の両方で暮らすため、体は折衷的です。脚は体の後方にあり、泳ぐのに適しています。翼は比較的小さいので、羽ばたきを速くし、離陸には水面を長く助走する必要があります。水中でも飛行中でも流線形です。</p><p><strong>ワモンアザラシ (ringed seal)。</strong>流線形の体が抵抗を減らし、皮下脂肪 (blubber) の層が冷たく熱を伝えやすい水への熱損失を減らし、浮力が体重の一部を支えます。</p><div class=\"note\">採点で使われる言葉：「water is denser, so greater buoyancy」「more viscous, so greater drag」「higher thermal conductivity, so more heat lost」「higher specific heat capacity, so more stable temperature」。比較は必ず両方向で書きましょう。関連：水中と空気中のガス交換 (B3.1)。</div>","zh":"<p><strong>把每項性質連結到難題與適應特徵。</strong>好的「對比 (contrast)」答案會寫出性質、它對動物的意義，以及適應特徵。</p><table><tr><th>性質</th><th>水 (挑戰／機會)</th><th>空氣 (挑戰／機會)</th></tr><tr><td>浮力 (buoyancy)</td><td>身體被托住，抵抗重力所需能量少</td><td>體重必須由腿、骨骼或翼支撐</td></tr><tr><td>黏滯性 (viscosity)</td><td>移動耗力，所以流線形很重要</td><td>移動容易，但飛行需要翼提供升力</td></tr><tr><td>熱傳導性 (thermal conductivity)</td><td>熱量流失快，需要隔熱</td><td>熱量流失慢</td></tr><tr><td>比熱容 (specific heat capacity)</td><td>溫度穩定，熱壓力小</td><td>日夜溫度變化大</td></tr></table><p><strong>黑喉潛鳥 (black-throated loon) 的詳細例子。</strong>牠在水和空氣兩種介質中生活，所以身體是一種折衷。腿長在身體後方，適合游泳。翼相對較小，所以需要快速拍翼，並要在水面上長距離助跑才能起飛。無論在水中還是飛行時，牠都是流線形。</p><p><strong>環斑海豹 (ringed seal)。</strong>流線形身體減少阻力；鯨脂層 (blubber) 減少熱量流失到寒冷而導熱快的水中；浮力幫助支撐體重。</p><div class=\"note\">評分用語：「water is denser, so greater buoyancy」、「more viscous, so greater drag」、「higher thermal conductivity, so more heat lost」、「higher specific heat capacity, so more stable temperature」。比較時要兩個方向都寫出。關聯：水與空氣中的氣體交換 (B3.1)。</div>"},
         ahl: false,
         heading: L("Water or air as a habitat", "水と空気：生息場所としての違い", "水與空氣：作為棲息地的比較"),
         body: L(
@@ -203,6 +209,7 @@
       },
       {
         ref: "A1.1.7",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>Two separate questions: where did the water come from, and why is it still here?</strong></p><table><tr><th>Question</th><th>Answer in the guide</th><th>Key words to use</th></tr><tr><td>Origin</td><td>Water was delivered by asteroids that contained water (extraplanetary origin)</td><td>\"asteroids\", \"impacts\", \"from space\"</td></tr><tr><td>Retention: gas</td><td>Gravity holds gases, including water vapour, close to the planet</td><td>\"gravity\", \"not lost to space\"</td></tr><tr><td>Retention: liquid</td><td>Temperature low enough for vapour to condense into liquid water</td><td>\"condense\", \"oceans\"</td></tr></table><p><strong>Step by step.</strong></p><ol><li>Asteroids containing water hit the young Earth.</li><li>Water was released as vapour into the atmosphere.</li><li>Gravity kept the vapour near Earth instead of letting it escape.</li><li>As Earth cooled, vapour condensed and collected as liquid water.</li></ol><p>A body with much weaker gravity than Earth is less able to hold on to gases, so it loses vapour to space. A body that stays very hot keeps its water as vapour. Both gravity <em>and</em> temperature matter.</p><p><strong>Typical 3-mark answer to \"Outline why Earth has retained its water\".</strong> (1) Earth's gravity is strong enough to hold water vapour and other gases. (2) The temperature fell low enough for vapour to condense. (3) The liquid water collected as oceans, which stay liquid because temperatures stay in the right range.</p><div class=\"note\">Mark-scheme language: \"extraplanetary origin\", \"gravity\", \"condensation\". You are not asked to compare origin hypotheses.</div>","ja":"<p><em>(AHL)</em> <strong>2つの別々の問い：水はどこから来たのか、そしてなぜ今も残っているのか。</strong></p><table><tr><th>問い</th><th>ガイドの答え</th><th>使うキーワード</th></tr><tr><td>起源</td><td>水を含む小惑星 (asteroid) が水を運んできた (地球外起源 extraplanetary origin)</td><td>「asteroids」「impacts」「from space」</td></tr><tr><td>保持：気体</td><td>重力が水蒸気を含む気体を地球の近くにとどめる</td><td>「gravity」「not lost to space」</td></tr><tr><td>保持：液体</td><td>温度が十分低く、水蒸気が凝縮して液体の水になる</td><td>「condense」「oceans」</td></tr></table><p><strong>順を追って。</strong></p><ol><li>水を含む小惑星が若い地球に衝突した。</li><li>水が水蒸気として大気中に放出された。</li><li>重力が水蒸気を逃がさず地球の近くにとどめた。</li><li>地球が冷えると水蒸気が凝縮し、液体の水として集まった。</li></ol><p>地球よりずっと重力が弱い天体は気体を保持しにくく、水蒸気を宇宙に失います。非常に高温のままの天体では、水は水蒸気のままです。重力<em>と</em>温度の両方が重要です。</p><p><strong>「地球が水を保持してきた理由を概説せよ (Outline)」の3点解答例。</strong>(1) 地球の重力は水蒸気などの気体を保持できる強さである。(2) 温度が水蒸気の凝縮できる低さまで下がった。(3) 液体の水が海として集まり、温度が適した範囲にとどまるため液体のままである。</p><div class=\"note\">採点で使われる言葉：「extraplanetary origin」「gravity」「condensation」。起源についての複数の仮説を比べることは求められません。</div>","zh":"<p><em>(AHL)</em> <strong>兩個獨立的問題：水從何而來？為何至今仍在？</strong></p><table><tr><th>問題</th><th>課程指引的答案</th><th>應使用的關鍵詞</th></tr><tr><td>來源</td><td>含水的小行星 (asteroid) 把水帶到地球 (地球以外的來源 extraplanetary origin)</td><td>「asteroids」、「impacts」、「from space」</td></tr><tr><td>保留：氣體</td><td>引力把包括水蒸氣在內的氣體留在地球附近</td><td>「gravity」、「not lost to space」</td></tr><tr><td>保留：液體</td><td>溫度夠低，水蒸氣凝結成液態水</td><td>「condense」、「oceans」</td></tr></table><p><strong>逐步說明。</strong></p><ol><li>含水的小行星撞擊年輕的地球。</li><li>水以水蒸氣形式釋放到大氣中。</li><li>引力把水蒸氣留在地球附近，使它不致逃逸。</li><li>地球冷卻後，水蒸氣凝結，並以液態水聚集。</li></ol><p>引力遠比地球弱的天體較難留住氣體，會把水蒸氣流失到太空。一直非常炎熱的天體，水會保持為水蒸氣。引力<em>和</em>溫度都很重要。</p><p><strong>「概述 (Outline) 地球為何保留了水」的 3 分答案示例。</strong>(1) 地球的引力強得足以留住水蒸氣和其他氣體。(2) 溫度下降至足以令水蒸氣凝結。(3) 液態水聚集成海洋，由於溫度維持在適當範圍，所以保持為液體。</p><div class=\"note\">評分用語：「extraplanetary origin」、「gravity」、「condensation」。你不需要比較不同的水來源假說。</div>"},
         ahl: true,
         heading: L("Where Earth's water came from (AHL)", "地球の水の起源 (AHL)", "地球上水的來源 (AHL)"),
         body: L(
@@ -228,6 +235,7 @@
       },
       {
         ref: "A1.1.8",
+        deeper: {"en":"<p><em>(AHL)</em> <strong>The reasoning chain behind \"follow the water\".</strong></p><ol><li>On Earth, life depends on liquid water as a solvent and a medium for metabolism (A1.1.1, A1.1.5).</li><li>So a planet with liquid water on its surface is a reasonable place to look for life.</li><li>Liquid water needs a surface temperature in the right range.</li><li>Surface temperature depends mainly on the planet's distance from its star.</li></ol><table><tr><th>Position</th><th>Surface temperature</th><th>State of water</th></tr><tr><td>Too close to star</td><td>Too hot</td><td>Vapour</td></tr><tr><td>In the Goldilocks zone</td><td>Suitable</td><td>Liquid possible</td></tr><tr><td>Too far from star</td><td>Too cold</td><td>Ice</td></tr></table><p>A hotter, brighter star puts its zone further out; a cooler, dimmer star puts it closer in.</p><p><strong>Why the zone is only a starting point.</strong> A planet in the zone <em>could</em> have liquid water, but it also needs to hold on to that water (gravity, as in A1.1.7). Even then, liquid water is a necessary condition for life as we know it, not proof of life.</p><p><strong>Typical 3-mark answer to \"Explain the importance of the Goldilocks zone\".</strong> (1) It is the range of distances where temperature allows liquid water. (2) Life on Earth depends on liquid water. (3) So planets in the zone are the best candidates to search for life.</p><div class=\"note\">Mark-scheme language: \"liquid water\", \"distance from the star\", \"possible, not certain\". Avoid saying that a planet in the zone \"has life\" or \"is habitable for sure\".</div>","ja":"<p><em>(AHL)</em> <strong>「水を追え」の背後にある論理の連鎖。</strong></p><ol><li>地球では、生命は溶媒および代謝の媒体としての液体の水に依存している (A1.1.1, A1.1.5)。</li><li>したがって、表面に液体の水がある惑星は、生命を探す場所として妥当である。</li><li>液体の水には、適した範囲の表面温度が必要である。</li><li>表面温度は主に、惑星と恒星との距離で決まる。</li></ol><table><tr><th>位置</th><th>表面温度</th><th>水の状態</th></tr><tr><td>恒星に近すぎる</td><td>高すぎる</td><td>水蒸気</td></tr><tr><td>ゴルディロックス・ゾーン (Goldilocks zone)</td><td>適している</td><td>液体の可能性あり</td></tr><tr><td>恒星から遠すぎる</td><td>低すぎる</td><td>氷</td></tr></table><p>高温で明るい恒星ではゾーンはより遠くに、低温で暗い恒星ではより近くになります。</p><p><strong>ゾーンは出発点にすぎない理由。</strong>ゾーン内の惑星には液体の水が存在する<em>可能性</em>がありますが、その水を保持し続ける必要もあります (A1.1.7 の重力)。それでも、液体の水は私たちの知る生命にとって必要条件であり、生命がいる証拠ではありません。</p><p><strong>「ゴルディロックス・ゾーンの重要性を説明せよ (Explain)」の3点解答例。</strong>(1) 温度が液体の水を可能にする距離の範囲である。(2) 地球の生命は液体の水に依存している。(3) したがって、ゾーン内の惑星は生命探査の最有力候補である。</p><div class=\"note\">採点で使われる言葉：「liquid water」「distance from the star」「possible, not certain」。ゾーン内の惑星に「生命がいる」「確実に居住可能」と書くのは避けましょう。</div>","zh":"<p><em>(AHL)</em> <strong>「追尋水」背後的推理鏈。</strong></p><ol><li>在地球上，生命依賴液態水作為溶劑及新陳代謝的介質 (A1.1.1、A1.1.5)。</li><li>所以表面有液態水的行星，是尋找生命的合理地點。</li><li>液態水需要表面溫度處於適當範圍。</li><li>表面溫度主要取決於行星與恆星的距離。</li></ol><table><tr><th>位置</th><th>表面溫度</th><th>水的狀態</th></tr><tr><td>離恆星太近</td><td>太熱</td><td>水蒸氣</td></tr><tr><td>適居帶 (Goldilocks zone)</td><td>適合</td><td>可能有液態水</td></tr><tr><td>離恆星太遠</td><td>太冷</td><td>冰</td></tr></table><p>較熱、較亮的恆星，其適居帶較遠；較冷、較暗的恆星，其適居帶較近。</p><p><strong>為何適居帶只是起點。</strong>適居帶內的行星<em>可能</em>有液態水，但也必須能留住那些水 (A1.1.7 的引力)。即使如此，液態水只是我們所知生命的必要條件，並非生命存在的證明。</p><p><strong>「解釋 (Explain) 適居帶的重要性」的 3 分答案示例。</strong>(1) 它是溫度容許液態水存在的距離範圍。(2) 地球上的生命依賴液態水。(3) 所以適居帶內的行星是尋找生命的最佳候選。</p><div class=\"note\">評分用語：「liquid water」、「distance from the star」、「possible, not certain」。避免寫適居帶內的行星「有生命」或「必定適合居住」。</div>"},
         ahl: true,
         heading: L("Water and the search for life elsewhere (AHL)", "水と地球外生命の探索 (AHL)", "水與尋找外星生命 (AHL)"),
         body: L(
@@ -597,6 +605,172 @@
           "A, C and D are reasonable: the zone gives suitable temperatures, makes the planet worth searching, and (as on Earth) gravity is needed to retain water. B is wrong: being in the zone is only a possibility for life, not proof.",
           "A、C、D は妥当です。ゾーンは適した温度を与え、探す価値を生み、(地球と同様に) 水を保持するには重力が必要です。B は誤りで、ゾーン内にあることは生命の可能性にすぎず、証明ではありません。",
           "A、C、D 合理：適居帶提供適合的溫度、使該行星值得探索，而且 (如同地球) 要保住水需要重力。B 錯誤：位於適居帶只表示有生命的可能，並非證明。")
+      },
+      {
+        "id": "a1-1-q20",
+        "type": "short",
+        "ahl": false,
+        "difficulty": 3,
+        "ref": "A1.1.3",
+        "paper": "1B",
+        "commandTerm": "Explain",
+        "marks": 4,
+        "data": {
+          "en": "<p>A student counted how many drops of liquid could be added to the surface of a coin before the liquid spilled over the edge. Three trials were done for each liquid (illustrative data).</p><table><tr><th>Liquid</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th></tr><tr><td>Water</td><td>24</td><td>26</td><td>25</td></tr><tr><td>Water with detergent</td><td>11</td><td>9</td><td>10</td></tr></table>",
+          "ja": "<p>生徒が、硬貨の表面から液体があふれるまでに何滴加えられるかを数えた。各液体について3回測定した (架空のデータ)。</p><table><tr><th>液体</th><th>1回目</th><th>2回目</th><th>3回目</th></tr><tr><td>水</td><td>24</td><td>26</td><td>25</td></tr><tr><td>洗剤入りの水</td><td>11</td><td>9</td><td>10</td></tr></table>",
+          "zh": "<p>一名學生數算在硬幣表面加多少滴液體後，液體才會溢出邊緣。每種液體做了三次試驗 (虛構數據)。</p><table><tr><th>液體</th><th>試驗 1</th><th>試驗 2</th><th>試驗 3</th></tr><tr><td>水</td><td>24</td><td>26</td><td>25</td></tr><tr><td>加了洗潔精的水</td><td>11</td><td>9</td><td>10</td></tr></table>"
+        },
+        "stem": {
+          "en": "(a) Calculate the mean number of drops for water and for water with detergent. (b) Explain why water can hold more drops than water with detergent before spilling, in terms of the forces between water molecules.",
+          "ja": "(a) 水と洗剤入りの水について、滴数の平均を計算せよ。 (b) あふれる前に水のほうが洗剤入りの水より多くの滴を保てる理由を、水分子間の力に基づいて説明せよ。",
+          "zh": "(a) 計算水和加了洗潔精的水的平均滴數。 (b) 以水分子之間的作用力，解釋為何水在溢出前能承載的滴數比加了洗潔精的水多。"
+        },
+        "markscheme": [
+          {
+            "en": "Water: (24 + 26 + 25) ÷ 3 = 25 drops",
+            "ja": "水：(24 + 26 + 25) ÷ 3 = 25 滴",
+            "zh": "水：(24 + 26 + 25) ÷ 3 = 25 滴"
+          },
+          {
+            "en": "Water with detergent: (11 + 9 + 10) ÷ 3 = 10 drops",
+            "ja": "洗剤入りの水：(11 + 9 + 10) ÷ 3 = 10 滴",
+            "zh": "加了洗潔精的水：(11 + 9 + 10) ÷ 3 = 10 滴"
+          },
+          {
+            "en": "Water molecules are cohesive / attracted to each other by hydrogen bonds, giving high surface tension so the water surface can bulge without breaking",
+            "ja": "水分子は水素結合で互いに引き合い (凝集力)、表面張力が大きいので、水面は破れずに盛り上がれる",
+            "zh": "水分子之間因氫鍵而互相吸引 (內聚力)，表面張力大，所以水面可以隆起而不破裂"
+          },
+          {
+            "en": "Detergent reduces the attraction between water molecules / interferes with hydrogen bonding, lowering surface tension, so the drop spreads and spills sooner",
+            "ja": "洗剤は水分子間の引力を弱め (水素結合を妨げ)、表面張力を下げるので、液が広がって早くあふれる",
+            "zh": "洗潔精減弱水分子之間的吸引力 (干擾氫鍵)，降低表面張力，所以液體較早擴散溢出"
+          }
+        ],
+        "modelAnswer": {
+          "en": "(a) Water: 75 ÷ 3 = 25 drops. Detergent: 30 ÷ 3 = 10 drops. (b) Hydrogen bonds make water molecules cohesive, so the surface has high surface tension and can bulge up without breaking. Detergent interferes with the hydrogen bonding between water molecules, so surface tension falls and the liquid spreads and spills after fewer drops.",
+          "ja": "(a) 水：75 ÷ 3 = 25 滴。洗剤入り：30 ÷ 3 = 10 滴。 (b) 水素結合により水分子は凝集力をもつので、水面の表面張力が大きく、破れずに盛り上がれる。洗剤は水分子間の水素結合を妨げるので、表面張力が下がり、液が広がって少ない滴数であふれる。",
+          "zh": "(a) 水：75 ÷ 3 = 25 滴。洗潔精：30 ÷ 3 = 10 滴。 (b) 氫鍵令水分子具有內聚力，所以水面的表面張力大，可以隆起而不破裂。洗潔精干擾水分子之間的氫鍵，表面張力下降，液體擴散並在較少滴數後溢出。"
+        }
+      },
+      {
+        "id": "a1-1-q21",
+        "type": "mcq",
+        "ahl": false,
+        "difficulty": 2,
+        "ref": "A1.1.3–4",
+        "paper": "1A",
+        "stem": {
+          "en": "Which statement correctly identifies the type of attraction involved in each situation?",
+          "ja": "次のうち、それぞれの場面に関わる引力の種類を正しく示している記述はどれか。",
+          "zh": "下列哪項正確指出每個情況所涉及的吸引力類型？"
+        },
+        "options": [
+          {
+            "en": "Water molecules staying together in a xylem column: adhesion. Water held on soil particles: cohesion.",
+            "ja": "木部で水分子がつながっている：付着力。土壌粒子に水が保持される：凝集力。",
+            "zh": "木質部中水分子連在一起：附著力。土壤顆粒吸附水：內聚力。"
+          },
+          {
+            "en": "Water molecules staying together in a xylem column: cohesion. Water held on soil particles: adhesion.",
+            "ja": "木部で水分子がつながっている：凝集力。土壌粒子に水が保持される：付着力。",
+            "zh": "木質部中水分子連在一起：內聚力。土壤顆粒吸附水：附著力。"
+          },
+          {
+            "en": "Both situations are cohesion, because hydrogen bonds are involved.",
+            "ja": "どちらも水素結合が関わるので、凝集力である。",
+            "zh": "兩者都涉及氫鍵，所以都是內聚力。"
+          },
+          {
+            "en": "Both situations are adhesion, because water is polar.",
+            "ja": "どちらも水が極性をもつので、付着力である。",
+            "zh": "兩者都因水具極性，所以都是附著力。"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "B is correct: cohesion is water to water (the unbroken column); adhesion is water to a different substance (charged soil particles). A and C/D mix the terms up. Both involve partial charges, but what matters is what water is attracted to.",
+          "ja": "B が正解です。凝集力は水どうし (途切れない水柱)、付着力は水と別の物質 (電荷をもつ土壌粒子) の間の引力です。A は用語が逆、C と D は区別していません。どちらも部分電荷が関わりますが、重要なのは水が何に引かれているかです。",
+          "zh": "B 正確：內聚力是水與水之間 (不斷裂的水柱)，附著力是水與另一種物質 (帶電的土壤顆粒) 之間。A 把兩個詞弄反；C 和 D 沒有加以區分。兩者都涉及部分電荷，但關鍵是水被甚麼吸引。"
+        }
+      },
+      {
+        "id": "a1-1-q22",
+        "type": "short",
+        "ahl": false,
+        "difficulty": 3,
+        "ref": "A1.1.6",
+        "paper": "2",
+        "commandTerm": "Explain",
+        "marks": 3,
+        "stem": {
+          "en": "A seal and a land mammal of the same body mass both need to stay warm. The land mammal has a thin layer of fat; the seal living in water at 2 °C has a much thicker layer. Explain this difference using the properties of water and air.",
+          "ja": "同じ体重のアザラシと陸上の哺乳類が、どちらも体温を保つ必要がある。陸上の哺乳類の脂肪層は薄いが、2 °C の水中で暮らすアザラシの脂肪層ははるかに厚い。水と空気の性質を用いてこの違いを説明せよ。",
+          "zh": "一隻海豹和一隻體重相同的陸上哺乳動物都需要保持體溫。陸上哺乳動物只有薄薄的脂肪層，而生活在 2 °C 水中的海豹則有厚得多的脂肪層。運用水和空氣的性質解釋這個分別。"
+        },
+        "markscheme": [
+          {
+            "en": "Water has a higher thermal conductivity than air",
+            "ja": "水は空気より熱伝導率が高い",
+            "zh": "水的熱傳導性比空氣高"
+          },
+          {
+            "en": "so heat is lost from the seal's body to the water much faster than to the air",
+            "ja": "そのため、アザラシの体から水への熱損失は、空気への熱損失よりはるかに速い",
+            "zh": "所以海豹的體熱流失到水中比流失到空氣中快得多"
+          },
+          {
+            "en": "a thick layer of fat (blubber) provides insulation to reduce this heat loss; air is a poor conductor, so the land mammal needs less",
+            "ja": "厚い脂肪層 (blubber) が断熱してこの熱損失を減らす。空気は熱を伝えにくいので陸上の哺乳類はそれほど必要ない",
+            "zh": "厚脂肪層 (鯨脂 blubber) 提供隔熱，減少熱量流失；空氣導熱差，所以陸上哺乳動物所需較少"
+          }
+        ],
+        "modelAnswer": {
+          "en": "Water has a much higher thermal conductivity than air, so a seal in 2 °C water loses body heat far faster than a land mammal in air at the same temperature. The thick blubber layer insulates the seal and reduces this heat loss. In air, which conducts heat poorly, a thin fat layer is enough.",
+          "ja": "水は空気よりはるかに熱伝導率が高いので、2 °C の水中のアザラシは、同じ温度の空気中の陸上哺乳類よりずっと速く体熱を失う。厚い脂肪層 (blubber) がアザラシを断熱し、この熱損失を減らす。熱を伝えにくい空気中では、薄い脂肪層で足りる。",
+          "zh": "水的熱傳導性遠高於空氣，所以在 2 °C 水中的海豹比處於相同溫度空氣中的陸上哺乳動物流失體熱快得多。厚的鯨脂層為海豹隔熱，減少熱量流失。在導熱差的空氣中，薄脂肪層已經足夠。"
+        }
+      },
+      {
+        "id": "a1-1-q23",
+        "type": "mcq",
+        "ahl": true,
+        "difficulty": 3,
+        "ref": "A1.1.7–8",
+        "paper": "1A",
+        "stem": {
+          "en": "Planet X orbits inside the Goldilocks zone of its star, but its mass is much smaller than Earth's. Which prediction is best supported by the guide?",
+          "ja": "惑星 X は恒星のゴルディロックス・ゾーン内を公転しているが、質量は地球よりはるかに小さい。ガイドの内容から最も支持される予測はどれか。",
+          "zh": "行星 X 在其恆星的適居帶內運行，但質量遠比地球小。以下哪項預測最符合課程內容？"
+        },
+        "options": [
+          {
+            "en": "Liquid water must be present, because the temperature is suitable.",
+            "ja": "温度が適しているので、液体の水が必ず存在する。",
+            "zh": "因為溫度適合，所以一定有液態水。"
+          },
+          {
+            "en": "Water vapour might escape to space because weak gravity cannot hold it.",
+            "ja": "重力が弱くて水蒸気を保持できず、宇宙へ逃げる可能性がある。",
+            "zh": "引力弱，留不住水蒸氣，水蒸氣可能逃逸到太空。"
+          },
+          {
+            "en": "Water will be frozen, because small planets are always cold.",
+            "ja": "小さい惑星は常に冷たいので、水は凍っている。",
+            "zh": "細小的行星一定寒冷，所以水是冰。"
+          },
+          {
+            "en": "Life must exist, because the planet is in the zone.",
+            "ja": "ゾーン内にあるので、生命が必ず存在する。",
+            "zh": "因為行星在適居帶內，所以一定有生命。"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "B is correct: a planet needs strong enough gravity to retain water vapour and other gases (A1.1.7), in addition to a suitable temperature. A overstates: the zone only makes liquid water possible. C is not supported: temperature depends on distance from the star. D is wrong: being in the zone does not prove life.",
+          "ja": "B が正解です。適した温度に加えて、水蒸気などの気体を保持できる十分な重力が必要です (A1.1.7)。A は言い過ぎで、ゾーンは液体の水を「可能にする」だけです。C は根拠がなく、温度は恒星からの距離で決まります。D は誤りで、ゾーン内にあることは生命の証拠ではありません。",
+          "zh": "B 正確：行星除了溫度適合，還需要足夠強的引力留住水蒸氣和其他氣體 (A1.1.7)。A 說得過頭，適居帶只是令液態水「有可能」存在。C 沒有根據，溫度取決於與恆星的距離。D 錯誤，位於適居帶內並不證明有生命。"
+        }
       }
     ]
   });

@@ -3,13 +3,13 @@
 
 **Live site:** https://bennyng1029.github.io/2028-IBBiology-HL/ (after GitHub Pages is enabled: Settings → Pages → Deploy from branch → `main` / root).
 
-**What's inside:** all 19 subtopics of Themes A and B (SL and AHL), 211 sections, 356 original practice questions (77 challenge level), 277 glossary terms, 28 interactive models, and guided Labs (a six-step Protein Lab, with more labs by theme). Every subtopic was checked by an accuracy reviewer against the IB guide's understandings and limits, including a "Beyond the syllabus" box listing extras you do not need.
+**What's inside:** all 19 subtopics of Themes A and B (SL and AHL), 211 sections (each with a "Go deeper" box), 446 original practice questions (121 challenge level), 277 glossary terms with flashcards, 29 interactive models, and guided Labs (a six-step Protein Lab, with more labs by theme). Every subtopic was checked by an accuracy reviewer against the IB guide's understandings and limits, including a "Beyond the syllabus" box listing extras you do not need.
 
 A free, static, open-source study site for **IB Diploma Biology, Themes A (Unity and diversity) and B (Form and function)**, SL and AHL, for students sitting the **May 2028** exams. Syllabus: IB Biology guide, first assessment 2025.
 
 - Languages: English (default), Japanese, Hong Kong Traditional Chinese, Korean (한국어). The language never switches automatically.
-- Each subtopic: notes mapped to the guide's understanding statements, exam tips, key terms, common mistakes, a "Beyond the syllabus: you do NOT need to know" box, and a quiz.
-- Guided **Labs** (menu: Labs): step-by-step activities with one interactive per step, such as the Protein Lab (B1.2). Each topic page links to its related labs. Plus a Practice page and a Glossary.
+- Each subtopic: notes mapped to the guide's understanding statements, "Go deeper" boxes (worked examples, comparison tables, mark-scheme wording), exam tips, key terms, common mistakes, a "Beyond the syllabus: you do NOT need to know" box, and a quiz.
+- Guided **Labs** (menu: Labs): step-by-step activities with one interactive per step, such as the Protein Lab (B1.2). Each topic page links to its related labs. Plus a Practice page, a Glossary and Flashcards (key terms of every topic, with Got it / Again tracking).
 - No build step, no framework, no tracking. Progress is stored in your own browser.
 
 ## Sharing with classmates

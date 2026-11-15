@@ -1,8 +1,354 @@
 /* A3.1 Diversity of organisms — SL + AHL */
 (function () {
+/*EXT-BEGIN*/
+const __EXT = {
+ "deeper": [
+  {
+   "i": 0,
+   "deeper": {
+    "en": "<p><strong>Two sources of variation.</strong> Differences between individuals have two causes, and they often act together.</p>\n<table><tr><th>Cause</th><th>Example</th></tr><tr><td>Genetic: different DNA base sequences (different alleles), produced by mutation and by the mixing of genes in sexual reproduction</td><td>Different blood groups</td></tr><tr><td>Environmental: conditions during life</td><td>Two genetically identical plants (clones) grown in sun and in shade end up with different heights and leaf sizes</td></tr></table>\n<p>Identical twins have almost identical DNA, so differences in their scars or body mass come from the environment.</p>\n<p><strong>Why it matters.</strong> Variation is the raw material for natural selection. If all individuals were identical, a population could not change over time.</p>\n<p><strong>Seeing variation in data.</strong> Measure the length of 30 leaves from one species and the lengths will not all be the same. They form a range, for example 6.2 to 9.8 cm. That range <em>is</em> variation.</p>\n<p><strong>Mark-scheme language:</strong> \"no two individuals are identical\"; \"variation exists even within a species\"; \"differences in DNA base sequence\"; \"patterns of similarity and difference allow organisms to be grouped (classified)\".</p>",
+    "ja": "<p><strong>変異の2つの原因。</strong>個体間の違いには2つの原因があり、しばしば一緒にはたらきます。</p>\n<table><tr><th>原因</th><th>例</th></tr><tr><td>遺伝的：DNAの塩基配列の違い（対立遺伝子の違い）。突然変異と有性生殖での遺伝子の混ざり合いで生じる</td><td>血液型の違い</td></tr><tr><td>環境的：生きている間の条件</td><td>遺伝的に同一の2本の植物（クローン）を日なたと日陰で育てると、背の高さや葉の大きさが違ってくる</td></tr></table>\n<p>一卵性双生児はDNAがほぼ同じなので、傷あとや体重の違いは環境によるものです。</p>\n<p><strong>なぜ重要か。</strong>変異 (variation) は自然選択の材料です。すべての個体が同一なら、集団は時間とともに変われません。</p>\n<p><strong>データで変異を見る。</strong>1つの種の葉30枚の長さを測ると、すべて同じ長さにはなりません。たとえば6.2〜9.8 cmのように幅が出ます。この幅が変異そのものです。</p>\n<p><strong>採点基準で使われる表現:</strong>「同じ個体は2つとない」「同じ種の中にも変異がある」「DNAの塩基配列の違い」「類似と相違のパターンによって生物をグループ分け（分類）できる」。</p>",
+    "zh": "<p><strong>變異的兩個來源。</strong>個體之間的差異有兩個成因，而且常常一同作用。</p>\n<table><tr><th>成因</th><th>例子</th></tr><tr><td>遺傳：DNA 鹼基序列不同（等位基因不同），由突變及有性生殖中基因的混合產生</td><td>不同的血型</td></tr><tr><td>環境：生活期間的條件</td><td>兩株基因完全相同的植物（無性繁殖系）分別在陽光下和蔭蔽處生長，高度和葉的大小會不同</td></tr></table>\n<p>同卵孿生兒的 DNA 幾乎完全相同，所以他們疤痕或體重的差異來自環境。</p>\n<p><strong>為何重要。</strong>變異 (variation) 是自然選擇的原材料。如果所有個體都完全相同，群體就不能隨時間改變。</p>\n<p><strong>從數據看變異。</strong>量度同一物種 30 片葉的長度，長度不會全部一樣，而會形成一個範圍，例如 6.2 至 9.8 cm。這個範圍<em>就是</em>變異。</p>\n<p><strong>評分準則常用語：</strong>「沒有兩個個體完全相同」；「即使同一物種之內也有變異」；「DNA 鹼基序列的差異」；「相似與相異的模式令生物可以分組（分類）」。</p>"
+   }
+  },
+  {
+   "i": 1,
+   "deeper": {
+    "en": "<table><tr><th>Strength</th><th>Weakness</th></tr><tr><td>Quick: you only need to look at the organism</td><td>Males and females can look very different. A male mallard has a green head, but the female is brown.</td></tr><tr><td>Works on dead specimens and fossils, where breeding cannot be tested</td><td>Young and adult forms can look different, for example a caterpillar and the butterfly it becomes</td></tr><tr><td>No breeding experiment needed</td><td>Different species can look almost identical, so they are wrongly placed in one species</td></tr></table>\n<p><strong>Who uses it?</strong> Linnaeus, museum workers sorting specimens, and palaeontologists, who have only bones and shells.</p>\n<p><strong>A hidden weakness.</strong> Deciding how different is \"different enough\" is a human judgement. Two scientists can disagree. This links to A3.1.5, where the species boundary can be arbitrary.</p>\n<p><strong>Mark-scheme language:</strong> \"uses physical / structural features\"; \"can be applied to fossils\"; \"variation within a species (male and female, young and adult) can mislead\"; \"different species that look similar may be grouped together\".</p>",
+    "ja": "<table><tr><th>長所</th><th>短所</th></tr><tr><td>手早い：生物を見るだけでよい</td><td>雄と雌がまったく違って見えることがある。マガモの雄は頭が緑色だが、雌は茶色である。</td></tr><tr><td>死んだ標本や化石にも使える（交配は試せない）</td><td>幼体と成体が違って見えることがある。たとえば、イモムシと、それが変態したチョウ。</td></tr><tr><td>交配実験が要らない</td><td>異なる種がほとんど同じに見えて、誤って1つの種にされることがある</td></tr></table>\n<p><strong>だれが使うのか。</strong>リンネ、標本を整理する博物館の職員、骨や貝殻しか手がかりのない古生物学者です。</p>\n<p><strong>隠れた弱点。</strong>どこから「十分に違う」とするかは人間の判断で、科学者によって意見が分かれます。これはA3.1.5の、種の境界が恣意的になりうるという点につながります。</p>\n<p><strong>採点基準で使われる表現:</strong>「形や構造の特徴を使う」「化石にも適用できる」「種内の変異（雄と雌、幼体と成体）が誤解を招くことがある」「似た外見の別種が一緒にされることがある」。</p>",
+    "zh": "<table><tr><th>長處</th><th>短處</th></tr><tr><td>快捷：只需觀察生物</td><td>雄性和雌性可能外表差異很大。雄性水鴨 (mallard) 頭部是綠色，雌性則是褐色。</td></tr><tr><td>適用於死亡標本和化石（不能做繁殖測試）</td><td>幼體和成體可能外表不同，例如毛蟲和它變成的蝴蝶</td></tr><tr><td>不需要進行繁殖實驗</td><td>不同物種可能看上去幾乎一樣，因而被誤歸為同一物種</td></tr></table>\n<p><strong>誰會使用？</strong>林奈 (Linnaeus)、整理標本的博物館人員，以及只有骨骼和貝殼的古生物學家。</p>\n<p><strong>隱藏的弱點。</strong>差異要多大才算「足夠不同」是人為判斷，兩位科學家可能意見不同。這與 A3.1.5 相關，該處指出物種界線可以是任意的。</p>\n<p><strong>評分準則常用語：</strong>「使用外形／結構特徵」；「可應用於化石」；「物種內的變異（雌雄、幼成體）可能造成誤導」；「外表相似的不同物種可能被歸在一起」。</p>"
+   }
+  },
+  {
+   "i": 2,
+   "deeper": {
+    "en": "<table><tr><th>Written as</th><th>Correct?</th><th>Reason</th></tr><tr><td><em>Homo sapiens</em></td><td>Yes</td><td>Genus has a capital letter, species is lower case, in italics</td></tr><tr><td><em>homo sapiens</em></td><td>No</td><td>Genus needs a capital letter</td></tr><tr><td><em>Homo Sapiens</em></td><td>No</td><td>Species word must be lower case</td></tr><tr><td><em>sapiens</em> on its own</td><td>No</td><td>Both parts are needed</td></tr></table>\n<p><strong>Why not common names?</strong> \"Robin\" means <em>Erithacus rubecula</em> in Europe but a different bird, <em>Turdus migratorius</em>, in North America. One species can also have many common names in different languages. A binomial name is the same in every country.</p>\n<p><strong>What the genus tells you.</strong> Lion, tiger and leopard (<em>Panthera leo</em>, <em>P. tigris</em>, <em>P. pardus</em>) share the genus <em>Panthera</em> because they are closely related and share many traits. After the first full use, the genus may be shortened to its first letter, as in <em>P. tigris</em>.</p>\n<p><strong>Same species word, different genus.</strong> <em>alba</em> appears in <em>Tyto alba</em> (barn owl) and <em>Sinapis alba</em> (white mustard). So the second word alone does not identify anything.</p>\n<p><strong>Mark-scheme language:</strong> \"genus (capital letter) + species (lower case)\"; \"italics, or underlined if handwritten\"; \"same name worldwide\".</p>",
+    "ja": "<table><tr><th>書き方</th><th>正しいか</th><th>理由</th></tr><tr><td><em>Homo sapiens</em></td><td>正しい</td><td>属名は大文字で始め、種小名は小文字、斜体にする</td></tr><tr><td><em>homo sapiens</em></td><td>誤り</td><td>属名は大文字で始める必要がある</td></tr><tr><td><em>Homo Sapiens</em></td><td>誤り</td><td>種小名は小文字でなければならない</td></tr><tr><td><em>sapiens</em> だけ</td><td>誤り</td><td>2つの部分が両方必要</td></tr></table>\n<p><strong>なぜ通称ではだめか。</strong>「ロビン (robin)」はヨーロッパでは<em>Erithacus rubecula</em>ですが、北アメリカでは別の鳥<em>Turdus migratorius</em>を指します。また、1つの種に言語ごとにたくさんの通称があることもあります。学名（二名法の名前）はどの国でも同じです。</p>\n<p><strong>属名からわかること。</strong>ライオン、トラ、ヒョウ（<em>Panthera leo</em>、<em>P. tigris</em>、<em>P. pardus</em>）は近縁で多くの特徴を共有するため、同じ<em>Panthera</em>属です。最初に完全な形で書いた後は、<em>P. tigris</em>のように属名を頭文字だけに略してもかまいません。</p>\n<p><strong>同じ種小名で別の属。</strong><em>alba</em>は<em>Tyto alba</em>（メンフクロウ）にも<em>Sinapis alba</em>（シロガラシ）にもあります。第2の語だけでは何も特定できません。</p>\n<p><strong>採点基準で使われる表現:</strong>「属名（大文字）＋種小名（小文字）」「斜体、手書きなら下線」「世界共通の名前」。</p>",
+    "zh": "<table><tr><th>寫法</th><th>正確嗎？</th><th>原因</th></tr><tr><td><em>Homo sapiens</em></td><td>正確</td><td>屬名首字母大寫，種名小寫，用斜體</td></tr><tr><td><em>homo sapiens</em></td><td>不正確</td><td>屬名要大寫開首</td></tr><tr><td><em>Homo Sapiens</em></td><td>不正確</td><td>種名必須小寫</td></tr><tr><td>只寫 <em>sapiens</em></td><td>不正確</td><td>兩部分都必須有</td></tr></table>\n<p><strong>為何不用俗名？</strong>「robin（知更鳥）」在歐洲指 <em>Erithacus rubecula</em>，在北美卻指另一種鳥 <em>Turdus migratorius</em>。同一物種在不同語言中也可有很多俗名。雙名法的名稱在每個國家都相同。</p>\n<p><strong>屬名告訴你甚麼。</strong>獅、虎和豹（<em>Panthera leo</em>、<em>P. tigris</em>、<em>P. pardus</em>）因親緣關係密切並有很多共同特徵，所以同屬 <em>Panthera</em>。第一次寫出全名後，屬名可縮寫為首字母，如 <em>P. tigris</em>。</p>\n<p><strong>種名相同、屬不同。</strong><em>alba</em> 同時出現在 <em>Tyto alba</em>（倉鴞）和 <em>Sinapis alba</em>（白芥）。所以單憑第二個詞並不能辨認任何物種。</p>\n<p><strong>評分準則常用語：</strong>「屬名（大寫）＋種名（小寫）」；「斜體，手寫則加底線」；「全世界通用的同一名稱」。</p>"
+   }
+  },
+  {
+   "i": 3,
+   "deeper": {
+    "en": "<p><strong>Applying the definition.</strong></p>\n<table><tr><th>Cross</th><th>Offspring</th><th>Conclusion</th></tr><tr><td>Horse × donkey</td><td>Mule: healthy but sterile</td><td>Two species, because the offspring are not fertile</td></tr><tr><td>Two breeds of domestic dog</td><td>Fertile puppies</td><td>One species</td></tr><tr><td>Two kinds of plant that make fertile hybrids in the wild</td><td>Fertile hybrids</td><td>By the definition this is one species, even though many botanists name them as two. This is a limitation of the concept.</td></tr></table>\n<p><strong>\"Fertile\" means the offspring can themselves have offspring.</strong> Healthy but sterile offspring do not count.</p>\n<p><strong>Linking each challenge to the definition</strong> (useful for \"Discuss\"):</p>\n<ul><li>Fossils: breeding cannot be tested.</li><li>Populations far apart: they never meet, so interbreeding is untested.</li><li>Fertile hybrids, especially in plants: break the rule.</li><li>Wild species: it is hard to watch breeding in practice.</li></ul>\n<p><strong>Outline of a 4-mark \"Discuss\" answer:</strong> the definition (1); a limitation with an example (1); a second limitation (1); a competing definition such as morphology or DNA similarity (1).</p>",
+    "ja": "<p><strong>定義の当てはめ方。</strong></p>\n<table><tr><th>交配</th><th>子</th><th>結論</th></tr><tr><td>ウマ × ロバ</td><td>ラバ：健康だが不妊</td><td>子が生殖能力をもたないので、別種</td></tr><tr><td>イヌの2つの品種</td><td>生殖能力のある子イヌ</td><td>同じ種</td></tr><tr><td>野生で生殖能力のある雑種をつくる2種類の植物</td><td>生殖能力のある雑種</td><td>定義上は同じ種だが、多くの植物学者は別種として扱う。これはこの概念の限界である。</td></tr></table>\n<p><strong>「生殖能力がある (fertile)」とは、子自身も子をつくれるということです。</strong>健康でも不妊の子は含まれません。</p>\n<p><strong>それぞれの課題と定義の結びつけ</strong>（「議論せよ (discuss)」に役立ちます）：</p>\n<ul><li>化石：交配を試せない。</li><li>遠く離れた集団：出会わないので、交配できるか確かめられない。</li><li>生殖能力のある雑種（特に植物）：規則に反する。</li><li>野生の種：実際に交配を観察するのが難しい。</li></ul>\n<p><strong>4点の「議論せよ」の答案の骨組み：</strong>定義 (1)、例をつけた限界 (1)、2つめの限界 (1)、形態やDNAの類似性など別の定義 (1)。</p>",
+    "zh": "<p><strong>如何運用定義。</strong></p>\n<table><tr><th>雜交</th><th>後代</th><th>結論</th></tr><tr><td>馬 × 驢</td><td>騾：健康但不育</td><td>兩個物種，因為後代不能生育</td></tr><tr><td>兩個家犬品種</td><td>有生育能力的小狗</td><td>同一物種</td></tr><tr><td>在野外能產生可育雜種的兩類植物</td><td>可育的雜種</td><td>按定義是同一物種，但不少植物學家把它們稱為兩個物種。這是此概念的限制。</td></tr></table>\n<p><strong>「可育 (fertile)」指後代自己也能生育。</strong>健康但不育的後代不算。</p>\n<p><strong>把每項挑戰連繫到定義</strong>（有助回答「討論 (discuss)」）：</p>\n<ul><li>化石：不能測試繁殖。</li><li>相距遙遠的群體：從不相遇，未能測試是否可以雜交。</li><li>可育的雜種（尤其是植物）：打破了規則。</li><li>野生物種：實際上很難觀察牠們的繁殖。</li></ul>\n<p><strong>4 分「討論」答案的大綱：</strong>定義 (1)；一項附例子的限制 (1)；第二項限制 (1)；另一種定義，如外形或 DNA 相似性 (1)。</p>"
+   }
+  },
+  {
+   "i": 4,
+   "deeper": {
+    "en": "<p><strong>Speciation as a slow slide, not a switch.</strong></p>\n<table><tr><th>Stage</th><th>What is happening</th><th>One species or two?</th></tr><tr><td>1</td><td>One population interbreeds freely</td><td>Clearly one</td></tr><tr><td>2</td><td>The population splits into two non-interbreeding populations. Traits start to diverge.</td><td>Still very similar</td></tr><tr><td>3</td><td>After many generations the differences are large. If the populations meet, they may mate only sometimes, or their offspring may have low fertility.</td><td>Arbitrary: biologists may disagree</td></tr><tr><td>4</td><td>They cannot produce fertile offspring</td><td>Clearly two</td></tr></table>\n<p><strong>Why \"arbitrary\"?</strong> A gradual change has no natural dividing line, just as there is no exact moment at which a child becomes an adult. Species names are labels chosen by people, but nature changes continuously. Scientists using different tests (appearance, interbreeding, DNA) can reach different counts of species for the same group.</p>\n<p><strong>Mark-scheme language:</strong> \"speciation is gradual / divergence over many generations\"; \"no clear point at which populations become separate species\"; \"classifying populations as species is a human (arbitrary) decision\".</p>",
+    "ja": "<p><strong>種分化はスイッチではなくゆるやかな坂道。</strong></p>\n<table><tr><th>段階</th><th>起きていること</th><th>1種か2種か</th></tr><tr><td>1</td><td>1つの集団が自由に交配している</td><td>明らかに1種</td></tr><tr><td>2</td><td>集団が、交配しない2つの集団に分かれる。形質が分かれ（分岐し）はじめる。</td><td>まだとてもよく似ている</td></tr><tr><td>3</td><td>何世代もたつと違いが大きくなる。集団が出会うと、ときどきしか交配しなかったり、子の生殖能力が低かったりする。</td><td>恣意的：生物学者の意見が分かれることがある</td></tr><tr><td>4</td><td>生殖能力のある子をつくれない</td><td>明らかに2種</td></tr></table>\n<p><strong>なぜ「恣意的」なのか。</strong>ゆるやかな変化には自然な境目がありません。子どもが大人になる正確な瞬間がないのと同じです。種名は人間がつけたラベルですが、自然は連続的に変わります。見た目、交配、DNAなど異なる基準を使えば、同じ生物群でも種の数が変わりえます。</p>\n<p><strong>採点基準で使われる表現:</strong>「種分化は漸進的／何世代にもわたる分岐」「集団がいつ別の種になるかを示す明確な点はない」「集団を種として分類するのは人間の（恣意的な）判断」。</p>",
+    "zh": "<p><strong>物種形成是緩慢的滑落，不是開關。</strong></p>\n<table><tr><th>階段</th><th>發生甚麼事</th><th>一個物種還是兩個？</th></tr><tr><td>1</td><td>一個群體自由雜交</td><td>明顯是一個</td></tr><tr><td>2</td><td>群體分成兩個互不雜交的群體，性狀開始分歧</td><td>仍非常相似</td></tr><tr><td>3</td><td>經過很多世代，差異變大。如果兩個群體相遇，可能只是偶爾交配，或後代的生育力很低。</td><td>屬任意決定：生物學家可能意見不同</td></tr><tr><td>4</td><td>不能產生可育的後代</td><td>明顯是兩個</td></tr></table>\n<p><strong>為何是「任意的」？</strong>漸變沒有天然的分界線，正如孩子變成成人沒有一個確切時刻。物種名稱是人為選定的標籤，但自然界是連續變化的。使用不同的測試（外表、雜交、DNA），對同一類生物可得出不同的物種數目。</p>\n<p><strong>評分準則常用語：</strong>「物種形成是漸進的／多個世代的分歧」；「沒有一個清楚的點顯示群體何時變成不同物種」；「把群體分類為物種是人為（任意）的決定」。</p>"
+   }
+  },
+  {
+   "i": 5,
+   "deeper": {
+    "en": "<table><tr><th></th><th>Human</th><th>Chimpanzee</th></tr><tr><td>Chromosomes in a body cell (2n)</td><td>46</td><td>48</td></tr><tr><td>Homologous pairs</td><td>23</td><td>24</td></tr><tr><td>Chromosomes in a gamete (n)</td><td>23</td><td>24</td></tr></table>\n<p><strong>Worked example.</strong> 46 ÷ 2 = 23 pairs. A gamete receives one chromosome from each pair, so it has half the body-cell number.</p>\n<p><strong>Common traps.</strong></p>\n<ul><li>Chromosome number says nothing about how complex an organism is, or how much DNA it has. More chromosomes does not mean \"more advanced\".</li><li>A diploid cell normally has an even number, because chromosomes are in pairs. A person with 47 chromosomes because of one extra chromosome is still a human, not a new species.</li><li>Do not write \"humans have 23 chromosomes\". Say 46 in body cells (23 pairs).</li></ul>\n<p><strong>Mark-scheme language:</strong> \"different species usually have different chromosome numbers\"; \"members of one species have the same number\"; \"humans 46, chimpanzees 48\".</p>",
+    "ja": "<table><tr><th></th><th>ヒト</th><th>チンパンジー</th></tr><tr><td>体細胞の染色体数 (2n)</td><td>46</td><td>48</td></tr><tr><td>相同染色体の対の数</td><td>23</td><td>24</td></tr><tr><td>配偶子の染色体数 (n)</td><td>23</td><td>24</td></tr></table>\n<p><strong>計算例。</strong>46 ÷ 2 = 23対。配偶子は各対から1本ずつ受け取るので、体細胞の半分の数になります。</p>\n<p><strong>よくある落とし穴。</strong></p>\n<ul><li>染色体数は、生物の複雑さやDNAの量を表しません。染色体が多いから「進んでいる」わけではありません。</li><li>二倍体の細胞は、染色体が対になっているので普通は偶数です。染色体が1本余分で47本の人も、新しい種ではなくヒトです。</li><li>「ヒトの染色体は23本」と書かないこと。体細胞で46本（23対）と書きます。</li></ul>\n<p><strong>採点基準で使われる表現:</strong>「種が違えば染色体数も通常違う」「同じ種のメンバーは同じ数をもつ」「ヒトは46、チンパンジーは48」。</p>",
+    "zh": "<table><tr><th></th><th>人類</th><th>黑猩猩</th></tr><tr><td>體細胞的染色體數目 (2n)</td><td>46</td><td>48</td></tr><tr><td>同源染色體對數</td><td>23</td><td>24</td></tr><tr><td>配子的染色體數目 (n)</td><td>23</td><td>24</td></tr></table>\n<p><strong>計算示例。</strong>46 ÷ 2 = 23 對。配子從每一對染色體各得一條，所以只有體細胞數目的一半。</p>\n<p><strong>常見陷阱。</strong></p>\n<ul><li>染色體數目並不能說明生物有多複雜，也不代表 DNA 的多少。染色體多不等於「更進化」。</li><li>二倍體細胞的染色體成對，所以通常是偶數。因多了一條染色體而有 47 條的人仍是人類，不是新物種。</li><li>不要寫「人類有 23 條染色體」，應寫體細胞有 46 條（23 對）。</li></ul>\n<p><strong>評分準則常用語：</strong>「不同物種通常有不同的染色體數目」；「同一物種的成員有相同數目」；「人類 46，黑猩猩 48」。</p>"
+   }
+  },
+  {
+   "i": 6,
+   "deeper": {
+    "en": "<p><strong>How to read a karyogram.</strong> (1) Count all the chromosomes. (2) Check that each chromosome has a partner of the same length, banding and centromere position. (3) Look at the last pair: XX is female and XY is male. (4) Look for an extra or a missing chromosome.</p>\n<p><strong>Testing the chromosome 2 fusion hypothesis.</strong> A good hypothesis makes predictions that can be checked.</p>\n<table><tr><th>Prediction if two ancestral chromosomes fused</th><th>Observation</th></tr><tr><td>Banding of human chromosome 2 matches two ape chromosomes joined end to end</td><td>It matches chimpanzee 2A and 2B</td></tr><tr><td>Telomere DNA, normally at chromosome ends, should be found in the middle</td><td>It is found there</td></tr><tr><td>A second centromere should leave a remnant</td><td>A remnant of a second centromere is present</td></tr></table>\n<p><strong>The arithmetic.</strong> Chimpanzee: n = 24, 2n = 48. One fusion joins two chromosomes into one, so n = 23 and 2n = 46, which matches the human number. No genes are lost; they are just on one chromosome.</p>\n<p><strong>Evaluating.</strong> Strengths: three separate lines of evidence agree, and each was a prediction that could have failed. Limitation: the fusion happened long ago in an ancestor, so nobody saw it. The evidence supports the hypothesis but cannot prove it.</p>\n<p><strong>Mark-scheme language:</strong> \"banding patterns match\"; \"telomere sequences in the middle of the chromosome\"; \"remnant of a second centromere\"; \"explains 48 to 46 without loss of genes\".</p>",
+    "ja": "<p><strong>カリオグラムの読み方。</strong>(1) 染色体の総数を数える。(2) 各染色体に、長さ・縞模様・動原体の位置が同じ相手がいるか確かめる。(3) 最後の対を見る：XXは女性、XYは男性。(4) 余分な染色体や足りない染色体がないか調べる。</p>\n<p><strong>第2染色体の融合仮説を検証する。</strong>よい仮説は、確かめられる予測を立てます。</p>\n<table><tr><th>祖先の2本の染色体が融合したとした場合の予測</th><th>観察結果</th></tr><tr><td>ヒト第2染色体の縞模様は、類人猿の2本の染色体を端どうしでつないだものに一致する</td><td>チンパンジーの2Aと2Bに一致する</td></tr><tr><td>ふつうは染色体の末端にあるテロメアのDNAが、中央に見つかるはずである</td><td>そこに見つかる</td></tr><tr><td>2つめの動原体の名残があるはずである</td><td>2つめの動原体の名残がある</td></tr></table>\n<p><strong>数の計算。</strong>チンパンジーはn = 24、2n = 48。融合で2本が1本になるとn = 23、2n = 46となり、ヒトの数と一致します。遺伝子は失われず、1本の染色体の上に並んでいるだけです。</p>\n<p><strong>評価する。</strong>強み：3つの別々の証拠が一致しており、どれも外れる可能性のあった予測でした。限界：融合は祖先で遠い昔に起きたため、だれも見ていません。証拠は仮説を支持しますが、証明はできません。</p>\n<p><strong>採点基準で使われる表現:</strong>「縞模様が一致する」「染色体の中央にテロメア配列がある」「2つめの動原体の名残」「遺伝子を失わずに48が46になることを説明する」。</p>",
+    "zh": "<p><strong>如何閱讀染色體組型圖 (karyogram)。</strong>(1) 數算所有染色體。(2) 檢查每條染色體是否有長度、帶紋和著絲粒位置相同的配對。(3) 看最後一對：XX 是女性，XY 是男性。(4) 找出多出或缺少的染色體。</p>\n<p><strong>檢驗第 2 號染色體融合假說。</strong>好的假說會作出可以檢驗的預測。</p>\n<table><tr><th>如果兩條祖先染色體融合，預測會出現</th><th>觀察結果</th></tr><tr><td>人類第 2 號染色體的帶紋與兩條猿類染色體首尾相接的情況吻合</td><td>與黑猩猩的 2A 和 2B 吻合</td></tr><tr><td>通常在染色體末端的端粒 DNA，應該在中間找到</td><td>在中間找到</td></tr><tr><td>應該留下第二個著絲粒的殘跡</td><td>有第二個著絲粒的殘跡</td></tr></table>\n<p><strong>數字計算。</strong>黑猩猩：n = 24，2n = 48。一次融合把兩條染色體變成一條，所以 n = 23，2n = 46，與人類數目吻合。沒有基因丟失，只是在同一條染色體上。</p>\n<p><strong>評鑑。</strong>優點：三項獨立證據一致，而且每項都是有可能失敗的預測。限制：融合發生在很久以前的祖先身上，沒有人親眼看見。證據支持假說，但不能證明。</p>\n<p><strong>評分準則常用語：</strong>「帶紋吻合」；「染色體中間有端粒序列」；「第二個著絲粒的殘跡」；「解釋 48 變成 46 而沒有丟失基因」。</p>"
+   }
+  },
+  {
+   "i": 7,
+   "deeper": {
+    "en": "<p><strong>What a SNP looks like.</strong> Two people, same stretch of genome:</p>\n<table><tr><td>Person 1</td><td class=\"mono\">…A C G T <strong>C</strong> A G…</td></tr><tr><td>Person 2</td><td class=\"mono\">…A C G T <strong>T</strong> A G…</td></tr></table>\n<p>One base differs. That is a single-nucleotide polymorphism (SNP).</p>\n<p><strong>Worked numbers.</strong> The human genome is about 3 100 Mbp = 3.1 × 10<sup>9</sup> base pairs.</p>\n<ul><li>Two humans differ at about 1 base in 1000 (0.1%): 3.1 × 10<sup>9</sup> ÷ 1000 ≈ <strong>3 million</strong> differences.</li><li>Human and chimpanzee differ at about 12 bases in 1000 (1.2%): 3.1 × 10<sup>9</sup> × 0.012 ≈ <strong>37 million</strong> single-base differences.</li><li>So the between-species difference is about 12 times the within-species difference, even though both seem small as percentages.</li></ul>\n<p><strong>Do not confuse:</strong> a <em>genome</em> is all the DNA of an organism. A <em>gene</em> is one part of it. Much of the genome lies between genes.</p>\n<p><strong>Mark-scheme language:</strong> \"most of the genome is shared within a species\"; \"SNPs are single-base differences that give diversity within the species\"; \"greater differences in size and sequence between species than within\".</p>",
+    "ja": "<p><strong>SNPとはどんなものか。</strong>ゲノムの同じ部分での2人の比較：</p>\n<table><tr><td>人物1</td><td class=\"mono\">…A C G T <strong>C</strong> A G…</td></tr><tr><td>人物2</td><td class=\"mono\">…A C G T <strong>T</strong> A G…</td></tr></table>\n<p>塩基が1つだけ違います。これが一塩基多型 (single-nucleotide polymorphism, SNP) です。</p>\n<p><strong>計算例。</strong>ヒトのゲノムは約3 100 Mbp = 3.1 × 10<sup>9</sup> 塩基対です。</p>\n<ul><li>ヒトどうしは約1000塩基に1つ（0.1%）違います：3.1 × 10<sup>9</sup> ÷ 1000 ≈ <strong>300万</strong>か所の違い。</li><li>ヒトとチンパンジーは約1000塩基に12個（1.2%）違います：3.1 × 10<sup>9</sup> × 0.012 ≈ <strong>3700万</strong>か所の一塩基の違い。</li><li>つまり、種間の違いは種内の違いの約12倍です。どちらもパーセントでは小さく見えますが、差は大きいのです。</li></ul>\n<p><strong>混同しないこと：</strong>ゲノム (genome) は生物のDNA全体、遺伝子 (gene) はその一部です。ゲノムの多くは遺伝子と遺伝子の間にあります。</p>\n<p><strong>採点基準で使われる表現:</strong>「種内ではゲノムの大部分が共通」「SNPは種内の多様性を生む一塩基の違い」「大きさと塩基配列の違いは、種内より種間で大きい」。</p>",
+    "zh": "<p><strong>SNP 是怎樣的？</strong>兩個人，基因組的同一段：</p>\n<table><tr><td>甲</td><td class=\"mono\">…A C G T <strong>C</strong> A G…</td></tr><tr><td>乙</td><td class=\"mono\">…A C G T <strong>T</strong> A G…</td></tr></table>\n<p>只有一個鹼基不同，這就是單核苷酸多態性 (single-nucleotide polymorphism, SNP)。</p>\n<p><strong>計算示例。</strong>人類基因組約 3 100 Mbp = 3.1 × 10<sup>9</sup> 個鹼基對。</p>\n<ul><li>兩個人約每 1000 個鹼基有 1 個不同（0.1%）：3.1 × 10<sup>9</sup> ÷ 1000 ≈ <strong>300 萬</strong>處差異。</li><li>人類與黑猩猩約每 1000 個鹼基有 12 個不同（1.2%）：3.1 × 10<sup>9</sup> × 0.012 ≈ <strong>3 700 萬</strong>處單鹼基差異。</li><li>所以物種之間的差異約是物種之內差異的 12 倍，雖然兩者以百分率計看似都很小。</li></ul>\n<p><strong>不要混淆：</strong>基因組 (genome) 是生物所有的 DNA，基因 (gene) 只是其中一部分。基因組有很大部分位於基因之間。</p>\n<p><strong>評分準則常用語：</strong>「同一物種內基因組大部分相同」；「SNP 是單鹼基差異，令物種內有多樣性」；「物種之間在大小和序列上的差異比物種之內更大」。</p>"
+   }
+  },
+  {
+   "i": 8,
+   "deeper": {
+    "en": "<p><strong>Steps for extracting data from a database.</strong> (1) Choose a database, such as the NCBI Genome database or the Kew Plant DNA C-values database. (2) Search for each species by its binomial name. (3) Read the genome size and note the <strong>unit</strong> (bp, Mbp, Gbp, or picograms, pg). (4) Convert all values to the same unit. (5) Record them in a table and sort them.</p>\n<p><strong>Worked comparisons</strong> (using the table above).</p>\n<ul><li><em>Paris japonica</em> ÷ human = 150 000 ÷ 3 100 ≈ <strong>48 times</strong> larger.</li><li>Wheat ÷ human = 16 000 ÷ 3 100 ≈ 5 times larger.</li><li>Human ÷ yeast = 3 100 ÷ 12 ≈ 260 times larger.</li></ul>\n<p><strong>Graphing.</strong> The values run from 12 to 150 000 Mbp, a range of four powers of ten. On an ordinary axis the small genomes would be invisible bars. A logarithmic axis shows all of them.</p>\n<p><strong>Pitfalls.</strong> Mixed units; values that differ slightly between sources; plants with extra sets of chromosomes. If you meet picograms: 1 pg of DNA is about 1000 Mbp (precisely 978 Mbp).</p>\n<p><strong>Mark-scheme language:</strong> \"no correlation between genome size and complexity\"; \"give data with units\"; \"a larger genome may contain more non-coding DNA, or extra sets of chromosomes, not simply more genes\".</p>",
+    "ja": "<p><strong>データベースからデータを取り出す手順。</strong>(1) NCBI GenomeデータベースやKew植物DNA C値データベースなどを選ぶ。(2) 種ごとに学名で検索する。(3) ゲノムの大きさを読み、<strong>単位</strong>（bp、Mbp、Gbp、またはピコグラム pg）を確認する。(4) すべての値を同じ単位に直す。(5) 表にまとめ、並べ替える。</p>\n<p><strong>比較の計算例</strong>（上の表を使用）。</p>\n<ul><li><em>Paris japonica</em> ÷ ヒト = 150 000 ÷ 3 100 ≈ <strong>48倍</strong>大きい。</li><li>コムギ ÷ ヒト = 16 000 ÷ 3 100 ≈ 5倍大きい。</li><li>ヒト ÷ 酵母 = 3 100 ÷ 12 ≈ 260倍大きい。</li></ul>\n<p><strong>グラフにするとき。</strong>値は12から150 000 Mbpまで、10の4乗にわたります。ふつうの目盛りでは、小さいゲノムの棒が見えなくなります。対数目盛りなら全部が見えます。</p>\n<p><strong>落とし穴。</strong>単位の混在、出典による値のわずかな違い、染色体の組が余分にある植物。ピコグラムが出てきたら、DNA 1 pgは約1000 Mbp（正確には978 Mbp）です。</p>\n<p><strong>採点基準で使われる表現:</strong>「ゲノムの大きさと複雑さに相関はない」「データは単位をつけて示す」「大きなゲノムは、遺伝子が多いというより、非コードDNAが多いか染色体の組が余分にあることが多い」。</p>",
+    "zh": "<p><strong>從資料庫提取數據的步驟。</strong>(1) 選擇資料庫，例如 NCBI 基因組資料庫或 Kew 植物 DNA C 值資料庫。(2) 用雙名法學名搜尋每個物種。(3) 讀取基因組大小，並留意<strong>單位</strong>（bp、Mbp、Gbp，或皮克 pg）。(4) 把所有數值換成同一單位。(5) 記錄在表中並排序。</p>\n<p><strong>比較計算示例</strong>（使用上表）。</p>\n<ul><li><em>Paris japonica</em> ÷ 人類 = 150 000 ÷ 3 100 ≈ 大 <strong>48 倍</strong>。</li><li>小麥 ÷ 人類 = 16 000 ÷ 3 100 ≈ 大 5 倍。</li><li>人類 ÷ 酵母 = 3 100 ÷ 12 ≈ 大 260 倍。</li></ul>\n<p><strong>繪圖。</strong>數值由 12 至 150 000 Mbp，跨越四個十的冪。用普通座標軸時，小基因組的柱幾乎看不見。對數座標軸就能全部顯示。</p>\n<p><strong>陷阱。</strong>單位混用；不同來源的數值略有差異；有額外染色體組的植物。如遇到皮克：1 pg 的 DNA 約為 1000 Mbp（準確是 978 Mbp）。</p>\n<p><strong>評分準則常用語：</strong>「基因組大小與複雜程度沒有相關」；「引用數據要附單位」；「較大的基因組可能含較多非編碼 DNA 或額外染色體組，而非單純基因較多」。</p>"
+   }
+  },
+  {
+   "i": 9,
+   "deeper": {
+    "en": "<p><strong>Trend in speed and cost.</strong> The Human Genome Project ran from 1990 to 2003 and cost billions of dollars. Now a human genome can be sequenced in about a day for roughly a thousand dollars or less. Cheaper and faster means more species and more individuals can be sequenced.</p>\n<p><strong>How sequences show relationships.</strong> Count the differences between sequences from two species. More differences means more time since they shared an ancestor, so they are less closely related. With illustrative figures, human and chimpanzee differ at 12 bases in 1000 and human and mouse at 150 in 1000. So humans are more closely related to chimpanzees than to mice.</p>\n<p><strong>Personalised medicine, in more detail.</strong> If a patient's genome is known, a doctor could choose a drug or dose that suits that patient, for example because the patient's genes make them break the drug down slowly, or give advice about a disease the patient is at high risk of. This is a possible future use, not yet routine.</p>\n<p><strong>Issues for an \"evaluate\" answer.</strong> Privacy of genetic information; possible misuse by insurers or employers; results that are hard to interpret.</p>\n<p><strong>Mark-scheme language:</strong> \"sequencing is getting faster and cheaper\"; \"compare genomes to find evolutionary relationships\"; \"future: personalised medicine, treatment matched to the individual's genome\".</p>",
+    "ja": "<p><strong>速度と費用の傾向。</strong>ヒトゲノム計画は1990年から2003年まで続き、費用は数十億ドルでした。いまではヒトゲノムを約1日、およそ千ドル以下で解読できます。安く速くなれば、より多くの種や個体を解読できます。</p>\n<p><strong>塩基配列から類縁関係がわかる仕組み。</strong>2つの種の配列の違いを数えます。違いが多いほど共通祖先から長い時間がたっており、類縁関係は遠いことになります。例として（説明用の数値）、ヒトとチンパンジーは1000塩基中12個、ヒトとマウスは150個違います。したがって、ヒトはマウスよりチンパンジーに近縁です。</p>\n<p><strong>個別化医療をくわしく。</strong>患者のゲノムがわかれば、医師はその患者に合う薬や量を選べるかもしれません。たとえば、その人の遺伝子のせいで薬の分解が遅い場合や、高リスクの病気について助言をする場合です。これは将来の利用の可能性であり、まだ日常的ではありません。</p>\n<p><strong>「評価せよ (evaluate)」で考える論点。</strong>遺伝情報のプライバシー、保険会社や雇用主による悪用の可能性、結果の解釈の難しさ。</p>\n<p><strong>採点基準で使われる表現:</strong>「解読は速く安くなっている」「ゲノムを比べて進化的な類縁関係を調べる」「将来：個別化医療（個人のゲノムに合わせた治療）」。</p>",
+    "zh": "<p><strong>速度和成本的趨勢。</strong>人類基因組計劃由 1990 年至 2003 年，花費數十億美元。現在約一天就能完成一個人類基因組的定序，費用約一千美元或更少。更便宜、更快，意味着可以對更多物種和更多個體定序。</p>\n<p><strong>序列如何顯示親緣關係。</strong>數算兩個物種序列之間的差異。差異愈多，表示距離共同祖先的時間愈長，親緣關係愈疏遠。以說明用的數字為例，人類與黑猩猩每 1000 個鹼基有 12 個差異，人類與小鼠則有 150 個。所以人類與黑猩猩的親緣關係比與小鼠更近。</p>\n<p><strong>詳述個人化醫療。</strong>如果知道病人的基因組，醫生就可能選擇適合該病人的藥物或劑量，例如病人的基因令他分解藥物較慢，或就病人高風險的疾病提供建議。這是將來可能的用途，目前尚未普及。</p>\n<p><strong>「評鑑 (evaluate)」答案的議題。</strong>遺傳資料的私隱；保險公司或僱主可能濫用；結果難以詮釋。</p>\n<p><strong>評分準則常用語：</strong>「定序愈來愈快、愈來愈便宜」；「比較基因組以找出演化親緣關係」；「將來：個人化醫療，按個人基因組配合治療」。</p>"
+   }
+  },
+  {
+   "i": 10,
+   "deeper": {
+    "en": "<table><tr><th>Situation</th><th>Why the concept fails</th><th>What can be used instead</th></tr><tr><td>Asexual reproduction (bacteria, and some plants, fungi and animals)</td><td>Offspring are clones made without a partner. \"Can interbreed and produce fertile offspring\" cannot be tested.</td><td>Similarity in DNA sequence, or in structure and way of life</td></tr><tr><td>Bacteria exchanging genes by horizontal gene transfer</td><td>Genes pass sideways, even between different species, so gene pools are not kept separate</td><td>Similarity in DNA sequence</td></tr></table>\n<p><strong>Horizontal gene transfer</strong> means passing genetic material to another organism that is not your offspring. In vertical transfer, genes pass from parent to offspring.</p>\n<p><strong>Exam trap.</strong> Do not write that \"bacteria do not reproduce\". They do, by binary fission, which is asexual. The point is that there is <em>no interbreeding</em>.</p>\n<p><strong>Mark-scheme language:</strong> \"does not apply to asexual organisms because there is no breeding with a partner\"; \"horizontal gene transfer moves genes between different species\"; \"other definitions, such as DNA similarity, are used\".</p>",
+    "ja": "<table><tr><th>状況</th><th>概念が成り立たない理由</th><th>代わりに使えるもの</th></tr><tr><td>無性生殖（細菌、一部の植物・菌類・動物）</td><td>子は相手なしにつくられたクローン。「交配して生殖能力のある子をつくれる」かを確かめられない。</td><td>DNA配列の類似性、あるいは構造や生活様式の類似性</td></tr><tr><td>水平伝播 (horizontal gene transfer) で遺伝子をやり取りする細菌</td><td>遺伝子が横方向に、別の種のあいだでも移動するので、遺伝子プールが分かれたままにならない</td><td>DNA配列の類似性</td></tr></table>\n<p><strong>水平遺伝子伝播</strong>とは、自分の子ではない別の生物に遺伝物質を渡すことです。垂直伝播では、遺伝子は親から子へ伝わります。</p>\n<p><strong>答案の落とし穴。</strong>「細菌は繁殖しない」と書いてはいけません。細菌は二分裂という無性生殖で増えます。要点は<em>交配がない</em>ことです。</p>\n<p><strong>採点基準で使われる表現:</strong>「相手と交配しないので無性生物には当てはまらない」「水平遺伝子伝播は異なる種のあいだで遺伝子を移す」「DNAの類似性など別の定義が使われる」。</p>",
+    "zh": "<table><tr><th>情況</th><th>概念為何不適用</th><th>可改用甚麼</th></tr><tr><td>無性生殖（細菌，以及一些植物、真菌和動物）</td><td>後代是沒有配偶而產生的複製體。「能雜交並產生可育後代」無法測試。</td><td>DNA 序列相似程度，或結構和生活方式的相似程度</td></tr><tr><td>以水平基因轉移 (horizontal gene transfer) 交換基因的細菌</td><td>基因橫向傳遞，甚至在不同物種之間，所以基因庫不會保持分隔</td><td>DNA 序列相似程度</td></tr></table>\n<p><strong>水平基因轉移</strong>是指把遺傳物質傳給不是自己後代的另一生物。垂直轉移則是基因由親代傳給後代。</p>\n<p><strong>考試陷阱。</strong>不要寫「細菌不繁殖」。細菌以二分裂這種無性方式繁殖。重點是<em>沒有雜交</em>。</p>\n<p><strong>評分準則常用語：</strong>「不適用於無性生物，因為沒有與配偶繁殖」；「水平基因轉移令基因在不同物種之間移動」；「改用其他定義，如 DNA 相似性」。</p>"
+   }
+  },
+  {
+   "i": 11,
+   "deeper": {
+    "en": "<p><strong>A worked example: the mule.</strong> (Numbers are for illustration; you do not need to memorise them.)</p>\n<ol><li>Horse: 2n = 64, so its gametes have n = 32.</li><li>Donkey: 2n = 62, so its gametes have n = 31.</li><li>Mule zygote: 32 + 31 = 63 chromosomes.</li><li>63 is an odd number, so at least one chromosome has no partner. The horse and donkey chromosomes are also not fully matching.</li><li>In meiosis, chromosomes must pair up as homologous pairs before they separate. Pairing fails, so the gametes get unbalanced sets of chromosomes and are usually not viable. The mule is sterile.</li></ol>\n<p>In the same way, a human (46) and chimpanzee (48) hybrid would be expected to have 47 chromosomes, an odd number, and to be infertile.</p>\n<p><strong>The effect on species.</strong> No fertile hybrids means no genes flow between the two gene pools, so the species stay separate. A different chromosome number acts as a barrier.</p>\n<p><strong>Care with wording.</strong> The guide says \"unlikely to be fertile\", because the rule is not absolute.</p>\n<p><strong>Mark-scheme language:</strong> \"chromosomes cannot form homologous pairs in meiosis\"; \"gametes are not viable / hybrid is sterile\"; \"no gene flow, so gene pools stay separate\".</p>",
+    "ja": "<p><strong>計算例：ラバ。</strong>（数値は例示で、覚える必要はありません。）</p>\n<ol><li>ウマ：2n = 64、配偶子はn = 32。</li><li>ロバ：2n = 62、配偶子はn = 31。</li><li>ラバの受精卵：32 + 31 = 63本。</li><li>63は奇数なので、少なくとも1本は相手のいない染色体になります。ウマとロバの染色体は、完全には対応してもいません。</li><li>減数分裂では、染色体は相同染色体として対合してから分かれる必要があります。対合がうまくいかないため、配偶子の染色体の組は不均衡になり、たいていは生存できません。ラバは不妊です。</li></ol>\n<p>同様に、ヒト（46）とチンパンジー（48）の雑種があったとしたら、染色体は奇数の47本になり、不妊だと予想されます。</p>\n<p><strong>種への影響。</strong>生殖能力のある雑種ができなければ、2つの遺伝子プールのあいだで遺伝子が流れないので、種は分かれたままです。染色体数の違いが障壁としてはたらきます。</p>\n<p><strong>言葉づかいの注意。</strong>ガイドは「生殖能力をもつ可能性は低い (unlikely to be fertile)」と述べています。この規則に例外がないわけではないからです。</p>\n<p><strong>採点基準で使われる表現:</strong>「減数分裂で染色体が相同染色体の対をつくれない」「配偶子が生存できない／雑種は不妊」「遺伝子の流れがなく、遺伝子プールが分かれたまま」。</p>",
+    "zh": "<p><strong>計算示例：騾 (mule)。</strong>（數字只作說明，不需要記憶。）</p>\n<ol><li>馬：2n = 64，所以配子 n = 32。</li><li>驢：2n = 62，所以配子 n = 31。</li><li>騾的受精卵：32 + 31 = 63 條染色體。</li><li>63 是奇數，所以至少有一條染色體沒有配對。馬和驢的染色體也並非完全匹配。</li><li>在減數分裂中，染色體必須先配成同源染色體對才分開。配對失敗，配子便得到不平衡的染色體組，通常不能存活。騾因此不育。</li></ol>\n<p>同樣，人類（46）與黑猩猩（48）的雜種預期會有 47 條染色體（奇數），並且不育。</p>\n<p><strong>對物種的影響。</strong>沒有可育的雜種，兩個基因庫之間就沒有基因流動，物種因而保持分隔。不同的染色體數目起了屏障作用。</p>\n<p><strong>措辭要小心。</strong>課程指引說「不大可能可育 (unlikely to be fertile)」，因為這個規則並非絕對。</p>\n<p><strong>評分準則常用語：</strong>「染色體在減數分裂中不能形成同源染色體對」；「配子不能存活／雜種不育」；「沒有基因流動，所以基因庫保持分隔」。</p>"
+   }
+  },
+  {
+   "i": 12,
+   "deeper": {
+    "en": "<p><strong>Good and poor key statements.</strong></p>\n<table><tr><th>Good (observable, clear)</th><th>Poor (why)</th></tr><tr><td>Has six legs</td><td>Is big (not measurable)</td></tr><tr><td>Leaf edge has sharp spines</td><td>Looks like an oak (needs prior knowledge)</td></tr><tr><td>Shell present</td><td>Is young (changes with age)</td></tr></table>\n<p><strong>A second worked key (four trees).</strong></p>\n<table><tr><td>1a</td><td>Leaves needle-shaped</td><td>Pine</td></tr><tr><td>1b</td><td>Leaves broad and flat</td><td>go to 2</td></tr><tr><td>2a</td><td>Leaf edge deeply lobed</td><td>Oak</td></tr><tr><td>2b</td><td>Leaf edge not lobed</td><td>go to 3</td></tr><tr><td>3a</td><td>Leaf edge with sharp spines</td><td>Holly</td></tr><tr><td>3b</td><td>Leaf edge smooth or gently wavy</td><td>Beech</td></tr></table>\n<p><strong>Checks.</strong> 4 organisms need 4 − 1 = 3 pairs. Every organism appears exactly once as an end point. Every \"go to\" leads to a pair that exists. The two choices in a pair never lead to the same place.</p>\n<p><strong>Using a key.</strong> Start at 1, choose a or b, follow the instruction, repeat until you reach a name.</p>\n<p><strong>Mark-scheme language:</strong> \"each pair gives two contrasting, observable features\"; \"avoids size and colour unless measured / stable\"; \"ends in a name for every organism\"; \"tested on a new user\".</p>",
+    "ja": "<p><strong>よい検索表の文と悪い文。</strong></p>\n<table><tr><th>よい文（観察でき、明確）</th><th>悪い文（理由）</th></tr><tr><td>脚が6本ある</td><td>大きい（測れない）</td></tr><tr><td>葉の縁に鋭いとげがある</td><td>カシに似ている（予備知識が必要）</td></tr><tr><td>殻がある</td><td>若い（年齢で変わる）</td></tr></table>\n<p><strong>2つめの例（4種の樹木）。</strong></p>\n<table><tr><td>1a</td><td>葉が針の形</td><td>マツ</td></tr><tr><td>1b</td><td>葉が幅広く平ら</td><td>2へ</td></tr><tr><td>2a</td><td>葉の縁が深く切れ込んでいる</td><td>カシ</td></tr><tr><td>2b</td><td>葉の縁に切れ込みがない</td><td>3へ</td></tr><tr><td>3a</td><td>葉の縁に鋭いとげがある</td><td>ヒイラギ</td></tr><tr><td>3b</td><td>葉の縁がなめらか、またはゆるく波打つ</td><td>ブナ</td></tr></table>\n<p><strong>確認点。</strong>4種なら 4 − 1 = 3組が必要です。どの生物も終点にちょうど1回だけ現れます。すべての「〜へ」は実在する組に続きます。1組の2つの選択肢が同じ行き先になってはいけません。</p>\n<p><strong>検索表の使い方。</strong>1から始め、aかbを選び、指示に従い、名前に着くまで繰り返します。</p>\n<p><strong>採点基準で使われる表現:</strong>「各組が、対照的で観察できる2つの特徴を示す」「測定していない大きさや色、変わる特徴は避ける」「すべての生物が名前で終わる」「新しい使用者で試した」。</p>",
+    "zh": "<p><strong>好與差的檢索表句子。</strong></p>\n<table><tr><th>好（可觀察、清楚）</th><th>差（原因）</th></tr><tr><td>有六條腿</td><td>很大（不能量度）</td></tr><tr><td>葉緣有尖刺</td><td>看起來像橡樹（需要預先知識）</td></tr><tr><td>有殼</td><td>是幼體（隨年齡改變）</td></tr></table>\n<p><strong>第二個示例（四種樹）。</strong></p>\n<table><tr><td>1a</td><td>葉呈針狀</td><td>松樹</td></tr><tr><td>1b</td><td>葉寬而扁平</td><td>前往 2</td></tr><tr><td>2a</td><td>葉緣深裂</td><td>橡樹</td></tr><tr><td>2b</td><td>葉緣沒有深裂</td><td>前往 3</td></tr><tr><td>3a</td><td>葉緣有尖刺</td><td>冬青</td></tr><tr><td>3b</td><td>葉緣平滑或輕微波浪形</td><td>山毛櫸</td></tr></table>\n<p><strong>檢查。</strong>4 種生物需要 4 − 1 = 3 對陳述。每種生物恰好出現一次作為終點。每個「前往」都通向存在的陳述對。同一對的兩個選擇不會通向同一處。</p>\n<p><strong>使用檢索表。</strong>由 1 開始，選 a 或 b，跟隨指示，重複直至得到名稱。</p>\n<p><strong>評分準則常用語：</strong>「每對陳述給出兩個對比而可觀察的特徵」；「避免使用未量度或不穩定的大小和顏色」；「每種生物都以名稱作結」；「已讓新使用者測試」。</p>"
+   }
+  },
+  {
+   "i": 13,
+   "deeper": {
+    "en": "<p><strong>Why a short barcode works.</strong> The barcode region is similar enough in all species to be copied with the same method, but different enough in base sequence to tell species apart. A match to a reference database names the species.</p>\n<table><tr><th></th><th>Traditional survey (netting, watching)</th><th>eDNA barcoding</th></tr><tr><td>Need to see or catch organisms?</td><td>Yes</td><td>No: a water, soil or air sample is enough</td></tr><tr><td>Rare, shy or night-active species</td><td>Easily missed</td><td>More likely to be detected</td></tr><tr><td>Species per sample</td><td>Only those caught or seen</td><td>Many at once</td></tr><tr><td>Tells you numbers?</td><td>Can count individuals</td><td>Mainly presence, not reliable numbers</td></tr></table>\n<p><strong>Limitations.</strong> A species not in the reference database cannot be named. DNA may come from dead organisms or be carried by water from elsewhere, so presence is not proof the animal lives right there. Samples can be contaminated.</p>\n<p><strong>Outline of a 4-mark answer:</strong> sample taken from the habitat (1); DNA extracted and barcode sequences read (1); sequences compared with a database of known species (1); advantage such as rapid, no need to see the organisms (1).</p>",
+    "ja": "<p><strong>短いバーコードで足りる理由。</strong>バーコード領域は、すべての種で十分に似ていて同じ方法でコピーできる一方、塩基配列は種を区別できるほど違っています。参照データベースと一致すれば、種名がわかります。</p>\n<table><tr><th></th><th>従来の調査（網で捕る、観察する）</th><th>環境DNA (eDNA) バーコーディング</th></tr><tr><td>生物を見たり捕まえたりする必要は？</td><td>ある</td><td>ない：水、土、空気の試料だけでよい</td></tr><tr><td>まれな種、臆病な種、夜行性の種</td><td>見逃しやすい</td><td>検出されやすい</td></tr><tr><td>1つの試料でわかる種</td><td>捕れた、または見えたものだけ</td><td>一度にたくさん</td></tr><tr><td>個体数がわかるか</td><td>個体を数えられる</td><td>おもに存在の有無で、数は信頼できない</td></tr></table>\n<p><strong>限界。</strong>参照データベースにない種は名前がわかりません。DNAは死んだ生物からのものや、水に運ばれて別の場所から来たものかもしれず、存在はその場所にその動物が住んでいる証拠にはなりません。試料が汚染されることもあります。</p>\n<p><strong>4点の答案の骨組み：</strong>生息地から試料をとる (1)、DNAを抽出しバーコード配列を読む (1)、既知の種のデータベースと配列を比べる (1)、速い、生物を見なくてよいなどの利点 (1)。</p>",
+    "zh": "<p><strong>為何短條碼就足夠。</strong>條碼區域在所有物種中相似到可以用同一方法複製，但鹼基序列又足夠不同以區分物種。與參考資料庫配對後，就能得出物種名稱。</p>\n<table><tr><th></th><th>傳統調查（捕捉、觀察）</th><th>環境 DNA (eDNA) 條碼</th></tr><tr><td>需要看見或捕捉生物？</td><td>需要</td><td>不需要：一份水、泥土或空氣樣本便足夠</td></tr><tr><td>稀有、怕羞或夜行的物種</td><td>容易遺漏</td><td>較易被偵測到</td></tr><tr><td>每個樣本的物種數</td><td>只有捕到或看到的</td><td>可同時偵測很多</td></tr><tr><td>能否知道數量？</td><td>可點算個體</td><td>主要得知有沒有，數量不可靠</td></tr></table>\n<p><strong>限制。</strong>不在參考資料庫內的物種無法命名。DNA 可能來自死亡的生物，或由水從別處帶來，所以偵測到並不證明動物就住在該處。樣本也可能受污染。</p>\n<p><strong>4 分答案的大綱：</strong>從生境取樣 (1)；提取 DNA 並讀取條碼序列 (1)；把序列與已知物種資料庫比對 (1)；優點，如快速、無需看見生物 (1)。</p>"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "a3-1-q18",
+   "type": "mcq",
+   "ahl": false,
+   "difficulty": 2,
+   "ref": "A3.1.3",
+   "paper": "1A",
+   "stem": {
+    "en": "Which pair of names shows two different species in the <strong>same genus</strong>?",
+    "ja": "<strong>同じ属</strong>に属する2つの異なる種を示している名前の組はどれですか。",
+    "zh": "哪一組名稱顯示兩個屬於<strong>同一屬</strong>的不同物種？"
+   },
+   "options": [
+    {
+     "en": "<em>Tyto alba</em> and <em>Sinapis alba</em>",
+     "ja": "<em>Tyto alba</em> と <em>Sinapis alba</em>",
+     "zh": "<em>Tyto alba</em> 和 <em>Sinapis alba</em>"
+    },
+    {
+     "en": "<em>Panthera leo</em> and <em>Panthera tigris</em>",
+     "ja": "<em>Panthera leo</em> と <em>Panthera tigris</em>",
+     "zh": "<em>Panthera leo</em> 和 <em>Panthera tigris</em>"
+    },
+    {
+     "en": "<em>Homo sapiens</em> and <em>Pan troglodytes</em>",
+     "ja": "<em>Homo sapiens</em> と <em>Pan troglodytes</em>",
+     "zh": "<em>Homo sapiens</em> 和 <em>Pan troglodytes</em>"
+    },
+    {
+     "en": "<em>Felis catus</em> and <em>Canis lupus</em>",
+     "ja": "<em>Felis catus</em> と <em>Canis lupus</em>",
+     "zh": "<em>Felis catus</em> 和 <em>Canis lupus</em>"
+    }
+   ],
+   "answer": 1,
+   "explanation": {
+    "en": "The genus is the first word. <em>Panthera leo</em> (lion) and <em>Panthera tigris</em> (tiger) share the genus <em>Panthera</em>. The other pairs have different first words, so different genera. <em>alba</em> is the same second word in A, but it is in two different genera (<em>Tyto</em>, <em>Sinapis</em>), which shows the second word alone does not show relatedness.",
+    "ja": "属は最初の語です。<em>Panthera leo</em>（ライオン）と<em>Panthera tigris</em>（トラ）は同じ<em>Panthera</em>属です。他の組は最初の語が違うので別の属です。Aは2つめの語<em>alba</em>が同じですが、属は異なる（<em>Tyto</em>と<em>Sinapis</em>）ので、2つめの語だけでは類縁関係はわからないことがわかります。",
+    "zh": "屬名是第一個詞。<em>Panthera leo</em>（獅）和 <em>Panthera tigris</em>（虎）同屬 <em>Panthera</em>。其他各組的第一個詞不同，所以屬不同。A 組的第二個詞同為 <em>alba</em>，但屬不同（<em>Tyto</em> 和 <em>Sinapis</em>），說明單憑第二個詞並不能顯示親緣關係。"
+   }
+  },
+  {
+   "id": "a3-1-q19",
+   "type": "short",
+   "ahl": false,
+   "difficulty": 3,
+   "ref": "A3.1.7",
+   "paper": "1B",
+   "commandTerm": "Explain",
+   "marks": 4,
+   "stem": {
+    "en": "Scientists tested the hypothesis that human chromosome 2 formed when two chromosomes of a common ancestor fused. They looked for the repeated DNA sequence that is found at the ends of chromosomes (telomere sequence). (a) State the observation in the data that is unexpected for a normal chromosome. (b) Explain how this observation supports the hypothesis. (c) State one other piece of evidence, visible on a karyogram, that would strengthen the hypothesis.",
+    "ja": "科学者は、ヒトの第2染色体は、共通祖先の2本の染色体が融合してできたという仮説を検証しました。染色体の末端にある繰り返しDNA配列（テロメア配列）を調べました。(a) 通常の染色体では予想外の、データ中の観察結果を述べなさい。(b) この観察結果が仮説をどのように支持するか説明しなさい。(c) カリオグラムで見える、仮説をさらに強める別の証拠を1つ述べなさい。",
+    "zh": "科學家檢驗一個假說：人類第 2 號染色體是由共同祖先的兩條染色體融合而成。他們尋找染色體末端所見的重複 DNA 序列（端粒序列）。(a) 指出數據中對正常染色體來說出乎意料的觀察結果。(b) 解釋這項觀察結果如何支持假說。(c) 指出染色體組型圖上可見的另一項可加強假說的證據。"
+   },
+   "data": {
+    "en": "<table><tr><th>Location examined</th><th>Telomere sequence present?</th></tr><tr><td>Ends of human chromosome 2</td><td>Yes</td></tr><tr><td>Middle of human chromosome 2 (where the proposed fusion occurred)</td><td>Yes</td></tr><tr><td>Ends of chimpanzee chromosomes 2A and 2B</td><td>Yes</td></tr><tr><td>Middle of chimpanzee chromosomes 2A and 2B</td><td>No</td></tr></table>",
+    "ja": "<table><tr><th>調べた場所</th><th>テロメア配列はあるか</th></tr><tr><td>ヒト第2染色体の両端</td><td>ある</td></tr><tr><td>ヒト第2染色体の中央（融合したと考えられる場所）</td><td>ある</td></tr><tr><td>チンパンジーの2Aと2Bの末端</td><td>ある</td></tr><tr><td>チンパンジーの2Aと2Bの中央</td><td>ない</td></tr></table>",
+    "zh": "<table><tr><th>檢查位置</th><th>有沒有端粒序列？</th></tr><tr><td>人類第 2 號染色體的末端</td><td>有</td></tr><tr><td>人類第 2 號染色體的中間（假定融合發生之處）</td><td>有</td></tr><tr><td>黑猩猩 2A 和 2B 染色體的末端</td><td>有</td></tr><tr><td>黑猩猩 2A 和 2B 染色體的中間</td><td>沒有</td></tr></table>"
+   },
+   "markscheme": [
+    {
+     "en": "(a) Telomere sequences are present in the middle of human chromosome 2, where they are not normally found",
+     "ja": "(a) ヒト第2染色体の中央にテロメア配列がある（ふつうはそこにない）",
+     "zh": "(a) 人類第 2 號染色體中間有端粒序列（通常不會在該處）"
+    },
+    {
+     "en": "(b) Telomere sequences are normally at the ends of chromosomes; two chromosomes joining end to end would put two ends together in the middle",
+     "ja": "(b) テロメア配列は通常、染色体の末端にある。2本の染色体が端どうしでつながると、2つの末端が中央に並ぶことになる",
+     "zh": "(b) 端粒序列通常在染色體末端；兩條染色體首尾相接，會令兩個末端落在中間"
+    },
+    {
+     "en": "The chimpanzee chromosomes (2A and 2B) have no telomere sequences in the middle, as predicted if they are the separate ancestral chromosomes",
+     "ja": "チンパンジーの染色体（2A、2B）の中央にはテロメア配列がない。これは、それらが融合前の別々の祖先型の染色体だとした場合の予測どおりである",
+     "zh": "黑猩猩的染色體（2A 和 2B）中間沒有端粒序列，與它們是未融合的祖先染色體的預測相符"
+    },
+    {
+     "en": "(c) Banding pattern of human chromosome 2 matches two chimpanzee chromosomes end to end; OR a remnant of a second centromere is present",
+     "ja": "(c) ヒト第2染色体の縞模様が、チンパンジーの2本の染色体を端どうしつないだものに一致する、または2つめの動原体の名残がある",
+     "zh": "(c) 人類第 2 號染色體的帶紋與兩條黑猩猩染色體首尾相接吻合；或有第二個著絲粒的殘跡"
+    }
+   ],
+   "modelAnswer": {
+    "en": "(a) Telomere sequences are found in the middle of human chromosome 2. (b) These sequences are normally only at the ends, so their presence in the middle fits two chromosomes having joined end to end; the chimpanzee chromosomes have none in the middle, as expected if they are the unfused ancestral chromosomes. (c) The banding pattern of human chromosome 2 matches chimpanzee chromosomes 2A and 2B joined end to end (or a remnant of a second centromere).",
+    "ja": "(a) ヒト第2染色体の中央にテロメア配列がある。(b) この配列は通常、末端にしかないので、中央にあることは2本の染色体が端どうしでつながったことと合う。チンパンジーの染色体は中央にテロメア配列がなく、融合していない祖先型の染色体だとした場合の予想どおりである。(c) ヒト第2染色体の縞模様が、チンパンジーの2Aと2Bを端どうしつないだものに一致する（または2つめの動原体の名残）。",
+    "zh": "(a) 人類第 2 號染色體中間有端粒序列。(b) 這些序列通常只在末端，所以在中間出現，符合兩條染色體首尾相接的情況；黑猩猩的染色體中間沒有，與它們是未融合的祖先染色體的預期相符。(c) 人類第 2 號染色體的帶紋與黑猩猩 2A 和 2B 首尾相接吻合（或有第二個著絲粒的殘跡）。"
+   }
+  },
+  {
+   "id": "a3-1-q20",
+   "type": "mcq",
+   "ahl": false,
+   "difficulty": 2,
+   "ref": "A3.1.9",
+   "paper": "1A",
+   "stem": {
+    "en": "The human genome is about 3 100 Mbp. Two unrelated people differ at about 1 base in every 1000. About how many positions differ between them?",
+    "ja": "ヒトのゲノムは約3 100 Mbpです。血縁のない2人は、およそ1000塩基に1個の割合で違います。2人のあいだで違う塩基の位置はおよそいくつですか。",
+    "zh": "人類基因組約 3 100 Mbp。兩個沒有血緣關係的人，約每 1000 個鹼基有 1 個不同。他們之間大約有多少個位置不同？"
+   },
+   "options": [
+    {
+     "en": "310 000",
+     "ja": "310 000",
+     "zh": "310 000"
+    },
+    {
+     "en": "3.1 million",
+     "ja": "310万",
+     "zh": "310 萬"
+    },
+    {
+     "en": "31 million",
+     "ja": "3100万",
+     "zh": "3 100 萬"
+    },
+    {
+     "en": "310 million",
+     "ja": "3億1000万",
+     "zh": "3 億 1 000 萬"
+    }
+   ],
+   "answer": 1,
+   "explanation": {
+    "en": "3 100 Mbp = 3.1 × 10<sup>9</sup> bases. Dividing by 1000 gives 3.1 × 10<sup>6</sup>, which is 3.1 million. The other values come from dividing by the wrong power of ten.",
+    "ja": "3 100 Mbp = 3.1 × 10<sup>9</sup> 塩基。1000で割ると3.1 × 10<sup>6</sup>、つまり310万です。他の値は10の累乗の取り違えによるものです。",
+    "zh": "3 100 Mbp = 3.1 × 10<sup>9</sup> 個鹼基。除以 1000 得 3.1 × 10<sup>6</sup>，即 310 萬。其他數值是除錯了十的冪。"
+   }
+  },
+  {
+   "id": "a3-1-q21",
+   "type": "short",
+   "ahl": true,
+   "difficulty": 3,
+   "ref": "A3.1.13",
+   "paper": "2",
+   "commandTerm": "Explain",
+   "marks": 3,
+   "stem": {
+    "en": "A horse has 64 chromosomes in its body cells and a donkey has 62. (a) State the number of chromosomes in a body cell of their offspring, the mule. (b) Explain why the mule is sterile. (c) Explain why this helps to keep horses and donkeys as separate species.",
+    "ja": "ウマの体細胞には64本、ロバには62本の染色体があります。(a) 両者の子であるラバの体細胞の染色体数を述べなさい。(b) ラバが不妊である理由を説明しなさい。(c) このことがウマとロバを別々の種に保つのにどう役立つか説明しなさい。",
+    "zh": "馬的體細胞有 64 條染色體，驢有 62 條。(a) 指出牠們的後代騾的體細胞的染色體數目。(b) 解釋騾為何不育。(c) 解釋這如何有助保持馬和驢為獨立物種。"
+   },
+   "markscheme": [
+    {
+     "en": "(a) 63 (32 + 31)",
+     "ja": "(a) 63（32 + 31）",
+     "zh": "(a) 63（32 + 31）"
+    },
+    {
+     "en": "(b) Chromosomes cannot all form homologous pairs (odd number; horse and donkey chromosomes do not fully match), so meiosis fails to produce normal gametes",
+     "ja": "(b) すべての染色体が相同染色体の対をつくれない（奇数で、ウマとロバの染色体は完全には対応しない）ので、減数分裂で正常な配偶子ができない",
+     "zh": "(b) 染色體不能全部形成同源染色體對（數目是奇數；馬和驢的染色體不完全匹配），所以減數分裂不能產生正常配子"
+    },
+    {
+     "en": "(c) Hybrids cannot pass on genes, so there is no gene flow between the two gene pools and the species stay separate",
+     "ja": "(c) 雑種が遺伝子を伝えられないので、2つの遺伝子プールのあいだに遺伝子の流れがなく、種が分かれたままになる",
+     "zh": "(c) 雜種不能傳遞基因，兩個基因庫之間沒有基因流動，物種因而保持分隔"
+    }
+   ],
+   "modelAnswer": {
+    "en": "(a) 63. (b) The chromosomes from horse and donkey cannot all pair up as homologous pairs in meiosis (63 is odd and the chromosomes do not fully match), so normal gametes are not made and the mule is sterile. (c) Because hybrids cannot reproduce, genes cannot flow between horse and donkey gene pools, so the two species remain separate.",
+    "ja": "(a) 63。(b) ウマとロバの染色体は、減数分裂ですべてが相同染色体として対をつくることができない（63は奇数で、染色体も完全には対応しない）ので、正常な配偶子ができず、ラバは不妊である。(c) 雑種が繁殖できないので、ウマとロバの遺伝子プールのあいだで遺伝子が流れず、2つの種は分かれたままである。",
+    "zh": "(a) 63。(b) 馬和驢的染色體在減數分裂時不能全部配成同源染色體對（63 是奇數，染色體也不完全匹配），所以不能產生正常配子，騾因此不育。(c) 因為雜種不能繁殖，基因不能在馬和驢的基因庫之間流動，所以兩個物種保持分隔。"
+   }
+  },
+  {
+   "id": "a3-1-q22",
+   "type": "multi",
+   "ahl": true,
+   "difficulty": 3,
+   "ref": "A3.1.15",
+   "paper": "1B",
+   "stem": {
+    "en": "A pond was surveyed in two ways. Netting caught animals for identification. Water samples were tested for eDNA barcodes. Select <strong>all</strong> the conclusions supported by the data.",
+    "ja": "池を2つの方法で調査しました。網で捕らえた動物を同定し、水の試料はeDNAバーコードで調べました。データから支持される結論を<strong>すべて</strong>選びなさい。",
+    "zh": "有人以兩種方法調查一個池塘。以網捕捉動物來鑑別，水樣本則測試 eDNA 條碼。選出數據所支持的<strong>所有</strong>結論。"
+   },
+   "data": {
+    "en": "<table><tr><th>Species</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr><tr><td>Caught by netting</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Detected by eDNA</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr></table>",
+    "ja": "<table><tr><th>種</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr><tr><td>網で捕れた</td><td>はい</td><td>はい</td><td>はい</td><td>はい</td><td>いいえ</td><td>いいえ</td><td>いいえ</td><td>いいえ</td></tr><tr><td>eDNAで検出された</td><td>はい</td><td>はい</td><td>はい</td><td>いいえ</td><td>はい</td><td>はい</td><td>はい</td><td>いいえ</td></tr></table>",
+    "zh": "<table><tr><th>物種</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr><tr><td>以網捕獲</td><td>是</td><td>是</td><td>是</td><td>是</td><td>否</td><td>否</td><td>否</td><td>否</td></tr><tr><td>eDNA 偵測到</td><td>是</td><td>是</td><td>是</td><td>否</td><td>是</td><td>是</td><td>是</td><td>否</td></tr></table>"
+   },
+   "options": [
+    {
+     "en": "eDNA detected more species (6) than netting (4).",
+     "ja": "eDNAは網（4種）より多くの種（6種）を検出した。",
+     "zh": "eDNA 偵測到的物種（6 種）比網捕（4 種）多。"
+    },
+    {
+     "en": "eDNA detected every species that netting caught.",
+     "ja": "eDNAは、網で捕れたすべての種を検出した。",
+     "zh": "eDNA 偵測到所有以網捕獲的物種。"
+    },
+    {
+     "en": "eDNA detected some species that netting did not catch.",
+     "ja": "eDNAは、網で捕れなかった種を一部検出した。",
+     "zh": "eDNA 偵測到一些以網捕不到的物種。"
+    },
+    {
+     "en": "The data show how many individuals of each species live in the pond.",
+     "ja": "データは、各種が池に何個体いるかを示している。",
+     "zh": "數據顯示池塘中每個物種有多少個體。"
+    },
+    {
+     "en": "Species 8 is definitely absent from the pond.",
+     "ja": "種8は池に確実にいない。",
+     "zh": "物種 8 肯定不在池塘中。"
+    }
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "explanation": {
+    "en": "eDNA found 6 species (1, 2, 3, 5, 6, 7) and netting found 4, and species 5, 6 and 7 were found only by eDNA. eDNA did not detect species 4, which netting caught, so the second statement is false. The table shows presence only, not numbers. Species 8 was found by neither method, which does not prove it is absent.",
+    "ja": "eDNAは6種（1、2、3、5、6、7）、網は4種を検出し、種5、6、7はeDNAだけで見つかりました。網で捕れた種4はeDNAで検出されなかったので、2番目の記述は誤りです。表は存在の有無だけを示し、個体数は示しません。種8はどちらの方法でも見つからなかったが、それは不在の証明にはなりません。",
+    "zh": "eDNA 找到 6 個物種（1、2、3、5、6、7），網捕找到 4 個，而物種 5、6、7 只由 eDNA 發現。eDNA 沒有偵測到網捕到的物種 4，所以第二項陳述錯誤。表只顯示有沒有，沒有數量。物種 8 兩種方法都沒有找到，但這不能證明它不存在。"
+   }
+  }
+ ]
+};
+const __rt = IB.registerTopic.bind(IB);
+const __registerTopic = (tp) => {
+  __EXT.deeper.forEach((d) => { const s = tp.sections[d.i]; s.deeper = d.deeper; if (d.title) s.deeperTitle = d.title; });
+  tp.questions.push(...__EXT.questions);
+  __rt(tp);
+};
+/*EXT-END*/
   const L = (en, ja, zh) => ({ en, ja, zh });
 
-  IB.registerTopic({
+  __registerTopic({
     id: "A3.1",
     slug: "a3-1",
     theme: "A",

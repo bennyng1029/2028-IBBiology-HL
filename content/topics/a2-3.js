@@ -1,5 +1,247 @@
 /* A2.3 Viruses — AHL-only subtopic. Content written from the IB guide (first assessment 2025). */
 (function () {
+/*EXT-BEGIN*/
+const __EXT = {
+ "deeper": [
+  {
+   "i": 0,
+   "deeper": {
+    "en": "<p><strong>Why so simple?</strong> A virus is little more than a genome in a protein coat. Its genome is small, so it codes for only a few proteins. The capsid is built from many copies of one or a few kinds of protein, which is an economical way to enclose the nucleic acid using very few genes. Everything else is borrowed from a host cell.</p>\n<table><tr><th>Feature</th><th>Virus</th><th>Bacterium (prokaryotic cell)</th></tr><tr><td>Typical size</td><td>about 20 to 300 nm</td><td>about 1 to 5 µm</td></tr><tr><td>Grows and divides?</td><td>No. New particles are assembled inside a host cell.</td><td>Yes (binary fission)</td></tr><tr><td>Cytoplasm, ribosomes, plasma membrane</td><td>None</td><td>Present</td></tr><tr><td>Own metabolism (makes its own ATP)</td><td>No</td><td>Yes</td></tr></table>\n<p><strong>Worked comparison.</strong> 1 µm = 1000 nm. A bacterium 2 µm long is 2000 nm long. A virus 100 nm across is 2000 ÷ 100 = <strong>20 times shorter</strong>.</p>\n<p><strong>Mark-scheme language:</strong> \"protein capsid surrounds the nucleic acid\"; \"no cytoplasm / no ribosomes / no organelles\"; \"cannot carry out metabolism on its own\"; \"fixed size, does not grow\". Write \"few enzymes\", not \"no enzymes\": some viruses (for example HIV) carry a small number inside the particle.</p>",
+    "ja": "<p><strong>なぜこんなに単純なのか。</strong>ウイルスはタンパク質の殻に入ったゲノムにすぎません。ゲノムが小さいので、コードするタンパク質も少数です。カプシド (capsid) は1種類または少数の種類のタンパク質をたくさん並べて作られており、わずかな遺伝子で核酸を包める経済的な方法です。それ以外はすべて宿主細胞 (host cell) から借ります。</p>\n<table><tr><th>特徴</th><th>ウイルス</th><th>細菌（原核細胞）</th></tr><tr><td>典型的な大きさ</td><td>約20〜300 nm</td><td>約1〜5 µm</td></tr><tr><td>成長・分裂するか</td><td>しない。新しい粒子は宿主細胞の中で組み立てられる。</td><td>する（二分裂）</td></tr><tr><td>細胞質・リボソーム・細胞膜</td><td>ない</td><td>ある</td></tr><tr><td>自前の代謝（ATPをつくる）</td><td>ない</td><td>ある</td></tr></table>\n<p><strong>計算例。</strong>1 µm = 1000 nm。長さ2 µmの細菌は2000 nmです。幅100 nmのウイルスは、2000 ÷ 100 = <strong>20分の1の長さ</strong>です。</p>\n<p><strong>採点基準で使われる表現:</strong>「タンパク質のカプシドが核酸を囲む」「細胞質・リボソーム・細胞小器官がない」「単独では代謝できない」「大きさが一定で成長しない」。「酵素がない」ではなく「酵素が少ない (few enzymes)」と書きましょう。HIVのように、粒子の中に少数の酵素をもつウイルスもあります。</p>",
+    "zh": "<p><strong>為何如此簡單？</strong>病毒只不過是包在蛋白質外殼內的基因組。基因組很小，所以只編碼少數蛋白質。衣殼 (capsid) 由一種或少數幾種蛋白質的多個拷貝砌成，用很少基因就能包住核酸，十分經濟。其餘一切都向宿主細胞 (host cell) 借用。</p>\n<table><tr><th>特徵</th><th>病毒</th><th>細菌（原核細胞）</th></tr><tr><td>一般大小</td><td>約 20 至 300 nm</td><td>約 1 至 5 µm</td></tr><tr><td>會否生長和分裂？</td><td>不會。新顆粒在宿主細胞內組裝。</td><td>會（二分裂）</td></tr><tr><td>細胞質、核糖體、質膜</td><td>沒有</td><td>有</td></tr><tr><td>自身新陳代謝（自行製造 ATP）</td><td>沒有</td><td>有</td></tr></table>\n<p><strong>計算示例。</strong>1 µm = 1000 nm。一個長 2 µm 的細菌即 2000 nm。一個闊 100 nm 的病毒，長度為 2000 ÷ 100 = <strong>細菌的二十分之一</strong>。</p>\n<p><strong>評分準則常用語：</strong>「蛋白質衣殼包圍核酸」；「沒有細胞質／核糖體／細胞器」；「不能獨自進行新陳代謝」；「大小固定，不會生長」。要寫「酶很少 (few enzymes)」，而不是「沒有酶」：有些病毒（例如 HIV）在顆粒內帶有少量酶。</p>"
+   }
+  },
+  {
+   "i": 1,
+   "deeper": {
+    "en": "<p><strong>The guide's examples in more detail.</strong> Bacteriophage lambda has a protein head holding double-stranded DNA, plus a tail used to attach to the bacterium. Coronaviruses and HIV are roughly spherical and enveloped. The spike proteins that stick out of the coronavirus envelope give it a \"crown\" look.</p>\n<table><tr><th></th><th>Lambda</th><th>Coronaviruses</th><th>HIV</th></tr><tr><td>Nucleic acid</td><td>double-stranded DNA</td><td>single-stranded RNA</td><td>single-stranded RNA</td></tr><tr><td>Envelope</td><td>no</td><td>yes</td><td>yes</td></tr><tr><td>Approximate genome size</td><td>48 000 base pairs</td><td>30 000 bases</td><td>9 000 bases</td></tr><tr><td>Infects</td><td>bacteria</td><td>animal cells</td><td>human immune cells</td></tr></table>\n<p>Even the largest of these is tiny next to the genome of the bacterium <em>E. coli</em> (about 4.6 million base pairs). This is the answer to the guiding question: viruses need few genes because the host supplies the machinery.</p>\n<p><strong>Where does an envelope come from?</strong> The envelope is a piece of the host cell's membrane (a phospholipid bilayer) that the new virus takes with it when it leaves. The viral proteins, such as spikes, are inserted into it. So the lipids are from the host but the proteins are viral. A non-enveloped virus such as lambda has only its capsid and tail on the outside.</p>\n<p><strong>Exam technique.</strong> A \"compare\" answer must state the feature for <em>both</em> viruses (\"lambda has DNA whereas coronaviruses have RNA\"). Writing \"viruses have DNA or RNA\" does not compare anything.</p>",
+    "ja": "<p><strong>ガイドの例をくわしく。</strong>λファージ (bacteriophage lambda) は、二本鎖DNAを収めたタンパク質の頭部と、細菌に付着するための尾部をもちます。コロナウイルス (coronaviruses) とHIVはほぼ球形で、エンベロープ (envelope) をもちます。コロナウイルスのエンベロープから突き出たスパイクタンパク質が、「王冠」のように見える理由です。</p>\n<table><tr><th></th><th>λファージ</th><th>コロナウイルス</th><th>HIV</th></tr><tr><td>核酸</td><td>二本鎖DNA</td><td>一本鎖RNA</td><td>一本鎖RNA</td></tr><tr><td>エンベロープ</td><td>なし</td><td>あり</td><td>あり</td></tr><tr><td>ゲノムのおよその大きさ</td><td>48 000塩基対</td><td>30 000塩基</td><td>9 000塩基</td></tr><tr><td>感染する相手</td><td>細菌</td><td>動物の細胞</td><td>ヒトの免疫細胞</td></tr></table>\n<p>このうち最大のものでも、大腸菌 (<em>E. coli</em>) のゲノム（約460万塩基対）に比べるとごく小さいものです。これが導入の問いへの答えです。宿主が装置を提供するので、ウイルスは少ない遺伝子で足ります。</p>\n<p><strong>エンベロープはどこから来るのか。</strong>エンベロープは、新しいウイルスが宿主細胞から出るときに持ち出す宿主細胞膜（リン脂質二重層）の一部で、そこにスパイクなどウイルスのタンパク質が組み込まれます。つまり脂質は宿主由来、タンパク質はウイルス由来です。λファージのようにエンベロープのないウイルスは、カプシド (capsid) と尾部だけが外側に出ています。</p>\n<p><strong>答案の書き方。</strong>「比較せよ (compare)」では、<em>両方</em>のウイルスについて同じ特徴を述べます（「λファージはDNA、コロナウイルスはRNAをもつ」）。「ウイルスにはDNAまたはRNAがある」だけでは比較になりません。</p>",
+    "zh": "<p><strong>詳述指定的例子。</strong>λ噬菌體 (bacteriophage lambda) 有一個盛載雙鏈 DNA 的蛋白質頭部，以及用來附着細菌的尾部。冠狀病毒 (coronaviruses) 和 HIV 大致呈球形，並有包膜 (envelope)。冠狀病毒包膜上突出的刺突蛋白，令它看起來像「皇冠」。</p>\n<table><tr><th></th><th>λ噬菌體</th><th>冠狀病毒</th><th>HIV</th></tr><tr><td>核酸</td><td>雙鏈 DNA</td><td>單鏈 RNA</td><td>單鏈 RNA</td></tr><tr><td>包膜</td><td>沒有</td><td>有</td><td>有</td></tr><tr><td>基因組大約大小</td><td>48 000 個鹼基對</td><td>30 000 個鹼基</td><td>9 000 個鹼基</td></tr><tr><td>感染對象</td><td>細菌</td><td>動物細胞</td><td>人類免疫細胞</td></tr></table>\n<p>即使其中最大的一個，與大腸桿菌 (<em>E. coli</em>) 的基因組（約 460 萬個鹼基對）相比也極小。這就是導引問題的答案：宿主提供所需機器，所以病毒只需少量基因。</p>\n<p><strong>包膜從哪裏來？</strong>包膜是新病毒離開宿主細胞時帶走的一片宿主細胞膜（磷脂雙層），刺突等病毒蛋白嵌入其中。所以脂質來自宿主，蛋白質則屬病毒。像λ噬菌體這類沒有包膜的病毒，外面只有衣殼 (capsid) 和尾部。</p>\n<p><strong>答題技巧。</strong>「比較 (compare)」的答案必須就<em>兩種</em>病毒說明同一特徵（「λ噬菌體含 DNA，而冠狀病毒含 RNA」）。只寫「病毒含 DNA 或 RNA」並沒有比較任何東西。</p>"
+   }
+  },
+  {
+   "i": 2,
+   "deeper": {
+    "en": "<p><strong>Who supplies what?</strong> This table is the answer to \"how can viruses exist with so few genes?\"</p>\n<table><tr><th>Job</th><th>Done by</th></tr><tr><td>Attaching to a specific receptor, injecting DNA</td><td>Virus (tail proteins)</td></tr><tr><td>Energy (ATP)</td><td>Host</td></tr><tr><td>Nucleotides and amino acids (building blocks)</td><td>Host</td></tr><tr><td>Copying the viral DNA</td><td>Mainly host enzymes, directed by viral genes</td></tr><tr><td>Making capsid and tail proteins</td><td>Host ribosomes and tRNA reading viral genes</td></tr><tr><td>Breaking open the cell</td><td>Proteins coded by viral genes that damage the cell wall</td></tr></table>\n<p><strong>Specificity.</strong> The tail fits only one kind of receptor on the bacterial surface, so each phage infects only certain bacteria.</p>\n<p><strong>Worked example (idealised).</strong> Suppose each infected bacterium releases about 100 new phages and every new phage infects a new cell. After 1 cycle: 100 phages. After 2 cycles: 100<sup>2</sup> = 10 000. After 3 cycles: 100<sup>3</sup> = 1 000 000. A cycle takes only tens of minutes, so a phage population can grow explosively until hosts run out.</p>\n<p><strong>Typical 5-mark \"Outline\" answer:</strong> (1) tail attaches to a specific receptor; (2) DNA injected, empty capsid left outside; (3) host enzymes, ribosomes and ATP used to copy viral DNA and make proteins; (4) new phages assembled; (5) cell lyses and releases the phages.</p>",
+    "ja": "<p><strong>だれが何を提供するのか。</strong>この表が、「ウイルスはどうして少ない遺伝子で存在できるのか」への答えです。</p>\n<table><tr><th>働き</th><th>担当</th></tr><tr><td>特定の受容体への付着、DNAの注入</td><td>ウイルス（尾部のタンパク質）</td></tr><tr><td>エネルギー (ATP)</td><td>宿主</td></tr><tr><td>ヌクレオチドとアミノ酸（材料）</td><td>宿主</td></tr><tr><td>ウイルスDNAの複製</td><td>おもに宿主の酵素（ウイルスの遺伝子が指示）</td></tr><tr><td>カプシドと尾部のタンパク質の合成</td><td>宿主のリボソームとtRNAがウイルスの遺伝子を読む</td></tr><tr><td>細胞を壊して開く</td><td>細胞壁を傷つけるタンパク質（ウイルスの遺伝子にコードされる）</td></tr></table>\n<p><strong>特異性。</strong>尾部は細菌表面のある種類の受容体にしか合わないので、それぞれのファージは特定の細菌にしか感染しません。</p>\n<p><strong>計算例（理想化）。</strong>感染した細菌1個が約100個の新しいファージを放出し、新しいファージがすべて別の細胞に感染するとします。1サイクル後は100個、2サイクル後は100<sup>2</sup> = 10 000個、3サイクル後は100<sup>3</sup> = 1 000 000個です。1サイクルは数十分しかかからないので、宿主がなくなるまでファージの数は爆発的に増えます。</p>\n<p><strong>5点の「概説せよ (outline)」の典型的な答え:</strong>(1) 尾部が特定の受容体に付着、(2) DNAを注入し、空のカプシドは外に残る、(3) 宿主の酵素・リボソーム・ATPでウイルスDNAを複製しタンパク質を合成、(4) 新しいファージを組み立て、(5) 細胞が溶菌 (lysis) してファージを放出。</p>",
+    "zh": "<p><strong>誰負責甚麼？</strong>這個表就是「病毒為何只需這麼少基因」的答案。</p>\n<table><tr><th>工作</th><th>由誰負責</th></tr><tr><td>附着於特定受體、注入 DNA</td><td>病毒（尾部蛋白質）</td></tr><tr><td>能量 (ATP)</td><td>宿主</td></tr><tr><td>核苷酸和氨基酸（原料）</td><td>宿主</td></tr><tr><td>複製病毒 DNA</td><td>主要是宿主的酶，由病毒基因指示</td></tr><tr><td>製造衣殼和尾部蛋白質</td><td>宿主的核糖體和 tRNA 讀取病毒基因</td></tr><tr><td>弄破細胞</td><td>病毒基因編碼的蛋白質，破壞細胞壁</td></tr></table>\n<p><strong>專一性。</strong>尾部只配合細菌表面的一種受體，所以每種噬菌體只感染某些細菌。</p>\n<p><strong>計算示例（理想化）。</strong>假設每個受感染的細菌釋出約 100 個新噬菌體，而每個新噬菌體都感染一個新細胞。1 個週期後：100 個。2 個週期後：100<sup>2</sup> = 10 000 個。3 個週期後：100<sup>3</sup> = 1 000 000 個。一個週期只需幾十分鐘，所以噬菌體數量可以爆炸式增長，直至宿主耗盡。</p>\n<p><strong>典型 5 分「概述 (outline)」答案：</strong>(1) 尾部附着於特定受體；(2) 注入 DNA，空衣殼留在外面；(3) 利用宿主的酶、核糖體和 ATP 複製病毒 DNA 及製造蛋白質；(4) 組裝新噬菌體；(5) 細胞裂解 (lysis)，釋出噬菌體。</p>"
+   }
+  },
+  {
+   "i": 3,
+   "deeper": {
+    "en": "<p><strong>The prophage rides along.</strong> Because the prophage is part of the bacterial chromosome, the host's own DNA replication copies it every time the cell divides. One lysogenic bacterium becomes 2, 4, 8 and so on. After 10 divisions there are 2<sup>10</sup> = 1024 cells, all carrying the prophage, and no virus particles have been made. The virus is dormant, not dead.</p>\n<div class=\"note\">Extension (not required): <strong>What keeps the lytic genes off?</strong> A repressor protein made from a viral gene switches off the lytic genes. Stress such as UV radiation or DNA damage breaks down this repression. The prophage then cuts itself out of the chromosome and the lytic cycle starts.</div>\n<p><strong>Why does lysogeny help the virus?</strong> The viral DNA is copied and spread to many cells without harming the host. The lytic cycle can start later.</p>\n<p><strong>Mark-scheme language:</strong> \"viral DNA integrated into the host chromosome\"; \"called a prophage\"; \"replicated with host DNA and passed to daughter cells\"; \"no new viruses made\"; \"induced by stress / DNA damage to enter the lytic cycle\".</p>\n<p><strong>Common errors:</strong> saying the virus is \"dead\" or \"inactive\"; saying the prophage is a separate small circle of DNA in the cytoplasm (it is part of the chromosome); saying the host cell is killed in the lysogenic cycle.</p>\n<div class=\"note\">Extension (not required): some prophages carry extra genes that change the bacterium's properties. For example, the toxin that makes diphtheria dangerous is coded by a prophage gene in the bacterium.</div>",
+    "ja": "<p><strong>プロファージ (prophage) は一緒に複製される。</strong>プロファージは細菌の染色体の一部なので、細胞が分裂するたびに宿主自身のDNA複製でコピーされます。溶原化した細菌1個は2個、4個、8個…と増え、10回分裂すると2<sup>10</sup> = 1024個になり、そのすべてがプロファージをもちます。ウイルス粒子はまったくつくられていません。ウイルスは死んだのではなく休眠しているのです。</p>\n<div class=\"note\">発展（必須ではありません）：<strong>溶菌サイクルの遺伝子を止めているものは何か。</strong>ウイルス遺伝子からつくられるリプレッサー（抑制タンパク質）が、溶菌サイクルの遺伝子のはたらきを止めています。紫外線などのストレスやDNAの損傷が起こると、この抑制が壊れます。するとプロファージは染色体から自分を切り出し、溶菌サイクルが始まります。</div>\n<p><strong>溶原サイクルはウイルスにどんな利点があるか。</strong>宿主を傷つけずに、ウイルスDNAがコピーされて多くの細胞に広がります。溶菌サイクルは後から始められます。</p>\n<p><strong>採点基準で使われる表現:</strong>「ウイルスDNAが宿主の染色体に組み込まれる」「プロファージと呼ばれる」「宿主のDNAとともに複製され娘細胞に受け継がれる」「新しいウイルスはつくられない」「ストレスやDNA損傷で誘発されて溶菌サイクルに入る」。</p>\n<p><strong>よくある間違い:</strong>ウイルスが「死んでいる」「不活性」と書く、プロファージを細胞質にある小さな環状DNAと書く（染色体の一部です）、溶原サイクルで宿主細胞が死ぬと書く。</p>\n<div class=\"note\">発展（必須ではありません）：プロファージの中には、細菌の性質を変える遺伝子をもつものがあります。たとえばジフテリアを危険にする毒素は、細菌の中のプロファージの遺伝子にコードされています。</div>",
+    "zh": "<p><strong>原噬菌體 (prophage) 隨宿主一同複製。</strong>原噬菌體是細菌染色體的一部分，所以每次細胞分裂，宿主自己的 DNA 複製都會把它複製。一個溶原性細菌變成 2、4、8……個。分裂 10 次後有 2<sup>10</sup> = 1024 個細胞，全部都帶有原噬菌體，而且完全沒有製造病毒顆粒。病毒只是休眠，並未死亡。</p>\n<div class=\"note\">延伸（非必修）：<strong>是甚麼令裂解基因關閉？</strong>由病毒基因製造的阻遏蛋白 (repressor) 令裂解基因關閉。紫外線等壓力或 DNA 損傷會破壞這種抑制。原噬菌體隨即由染色體上切出來，裂解週期便開始。</div>\n<p><strong>溶原週期對病毒有何好處？</strong>病毒 DNA 可以在不傷害宿主的情況下被複製並散布到很多細胞，裂解週期可以稍後才開始。</p>\n<p><strong>評分準則常用語：</strong>「病毒 DNA 整合入宿主染色體」；「稱為原噬菌體」；「隨宿主 DNA 複製並傳給子細胞」；「不製造新病毒」；「受壓力／DNA 損傷誘發而進入裂解週期」。</p>\n<p><strong>常見錯誤：</strong>說病毒「死亡」或「不活動」；說原噬菌體是細胞質中一小環獨立的 DNA（它是染色體的一部分）；說溶原週期中宿主細胞被殺死。</p>\n<div class=\"note\">延伸（非必修）：有些原噬菌體帶有額外基因，會改變細菌的性質。例如使白喉具危險性的毒素，就是由細菌內原噬菌體的基因編碼的。</div>"
+   }
+  },
+  {
+   "i": 4,
+   "deeper": {
+    "en": "<p><strong>Weighing the evidence.</strong> A good answer says what each piece of evidence suggests, and why it is not final proof.</p>\n<table><tr><th>Evidence</th><th>What it suggests</th><th>Limitation</th></tr><tr><td>Great diversity: DNA or RNA, single- or double-stranded, enveloped or not, many shapes</td><td>Viruses probably arose more than once</td><td>Diversity could also build up over a very long time from one ancestor</td></tr><tr><td>Shared features: small size, capsid, no metabolism</td><td>May be convergent evolution, not common ancestry</td><td>Shared features could also be inherited from one ancestor</td></tr><tr><td>Same genetic code as living things, and use of host ribosomes</td><td>Viruses are linked to cellular life, so they probably arose from living organisms</td><td>Does not show how many times it happened</td></tr></table>\n<p><strong>Convergent evolution explained.</strong> Unrelated lineages evolve similar features independently, because they face similar selection pressures. Non-virus example: the wings of birds and insects. For viruses, the shared pressure is life as an obligate parasite: be small, make few proteins, rely on the host.</p>\n<p><strong>Nature of science.</strong> Viruses leave no fossils, so scientists must infer their history from living viruses. The evidence favours several origins over one, but it cannot prove it. Claims are accepted when they best explain the evidence, and may change with new data.</p>\n<p><strong>Mark-scheme language:</strong> \"diversity of genetic material and structure\"; \"convergent evolution\"; \"similar selection pressures on obligate parasites\"; \"no evidence for a single common ancestor\".</p>",
+    "ja": "<p><strong>証拠を比べて考える。</strong>よい答えは、それぞれの証拠が何を示唆するかと、なぜそれが決定的な証明にならないかを述べます。</p>\n<table><tr><th>証拠</th><th>示唆すること</th><th>限界</th></tr><tr><td>大きな多様性：DNAかRNAか、一本鎖か二本鎖か、エンベロープの有無、さまざまな形</td><td>ウイルスは複数回生じたらしい</td><td>多様性は、共通の祖先から非常に長い時間をかけて生じた可能性もある</td></tr><tr><td>共通の特徴：小さい、カプシドがある、代謝がない</td><td>共通祖先ではなく収斂進化 (convergent evolution) かもしれない</td><td>共通の特徴は1つの祖先から受け継いだ可能性もある</td></tr><tr><td>生物と同じ遺伝暗号、宿主のリボソームの利用</td><td>ウイルスは細胞性の生物と結びつき、生物から生じたらしい</td><td>何回起きたかは示さない</td></tr></table>\n<p><strong>収斂進化とは。</strong>系統の異なる生物が、似た選択圧を受けて、独立に似た特徴を進化させることです。ウイルス以外の例は、鳥と昆虫の翅です。ウイルスに共通する選択圧は偏性寄生者 (obligate parasite) としての生活で、小さく、少ないタンパク質で、宿主に頼ることが有利になります。</p>\n<p><strong>科学の本質。</strong>ウイルスは化石を残さないため、研究者は現存するウイルスから歴史を推定するしかありません。証拠は単一の起源より複数の起源を支持しますが、証明はできません。主張は証拠を最もよく説明するときに受け入れられ、新しいデータで変わることがあります。</p>\n<p><strong>採点基準で使われる表現:</strong>「遺伝物質と構造の多様性」「収斂進化」「偏性寄生者にはたらく似た選択圧」「単一の共通祖先を示す証拠はない」。</p>",
+    "zh": "<p><strong>衡量證據。</strong>好的答案會說明每項證據顯示甚麼，以及為何它不是最終證明。</p>\n<table><tr><th>證據</th><th>顯示甚麼</th><th>限制</th></tr><tr><td>極大的多樣性：DNA 或 RNA、單鏈或雙鏈、有或沒有包膜、形狀各異</td><td>病毒很可能多次出現</td><td>多樣性也可能由同一祖先經非常長的時間累積而成</td></tr><tr><td>共同特徵：細小、有衣殼、沒有新陳代謝</td><td>可能是趨同演化 (convergent evolution)，而非共同祖先</td><td>共同特徵也可能是由同一祖先遺傳而來</td></tr><tr><td>與生物相同的遺傳密碼，並利用宿主核糖體</td><td>病毒與細胞生命相連，很可能源自生物</td><td>並未顯示發生過多少次</td></tr></table>\n<p><strong>趨同演化的解釋。</strong>毫無親緣關係的譜系，因面對相似的選擇壓力而各自演化出相似的特徵。非病毒的例子：鳥類和昆蟲的翅膀。對病毒而言，共同的壓力是專性寄生 (obligate parasite) 的生活：身體細小、只製造少數蛋白質、依賴宿主。</p>\n<p><strong>科學本質。</strong>病毒不會留下化石，所以科學家只能從現存病毒推斷其歷史。證據支持多個起源多於單一起源，但不能證明。當一項主張最能解釋證據時便會被接受，並可能隨新數據而改變。</p>\n<p><strong>評分準則常用語：</strong>「遺傳物質和結構的多樣性」；「趨同演化」；「對專性寄生物的相似選擇壓力」；「沒有證據顯示有單一共同祖先」。</p>"
+   }
+  },
+  {
+   "i": 5,
+   "deeper": {
+    "en": "<p><strong>How a resistant virus population arises, step by step.</strong></p>\n<ol><li>Random mutation produces a few viruses with a change that lessens the effect of a drug (or of antibodies). These mutants exist <em>before</em> the drug is given.</li><li>The drug kills most viruses. The resistant mutants survive.</li><li>The survivors reproduce rapidly and pass the mutation to their offspring.</li><li>The resistant type becomes the main type in that patient.</li></ol>\n<p>The drug does not <em>cause</em> the mutation. It <em>selects</em> it. This is natural selection acting on a population that reproduces very fast.</p>\n<p><strong>Worked numbers (illustrative).</strong> Suppose a virus makes one copying error per 10 000 bases and its genome is 10 000 bases long. On average each new virus then has about 1 new mutation. A DNA-based organism with proofreading makes roughly 1 error per 10<sup>9</sup> bases copied, which is about 100 000 times fewer errors per base.</p>\n<p><strong>Why combination therapy works.</strong> Suppose 1 in 10<sup>3</sup> viruses is resistant to drug A and 1 in 10<sup>4</sup> to drug B, and the mutations are independent. The chance that one virus resists both is 1 in 10<sup>3</sup> × 10<sup>4</sup> = 1 in 10<sup>7</sup>. Much rarer, so the infection is more likely to be controlled.</p>\n<p><strong>Mark-scheme language.</strong> Reasons: \"high mutation rate\"; \"RNA polymerase / reverse transcriptase has no proofreading\"; \"short generation time and huge numbers\"; \"selection for mutants that escape\". Consequences: \"a new flu vaccine is needed regularly\"; \"resistance to a single drug evolves, so drugs are combined\"; \"an HIV vaccine is hard to make\".</p>",
+    "ja": "<p><strong>耐性をもつウイルス集団ができる過程。</strong></p>\n<ol><li>ランダムな突然変異で、薬（または抗体）の効果を弱める変化をもつウイルスがわずかに生じます。この変異体は、薬を投与する<em>前</em>から存在します。</li><li>薬はほとんどのウイルスを殺しますが、耐性をもつ変異体は生き残ります。</li><li>生き残ったウイルスは急速に増え、変異を子孫に伝えます。</li><li>その患者の体内では、耐性のあるタイプが主流になります。</li></ol>\n<p>薬が変異を<em>起こす</em>のではなく、変異を<em>選択する</em>のです。これは、非常に速く増える集団にはたらく自然選択です。</p>\n<p><strong>計算例（説明用の数値）。</strong>あるウイルスが10 000塩基に1回の複製ミスをし、ゲノムが10 000塩基だとします。すると、新しいウイルスは平均して約1個の新しい変異をもちます。校正機能をもつDNAの生物では、複製ミスはおよそ10<sup>9</sup>塩基に1回で、塩基あたりのミスは約10万分の1です。</p>\n<p><strong>併用療法が効く理由。</strong>薬Aに耐性のウイルスが10<sup>3</sup>個に1個、薬Bに耐性のものが10<sup>4</sup>個に1個で、変異が互いに独立だとします。1個のウイルスが両方に耐性をもつ確率は 1/(10<sup>3</sup> × 10<sup>4</sup>) = 10<sup>7</sup>分の1です。はるかにまれなので、感染を抑えやすくなります。</p>\n<p><strong>採点基準で使われる表現。</strong>理由：「突然変異率が高い」「RNAポリメラーゼ／逆転写酵素 (reverse transcriptase) に校正機能がない」「世代時間が短く数が非常に多い」「逃れる変異体が選択される」。結果：「新しいインフルエンザワクチンが定期的に必要」「1種類の薬への耐性が進化するので薬を併用する」「HIVワクチンはつくりにくい」。</p>",
+    "zh": "<p><strong>抗藥病毒群體如何逐步形成。</strong></p>\n<ol><li>隨機突變令少數病毒產生一個變化，減弱藥物（或抗體）的效果。這些突變體在用藥<em>之前</em>已經存在。</li><li>藥物殺死大部分病毒，抗藥的突變體存活下來。</li><li>倖存者迅速繁殖，並把突變傳給後代。</li><li>該病人體內的主要類型變成抗藥類型。</li></ol>\n<p>藥物並不會<em>引起</em>突變，而是<em>選擇</em>突變。這是自然選擇作用於一個繁殖極快的群體。</p>\n<p><strong>計算示例（說明用數字）。</strong>假設某病毒每 10 000 個鹼基出現一次複製錯誤，基因組長 10 000 個鹼基。那麼每個新病毒平均約有 1 個新突變。具校對功能的 DNA 生物，每複製約 10<sup>9</sup> 個鹼基才出現一次錯誤，每個鹼基的錯誤約少 10 萬倍。</p>\n<p><strong>為何合併治療有效。</strong>假設每 10<sup>3</sup> 個病毒有 1 個抗藥物 A，每 10<sup>4</sup> 個有 1 個抗藥物 B，兩種突變互相獨立。一個病毒同時抗兩種藥的機會是 1/(10<sup>3</sup> × 10<sup>4</sup>) = 10<sup>7</sup> 分之 1，罕見得多，所以感染更容易受控。</p>\n<p><strong>評分準則常用語。</strong>原因：「突變率高」；「RNA 聚合酶／逆轉錄酶 (reverse transcriptase) 沒有校對功能」；「世代時間短、數量極多」；「選擇了能逃避的突變體」。後果：「需要定期更新流感疫苗」；「對單一藥物產生抗藥性，所以要合併用藥」；「HIV 疫苗難以製成」。</p>"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "id": "a2-3-q16",
+   "type": "short",
+   "ahl": true,
+   "difficulty": 3,
+   "ref": "A2.3.4",
+   "paper": "1B",
+   "commandTerm": "Explain",
+   "marks": 4,
+   "stem": {
+    "en": "A culture of <em>E. coli</em> that carries a lambda prophage was split into two. One half was exposed to a brief dose of ultraviolet (UV) radiation at time 0. The other half was not. The cloudiness (optical density) of each culture was measured. Cloudiness is higher when more intact bacteria are present. (a) Describe the trend of the untreated culture. (b) Explain the change in the UV-treated culture between 60 and 120 minutes. (c) Predict what a sample of the UV-treated culture would contain at 120 minutes that the untreated culture would not.",
+    "ja": "λプロファージをもつ大腸菌 (<em>E. coli</em>) の培養液を2つに分けました。一方には時間0に短時間の紫外線 (UV) を当て、もう一方には当てませんでした。それぞれの培養液の濁り（光学密度）を測定しました。無傷の細菌が多いほど濁りは大きくなります。(a) 処理していない培養液の傾向を述べなさい。(b) 60分から120分の間のUV処理した培養液の変化を説明しなさい。(c) 120分の時点でUV処理した培養液の試料に含まれ、処理していない培養液には含まれないものを予測しなさい。",
+    "zh": "把帶有λ原噬菌體的大腸桿菌 (<em>E. coli</em>) 培養液分成兩份。其中一份在時間 0 受短暫紫外線 (UV) 照射，另一份則不。量度兩份培養液的混濁度（光密度）。完整細菌愈多，混濁度愈高。(a) 描述未處理培養液的趨勢。(b) 解釋 UV 處理培養液在 60 至 120 分鐘之間的變化。(c) 預測 120 分鐘時，UV 處理培養液的樣本含有哪些未處理培養液不含的東西。"
+   },
+   "data": {
+    "en": "<table><tr><th>Time / min</th><th>0</th><th>30</th><th>60</th><th>90</th><th>120</th></tr><tr><td>Cloudiness, untreated</td><td>0.20</td><td>0.35</td><td>0.60</td><td>1.05</td><td>1.80</td></tr><tr><td>Cloudiness, UV-treated</td><td>0.20</td><td>0.24</td><td>0.28</td><td>0.15</td><td>0.06</td></tr></table>",
+    "ja": "<table><tr><th>時間 / 分</th><th>0</th><th>30</th><th>60</th><th>90</th><th>120</th></tr><tr><td>濁り（未処理）</td><td>0.20</td><td>0.35</td><td>0.60</td><td>1.05</td><td>1.80</td></tr><tr><td>濁り（UV処理）</td><td>0.20</td><td>0.24</td><td>0.28</td><td>0.15</td><td>0.06</td></tr></table>",
+    "zh": "<table><tr><th>時間 / 分鐘</th><th>0</th><th>30</th><th>60</th><th>90</th><th>120</th></tr><tr><td>混濁度（未處理）</td><td>0.20</td><td>0.35</td><td>0.60</td><td>1.05</td><td>1.80</td></tr><tr><td>混濁度（UV 處理）</td><td>0.20</td><td>0.24</td><td>0.28</td><td>0.15</td><td>0.06</td></tr></table>"
+   },
+   "markscheme": [
+    {
+     "en": "(a) Cloudiness rises steadily and the rate increases (0.20 to 1.80 over 120 min): the bacteria are dividing and the population is growing",
+     "ja": "(a) 濁りは着実に増え、増加の速さも上がる（120分で0.20から1.80）：細菌が分裂して集団が増えている",
+     "zh": "(a) 混濁度穩定上升，而且上升速度加快（120 分鐘內由 0.20 升至 1.80）：細菌在分裂，群體增大"
+    },
+    {
+     "en": "(b) UV causes DNA damage (stress), which triggers the prophage to leave the bacterial chromosome and start the lytic cycle",
+     "ja": "(b) UVがDNAを損傷し（ストレス）、プロファージが細菌の染色体から抜け出して溶菌サイクルを始める",
+     "zh": "(b) UV 造成 DNA 損傷（壓力），觸發原噬菌體離開細菌染色體並開始裂解週期"
+    },
+    {
+     "en": "Viral DNA is copied and capsids made using host resources, and the bacteria burst (lyse), so the number of intact cells and the cloudiness fall after 60 min",
+     "ja": "宿主の資源を使ってウイルスDNAが複製されカプシドがつくられ、細菌が破裂（溶菌）するので、60分以降は無傷の細胞数と濁りが減る",
+     "zh": "病毒 DNA 利用宿主資源複製並製造衣殼，細菌破裂（裂解），所以 60 分鐘後完整細胞數目和混濁度下降"
+    },
+    {
+     "en": "(c) Free (new) bacteriophages released from the lysed cells, which the untreated culture would not contain in significant numbers",
+     "ja": "(c) 溶菌した細胞から放出された遊離の（新しい）ファージ。未処理の培養液には、意味のある数は含まれない",
+     "zh": "(c) 從裂解細胞釋出的自由（新）噬菌體；未處理培養液不會含有顯著數量"
+    }
+   ],
+   "modelAnswer": {
+    "en": "(a) The untreated culture's cloudiness increases faster and faster, from 0.20 to 1.80, because the bacteria keep dividing. (b) UV damages the bacterial DNA. This stress makes the prophage leave the chromosome and start the lytic cycle. Viral DNA and capsids are made using host resources and the cells burst, so cloudiness falls from 0.28 to 0.06. (c) Free new phages released by lysis.",
+    "ja": "(a) 未処理の培養液は細菌が分裂し続けるため、濁りが0.20から1.80へとだんだん速く増える。(b) UVが細菌のDNAを損傷する。このストレスでプロファージが染色体から抜け出して溶菌サイクルを始める。宿主の資源でウイルスDNAとカプシドがつくられ、細胞が破裂するので、濁りは0.28から0.06に下がる。(c) 溶菌で放出された遊離の新しいファージ。",
+    "zh": "(a) 未處理培養液的混濁度由 0.20 升至 1.80，升得愈來愈快，因為細菌不斷分裂。(b) UV 損傷細菌 DNA。這種壓力令原噬菌體離開染色體並開始裂解週期。病毒 DNA 和衣殼利用宿主資源製造，細胞破裂，所以混濁度由 0.28 降至 0.06。(c) 裂解時釋出的自由新噬菌體。"
+   }
+  },
+  {
+   "id": "a2-3-q17",
+   "type": "mcq",
+   "ahl": true,
+   "difficulty": 2,
+   "ref": "A2.3.4",
+   "paper": "1A",
+   "stem": {
+    "en": "Which statement about a prophage is correct?",
+    "ja": "プロファージについて正しい記述はどれですか。",
+    "zh": "關於原噬菌體，哪項陳述正確？"
+   },
+   "options": [
+    {
+     "en": "It is a complete virus particle that waits outside the bacterium.",
+     "ja": "細菌の外で待機している完全なウイルス粒子である。",
+     "zh": "它是在細菌外等待的完整病毒顆粒。"
+    },
+    {
+     "en": "It is viral DNA integrated into the bacterial chromosome and copied when the bacterium divides.",
+     "ja": "細菌の染色体に組み込まれ、細菌が分裂するときに複製されるウイルスDNAである。",
+     "zh": "它是整合入細菌染色體的病毒 DNA，細菌分裂時隨之複製。"
+    },
+    {
+     "en": "It is a protein coat left outside the bacterium after DNA injection.",
+     "ja": "DNA注入後に細菌の外に残るタンパク質の殻である。",
+     "zh": "它是注入 DNA 後留在細菌外的蛋白質外殼。"
+    },
+    {
+     "en": "It is a separate circle of viral DNA that makes new viruses continuously.",
+     "ja": "新しいウイルスをつくり続ける、独立した環状のウイルスDNAである。",
+     "zh": "它是獨立的環狀病毒 DNA，不斷製造新病毒。"
+    }
+   ],
+   "answer": 1,
+   "explanation": {
+    "en": "A prophage is viral DNA integrated into the host chromosome in the lysogenic cycle, so it is copied with the host DNA and passed to daughter cells. A describes a free virus particle. C describes the empty capsid left after injection. D is wrong: in the lysogenic cycle the prophage is part of the chromosome and no new viruses are made until the switch to the lytic cycle.",
+    "ja": "プロファージは、溶原サイクルで宿主の染色体に組み込まれたウイルスDNAで、宿主のDNAとともに複製され、娘細胞に受け継がれます。Aは遊離のウイルス粒子、Cは注入後に残る空のカプシドの説明です。Dは誤りで、溶原サイクルでは染色体の一部であり、溶菌サイクルに切り替わるまで新しいウイルスはつくられません。",
+    "zh": "原噬菌體是溶原週期中整合入宿主染色體的病毒 DNA，所以隨宿主 DNA 複製並傳給子細胞。A 描述的是自由病毒顆粒。C 描述的是注入後留下的空衣殼。D 錯誤：在溶原週期中原噬菌體是染色體的一部分，轉入裂解週期之前不會製造新病毒。"
+   }
+  },
+  {
+   "id": "a2-3-q18",
+   "type": "multi",
+   "ahl": true,
+   "difficulty": 2,
+   "ref": "A2.3.1–A2.3.2",
+   "paper": "1A",
+   "stem": {
+    "en": "Select <strong>all</strong> the features that bacteriophage lambda, coronaviruses and HIV have in common.",
+    "ja": "λファージ、コロナウイルス、HIVに<strong>共通する</strong>特徴を<strong>すべて</strong>選びなさい。",
+    "zh": "選出λ噬菌體、冠狀病毒和 HIV 的<strong>所有</strong>共同特徵。"
+   },
+   "options": [
+    {
+     "en": "A protein capsid surrounding the nucleic acid",
+     "ja": "核酸を囲むタンパク質のカプシド",
+     "zh": "包圍核酸的蛋白質衣殼"
+    },
+    {
+     "en": "An outer envelope taken from host membrane",
+     "ja": "宿主の膜に由来する外側のエンベロープ",
+     "zh": "取自宿主細胞膜的外層包膜"
+    },
+    {
+     "en": "Double-stranded DNA as the genetic material",
+     "ja": "遺伝物質としての二本鎖DNA",
+     "zh": "以雙鏈 DNA 作為遺傳物質"
+    },
+    {
+     "en": "No cytoplasm of their own",
+     "ja": "自前の細胞質をもたない",
+     "zh": "沒有自己的細胞質"
+    },
+    {
+     "en": "They can only reproduce inside a host cell",
+     "ja": "宿主細胞の中でしか増えられない",
+     "zh": "只能在宿主細胞內繁殖"
+    }
+   ],
+   "answer": [
+    0,
+    3,
+    4
+   ],
+   "explanation": {
+    "en": "All viruses have a capsid, have no cytoplasm and need a host cell to reproduce. Only coronaviruses and HIV have an envelope (lambda does not). Only lambda has double-stranded DNA; coronaviruses and HIV have single-stranded RNA.",
+    "ja": "すべてのウイルスはカプシドをもち、細胞質がなく、増えるのに宿主細胞を必要とします。エンベロープをもつのはコロナウイルスとHIVだけで、λファージにはありません。二本鎖DNAをもつのはλファージだけで、コロナウイルスとHIVは一本鎖RNAです。",
+    "zh": "所有病毒都有衣殼、沒有細胞質，並需要宿主細胞才能繁殖。只有冠狀病毒和 HIV 有包膜（λ噬菌體沒有）。只有λ噬菌體含雙鏈 DNA；冠狀病毒和 HIV 含單鏈 RNA。"
+   }
+  },
+  {
+   "id": "a2-3-q19",
+   "type": "short",
+   "ahl": true,
+   "difficulty": 3,
+   "ref": "A2.3.6",
+   "paper": "1B",
+   "commandTerm": "Calculate",
+   "marks": 4,
+   "stem": {
+    "en": "In a patient infected with a virus, mutations that give resistance to drug X occur in 1 in 10 000 new viruses, and mutations that give resistance to drug Y occur in 1 in 100 000 new viruses. The two mutations arise independently. The patient's body produces 100 million (10<sup>8</sup>) new viruses per day (illustrative figures). (a) Calculate the chance that a new virus is resistant to both drugs. (b) Calculate the number of new viruses per day expected to be resistant to drug X alone, and the number expected to be resistant to both. (c) Explain why treating with drug X alone is likely to fail.",
+    "ja": "ウイルスに感染した患者で、薬Xに耐性を与える変異は新しいウイルス10 000個に1個、薬Yに耐性を与える変異は100 000個に1個の割合で起こります。2つの変異は互いに独立に生じます。患者の体内では1日に1億個（10<sup>8</sup>個）の新しいウイルスがつくられます（説明用の数値）。(a) 新しいウイルスが両方の薬に耐性である確率を計算しなさい。(b) 1日に薬Xだけに耐性をもつと予想されるウイルスの数と、両方に耐性をもつと予想される数を計算しなさい。(c) 薬Xだけで治療すると失敗しやすい理由を説明しなさい。",
+    "zh": "在受病毒感染的病人體內，令病毒抗藥物 X 的突變每 10 000 個新病毒出現 1 個，令病毒抗藥物 Y 的突變每 100 000 個新病毒出現 1 個。兩種突變獨立發生。病人身體每日產生 1 億個（10<sup>8</sup>）新病毒（說明用數字）。(a) 計算一個新病毒同時抗兩種藥的機會。(b) 計算每日預期只抗藥物 X 的新病毒數目，以及預期同時抗兩種藥的數目。(c) 解釋為何單用藥物 X 治療很可能失敗。"
+   },
+   "markscheme": [
+    {
+     "en": "(a) 1/10 000 × 1/100 000 = 1 in 10<sup>9</sup> (1 in 1 000 000 000)",
+     "ja": "(a) 1/10 000 × 1/100 000 = 10<sup>9</sup>分の1（10億分の1）",
+     "zh": "(a) 1/10 000 × 1/100 000 = 10<sup>9</sup> 分之 1（十億分之一）"
+    },
+    {
+     "en": "(b) Resistant to X alone: 10<sup>8</sup> ÷ 10<sup>4</sup> = 10 000 per day",
+     "ja": "(b) Xだけに耐性：10<sup>8</sup> ÷ 10<sup>4</sup> = 1日に10 000個",
+     "zh": "(b) 只抗 X：10<sup>8</sup> ÷ 10<sup>4</sup> = 每日 10 000 個"
+    },
+    {
+     "en": "Resistant to both: 10<sup>8</sup> ÷ 10<sup>9</sup> = 0.1 per day, so very unlikely in a single day",
+     "ja": "両方に耐性：10<sup>8</sup> ÷ 10<sup>9</sup> = 1日に0.1個で、1日ではまず起こらない",
+     "zh": "同時抗兩種：10<sup>8</sup> ÷ 10<sup>9</sup> = 每日 0.1 個，所以一日內極不可能出現"
+    },
+    {
+     "en": "(c) Many viruses (about 10 000 a day) already resist X. Drug X kills the non-resistant viruses, so the resistant ones survive and reproduce (natural selection) and soon form most of the population",
+     "ja": "(c) すでに多くのウイルス（1日約10 000個）がXに耐性をもつ。薬Xは耐性のないウイルスを殺すので、耐性のあるウイルスが生き残って増え（自然選択）、やがて集団の大部分になる",
+     "zh": "(c) 已有很多病毒（每日約 10 000 個）抗藥物 X。藥物 X 殺死不抗藥的病毒，抗藥的便存活並繁殖（自然選擇），很快成為群體的大部分"
+    }
+   ],
+   "modelAnswer": {
+    "en": "(a) 1/10 000 × 1/100 000 = 1 in 10<sup>9</sup>. (b) To X alone: 10<sup>8</sup> ÷ 10<sup>4</sup> = 10 000 per day. To both: 10<sup>8</sup> ÷ 10<sup>9</sup> = 0.1 per day. (c) About 10 000 viruses a day are already resistant to X. The drug kills the others, so the resistant viruses survive and reproduce by natural selection and become the main type. Using two drugs together makes a virus resistant to both about 100 000 times rarer.",
+    "ja": "(a) 1/10 000 × 1/100 000 = 10<sup>9</sup>分の1。(b) Xだけ：10<sup>8</sup> ÷ 10<sup>4</sup> = 1日に10 000個。両方：10<sup>8</sup> ÷ 10<sup>9</sup> = 1日に0.1個。(c) 1日に約10 000個のウイルスがすでにXに耐性をもつ。薬が他のウイルスを殺すので、耐性ウイルスは自然選択によって生き残り増えて主流になる。2つの薬を併用すると、両方に耐性のウイルスは約10万分の1のまれさになる。",
+    "zh": "(a) 1/10 000 × 1/100 000 = 10<sup>9</sup> 分之 1。(b) 只抗 X：10<sup>8</sup> ÷ 10<sup>4</sup> = 每日 10 000 個。同時抗兩種：10<sup>8</sup> ÷ 10<sup>9</sup> = 每日 0.1 個。(c) 每日約有 10 000 個病毒已抗藥物 X。藥物殺死其餘病毒，抗藥病毒便通過自然選擇存活並繁殖，成為主要類型。合用兩種藥後，同時抗兩種藥的病毒會罕見約 10 萬倍。"
+   }
+  }
+ ]
+};
+const __rt = IB.registerTopic.bind(IB);
+const __registerTopic = (tp) => {
+  __EXT.deeper.forEach((d) => { const s = tp.sections[d.i]; s.deeper = d.deeper; if (d.title) s.deeperTitle = d.title; });
+  tp.questions.push(...__EXT.questions);
+  __rt(tp);
+};
+/*EXT-END*/
   const T = (en, ja, zh) => ({ en, ja, zh });
   const sections = [
     {
@@ -404,7 +646,7 @@
         "突變是隨機的，在某一位點上相當罕見，所以一個病毒同時帶有多個抗藥突變的機會，遠比只帶一個的機會小。A 不是原因。C 錯誤，藥物並不能阻止突變。D 錯誤：HIV 是病毒，不是細菌，也沒有細胞器。") },
 
   ];
-    IB.registerTopic({
+    __registerTopic({
     id: "A2.3", slug: "a2-3", theme: "A", level: 2, ahlOnly: true,
     title: T("Viruses", "ウイルス", "病毒"),
     guidingQuestions: [
