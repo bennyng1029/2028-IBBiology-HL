@@ -254,7 +254,7 @@
       '<a class="wordmark" href="#home"><span class="wordmark__cell" aria-hidden="true"><b>A</b><b>B</b></span><span>' + esc(SITE) + '</span></a>' +
       '<button class="btn btn--small nav-toggle" type="button" aria-expanded="' + openMenu + '" aria-controls="header-panel">' + esc(ui(openMenu ? 'close' : 'menu')) + '</button>' +
       '<div class="site-header__panel" id="header-panel"><nav class="site-nav" aria-label="' + esc(ui('navTopics')) + '"><ul class="site-nav__list">' +
-      groups + labsGroup + link('practice', 'navPractice') + link('glossary', 'navGlossary') + link('about', 'navAbout') +
+      groups + labsGroup + link('practice', 'navPractice') + link('glossary', 'navGlossary') + link('flashcards', 'navFlashcards') + link('about', 'navAbout') +
       '</ul></nav><div class="site-tools">' +
       '<div class="seg" role="group" aria-label="' + esc(ui('levelGroup')) + '">' +
       '<button class="seg__btn" type="button" data-level="sl" aria-pressed="' + (IB.level === 'sl') + '">' + esc(ui('slOnly')) + '</button>' +
@@ -547,6 +547,10 @@
       sec.appendChild(h('h2', { text: t(s.heading) }));
       sec.appendChild(wrapTables(h('div', { class: 'topic-body', html: t(s.body) })));
       if (s.widget) mountWidget(sec, s.widget, s.widgetOptions);
+      if (s.deeper) sec.appendChild(h('details', { class: 'deeper' }, [
+        h('summary', { text: s.deeperTitle ? t(s.deeperTitle) : ui('deeper') }),
+        wrapTables(h('div', { class: 'deeper__body', html: t(s.deeper) }))
+      ]));
       if (s.examTip) sec.appendChild(h('div', { class: 'callout callout--exam' }, [h('span', { class: 'callout__title', text: ui('examTip') }), h('div', { html: t(s.examTip) })]));
       content.appendChild(sec);
       toc.push({ id: id, label: t(s.heading), ref: s.ref, ahl: s.ahl });
@@ -563,6 +567,7 @@
     if (terms.length) {
       var p1 = panel('terms');
       p1.appendChild(h('h2', { text: ui('keyTerms') }));
+      p1.appendChild(h('p', { class: 'terms-study' }, h('a', { class: 'btn btn--small', href: '#flashcards-' + slug, text: ui('fcStudy') + ' →' })));
       p1.appendChild(h('dl', { class: 'terms' }, terms.map(function (k) { return termCard(k); })));
       toc.push({ id: 'terms', label: ui('keyTerms') });
     }
@@ -1028,6 +1033,157 @@
     draw();
   }
 
+  /* ---------- FLASHCARDS ---------- */
+  var fcPrefs = { reverse: false, onlyAgain: false };
+  var fcSession = null;   // { slug, queue, i, flipped }
+  function fcKey(e) { return e.tp.slug + '|' + ((e.k.term && e.k.term.en) || ''); }
+  function fcLoad() { try { var p = JSON.parse(store.get('ibbio.cards') || '{}'); return (p && typeof p === 'object') ? p : {}; } catch (e) { return {}; } }
+  function fcMark(key, v) { var m = fcLoad(); if (v) m[key] = v; else delete m[key]; store.set('ibbio.cards', JSON.stringify(m)); }
+  function fcEntries(slug) {
+    var out = [];
+    IB.topics.forEach(function (tp) {
+      if (slug !== 'all' && tp.slug !== slug) return;
+      (tp.keyTerms || []).forEach(function (k) { if (!(IB.level === 'sl' && k.ahl)) out.push({ k: k, tp: tp }); });
+    });
+    return out;
+  }
+  function renderFlashcards(app, slug) {
+    var wrap = h('div', { class: 'wrap band-section fc' });
+    app.appendChild(wrap);
+    wrap.appendChild(h('p', { class: 'eyebrow', text: ui('navFlashcards') }));
+    wrap.appendChild(h('h1', { text: ui('fcTitle') }));
+    if (!slug) { fcChooser(wrap); return; }
+    var topic = slug === 'all' ? null : IB.topicMap[slug];
+    if (slug !== 'all' && !topic) { wrap.appendChild(h('p', { text: ui('fcNoCards') })); fcChooser(wrap); return; }
+    fcDeck(wrap, slug, topic);
+  }
+  function fcChooser(wrap) {
+    wrap.appendChild(h('p', { class: 'lede', text: ui('fcLead') }));
+    var marks = fcLoad(), list = h('div', { class: 'fc-choose' });
+    function tile(slug, code, title, entries) {
+      var known = 0, again = 0;
+      entries.forEach(function (e) { var v = marks[fcKey(e)]; if (v === 'known') known++; else if (v === 'again') again++; });
+      return h('a', { class: 'fc-tile', href: '#flashcards-' + slug }, [
+        h('span', { class: 'fc-tile__code mono', text: code }),
+        h('span', { class: 'fc-tile__name', text: title }),
+        h('span', { class: 'fc-tile__n muted', text: ui('nTerms', { n: entries.length }) + (known || again ? ' · ' + ui('fcStats', { known: known, again: again }) : '') })
+      ]);
+    }
+    var all = fcEntries('all');
+    list.appendChild(tile('all', '★', ui('fcAll'), all));
+    IB.topics.forEach(function (tp) {
+      var en = fcEntries(tp.slug);
+      if (en.length) list.appendChild(tile(tp.slug, tp.id, t(tp.title), en));
+    });
+    wrap.appendChild(list);
+  }
+  function fcDeck(wrap, slug, topic) {
+    var all = fcEntries(slug);
+    var title = topic ? topic.id + ' ' + t(topic.title) : ui('fcAll');
+    var lang = ({ ja: 'ja', zh: 'zh-HK', ko: 'ko' })[IB.lang] || IB.lang;
+    wrap.appendChild(h('p', { class: 'fc-deckname' }, [h('a', { href: '#flashcards', text: '← ' + ui('fcChoose') }), h('strong', { text: title })]));
+    var bar = h('div', { class: 'fc-opts' });
+    var revBox = h('input', { type: 'checkbox', id: 'fc-rev' }); revBox.checked = fcPrefs.reverse;
+    var againBox = h('input', { type: 'checkbox', id: 'fc-again' }); againBox.checked = fcPrefs.onlyAgain;
+    bar.appendChild(h('label', { class: 'fc-check', for: 'fc-rev' }, [revBox, h('span', { text: ui('fcReverse') })]));
+    bar.appendChild(h('label', { class: 'fc-check', for: 'fc-again' }, [againBox, h('span', { text: ui('fcOnlyAgain') })]));
+    var shuffleBtn = h('button', { class: 'btn btn--small', type: 'button', text: ui('fcShuffle') });
+    var clearBtn = h('button', { class: 'btn btn--small btn--quiet', type: 'button', text: ui('fcClear') });
+    bar.appendChild(shuffleBtn); bar.appendChild(clearBtn);
+    wrap.appendChild(bar);
+    var stage = h('div', { class: 'fc-stage', 'aria-live': 'polite' });
+    wrap.appendChild(stage);
+
+    var S = fcSession && fcSession.slug === slug ? fcSession : null;
+    function build(shuf) {
+      var marks = fcLoad();
+      var q = all.filter(function (e) { return !fcPrefs.onlyAgain || marks[fcKey(e)] === 'again'; });
+      fcSession = S = { slug: slug, queue: shuf ? shuffle(q) : q, i: 0, flipped: false };
+    }
+    if (!S) build(false);
+    else { // keep position but drop cards that vanished (language/level switch)
+      var ok = {}; all.forEach(function (e) { ok[fcKey(e)] = 1; });
+      S.queue = S.queue.filter(function (e) { return ok[fcKey(e)]; });
+      if (S.i > S.queue.length) S.i = S.queue.length;
+    }
+
+    function face(e, front) {
+      var showTerm = fcPrefs.reverse ? !front : front;
+      var box = h('div', { class: 'fc-face' + (showTerm ? ' fc-face--term' : ' fc-face--def') });
+      if (showTerm) {
+        var en = (e.k.term && e.k.term.en) || '', tr = t(e.k.term);
+        box.appendChild(h('div', { class: 'fc-term', text: en }));
+        if (IB.lang !== 'en' && tr && tr !== en) box.appendChild(h('div', { class: 'fc-tr', lang: lang, text: tr }));
+      } else {
+        box.appendChild(wrapTables(h('div', { class: 'fc-def', html: t(e.k.def) })));
+      }
+      return box;
+    }
+    function draw() {
+      stage.innerHTML = '';
+      var q = S.queue;
+      if (!q.length) { stage.appendChild(h('p', { class: 'muted', text: fcPrefs.onlyAgain ? ui('fcNoAgain') : ui('fcNoCards') })); return; }
+      if (S.i >= q.length) {
+        stage.appendChild(h('div', { class: 'fc-done callout' }, [
+          h('span', { class: 'callout__title', text: ui('fcDone') }),
+          h('p', { text: ui('fcDoneText') }),
+          h('div', { class: 'btn-row' }, [
+            h('button', { class: 'btn btn--primary', type: 'button', text: ui('fcRestart'), onclick: function () { build(false); draw(); } }),
+            h('button', { class: 'btn', type: 'button', text: ui('fcOnlyAgain'), onclick: function () { fcPrefs.onlyAgain = true; againBox.checked = true; build(false); draw(); } })
+          ])
+        ]));
+        return;
+      }
+      var e = q[S.i], v = fcLoad()[fcKey(e)];
+      stage.appendChild(h('div', { class: 'fc-meta' }, [
+        h('span', { class: 'fc-progress mono', text: ui('fcProgress', { n: S.i + 1, total: q.length }) }),
+        h('span', { class: 'fc-meta__r' }, [
+          v ? h('span', { class: 'badge fc-state fc-state--' + v, text: ui(v === 'known' ? 'fcKnown' : 'fcAgainState') }) : null,
+          e.k.ahl ? ahlBadge() : null,
+          h('a', { class: 'tag mono', href: '#topic-' + e.tp.slug, text: e.tp.id })
+        ])
+      ]));
+      var card = h('div', { class: 'fc-card' + (S.flipped ? ' is-back' : ''), role: 'button', tabindex: '0', 'aria-pressed': String(S.flipped), 'aria-label': ui('fcFlipLabel') }, [
+        face(e, !S.flipped),
+        h('span', { class: 'fc-hint', 'aria-hidden': 'true', text: ui('fcFlipHint') })
+      ]);
+      function flip() { S.flipped = !S.flipped; draw(); var c = stage.querySelector('.fc-card'); if (c) c.focus({ preventScroll: true }); }
+      card.addEventListener('click', flip);
+      card.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); flip(); } });
+      stage.appendChild(card);
+      stage.appendChild(h('div', { class: 'fc-grade' }, [
+        h('button', { class: 'btn fc-btn fc-btn--again', type: 'button', text: ui('fcAgain'), onclick: function () { grade('again'); } }),
+        h('button', { class: 'btn fc-btn fc-btn--got', type: 'button', text: ui('fcGot'), onclick: function () { grade('known'); } })
+      ]));
+      stage.appendChild(h('div', { class: 'fc-nav' }, [
+        h('button', { class: 'btn', type: 'button', text: '← ' + ui('fcPrev'), disabled: S.i === 0 ? true : null, onclick: function () { go(-1); } }),
+        h('button', { class: 'btn', type: 'button', text: ui('fcNext') + ' →', onclick: function () { go(1); } })
+      ]));
+    }
+    function go(d) { S.i = Math.max(0, Math.min(S.queue.length, S.i + d)); S.flipped = false; draw(); }
+    function grade(v) {
+      var e = S.queue[S.i]; if (!e) return;
+      fcMark(fcKey(e), v);
+      if (v === 'again') S.queue.splice(Math.min(S.i + 5, S.queue.length), 0, e);
+      go(1);
+    }
+    revBox.addEventListener('change', function () { fcPrefs.reverse = revBox.checked; S.flipped = false; draw(); });
+    againBox.addEventListener('change', function () { fcPrefs.onlyAgain = againBox.checked; build(false); draw(); });
+    shuffleBtn.addEventListener('click', function () { S.queue = shuffle(S.queue); S.i = 0; S.flipped = false; draw(); });
+    clearBtn.addEventListener('click', function () { var m = fcLoad(); all.forEach(function (e) { delete m[fcKey(e)]; }); store.set('ibbio.cards', JSON.stringify(m)); build(false); draw(); });
+    function onKey(ev) {
+      if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
+      var tg = ev.target, tag = tg && tg.tagName;
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || (tg && tg.isContentEditable)) return;
+      if (ev.key === 'ArrowLeft') { ev.preventDefault(); go(-1); }
+      else if (ev.key === 'ArrowRight') { ev.preventDefault(); go(1); }
+      else if ((ev.key === ' ' || ev.key === 'Spacebar') && (tag === 'BODY' || tag === 'MAIN' || tag === 'HTML')) { ev.preventDefault(); if (S.i < S.queue.length) { S.flipped = !S.flipped; draw(); } }
+    }
+    doc.addEventListener('keydown', onKey);
+    cleanups.push(function () { doc.removeEventListener('keydown', onKey); });
+    draw();
+  }
+
   /* ---------- LABS ---------- */
   function themeVar(th) { return th === 'A' ? 'var(--theme-a)' : 'var(--theme-b)'; }
   function labsSorted() { return IB.labs.slice().sort(function (a, b) { return (a.order || 99) - (b.order || 99); }); }
@@ -1154,6 +1310,8 @@
     if (hs.indexOf('topic-') === 0) return { name: 'topic', slug: hs.slice(6) };
     if (hs === 'protein-lab') return { name: 'lab', id: 'protein', step: 0 };
     if (hs === 'labs') return { name: 'labs' };
+    if (hs === 'flashcards') return { name: 'flashcards', slug: null };
+    if (hs.indexOf('flashcards-') === 0) return { name: 'flashcards', slug: hs.slice(11) };
     var lm = /^lab-(.+?)(?:-(\d+))?$/.exec(hs);
     if (lm) return { name: 'lab', id: lm[1], step: lm[2] ? Number(lm[2]) - 1 : 0 };
     if (['home', 'practice', 'glossary', 'about'].indexOf(hs) >= 0) return { name: hs };
@@ -1162,12 +1320,12 @@
   var lastRoute = '';
   function render(keepScroll) {
     var r = parse(), y = window.pageYOffset;
-    current = { name: r.name, slug: r.slug || null, labId: r.id || null };
+    current = { name: r.name, slug: r.name === 'topic' ? (r.slug || null) : null, labId: r.id || null };
     runCleanups();
     renderHeader(); renderWelcome(); renderFooter();
     var app = doc.getElementById('app');
     app.innerHTML = '';
-    var titleKey = { home: null, labs: 'navLabs', practice: 'navPractice', glossary: 'navGlossary', about: 'navAbout' }[r.name];
+    var titleKey = { home: null, labs: 'navLabs', practice: 'navPractice', glossary: 'navGlossary', flashcards: 'navFlashcards', about: 'navAbout' }[r.name];
     var pageTitle = titleKey ? ui(titleKey) + ' | ' + SITE : SITE;
     try {
       if (r.name === 'home') renderHome(app);
@@ -1183,6 +1341,7 @@
       }
       else if (r.name === 'practice') renderPractice(app);
       else if (r.name === 'glossary') renderGlossary(app);
+      else if (r.name === 'flashcards') renderFlashcards(app, r.slug);
       else if (r.name === 'about') renderAbout(app);
     } catch (err) {
       if (window.console) console.error(err);

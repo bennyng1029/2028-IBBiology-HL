@@ -385,4 +385,48 @@
     }
   };
   Object.keys(V2).forEach(function (l) { for (var k in V2[l]) IB.UI[l][k] = V2[l][k]; });
+  /* v3 additions: flashcards, "Go deeper" boxes */
+  var V3 = {
+    en: {
+      navFlashcards: 'Flashcards', fcTitle: 'Key-term flashcards', fcLead: 'Test yourself on the key terms. Pick one subtopic, or all of them. Your marks are saved in this browser only.',
+      fcAll: 'All topics', fcChoose: 'Choose a deck', fcStats: '{known} known, {again} to review', fcStudy: 'Study these as flashcards',
+      fcReverse: 'Definition first', fcOnlyAgain: 'Study only cards marked Again', fcShuffle: 'Shuffle', fcClear: 'Clear marks',
+      fcPrev: 'Previous', fcNext: 'Next', fcGot: 'Got it', fcAgain: 'Again', fcProgress: '{n} / {total}',
+      fcFlipHint: 'Tap the card to flip', fcFlipLabel: 'Flashcard: press to flip', fcKnown: 'Got it', fcAgainState: 'Again',
+      fcDone: 'Round complete', fcDoneText: 'You reached the end of this deck. Cards marked Again can be studied on their own.', fcRestart: 'Start again',
+      fcNoCards: 'There are no cards to show.', fcNoAgain: 'No cards are marked Again yet.',
+      deeper: 'Go deeper'
+    },
+    ja: {
+      navFlashcards: 'フラッシュカード', fcTitle: '重要用語フラッシュカード', fcLead: '重要用語で自分をテストしましょう。サブトピックを1つ、またはすべて選べます。記録はこのブラウザにだけ保存されます。',
+      fcAll: 'すべてのトピック', fcChoose: 'デッキを選ぶ', fcStats: '覚えた {known}、復習 {again}', fcStudy: 'フラッシュカードで学習する',
+      fcReverse: '定義を先に表示', fcOnlyAgain: '「もう一度」のカードだけ学習', fcShuffle: 'シャッフル', fcClear: '記録を消去',
+      fcPrev: '前へ', fcNext: '次へ', fcGot: '覚えた', fcAgain: 'もう一度', fcProgress: '{n} / {total}',
+      fcFlipHint: 'カードをタップして裏返す', fcFlipLabel: 'フラッシュカード：押すと裏返ります', fcKnown: '覚えた', fcAgainState: 'もう一度',
+      fcDone: 'ラウンド完了', fcDoneText: 'このデッキの最後まで来ました。「もう一度」のカードだけを学習することもできます。', fcRestart: 'もう一度始める',
+      fcNoCards: '表示するカードがありません。', fcNoAgain: '「もう一度」のカードはまだありません。',
+      deeper: 'もっと深く (Go deeper)'
+    },
+    zh: {
+      navFlashcards: '閃卡', fcTitle: '重點詞彙閃卡', fcLead: '用重點詞彙測試自己。可選擇一個子課題，或全部課題。記錄只儲存在這個瀏覽器內。',
+      fcAll: '所有課題', fcChoose: '選擇卡組', fcStats: '已掌握 {known}，待複習 {again}', fcStudy: '用閃卡溫習這些詞彙',
+      fcReverse: '先顯示定義', fcOnlyAgain: '只溫習標記為「再來」的卡', fcShuffle: '洗牌', fcClear: '清除記錄',
+      fcPrev: '上一張', fcNext: '下一張', fcGot: '記住了', fcAgain: '再來', fcProgress: '{n} / {total}',
+      fcFlipHint: '點按卡片翻面', fcFlipLabel: '閃卡：按下翻面', fcKnown: '記住了', fcAgainState: '再來',
+      fcDone: '本輪完成', fcDoneText: '你已看完這個卡組。標記為「再來」的卡可以單獨溫習。', fcRestart: '重新開始',
+      fcNoCards: '沒有可顯示的卡。', fcNoAgain: '暫時沒有標記為「再來」的卡。',
+      deeper: '深入探討 (Go deeper)'
+    },
+    ko: {
+      navFlashcards: '플래시카드', fcTitle: '핵심 용어 플래시카드', fcLead: '핵심 용어로 스스로를 점검하시오. 소주제 하나 또는 전체를 고를 수 있다. 기록은 이 브라우저에만 저장된다.',
+      fcAll: '모든 주제', fcChoose: '카드 묶음 고르기', fcStats: '외움 {known}, 복습 {again}', fcStudy: '플래시카드로 공부하기',
+      fcReverse: '정의 먼저 보기', fcOnlyAgain: '다시 표시한 카드만 공부', fcShuffle: '섞기', fcClear: '표시 지우기',
+      fcPrev: '이전', fcNext: '다음', fcGot: '알았다', fcAgain: '다시', fcProgress: '{n} / {total}',
+      fcFlipHint: '카드를 눌러 뒤집기', fcFlipLabel: '플래시카드: 눌러서 뒤집기', fcKnown: '알았다', fcAgainState: '다시',
+      fcDone: '이번 회차 완료', fcDoneText: '이 묶음의 끝에 도착했다. 다시로 표시한 카드만 따로 공부할 수 있다.', fcRestart: '처음부터 다시',
+      fcNoCards: '표시할 카드가 없다.', fcNoAgain: '아직 다시로 표시한 카드가 없다.',
+      deeper: '더 깊이 (Go deeper)'
+    }
+  };
+  Object.keys(V3).forEach(function (l) { for (var k in V3[l]) IB.UI[l][k] = V3[l][k]; });
 })();

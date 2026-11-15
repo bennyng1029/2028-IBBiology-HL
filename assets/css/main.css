@@ -632,6 +632,46 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
 .about h2 { margin-top: 1.8rem; font-size: 1.3rem; }
 .about ul { max-width: var(--measure); }
 
+/* ---------- go deeper ---------- */
+.deeper { margin: 1.2rem 0; max-width: var(--measure); border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 var(--radius) var(--radius) 0; }
+.deeper > summary { cursor: pointer; padding: 0.7rem 1.1rem; min-height: 2.75rem; display: flex; align-items: center; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); }
+.deeper[open] > summary { border-bottom: 1px solid var(--line); }
+.deeper__body { padding: 0.4rem 1.1rem 0.9rem; }
+.deeper__body > :last-child { margin-bottom: 0; }
+
+/* ---------- flashcards ---------- */
+.terms-study { margin: 0 0 0.8rem; }
+.fc-choose { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.7rem; margin-top: 1rem; }
+.fc-tile { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.8rem 1rem; min-height: 4.5rem; border: 1.5px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); color: var(--ink); text-decoration: none; }
+.fc-tile:hover { border-color: var(--ink); }
+.fc-tile__code { font-size: 0.8rem; color: var(--accent-ink); font-weight: 700; }
+.fc-tile__name { font-weight: 700; }
+.fc-tile__n { font-size: 0.85rem; }
+.fc-deckname { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: baseline; margin: 0 0 0.8rem; }
+.fc-opts { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; align-items: center; margin-bottom: 1rem; }
+.fc-check { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.5rem; cursor: pointer; }
+.fc-check input { width: 1.2rem; height: 1.2rem; accent-color: var(--accent); }
+.fc-stage { max-width: 42rem; }
+.fc-meta { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.fc-meta__r { display: inline-flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
+.fc-state--known { background: var(--good-soft); color: var(--good); border-color: var(--good); }
+.fc-state--again { background: var(--warn-soft); color: var(--ink); border-color: var(--warn-line); }
+.fc-card { position: relative; display: flex; flex-direction: column; justify-content: center; min-height: 16rem; padding: 1.5rem 1.2rem 2.2rem; border: 2px solid var(--ink); border-radius: calc(var(--radius) * 2); background: var(--surface); cursor: pointer; text-align: center; animation: fc-flip 0.28s ease-out; }
+.fc-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.fc-card.is-back { background: var(--surface-2); }
+.fc-term { font-family: var(--font-display); font-size: clamp(1.5rem, 6vw, 2.1rem); font-weight: 800; overflow-wrap: anywhere; }
+.fc-tr { margin-top: 0.4rem; font-size: 1.15rem; color: var(--muted); }
+.fc-def { text-align: left; max-width: 62ch; margin: 0 auto; }
+.fc-def > :first-child { margin-top: 0; }
+.fc-def > :last-child { margin-bottom: 0; }
+.fc-hint { position: absolute; left: 0; right: 0; bottom: 0.6rem; font-size: 0.8rem; color: var(--muted); }
+.fc-grade, .fc-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.8rem; }
+.fc-grade .btn, .fc-nav .btn { min-height: 2.75rem; }
+.fc-btn--again { border-color: var(--warn-line); background: var(--warn-soft); }
+.fc-btn--got { border-color: var(--good); background: var(--good-soft); }
+@keyframes fc-flip { from { transform: scaleX(0.92); opacity: 0.6; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .fc-card { animation: none; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -642,3 +682,8 @@ a.cell:hover { background: var(--ts); color: var(--ink); }
 
 /* Korean: keep words whole when wrapping */
 :root[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
+
+@media (max-width: 600px) {
+  .fc-card { min-height: 11rem; padding: 1rem 0.9rem 2rem; }
+  .fc-opts { gap: 0 1rem; }
+}
