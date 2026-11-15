@@ -32,6 +32,65 @@ IB.registerTopic({
     {
       ref: "B1.2.1",
       ahl: false,
+      deeper: {
+        en: `<p><strong>What is the same, and what is different.</strong></p>
+<table>
+<tr><th>Part</th><th>Same in all 20 amino acids?</th><th>Job</th></tr>
+<tr><td>Alpha carbon</td><td>yes</td><td>central atom that holds the other four groups</td></tr>
+<tr><td>Amine group (–NH<sub>2</sub>)</td><td>yes</td><td>takes part in the peptide bond (the N)</td></tr>
+<tr><td>Carboxyl group (–COOH)</td><td>yes</td><td>takes part in the peptide bond (the C)</td></tr>
+<tr><td>Hydrogen (–H)</td><td>yes</td><td>fills the fourth bond of the alpha carbon</td></tr>
+<tr><td>R-group</td><td><strong>no</strong></td><td>gives each amino acid its own properties</td></tr>
+</table>
+<p><strong>Why a shared backbone matters.</strong> Every amino acid has the same amine and carboxyl groups, so any amino acid can join to any other. That is what makes 20<sup><em>n</em></sup> different sequences possible (B1.2.4). The R-groups then give each position its own chemistry, and that decides how the chain folds (B1.2.6 to B1.2.9).</p>
+<p><strong>A chain has two different ends.</strong> When amino acids are joined, one end of the chain still has a free amine group and the other end still has a free carboxyl group. Only the groups in the middle are used up in peptide bonds.</p>
+<p><strong>Drawing checklist (usually 3 to 4 marks):</strong></p>
+<ul>
+<li>a central carbon, labelled alpha carbon (or C);</li>
+<li>–NH<sub>2</sub> bonded to the central carbon through the N;</li>
+<li>–COOH bonded to the central carbon through the C, showing both =O and –OH;</li>
+<li>–H and –R both bonded to the central carbon, with R labelled as the variable group.</li>
+</ul>
+<p>Common slips: writing –COH instead of –COOH, attaching R to the nitrogen, or leaving out the H.</p>`,
+        ja: `<p><strong>同じ部分と違う部分。</strong></p>
+<table>
+<tr><th>部分</th><th>20種類すべてで同じか</th><th>はたらき</th></tr>
+<tr><td>α炭素 (alpha carbon)</td><td>同じ</td><td>他の4つの基を保つ中心の原子</td></tr>
+<tr><td>アミノ基 (amine group)（–NH<sub>2</sub>）</td><td>同じ</td><td>ペプチド結合に関わる（N）</td></tr>
+<tr><td>カルボキシ基 (carboxyl group)（–COOH）</td><td>同じ</td><td>ペプチド結合に関わる（C）</td></tr>
+<tr><td>水素（–H）</td><td>同じ</td><td>α炭素の4本目の結合を埋める</td></tr>
+<tr><td>R基 (R-group)</td><td><strong>違う</strong></td><td>アミノ酸ごとの性質を与える</td></tr>
+</table>
+<p><strong>共通の骨格が大切な理由。</strong>どのアミノ酸もアミノ基とカルボキシ基が同じなので、どのアミノ酸どうしでもつながれます。そのおかげで 20<sup><em>n</em></sup> 通りの配列が可能になります（B1.2.4）。そしてR基が各位置に固有の化学的性質を与え、それが鎖の折りたたまれ方を決めます（B1.2.6〜B1.2.9）。</p>
+<p><strong>鎖には2つの異なる端がある。</strong>アミノ酸がつながっても、鎖の一方の端には遊離のアミノ基、もう一方の端には遊離のカルボキシ基が残ります。ペプチド結合で使われるのは、途中の基だけです。</p>
+<p><strong>作図のチェックリスト（ふつう3〜4点）：</strong></p>
+<ul>
+<li>中心の炭素に「α炭素 (alpha carbon)」と書く（またはC）。</li>
+<li>–NH<sub>2</sub> がNで中心の炭素に結合している。</li>
+<li>–COOH がCで中心の炭素に結合し、=Oと–OHの両方が見える。</li>
+<li>–Hと–Rが中心の炭素に結合し、Rは「変わる基」と示す。</li>
+</ul>
+<p>よくあるミス：–COOHを–COHと書く、RをNにつける、Hを描き忘れる。</p>`,
+        zh: `<p><strong>相同與不同之處。</strong></p>
+<table>
+<tr><th>部分</th><th>20 種氨基酸都相同嗎？</th><th>作用</th></tr>
+<tr><td>α-碳 (alpha carbon)</td><td>相同</td><td>連接其餘四個基團的中心原子</td></tr>
+<tr><td>氨基 (amine group)（–NH<sub>2</sub>）</td><td>相同</td><td>參與肽鍵 (peptide bond)（N 原子）</td></tr>
+<tr><td>羧基 (carboxyl group)（–COOH）</td><td>相同</td><td>參與肽鍵（C 原子）</td></tr>
+<tr><td>氫（–H）</td><td>相同</td><td>填補α-碳的第四個鍵</td></tr>
+<tr><td>R 基 (R-group)</td><td><strong>不同</strong></td><td>賦予每種氨基酸獨特的性質</td></tr>
+</table>
+<p><strong>為何共同骨架很重要。</strong>每種氨基酸的氨基和羧基都相同，所以任何氨基酸都可以與其他氨基酸連接。這就令 20<sup><em>n</em></sup> 種不同序列成為可能 (B1.2.4)。R 基再為每個位置提供獨特的化學性質，決定長鏈如何摺疊 (B1.2.6 至 B1.2.9)。</p>
+<p><strong>長鏈有兩個不同的末端。</strong>氨基酸連接後，鏈的一端仍有游離的氨基，另一端仍有游離的羧基。只有中間的基團會在肽鍵中用掉。</p>
+<p><strong>繪圖檢查清單（通常 3 至 4 分）：</strong></p>
+<ul>
+<li>中央的碳，標明是α-碳 (alpha carbon)（或寫 C）；</li>
+<li>–NH<sub>2</sub> 以 N 與中央的碳相連；</li>
+<li>–COOH 以 C 與中央的碳相連，並顯示 =O 和 –OH；</li>
+<li>–H 和 –R 都連在中央的碳上，並註明 R 是可變的基團。</li>
+</ul>
+<p>常見錯誤：把 –COOH 寫成 –COH、把 R 接在氮原子上，或漏掉 H。</p>`
+      },
       heading: {
         en: "Step 1: the amino acid — one backbone, one variable part",
         ja: "ステップ1：アミノ酸 ― 共通の骨格と変わる部分",
@@ -111,6 +170,71 @@ IB.registerTopic({
     {
       ref: "B1.2.2",
       ahl: false,
+      deeper: {
+        en: `<p><strong>Counting bonds and water.</strong> Each peptide bond needs one condensation reaction, and each condensation reaction releases one water molecule. For one unbranched chain of <em>n</em> amino acids:</p>
+<ul>
+<li>number of peptide bonds = <em>n</em> − 1</li>
+<li>number of water molecules released = <em>n</em> − 1</li>
+</ul>
+<p><em>Worked example.</em> A tripeptide has 3 − 1 = 2 peptide bonds and 2 water molecules are released. Insulin has two chains, so count each chain separately: (21 − 1) + (30 − 1) = <strong>49</strong> peptide bonds. Breaking all 49 by hydrolysis uses 49 water molecules.</p>
+<table>
+<tr><th></th><th>Condensation</th><th>Hydrolysis</th></tr>
+<tr><td>Water</td><td>released</td><td>used up</td></tr>
+<tr><td>Peptide bonds</td><td>made</td><td>broken</td></tr>
+<tr><td>Where</td><td>ribosomes, when a polypeptide is built</td><td>digestion, using protease enzymes</td></tr>
+<tr><td>Result</td><td>longer chain</td><td>shorter chains or single amino acids</td></tr>
+</table>
+<p><strong>Steps for a "draw a dipeptide" question.</strong></p>
+<ol>
+<li>Draw two generalized amino acids side by side, carboxyl group of the first next to the amine group of the second.</li>
+<li>Mark the –OH of the first carboxyl group and one –H of the second amine group. These leave as H<sub>2</sub>O.</li>
+<li>Join the carbon and the nitrogen with a single bond.</li>
+<li>Label the peptide bond. Check that the carbon still has =O and the nitrogen still has one H.</li>
+</ol>
+<p><strong>Mark-scheme language:</strong> "condensation (reaction)"; "water is released"; "covalent bond between the carbon of the carboxyl group and the nitrogen of the amine group"; "peptide bond". See B1.1 for condensation and hydrolysis in general.</p>`,
+        ja: `<p><strong>結合と水の数え方。</strong>ペプチド結合1つにつき縮合反応が1回起こり、縮合反応1回につき水が1分子放出されます。枝分かれのない<em>n</em>個のアミノ酸の鎖では次のようになります。</p>
+<ul>
+<li>ペプチド結合の数 = <em>n</em> − 1</li>
+<li>放出される水分子の数 = <em>n</em> − 1</li>
+</ul>
+<p><em>計算例。</em>トリペプチドは 3 − 1 = 2 個のペプチド結合をもち、水が2分子放出されます。インスリン (insulin) は2本の鎖なので、鎖ごとに数えます：(21 − 1) + (30 − 1) = <strong>49</strong> 個のペプチド結合です。この49個すべてを加水分解で切るには、水が49分子必要です。</p>
+<table>
+<tr><th></th><th>縮合 (condensation)</th><th>加水分解 (hydrolysis)</th></tr>
+<tr><td>水</td><td>放出される</td><td>使われる</td></tr>
+<tr><td>ペプチド結合</td><td>つくられる</td><td>切られる</td></tr>
+<tr><td>場所</td><td>リボソーム（ポリペプチドをつくるとき）</td><td>消化（タンパク質分解酵素による）</td></tr>
+<tr><td>結果</td><td>鎖が長くなる</td><td>短い鎖または単独のアミノ酸になる</td></tr>
+</table>
+<p><strong>「ジペプチドを描け」の手順。</strong></p>
+<ol>
+<li>一般化したアミノ酸を2つ並べて描く。1つ目のカルボキシ基を2つ目のアミノ基の隣に置く。</li>
+<li>1つ目のカルボキシ基の–OHと、2つ目のアミノ基の–Hを1つ印をつける。これらはH<sub>2</sub>Oとして出ていく。</li>
+<li>炭素と窒素を単結合でつなぐ。</li>
+<li>ペプチド結合 (peptide bond) と書く。炭素に=O、窒素にHが1つ残っているか確認する。</li>
+</ol>
+<p><strong>採点基準の言い回し：</strong>「縮合（反応）」「水が放出される」「カルボキシ基の炭素とアミノ基の窒素の間の共有結合」「ペプチド結合」。縮合と加水分解の全般についてはB1.1を見てください。</p>`,
+        zh: `<p><strong>計算肽鍵和水分子。</strong>每形成一個肽鍵需要一次縮合反應，每次縮合反應釋出一個水分子。對於一條沒有分支、由 <em>n</em> 個氨基酸組成的鏈：</p>
+<ul>
+<li>肽鍵數目 = <em>n</em> − 1</li>
+<li>釋出的水分子數目 = <em>n</em> − 1</li>
+</ul>
+<p><em>例題。</em>三肽有 3 − 1 = 2 個肽鍵，釋出 2 個水分子。胰島素 (insulin) 有兩條鏈，所以要逐條計算：(21 − 1) + (30 − 1) = <strong>49</strong> 個肽鍵。用水解把這 49 個肽鍵全部斷開，需要 49 個水分子。</p>
+<table>
+<tr><th></th><th>縮合 (condensation)</th><th>水解 (hydrolysis)</th></tr>
+<tr><td>水</td><td>釋出</td><td>消耗</td></tr>
+<tr><td>肽鍵</td><td>形成</td><td>斷開</td></tr>
+<tr><td>地點</td><td>核糖體（建造多肽時）</td><td>消化（由蛋白酶進行）</td></tr>
+<tr><td>結果</td><td>鏈變長</td><td>變成較短的鏈或單個氨基酸</td></tr>
+</table>
+<p><strong>「繪畫二肽」題目的步驟。</strong></p>
+<ol>
+<li>並排繪畫兩個通用氨基酸，第一個的羧基靠近第二個的氨基。</li>
+<li>標出第一個羧基的 –OH 和第二個氨基的一個 –H，它們會以 H<sub>2</sub>O 離開。</li>
+<li>用單鍵連接碳原子和氮原子。</li>
+<li>標明肽鍵 (peptide bond)，並檢查碳原子仍有 =O、氮原子仍有一個 H。</li>
+</ol>
+<p><strong>評分準則的用語：</strong>「縮合（反應）」、「釋出水」、「羧基的碳與氨基的氮之間的共價鍵」、「肽鍵」。縮合和水解的一般說明見 B1.1。</p>`
+      },
       heading: {
         en: "Step 2: the peptide bond — joining amino acids by condensation",
         ja: "ステップ2：ペプチド結合 ― 縮合でアミノ酸をつなぐ",
@@ -169,6 +293,53 @@ IB.registerTopic({
     {
       ref: "B1.2.3",
       ahl: false,
+      deeper: {
+        en: `<table>
+<tr><th></th><th>Essential amino acids</th><th>Non-essential amino acids</th></tr>
+<tr><td>Made by the body?</td><td>no</td><td>yes, from other amino acids</td></tr>
+<tr><td>Must come from food?</td><td>yes</td><td>not necessarily</td></tr>
+<tr><td>Needed to build proteins?</td><td>yes</td><td>yes</td></tr>
+</table>
+<p><strong>Why one short supply matters.</strong> A cell can only finish a protein if every amino acid in its sequence is available. If one essential amino acid is in short supply, proteins that need it cannot be completed, however much of the other amino acids there is. The body cannot make up the shortfall because it cannot make that amino acid.</p>
+<p><strong>Applying this to a vegan diet.</strong> Different plant foods tend to be low in different essential amino acids. For example, a grain-based food and a bean or lentil food can make up for each other. Eating a variety of plant protein sources over the day gives the full set.</p>
+<p><strong>A 3-mark answer to "Explain why vegans must plan their diet":</strong></p>
+<ul>
+<li>essential amino acids cannot be made by the body, so they must come from food;</li>
+<li>a single plant food may be low in one or more essential amino acids;</li>
+<li>so a variety of plant protein sources is needed, to supply all the essential amino acids.</li>
+</ul>
+<p><strong>Avoid:</strong> "essential means more important", "plants have no protein", "vegans cannot get enough protein". A planned vegan diet can supply everything needed.</p>`,
+        ja: `<table>
+<tr><th></th><th>必須アミノ酸 (essential)</th><th>非必須アミノ酸 (non-essential)</th></tr>
+<tr><td>体内でつくれるか</td><td>つくれない</td><td>つくれる（他のアミノ酸から）</td></tr>
+<tr><td>食べ物から取る必要があるか</td><td>ある</td><td>必ずしもない</td></tr>
+<tr><td>タンパク質をつくるのに必要か</td><td>必要</td><td>必要</td></tr>
+</table>
+<p><strong>1つ不足するだけで問題になる理由。</strong>細胞は、配列にあるアミノ酸がすべてそろっているときだけタンパク質を完成できます。必須アミノ酸が1つ不足すると、他のアミノ酸がどれだけ多くても、それを必要とするタンパク質は完成しません。体はそのアミノ酸をつくれないので、不足を補えません。</p>
+<p><strong>ビーガンの食事に当てはめる。</strong>植物性食品は、食品ごとに不足しやすい必須アミノ酸が違う傾向があります。たとえば穀物を使った食品と豆類の食品は、互いの不足を補えることがあります。さまざまな植物性タンパク源を1日の中でとれば、必要なアミノ酸がそろいます。</p>
+<p><strong>「ビーガンが食事を計画する必要がある理由を説明せよ」の3点の答え：</strong></p>
+<ul>
+<li>必須アミノ酸は体内でつくれないので、食べ物から取る必要がある。</li>
+<li>1種類の植物性食品では、必須アミノ酸の1つ以上が少ないことがある。</li>
+<li>そのため、すべての必須アミノ酸をそろえるには、さまざまな植物性タンパク源が必要である。</li>
+</ul>
+<p><strong>避けること：</strong>「必須は重要という意味」「植物にタンパク質はない」「ビーガンは十分なタンパク質をとれない」。よく計画されたビーガンの食事なら、必要なものはそろいます。</p>`,
+        zh: `<table>
+<tr><th></th><th>必需氨基酸 (essential)</th><th>非必需氨基酸 (non-essential)</th></tr>
+<tr><td>身體能製造嗎？</td><td>不能</td><td>能（由其他氨基酸製造）</td></tr>
+<tr><td>必須從食物攝取嗎？</td><td>必須</td><td>不一定</td></tr>
+<tr><td>建造蛋白質需要嗎？</td><td>需要</td><td>需要</td></tr>
+</table>
+<p><strong>為何缺少一種就有問題。</strong>細胞要序列中的每種氨基酸都足夠，才能完成一個蛋白質。如果某種必需氨基酸供應不足，需要它的蛋白質便無法完成，即使其他氨基酸多得很也沒有用。身體不能製造該氨基酸，所以無法彌補不足。</p>
+<p><strong>應用於純素飲食。</strong>不同的植物性食物，往往缺少不同的必需氨基酸。例如以穀物為主的食物和豆類食物，可以互相彌補。在一日之內進食多種植物蛋白質來源，就能得到齊全的必需氨基酸。</p>
+<p><strong>「解釋為何純素者須計劃飲食」的 3 分答案：</strong></p>
+<ul>
+<li>必需氨基酸不能由身體製造，必須從食物攝取；</li>
+<li>單一種植物性食物可能缺少一種或多種必需氨基酸；</li>
+<li>所以須要進食多種植物蛋白質來源，以提供全部必需氨基酸。</li>
+</ul>
+<p><strong>避免寫：</strong>「必需即是較重要」、「植物沒有蛋白質」、「純素者攝取不到足夠蛋白質」。計劃妥善的純素飲食可以提供所需的一切。</p>`
+      },
       heading: {
         en: "Essential and non-essential amino acids in the diet",
         ja: "食事に必要なアミノ酸：必須アミノ酸と非必須アミノ酸",
@@ -206,6 +377,56 @@ IB.registerTopic({
     {
       ref: "B1.2.4",
       ahl: false,
+      deeper: {
+        en: `<p><strong>Why multiply?</strong> Each position in the chain is an independent choice from 20 amino acids. Independent choices multiply, so a chain with <em>n</em> positions has 20 × 20 × … × 20 (<em>n</em> times) = 20<sup><em>n</em></sup> possible sequences. Order counts: Ala–Gly is a different dipeptide from Gly–Ala.</p>
+<p><strong>More worked examples.</strong></p>
+<ul>
+<li>Pentapeptide (n = 5): 20<sup>5</sup> = <strong>3 200 000</strong> = 3.2 × 10<sup>6</sup></li>
+<li>A tripeptide whose first amino acid is already fixed: 20<sup>2</sup> = <strong>400</strong> (only two positions are free)</li>
+<li>Compare an "alphabet" of only 2 amino acids with the real 20, for a chain of 10: 2<sup>10</sup> = 1024, but 20<sup>10</sup> ≈ 1.0 × 10<sup>13</sup>. A larger alphabet gives enormously more variety.</li>
+</ul>
+<p><strong>Calculator tip.</strong> Use the <em>x<sup>y</sup></em> key and give the answer in standard form for large numbers. Check the order: base 20, power <em>n</em>. Writing <em>n</em><sup>20</sup>, or 20 × <em>n</em>, is the most common error.</p>
+<p><strong>Mark-scheme language for "Explain how so many different polypeptides can be made":</strong></p>
+<ul>
+<li>20 different amino acids are available;</li>
+<li>polypeptides can be any length / any number of amino acids;</li>
+<li>amino acids can be arranged in any order / sequence;</li>
+<li>so there are 20<sup><em>n</em></sup> possible sequences (accept an example calculation).</li>
+</ul>
+<p><strong>A limit to remember.</strong> 20<sup><em>n</em></sup> counts possible sequences, not sequences that exist. Cells only make the sequences coded for by their genes. Where genes specify the sequence is covered later in the course (D1.2).</p>`,
+        ja: `<p><strong>なぜかけ算なのか。</strong>鎖の各位置では、20種類のアミノ酸から独立に1つを選びます。独立な選択はかけ算になるので、<em>n</em>個の位置がある鎖では 20 × 20 × … × 20（<em>n</em>回）= 20<sup><em>n</em></sup> 通りの配列が可能です。順序も区別されます。Ala–GlyとGly–Alaは別のジペプチドです。</p>
+<p><strong>計算例をさらに。</strong></p>
+<ul>
+<li>ペンタペプチド (n = 5)：20<sup>5</sup> = <strong>3 200 000</strong> = 3.2 × 10<sup>6</sup></li>
+<li>最初のアミノ酸がすでに決まっているトリペプチド：20<sup>2</sup> = <strong>400</strong>（自由な位置は2つだけ）</li>
+<li>長さ10の鎖で、アミノ酸が2種類だけの場合と、実際の20種類の場合を比べる：2<sup>10</sup> = 1024、20<sup>10</sup> ≈ 1.0 × 10<sup>13</sup>。「文字」の種類が増えると、多様性は桁違いに増えます。</li>
+</ul>
+<p><strong>電卓のコツ。</strong><em>x<sup>y</sup></em> キーを使い、大きな数は指数表記で答えます。順序に注意：底が20、指数が<em>n</em>です。<em>n</em><sup>20</sup> や 20 × <em>n</em> と書くのが最も多い誤りです。</p>
+<p><strong>「これほど多くの異なるポリペプチドができるしくみを説明せよ」の採点基準の言い回し：</strong></p>
+<ul>
+<li>20種類の異なるアミノ酸がある。</li>
+<li>ポリペプチドは任意の長さ（アミノ酸の数）にできる。</li>
+<li>アミノ酸は任意の順序（配列）に並べられる。</li>
+<li>したがって 20<sup><em>n</em></sup> 通りの配列が可能（計算例も可）。</li>
+</ul>
+<p><strong>覚えておく限界。</strong>20<sup><em>n</em></sup> は可能な配列の数で、実際に存在する配列の数ではありません。細胞は遺伝子にコードされた配列だけをつくります。遺伝子が配列を指定するしくみは、この課程の後で学びます（D1.2）。</p>`,
+        zh: `<p><strong>為何用乘法？</strong>鏈上每個位置都是從 20 種氨基酸中獨立選一種。獨立的選擇要相乘，所以有 <em>n</em> 個位置的鏈，可能的序列有 20 × 20 × … × 20（<em>n</em> 次）= 20<sup><em>n</em></sup> 種。次序也計算在內：Ala–Gly 與 Gly–Ala 是不同的二肽。</p>
+<p><strong>更多例題。</strong></p>
+<ul>
+<li>五肽 (n = 5)：20<sup>5</sup> = <strong>3 200 000</strong> = 3.2 × 10<sup>6</sup></li>
+<li>第一個氨基酸已固定的三肽：20<sup>2</sup> = <strong>400</strong>（只有兩個位置可自由選擇）</li>
+<li>以長度為 10 的鏈比較「只有 2 種氨基酸」和真實的 20 種：2<sup>10</sup> = 1024，但 20<sup>10</sup> ≈ 1.0 × 10<sup>13</sup>。「字母」種類愈多，變化愈是大幅增加。</li>
+</ul>
+<p><strong>計算機提示。</strong>使用 <em>x<sup>y</sup></em> 鍵，大數值用科學記數法表示。留意次序：底數是 20，指數是 <em>n</em>。寫成 <em>n</em><sup>20</sup> 或 20 × <em>n</em> 是最常見的錯誤。</p>
+<p><strong>「解釋為何能造出如此多不同的多肽 (polypeptide)」的評分準則用語：</strong></p>
+<ul>
+<li>有 20 種不同的氨基酸；</li>
+<li>多肽可以是任何長度／任何數目的氨基酸；</li>
+<li>氨基酸可以按任何次序／序列排列；</li>
+<li>所以有 20<sup><em>n</em></sup> 種可能的序列（可接受舉例計算）。</li>
+</ul>
+<p><strong>要記住的限制。</strong>20<sup><em>n</em></sup> 計算的是可能的序列，不是真正存在的序列。細胞只製造由基因編碼的序列。基因如何指定序列，會在課程稍後學習 (D1.2)。</p>`
+      },
       heading: {
         en: "Step 3 preview: an almost endless variety of polypeptides",
         ja: "ステップ3の予告：ほぼ無限のポリペプチドの種類",
@@ -269,6 +490,41 @@ IB.registerTopic({
     {
       ref: "B1.2.5",
       ahl: false,
+      deeper: {
+        en: `<p><strong>What actually changes.</strong></p>
+<table>
+<tr><th>Cause</th><th>What happens</th><th>Bonds affected</th></tr>
+<tr><td>Higher temperature</td><td>atoms gain kinetic energy and vibrate more, so the chain unfolds</td><td>hydrogen bonds, ionic bonds, hydrophobic interactions</td></tr>
+<tr><td>Extreme pH</td><td>extra H<sup>+</sup> (low pH) or too little H<sup>+</sup> (high pH) changes charges on R-groups. (AHL detail:) At low pH an acidic group (–COO<sup>–</sup>) picks up H<sup>+</sup> and loses its charge. At high pH a basic group (–NH<sub>3</sub><sup>+</sup>) loses H<sup>+</sup> and loses its charge.</td><td>ionic bonds, and also hydrogen bonds</td></tr>
+</table>
+<p>Peptide bonds are strong covalent bonds and are not broken, so the primary structure stays the same. Disulfide bonds are also strong and usually survive. (At HL, name the level that changes: secondary and tertiary structure.)</p>
+<p><strong>Reading a graph of enzyme activity against temperature.</strong> Activity rises as temperature rises, because particles move faster and collide more often. It reaches an optimum, then falls steeply as denaturation changes the active site. The fall is usually steeper than the rise. In a data question, quote two values from the axes, then give the reason.</p>
+<p><strong>A familiar example.</strong> Egg white turns from clear to white when cooked. The chains unfold, their hydrophobic R-groups become exposed, and the chains stick together and become insoluble.</p>
+<p><strong>No single "right" pH.</strong> Pepsin in the stomach works best at about pH 2, while many enzymes inside cells work best near pH 7. Each protein is shaped for its own surroundings, and that shape is lost outside them.</p>
+<p><strong>Mark-scheme language:</strong> "weak bonds / hydrogen bonds / ionic bonds are broken"; "tertiary structure changes" (AHL); "shape of the active site changes"; "substrate no longer fits"; "peptide bonds are not broken". Not "the enzyme is killed".</p>`,
+        ja: `<p><strong>実際に何が変わるのか。</strong></p>
+<table>
+<tr><th>原因</th><th>何が起こるか</th><th>影響を受ける結合</th></tr>
+<tr><td>温度の上昇</td><td>原子の運動エネルギーが増えて振動が激しくなり、鎖がほどける</td><td>水素結合、イオン結合、疎水性相互作用</td></tr>
+<tr><td>極端なpH</td><td>H<sup>+</sup>が多すぎる（低pH）か少なすぎる（高pH）と、R基の電荷が変わる。（AHLの詳細：）低pHでは酸性の基（–COO<sup>–</sup>）がH<sup>+</sup>を受け取って電荷を失う。高pHでは塩基性の基（–NH<sub>3</sub><sup>+</sup>）がH<sup>+</sup>を放出して電荷を失う。</td><td>イオン結合、水素結合も</td></tr>
+</table>
+<p>ペプチド結合は強い共有結合なので切れず、一次構造 (primary structure) は変わりません。ジスルフィド結合も強く、ふつうは残ります。（HLでは、変わる段階として二次・三次構造を挙げましょう。）</p>
+<p><strong>酵素活性と温度のグラフの読み方。</strong>温度が上がると粒子が速く動いてよく衝突するので、活性は上がります。最適温度 (optimum) に達したあと、変性で活性部位が変わるため急に下がります。下がり方は、ふつう上がり方より急です。データ問題では、軸から値を2つ引用し、そのあと理由を書きます。</p>
+<p><strong>身近な例。</strong>卵白は加熱すると透明から白に変わります。鎖がほどけ、疎水性のR基が表に出て、鎖どうしがくっつき、水に溶けなくなります。</p>
+<p><strong>「正しいpH」は1つではない。</strong>胃のペプシン (pepsin) はpH約2で最もよく働きますが、細胞内の多くの酵素はpH7付近で最もよく働きます。それぞれのタンパク質は自分の環境に合う形をしていて、その環境の外では形を失います。</p>
+<p><strong>採点基準の言い回し：</strong>「弱い結合／水素結合／イオン結合が切れる」「三次構造が変わる」（AHL）「活性部位の形が変わる」「基質がもう合わない」「ペプチド結合は切れない」。「酵素が死ぬ」は不可。</p>`,
+        zh: `<p><strong>實際上改變了甚麼。</strong></p>
+<table>
+<tr><th>原因</th><th>發生甚麼事</th><th>受影響的鍵</th></tr>
+<tr><td>溫度上升</td><td>原子的動能增加，振動更劇烈，長鏈展開</td><td>氫鍵、離子鍵、疏水相互作用</td></tr>
+<tr><td>極端 pH 值</td><td>H<sup>+</sup> 過多（低 pH）或過少（高 pH），令 R 基的電荷改變。（AHL 詳情：）低 pH 時，酸性基團（–COO<sup>–</sup>）接收 H<sup>+</sup> 而失去電荷；高 pH 時，鹼性基團（–NH<sub>3</sub><sup>+</sup>）釋出 H<sup>+</sup> 而失去電荷。</td><td>離子鍵，也包括氫鍵</td></tr>
+</table>
+<p>肽鍵是強共價鍵，不會斷開，所以一級結構 (primary structure) 不變。二硫鍵也很強，通常保持完整。（HL 要指出哪一級結構改變：二級和三級結構。）</p>
+<p><strong>閱讀酶活性對溫度的曲線圖。</strong>溫度上升時，粒子移動得更快、碰撞更頻密，所以活性上升。到達最適溫度 (optimum) 後，變性令活性位點改變，活性便急劇下降。下降通常比上升更陡。遇到數據題，先從坐標軸引述兩個數值，再說明原因。</p>
+<p><strong>常見例子。</strong>蛋白煮熟後由透明變白。長鏈展開，疏水性 R 基露出，各鏈黏在一起，變得不溶於水。</p>
+<p><strong>沒有單一「正確」的 pH 值。</strong>胃中的胃蛋白酶 (pepsin) 在約 pH 2 時效果最佳，而細胞內許多酶則在 pH 7 附近最佳。每種蛋白質的形狀都適合它自己的環境，離開該環境就會失去形狀。</p>
+<p><strong>評分準則的用語：</strong>「弱鍵／氫鍵／離子鍵被破壞」、「三級結構改變」（AHL）、「活性位點的形狀改變」、「底物不再配合」、「肽鍵沒有斷開」。不要寫「酶死亡」。</p>`
+      },
       heading: {
         en: "Denaturation: what pH and temperature do to protein shape",
         ja: "変性：pHと温度がタンパク質の形に与える影響",
@@ -305,6 +561,45 @@ IB.registerTopic({
     {
       ref: "B1.2.6",
       ahl: true,
+      widget: "amino-acid-cards",
+      deeper: {
+        en: `<p><strong>Classification table.</strong> All R-groups fall into four classes. This is the chemistry you need to predict how a polypeptide will fold.</p>
+<table>
+<tr><th>Class</th><th>What the R-group contains</th><th>Charge / polarity</th><th>Water</th><th>Main role in folding</th></tr>
+<tr><td>Non-polar</td><td>mainly C and H (for example a –CH<sub>3</sub> group)</td><td>no partial or full charges</td><td>hydrophobic</td><td>hydrophobic interactions: clusters in the core</td></tr>
+<tr><td>Polar, uncharged</td><td>groups such as –OH, –SH, –CONH<sub>2</sub></td><td>partial charges (δ+ and δ–), no full charge</td><td>hydrophilic</td><td>hydrogen bonds with water and with other polar R-groups</td></tr>
+<tr><td>Acidic</td><td>–COOH, which loses H<sup>+</sup> to become –COO<sup>–</sup></td><td>negative</td><td>hydrophilic</td><td>ionic bonds with basic R-groups</td></tr>
+<tr><td>Basic</td><td>–NH<sub>2</sub>, which gains H<sup>+</sup> to become –NH<sub>3</sub><sup>+</sup></td><td>positive</td><td>hydrophilic</td><td>ionic bonds with acidic R-groups</td></tr>
+</table>
+<p>Sulfur in –SH is only weakly polar, and books differ on where to place it. You only need to know that two cysteine –SH groups can form the covalent S–S disulfide bond. Cysteine is the one amino acid IB requires you to name (AHL).</p>
+<p><strong>How to use it in an exam.</strong> Look at the R-group, decide its class, then say what it will do: non-polar goes to the core, polar and charged go to the surface, and oppositely charged pairs form ionic bonds.</p>
+<div class="note"><p><strong>Extension (not required):</strong> some R-groups contain rings. Aromatic rings are mostly non-polar and hydrophobic, although an –OH on the ring adds some polarity. The R-group of proline is joined back to the backbone to make a ring. This makes the chain bend and stops proline fitting into an alpha helix.</p></div>
+<p><strong>Why 20?</strong> The 20 standard amino acids are the ones the genetic code specifies directly. Some sources say 21 or 22, counting selenocysteine and pyrrolysine, which a few organisms code in special ways. These are not required. Other amino acids, such as those in some modified proteins, are altered after the chain is made.</p>`,
+        ja: `<p><strong>分類表。</strong>R基は4つの種類に分けられます。ポリペプチドがどう折りたたまれるかを予測するのに必要な化学です。</p>
+<table>
+<tr><th>種類</th><th>R基の中身</th><th>電荷・極性</th><th>水との関係</th><th>折りたたみでの主な役割</th></tr>
+<tr><td>無極性 (non-polar)</td><td>ほぼCとHだけ（例：–CH<sub>3</sub>）</td><td>部分電荷も完全な電荷もない</td><td>疎水性</td><td>疎水性相互作用：芯に集まる</td></tr>
+<tr><td>極性・無電荷 (polar, uncharged)</td><td>–OH、–SH、–CONH<sub>2</sub> などの基</td><td>部分電荷 (δ+、δ–)、完全な電荷はない</td><td>親水性</td><td>水や他の極性R基との水素結合</td></tr>
+<tr><td>酸性 (acidic)</td><td>–COOH。H<sup>+</sup>を放出して –COO<sup>–</sup> になる</td><td>負</td><td>親水性</td><td>塩基性R基とのイオン結合</td></tr>
+<tr><td>塩基性 (basic)</td><td>–NH<sub>2</sub>。H<sup>+</sup>を受け取って –NH<sub>3</sub><sup>+</sup> になる</td><td>正</td><td>親水性</td><td>酸性R基とのイオン結合</td></tr>
+</table>
+<p>–SHの硫黄は弱い極性しかなく、どこに分類するかは本によって違います。必要なのは、2つのシステイン (cysteine) の –SH が共有結合のS–S（ジスルフィド結合）をつくれることだけです。名前を答える必要があるアミノ酸は、IBではシステインだけです（AHL）。</p>
+<p><strong>試験での使い方。</strong>R基を見て種類を決め、そのはたらきを書きます。無極性は芯へ、極性と電荷をもつものは表面へ、反対の電荷どうしはイオン結合をつくります。</p>
+<div class="note"><p><strong>発展（必須ではない）：</strong>R基には環をもつものがあります。芳香環は多くが無極性で疎水性ですが、環に –OH がつくと極性が少し加わります。プロリン (proline) のR基は骨格につながって環をつくります。そのため鎖が曲がり、αヘリックスの中に収まりません。</p></div>
+<p><strong>なぜ20種類か。</strong>20種類の標準アミノ酸は、遺伝暗号が直接指定するものです。資料によっては21種類や22種類とし、セレノシステイン (selenocysteine) とピロリジン (pyrrolysine) を数えます。一部の生物が特別なしくみでコードしているもので、必須ではありません。そのほかのアミノ酸は、鎖ができたあとに修飾されたものです。</p>`,
+        zh: `<p><strong>分類表。</strong>所有 R 基可分為四類。這是預測多肽如何摺疊所需的化學知識。</p>
+<table>
+<tr><th>類別</th><th>R 基含有甚麼</th><th>電荷／極性</th><th>與水的關係</th><th>在摺疊中的主要作用</th></tr>
+<tr><td>非極性 (non-polar)</td><td>主要是 C 和 H（例如 –CH<sub>3</sub>）</td><td>沒有部分電荷或完整電荷</td><td>疏水</td><td>疏水相互作用：聚集在核心</td></tr>
+<tr><td>極性、不帶電 (polar, uncharged)</td><td>如 –OH、–SH、–CONH<sub>2</sub> 等基團</td><td>有部分電荷 (δ+ 和 δ–)，沒有完整電荷</td><td>親水</td><td>與水及其他極性 R 基形成氫鍵</td></tr>
+<tr><td>酸性 (acidic)</td><td>–COOH，釋出 H<sup>+</sup> 後成為 –COO<sup>–</sup></td><td>帶負電</td><td>親水</td><td>與鹼性 R 基形成離子鍵</td></tr>
+<tr><td>鹼性 (basic)</td><td>–NH<sub>2</sub>，接收 H<sup>+</sup> 後成為 –NH<sub>3</sub><sup>+</sup></td><td>帶正電</td><td>親水</td><td>與酸性 R 基形成離子鍵</td></tr>
+</table>
+<p>–SH 中的硫只有微弱極性，各書分類不同。你只須知道兩個半胱氨酸 (cysteine) 的 –SH 可以形成共價的 S–S 二硫鍵。半胱氨酸是 IB 唯一要求你說出名稱的氨基酸（AHL）。</p>
+<p><strong>如何在考試中應用。</strong>看 R 基，判斷它屬哪一類，再說明它的作用：非極性的走向核心，極性和帶電的走向表面，帶相反電荷的一對形成離子鍵。</p>
+<div class="note"><p><strong>延伸（非必須）：</strong>有些 R 基含有環。芳香環大多是非極性、疏水的，但環上若有 –OH 就會增加一些極性。脯氨酸 (proline) 的 R 基會連回骨架而形成環，令鏈彎曲，也令脯氨酸不能嵌入α螺旋。</p></div>
+<p><strong>為何是 20 種？</strong>20 種標準氨基酸是遺傳密碼直接指定的。有些資料說是 21 或 22 種，把硒代半胱氨酸 (selenocysteine) 和吡咯賴氨酸 (pyrrolysine) 也計算在內，這兩種只有少數生物以特殊方式編碼，並非必須認識。其他氨基酸則是在鏈造好後才被修飾而成。</p>`
+      },
       heading: {
         en: "R-groups: the chemical variety behind protein diversity",
         ja: "R基：タンパク質の多様性のもとになる化学的な違い",
@@ -365,6 +660,47 @@ IB.registerTopic({
     {
       ref: "B1.2.7",
       ahl: true,
+      deeper: {
+        en: `<p><strong>The chain of cause and effect.</strong> Learn this as one sentence you can write out in full:</p>
+<ol>
+<li>the gene fixes the order of amino acids (primary structure);</li>
+<li>so the R-group at every position is fixed;</li>
+<li>the R-groups decide which hydrogen bonds, ionic bonds, disulfide bonds and hydrophobic interactions can form;</li>
+<li>so the chain folds into one particular three-dimensional shape (conformation);</li>
+<li>and that shape decides the function.</li>
+</ol>
+<p><strong>Same amino acids, different order.</strong> Ala–Gly–Lys and Lys–Gly–Ala contain the same amino acids but are different sequences. R-groups sit at different positions, so they can make different bonds and the folded shape differs.</p>
+<p><strong>Does every change matter?</strong> No. A swap for an amino acid with a similar R-group (for example one non-polar R-group for another) often has little effect. A swap that changes the type of R-group, such as charged to non-polar, is more likely to matter, especially in the core or at an active site. In an exam, say it <em>could</em> change the shape. Do not say it always will.</p>
+<div class="note"><p><strong>Extension (not required): sickle-cell haemoglobin.</strong> In the β-globin chain, the amino acid at position 6 is glutamic acid, which is acidic and charged. In sickle-cell haemoglobin it is valine, which is non-polar. This single substitution comes from a one-base change in the gene. The haemoglobin molecules now have a hydrophobic patch on the surface, so at low oxygen concentration they stick together in long fibres and bend the red blood cell. It is a good worked example of one R-group change altering shape and function.</p></div>
+<p><strong>Mark-scheme language:</strong> "the sequence of amino acids determines the position of R-groups"; "R-groups determine the bonds that form"; "so the tertiary structure / three-dimensional shape is determined"; "a change in one amino acid may change the shape and so the function".</p>
+<p><strong>Do not confuse:</strong> denaturation changes the 3D shape but leaves the primary structure unchanged. A gene mutation changes the primary structure itself.</p>`,
+        ja: `<p><strong>原因と結果のつながり。</strong>次の流れを、1つの文として書けるように覚えましょう。</p>
+<ol>
+<li>遺伝子がアミノ酸の順序（一次構造）を決める。</li>
+<li>そのため、各位置のR基が決まる。</li>
+<li>R基が、どの水素結合、イオン結合、ジスルフィド結合、疎水性相互作用ができるかを決める。</li>
+<li>そのため、鎖は特定の立体構造 (conformation) に折りたたまれる。</li>
+<li>その形が働きを決める。</li>
+</ol>
+<p><strong>同じアミノ酸で順序が違う場合。</strong>Ala–Gly–LysとLys–Gly–Alaは同じアミノ酸を含みますが、別の配列です。R基の位置が違うので、つくれる結合が違い、折りたたまれた形も違います。</p>
+<p><strong>どの変化も重要なのか。</strong>そうとは限りません。似たR基のアミノ酸への置き換え（たとえば無極性のR基から別の無極性のR基）は、影響が小さいことがよくあります。電荷をもつものから無極性へのように、R基の種類が変わる置き換えは、特に芯や活性部位では影響が大きくなりやすいです。試験では、形が変わる「可能性がある (could)」と書き、「必ず変わる」とは書かないでください。</p>
+<div class="note"><p><strong>発展（必須ではない）：鎌状赤血球症のヘモグロビン (sickle-cell haemoglobin)。</strong>βグロビン鎖の6番目のアミノ酸は、通常はグルタミン酸で、酸性で電荷をもちます。鎌状赤血球症のヘモグロビンではバリンで、無極性です。この1か所の置換は、遺伝子の塩基が1つ変わることで起こります。ヘモグロビン分子の表面に疎水性の部分ができ、酸素濃度が低いと分子どうしがくっついて長い繊維になり、赤血球を変形させます。R基が1つ変わるだけで形と働きが変わる、よい具体例です。</p></div>
+<p><strong>採点基準の言い回し：</strong>「アミノ酸の配列がR基の位置を決める」「R基が、できる結合を決める」「そのため三次構造／立体構造が決まる」「アミノ酸が1つ変わると形が変わり、働きも変わることがある」。</p>
+<p><strong>混同しない：</strong>変性は立体構造を変えますが、一次構造は変えません。遺伝子の突然変異は一次構造そのものを変えます。</p>`,
+        zh: `<p><strong>因果關係的鏈條。</strong>把以下流程記牢，能完整寫成一句話：</p>
+<ol>
+<li>基因決定氨基酸的次序（一級結構）；</li>
+<li>所以每個位置的 R 基是固定的；</li>
+<li>R 基決定能形成哪些氫鍵、離子鍵、二硫鍵和疏水相互作用；</li>
+<li>所以長鏈摺疊成一個特定的三維形狀（構象 (conformation)）；</li>
+<li>這個形狀決定功能。</li>
+</ol>
+<p><strong>氨基酸相同，次序不同。</strong>Ala–Gly–Lys 與 Lys–Gly–Ala 含有相同的氨基酸，但序列不同。R 基所在的位置不同，所能形成的鍵不同，摺疊後的形狀也不同。</p>
+<p><strong>每個改變都重要嗎？</strong>不一定。換成 R 基相似的氨基酸（例如一個非極性 R 基換成另一個非極性 R 基），影響往往很小。若換成不同類型的 R 基（例如由帶電荷變成非極性），就較可能有影響，尤其是在核心或活性位點。考試時要寫「可能 (could)」改變形狀，不要寫「一定」。</p>
+<div class="note"><p><strong>延伸（非必須）：鐮狀細胞血紅蛋白 (sickle-cell haemoglobin)。</strong>在β-珠蛋白鏈中，第 6 位的氨基酸正常是谷氨酸，屬酸性、帶電荷。鐮狀細胞血紅蛋白在這個位置是纈氨酸，屬非極性。這個單一置換源於基因中一個鹼基的改變。血紅蛋白分子的表面因此出現疏水部分，在氧濃度低時，分子會黏在一起形成長纖維，令紅血球變形。這是一個很好的例子，說明一個 R 基的改變可以改變形狀和功能。</p></div>
+<p><strong>評分準則的用語：</strong>「氨基酸序列決定 R 基的位置」、「R 基決定所形成的鍵」、「所以決定了三級結構／三維形狀」、「一個氨基酸改變，可能改變形狀，因而改變功能」。</p>
+<p><strong>不要混淆：</strong>變性改變三維形狀，但一級結構不變。基因突變則改變一級結構本身。</p>`
+      },
       heading: {
         en: "Step 3: primary structure — the sequence decides the shape",
         ja: "ステップ3：一次構造 ― 配列が形を決める",
@@ -427,6 +763,71 @@ IB.registerTopic({
     {
       ref: "B1.2.8",
       ahl: true,
+      deeper: {
+        en: `<table>
+<tr><th></th><th>Alpha helix</th><th>Beta-pleated sheet</th></tr>
+<tr><td>Shape</td><td>one chain coils like a spring</td><td>strands lie side by side, zig-zag folded like a paper fan</td></tr>
+<tr><td>Hydrogen bonds join…</td><td>C=O of one amino acid to the N–H of an amino acid about four places further along the same chain</td><td>C=O and N–H groups on neighbouring strands</td></tr>
+<tr><td>Direction of the bonds</td><td>roughly parallel to the long axis of the coil</td><td>between the strands, across the sheet</td></tr>
+<tr><td>R-groups</td><td>point outwards from the helix</td><td>point above and below the sheet</td></tr>
+</table>
+<p><strong>Why the pattern is regular.</strong> Every peptide bond has the same C=O and N–H, whatever the R-group is. So the hydrogen bonds repeat at regular intervals. Each bond is weak, but a whole run of them makes a stable structure.</p>
+<p><strong>What else to know.</strong></p>
+<ul>
+<li>One polypeptide can contain helices, sheets and regions with neither. These regions then fold together into the tertiary structure.</li>
+<li>The R-groups are not part of the bonds, but the sequence still influences which regions form helices and which form sheets.</li>
+<li>Do not confuse the alpha helix (one chain coiled) with collagen's triple helix (three separate chains wound together).</li>
+</ul>
+<p><strong>A 3-mark answer to "Outline secondary structure":</strong></p>
+<ul>
+<li>regular folding of the polypeptide backbone, as alpha helices and beta-pleated sheets;</li>
+<li>held by hydrogen bonds;</li>
+<li>between the C=O of one amino acid and the N–H of another (backbone groups, not R-groups).</li>
+</ul>
+<p><strong>Common errors:</strong> saying the hydrogen bonds are between R-groups (that is tertiary); saying they are between "amino acids" with no groups named; saying peptide bonds make the helix.</p>`,
+        ja: `<table>
+<tr><th></th><th>αヘリックス (alpha helix)</th><th>βシート (beta-pleated sheet)</th></tr>
+<tr><td>形</td><td>1本の鎖がばねのように巻く</td><td>鎖が横に並び、扇子のようにジグザグに折れ曲がる</td></tr>
+<tr><td>水素結合がつなぐもの</td><td>あるアミノ酸のC=Oと、同じ鎖の約4つ先のアミノ酸のN–H</td><td>となり合う鎖のC=OとN–H</td></tr>
+<tr><td>結合の向き</td><td>コイルの長軸にほぼ平行</td><td>鎖と鎖の間、シートを横切る向き</td></tr>
+<tr><td>R基</td><td>ヘリックスの外側に突き出る</td><td>シートの上下に突き出る</td></tr>
+</table>
+<p><strong>パターンが規則的な理由。</strong>どのペプチド結合にも、R基によらず同じC=OとN–Hがあります。そのため水素結合は規則的な間隔で繰り返されます。1つ1つは弱くても、並んだ全体で安定した構造になります。</p>
+<p><strong>ほかに知っておくこと。</strong></p>
+<ul>
+<li>1本のポリペプチドの中に、ヘリックス、シート、どちらでもない領域が含まれることがあります。これらの領域がさらに折りたたまれて三次構造になります。</li>
+<li>R基は結合には関わりませんが、配列は、どこがヘリックスになりどこがシートになるかに影響します。</li>
+<li>αヘリックス（1本の鎖が巻く）と、コラーゲンの三重らせん (triple helix)（3本の別々の鎖がねじれる）を混同しないこと。</li>
+</ul>
+<p><strong>「二次構造を概説せよ」の3点の答え：</strong></p>
+<ul>
+<li>ポリペプチドの骨格が規則的に折れ曲がったもので、αヘリックスとβシートがある。</li>
+<li>水素結合で保たれる。</li>
+<li>あるアミノ酸のC=Oと別のアミノ酸のN–Hの間（骨格の基であり、R基ではない）。</li>
+</ul>
+<p><strong>よくある誤り：</strong>水素結合がR基の間にあると書く（それは三次構造）。基の名前を書かずに「アミノ酸の間」とだけ書く。ペプチド結合がヘリックスをつくると書く。</p>`,
+        zh: `<table>
+<tr><th></th><th>α螺旋 (alpha helix)</th><th>β摺板 (beta-pleated sheet)</th></tr>
+<tr><td>形狀</td><td>一條鏈像彈簧般盤繞</td><td>鏈並排，呈鋸齒狀摺疊，像摺扇</td></tr>
+<tr><td>氫鍵連接…</td><td>一個氨基酸的 C=O 與同一條鏈上相隔約四個位置的氨基酸的 N–H</td><td>相鄰鏈上的 C=O 和 N–H</td></tr>
+<tr><td>氫鍵的方向</td><td>大致與螺旋的長軸平行</td><td>在鏈與鏈之間，橫跨摺板</td></tr>
+<tr><td>R 基</td><td>從螺旋向外伸出</td><td>向摺板的上方和下方伸出</td></tr>
+</table>
+<p><strong>為何圖案有規律。</strong>不論 R 基是甚麼，每個肽鍵都有相同的 C=O 和 N–H，所以氫鍵以有規律的間隔重複出現。每個氫鍵都很弱，但一連串的氫鍵合起來就形成穩定的結構。</p>
+<p><strong>其他須知。</strong></p>
+<ul>
+<li>一條多肽可以同時含有螺旋、摺板，以及兩者皆不是的區域。這些區域再一起摺疊成三級結構。</li>
+<li>R 基不參與這些氫鍵，但序列仍會影響哪些區域形成螺旋、哪些形成摺板。</li>
+<li>不要混淆α螺旋（一條鏈盤繞）與膠原蛋白的三股螺旋 (triple helix)（三條獨立的鏈纏繞在一起）。</li>
+</ul>
+<p><strong>「概述二級結構」的 3 分答案：</strong></p>
+<ul>
+<li>多肽骨架有規律的摺疊，形成α螺旋和β摺板；</li>
+<li>由氫鍵維持；</li>
+<li>氫鍵形成於一個氨基酸的 C=O 與另一個氨基酸的 N–H 之間（是骨架上的基團，不是 R 基）。</li>
+</ul>
+<p><strong>常見錯誤：</strong>說氫鍵形成於 R 基之間（那是三級結構）；只說「氨基酸之間」而沒有指出基團名稱；說肽鍵形成螺旋。</p>`
+      },
       widget: "mol3d-protein",
       widgetOptions: {preset: "helix-sheet"},
       heading: {
@@ -474,6 +875,80 @@ IB.registerTopic({
     {
       ref: "B1.2.9",
       ahl: true,
+      deeper: {
+        en: `<table>
+<tr><th>Interaction</th><th>Between which R-groups?</th><th>Type</th><th>Strength</th></tr>
+<tr><td>Hydrogen bond</td><td>two polar R-groups</td><td>attraction between δ+ H and δ– O or N</td><td>weak</td></tr>
+<tr><td>Ionic bond</td><td>acidic (–COO<sup>–</sup>) and basic (–NH<sub>3</sub><sup>+</sup>)</td><td>attraction between opposite charges</td><td>weak to moderate; depends on pH</td></tr>
+<tr><td>Disulfide bond</td><td>two cysteines (–SH and –SH become S–S)</td><td>covalent</td><td>strong</td></tr>
+<tr><td>Hydrophobic interaction</td><td>non-polar R-groups</td><td>clustering away from water</td><td>weak individually</td></tr>
+</table>
+<p><strong>Worked example: reading a sequence.</strong> A polypeptide has these R-groups at positions 1 to 10: 1 non-polar, 2 polar, 3 acidic, 4 non-polar, 5 cysteine, 6 non-polar, 7 basic, 8 polar, 9 non-polar, 10 cysteine. Predict the fold:</p>
+<ul>
+<li>3 (–) and 7 (+): ionic bond;</li>
+<li>5 and 10: disulfide bond, even though they are five places apart;</li>
+<li>2 and 8: hydrogen bond between the polar R-groups;</li>
+<li>1, 4, 6 and 9: cluster in the core through hydrophobic interactions.</li>
+</ul>
+<p><strong>Weak but many.</strong> One hydrogen bond is easily broken, but a protein has hundreds. Together they hold a precise shape, yet allow a little flexibility. This is also why small changes in heat or pH can cause denaturation.</p>
+<p><strong>A 4-mark answer to "Explain how tertiary structure is stabilized":</strong></p>
+<ul>
+<li>interactions between R-groups hold the polypeptide in a 3D shape;</li>
+<li>hydrogen bonds between polar R-groups;</li>
+<li>ionic bonds between positively and negatively charged R-groups;</li>
+<li>covalent disulfide bonds between cysteines;</li>
+<li>hydrophobic interactions between non-polar R-groups.</li>
+</ul>
+<p><strong>Check yourself:</strong> if the question says "backbone", think secondary. If it says "R-groups", think tertiary.</p>`,
+        ja: `<table>
+<tr><th>相互作用</th><th>どのR基の間か</th><th>種類</th><th>強さ</th></tr>
+<tr><td>水素結合 (hydrogen bond)</td><td>極性のR基2つ</td><td>δ+のHとδ–のOまたはNの間の引力</td><td>弱い</td></tr>
+<tr><td>イオン結合 (ionic bond)</td><td>酸性（–COO<sup>–</sup>）と塩基性（–NH<sub>3</sub><sup>+</sup>）</td><td>反対の電荷の間の引力</td><td>弱〜中程度。pHに左右される</td></tr>
+<tr><td>ジスルフィド結合 (disulfide bond)</td><td>システイン2つ（–SHと–SHがS–Sになる）</td><td>共有結合</td><td>強い</td></tr>
+<tr><td>疎水性相互作用 (hydrophobic interaction)</td><td>無極性のR基</td><td>水を避けて集まる</td><td>1つ1つは弱い</td></tr>
+</table>
+<p><strong>計算例：配列を読む。</strong>あるポリペプチドの1〜10番目のR基が次のとおりです：1無極性、2極性、3酸性、4無極性、5システイン、6無極性、7塩基性、8極性、9無極性、10システイン。折りたたみを予測します。</p>
+<ul>
+<li>3（負）と7（正）：イオン結合。</li>
+<li>5と10：5つ離れていてもジスルフィド結合。</li>
+<li>2と8：極性のR基どうしの水素結合。</li>
+<li>1、4、6、9：疎水性相互作用で芯に集まる。</li>
+</ul>
+<p><strong>弱くても数が多い。</strong>水素結合1つは簡単に切れますが、タンパク質には何百もあります。合わさって正確な形を保ちつつ、少しの柔軟さも許します。熱やpHのわずかな変化でも変性が起こりうるのは、このためでもあります。</p>
+<p><strong>「三次構造がどのように安定化されるか説明せよ」の4点の答え：</strong></p>
+<ul>
+<li>R基どうしの相互作用がポリペプチドを立体構造に保つ。</li>
+<li>極性のR基の間の水素結合。</li>
+<li>正と負に帯電したR基の間のイオン結合。</li>
+<li>システインの間の共有結合であるジスルフィド結合。</li>
+<li>無極性のR基の間の疎水性相互作用。</li>
+</ul>
+<p><strong>自己チェック：</strong>問題に「骨格」とあれば二次構造、「R基」とあれば三次構造を考えます。</p>`,
+        zh: `<table>
+<tr><th>相互作用</th><th>在哪些 R 基之間？</th><th>類型</th><th>強度</th></tr>
+<tr><td>氫鍵 (hydrogen bond)</td><td>兩個極性 R 基</td><td>δ+ 的 H 與 δ– 的 O 或 N 之間的吸引力</td><td>弱</td></tr>
+<tr><td>離子鍵 (ionic bond)</td><td>酸性（–COO<sup>–</sup>）與鹼性（–NH<sub>3</sub><sup>+</sup>）</td><td>相反電荷之間的吸引力</td><td>弱至中等；視乎 pH 值</td></tr>
+<tr><td>二硫鍵 (disulfide bond)</td><td>兩個半胱氨酸（–SH 與 –SH 變成 S–S）</td><td>共價鍵</td><td>強</td></tr>
+<tr><td>疏水相互作用 (hydrophobic interaction)</td><td>非極性 R 基</td><td>聚集在一起，避開水</td><td>個別來說弱</td></tr>
+</table>
+<p><strong>例題：閱讀序列。</strong>一條多肽在第 1 至 10 位的 R 基如下：1 非極性、2 極性、3 酸性、4 非極性、5 半胱氨酸、6 非極性、7 鹼性、8 極性、9 非極性、10 半胱氨酸。預測摺疊情況：</p>
+<ul>
+<li>3（負）和 7（正）：離子鍵；</li>
+<li>5 和 10：二硫鍵，即使它們相隔五個位置；</li>
+<li>2 和 8：極性 R 基之間的氫鍵；</li>
+<li>1、4、6 和 9：透過疏水相互作用聚集在核心。</li>
+</ul>
+<p><strong>雖弱但數量多。</strong>一個氫鍵很容易斷開，但一個蛋白質有成百上千個。它們合起來維持精確的形狀，同時容許少許彈性。這也是溫度或 pH 值的小改變就可能引致變性的原因。</p>
+<p><strong>「解釋三級結構如何穩定」的 4 分答案：</strong></p>
+<ul>
+<li>R 基之間的相互作用把多肽固定成三維形狀；</li>
+<li>極性 R 基之間的氫鍵；</li>
+<li>帶正電和帶負電的 R 基之間的離子鍵；</li>
+<li>半胱氨酸之間的共價二硫鍵；</li>
+<li>非極性 R 基之間的疏水相互作用。</li>
+</ul>
+<p><strong>自我檢查：</strong>題目提到「骨架」，想到二級結構；提到「R 基」，想到三級結構。</p>`
+      },
       heading: {
         en: "Step 5: tertiary structure — R-groups fold the whole chain",
         ja: "ステップ5：三次構造 ― R基が鎖全体を折りたたむ",
@@ -547,6 +1022,41 @@ IB.registerTopic({
     {
       ref: "B1.2.10",
       ahl: true,
+      deeper: {
+        en: `<table>
+<tr><th>Region of the protein</th><th>What it touches</th><th>R-groups on the outside</th></tr>
+<tr><td>Surface of a water-soluble (globular) protein</td><td>water</td><td>hydrophilic (polar, charged)</td></tr>
+<tr><td>Core of a water-soluble protein</td><td>other R-groups, no water</td><td>hydrophobic</td></tr>
+<tr><td>Part of an integral protein inside the membrane</td><td>fatty-acid tails of phospholipids</td><td>hydrophobic</td></tr>
+<tr><td>Part of an integral protein sticking out of the membrane</td><td>cytoplasm or fluid outside the cell</td><td>hydrophilic</td></tr>
+</table>
+<p><strong>Channel proteins.</strong> A channel protein must do two jobs at once. Its outer surface in the membrane is hydrophobic, so it stays embedded in the fatty-acid tails. The inside of the channel is lined with hydrophilic R-groups (polar or charged), so water-soluble ions and polar molecules can pass through. They cannot cross the hydrophobic middle of a bilayer on their own.</p>
+<p><strong>Reading a pattern.</strong> Suppose part of a polypeptide has 20 non-polar amino acids in a row, with polar and charged ones on either side. A long non-polar run is long enough to cross a bilayer, so this region probably spans the membrane. The polar and charged ends probably sit in the watery cytoplasm and the fluid outside the cell.</p>
+<p><strong>What if a core amino acid is replaced?</strong> If a hydrophilic charged amino acid replaced a hydrophobic one in the core, it would be placed next to other hydrophobic R-groups with no water to bond to. The folding would probably be disrupted. In a membrane-spanning region it would weaken the anchoring.</p>
+<p><strong>Mark-scheme language:</strong> "hydrophobic R-groups interact with the hydrophobic fatty-acid tails"; "hydrophilic R-groups face the aqueous cytoplasm / tissue fluid"; "channel is lined with hydrophilic R-groups, allowing ions / polar molecules to pass". Link: B2.1 membrane structure.</p>`,
+        ja: `<table>
+<tr><th>タンパク質の領域</th><th>接するもの</th><th>外側にあるR基</th></tr>
+<tr><td>水溶性（球状）タンパク質の表面</td><td>水</td><td>親水性（極性、電荷をもつもの）</td></tr>
+<tr><td>水溶性タンパク質の芯</td><td>他のR基。水はない</td><td>疎水性</td></tr>
+<tr><td>内在性タンパク質の膜の中にある部分</td><td>リン脂質の脂肪酸の尾</td><td>疎水性</td></tr>
+<tr><td>内在性タンパク質の膜から突き出た部分</td><td>細胞質または細胞外の液</td><td>親水性</td></tr>
+</table>
+<p><strong>チャネルタンパク質 (channel proteins)。</strong>チャネルタンパク質は、2つの仕事を同時にこなす必要があります。膜の中にある外側の表面は疎水性なので、脂肪酸の尾の間に埋め込まれたままになります。チャネルの内側は親水性のR基（極性または電荷をもつもの）が並んでいるので、水に溶けるイオンや極性分子が通れます。それらは、二重層の疎水性の中央を自力では横切れません。</p>
+<p><strong>パターンを読む。</strong>ポリペプチドの一部に、無極性のアミノ酸が20個ほど連続し、その両側に極性や電荷をもつアミノ酸があるとします。無極性の連続は二重層を横切れる長さなので、この領域はおそらく膜を貫いています。極性や電荷をもつ両端は、おそらく水っぽい細胞質と細胞外の液の中にあります。</p>
+<p><strong>芯のアミノ酸が置き換わったら。</strong>芯の疎水性アミノ酸が、電荷をもつ親水性のアミノ酸に置き換わると、水と結合できないまま他の疎水性R基の隣に置かれます。折りたたみはおそらく乱れます。膜を貫く領域なら、固定が弱くなります。</p>
+<p><strong>採点基準の言い回し：</strong>「疎水性のR基が、疎水性の脂肪酸の尾と相互作用する」「親水性のR基が、水性の細胞質／組織液に面する」「チャネルの内側に親水性のR基が並び、イオン／極性分子が通れる」。関連：B2.1の膜の構造。</p>`,
+        zh: `<table>
+<tr><th>蛋白質的區域</th><th>接觸甚麼</th><th>外面的 R 基</th></tr>
+<tr><td>水溶性（球狀）蛋白質的表面</td><td>水</td><td>親水性（極性、帶電荷）</td></tr>
+<tr><td>水溶性蛋白質的核心</td><td>其他 R 基，沒有水</td><td>疏水性</td></tr>
+<tr><td>整合蛋白質位於膜內的部分</td><td>磷脂的脂肪酸尾部</td><td>疏水性</td></tr>
+<tr><td>整合蛋白質伸出膜外的部分</td><td>細胞質或細胞外液</td><td>親水性</td></tr>
+</table>
+<p><strong>通道蛋白 (channel proteins)。</strong>通道蛋白須同時完成兩件事。它在膜內的外表面是疏水性的，所以能嵌在脂肪酸尾部之間。通道內壁排列着親水性 R 基（極性或帶電荷），所以水溶性的離子和極性分子可以通過。它們無法自行穿過雙層疏水的中間部分。</p>
+<p><strong>閱讀圖案。</strong>假設多肽的一部分有連續約 20 個非極性氨基酸，兩側是極性和帶電荷的氨基酸。連續的非極性部分長度足以穿過雙層，所以這個區域很可能橫跨細胞膜。兩端的極性和帶電荷部分，很可能位於含水的細胞質和細胞外液中。</p>
+<p><strong>如果核心的氨基酸被取代呢？</strong>如果核心的疏水性氨基酸被一個親水、帶電荷的氨基酸取代，它會處於其他疏水性 R 基旁邊，卻沒有水可以結合，摺疊很可能受到干擾。在橫跨膜的區域，則會削弱固定作用。</p>
+<p><strong>評分準則的用語：</strong>「疏水性 R 基與疏水性的脂肪酸尾部相互作用」、「親水性 R 基面向含水的細胞質／組織液」、「通道內壁排列着親水性 R 基，讓離子／極性分子通過」。相關：B2.1 膜的結構。</p>`
+      },
       widget: "mol3d-protein",
       widgetOptions: {preset: "hydrophobic"},
       heading: {
@@ -582,6 +1092,53 @@ IB.registerTopic({
     {
       ref: "B1.2.11",
       ahl: true,
+      deeper: {
+        en: `<p><strong>Two separate questions.</strong> To classify a protein, ask: (1) how many polypeptide chains? (2) is there a non-polypeptide part?</p>
+<table>
+<tr><th></th><th>No prosthetic group (non-conjugated)</th><th>Has a prosthetic group (conjugated)</th></tr>
+<tr><td>One chain</td><td>tertiary structure only</td><td>possible, but no example is needed</td></tr>
+<tr><td>Two or more chains (quaternary)</td><td>insulin (2 chains), collagen (3 chains)</td><td>haemoglobin (4 chains, 4 haem groups)</td></tr>
+</table>
+<p><strong>Details of the three examples.</strong></p>
+<ul>
+<li><strong>Insulin:</strong> disulfide bonds join the two chains, so the two separate polypeptide chains stay together.</li>
+<li><strong>Collagen:</strong> three chains wound into a triple helix. Hydrogen bonds between the chains hold the helix together.</li>
+<li><strong>Haemoglobin:</strong> each of the four chains holds one haem group. The iron ion (Fe<sup>2+</sup>) in each haem binds one oxygen molecule, so one haemoglobin molecule can carry up to four O<sub>2</sub>.</li>
+</ul>
+<p><strong>Worked calculation.</strong> Haemoglobin has two α chains of 141 amino acids and two β chains of 146. Total amino acids = 2 × 141 + 2 × 146 = 574. Peptide bonds are counted chain by chain: 574 − 4 = <strong>570</strong>. The peptide bonds are inside the chains. The interactions between the four chains are not peptide bonds.</p>
+<p><strong>Mark-scheme language:</strong> "quaternary structure: two or more polypeptide chains"; "conjugated protein has a non-polypeptide prosthetic group, e.g. haem"; "insulin: two chains linked by disulfide bonds"; "collagen: three chains in a triple helix".</p>
+<p><strong>Typical error:</strong> calling insulin or collagen "conjugated" because they have several chains. They are quaternary and non-conjugated. Link: B3.1 uses haemoglobin's structure to explain oxygen transport.</p>`,
+        ja: `<p><strong>2つの別々の問い。</strong>タンパク質を分類するときは、(1) ポリペプチド鎖は何本か、(2) ポリペプチド以外の部分があるか、を問います。</p>
+<table>
+<tr><th></th><th>補欠分子族なし（非複合）</th><th>補欠分子族あり（複合）</th></tr>
+<tr><td>鎖が1本</td><td>三次構造まで</td><td>ありうるが、例は不要</td></tr>
+<tr><td>鎖が2本以上（四次構造）</td><td>インスリン（2本）、コラーゲン（3本）</td><td>ヘモグロビン（4本、ヘム4個）</td></tr>
+</table>
+<p><strong>3つの例の詳細。</strong></p>
+<ul>
+<li><strong>インスリン (insulin)：</strong>ジスルフィド結合が2本の鎖をつなぐので、2本の別々のポリペプチド鎖は離れません。</li>
+<li><strong>コラーゲン (collagen)：</strong>3本の鎖がねじれて三重らせんになります。鎖の間の水素結合がらせんを保ちます。</li>
+<li><strong>ヘモグロビン (haemoglobin)：</strong>4本の鎖がそれぞれヘム基を1つもちます。各ヘムの鉄イオン (Fe<sup>2+</sup>) は酸素分子1個と結合するので、ヘモグロビン1分子は最大4個のO<sub>2</sub>を運べます。</li>
+</ul>
+<p><strong>計算例。</strong>ヘモグロビンは、141個のα鎖が2本と146個のβ鎖が2本です。アミノ酸の合計 = 2 × 141 + 2 × 146 = 574。ペプチド結合は鎖ごとに数えるので、574 − 4 = <strong>570</strong> です。ペプチド結合は鎖の内部にあります。4本の鎖の間の相互作用はペプチド結合ではありません。</p>
+<p><strong>採点基準の言い回し：</strong>「四次構造：2本以上のポリペプチド鎖」「複合タンパク質は、ヘムなどポリペプチド以外の補欠分子族をもつ」「インスリン：ジスルフィド結合でつながった2本の鎖」「コラーゲン：三重らせんをつくる3本の鎖」。</p>
+<p><strong>よくある誤り：</strong>鎖が複数あるからといって、インスリンやコラーゲンを「複合」とよぶこと。これらは四次構造をもつ非複合タンパク質です。関連：B3.1ではヘモグロビンの構造を使って酸素運搬を説明します。</p>`,
+        zh: `<p><strong>兩條獨立的問題。</strong>要為蛋白質分類，先問：(1) 有多少條多肽鏈？(2) 有沒有非多肽部分？</p>
+<table>
+<tr><th></th><th>沒有輔基（非綴合）</th><th>有輔基（綴合）</th></tr>
+<tr><td>一條鏈</td><td>只有三級結構</td><td>有可能，但不須舉例</td></tr>
+<tr><td>兩條或以上的鏈（四級結構）</td><td>胰島素（2 條鏈）、膠原蛋白（3 條鏈）</td><td>血紅蛋白（4 條鏈、4 個血紅素）</td></tr>
+</table>
+<p><strong>三個例子的細節。</strong></p>
+<ul>
+<li><strong>胰島素 (insulin)：</strong>二硫鍵把兩條鏈連在一起，所以這兩條分開的多肽鏈不會分離。</li>
+<li><strong>膠原蛋白 (collagen)：</strong>三條鏈纏繞成三股螺旋。鏈與鏈之間的氫鍵維持螺旋結構。</li>
+<li><strong>血紅蛋白 (haemoglobin)：</strong>四條鏈各有一個血紅素基團。每個血紅素中的鐵離子 (Fe<sup>2+</sup>) 結合一個氧分子，所以一個血紅蛋白分子最多可攜帶四個 O<sub>2</sub>。</li>
+</ul>
+<p><strong>計算例題。</strong>血紅蛋白有兩條各 141 個氨基酸的α鏈，和兩條各 146 個氨基酸的β鏈。氨基酸總數 = 2 × 141 + 2 × 146 = 574。肽鍵要逐條鏈計算：574 − 4 = <strong>570</strong>。肽鍵位於鏈的內部，四條鏈之間的相互作用並不是肽鍵。</p>
+<p><strong>評分準則的用語：</strong>「四級結構：兩條或以上的多肽鏈」、「綴合蛋白質有非多肽的輔基，例如血紅素」、「胰島素：兩條鏈由二硫鍵連接」、「膠原蛋白：三條鏈形成三股螺旋」。</p>
+<p><strong>典型錯誤：</strong>因為胰島素或膠原蛋白有多條鏈，就稱它們為「綴合」。它們是有四級結構的非綴合蛋白質。相關：B3.1 利用血紅蛋白的結構解釋氧的運輸。</p>`
+      },
       widget: "mol3d-protein",
       widgetOptions: {preset: "haemoglobin"},
       heading: {
@@ -665,6 +1222,44 @@ IB.registerTopic({
     {
       ref: "B1.2.12",
       ahl: true,
+      deeper: {
+        en: `<table>
+<tr><th></th><th>Insulin (globular)</th><th>Collagen (fibrous)</th></tr>
+<tr><td>Structure</td><td>2 chains, compact and rounded</td><td>3 chains in a long triple helix, molecules lie side by side in fibres</td></tr>
+<tr><td>Surface and solubility</td><td>hydrophilic surface, soluble in blood plasma</td><td>insoluble, so it stays in place in tissues</td></tr>
+<tr><td>Property that matters</td><td>exact shape fits a receptor on target cells</td><td>high tensile strength: resists being pulled</td></tr>
+<tr><td>Function</td><td>hormone: carried in the blood and signals to cells</td><td>strength and support in skin, tendons and artery walls</td></tr>
+</table>
+<p><strong>Answering "Compare" questions.</strong> A compare question needs similarities as well as differences. Similarities between insulin and collagen: both are made of polypeptides joined by peptide bonds, both have quaternary structure (more than one chain), and both are non-conjugated. Differences are in the table. Haemoglobin is also globular: it is soluble inside red blood cells.</p>
+<p><strong>A 4-mark template for form and function.</strong> For each protein write three linked ideas: <em>shape</em> (what it looks like), <em>property</em> (what that gives), <em>function</em> (what it is used for). For example: "long insoluble fibres, so high tensile strength, so supports skin and tendons".</p>
+<p><strong>Heat again.</strong> Boiling collagen unwinds its triple helix, which is how gelatine is made. The shape and the strength are lost, which shows again that shape and function go together.</p>
+<div class="note"><p><strong>Extension (not required):</strong> in collagen, about every third amino acid is glycine, the amino acid with the smallest R-group. Small R-groups let the three chains pack tightly into the triple helix.</p></div>
+<p><strong>Mark-scheme language:</strong> "globular: compact, hydrophilic R-groups outside, so soluble"; "fibrous: long strands, insoluble, structural role"; "shape is related to function".</p>`,
+        ja: `<table>
+<tr><th></th><th>インスリン（球状）</th><th>コラーゲン（繊維状）</th></tr>
+<tr><td>構造</td><td>2本の鎖。コンパクトで丸い</td><td>3本の鎖が長い三重らせんをつくり、分子が横に並んで繊維になる</td></tr>
+<tr><td>表面と溶けやすさ</td><td>親水性の表面で、血しょうに溶ける</td><td>水に溶けないので、組織の中にとどまる</td></tr>
+<tr><td>重要な性質</td><td>正確な形が標的細胞の受容体に合う</td><td>引っぱり強度が高く、引っぱりに強い</td></tr>
+<tr><td>働き</td><td>ホルモン：血液で運ばれ、細胞に信号を伝える</td><td>皮膚、腱、動脈の壁で強さと支えを与える</td></tr>
+</table>
+<p><strong>「比較せよ (Compare)」の答え方。</strong>比較問題では、違いだけでなく共通点も必要です。インスリンとコラーゲンの共通点：どちらもペプチド結合でつながったポリペプチドからできている、どちらも四次構造をもつ（鎖が複数）、どちらも非複合です。違いは表のとおりです。ヘモグロビンも球状で、赤血球の中で水に溶けています。</p>
+<p><strong>形と働きの4点テンプレート。</strong>タンパク質ごとに、3つの関連する考えを書きます：<em>形</em>（どんな形か）、<em>性質</em>（それが何をもたらすか）、<em>働き</em>（何に使われるか）。例：「長い不溶性の繊維なので、引っぱり強度が高く、皮膚や腱を支える」。</p>
+<p><strong>再び熱について。</strong>コラーゲンを煮ると三重らせんがほどけ、ゼラチンができます。形と強さが失われることから、形と働きが一体であることがわかります。</p>
+<div class="note"><p><strong>発展（必須ではない）：</strong>コラーゲンでは、約3個に1個のアミノ酸がグリシン (glycine) です。グリシンはR基が最も小さいアミノ酸です。小さなR基のおかげで、3本の鎖が三重らせんの中にぎっしり収まります。</p></div>
+<p><strong>採点基準の言い回し：</strong>「球状：コンパクトで、親水性のR基が外側にあるので水に溶ける」「繊維状：長い糸状で、水に溶けず、構造を担う」「形は働きと関係している」。</p>`,
+        zh: `<table>
+<tr><th></th><th>胰島素（球狀）</th><th>膠原蛋白（纖維狀）</th></tr>
+<tr><td>結構</td><td>2 條鏈，緊密圓形</td><td>3 條鏈形成長的三股螺旋，分子並排成纖維</td></tr>
+<tr><td>表面與溶解度</td><td>親水性表面，可溶於血漿</td><td>不溶於水，所以留在組織內原處</td></tr>
+<tr><td>重要的性質</td><td>準確的形狀配合目標細胞上的受體</td><td>抗張強度高，能抵抗拉扯</td></tr>
+<tr><td>功能</td><td>激素：由血液運送，向細胞傳遞信號</td><td>在皮膚、肌腱和動脈壁中提供強度和支撐</td></tr>
+</table>
+<p><strong>回答「比較 (Compare)」題。</strong>比較題除了差異，也要寫相同點。胰島素與膠原蛋白的相同點：兩者都由以肽鍵連接的多肽組成、都有四級結構（多於一條鏈）、都是非綴合蛋白質。差異見表。血紅蛋白也是球狀，在紅血球內可溶於水。</p>
+<p><strong>形態與功能的 4 分模板。</strong>每種蛋白質寫出三個相連的概念：<em>形狀</em>（外形如何）、<em>性質</em>（因此有甚麼特性）、<em>功能</em>（用來做甚麼）。例如：「長而不溶的纖維，所以抗張強度高，所以支撐皮膚和肌腱」。</p>
+<p><strong>再談高溫。</strong>把膠原蛋白煮沸，三股螺旋會解開，明膠 (gelatine) 就是這樣製成。形狀和強度都消失了，再次顯示形狀與功能密不可分。</p>
+<div class="note"><p><strong>延伸（非必須）：</strong>在膠原蛋白中，大約每三個氨基酸就有一個甘氨酸 (glycine)，它是 R 基最小的氨基酸。細小的 R 基令三條鏈能緊密地纏成三股螺旋。</p></div>
+<p><strong>評分準則的用語：</strong>「球狀：緊密，親水性 R 基在外，所以可溶」、「纖維狀：長鏈狀，不溶，擔任結構功能」、「形狀與功能有關」。</p>`
+      },
       heading: {
         en: "Step 7: form and function — globular and fibrous proteins",
         ja: "ステップ7：形と働き ― 球状タンパク質と繊維状タンパク質",
@@ -1076,6 +1671,87 @@ IB.registerTopic({
         { en: "disulfide bonds are S–S bonds between the R-groups of two cysteines (which can be far apart in the sequence) and help hold the tertiary / quaternary structure", ja: "ジスルフィド結合は、2つのシステイン（配列上離れていてもよい）のR基間のS–S結合で、三次／四次構造を保つのを助ける", zh: "二硫鍵是兩個半胱氨酸（序列中可相隔很遠）R 基之間的 S–S 鍵，有助維持三級／四級結構" },
         { en: "denaturation breaks the weak bonds / interactions (hydrogen bonds, ionic bonds, hydrophobic interactions); the strong covalent peptide bonds are not broken, so the student is wrong (heating changes the shape, it does not cut the chain)", ja: "変性で切れるのは弱い結合／相互作用（水素結合、イオン結合、疎水性相互作用）。強い共有結合であるペプチド結合は切れないので、生徒は誤り（加熱は形を変えるが鎖は切らない）", zh: "變性破壞的是弱鍵／相互作用（氫鍵、離子鍵、疏水相互作用）；強共價的肽鍵不會被破壞，所以該學生錯誤（加熱改變形狀，並不切斷長鏈）" }
       ],
-      modelAnswer: { en: "Peptide bonds are C–N covalent bonds joining neighbouring amino acids and making the primary structure. Disulfide bonds are S–S bonds between the R-groups of two cysteines and help hold the tertiary or quaternary structure. The student is wrong: boiling denatures the protein by breaking weak hydrogen bonds, ionic bonds and hydrophobic interactions, which changes its shape, but the strong peptide bonds stay intact.", ja: "ペプチド結合は、となり合うアミノ酸を結ぶC–N共有結合で、一次構造をつくる。ジスルフィド結合は2つのシステインのR基間のS–S結合で、三次または四次構造を保つのを助ける。生徒は誤っている。ゆでると弱い水素結合、イオン結合、疎水性相互作用が切れて形が変わり変性するが、強いペプチド結合は残る。", zh: "肽鍵是連接相鄰氨基酸的 C–N 共價鍵，構成一級結構。二硫鍵是兩個半胱氨酸 R 基之間的 S–S 鍵，有助維持三級或四級結構。該學生錯誤：煮沸令蛋白質變性，是因為破壞了弱的氫鍵、離子鍵和疏水相互作用，從而改變形狀，但強的肽鍵保持完整。" } }
+      modelAnswer: { en: "Peptide bonds are C–N covalent bonds joining neighbouring amino acids and making the primary structure. Disulfide bonds are S–S bonds between the R-groups of two cysteines and help hold the tertiary or quaternary structure. The student is wrong: boiling denatures the protein by breaking weak hydrogen bonds, ionic bonds and hydrophobic interactions, which changes its shape, but the strong peptide bonds stay intact.", ja: "ペプチド結合は、となり合うアミノ酸を結ぶC–N共有結合で、一次構造をつくる。ジスルフィド結合は2つのシステインのR基間のS–S結合で、三次または四次構造を保つのを助ける。生徒は誤っている。ゆでると弱い水素結合、イオン結合、疎水性相互作用が切れて形が変わり変性するが、強いペプチド結合は残る。", zh: "肽鍵是連接相鄰氨基酸的 C–N 共價鍵，構成一級結構。二硫鍵是兩個半胱氨酸 R 基之間的 S–S 鍵，有助維持三級或四級結構。該學生錯誤：煮沸令蛋白質變性，是因為破壞了弱的氫鍵、離子鍵和疏水相互作用，從而改變形狀，但強的肽鍵保持完整。" } },
+
+    /* q21 */
+    { id: "b1-2-q21", type: "mcq", ahl: true, difficulty: 2, ref: "B1.2.6", paper: "1A",
+      stem: { en: "In a polypeptide, one R-group can release H⁺ as the pH rises and then forms an ionic bond with a positively charged R-group nearby. Which class of R-group is this?", ja: "ポリペプチドの中で、あるR基はpHが上がるとH⁺を放出し、近くの正に帯電したR基とイオン結合をつくる。このR基はどの種類か。", zh: "在一條多肽中，某個 R 基在 pH 值上升時會釋出 H⁺，然後與附近帶正電的 R 基形成離子鍵。這個 R 基屬於哪一類？" },
+      options: [
+        { en: "Non-polar (hydrophobic)", ja: "無極性（疎水性）", zh: "非極性（疏水性）" },
+        { en: "Polar and uncharged", ja: "極性で電荷をもたない", zh: "極性、不帶電" },
+        { en: "Acidic", ja: "酸性", zh: "酸性" },
+        { en: "Basic", ja: "塩基性", zh: "鹼性" }
+      ],
+      answer: 2,
+      explanation: { en: "An acidic R-group (for example one with –COOH) releases H⁺ and becomes negatively charged (–COO⁻), so it can form an ionic bond with a positive R-group. A basic R-group does the opposite: it gains H⁺ and is positive. Non-polar R-groups carry no charge and join in hydrophobic interactions. Polar uncharged R-groups can form hydrogen bonds but not ionic bonds.", ja: "酸性のR基（たとえば–COOHをもつもの）はH⁺を放出して負に帯電し（–COO⁻）、正のR基とイオン結合をつくれます。塩基性のR基は逆で、H⁺を受け取って正になります。無極性のR基は電荷をもたず、疎水性相互作用に関わります。極性で電荷をもたないR基は水素結合はつくれますが、イオン結合はつくれません。", zh: "酸性 R 基（例如含 –COOH 的）釋出 H⁺ 後帶負電（–COO⁻），所以能與帶正電的 R 基形成離子鍵。鹼性 R 基則相反：它接收 H⁺ 而帶正電。非極性 R 基不帶電荷，參與疏水相互作用。極性不帶電的 R 基可形成氫鍵，但不能形成離子鍵。" } },
+
+    /* q22 */
+    { id: "b1-2-q22", type: "match", ahl: true, difficulty: 2, ref: "B1.2.6", paper: "1A",
+      stem: { en: "Match each R-group feature to its class.", ja: "R基の特徴を、それぞれの種類に結びつけよ。", zh: "把每個 R 基的特徵配對到它所屬的類別。" },
+      pairs: [
+        { left: { en: "Contains mainly carbon and hydrogen, for example –CH₃", ja: "ほぼ炭素と水素だけを含む（例：–CH₃）", zh: "主要含碳和氫（例如 –CH₃）" }, right: { en: "Non-polar, hydrophobic", ja: "無極性、疎水性", zh: "非極性、疏水性" } },
+        { left: { en: "Contains –OH or –CONH₂ and has partial charges only", ja: "–OHや–CONH₂を含み、部分電荷だけをもつ", zh: "含 –OH 或 –CONH₂，只有部分電荷" }, right: { en: "Polar, uncharged, hydrophilic", ja: "極性で電荷なし、親水性", zh: "極性、不帶電、親水性" } },
+        { left: { en: "Contains –COOH and becomes –COO⁻", ja: "–COOHを含み、–COO⁻になる", zh: "含 –COOH，變成 –COO⁻" }, right: { en: "Acidic, negatively charged", ja: "酸性、負に帯電", zh: "酸性、帶負電" } },
+        { left: { en: "Contains –NH₂ and becomes –NH₃⁺", ja: "–NH₂を含み、–NH₃⁺になる", zh: "含 –NH₂，變成 –NH₃⁺" }, right: { en: "Basic, positively charged", ja: "塩基性、正に帯電", zh: "鹼性、帶正電" } }
+      ],
+      explanation: { en: "The class depends on what the R-group contains. Mainly C and H gives a non-polar group. –OH and –CONH₂ give partial charges (polar). –COOH can lose H⁺ (acidic, negative). –NH₂ can gain H⁺ (basic, positive). Remember that hydrophilic R-groups are either polar or charged, and the charged ones are acidic or basic.", ja: "種類はR基が何を含むかで決まります。ほぼCとHだけなら無極性の基です。–OHと–CONH₂は部分電荷をもちます（極性）。–COOHはH⁺を放出できます（酸性、負）。–NH₂はH⁺を受け取れます（塩基性、正）。親水性のR基は極性か電荷をもつもので、電荷をもつものは酸性か塩基性であることを思い出しましょう。", zh: "類別取決於 R 基含有甚麼。主要由 C 和 H 組成的是非極性基團。–OH 和 –CONH₂ 帶有部分電荷（極性）。–COOH 可以釋出 H⁺（酸性、帶負電）。–NH₂ 可以接收 H⁺（鹼性、帶正電）。記住親水性 R 基不是極性就是帶電荷，而帶電荷的又分酸性或鹼性。" } },
+
+    /* q23 */
+    { id: "b1-2-q23", type: "short", ahl: true, difficulty: 3, ref: "B1.2.9", paper: "1B", commandTerm: "Deduce", marks: 4,
+      data: {
+        en: `<p>The table shows the type of R-group at each of 12 positions in a short polypeptide that folds in water (illustrative data).</p>
+<table><tr><th>Position</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+<tr><td>R-group</td><td>polar</td><td>non-polar</td><td>basic (+)</td><td>non-polar</td><td>cysteine</td><td>polar</td><td>non-polar</td><td>cysteine</td><td>acidic (–)</td><td>non-polar</td><td>polar</td><td>non-polar</td></tr></table>`,
+        ja: `<p>表は、水の中で折りたたまれる短いポリペプチドの12か所の位置のR基の種類を示している（説明用データ）。</p>
+<table><tr><th>位置</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+<tr><td>R基</td><td>極性</td><td>無極性</td><td>塩基性 (+)</td><td>無極性</td><td>システイン</td><td>極性</td><td>無極性</td><td>システイン</td><td>酸性 (–)</td><td>無極性</td><td>極性</td><td>無極性</td></tr></table>`,
+        zh: `<p>下表顯示一條在水中摺疊的短多肽，其 12 個位置上各自的 R 基類型（示意數據）。</p>
+<table><tr><th>位置</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+<tr><td>R 基</td><td>極性</td><td>非極性</td><td>鹼性 (+)</td><td>非極性</td><td>半胱氨酸</td><td>極性</td><td>非極性</td><td>半胱氨酸</td><td>酸性 (–)</td><td>非極性</td><td>極性</td><td>非極性</td></tr></table>`
+      },
+      stem: { en: "Deduce four different kinds of interaction that could help to hold this polypeptide in its tertiary structure. For each one, state the positions involved.", ja: "このポリペプチドを三次構造に保つのに役立つと考えられる、4種類の異なる相互作用を推論せよ。それぞれについて、関わる位置を答えよ。", zh: "推斷四種不同的相互作用，它們可能有助把這條多肽維持在三級結構。每一種都要寫出涉及的位置。" },
+      markscheme: [
+        { en: "ionic bond between position 3 (basic, +) and position 9 (acidic, –)", ja: "位置3（塩基性、+）と位置9（酸性、–）の間のイオン結合", zh: "位置 3（鹼性，+）與位置 9（酸性，–）之間的離子鍵" },
+        { en: "disulfide bond (covalent S–S) between the cysteines at positions 5 and 8", ja: "位置5と8のシステインの間のジスルフィド結合（共有結合S–S）", zh: "位置 5 和 8 的半胱氨酸之間的二硫鍵（共價 S–S）" },
+        { en: "hydrogen bond between polar R-groups, for example positions 1 and 6, 1 and 11 or 6 and 11", ja: "極性R基どうしの水素結合（例：位置1と6、1と11、6と11）", zh: "極性 R 基之間的氫鍵（例如位置 1 與 6、1 與 11 或 6 與 11）" },
+        { en: "hydrophobic interactions: non-polar R-groups (positions 2, 4, 7, 10, 12) cluster together in the core, away from water", ja: "疎水性相互作用：無極性のR基（位置2、4、7、10、12）が水を避けて芯に集まる", zh: "疏水相互作用：非極性 R 基（位置 2、4、7、10、12）聚集在核心，遠離水" }
+      ],
+      modelAnswer: { en: "Ionic bond between positions 3 and 9, because one R-group is positive and the other negative. Disulfide bond between the cysteines at positions 5 and 8. Hydrogen bonds between polar R-groups, such as positions 6 and 11. Hydrophobic interactions as the non-polar R-groups at positions 2, 4, 7, 10 and 12 cluster in the core away from water.", ja: "位置3と9の間のイオン結合（一方のR基が正、他方が負のため）。位置5と8のシステインの間のジスルフィド結合。位置6と11など極性R基どうしの水素結合。位置2、4、7、10、12の無極性R基が水を避けて芯に集まることによる疎水性相互作用。", zh: "位置 3 和 9 之間的離子鍵，因為一個 R 基帶正電、另一個帶負電。位置 5 和 8 的半胱氨酸之間的二硫鍵。極性 R 基之間的氫鍵，例如位置 6 和 11。位置 2、4、7、10 和 12 的非極性 R 基聚集在核心、遠離水而產生的疏水相互作用。" } },
+
+    /* q24 */
+    { id: "b1-2-q24", type: "short", ahl: true, difficulty: 3, ref: "B1.2.9", paper: "2", commandTerm: "Explain", marks: 4,
+      stem: { en: "A protein is held in shape mainly by ionic bonds between acidic and basic R-groups. Explain why placing it in a very acidic solution would change its shape, but would not break its peptide bonds.", ja: "あるタンパク質は、主に酸性と塩基性のR基の間のイオン結合で形を保っている。非常に酸性の溶液に入れると形が変わるが、ペプチド結合は切れない理由を説明せよ。", zh: "某蛋白質主要靠酸性與鹼性 R 基之間的離子鍵維持形狀。解釋為何把它放進非常酸的溶液會改變其形狀，但不會破壞其肽鍵。" },
+      markscheme: [
+        { en: "a very acidic solution has a high concentration of H⁺ ions", ja: "非常に酸性の溶液はH⁺の濃度が高い", zh: "非常酸的溶液 H⁺ 濃度很高" },
+        { en: "acidic R-groups (–COO⁻) gain H⁺ and lose their negative charge (basic groups stay or become more positive)", ja: "酸性のR基（–COO⁻）がH⁺を受け取り、負の電荷を失う（塩基性の基は正のまま、またはより正になる）", zh: "酸性 R 基（–COO⁻）接收 H⁺ 而失去負電荷（鹼性基團保持或變得更正）" },
+        { en: "so the ionic bonds between oppositely charged R-groups can no longer form / are broken", ja: "そのため、反対の電荷をもつR基どうしのイオン結合は、もうできない／切れる", zh: "所以帶相反電荷的 R 基之間的離子鍵不能再形成／被破壞" },
+        { en: "the tertiary structure changes / protein unfolds (denatured), so function is lost", ja: "三次構造が変わる／タンパク質がほどける（変性）ので、働きが失われる", zh: "三級結構改變／蛋白質展開（變性），所以功能喪失" },
+        { en: "peptide bonds are strong covalent bonds and are not affected by pH, so the primary structure stays the same", ja: "ペプチド結合は強い共有結合でpHの影響を受けないので、一次構造は変わらない", zh: "肽鍵是強共價鍵，不受 pH 值影響，所以一級結構不變" }
+      ],
+      modelAnswer: { en: "A very acidic solution contains many H⁺ ions. The acidic R-groups gain H⁺ and lose their negative charge, so they can no longer form ionic bonds with the basic R-groups. Without these bonds the tertiary structure changes and the protein unfolds, so it is denatured and its function is lost. The peptide bonds are strong covalent bonds, so they are not broken and the sequence of amino acids stays the same.", ja: "非常に酸性の溶液にはH⁺が多く含まれる。酸性のR基がH⁺を受け取って負の電荷を失うので、塩基性のR基とイオン結合をつくれなくなる。この結合がなくなると三次構造が変わってタンパク質がほどけ、変性して働きが失われる。ペプチド結合は強い共有結合なので切れず、アミノ酸の配列は変わらない。", zh: "非常酸的溶液含有大量 H⁺。酸性 R 基接收 H⁺ 而失去負電荷，所以不能再與鹼性 R 基形成離子鍵。失去這些鍵，三級結構就改變，蛋白質展開，即變性而功能喪失。肽鍵是強共價鍵，不會斷開，所以氨基酸序列不變。" } },
+
+    /* q25 */
+    { id: "b1-2-q25", type: "mcq", ahl: true, difficulty: 2, ref: "B1.2.10", paper: "1A",
+      stem: { en: "A channel protein lets sodium ions cross a membrane. Which arrangement of R-groups is most likely?", ja: "チャネルタンパク質はナトリウムイオンを膜の向こうへ通す。R基の配置として最も可能性が高いのはどれか。", zh: "某通道蛋白讓鈉離子穿過細胞膜。以下哪種 R 基的排列最有可能？" },
+      options: [
+        { en: "Hydrophilic R-groups on the outside in the membrane, hydrophobic R-groups lining the channel", ja: "膜の中の外側に親水性のR基、チャネルの内側に疎水性のR基", zh: "在膜內的外面是親水性 R 基，通道內壁是疏水性 R 基" },
+        { en: "Hydrophobic R-groups on the outside in the membrane, hydrophilic R-groups lining the channel", ja: "膜の中の外側に疎水性のR基、チャネルの内側に親水性のR基", zh: "在膜內的外面是疏水性 R 基，通道內壁是親水性 R 基" },
+        { en: "Hydrophilic R-groups everywhere, so the protein dissolves in the membrane", ja: "どこも親水性のR基で、タンパク質は膜に溶ける", zh: "到處都是親水性 R 基，所以蛋白質溶於膜中" },
+        { en: "Hydrophobic R-groups everywhere, so ions can slide through the protein", ja: "どこも疎水性のR基で、イオンはタンパク質の中をすべって通れる", zh: "到處都是疏水性 R 基，所以離子可以滑過蛋白質" }
+      ],
+      answer: 1,
+      explanation: { en: "The outside of the protein touches the hydrophobic fatty-acid tails, so it needs hydrophobic R-groups there to stay embedded. Sodium ions are charged and cannot pass through a hydrophobic environment, so the channel itself must be lined with hydrophilic (polar or charged) R-groups. The first option reverses the two regions. The last two ignore that the protein has to sit in the lipid and also let ions through.", ja: "タンパク質の外側は疎水性の脂肪酸の尾に接するので、埋め込まれたままでいるには、そこに疎水性のR基が必要です。ナトリウムイオンは電荷をもち、疎水性の環境は通れないので、チャネルの内側には親水性（極性または電荷をもつ）R基が並んでいなければなりません。1番目は2つの領域が逆です。残りの2つは、タンパク質が脂質の中にとどまり、かつイオンを通す必要があることを無視しています。", zh: "蛋白質的外面接觸疏水性的脂肪酸尾部，所以那裏需要疏水性 R 基才能留在膜內。鈉離子帶電荷，不能通過疏水環境，所以通道內壁必須排列着親水性（極性或帶電荷）R 基。第一項把兩個區域弄反了。後兩項忽略了蛋白質既要留在脂質中，又要讓離子通過。" } },
+
+    /* q26 */
+    { id: "b1-2-q26", type: "mcq", ahl: true, difficulty: 3, ref: "B1.2.12", paper: "1A",
+      stem: { en: "Protein X is long and strand-like, insoluble in water and resists being pulled. Protein Y is compact, dissolves in water and has a surface shape that fits one receptor. Which statement is most likely correct?", ja: "タンパク質Xは長い糸状で、水に溶けず、引っぱりに強い。タンパク質Yはコンパクトで、水に溶け、1つの受容体に合う表面の形をもつ。最も正しいと考えられる記述はどれか。", zh: "蛋白質 X 長而呈線狀，不溶於水，能抵抗拉扯。蛋白質 Y 緊密，可溶於水，表面形狀能配合某一種受體。以下哪項陳述最有可能正確？" },
+      options: [
+        { en: "X is fibrous and has a structural role; Y is globular with hydrophilic R-groups on its surface", ja: "Xは繊維状で構造を担い、Yは球状で表面に親水性のR基がある", zh: "X 是纖維狀，擔任結構功能；Y 是球狀，表面有親水性 R 基" },
+        { en: "X is globular because it is insoluble; Y is fibrous because its shape is specific", ja: "Xは水に溶けないので球状で、Yは形が特異的なので繊維状である", zh: "X 不溶於水，所以是球狀；Y 形狀特定，所以是纖維狀" },
+        { en: "X is conjugated because it has several strands; Y is non-conjugated because it is compact", ja: "Xは鎖が複数あるので複合で、Yはコンパクトなので非複合である", zh: "X 有多股，所以是綴合；Y 緊密，所以是非綴合" },
+        { en: "X is held in shape by peptide bonds only; Y is held in shape by hydrogen bonds only", ja: "Xはペプチド結合だけで形を保ち、Yは水素結合だけで形を保つ", zh: "X 只靠肽鍵維持形狀；Y 只靠氫鍵維持形狀" }
+      ],
+      answer: 0,
+      explanation: { en: "Long, strand-like, insoluble and strong describes a fibrous protein with a structural role, such as collagen. Compact, soluble and with a specific surface shape describes a globular protein with hydrophilic R-groups outside, such as insulin. Insolubility does not make a protein globular, and having several strands (quaternary structure) is not the same as being conjugated, which needs a non-polypeptide group. Both proteins are held in shape by a mixture of interactions, not by one bond type.", ja: "長い糸状で、水に溶けず、強いというのは、コラーゲンのように構造を担う繊維状タンパク質の特徴です。コンパクトで、水に溶け、特異的な表面の形をもつというのは、インスリンのように外側に親水性のR基をもつ球状タンパク質の特徴です。水に溶けないことは球状の理由になりません。また、鎖が複数あること（四次構造）は、ポリペプチド以外の基を必要とする「複合」とは別のことです。どちらのタンパク質も、1種類の結合ではなく、複数の相互作用の組み合わせで形を保っています。", zh: "長而呈線狀、不溶於水又堅韌，描述的是擔任結構功能的纖維狀蛋白質，例如膠原蛋白。緊密、可溶、表面形狀特定，描述的是外面有親水性 R 基的球狀蛋白質，例如胰島素。不溶於水不會令蛋白質變成球狀；有多股（四級結構）也不等於綴合，綴合需要有非多肽基團。兩種蛋白質都由多種相互作用共同維持形狀，而不是只靠一種鍵。" } }
   ]
 });
