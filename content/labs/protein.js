@@ -12,9 +12,9 @@ IB.registerLab({
     "zh": "蛋白質實驗室"
   },
   "intro": {
-    "en": "Ten steps, from one amino acid to a working protein, including real 3D structures. Work through them in order, and try every interactive. Steps marked AHL are for HL students only. This is subtopic B1.2.",
-    "ja": "1つのアミノ酸から働くタンパク質まで、実際の3D構造も使って10のステップで学びます。順番に進め、インタラクティブをすべて試しましょう。AHLの印があるステップはHLの生徒向けです。サブトピックB1.2です。",
-    "zh": "由單一個氨基酸到有功能的蛋白質，共十個步驟，並包括真實的3D結構。請依次完成，並試玩每個互動內容。標有 AHL 的步驟只適用於 HL 學生。這是子課題 B1.2。"
+    "en": "Ten steps, from one amino acid to a working protein, including real 3D structures, plus an optional extension step (amino acid flashcards). Work through them in order, and try every interactive. Steps marked AHL are for HL students only. This is subtopic B1.2.",
+    "ja": "1つのアミノ酸から働くタンパク質まで、実際の3D構造も使って10のステップで学びます（最後に任意の発展ステップ：アミノ酸フラッシュカードがあります）。順番に進め、インタラクティブをすべて試しましょう。AHLの印があるステップはHLの生徒向けです。サブトピックB1.2です。",
+    "zh": "由單一個氨基酸到有功能的蛋白質，共十個步驟，並包括真實的3D結構，另有一個選做的延伸步驟（氨基酸卡片）。請依次完成，並試玩每個互動內容。標有 AHL 的步驟只適用於 HL 學生。這是子課題 B1.2。"
   },
   "steps": [
     {
@@ -261,6 +261,29 @@ IB.registerLab({
         "en": "In haemoglobin, tick Show Haem + Fe and count the haem groups. Then open the Collagen tab: how does its shape differ from a globular protein, and why does that suit its job?",
         "ja": "ヘモグロビンで「ヘム＋Fe」をオンにし、ヘム基の数を数えましょう。次に「コラーゲン」のタブを開き、球状タンパク質と形がどう違うか、その形がなぜ働きに合っているか答えましょう。",
         "zh": "在血紅蛋白中開啟「顯示」下的「血紅素＋Fe」，數一數血紅素基團的數目。然後打開「膠原蛋白」分頁：它的形狀與球狀蛋白質有何不同？為何適合它的功能？"
+      }
+    },
+    {
+      "title": {
+        "en": "Optional extension: amino acid flashcards",
+        "ja": "発展（任意）：アミノ酸フラッシュカード",
+        "zh": "延伸（選做）：氨基酸閃卡"
+      },
+      "ahl": true,
+      "refs": [
+        "B1.2.6"
+      ],
+      "intro": {
+        "en": "<p>Optional extension, beyond the syllabus. IB does not ask you to name the 20 amino acids or draw their R-groups (only cysteine, AHL). Use these flashcards to practise recognising R-group types from their chemistry: non-polar (hydrophobic), polar, acidic or basic.</p>",
+        "ja": "<p>任意の発展内容で、シラバスの範囲外です。IB では 20 種類のアミノ酸の名前を覚えたり R基を描いたりする必要はありません（システイン (cysteine) のみ、AHL）。このフラッシュカードで、化学的な特徴から R基 の種類（非極性・疎水性 (hydrophobic)、極性、酸性、塩基性）を見分ける練習をしましょう。</p>",
+        "zh": "<p>選做的延伸內容，超出課程範圍。IB 不要求你說出 20 種氨基酸的名稱或繪出它們的 R 基（只須認識半胱氨酸 (cysteine)，屬 AHL）。利用這些閃卡，練習從化學結構辨認 R 基類型：非極性（疏水 (hydrophobic)）、極性、酸性或鹼性。</p>"
+      },
+      "widget": "amino-acid-cards",
+      "options": {},
+      "task": {
+        "en": "Flip a card, then try the Quiz. For each R-group, say which chemical group (–OH, –COOH, –NH2 or only C–H) tells you its type.",
+        "ja": "カードを裏返してから「クイズ」に挑戦しましょう。各 R基 について、どの化学的な基（–OH、–COOH、–NH2、または C–H だけ）で種類が分かるか答えましょう。",
+        "zh": "翻開卡片，再試「測驗」。對每個 R 基，說出哪一種化學基團（–OH、–COOH、–NH2 或只有 C–H）可判斷它的類型。"
       }
     }
   ]
